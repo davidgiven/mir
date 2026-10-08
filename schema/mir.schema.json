@@ -23,18 +23,18 @@
                         "description": "Raw widget class symbol name (e.g. xmPushButtonWidgetClass).",
                         "type": "string"
                     },
-                    "functions": {
-                        "description": "List of functions associated with the widget, filtered to only those whose name starts with prefix + widget key (case-insensitive).",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
+                    "methods": {
+                        "description": "Dictionary of methods associated with the widget, filtered to only those whose name starts with prefix + widget key (case-insensitive), keyed by method name with prefix and widget name stripped.",
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
                         }
                     }
                 },
                 "required": [
                     "include",
                     "classSymbol",
-                    "functions"
+                    "methods"
                 ],
                 "additionalProperties": false
             }

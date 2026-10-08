@@ -173,20 +173,26 @@ static bool startsWithIgnoreCase(
 
 /* Filter `functions` to only those starting with `prefix + humanName`
  * (case-insensitive). `prefix` and `humanName` are concatenated as-is and
- * then compared ignoring case. */
-static std::vector<std::string> filterFunctions(
+ * then compared ignoring case. For each match, strip the prefix and widget
+ * name to produce the method name. Returns a sorted map from method name to
+ * an empty JSON object. */
+static std::map<std::string, nlohmann::json> filterMethods(
     const std::vector<std::string>& functions,
     const std::string& prefix,
     const std::string& humanName)
 {
     std::string wanted = prefix + humanName;
-    std::vector<std::string> result;
-    result.reserve(functions.size());
+    std::map<std::string, nlohmann::json> result;
     for (auto& fn : functions)
     {
         if (startsWithIgnoreCase(fn, wanted))
         {
-            result.push_back(fn);
+            std::string methodName = fn.substr(wanted.size());
+            if (methodName.empty())
+            {
+                continue;
+            }
+            result.emplace(methodName, nlohmann::json::object());
         }
     }
     return result;
@@ -291,10 +297,10 @@ int main(int argc, char* argv[])
         if (it != functionsByFile.end())
         {
             std::string humanName = computeHumanName(kv.first, prefix);
-            auto filtered = filterFunctions(it->second, prefix, humanName);
+            auto filtered = filterMethods(it->second, prefix, humanName);
             for (auto& fn : filtered)
             {
-                std::cout << "  " << fn << "\n";
+                std::cout << "  " << fn.first << "\n";
             }
         }
     }
@@ -331,11 +337,17 @@ int main(int argc, char* argv[])
             auto it = functionsByFile.find(include);
             if (it != functionsByFile.end())
             {
-                w["functions"] = filterFunctions(it->second, prefix, humanName);
+                auto methods = filterMethods(it->second, prefix, humanName);
+                nlohmann::json m = nlohmann::json::object();
+                for (auto& p : methods)
+                {
+                    m[p.first] = p.second;
+                }
+                w["methods"] = std::move(m);
             }
             else
             {
-                w["functions"] = nlohmann::json::array();
+                w["methods"] = nlohmann::json::object();
             }
             widgets[humanName] = std::move(w);
         }

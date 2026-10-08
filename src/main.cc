@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cctype>
+#include <cstdio>
 #include <filesystem>
 #include <fstream>
 #include <getopt.h>
@@ -12,9 +13,7 @@
 #include <unordered_set>
 #include <vector>
 
-#include <clang/AST/Decl.h>
-#include <clang/AST/RecursiveASTVisitor.h>
-#include <clang/Tooling/Tooling.h>
+#include "clang.h"
 
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
@@ -102,70 +101,6 @@ static std::vector<fs::path> collectHeaders(
 
     return headers;
 }
-
-/* Visitor that collects VarDecl of type WidgetClass and extern
- * FunctionDecls grouped by defining file. The visitor is run on a
- * translation unit that does `#include "target"`; therefore definitions are
- * not in the main file but in the included header. We filter by matching the
- * spelling filename against the header that was included. */
-struct Visitor : public clang::RecursiveASTVisitor<Visitor>
-{
-    clang::SourceManager* _sm = nullptr;
-    std::string _targetFile;
-    std::vector<std::pair<std::string, std::string>>* _widgetClasses = nullptr;
-    std::map<std::string, std::vector<std::string>>* _functionsByFile = nullptr;
-
-    bool VisitVarDecl(clang::VarDecl* decl)
-    {
-        if (clang::isa<clang::ParmVarDecl>(decl))
-        {
-            return true;
-        }
-        if (!decl->hasGlobalStorage())
-        {
-            return true;
-        }
-        std::string typeStr = decl->getType().getAsString();
-        if (typeStr != "WidgetClass")
-        {
-            return true;
-        }
-        std::string name = decl->getNameAsString();
-        if (name.empty())
-        {
-            return true;
-        }
-        clang::SourceLocation loc = decl->getLocation();
-        std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
-        if (file != _targetFile)
-        {
-            return true;
-        }
-        _widgetClasses->emplace_back(name, file);
-        return true;
-    }
-
-    bool VisitFunctionDecl(clang::FunctionDecl* decl)
-    {
-        if (!decl->hasExternalFormalLinkage())
-        {
-            return true;
-        }
-        clang::SourceLocation loc = decl->getLocation();
-        std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
-        if (file != _targetFile)
-        {
-            return true;
-        }
-        std::string name = decl->getNameAsString();
-        if (name.empty())
-        {
-            return true;
-        }
-        (*_functionsByFile)[file].push_back(name);
-        return true;
-    }
-};
 
 /* Compute the human-readable widget name by stripping the toolkit
  * prefix from the front and "WidgetClass" from the end, when present. */
@@ -561,8 +496,8 @@ int main(int argc, char* argv[])
     std::map<std::string, std::vector<std::string>> functionsByFile;
 
     /* Parse each header independently and leave unresolved symbols
-     * unresolved. Use the C++ Tooling API (buildASTFromCodeWithArgs)
-     * rather than the C API. Each header is parsed via an artificial
+     * unresolved. Use the clang-c API via the wrapper in clang.h/clang.cc
+     * rather than the C++ Tooling API. Each header is parsed via an artificial
      * translation unit that includes <X11/Intrinsic.h> first so that Xt/Motif
      * headers that depend on Intrinsic definitions (e.g. Composite.h,
      * Core.h, Object.h) see the real definitions from /usr/include/X11.
@@ -572,10 +507,37 @@ int main(int argc, char* argv[])
     std::vector<std::string> args;
     args.push_back("-std=c99");
     args.push_back("-w");
+    /* Ensure the clang builtin headers (stddef.h etc.) are found. When using
+     * the clang-c API directly, the resource directory is not always inferred.
+     * Query clang for its resource directory and pass it explicitly. */
+    {
+        FILE* pipe = popen("clang -print-resource-dir 2>/dev/null", "r");
+        if (pipe != nullptr)
+        {
+            char buf[1024] = {0};
+            if (fgets(buf, sizeof(buf), pipe) != nullptr)
+            {
+                std::string dir(buf);
+                while (
+                    !dir.empty() && (dir.back() == '\n' || dir.back() == '\r'))
+                {
+                    dir.pop_back();
+                }
+                if (!dir.empty())
+                {
+                    args.push_back("-resource-dir");
+                    args.push_back(dir);
+                }
+            }
+            pclose(pipe);
+        }
+    }
     for (auto& ip : includePaths)
     {
         args.push_back("-I" + ip);
     }
+
+    clang::Index index(0, 0);
 
     for (auto& h : headers)
     {
@@ -583,25 +545,80 @@ int main(int argc, char* argv[])
             "#include <X11/Intrinsic.h>\n#include \"" + h.string() + "\"\n";
         std::string dummy = h.string() + ".c";
 
-        auto ast = clang::tooling::buildASTFromCodeWithArgs(
-            code, args, dummy, "/usr/bin/clang");
-        if (!ast)
+        CXErrorCode ec = CXError_Success;
+        clang::TranslationUnit tu = clang::parse(
+            index, dummy, args, dummy, code, CXTranslationUnit_None, &ec);
+        if (!tu)
         {
-            std::cerr << "error: failed to parse " << h << "\n";
+            std::cerr << "error: failed to parse " << h << " (CXError " << ec
+                      << ")\n";
             return 1;
         }
-        if (ast->getDiagnostics().hasErrorOccurred())
+        if (tu.hasError())
         {
             std::cerr << "error: failed to parse " << h << " (diagnostics)\n";
+            unsigned n = tu.numDiagnostics();
+            for (unsigned i = 0; i < n; ++i)
+            {
+                CXDiagnostic d = clang_getDiagnostic(tu.get(), i);
+                CXString s = clang_formatDiagnostic(
+                    d, clang_defaultDiagnosticDisplayOptions());
+                std::string msg = clang::toString(s);
+                std::cerr << msg << "\n";
+                clang_disposeDiagnostic(d);
+            }
             return 1;
         }
 
-        Visitor visitor;
-        visitor._sm = &ast->getSourceManager();
-        visitor._targetFile = h.string();
-        visitor._widgetClasses = &widgetClasses;
-        visitor._functionsByFile = &functionsByFile;
-        visitor.TraverseDecl(ast->getASTContext().getTranslationUnitDecl());
+        std::string targetFile = h.string();
+        auto tuCursor = tu.cursor();
+        tuCursor.visitChildren(
+            [&](clang::Cursor cursor, clang::Cursor /* parent */)
+            {
+                CXCursorKind k = cursor.kind();
+                if (k == CXCursor_VarDecl)
+                {
+                    if (cursor.hasGlobalStorage() != 1)
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    std::string typeStr = cursor.typeSpelling();
+                    if (typeStr != "WidgetClass")
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    std::string name = cursor.spelling();
+                    if (name.empty())
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    std::string file = cursor.fileName();
+                    if (file != targetFile)
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    widgetClasses.emplace_back(name, file);
+                }
+                else if (k == CXCursor_FunctionDecl)
+                {
+                    if (cursor.linkage() != CXLinkage_External)
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    std::string file = cursor.fileName();
+                    if (file != targetFile)
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    std::string name = cursor.spelling();
+                    if (name.empty())
+                    {
+                        return CXChildVisit_Recurse;
+                    }
+                    functionsByFile[file].push_back(name);
+                }
+                return CXChildVisit_Recurse;
+            });
     }
 
     /* Deduplicate widget classes by name and sort for stable output. */

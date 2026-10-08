@@ -41,10 +41,13 @@ endif
 
 LDFLAGS  += -lclang -lXm -lXt -lX11 -ldl
 
+CXXFLAGS += -MMD -MP
+
 # -- build rules -----------------------------------------------------------
 
 SRC := src/main.cc src/clang.cc
 OBJ := .obj/main.o .obj/clang.o
+DEP := $(OBJ:.o=.d)
 BIN := mir
 JSON := mir.json
 
@@ -62,6 +65,8 @@ $(BIN): $(OBJ)
 
 $(JSON): $(BIN)
 	./$(BIN) --include /usr/include --include /usr/include/freetype2 --headers /usr/include/X11 --headers /usr/include/Xm --prefix=xm --output=$@
+
+-include $(DEP)
 
 clean:
 	rm -rf .obj $(BIN) build $(JSON)

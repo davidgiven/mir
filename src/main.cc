@@ -87,20 +87,26 @@ static enum CXChildVisitResult visitor(
 int main(int argc, char* argv[])
 {
     std::vector<std::string> headerDirs;
+    std::vector<std::string> includeDirs;
 
     static struct option longOptions[] = {
         {"headers", required_argument, nullptr, 'H'},
+        {"include", required_argument, nullptr, 'I'},
         {nullptr,   0,                 nullptr, 0  },
     };
 
     int opt = 0;
     int longIndex = 0;
-    while ((opt = getopt_long(argc, argv, "", longOptions, &longIndex)) != -1)
+    while ((opt = getopt_long(argc, argv, "I:", longOptions, &longIndex)) != -1)
     {
         switch (opt)
         {
             case 'H':
                 headerDirs.emplace_back(optarg);
+                break;
+
+            case 'I':
+                includeDirs.emplace_back(optarg);
                 break;
 
             case '?':
@@ -125,18 +131,12 @@ int main(int argc, char* argv[])
         }
     }
 
-    /* Build clang arguments. */
+    /* Build clang arguments from explicit --include directories. */
     std::vector<std::string> argStrs;
-    for (auto& d : headerDirs)
+    for (auto& d : includeDirs)
     {
         argStrs.push_back("-I" + d);
     }
-    argStrs.push_back("-I/usr/include");
-    argStrs.push_back("-I/usr/include/freetype2");
-    argStrs.push_back("-I/usr/lib/clang/21/include");
-    argStrs.push_back("-I/usr/lib64/llvm21/lib/clang/21/include");
-    argStrs.push_back("-I/usr/lib/clang/20/include");
-    argStrs.push_back("-I/usr/lib/clang/19/include");
 
     std::vector<const char*> args;
     args.reserve(argStrs.size());

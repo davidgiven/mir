@@ -51,6 +51,12 @@ BIN := mir
 OBJ := .obj/main.o
 JSON := mir.json
 
+# -- dynamic include paths for mir (replaces hard-coded list) ---------------
+CLANG_RESOURCE_DIR := $(shell clang -print-resource-dir 2>/dev/null || clang-21 -print-resource-dir 2>/dev/null || echo /usr/lib/clang/21)
+FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2 2>/dev/null || freetype-config --cflags 2>/dev/null || echo -I/usr/include/freetype2)
+FREETYPE_INCLUDES := $(patsubst -I%,--include %,$(filter -I%,$(FREETYPE_CFLAGS)))
+MIR_INCLUDES := $(FREETYPE_INCLUDES) --include $(CLANG_RESOURCE_DIR)/include
+
 .PHONY: all clean
 
 all: $(BIN) $(JSON)
@@ -64,7 +70,7 @@ $(BIN): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 $(JSON): $(BIN)
-	./$(BIN) --headers /usr/include/Xm > $@
+	./$(BIN) --headers /usr/include/Xm $(MIR_INCLUDES) > $@
 
 clean:
 	rm -rf .obj $(BIN) build $(JSON)

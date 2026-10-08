@@ -110,7 +110,7 @@ static std::string computeHumanName(
     {
         result = result.substr(prefix.size());
     }
-    const std::string suffix = "WidgetClass";
+    const std::string suffix = "Class";
     if (result.size() >= suffix.size() &&
         result.compare(result.size() - suffix.size(), suffix.size(), suffix) ==
             0)

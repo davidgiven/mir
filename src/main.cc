@@ -182,8 +182,9 @@ static bool startsWithIgnoreCase(
 /* Filter `functions` to only those starting with `prefix + humanName`
  * (case-insensitive). `prefix` and `humanName` are concatenated as-is and
  * then compared ignoring case. For each match, strip the prefix and widget
- * name to produce the method name. Returns a sorted map from method name to
- * an empty JSON object. */
+ * name to produce the human-readable method name. Returns a sorted map from
+ * full method symbol (e.g. XmCascadeButtonHighlight) to an object containing
+ * the human name (e.g. Highlight). */
 static std::map<std::string, nlohmann::json> filterMethods(
     const std::vector<std::string>& functions,
     const std::string& prefix,
@@ -200,7 +201,9 @@ static std::map<std::string, nlohmann::json> filterMethods(
             {
                 continue;
             }
-            result.emplace(methodName, nlohmann::json::object());
+            nlohmann::json obj = nlohmann::json::object();
+            obj["name"] = methodName;
+            result.emplace(fn, std::move(obj));
         }
     }
     return result;
@@ -568,30 +571,30 @@ int main(int argc, char* argv[])
         nlohmann::json json = nlohmann::json::object();
         json["prefix"] = prefix;
         nlohmann::json widgets = nlohmann::json::object();
-        /* Map humanName -> (classSymbol, include) sorted by humanName for
-         * stable output keyed by human name. */
-        std::map<std::string, std::pair<std::string, std::string>> humanMap;
+        /* Widgets keyed by classSymbol (symbol), each widget carries a
+         * human-readable `name` field. Methods inside each widget are keyed by
+         * full symbol and carry a `name` with the stripped human name. */
+        std::map<std::string, std::string> seenHumanNames;
         for (auto& kv : dedup)
         {
-            std::string humanName = computeHumanName(kv.first, prefix);
-            if (humanMap.find(humanName) != humanMap.end())
+            const std::string& classSymbol = kv.first;
+            const std::string& include = kv.second;
+            std::string humanName = computeHumanName(classSymbol, prefix);
+            auto dupIt = seenHumanNames.find(humanName);
+            if (dupIt != seenHumanNames.end())
             {
                 std::cerr << "warning: duplicate humanName '" << humanName
-                          << "' for classSymbol '" << kv.first
-                          << "' (already mapped to '"
-                          << humanMap[humanName].first << "') -- skipping\n";
-                continue;
+                          << "' for classSymbol '" << classSymbol
+                          << "' (already mapped to '" << dupIt->second
+                          << "')\n";
             }
-            humanMap[humanName] = {kv.first, kv.second};
-        }
-        for (auto& kv : humanMap)
-        {
-            const std::string& humanName = kv.first;
-            const std::string& classSymbol = kv.second.first;
-            const std::string& include = kv.second.second;
+            else
+            {
+                seenHumanNames[humanName] = classSymbol;
+            }
             nlohmann::json w = nlohmann::json::object();
+            w["name"] = humanName;
             w["include"] = include;
-            w["classSymbol"] = classSymbol;
             w["superclass"] = getSuperclassSymbol(classSymbol, classPointerMap);
             auto it = functionsByFile.find(include);
             if (it != functionsByFile.end())
@@ -617,7 +620,7 @@ int main(int argc, char* argv[])
                 }
                 w["resources"] = std::move(r);
             }
-            widgets[humanName] = std::move(w);
+            widgets[classSymbol] = std::move(w);
         }
         json["widgets"] = std::move(widgets);
         std::ofstream out(outputPath);

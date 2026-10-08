@@ -3,11 +3,14 @@
 #include <algorithm>
 #include <clang-c/Index.h>
 #include <filesystem>
+#include <fstream>
 #include <getopt.h>
 #include <iostream>
 #include <map>
 #include <string>
 #include <vector>
+
+#include <nlohmann/json.hpp>
 
 namespace fs = std::filesystem;
 
@@ -160,20 +163,26 @@ static enum CXChildVisitResult visitor(
 int main(int argc, char* argv[])
 {
     std::vector<std::string> headerDirs;
+    std::string outputPath;
 
     static struct option longOptions[] = {
         {"headers", required_argument, nullptr, 'H'},
+        {"output",  required_argument, nullptr, 'o'},
         {nullptr,   0,                 nullptr, 0  },
     };
 
     int opt = 0;
     int longIndex = 0;
-    while ((opt = getopt_long(argc, argv, "", longOptions, &longIndex)) != -1)
+    while ((opt = getopt_long(argc, argv, "o:", longOptions, &longIndex)) != -1)
     {
         switch (opt)
         {
             case 'H':
                 headerDirs.emplace_back(optarg);
+                break;
+
+            case 'o':
+                outputPath = optarg;
                 break;
 
             case '?':
@@ -247,6 +256,23 @@ int main(int argc, char* argv[])
             {
                 std::cout << "  " << fn << "\n";
             }
+        }
+    }
+
+    if (!outputPath.empty())
+    {
+        nlohmann::json json = nlohmann::json::object();
+        std::ofstream out(outputPath);
+        if (!out)
+        {
+            std::cerr << "failed to open " << outputPath << "\n";
+            return 1;
+        }
+        out << json.dump(2) << "\n";
+        if (!out)
+        {
+            std::cerr << "failed to write " << outputPath << "\n";
+            return 1;
         }
     }
 

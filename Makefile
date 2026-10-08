@@ -51,7 +51,7 @@ ifeq ($(HAVE_JSON),no)
 endif
 
 CXXFLAGS += $(LLVM_CXXFLAGS)
-LDFLAGS  += $(LLVM_LDFLAGS) $(LLVM_LIBS) -lclang-cpp
+LDFLAGS  += $(LLVM_LDFLAGS) $(LLVM_LIBS) -lclang-cpp -lXm -lXt -lX11
 
 # -- build rules -----------------------------------------------------------
 

@@ -15,6 +15,9 @@
 #include <clang/AST/RecursiveASTVisitor.h>
 #include <clang/Tooling/Tooling.h>
 
+#include <X11/Intrinsic.h>
+#include <Xm/Xm.h>
+
 #include <nlohmann/json.hpp>
 
 namespace fs = std::filesystem;
@@ -200,6 +203,12 @@ static std::map<std::string, nlohmann::json> filterMethods(
 
 int main(int argc, char* argv[])
 {
+    /* Initialise Xt/Motif -- creates an application context needed for
+     * any subsequent Xt/Motif calls. Dynamic reflection will later use
+     * this context to instantiate widget hierarchies. */
+    XtAppContext appContext = XtCreateApplicationContext();
+    (void)appContext;
+
     std::vector<std::string> headerDirs;
     std::string outputPath;
     std::string prefix;

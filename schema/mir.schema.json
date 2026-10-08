@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://cowlark.com/mir.schema.json",
+    "title": "mir",
+    "description": "Machine-readable description of an X Intrinsics (Xt) widget set, primarily Motif.",
+    "type": "object",
+    "properties": {
+        "widgets": {
+            "description": "Widgets keyed by widget name.",
+            "type": "object",
+            "additionalProperties": {
+                "type": "object"
+            }
+        }
+    },
+    "required": [
+        "widgets"
+    ],
+    "additionalProperties": false
+}

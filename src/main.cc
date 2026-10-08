@@ -6,6 +6,7 @@
 #include <fstream>
 #include <getopt.h>
 #include <iostream>
+#include <map>
 #include <set>
 #include <string>
 #include <vector>
@@ -56,16 +57,21 @@ static std::vector<fs::path> collectHeaders(
 /* Data passed to the libclang visitor. */
 struct VisitorData
 {
-    std::vector<std::string>* _out;
+    std::vector<std::pair<std::string, std::string>>* _widgetClasses;
+    std::map<std::string, std::vector<std::string>>* _functionsByFile;
 };
 
-/* libclang visitor: collect VarDecl of type WidgetClass. */
+/* libclang visitor: collect VarDecl of type WidgetClass and extern
+ * FunctionDecls grouped by defining file. */
 static enum CXChildVisitResult visitor(
     CXCursor cursor, CXCursor parent, CXClientData clientData)
 {
     (void)parent;
 
-    if (clang_getCursorKind(cursor) == CXCursor_VarDecl)
+    auto* data = static_cast<VisitorData*>(clientData);
+    CXCursorKind kind = clang_getCursorKind(cursor);
+
+    if (kind == CXCursor_VarDecl)
     {
         CXType type = clang_getCursorType(cursor);
         CXString typeSpelling = clang_getTypeSpelling(type);
@@ -75,10 +81,79 @@ static enum CXChildVisitResult visitor(
         if (spelling == "WidgetClass")
         {
             CXString name = clang_getCursorSpelling(cursor);
-            auto* data = static_cast<VisitorData*>(clientData);
-            data->_out->push_back(clang_getCString(name));
+            std::string nameStr = clang_getCString(name);
             clang_disposeString(name);
+
+            CXSourceLocation loc = clang_getCursorLocation(cursor);
+            CXFile file = nullptr;
+            unsigned line = 0;
+            unsigned column = 0;
+            unsigned offset = 0;
+            clang_getFileLocation(loc, &file, &line, &column, &offset);
+            std::string fileStr;
+            if (file != nullptr)
+            {
+                CXString fileName = clang_getFileName(file);
+                const char* cstr = clang_getCString(fileName);
+                if (cstr != nullptr)
+                {
+                    fileStr = cstr;
+                }
+                clang_disposeString(fileName);
+            }
+
+            data->_widgetClasses->emplace_back(nameStr, fileStr);
         }
+    }
+    else if (kind == CXCursor_FunctionDecl)
+    {
+        /* Only extern linkage functions. */
+        CXLinkageKind linkage = clang_getCursorLinkage(cursor);
+        if (linkage != CXLinkage_External)
+        {
+            return CXChildVisit_Recurse;
+        }
+
+        CXSourceLocation loc = clang_getCursorLocation(cursor);
+        CXFile file = nullptr;
+        unsigned line = 0;
+        unsigned column = 0;
+        unsigned offset = 0;
+        clang_getFileLocation(loc, &file, &line, &column, &offset);
+        if (file == nullptr)
+        {
+            return CXChildVisit_Recurse;
+        }
+
+        CXString fileName = clang_getFileName(file);
+        const char* cstr = clang_getCString(fileName);
+        std::string fileStr;
+        if (cstr != nullptr)
+        {
+            fileStr = cstr;
+        }
+        clang_disposeString(fileName);
+
+        if (fileStr.empty())
+        {
+            return CXChildVisit_Recurse;
+        }
+
+        CXString name = clang_getCursorSpelling(cursor);
+        const char* nstr = clang_getCString(name);
+        std::string nameStr;
+        if (nstr != nullptr)
+        {
+            nameStr = nstr;
+        }
+        clang_disposeString(name);
+
+        if (nameStr.empty())
+        {
+            return CXChildVisit_Recurse;
+        }
+
+        (*data->_functionsByFile)[fileStr].push_back(nameStr);
     }
 
     return CXChildVisit_Recurse;
@@ -164,16 +239,40 @@ int main(int argc, char* argv[])
     }
 
     CXCursor root = clang_getTranslationUnitCursor(tu);
-    std::vector<std::string> widgetClasses;
-    VisitorData data{&widgetClasses};
+    std::vector<std::pair<std::string, std::string>> widgetClasses;
+    std::map<std::string, std::vector<std::string>> functionsByFile;
+    VisitorData data{&widgetClasses, &functionsByFile};
     clang_visitChildren(root, visitor, &data);
 
-    /* Deduplicate and sort for stable output. */
-    std::set<std::string> sorted(widgetClasses.begin(), widgetClasses.end());
-
-    for (auto& n : sorted)
+    /* Deduplicate widget classes by name and sort for stable output. */
+    std::map<std::string, std::string> dedup;
+    for (auto& p : widgetClasses)
     {
-        std::cout << n << "\n";
+        if (dedup.find(p.first) == dedup.end())
+        {
+            dedup[p.first] = p.second;
+        }
+    }
+
+    /* Deduplicate and sort functions per file. */
+    for (auto& kv : functionsByFile)
+    {
+        auto& vec = kv.second;
+        std::sort(vec.begin(), vec.end());
+        vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
+    }
+
+    for (auto& kv : dedup)
+    {
+        std::cout << kv.first << " " << kv.second << "\n";
+        auto it = functionsByFile.find(kv.second);
+        if (it != functionsByFile.end())
+        {
+            for (auto& fn : it->second)
+            {
+                std::cout << "  " << fn << "\n";
+            }
+        }
     }
 
     clang_disposeTranslationUnit(tu);

@@ -22,11 +22,19 @@
                     "humanName": {
                         "description": "Human-readable name of the widget class, derived by stripping the toolkit prefix and the trailing WidgetClass suffix.",
                         "type": "string"
+                    },
+                    "functions": {
+                        "description": "List of functions associated with the widget, filtered to only those whose name starts with prefix + humanName (case-insensitive).",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
                     }
                 },
                 "required": [
                     "include",
-                    "humanName"
+                    "humanName",
+                    "functions"
                 ],
                 "additionalProperties": false
             }

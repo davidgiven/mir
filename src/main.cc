@@ -1,6 +1,7 @@
 /* mir -- Motif introspection / reflection. */
 
 #include <algorithm>
+#include <cctype>
 #include <filesystem>
 #include <fstream>
 #include <getopt.h>
@@ -147,6 +148,50 @@ static std::string computeHumanName(
     return result;
 }
 
+/* Case-insensitive prefix check: does `s` start with `prefix` ignoring
+ * ASCII case? */
+static bool startsWithIgnoreCase(
+    const std::string& s, const std::string& prefix)
+{
+    if (prefix.size() > s.size())
+    {
+        return false;
+    }
+    for (size_t i = 0; i < prefix.size(); ++i)
+    {
+        unsigned char a = static_cast<unsigned char>(
+            std::tolower(static_cast<unsigned char>(s[i])));
+        unsigned char b = static_cast<unsigned char>(
+            std::tolower(static_cast<unsigned char>(prefix[i])));
+        if (a != b)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+/* Filter `functions` to only those starting with `prefix + humanName`
+ * (case-insensitive). `prefix` and `humanName` are concatenated as-is and
+ * then compared ignoring case. */
+static std::vector<std::string> filterFunctions(
+    const std::vector<std::string>& functions,
+    const std::string& prefix,
+    const std::string& humanName)
+{
+    std::string wanted = prefix + humanName;
+    std::vector<std::string> result;
+    result.reserve(functions.size());
+    for (auto& fn : functions)
+    {
+        if (startsWithIgnoreCase(fn, wanted))
+        {
+            result.push_back(fn);
+        }
+    }
+    return result;
+}
+
 int main(int argc, char* argv[])
 {
     std::vector<std::string> headerDirs;
@@ -245,7 +290,9 @@ int main(int argc, char* argv[])
         auto it = functionsByFile.find(kv.second);
         if (it != functionsByFile.end())
         {
-            for (auto& fn : it->second)
+            std::string humanName = computeHumanName(kv.first, prefix);
+            auto filtered = filterFunctions(it->second, prefix, humanName);
+            for (auto& fn : filtered)
             {
                 std::cout << "  " << fn << "\n";
             }
@@ -259,9 +306,19 @@ int main(int argc, char* argv[])
         nlohmann::json widgets = nlohmann::json::object();
         for (auto& kv : dedup)
         {
+            std::string humanName = computeHumanName(kv.first, prefix);
             nlohmann::json w = nlohmann::json::object();
             w["include"] = kv.second;
-            w["humanName"] = computeHumanName(kv.first, prefix);
+            w["humanName"] = humanName;
+            auto it = functionsByFile.find(kv.second);
+            if (it != functionsByFile.end())
+            {
+                w["functions"] = filterFunctions(it->second, prefix, humanName);
+            }
+            else
+            {
+                w["functions"] = nlohmann::json::array();
+            }
             widgets[kv.first] = std::move(w);
         }
         json["widgets"] = std::move(widgets);

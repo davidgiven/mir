@@ -25,10 +25,14 @@ endif
 
 LLVM_CXXFLAGS := $(shell $(LLVM_CONFIG) --cxxflags 2>/dev/null)
 LLVM_LDFLAGS  := $(shell $(LLVM_CONFIG) --ldflags 2>/dev/null)
+LLVM_LIBS     := $(shell $(LLVM_CONFIG) --libs --system-libs 2>/dev/null)
 
 # llvm-config emits -std=c++17 which would override our -std=c++23 if
 # appended afterwards (last -std wins). Strip it.
 LLVM_CXXFLAGS := $(filter-out -std=%,$(LLVM_CXXFLAGS))
+# Treat LLVM/Clang headers as system headers to suppress -Wunused-parameter
+# etc. from -Wall -Wextra -Wpedantic.
+LLVM_CXXFLAGS := $(patsubst -I%,-isystem %,$(LLVM_CXXFLAGS))
 
 # Verify required headers are reachable with the current flags.
 HAVE_XM := $(shell echo '\#include <Xm/Xm.h>' | $(CXX) -E -x c++ - -o /dev/null 2>/dev/null && echo yes || echo no)
@@ -36,13 +40,18 @@ ifeq ($(HAVE_XM),no)
   $(error Xm/Xm.h not found -- install libxt-dev / libmotif-dev (Debian) or motif-devel (Fedora))
 endif
 
-HAVE_LIBCLANG := $(shell echo '\#include <clang-c/Index.h>' | $(CXX) $(LLVM_CXXFLAGS) -E -x c++ - -o /dev/null 2>/dev/null && echo yes || echo no)
+HAVE_LIBCLANG := $(shell echo '\#include <clang/Tooling/Tooling.h>' | $(CXX) $(LLVM_CXXFLAGS) -E -x c++ - -o /dev/null 2>/dev/null && echo yes || echo no)
 ifeq ($(HAVE_LIBCLANG),no)
-  $(error clang-c/Index.h not found -- install libclang-dev / clang-devel (>= 16))
+  $(error clang/Tooling/Tooling.h not found -- install libclang-dev / clang-devel (>= 16))
+endif
+
+HAVE_JSON := $(shell echo '\#include <nlohmann/json.hpp>' | $(CXX) -E -x c++ - -o /dev/null 2>/dev/null && echo yes || echo no)
+ifeq ($(HAVE_JSON),no)
+  $(error nlohmann/json.hpp not found -- install nlohmann-json3-dev / nlohmann_json-devel)
 endif
 
 CXXFLAGS += $(LLVM_CXXFLAGS)
-LDFLAGS  += $(LLVM_LDFLAGS) -lclang
+LDFLAGS  += $(LLVM_LDFLAGS) $(LLVM_LIBS) -lclang-cpp
 
 # -- build rules -----------------------------------------------------------
 

@@ -1,14 +1,18 @@
 /* mir -- Motif introspection / reflection. */
 
 #include <algorithm>
-#include <clang-c/Index.h>
 #include <filesystem>
 #include <fstream>
 #include <getopt.h>
 #include <iostream>
 #include <map>
+#include <sstream>
 #include <string>
 #include <vector>
+
+#include <clang/AST/Decl.h>
+#include <clang/AST/RecursiveASTVisitor.h>
+#include <clang/Tooling/Tooling.h>
 
 #include <nlohmann/json.hpp>
 
@@ -55,110 +59,65 @@ static std::vector<fs::path> collectHeaders(
     return headers;
 }
 
-/* Data passed to the libclang visitor. */
-struct VisitorData
-{
-    std::vector<std::pair<std::string, std::string>>* _widgetClasses;
-    std::map<std::string, std::vector<std::string>>* _functionsByFile;
-};
-
-/* libclang visitor: collect VarDecl of type WidgetClass and extern
+/* Visitor that collects VarDecl of type WidgetClass and extern
  * FunctionDecls grouped by defining file. */
-static enum CXChildVisitResult visitor(
-    CXCursor cursor, CXCursor parent, CXClientData clientData)
+struct Visitor : public clang::RecursiveASTVisitor<Visitor>
 {
-    (void)parent;
+    clang::SourceManager* _sm = nullptr;
+    std::vector<std::pair<std::string, std::string>>* _widgetClasses = nullptr;
+    std::map<std::string, std::vector<std::string>>* _functionsByFile = nullptr;
 
-    auto* data = static_cast<VisitorData*>(clientData);
-    CXCursorKind kind = clang_getCursorKind(cursor);
-
-    if (kind == CXCursor_VarDecl)
+    bool VisitVarDecl(clang::VarDecl* decl)
     {
-        CXType type = clang_getCursorType(cursor);
-        CXString typeSpelling = clang_getTypeSpelling(type);
-        std::string spelling = clang_getCString(typeSpelling);
-        clang_disposeString(typeSpelling);
-
-        if (spelling == "WidgetClass")
+        if (clang::isa<clang::ParmVarDecl>(decl))
         {
-            CXString name = clang_getCursorSpelling(cursor);
-            std::string nameStr = clang_getCString(name);
-            clang_disposeString(name);
-
-            CXSourceLocation loc = clang_getCursorLocation(cursor);
-            CXFile file = nullptr;
-            unsigned line = 0;
-            unsigned column = 0;
-            unsigned offset = 0;
-            clang_getFileLocation(loc, &file, &line, &column, &offset);
-            std::string fileStr;
-            if (file != nullptr)
-            {
-                CXString fileName = clang_getFileName(file);
-                const char* cstr = clang_getCString(fileName);
-                if (cstr != nullptr)
-                {
-                    fileStr = cstr;
-                }
-                clang_disposeString(fileName);
-            }
-
-            data->_widgetClasses->emplace_back(nameStr, fileStr);
+            return true;
         }
-    }
-    else if (kind == CXCursor_FunctionDecl)
-    {
-        /* Only extern linkage functions. */
-        CXLinkageKind linkage = clang_getCursorLinkage(cursor);
-        if (linkage != CXLinkage_External)
+        if (!decl->hasGlobalStorage())
         {
-            return CXChildVisit_Recurse;
+            return true;
         }
-
-        CXSourceLocation loc = clang_getCursorLocation(cursor);
-        CXFile file = nullptr;
-        unsigned line = 0;
-        unsigned column = 0;
-        unsigned offset = 0;
-        clang_getFileLocation(loc, &file, &line, &column, &offset);
-        if (file == nullptr)
+        std::string typeStr = decl->getType().getAsString();
+        if (typeStr != "WidgetClass")
         {
-            return CXChildVisit_Recurse;
+            return true;
         }
-
-        CXString fileName = clang_getFileName(file);
-        const char* cstr = clang_getCString(fileName);
-        std::string fileStr;
-        if (cstr != nullptr)
+        std::string name = decl->getNameAsString();
+        if (name.empty())
         {
-            fileStr = cstr;
+            return true;
         }
-        clang_disposeString(fileName);
-
-        if (fileStr.empty())
+        clang::SourceLocation loc = decl->getLocation();
+        std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
+        if (file.empty())
         {
-            return CXChildVisit_Recurse;
+            return true;
         }
-
-        CXString name = clang_getCursorSpelling(cursor);
-        const char* nstr = clang_getCString(name);
-        std::string nameStr;
-        if (nstr != nullptr)
-        {
-            nameStr = nstr;
-        }
-        clang_disposeString(name);
-
-        if (nameStr.empty())
-        {
-            return CXChildVisit_Recurse;
-        }
-
-        (*data->_functionsByFile)[fileStr].push_back(nameStr);
+        _widgetClasses->emplace_back(name, file);
+        return true;
     }
 
-    return CXChildVisit_Recurse;
-}
+    bool VisitFunctionDecl(clang::FunctionDecl* decl)
+    {
+        if (!decl->hasExternalFormalLinkage())
+        {
+            return true;
+        }
+        clang::SourceLocation loc = decl->getLocation();
+        std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
+        if (file.empty())
+        {
+            return true;
+        }
+        std::string name = decl->getNameAsString();
+        if (name.empty())
+        {
+            return true;
+        }
+        (*_functionsByFile)[file].push_back(name);
+        return true;
+    }
+};
 
 int main(int argc, char* argv[])
 {
@@ -193,40 +152,40 @@ int main(int argc, char* argv[])
 
     std::vector<fs::path> headers = collectHeaders(headerDirs);
 
-    CXIndex index = clang_createIndex(0, 0);
     std::vector<std::pair<std::string, std::string>> widgetClasses;
     std::map<std::string, std::vector<std::string>> functionsByFile;
-    VisitorData data{&widgetClasses, &functionsByFile};
+
+    /* Parse each header independently and leave unresolved symbols
+     * unresolved. Use the C++ Tooling API (buildASTFromCodeWithArgs)
+     * rather than the C API. */
+    std::vector<std::string> args = {"-I/usr/include/freetype2"};
 
     for (auto& h : headers)
     {
-        CXTranslationUnit tu = nullptr;
-        CXErrorCode err = clang_parseTranslationUnit2(index,
-            h.c_str(),
-            nullptr,
-            0,
-            nullptr,
-            0,
-            CXTranslationUnit_Incomplete | CXTranslationUnit_KeepGoing,
-            &tu);
-
-        if (err != CXError_Success || tu == nullptr)
+        std::ifstream in(h);
+        if (!in)
         {
-            std::cerr << "warning: failed to parse " << h << ": " << err
-                      << "\n";
-            if (tu != nullptr)
-            {
-                clang_disposeTranslationUnit(tu);
-            }
+            std::cerr << "warning: failed to open " << h << "\n";
+            continue;
+        }
+        std::stringstream buffer;
+        buffer << in.rdbuf();
+        std::string code = buffer.str();
+
+        auto ast = clang::tooling::buildASTFromCodeWithArgs(
+            code, args, h.string(), "/usr/bin/clang");
+        if (!ast)
+        {
+            std::cerr << "warning: failed to parse " << h << "\n";
             continue;
         }
 
-        CXCursor root = clang_getTranslationUnitCursor(tu);
-        clang_visitChildren(root, visitor, &data);
-        clang_disposeTranslationUnit(tu);
+        Visitor visitor;
+        visitor._sm = &ast->getSourceManager();
+        visitor._widgetClasses = &widgetClasses;
+        visitor._functionsByFile = &functionsByFile;
+        visitor.TraverseDecl(ast->getASTContext().getTranslationUnitDecl());
     }
-
-    clang_disposeIndex(index);
 
     /* Deduplicate widget classes by name and sort for stable output. */
     std::map<std::string, std::string> dedup;

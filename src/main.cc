@@ -88,6 +88,10 @@ struct Visitor : public clang::RecursiveASTVisitor<Visitor>
             return true;
         }
         clang::SourceLocation loc = decl->getLocation();
+        if (!_sm->isInMainFile(loc))
+        {
+            return true;
+        }
         std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
         if (file.empty())
         {
@@ -104,6 +108,10 @@ struct Visitor : public clang::RecursiveASTVisitor<Visitor>
             return true;
         }
         clang::SourceLocation loc = decl->getLocation();
+        if (!_sm->isInMainFile(loc))
+        {
+            return true;
+        }
         std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
         if (file.empty())
         {
@@ -158,7 +166,7 @@ int main(int argc, char* argv[])
     /* Parse each header independently and leave unresolved symbols
      * unresolved. Use the C++ Tooling API (buildASTFromCodeWithArgs)
      * rather than the C API. */
-    std::vector<std::string> args = {"-I/usr/include/freetype2"};
+    std::vector<std::string> args;
 
     for (auto& h : headers)
     {

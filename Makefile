@@ -49,10 +49,11 @@ LDFLAGS  += $(LLVM_LDFLAGS) -lclang
 SRC := src/main.cc
 BIN := mir
 OBJ := .obj/main.o
+JSON := mir.json
 
 .PHONY: all clean
 
-all: $(BIN)
+all: $(BIN) $(JSON)
 
 $(OBJ): $(SRC)
 	@mkdir -p $(dir $@)
@@ -62,6 +63,9 @@ $(BIN): $(OBJ)
 	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
+$(JSON): $(BIN)
+	./$(BIN) --headers /usr/include/Xm > $@
+
 clean:
-	rm -rf .obj $(BIN) build
+	rm -rf .obj $(BIN) build $(JSON)
 

@@ -109,6 +109,7 @@ Will be created incrementally as the project develops.
 - For very large numbers (e.g. nanosecond values) always use `'` digit separators grouped as `000'000` (e.g. `1'000'000'000`, `100'000'000`).
 - Use /* */ block comments throughout.
 - Development is done iteratively, in small steps. Follow the user's request precisely, and don't extrapolate unless explicitly asked to.
+- Keep the AGENTS.md up to date.
 
 ## References
 

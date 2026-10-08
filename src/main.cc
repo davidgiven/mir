@@ -16,6 +16,7 @@
 #include <clang/Tooling/Tooling.h>
 
 #include <X11/Intrinsic.h>
+#include <X11/IntrinsicP.h>
 #include <Xm/Xm.h>
 
 #include <dlfcn.h>
@@ -203,6 +204,122 @@ static std::map<std::string, nlohmann::json> filterMethods(
         }
     }
     return result;
+}
+
+/* Build a map from WidgetClass pointer value to its classSymbol string.
+ * This is used to resolve superclass pointers back to their symbolic names.
+ * The map is seeded from the discovered dedup set plus a hard-coded list of
+ * Xt Intrinsics symbols that are common superclasses but live outside Xm. */
+static std::map<WidgetClass, std::string> buildClassPointerMap(
+    const std::map<std::string, std::string>& dedup)
+{
+    std::map<WidgetClass, std::string> map;
+
+    auto tryAdd = [&](const std::string& sym)
+    {
+        void* var = dlsym(RTLD_DEFAULT, sym.c_str());
+        if (var == nullptr)
+        {
+            return;
+        }
+        WidgetClass wc = *(WidgetClass*)var;
+        if (wc == nullptr)
+        {
+            return;
+        }
+        if (map.find(wc) == map.end())
+        {
+            map[wc] = sym;
+        }
+    };
+
+    for (auto& kv : dedup)
+    {
+        tryAdd(kv.first);
+    }
+
+    static const std::vector<std::string> xtSymbols = {
+        "coreWidgetClass",
+        "widgetClass",
+        "compositeWidgetClass",
+        "constraintWidgetClass",
+        "objectClass",
+        "rectObjClass",
+        "shellWidgetClass",
+        "overrideShellWidgetClass",
+        "wmShellWidgetClass",
+        "transientShellWidgetClass",
+        "topLevelShellWidgetClass",
+        "applicationShellWidgetClass",
+        "sessionShellWidgetClass",
+        "vendorShellWidgetClass",
+        "hookObjectClass",
+    };
+    for (auto& s : xtSymbols)
+    {
+        tryAdd(s);
+    }
+
+    return map;
+}
+
+/* Look up `classSymbol`'s superclass via its WidgetClass's
+ * core_class.superclass pointer. The pointer is resolved to a classSymbol using
+ * `ptrMap`. This read does not require XtInitializeWidgetClass and thus avoids
+ * crashes observed for some classes during initialization. If the superclass
+ * pointer is null (root class), an empty string is returned. If the pointer
+ * cannot be resolved, the superclass's class_name is returned as a fallback, or
+ * empty on failure. */
+static std::string getSuperclassSymbol(const std::string& classSymbol,
+    const std::map<WidgetClass, std::string>& ptrMap)
+{
+    dlerror();
+    void* var = dlsym(RTLD_DEFAULT, classSymbol.c_str());
+    if (var == nullptr)
+    {
+        const char* err = dlerror();
+        std::cerr << "warning: dlsym failed for '" << classSymbol
+                  << "' when looking up superclass: " << (err ? err : "unknown")
+                  << "\n";
+        return "";
+    }
+    WidgetClass wc = *(WidgetClass*)var;
+    if (wc == nullptr)
+    {
+        std::cerr << "warning: WidgetClass '" << classSymbol
+                  << "' is null when looking up superclass\n";
+        return "";
+    }
+    WidgetClass sc = wc->core_class.superclass;
+    if (sc == nullptr)
+    {
+        return "";
+    }
+    auto it = ptrMap.find(sc);
+    if (it != ptrMap.end())
+    {
+        return it->second;
+    }
+    /* Fallback: search by class_name among known pointers. */
+    if (sc->core_class.class_name != nullptr)
+    {
+        std::string cname = sc->core_class.class_name;
+        for (auto& kv : ptrMap)
+        {
+            if (kv.first->core_class.class_name != nullptr &&
+                cname == kv.first->core_class.class_name)
+            {
+                return kv.second;
+            }
+        }
+        std::cerr << "warning: superclass pointer for '" << classSymbol
+                  << "' (class_name " << cname
+                  << ") not found in map -- using class_name as fallback\n";
+        return cname;
+    }
+    std::cerr << "warning: superclass for '" << classSymbol
+              << "' not found in map and has no class_name\n";
+    return "";
 }
 
 /* Look up `classSymbol` via dlsym(), initialise the class and return its
@@ -443,6 +560,9 @@ int main(int argc, char* argv[])
         vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
     }
 
+    /* Build pointer-to-symbol map for superclass resolution. */
+    auto classPointerMap = buildClassPointerMap(dedup);
+
     if (!outputPath.empty())
     {
         nlohmann::json json = nlohmann::json::object();
@@ -472,6 +592,7 @@ int main(int argc, char* argv[])
             nlohmann::json w = nlohmann::json::object();
             w["include"] = include;
             w["classSymbol"] = classSymbol;
+            w["superclass"] = getSuperclassSymbol(classSymbol, classPointerMap);
             auto it = functionsByFile.find(include);
             if (it != functionsByFile.end())
             {

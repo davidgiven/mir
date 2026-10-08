@@ -23,6 +23,10 @@
                         "description": "Raw widget class symbol name (e.g. xmPushButtonWidgetClass).",
                         "type": "string"
                     },
+                    "superclass": {
+                        "description": "The classSymbol of the widget's superclass (e.g. xmPrimitiveWidgetClass).",
+                        "type": "string"
+                    },
                     "methods": {
                         "description": "Dictionary of methods associated with the widget, filtered to only those whose name starts with prefix + widget key (case-insensitive), keyed by method name with prefix and widget name stripped.",
                         "type": "object",
@@ -41,6 +45,7 @@
                 "required": [
                     "include",
                     "classSymbol",
+                    "superclass",
                     "methods",
                     "resources"
                 ],

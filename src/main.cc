@@ -304,13 +304,31 @@ int main(int argc, char* argv[])
         nlohmann::json json = nlohmann::json::object();
         json["prefix"] = prefix;
         nlohmann::json widgets = nlohmann::json::object();
+        /* Map humanName -> (classSymbol, include) sorted by humanName for
+         * stable output keyed by human name. */
+        std::map<std::string, std::pair<std::string, std::string>> humanMap;
         for (auto& kv : dedup)
         {
             std::string humanName = computeHumanName(kv.first, prefix);
+            if (humanMap.find(humanName) != humanMap.end())
+            {
+                std::cerr << "warning: duplicate humanName '" << humanName
+                          << "' for classSymbol '" << kv.first
+                          << "' (already mapped to '"
+                          << humanMap[humanName].first << "') -- skipping\n";
+                continue;
+            }
+            humanMap[humanName] = {kv.first, kv.second};
+        }
+        for (auto& kv : humanMap)
+        {
+            const std::string& humanName = kv.first;
+            const std::string& classSymbol = kv.second.first;
+            const std::string& include = kv.second.second;
             nlohmann::json w = nlohmann::json::object();
-            w["include"] = kv.second;
-            w["humanName"] = humanName;
-            auto it = functionsByFile.find(kv.second);
+            w["include"] = include;
+            w["classSymbol"] = classSymbol;
+            auto it = functionsByFile.find(include);
             if (it != functionsByFile.end())
             {
                 w["functions"] = filterFunctions(it->second, prefix, humanName);
@@ -319,7 +337,7 @@ int main(int argc, char* argv[])
             {
                 w["functions"] = nlohmann::json::array();
             }
-            widgets[kv.first] = std::move(w);
+            widgets[humanName] = std::move(w);
         }
         json["widgets"] = std::move(widgets);
         std::ofstream out(outputPath);

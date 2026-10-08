@@ -6,11 +6,11 @@
     "type": "object",
     "properties": {
         "prefix": {
-            "description": "Toolkit prefix stripped from widget class names to derive humanName.",
+            "description": "Toolkit prefix stripped from widget class names to derive widget keys.",
             "type": "string"
         },
         "widgets": {
-            "description": "Widgets keyed by widget name.",
+            "description": "Widgets keyed by human name.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
@@ -19,12 +19,12 @@
                         "description": "Path to the header file that declares the widget class.",
                         "type": "string"
                     },
-                    "humanName": {
-                        "description": "Human-readable name of the widget class, derived by stripping the toolkit prefix and the trailing WidgetClass suffix.",
+                    "classSymbol": {
+                        "description": "Raw widget class symbol name (e.g. xmPushButtonWidgetClass).",
                         "type": "string"
                     },
                     "functions": {
-                        "description": "List of functions associated with the widget, filtered to only those whose name starts with prefix + humanName (case-insensitive).",
+                        "description": "List of functions associated with the widget, filtered to only those whose name starts with prefix + widget key (case-insensitive).",
                         "type": "array",
                         "items": {
                             "type": "string"
@@ -33,7 +33,7 @@
                 },
                 "required": [
                     "include",
-                    "humanName",
+                    "classSymbol",
                     "functions"
                 ],
                 "additionalProperties": false

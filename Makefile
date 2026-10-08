@@ -73,7 +73,7 @@ $(BIN): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 $(JSON): $(BIN)
-	./$(BIN) --headers /usr/include/Xm --output=$@
+	./$(BIN) --headers /usr/include/Xm --prefix=xm --output=$@
 
 clean:
 	rm -rf .obj $(BIN) build $(JSON)

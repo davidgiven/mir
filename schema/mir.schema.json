@@ -14,10 +14,15 @@
                     "include": {
                         "description": "Path to the header file that declares the widget class.",
                         "type": "string"
+                    },
+                    "humanName": {
+                        "description": "Human-readable name of the widget class, derived by stripping the toolkit prefix and the trailing WidgetClass suffix.",
+                        "type": "string"
                     }
                 },
                 "required": [
-                    "include"
+                    "include",
+                    "humanName"
                 ],
                 "additionalProperties": false
             }

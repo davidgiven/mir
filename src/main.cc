@@ -127,14 +127,36 @@ struct Visitor : public clang::RecursiveASTVisitor<Visitor>
     }
 };
 
+/* Compute the human-readable widget name by stripping the toolkit
+ * prefix from the front and "WidgetClass" from the end, when present. */
+static std::string computeHumanName(
+    const std::string& name, const std::string& prefix)
+{
+    std::string result = name;
+    if (!prefix.empty() && result.rfind(prefix, 0) == 0)
+    {
+        result = result.substr(prefix.size());
+    }
+    const std::string suffix = "WidgetClass";
+    if (result.size() >= suffix.size() &&
+        result.compare(result.size() - suffix.size(), suffix.size(), suffix) ==
+            0)
+    {
+        result = result.substr(0, result.size() - suffix.size());
+    }
+    return result;
+}
+
 int main(int argc, char* argv[])
 {
     std::vector<std::string> headerDirs;
     std::string outputPath;
+    std::string prefix;
 
     static struct option longOptions[] = {
         {"headers", required_argument, nullptr, 'H'},
         {"output",  required_argument, nullptr, 'o'},
+        {"prefix",  required_argument, nullptr, 'p'},
         {nullptr,   0,                 nullptr, 0  },
     };
 
@@ -150,6 +172,10 @@ int main(int argc, char* argv[])
 
             case 'o':
                 outputPath = optarg;
+                break;
+
+            case 'p':
+                prefix = optarg;
                 break;
 
             case '?':
@@ -234,6 +260,7 @@ int main(int argc, char* argv[])
         {
             nlohmann::json w = nlohmann::json::object();
             w["include"] = kv.second;
+            w["humanName"] = computeHumanName(kv.first, prefix);
             widgets[kv.first] = std::move(w);
         }
         json["widgets"] = std::move(widgets);

@@ -259,10 +259,8 @@ static std::string getSuperclassSymbol(const std::string& classSymbol,
                 return kv.second;
             }
         }
-        std::cerr << "warning: superclass pointer for '" << classSymbol
-                  << "' (class_name " << cname
-                  << ") not found in map -- using class_name as fallback\n";
-        return cname;
+        /* Unknown superclass; we'll just assume there is no superclass. */
+        return "";
     }
     std::cerr << "warning: superclass for '" << classSymbol
               << "' not found in map and has no class_name\n";

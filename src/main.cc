@@ -9,6 +9,7 @@
 #include <map>
 #include <sstream>
 #include <string>
+#include <unordered_set>
 #include <vector>
 
 #include <clang/AST/Decl.h>
@@ -386,6 +387,30 @@ static std::map<std::string, nlohmann::json> getResources(
 
         XtInitializeWidgetClass(wc);
 
+        /* Collect resources defined in superclasses so they can be
+         * ignored. */
+        std::unordered_set<std::string> ancestorResources;
+        for (WidgetClass sc = wc->core_class.superclass; sc != nullptr;
+            sc = sc->core_class.superclass)
+        {
+            XtResourceList sList = nullptr;
+            Cardinal sNum = 0;
+            XtGetResourceList(sc, &sList, &sNum);
+            for (Cardinal j = 0; j < sNum; ++j)
+            {
+                const char* sName = sList[j].resource_name;
+                if (sName == nullptr || sName[0] == '\0')
+                {
+                    continue;
+                }
+                ancestorResources.insert(sName);
+            }
+            if (sList != nullptr)
+            {
+                XtFree((char*)sList);
+            }
+        }
+
         XtResourceList resList = nullptr;
         Cardinal num = 0;
         XtGetResourceList(wc, &resList, &num);
@@ -393,6 +418,11 @@ static std::map<std::string, nlohmann::json> getResources(
         {
             const char* name = resList[i].resource_name;
             if (name == nullptr || name[0] == '\0')
+            {
+                continue;
+            }
+            /* Ignore resources defined in a superclass. */
+            if (ancestorResources.find(name) != ancestorResources.end())
             {
                 continue;
             }

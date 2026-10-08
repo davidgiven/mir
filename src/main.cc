@@ -50,6 +50,7 @@ static std::vector<fs::path> collectHeaders(
         {
             continue;
         }
+        bool isX11 = (dir.filename() == "X11");
         for (auto& entry : fs::recursive_directory_iterator(dir))
         {
             if (!entry.is_regular_file())
@@ -57,10 +58,43 @@ static std::vector<fs::path> collectHeaders(
                 continue;
             }
             auto ext = entry.path().extension().string();
-            if (ext == ".h" || ext == ".H")
+            if (ext != ".h" && ext != ".H")
             {
-                headers.push_back(entry.path());
+                continue;
             }
+            if (isX11)
+            {
+                /* For the system Xt headers, only consider top-level public
+                 * headers. Private headers (*P.h, *I.h) and internal headers
+                 * (Xwindows.h etc.) as well as subdirectories (Xaw,
+                 * extensions, dri, …) are not part of the public widget API
+                 * and would fail full C99 parsing without additional
+                 * prerequisites. Skipping them keeps strict parsing
+                 * successful. */
+                if (entry.path().parent_path() != dir)
+                {
+                    continue;
+                }
+                std::string fname = entry.path().filename().string();
+                if (fname.size() >= 3 &&
+                    (fname.substr(fname.size() - 3) == "P.h" ||
+                        fname.substr(fname.size() - 3) == "I.h"))
+                {
+                    continue;
+                }
+                static const std::unordered_set<std::string> skip = {
+                    "Xwindows.h",
+                    "Xwinsock.h",
+                    "PassivGraI.h",
+                    "TranslateI.h",
+                    "InitialI.h",
+                };
+                if (skip.find(fname) != skip.end())
+                {
+                    continue;
+                }
+            }
+            headers.push_back(entry.path());
         }
     }
 
@@ -70,10 +104,14 @@ static std::vector<fs::path> collectHeaders(
 }
 
 /* Visitor that collects VarDecl of type WidgetClass and extern
- * FunctionDecls grouped by defining file. */
+ * FunctionDecls grouped by defining file. The visitor is run on a
+ * translation unit that does `#include "target"`; therefore definitions are
+ * not in the main file but in the included header. We filter by matching the
+ * spelling filename against the header that was included. */
 struct Visitor : public clang::RecursiveASTVisitor<Visitor>
 {
     clang::SourceManager* _sm = nullptr;
+    std::string _targetFile;
     std::vector<std::pair<std::string, std::string>>* _widgetClasses = nullptr;
     std::map<std::string, std::vector<std::string>>* _functionsByFile = nullptr;
 
@@ -98,12 +136,8 @@ struct Visitor : public clang::RecursiveASTVisitor<Visitor>
             return true;
         }
         clang::SourceLocation loc = decl->getLocation();
-        if (!_sm->isInMainFile(loc))
-        {
-            return true;
-        }
         std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
-        if (file.empty())
+        if (file != _targetFile)
         {
             return true;
         }
@@ -118,12 +152,8 @@ struct Visitor : public clang::RecursiveASTVisitor<Visitor>
             return true;
         }
         clang::SourceLocation loc = decl->getLocation();
-        if (!_sm->isInMainFile(loc))
-        {
-            return true;
-        }
         std::string file = _sm->getFilename(_sm->getFileLoc(loc)).str();
-        if (file.empty())
+        if (file != _targetFile)
         {
             return true;
         }
@@ -212,8 +242,10 @@ static std::map<std::string, nlohmann::json> filterMethods(
 
 /* Build a map from WidgetClass pointer value to its classSymbol string.
  * This is used to resolve superclass pointers back to their symbolic names.
- * The map is seeded from the discovered dedup set plus a hard-coded list of
- * Xt Intrinsics symbols that are common superclasses but live outside Xm. */
+ * The map is seeded from the WidgetClass symbols discovered by parsing the
+ * headers the tool was shown (e.g. /usr/include/X11 for Xt Intrinsics). No
+ * hard-coded fallback list is used; callers must pass the relevant header
+ * directories so the real definitions are visible. */
 static std::map<WidgetClass, std::string> buildClassPointerMap(
     const std::map<std::string, std::string>& dedup)
 {
@@ -240,28 +272,6 @@ static std::map<WidgetClass, std::string> buildClassPointerMap(
     for (auto& kv : dedup)
     {
         tryAdd(kv.first);
-    }
-
-    static const std::vector<std::string> xtSymbols = {
-        "coreWidgetClass",
-        "widgetClass",
-        "compositeWidgetClass",
-        "constraintWidgetClass",
-        "objectClass",
-        "rectObjClass",
-        "shellWidgetClass",
-        "overrideShellWidgetClass",
-        "wmShellWidgetClass",
-        "transientShellWidgetClass",
-        "topLevelShellWidgetClass",
-        "applicationShellWidgetClass",
-        "sessionShellWidgetClass",
-        "vendorShellWidgetClass",
-        "hookObjectClass",
-    };
-    for (auto& s : xtSymbols)
-    {
-        tryAdd(s);
     }
 
     return map;
@@ -504,11 +514,13 @@ int main(int argc, char* argv[])
     (void)appContext;
 
     std::vector<std::string> headerDirs;
+    std::vector<std::string> includePaths;
     std::string outputPath;
     std::string prefix;
 
     static struct option longOptions[] = {
         {"headers", required_argument, nullptr, 'H'},
+        {"include", required_argument, nullptr, 'I'},
         {"output",  required_argument, nullptr, 'o'},
         {"prefix",  required_argument, nullptr, 'p'},
         {nullptr,   0,                 nullptr, 0  },
@@ -516,12 +528,17 @@ int main(int argc, char* argv[])
 
     int opt = 0;
     int longIndex = 0;
-    while ((opt = getopt_long(argc, argv, "o:", longOptions, &longIndex)) != -1)
+    while (
+        (opt = getopt_long(argc, argv, "o:I:", longOptions, &longIndex)) != -1)
     {
         switch (opt)
         {
             case 'H':
                 headerDirs.emplace_back(optarg);
+                break;
+
+            case 'I':
+                includePaths.emplace_back(optarg);
                 break;
 
             case 'o':
@@ -545,31 +562,43 @@ int main(int argc, char* argv[])
 
     /* Parse each header independently and leave unresolved symbols
      * unresolved. Use the C++ Tooling API (buildASTFromCodeWithArgs)
-     * rather than the C API. */
+     * rather than the C API. Each header is parsed via an artificial
+     * translation unit that includes <X11/Intrinsic.h> first so that Xt/Motif
+     * headers that depend on Intrinsic definitions (e.g. Composite.h,
+     * Core.h, Object.h) see the real definitions from /usr/include/X11.
+     * Full parsing is performed with C99 mode and warnings disabled; any
+     * error causes a hard failure. Include paths supplied via -I/--include
+     * are forwarded to the clang invocation. */
     std::vector<std::string> args;
+    args.push_back("-std=c99");
+    args.push_back("-w");
+    for (auto& ip : includePaths)
+    {
+        args.push_back("-I" + ip);
+    }
 
     for (auto& h : headers)
     {
-        std::ifstream in(h);
-        if (!in)
-        {
-            std::cerr << "warning: failed to open " << h << "\n";
-            continue;
-        }
-        std::stringstream buffer;
-        buffer << in.rdbuf();
-        std::string code = buffer.str();
+        std::string code =
+            "#include <X11/Intrinsic.h>\n#include \"" + h.string() + "\"\n";
+        std::string dummy = h.string() + ".c";
 
         auto ast = clang::tooling::buildASTFromCodeWithArgs(
-            code, args, h.string(), "/usr/bin/clang");
+            code, args, dummy, "/usr/bin/clang");
         if (!ast)
         {
-            std::cerr << "warning: failed to parse " << h << "\n";
-            continue;
+            std::cerr << "error: failed to parse " << h << "\n";
+            return 1;
+        }
+        if (ast->getDiagnostics().hasErrorOccurred())
+        {
+            std::cerr << "error: failed to parse " << h << " (diagnostics)\n";
+            return 1;
         }
 
         Visitor visitor;
         visitor._sm = &ast->getSourceManager();
+        visitor._targetFile = h.string();
         visitor._widgetClasses = &widgetClasses;
         visitor._functionsByFile = &functionsByFile;
         visitor.TraverseDecl(ast->getASTContext().getTranslationUnitDecl());

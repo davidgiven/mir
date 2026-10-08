@@ -9,7 +9,17 @@
             "description": "Widgets keyed by widget name.",
             "type": "object",
             "additionalProperties": {
-                "type": "object"
+                "type": "object",
+                "properties": {
+                    "include": {
+                        "description": "Path to the header file that declares the widget class.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "include"
+                ],
+                "additionalProperties": false
             }
         }
     },

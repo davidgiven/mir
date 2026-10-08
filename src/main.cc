@@ -221,6 +221,14 @@ int main(int argc, char* argv[])
     if (!outputPath.empty())
     {
         nlohmann::json json = nlohmann::json::object();
+        nlohmann::json widgets = nlohmann::json::object();
+        for (auto& kv : dedup)
+        {
+            nlohmann::json w = nlohmann::json::object();
+            w["include"] = kv.second;
+            widgets[kv.first] = std::move(w);
+        }
+        json["widgets"] = std::move(widgets);
         std::ofstream out(outputPath);
         if (!out)
         {

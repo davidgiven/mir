@@ -18,6 +18,10 @@
 #include <X11/Intrinsic.h>
 #include <Xm/Xm.h>
 
+#include <dlfcn.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
 #include <nlohmann/json.hpp>
 
 namespace fs = std::filesystem;
@@ -201,6 +205,146 @@ static std::map<std::string, nlohmann::json> filterMethods(
     return result;
 }
 
+/* Look up `classSymbol` via dlsym(), initialise the class and return its
+ * resource names as a sorted map to empty JSON objects. Uses
+ * XtInitializeWidgetClass() + XtGetResourceList() as required by the spec.
+ * Each widget is handled in a forked child so a segfault in
+ * XtInitializeWidgetClass (observed for e.g. xmDesktopClass after gadget
+ * initialisation) does not crash the whole tool. */
+static std::map<std::string, nlohmann::json> getResources(
+    const std::string& classSymbol)
+{
+    std::map<std::string, nlohmann::json> result;
+
+    /* Clear any stale error. */
+    dlerror();
+
+    void* sym = dlsym(RTLD_DEFAULT, classSymbol.c_str());
+    if (sym == nullptr)
+    {
+        const char* err = dlerror();
+        std::cerr << "warning: dlsym failed for '" << classSymbol
+                  << "': " << (err ? err : "unknown") << "\n";
+        return result;
+    }
+
+    /* Symbol is an external WidgetClass variable, so dlsym returns its
+     * address; dereference to obtain the actual WidgetClass pointer. */
+    WidgetClass wc = *(WidgetClass*)sym;
+    if (wc == nullptr)
+    {
+        std::cerr << "warning: WidgetClass '" << classSymbol << "' is null\n";
+        return result;
+    }
+
+    /* Flush streams before fork to avoid duplicate buffered output. */
+    std::cout.flush();
+    std::cerr.flush();
+    fflush(nullptr);
+
+    int pipefd[2];
+    if (pipe(pipefd) != 0)
+    {
+        std::cerr << "warning: pipe failed for '" << classSymbol << "'\n";
+        return result;
+    }
+
+    pid_t pid = fork();
+    if (pid < 0)
+    {
+        std::cerr << "warning: fork failed for '" << classSymbol << "'\n";
+        close(pipefd[0]);
+        close(pipefd[1]);
+        return result;
+    }
+
+    if (pid == 0)
+    {
+        /* Child -- perform the Xt work and write resource names, one per
+         * line, to the pipe. */
+        close(pipefd[0]);
+
+        XtInitializeWidgetClass(wc);
+
+        XtResourceList resList = nullptr;
+        Cardinal num = 0;
+        XtGetResourceList(wc, &resList, &num);
+        for (Cardinal i = 0; i < num; ++i)
+        {
+            const char* name = resList[i].resource_name;
+            if (name == nullptr || name[0] == '\0')
+            {
+                continue;
+            }
+            /* Use dprintf / write to avoid iostream buffering issues after
+             * fork. */
+            dprintf(pipefd[1], "%s\n", name);
+        }
+        if (resList != nullptr)
+        {
+            XtFree((char*)resList);
+        }
+        close(pipefd[1]);
+        _exit(0);
+    }
+
+    /* Parent -- read resource names from child. */
+    close(pipefd[1]);
+
+    std::string data;
+    char buf[4096];
+    ssize_t n = 0;
+    while ((n = read(pipefd[0], buf, sizeof(buf))) > 0)
+    {
+        data.append(buf, static_cast<size_t>(n));
+    }
+    close(pipefd[0]);
+
+    int status = 0;
+    if (waitpid(pid, &status, 0) < 0)
+    {
+        std::cerr << "warning: waitpid failed for '" << classSymbol << "'\n";
+        return result;
+    }
+    if (WIFSIGNALED(status))
+    {
+        std::cerr << "warning: XtInitializeWidgetClass crashed for '"
+                  << classSymbol << "' (signal " << WTERMSIG(status)
+                  << ") -- skipping resources\n";
+        return result;
+    }
+    if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
+    {
+        std::cerr << "warning: child failed for '" << classSymbol << "' (exit "
+                  << WEXITSTATUS(status) << ")\n";
+        return result;
+    }
+
+    /* Parse newline-separated names into the map. */
+    size_t pos = 0;
+    while (pos < data.size())
+    {
+        size_t nl = data.find('\n', pos);
+        std::string name;
+        if (nl == std::string::npos)
+        {
+            name = data.substr(pos);
+            pos = data.size();
+        }
+        else
+        {
+            name = data.substr(pos, nl - pos);
+            pos = nl + 1;
+        }
+        if (!name.empty())
+        {
+            result.emplace(name, nlohmann::json::object());
+        }
+    }
+
+    return result;
+}
+
 int main(int argc, char* argv[])
 {
     /* Initialise Xt/Motif -- creates an application context needed for
@@ -342,6 +486,15 @@ int main(int argc, char* argv[])
             else
             {
                 w["methods"] = nlohmann::json::object();
+            }
+            {
+                auto resources = getResources(classSymbol);
+                nlohmann::json r = nlohmann::json::object();
+                for (auto& p : resources)
+                {
+                    r[p.first] = p.second;
+                }
+                w["resources"] = std::move(r);
             }
             widgets[humanName] = std::move(w);
         }

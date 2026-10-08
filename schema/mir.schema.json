@@ -29,12 +29,20 @@
                         "additionalProperties": {
                             "type": "object"
                         }
+                    },
+                    "resources": {
+                        "description": "Dictionary of resources for the widget class as returned by XtGetResourceList after XtInitializeWidgetClass, keyed by resource name.",
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        }
                     }
                 },
                 "required": [
                     "include",
                     "classSymbol",
-                    "methods"
+                    "methods",
+                    "resources"
                 ],
                 "additionalProperties": false
             }

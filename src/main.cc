@@ -299,21 +299,6 @@ int main(int argc, char* argv[])
         vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
     }
 
-    for (auto& kv : dedup)
-    {
-        std::cout << kv.first << " " << kv.second << "\n";
-        auto it = functionsByFile.find(kv.second);
-        if (it != functionsByFile.end())
-        {
-            std::string humanName = computeHumanName(kv.first, prefix);
-            auto filtered = filterMethods(it->second, prefix, humanName);
-            for (auto& fn : filtered)
-            {
-                std::cout << "  " << fn.first << "\n";
-            }
-        }
-    }
-
     if (!outputPath.empty())
     {
         nlohmann::json json = nlohmann::json::object();

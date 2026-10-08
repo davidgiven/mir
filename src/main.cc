@@ -3,11 +3,9 @@
 #include <algorithm>
 #include <clang-c/Index.h>
 #include <filesystem>
-#include <fstream>
 #include <getopt.h>
 #include <iostream>
 #include <map>
-#include <set>
 #include <string>
 #include <vector>
 
@@ -162,26 +160,20 @@ static enum CXChildVisitResult visitor(
 int main(int argc, char* argv[])
 {
     std::vector<std::string> headerDirs;
-    std::vector<std::string> includeDirs;
 
     static struct option longOptions[] = {
         {"headers", required_argument, nullptr, 'H'},
-        {"include", required_argument, nullptr, 'I'},
         {nullptr,   0,                 nullptr, 0  },
     };
 
     int opt = 0;
     int longIndex = 0;
-    while ((opt = getopt_long(argc, argv, "I:", longOptions, &longIndex)) != -1)
+    while ((opt = getopt_long(argc, argv, "", longOptions, &longIndex)) != -1)
     {
         switch (opt)
         {
             case 'H':
                 headerDirs.emplace_back(optarg);
-                break;
-
-            case 'I':
-                includeDirs.emplace_back(optarg);
                 break;
 
             case '?':
@@ -192,57 +184,40 @@ int main(int argc, char* argv[])
 
     std::vector<fs::path> headers = collectHeaders(headerDirs);
 
-    fs::path combined = fs::temp_directory_path() / "mir_combined.c";
-    {
-        std::ofstream out(combined);
-        if (!out)
-        {
-            std::cerr << "failed to create " << combined << "\n";
-            return 1;
-        }
-        for (auto& h : headers)
-        {
-            out << "#include \"" << h.string() << "\"\n";
-        }
-    }
-
-    /* Build clang arguments from explicit --include directories. */
-    std::vector<std::string> argStrs;
-    for (auto& d : includeDirs)
-    {
-        argStrs.push_back("-I" + d);
-    }
-
-    std::vector<const char*> args;
-    args.reserve(argStrs.size());
-    for (auto& s : argStrs)
-    {
-        args.push_back(s.c_str());
-    }
-
     CXIndex index = clang_createIndex(0, 0);
-    CXTranslationUnit tu = nullptr;
-    CXErrorCode err = clang_parseTranslationUnit2(index,
-        combined.c_str(),
-        args.data(),
-        static_cast<int>(args.size()),
-        nullptr,
-        0,
-        CXTranslationUnit_None,
-        &tu);
-
-    if (err != CXError_Success || tu == nullptr)
-    {
-        std::cerr << "clang_parseTranslationUnit2 failed: " << err << "\n";
-        clang_disposeIndex(index);
-        return 1;
-    }
-
-    CXCursor root = clang_getTranslationUnitCursor(tu);
     std::vector<std::pair<std::string, std::string>> widgetClasses;
     std::map<std::string, std::vector<std::string>> functionsByFile;
     VisitorData data{&widgetClasses, &functionsByFile};
-    clang_visitChildren(root, visitor, &data);
+
+    for (auto& h : headers)
+    {
+        CXTranslationUnit tu = nullptr;
+        CXErrorCode err = clang_parseTranslationUnit2(index,
+            h.c_str(),
+            nullptr,
+            0,
+            nullptr,
+            0,
+            CXTranslationUnit_Incomplete | CXTranslationUnit_KeepGoing,
+            &tu);
+
+        if (err != CXError_Success || tu == nullptr)
+        {
+            std::cerr << "warning: failed to parse " << h << ": " << err
+                      << "\n";
+            if (tu != nullptr)
+            {
+                clang_disposeTranslationUnit(tu);
+            }
+            continue;
+        }
+
+        CXCursor root = clang_getTranslationUnitCursor(tu);
+        clang_visitChildren(root, visitor, &data);
+        clang_disposeTranslationUnit(tu);
+    }
+
+    clang_disposeIndex(index);
 
     /* Deduplicate widget classes by name and sort for stable output. */
     std::map<std::string, std::string> dedup;
@@ -274,12 +249,6 @@ int main(int argc, char* argv[])
             }
         }
     }
-
-    clang_disposeTranslationUnit(tu);
-    clang_disposeIndex(index);
-
-    std::error_code ec;
-    fs::remove(combined, ec);
 
     return 0;
 }

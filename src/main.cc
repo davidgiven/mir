@@ -20,8 +20,6 @@
 #include <Xm/Xm.h>
 
 #include <dlfcn.h>
-#include <sys/wait.h>
-#include <unistd.h>
 
 #include <nlohmann/json.hpp>
 
@@ -271,12 +269,10 @@ static std::string getSuperclassSymbol(const std::string& classSymbol,
     return "";
 }
 
-/* Look up `classSymbol` via dlsym(), initialise the class and return its
- * resource names as a sorted map to empty JSON objects. Uses
- * XtInitializeWidgetClass() + XtGetResourceList() as required by the spec.
- * Each widget is handled in a forked child so a segfault in
- * XtInitializeWidgetClass (observed for e.g. xmDesktopClass after gadget
- * initialisation) does not crash the whole tool. */
+/* Look up `classSymbol` via dlsym() and return its resource names as a
+ * sorted map to empty JSON objects. Reads the class record directly via
+ * XtGetResourceList() without calling XtInitializeWidgetClass() and without
+ * forking -- crashes are not caught. */
 static std::map<std::string, nlohmann::json> getResources(
     const std::string& classSymbol)
 {
@@ -303,138 +299,49 @@ static std::map<std::string, nlohmann::json> getResources(
         return result;
     }
 
-    /* Flush streams before fork to avoid duplicate buffered output. */
-    std::cout.flush();
-    std::cerr.flush();
-    fflush(nullptr);
-
-    int pipefd[2];
-    if (pipe(pipefd) != 0)
+    /* Collect resources defined in superclasses so they can be ignored. */
+    std::unordered_set<std::string> ancestorResources;
+    for (WidgetClass sc = wc->core_class.superclass; sc != nullptr;
+        sc = sc->core_class.superclass)
     {
-        std::cerr << "warning: pipe failed for '" << classSymbol << "'\n";
-        return result;
-    }
-
-    pid_t pid = fork();
-    if (pid < 0)
-    {
-        std::cerr << "warning: fork failed for '" << classSymbol << "'\n";
-        close(pipefd[0]);
-        close(pipefd[1]);
-        return result;
-    }
-
-    if (pid == 0)
-    {
-        /* Child -- perform the Xt work and write resource names, one per
-         * line, to the pipe. */
-        close(pipefd[0]);
-
-        XtInitializeWidgetClass(wc);
-
-        /* Collect resources defined in superclasses so they can be
-         * ignored. */
-        std::unordered_set<std::string> ancestorResources;
-        for (WidgetClass sc = wc->core_class.superclass; sc != nullptr;
-            sc = sc->core_class.superclass)
+        XtResourceList sList = nullptr;
+        Cardinal sNum = 0;
+        XtGetResourceList(sc, &sList, &sNum);
+        for (Cardinal j = 0; j < sNum; ++j)
         {
-            XtResourceList sList = nullptr;
-            Cardinal sNum = 0;
-            XtGetResourceList(sc, &sList, &sNum);
-            for (Cardinal j = 0; j < sNum; ++j)
-            {
-                const char* sName = sList[j].resource_name;
-                if (sName == nullptr || sName[0] == '\0')
-                {
-                    continue;
-                }
-                ancestorResources.insert(sName);
-            }
-            if (sList != nullptr)
-            {
-                XtFree((char*)sList);
-            }
-        }
-
-        XtResourceList resList = nullptr;
-        Cardinal num = 0;
-        XtGetResourceList(wc, &resList, &num);
-        for (Cardinal i = 0; i < num; ++i)
-        {
-            const char* name = resList[i].resource_name;
-            if (name == nullptr || name[0] == '\0')
+            const char* sName = sList[j].resource_name;
+            if (sName == nullptr || sName[0] == '\0')
             {
                 continue;
             }
-            /* Ignore resources defined in a superclass. */
-            if (ancestorResources.find(name) != ancestorResources.end())
-            {
-                continue;
-            }
-            /* Use dprintf / write to avoid iostream buffering issues after
-             * fork. */
-            dprintf(pipefd[1], "%s\n", name);
+            ancestorResources.insert(sName);
         }
-        if (resList != nullptr)
+        if (sList != nullptr)
         {
-            XtFree((char*)resList);
+            XtFree((char*)sList);
         }
-        close(pipefd[1]);
-        _exit(0);
     }
 
-    /* Parent -- read resource names from child. */
-    close(pipefd[1]);
-
-    std::string data;
-    char buf[4096];
-    ssize_t n = 0;
-    while ((n = read(pipefd[0], buf, sizeof(buf))) > 0)
+    XtResourceList resList = nullptr;
+    Cardinal num = 0;
+    XtGetResourceList(wc, &resList, &num);
+    for (Cardinal i = 0; i < num; ++i)
     {
-        data.append(buf, static_cast<size_t>(n));
-    }
-    close(pipefd[0]);
-
-    int status = 0;
-    if (waitpid(pid, &status, 0) < 0)
-    {
-        std::cerr << "warning: waitpid failed for '" << classSymbol << "'\n";
-        return result;
-    }
-    if (WIFSIGNALED(status))
-    {
-        std::cerr << "warning: XtInitializeWidgetClass crashed for '"
-                  << classSymbol << "' (signal " << WTERMSIG(status)
-                  << ") -- skipping resources\n";
-        return result;
-    }
-    if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
-    {
-        std::cerr << "warning: child failed for '" << classSymbol << "' (exit "
-                  << WEXITSTATUS(status) << ")\n";
-        return result;
-    }
-
-    /* Parse newline-separated names into the map. */
-    size_t pos = 0;
-    while (pos < data.size())
-    {
-        size_t nl = data.find('\n', pos);
-        std::string name;
-        if (nl == std::string::npos)
+        const char* name = resList[i].resource_name;
+        if (name == nullptr || name[0] == '\0')
         {
-            name = data.substr(pos);
-            pos = data.size();
+            continue;
         }
-        else
+        /* Ignore resources defined in a superclass. */
+        if (ancestorResources.find(name) != ancestorResources.end())
         {
-            name = data.substr(pos, nl - pos);
-            pos = nl + 1;
+            continue;
         }
-        if (!name.empty())
-        {
-            result.emplace(name, nlohmann::json::object());
-        }
+        result.emplace(name, nlohmann::json::object());
+    }
+    if (resList != nullptr)
+    {
+        XtFree((char*)resList);
     }
 
     return result;
@@ -442,12 +349,6 @@ static std::map<std::string, nlohmann::json> getResources(
 
 int main(int argc, char* argv[])
 {
-    /* Initialise Xt/Motif -- creates an application context needed for
-     * any subsequent Xt/Motif calls. Dynamic reflection will later use
-     * this context to instantiate widget hierarchies. */
-    XtAppContext appContext = XtCreateApplicationContext();
-    (void)appContext;
-
     std::vector<std::string> headerDirs;
     std::vector<std::string> includePaths;
     std::string outputPath;

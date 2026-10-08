@@ -5,6 +5,10 @@
     "description": "Machine-readable description of an X Intrinsics (Xt) widget set, primarily Motif.",
     "type": "object",
     "properties": {
+        "prefix": {
+            "description": "Toolkit prefix stripped from widget class names to derive humanName.",
+            "type": "string"
+        },
         "widgets": {
             "description": "Widgets keyed by widget name.",
             "type": "object",
@@ -29,6 +33,7 @@
         }
     },
     "required": [
+        "prefix",
         "widgets"
     ],
     "additionalProperties": false

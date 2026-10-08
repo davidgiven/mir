@@ -255,6 +255,7 @@ int main(int argc, char* argv[])
     if (!outputPath.empty())
     {
         nlohmann::json json = nlohmann::json::object();
+        json["prefix"] = prefix;
         nlohmann::json widgets = nlohmann::json::object();
         for (auto& kv : dedup)
         {

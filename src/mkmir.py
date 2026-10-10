@@ -125,7 +125,12 @@ def main(argv=None):
             widgets[widget_class.spelling] = widget
             widget["resources"] = dict(get_resources(widget_class, cindex, definitions))
             widget["methods"] = {
-                name: {} for name in methods if name.startswith(class_name)
+                name: {
+                    "name": name[len(class_name):],
+                    "return_type": method.result_type.spelling,
+                    "parameters": get_method_parameters(method),
+                }
+                for name, method in methods.items() if name.startswith(class_name)
             }
 
     artifact = {"prefix": args.prefix, "widgets": widgets}
@@ -166,7 +171,7 @@ def get_initializer(cursor):
 
 def find_widget_methods(translation_units, cindex):
     """Index global functions taking Widget as their first parameter."""
-    names = set()
+    methods = {}
     for unit in translation_units:
         for cursor in unit.cursor.get_children():
             if (cursor.kind != cindex.CursorKind.FUNCTION_DECL
@@ -178,10 +183,29 @@ def find_widget_methods(translation_units, cindex):
             declaration = argument.type.get_declaration()
             while declaration.kind == cindex.CursorKind.TYPEDEF_DECL:
                 if declaration.spelling == "Widget":
-                    names.add(cursor.spelling)
+                    previous = methods.get(cursor.spelling)
+                    if (previous is None or cursor.is_definition()
+                            or (not previous.is_definition()
+                                and sum(bool(arg.spelling) for arg in cursor.get_arguments())
+                                > sum(bool(arg.spelling) for arg in previous.get_arguments()))):
+                        methods[cursor.spelling] = cursor
                     break
                 declaration = declaration.underlying_typedef_type.get_declaration()
-    return sorted(names)
+    return dict(sorted(methods.items()))
+
+
+def get_method_parameters(method):
+    """Describe signature parameters after the leading Widget argument."""
+    arguments = list(method.get_arguments())[1:]
+    reserved = {argument.spelling for argument in arguments if argument.spelling}
+    parameters = {}
+    for position, argument in enumerate(arguments, start=1):
+        key = argument.spelling or f"arg{position}"
+        if not argument.spelling:
+            while key in reserved or key in parameters:
+                key += "_"
+        parameters[key] = {"name": argument.spelling, "type": argument.type.spelling}
+    return parameters
 
 
 def get_class_record(widget_class, cindex, definitions=None):

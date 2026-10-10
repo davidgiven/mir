@@ -28,16 +28,34 @@
                         "type": "string"
                     },
                     "methods": {
-                        "description": "Global functions whose names start with the widget's core.class_name (case-sensitive) and whose first parameter is Widget, keyed by full function symbol. Empty objects are placeholders.",
+                        "description": "Global functions whose names start with the widget's core.class_name (case-sensitive) and whose first parameter is Widget, keyed by full function symbol.",
                         "type": "object",
                         "additionalProperties": {
                             "type": "object",
                             "properties": {
                                 "name": {
-                                    "description": "Human-readable method name with prefix and widget name stripped (e.g. Highlight for XmCascadeButtonHighlight).",
+                                    "description": "Human-readable method name with the widget's core.class_name prefix stripped (e.g. Highlight for XmCascadeButtonHighlight).",
+                                    "type": "string"
+                                },
+                                "parameters": {
+                                    "description": "Signature parameters after the leading Widget, keyed by parameter name. Unnamed parameters use arg1, arg2, etc. (with underscores to avoid collisions) and have an empty name.",
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {"type": "string"},
+                                            "type": {"type": "string", "description": "C parameter type, preserving typedef names."}
+                                        },
+                                        "required": ["name", "type"],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "return_type": {
+                                    "description": "C return type from the method signature, preserving typedef names.",
                                     "type": "string"
                                 }
                             },
+                            "required": ["name", "parameters", "return_type"],
                             "additionalProperties": false
                         }
                     },

@@ -78,7 +78,15 @@ macros expand to string literals.
 Each widget's `methods` dictionary contains externally visible function symbols
 whose names start with its `name` (case-sensitive) and whose first parameter is
 `Widget` (including typedef aliases). Functions are indexed across all loaded
-translation units, including header declarations; each method maps to `{}`.
+translation units, including header declarations; each method contains `name`
+with the widget's class-name prefix stripped from the full function symbol.
+Each method also has a `parameters` dictionary keyed by parameter name, with
+`name` and C `type` fields, omitting the leading Widget parameter. Definitions
+are preferred over prototypes for parameter names. Unnamed parameters use
+`arg1`, `arg2`, etc. as keys (adding underscores to avoid collisions) and an empty
+`name`; methods with no remaining parameters have an empty dictionary.
+Each method's `return_type` contains its signature's C return type, preserving
+typedef names.
 Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can

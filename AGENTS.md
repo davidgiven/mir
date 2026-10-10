@@ -18,98 +18,60 @@ A single versioned machine-readable artifact (default: `mir.json`, JSON Schema d
 
 Field stability matters. Adding a widget/resource is a minor change; removing or renaming is major. Keep `schema/` and `schema_version` in sync.
 
-## Architecture — Two-Phase Extraction
-
-No single technique is sufficient for Xt/Motif, so `mir` combines both. Keep the phases separate and merge late.
-
-### 1. Static — Header Parsing (C++ / libclang)
-
-- **Tooling:** C++23, Clang Tooling / `libclang` / `clang-c` (not regex, not ad-hoc parsing).
-- **Inputs:** Preprocessed headers reachable from `Xm/Xm.h`, `Xm/*.h`, `X11/Intrinsic.h`, `X11/Shell.h`, `X11/StringDefs.h`. Must handle:
-  - Guarded `#ifdef` / `XmVersion` / vendor extensions
-  - `XtResource` / `XmResource` macros, `externaldef` patterns
-  - Typedefs, enums, `#define` constants that become `XmN*`/`XmC*`/`XmR*` strings
-  - Function prototypes for `XmCreate*`, `XmVaCreate*`, setters/getters
-- **Outputs:** Raw AST-derived records: widgets found, declared resources, types, enums, defines, function signatures, include provenance, header location (`file:line`).
-
-Point the parser at the *real installed headers* (`libxm-dev`, `libxt-dev` on Debian/Ubuntu, or vendored Motif). Do not vendor a copy of Motif headers.
-
-### 2. Dynamic — Run-Time Reflection (Xt/Motif linked binary)
-
-Some information only exists at run time in the widget's `CoreClassRec` / `Xm*ClassRec`:
-
-- `XtGetResourceList` / `XtGetConstraintResourceList` for inherited and merged resources (including resources defined in superclasses via `Core`, `Composite`, `Constraint`, `XmManager`, `XmPrimitive`)
-- Default values, `XtResource.resource_type` (`XmR*`), `resource_size`, `default_addr`
-- Actual widget class hierarchy via `XtClass(widget)->core_class.superclass`
-- Run-time enumeration values that depend on link-time constants
-
-Implementation:
-
-- The tool links against `-lXt -lXm -lX11` and initializes `XtToolkitInitialize` / `XtOpenDisplay` (with `Xvfb` / headless `DISPLAY` in CI).
-- For each known `WidgetClass` pointer (e.g., `xmPushButtonWidgetClass`), instantiate a hidden widget hierarchy, query `XtGetResourceList`, and dump JSON. No visible windows required.
-- This harness is the ground truth for resource merging and inheritance. If static and dynamic disagree, dynamic wins for resources, static wins for function signatures.
-
-### Merge
-
-`mir` (the main binary in `src/mir.cpp`) orchestrates: run header parse → run reflection harness (subprocess or linked) → merge → validate against `schema/mir.schema.json` → emit `mir.json`.
-
 ## Repository Layout
 
 ```
 mir/
 ├── AGENTS.md
 ├── schema/mir.schema.json    # JSON Schema for the emitted artifact
-├── src/
-│   ├── mir.cpp               # entry point / merge / CLI
-├── test/
-│   ├── data/                 # minimal Motif headers for unit tests
-│   └── golden/               # golden mir.json snippets for diff tests
+├── src/                      # Tooling source code
 ├── tools/                    # binding generators (examples / smoke tests)
 └── docs/
 ```
 
 If a directory does not yet exist, create it following this layout.
 
-## Build & Run
+## Testing
 
-The build system is GNU Make.
+Use `~/src/motif/lib/Xm` as the source tree when testing the Python extractor.
+From the repository root, run:
 
-```bash
-make -j$(nproc)
-build/mir --validate mir.json   # validate against schema
+```sh
+python3 src/mkmir.py --help
+python3 src/mkmir.py ~/src/motif/lib/Xm -o /tmp/mir-test.json
 ```
 
-Dependencies (install via system package manager, not vendored):
+The script discovers standard C headers from the installed `clang` compiler.
+To override that discovery and supply the Motif source include directory:
 
-- `clang` + `libclang-dev` + `llvm` (>= 16)
-- `libxt-dev`, `libmotif-dev` or `libxm4-dev` / `motif-dev` (OpenMotif 2.3.x)
-- `libx11-dev`, `libxft-dev` if Motif was built with Xft
-- `nlohmann-json` or equivalent (prefer header-only, pinned via CMake FetchContent)
+```sh
+python3 src/mkmir.py ~/src/motif/lib/Xm -o /tmp/mir-test.json \
+  --clang-arg=-isystem --clang-arg="$(clang -print-resource-dir)/include" \
+  --clang-arg="-I$HOME/src/motif/lib"
+```
 
-Make must fail with a clear diagnostic if `Xm/Xm.h` or `libclang` is not found.
+Python bindings for libclang (`clang.cindex`) and a loadable libclang shared
+library are required. Use `--libclang /path/to/libclang.so` if library discovery
+needs an override. Pass compiler flags with repeated `--clang-arg` options
+(for example, `--clang-arg=-I/home/dg/src/motif/lib`).
 
-## Output Schema (summary)
-
-Will be created incrementally as the project develops.
+The current smoke test should exit successfully after recursively discovering
+all `.c` files and loading each as an independent translation unit. It writes
+JSON matching `schema/mir.schema.json` to `--output` (default: `mir.json`), with
+`prefix` (default: `xm`, configurable with `--prefix`) and a `widgets` dictionary
+keyed by externally visible `WidgetClass` symbols. Each widget entry is currently
+an empty object. Only symbols with a resolved core `class_name` are included;
+unresolved classes are silently skipped. Header-only declarations and variables
+with internal or no linkage are excluded. Missing generated Motif headers can
+prevent extraction from some files. Successful loading does not guarantee
+that translation units are free of compiler diagnostics; diagnostics are not
+currently reported or checked.
 
 ## Non-Goals
 
 - Full C++ binding for Xt/Motif (this tool only *describes*; binding generators consume the description).
 - Supporting non-Xt widget sets in v1 (GTK/Qt are out of scope).
 - GUI designer or interactive builder — strictly a headless CLI.
-
-## Conventions
-
-- Name class data members with a leading underscore (`_name`); local
-  variables and function parameters stay bare.
-- Declare non-static free-function prototypes in headers with `extern`.
-- Reformat changed sources with `clang-format` (per the repo `.clang-format`)
-  before committing.
-- Never commit anything to the VCS — the user will always handle commits manually.
-- For very large numbers (e.g. nanosecond values) always use `'` digit separators grouped as `000'000` (e.g. `1'000'000'000`, `100'000'000`).
-- Use /* */ block comments throughout.
-- Development is done iteratively, in small steps. Follow the user's request precisely, and don't extrapolate unless explicitly asked to.
-- Keep the AGENTS.md up to date.
 
 ## References
 

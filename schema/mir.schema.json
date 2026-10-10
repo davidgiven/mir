@@ -54,15 +54,18 @@
                                     "description": "C type from the resource entry's fourth-field sizeof(TYPE), preserving typedef spelling (e.g. Pixel or unsigned char).",
                                     "type": "string"
                                 },
+                                "rtype": {
+                                    "description": "Declared resource type string from the entry's third field (XtResource.resource_type, e.g. Pixel).",
+                                    "type": "string"
+                                },
                                 "class": {
                                     "description": "Resource class name (XtResource.resource_class, e.g. XmCBackground).",
                                     "type": "string"
                                 }
                             },
                             "anyOf": [
-                                {"maxProperties": 0},
-                                {"required": ["ctype"], "maxProperties": 1},
-                                {"required": ["ctype", "class"]}
+                                {"propertyNames": {"enum": ["ctype", "rtype"]}},
+                                {"required": ["ctype", "rtype", "class"]}
                             ],
                             "additionalProperties": false
                         }

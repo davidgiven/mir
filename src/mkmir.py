@@ -236,7 +236,7 @@ def get_superclass(widget_class, cindex, definitions=None, record_to_widget=None
 
 
 def get_resources(widget_class, cindex, definitions=None):
-    """Read names and sizeof type operands from core.resources entries."""
+    """Read names, declared resource types, and C types from core.resources."""
     definitions = definitions or {}
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     resources = fields.get("resources")
@@ -267,6 +267,14 @@ def get_resources(widget_class, cindex, definitions=None):
                     except (ValueError, SyntaxError):
                         break
                     resource = {}
+                    if len(values) > 2:
+                        for type_literal in values[2].walk_preorder():
+                            if type_literal.kind == cindex.CursorKind.STRING_LITERAL:
+                                try:
+                                    resource["rtype"] = ast.literal_eval(type_literal.spelling)
+                                except (ValueError, SyntaxError):
+                                    pass
+                                break
                     if len(values) > 3:
                         resource_type = get_sizeof_type(values[3], cindex)
                         if resource_type is not None:

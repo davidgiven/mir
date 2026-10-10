@@ -66,7 +66,7 @@
                             "type": "object",
                             "properties": {
                                 "ctype": {
-                                    "description": "C type from the resource entry's fourth-field sizeof(TYPE), preserving typedef spelling (e.g. Pixel or unsigned char).",
+                                    "description": "Declared C type of the field referenced by the entry's fifth-field XtOffsetOf(OBJ, FIELD), preserving typedef spelling. Falls back to the fourth-field sizeof(TYPE) when the field cannot be resolved.",
                                     "type": "string"
                                 },
                                 "rtype": {
@@ -76,6 +76,18 @@
                                 "class": {
                                     "description": "Resource class string from the entry's second field (XtResource.resource_class, e.g. Background).",
                                     "type": "string"
+                                },
+                                "construct": {
+                                    "description": "Whether the resource can be supplied when constructing the widget.",
+                                    "type": "boolean"
+                                },
+                                "set": {
+                                    "description": "Whether the resource can be set after widget construction.",
+                                    "type": "boolean"
+                                },
+                                "get": {
+                                    "description": "Whether the resource can be retrieved from the widget.",
+                                    "type": "boolean"
                                 }
                             },
                             "additionalProperties": false

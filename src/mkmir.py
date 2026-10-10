@@ -7,6 +7,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 
@@ -325,13 +326,37 @@ def get_resources(widget_class, cindex, definitions=None):
                                 except (ValueError, SyntaxError):
                                     pass
                                 break
-                    if len(values) > 3:
-                        resource_type = get_sizeof_type(values[3], cindex)
-                        if resource_type is not None:
-                            resource["ctype"] = resource_type
+                    sizeof_type = get_sizeof_type(values[3], cindex) if len(values) > 3 else None
+                    field_type = get_offset_field_type(values[4], cindex) if len(values) > 4 else None
+                    if (field_type is not None and sizeof_type is not None
+                            and "".join(field_type.split()) != "".join(sizeof_type.split())):
+                        print(f"{entry.location}: warning: {widget_class.spelling}.{name}: "
+                              f"offset field type {field_type!r} differs from "
+                              f"sizeof type {sizeof_type!r}", file=sys.stderr)
+                    resource_type = field_type if field_type is not None else sizeof_type
+                    if resource_type is not None:
+                        resource["ctype"] = resource_type
                     yield name, resource
                     break
         return
+
+
+def get_offset_field_type(expression, cindex):
+    """Read the final field declaration in an expanded XtOffsetOf expression."""
+    field_type = None
+    expression_field_type = None
+    for cursor in expression.walk_preorder():
+        if cursor.kind not in (cindex.CursorKind.MEMBER_REF,
+                               cindex.CursorKind.MEMBER_REF_EXPR):
+            continue
+        field = cursor.referenced
+        if field is not None and field.kind == cindex.CursorKind.FIELD_DECL:
+            if cursor.kind == cindex.CursorKind.MEMBER_REF:
+                field_type = field.type.spelling
+            elif expression_field_type is None:
+                # Member expressions nest from the final field inward.
+                expression_field_type = field.type.spelling
+    return field_type if field_type is not None else expression_field_type
 
 
 def get_sizeof_type(expression, cindex):

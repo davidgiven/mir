@@ -59,8 +59,10 @@ The current smoke test should exit successfully after recursively discovering
 all `.c` files and loading each as an independent translation unit. It writes
 JSON matching `schema/mir.schema.json` to `--output` (default: `mir.json`), with
 `prefix` (default: `xm`, configurable with `--prefix`) and a `widgets` dictionary
-keyed by externally visible `WidgetClass` symbols. Each widget entry is currently
-an empty object. Only symbols with a resolved core `class_name` are included;
+keyed by externally visible `WidgetClass` symbols. Each widget entry contains
+`superclass` when core.superclass refers to a variable symbol (typically a
+ClassRec symbol); null or unresolved superclass values leave the field absent.
+Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can
 prevent extraction from some files. Successful loading does not guarantee

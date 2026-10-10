@@ -24,7 +24,7 @@
                         "type": "string"
                     },
                     "superclass": {
-                        "description": "The widget class symbol of the widget's superclass (e.g. xmPrimitiveWidgetClass).",
+                        "description": "The symbol referenced by core.superclass in the class record (e.g. xmPrimitiveClassRec).",
                         "type": "string"
                     },
                     "methods": {
@@ -69,6 +69,10 @@
                 },
                 "anyOf": [
                     {"maxProperties": 0},
+                    {
+                        "required": ["superclass"],
+                        "maxProperties": 1
+                    },
                     {
                         "required": [
                             "name",

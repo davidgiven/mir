@@ -104,7 +104,11 @@ def main(argv=None):
         for widget_class in find_widget_classes(unit, source, cindex):
             class_name = get_class_name(widget_class, cindex, definitions)
             if class_name is not None:
-                widgets[widget_class.spelling] = {}
+                widget = {}
+                superclass = get_superclass(widget_class, cindex, definitions)
+                if superclass is not None:
+                    widget["superclass"] = superclass
+                widgets[widget_class.spelling] = widget
 
     artifact = {"prefix": args.prefix, "widgets": widgets}
     try:
@@ -137,8 +141,8 @@ def find_widget_classes(unit, source, cindex):
             declaration = declaration.underlying_typedef_type.get_declaration()
 
 
-def get_class_name(widget_class, cindex, definitions=None):
-    """Follow a WidgetClass initializer to its class record definition."""
+def get_core_fields(widget_class, cindex, definitions=None):
+    """Resolve the class record's leading core part to field initializers."""
     kind = cindex.CursorKind
     definitions = definitions or {}
     definition = widget_class.get_definition() or definitions.get(widget_class.get_usr())
@@ -174,15 +178,34 @@ def get_class_name(widget_class, cindex, definitions=None):
         if core.kind != kind.INIT_LIST_EXPR:
             continue
         core_fields = list(core.type.get_canonical().get_fields())
-        for field, value in zip(core_fields, core.get_children()):
-            if field.spelling != "class_name":
-                continue
-            for literal in value.walk_preorder():
-                if literal.kind == kind.STRING_LITERAL:
-                    try:
-                        return ast.literal_eval(literal.spelling)
-                    except (ValueError, SyntaxError):
-                        return None
+        return {field.spelling: value
+                for field, value in zip(core_fields, core.get_children())}
+    return None
+
+
+def get_class_name(widget_class, cindex, definitions=None):
+    fields = get_core_fields(widget_class, cindex, definitions) or {}
+    value = fields.get("class_name")
+    if value is not None:
+        for literal in value.walk_preorder():
+            if literal.kind == cindex.CursorKind.STRING_LITERAL:
+                try:
+                    return ast.literal_eval(literal.spelling)
+                except (ValueError, SyntaxError):
+                    return None
+    return None
+
+
+def get_superclass(widget_class, cindex, definitions=None):
+    """Return the symbol referenced by core.superclass, usually a ClassRec."""
+    fields = get_core_fields(widget_class, cindex, definitions) or {}
+    value = fields.get("superclass")
+    if value is not None:
+        for reference in value.walk_preorder():
+            if reference.kind == cindex.CursorKind.DECL_REF_EXPR:
+                target = reference.referenced
+                if target is not None and target.kind == cindex.CursorKind.VAR_DECL:
+                    return target.spelling
     return None
 
 

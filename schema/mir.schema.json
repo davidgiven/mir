@@ -28,7 +28,7 @@
                         "type": "string"
                     },
                     "methods": {
-                        "description": "Dictionary of methods associated with the widget, filtered to only those whose name starts with prefix + widget name (case-insensitive), keyed by method symbol (full function name, e.g. XmCascadeButtonHighlight).",
+                        "description": "Global functions whose names start with the widget's core.class_name (case-sensitive) and whose first parameter is Widget, keyed by full function symbol. Empty objects are placeholders.",
                         "type": "object",
                         "additionalProperties": {
                             "type": "object",
@@ -38,9 +38,6 @@
                                     "type": "string"
                                 }
                             },
-                            "required": [
-                                "name"
-                            ],
                             "additionalProperties": false
                         }
                     },
@@ -75,7 +72,7 @@
                     },
                     {
                         "required": ["resources"],
-                        "propertyNames": {"enum": ["name", "superclass", "resources"]}
+                        "propertyNames": {"enum": ["name", "superclass", "resources", "methods"]}
                     },
                     {
                         "required": [

@@ -113,6 +113,7 @@ def main(argv=None):
         if record is not None:
             record_to_widget.setdefault(record.get_usr(), widget_class.spelling)
 
+    methods = find_widget_methods(translation_units, cindex)
     widgets = {}
     for widget_class in widget_classes.values():
         class_name = get_class_name(widget_class, cindex, definitions)
@@ -123,6 +124,9 @@ def main(argv=None):
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
             widget["resources"] = dict(get_resources(widget_class, cindex, definitions))
+            widget["methods"] = {
+                name: {} for name in methods if name.startswith(class_name)
+            }
 
     artifact = {"prefix": args.prefix, "widgets": widgets}
     try:
@@ -158,6 +162,26 @@ def find_widget_classes(unit, source, cindex):
 def get_initializer(cursor):
     return next((child for child in cursor.get_children()
                  if child.kind.is_expression()), None)
+
+
+def find_widget_methods(translation_units, cindex):
+    """Index global functions taking Widget as their first parameter."""
+    names = set()
+    for unit in translation_units:
+        for cursor in unit.cursor.get_children():
+            if (cursor.kind != cindex.CursorKind.FUNCTION_DECL
+                    or cursor.linkage != cindex.LinkageKind.EXTERNAL):
+                continue
+            argument = next(cursor.get_arguments(), None)
+            if argument is None:
+                continue
+            declaration = argument.type.get_declaration()
+            while declaration.kind == cindex.CursorKind.TYPEDEF_DECL:
+                if declaration.spelling == "Widget":
+                    names.add(cursor.spelling)
+                    break
+                declaration = declaration.underlying_typedef_type.get_declaration()
+    return sorted(names)
 
 
 def get_class_record(widget_class, cindex, definitions=None):

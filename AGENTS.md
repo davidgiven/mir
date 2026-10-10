@@ -75,6 +75,10 @@ literal string from the second field (the resource class). Unresolved fields
 are omitted. No resource names are printed.
 Parsing defines `XMSTRINGDEFINES` and `XTSTRINGDEFINES` so Xt/Motif resource name
 macros expand to string literals.
+Each widget's `methods` dictionary contains externally visible function symbols
+whose names start with its `name` (case-sensitive) and whose first parameter is
+`Widget` (including typedef aliases). Functions are indexed across all loaded
+translation units, including header declarations; each method maps to `{}`.
 Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can

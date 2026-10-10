@@ -122,9 +122,7 @@ def main(argv=None):
             if superclass is not None:
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
-            widget["resources"] = {
-                name: {} for name in get_resource_names(widget_class, cindex, definitions)
-            }
+            widget["resources"] = dict(get_resources(widget_class, cindex, definitions))
 
     artifact = {"prefix": args.prefix, "widgets": widgets}
     try:
@@ -237,8 +235,8 @@ def get_superclass(widget_class, cindex, definitions=None, record_to_widget=None
     return None
 
 
-def get_resource_names(widget_class, cindex, definitions=None):
-    """Read names from the first field of each core.resources array entry."""
+def get_resources(widget_class, cindex, definitions=None):
+    """Read names and sizeof type operands from core.resources entries."""
     definitions = definitions or {}
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     resources = fields.get("resources")
@@ -259,17 +257,39 @@ def get_resource_names(widget_class, cindex, definitions=None):
         for entry in initializer.get_children():
             if entry.kind != cindex.CursorKind.INIT_LIST_EXPR:
                 continue
-            name = next(entry.get_children(), None)
-            if name is None:
+            values = list(entry.get_children())
+            if not values:
                 continue
-            for literal in name.walk_preorder():
+            for literal in values[0].walk_preorder():
                 if literal.kind == cindex.CursorKind.STRING_LITERAL:
                     try:
-                        yield ast.literal_eval(literal.spelling)
+                        name = ast.literal_eval(literal.spelling)
                     except (ValueError, SyntaxError):
-                        pass
+                        break
+                    resource = {}
+                    if len(values) > 3:
+                        resource_type = get_sizeof_type(values[3], cindex)
+                        if resource_type is not None:
+                            resource["ctype"] = resource_type
+                    yield name, resource
                     break
         return
+
+
+def get_sizeof_type(expression, cindex):
+    """Extract the written C type, preserving typedef names and pointers."""
+    for cursor in expression.walk_preorder():
+        if cursor.kind != cindex.CursorKind.CXX_UNARY_EXPR:
+            continue
+        tokens = [token.spelling for token in cursor.get_tokens()
+                  if token.kind != cindex.TokenKind.COMMENT]
+        if len(tokens) < 4 or tokens[:2] != ["sizeof", "("] or tokens[-1] != ")":
+            continue
+        # sizeof(expression) has an expression child; sizeof(TYPE) does not.
+        if any(child.kind.is_expression() for child in cursor.get_children()):
+            continue
+        return " ".join(tokens[2:-1])
+    return None
 
 
 if __name__ == "__main__":

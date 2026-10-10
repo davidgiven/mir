@@ -50,8 +50,8 @@
                         "additionalProperties": {
                             "type": "object",
                             "properties": {
-                                "type": {
-                                    "description": "Resource type name (XtResource.resource_type, e.g. XmRPixel).",
+                                "ctype": {
+                                    "description": "C type from the resource entry's fourth-field sizeof(TYPE), preserving typedef spelling (e.g. Pixel or unsigned char).",
                                     "type": "string"
                                 },
                                 "class": {
@@ -61,7 +61,8 @@
                             },
                             "anyOf": [
                                 {"maxProperties": 0},
-                                {"required": ["type", "class"]}
+                                {"required": ["ctype"], "maxProperties": 1},
+                                {"required": ["ctype", "class"]}
                             ],
                             "additionalProperties": false
                         }

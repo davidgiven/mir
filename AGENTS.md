@@ -67,7 +67,9 @@ If multiple WidgetClass symbols point to one record, the lexicographically first
 symbol is used. Null or unresolved superclass values leave the field absent.
 For each included widget, the tool follows core.resources to its resource array
 and fills the widget's `resources` dictionary with names from each entry's first
-field, mapped to empty object placeholders. No resource names are printed.
+field. Each resource's `ctype` is the C type written in its fourth-field
+`sizeof(TYPE)` expression, preserving typedef names; unresolved types leave an
+empty object placeholder. No resource names are printed.
 Parsing defines `XMSTRINGDEFINES` and `XTSTRINGDEFINES` so Xt/Motif resource name
 macros expand to string literals.
 Only symbols with a resolved core `class_name` are included;

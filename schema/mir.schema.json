@@ -45,7 +45,7 @@
                         }
                     },
                     "resources": {
-                        "description": "Dictionary of resources for the widget class as returned by XtGetResourceList after XtInitializeWidgetClass, keyed by resource name.",
+                        "description": "Dictionary of resources declared in core.resources, keyed by resource name. Entries may be empty placeholders during extraction.",
                         "type": "object",
                         "additionalProperties": {
                             "type": "object",
@@ -59,9 +59,9 @@
                                     "type": "string"
                                 }
                             },
-                            "required": [
-                                "type",
-                                "class"
+                            "anyOf": [
+                                {"maxProperties": 0},
+                                {"required": ["type", "class"]}
                             ],
                             "additionalProperties": false
                         }
@@ -72,6 +72,10 @@
                     {
                         "required": ["superclass"],
                         "maxProperties": 1
+                    },
+                    {
+                        "required": ["resources"],
+                        "propertyNames": {"enum": ["superclass", "resources"]}
                     },
                     {
                         "required": [

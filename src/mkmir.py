@@ -72,7 +72,8 @@ def main(argv=None):
         parser.error(f"could not initialize libclang: {exc}")
 
     # Keep each independent translation unit available for future processing.
-    clang_args = list(args.clang_arg)
+    # Expose resource-name macros as literals instead of string-table offsets.
+    clang_args = ["-DXMSTRINGDEFINES", "-DXTSTRINGDEFINES", *args.clang_arg]
     # Python wheels can bundle libclang without its standard C headers.
     # Use the installed compiler's resource directory unless explicitly set.
     compiler = shutil.which("clang")
@@ -121,6 +122,9 @@ def main(argv=None):
             if superclass is not None:
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
+            widget["resources"] = {
+                name: {} for name in get_resource_names(widget_class, cindex, definitions)
+            }
 
     artifact = {"prefix": args.prefix, "widgets": widgets}
     try:
@@ -231,6 +235,41 @@ def get_superclass(widget_class, cindex, definitions=None, record_to_widget=None
                 if target is not None and target.kind == cindex.CursorKind.VAR_DECL:
                     return (record_to_widget or {}).get(target.get_usr())
     return None
+
+
+def get_resource_names(widget_class, cindex, definitions=None):
+    """Read names from the first field of each core.resources array entry."""
+    definitions = definitions or {}
+    fields = get_core_fields(widget_class, cindex, definitions) or {}
+    resources = fields.get("resources")
+    if resources is None:
+        return
+    for reference in resources.walk_preorder():
+        if reference.kind != cindex.CursorKind.DECL_REF_EXPR:
+            continue
+        target = reference.referenced
+        if target is None or target.kind != cindex.CursorKind.VAR_DECL:
+            continue
+        array = definitions.get(target.get_usr()) or target.get_definition()
+        if array is None:
+            continue
+        initializer = get_initializer(array)
+        if initializer is None or initializer.kind != cindex.CursorKind.INIT_LIST_EXPR:
+            continue
+        for entry in initializer.get_children():
+            if entry.kind != cindex.CursorKind.INIT_LIST_EXPR:
+                continue
+            name = next(entry.get_children(), None)
+            if name is None:
+                continue
+            for literal in name.walk_preorder():
+                if literal.kind == cindex.CursorKind.STRING_LITERAL:
+                    try:
+                        yield ast.literal_eval(literal.spelling)
+                    except (ValueError, SyntaxError):
+                        pass
+                    break
+        return
 
 
 if __name__ == "__main__":

@@ -335,7 +335,12 @@ static std::map<std::string, nlohmann::json> getResources(
         {
             continue;
         }
-        result.emplace(name, nlohmann::json::object());
+        nlohmann::json obj = nlohmann::json::object();
+        const char* type = resList[i].resource_type;
+        const char* klass = resList[i].resource_class;
+        obj["type"] = (type != nullptr) ? type : "";
+        obj["class"] = (klass != nullptr) ? klass : "";
+        result.emplace(name, std::move(obj));
     }
     if (resList != nullptr)
     {

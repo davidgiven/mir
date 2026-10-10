@@ -48,16 +48,36 @@
                         "description": "Dictionary of resources for the widget class as returned by XtGetResourceList after XtInitializeWidgetClass, keyed by resource name.",
                         "type": "object",
                         "additionalProperties": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "description": "Resource type name (XtResource.resource_type, e.g. XmRPixel).",
+                                    "type": "string"
+                                },
+                                "class": {
+                                    "description": "Resource class name (XtResource.resource_class, e.g. XmCBackground).",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "type",
+                                "class"
+                            ],
+                            "additionalProperties": false
                         }
                     }
                 },
-                "required": [
-                    "name",
-                    "include",
-                    "superclass",
-                    "methods",
-                    "resources"
+                "anyOf": [
+                    {"maxProperties": 0},
+                    {
+                        "required": [
+                            "name",
+                            "include",
+                            "superclass",
+                            "methods",
+                            "resources"
+                        ]
+                    }
                 ],
                 "additionalProperties": false
             }

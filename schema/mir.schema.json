@@ -23,6 +23,10 @@
                         "description": "Path to the header file that declares the widget class.",
                         "type": "string"
                     },
+                    "sourcefile": {
+                        "description": "Absolute path to the source file containing the initialized ClassRec definition pointed to by the WidgetClass, excluding declarations.",
+                        "type": "string"
+                    },
                     "superclass": {
                         "description": "The WidgetClass symbol pointing to the class record referenced by core.superclass (e.g. xmPrimitiveWidgetClass).",
                         "type": "string"
@@ -102,7 +106,7 @@
                     },
                     {
                         "required": ["resources"],
-                        "propertyNames": {"enum": ["name", "superclass", "resources", "methods"]}
+                        "propertyNames": {"enum": ["name", "sourcefile", "superclass", "resources", "methods"]}
                     },
                     {
                         "required": [

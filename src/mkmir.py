@@ -120,6 +120,11 @@ def main(argv=None):
         class_name = get_class_name(widget_class, cindex, definitions)
         if class_name is not None:
             widget = {"name": class_name}
+            record = get_class_record(widget_class, cindex, definitions)
+            if (record is not None and record.is_definition()
+                    and get_initializer(record) is not None
+                    and record.location.file is not None):
+                widget["sourcefile"] = str(Path(record.location.file.name).resolve())
             superclass = get_superclass(widget_class, cindex, definitions, record_to_widget)
             if superclass is not None:
                 widget["superclass"] = superclass

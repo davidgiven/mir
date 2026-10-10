@@ -61,6 +61,8 @@ JSON matching `schema/mir.schema.json` to `--output` (default: `mir.json`), with
 `prefix` (default: `xm`, configurable with `--prefix`) and a `widgets` dictionary
 keyed by externally visible `WidgetClass` symbols. Each widget entry contains
 `name` with the literal core.class_name string, without prefix stripping, and
+`sourcefile` with the absolute path containing the initialized ClassRec definition
+pointed to by the WidgetClass (excluding declarations),
 `superclass` with the WidgetClass symbol pointing to the ClassRec referenced by
 core.superclass. All translation units are loaded before analysis; definitions
 and the ClassRec-to-WidgetClass index are shared across them using Clang USRs.

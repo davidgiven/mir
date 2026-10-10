@@ -24,7 +24,7 @@
                         "type": "string"
                     },
                     "superclass": {
-                        "description": "The symbol referenced by core.superclass in the class record (e.g. xmPrimitiveClassRec).",
+                        "description": "The WidgetClass symbol pointing to the class record referenced by core.superclass (e.g. xmPrimitiveWidgetClass).",
                         "type": "string"
                     },
                     "methods": {

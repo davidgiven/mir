@@ -92,23 +92,35 @@ def main(argv=None):
     except (OSError, cindex.TranslationUnitLoadError) as exc:
         parser.error(f"could not load source: {exc}")
 
-    definitions = {
-        cursor.get_usr(): cursor
-        for unit in translation_units
-        for cursor in unit.cursor.get_children()
-        if cursor.kind == cindex.CursorKind.VAR_DECL and cursor.is_definition()
-    }
-    widgets = {}
+    # USRs identify the same declaration across independent translation units.
+    definitions = {}
+    widget_classes = {}
     for unit in translation_units:
+        for cursor in unit.cursor.get_children():
+            if cursor.kind != cindex.CursorKind.VAR_DECL or not cursor.is_definition():
+                continue
+            usr = cursor.get_usr()
+            if usr not in definitions or get_initializer(cursor) is not None:
+                definitions[usr] = cursor
         source = Path(unit.spelling).resolve()
-        for widget_class in find_widget_classes(unit, source, cindex):
-            class_name = get_class_name(widget_class, cindex, definitions)
-            if class_name is not None:
-                widget = {}
-                superclass = get_superclass(widget_class, cindex, definitions)
-                if superclass is not None:
-                    widget["superclass"] = superclass
-                widgets[widget_class.spelling] = widget
+        for cursor in find_widget_classes(unit, source, cindex):
+            widget_classes.setdefault(cursor.get_usr(), cursor)
+
+    record_to_widget = {}
+    for widget_class in sorted(widget_classes.values(), key=lambda cursor: cursor.spelling):
+        record = get_class_record(widget_class, cindex, definitions)
+        if record is not None:
+            record_to_widget.setdefault(record.get_usr(), widget_class.spelling)
+
+    widgets = {}
+    for widget_class in widget_classes.values():
+        class_name = get_class_name(widget_class, cindex, definitions)
+        if class_name is not None:
+            widget = {}
+            superclass = get_superclass(widget_class, cindex, definitions, record_to_widget)
+            if superclass is not None:
+                widget["superclass"] = superclass
+            widgets[widget_class.spelling] = widget
 
     artifact = {"prefix": args.prefix, "widgets": widgets}
     try:
@@ -141,15 +153,19 @@ def find_widget_classes(unit, source, cindex):
             declaration = declaration.underlying_typedef_type.get_declaration()
 
 
-def get_core_fields(widget_class, cindex, definitions=None):
-    """Resolve the class record's leading core part to field initializers."""
+def get_initializer(cursor):
+    return next((child for child in cursor.get_children()
+                 if child.kind.is_expression()), None)
+
+
+def get_class_record(widget_class, cindex, definitions=None):
+    """Resolve a WidgetClass pointer to its ClassRec across loaded TUs."""
     kind = cindex.CursorKind
     definitions = definitions or {}
-    definition = widget_class.get_definition() or definitions.get(widget_class.get_usr())
+    definition = definitions.get(widget_class.get_usr()) or widget_class.get_definition()
     if definition is None:
         return None
-    initializer = next((child for child in definition.get_children()
-                        if child.kind.is_expression()), None)
+    initializer = get_initializer(definition)
     if initializer is None:
         return None
 
@@ -159,13 +175,21 @@ def get_core_fields(widget_class, cindex, definitions=None):
         target = reference.referenced
         if target is None or target.kind != kind.VAR_DECL:
             continue
-        record = target.get_definition() or definitions.get(target.get_usr())
-        if record is None:
+        if target.type.get_canonical().kind != cindex.TypeKind.RECORD:
             continue
+        return definitions.get(target.get_usr()) or target.get_definition() or target
+    return None
+
+
+def get_core_fields(widget_class, cindex, definitions=None):
+    """Resolve the class record's leading core part to field initializers."""
+    kind = cindex.CursorKind
+    record = get_class_record(widget_class, cindex, definitions)
+    if record is not None:
         record_initializer = next((child for child in record.get_children()
                                    if child.kind == kind.INIT_LIST_EXPR), None)
         if record_initializer is None:
-            continue
+            return None
         # WidgetClass points to the leading CoreClassPart of the concrete
         # class record. Motif names that member core_class; Xt uses core.
         # Object and gadget records have layout-compatible leading parts.
@@ -173,10 +197,10 @@ def get_core_fields(widget_class, cindex, definitions=None):
         values = list(record_initializer.get_children())
         if not fields or not values or fields[0].spelling not in (
                 "core", "core_class", "object_class", "rect_class"):
-            continue
+            return None
         core = values[0]
         if core.kind != kind.INIT_LIST_EXPR:
-            continue
+            return None
         core_fields = list(core.type.get_canonical().get_fields())
         return {field.spelling: value
                 for field, value in zip(core_fields, core.get_children())}
@@ -196,8 +220,8 @@ def get_class_name(widget_class, cindex, definitions=None):
     return None
 
 
-def get_superclass(widget_class, cindex, definitions=None):
-    """Return the symbol referenced by core.superclass, usually a ClassRec."""
+def get_superclass(widget_class, cindex, definitions=None, record_to_widget=None):
+    """Map core.superclass's ClassRec reference to its WidgetClass symbol."""
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     value = fields.get("superclass")
     if value is not None:
@@ -205,7 +229,7 @@ def get_superclass(widget_class, cindex, definitions=None):
             if reference.kind == cindex.CursorKind.DECL_REF_EXPR:
                 target = reference.referenced
                 if target is not None and target.kind == cindex.CursorKind.VAR_DECL:
-                    return target.spelling
+                    return (record_to_widget or {}).get(target.get_usr())
     return None
 
 

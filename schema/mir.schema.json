@@ -59,14 +59,10 @@
                                     "type": "string"
                                 },
                                 "class": {
-                                    "description": "Resource class name (XtResource.resource_class, e.g. XmCBackground).",
+                                    "description": "Resource class string from the entry's second field (XtResource.resource_class, e.g. Background).",
                                     "type": "string"
                                 }
                             },
-                            "anyOf": [
-                                {"propertyNames": {"enum": ["ctype", "rtype"]}},
-                                {"required": ["ctype", "rtype", "class"]}
-                            ],
                             "additionalProperties": false
                         }
                     }

@@ -267,11 +267,13 @@ def get_resources(widget_class, cindex, definitions=None):
                     except (ValueError, SyntaxError):
                         break
                     resource = {}
-                    if len(values) > 2:
-                        for type_literal in values[2].walk_preorder():
-                            if type_literal.kind == cindex.CursorKind.STRING_LITERAL:
+                    for index, field in ((1, "class"), (2, "rtype")):
+                        if len(values) <= index:
+                            continue
+                        for field_literal in values[index].walk_preorder():
+                            if field_literal.kind == cindex.CursorKind.STRING_LITERAL:
                                 try:
-                                    resource["rtype"] = ast.literal_eval(type_literal.spelling)
+                                    resource[field] = ast.literal_eval(field_literal.spelling)
                                 except (ValueError, SyntaxError):
                                     pass
                                 break

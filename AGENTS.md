@@ -78,6 +78,7 @@ falls back to the sizeof type. Its `rtype` is the literal
 string from the third field (the declared Xt resource type), and `class` is the
 literal string from the second field (the resource class). Unresolved fields
 are omitted. No resource names are printed.
+Every discovered resource currently has `set` and `get` set to `true`.
 Parsing defines `XMSTRINGDEFINES` and `XTSTRINGDEFINES` so Xt/Motif resource name
 macros expand to string literals.
 Each widget's `methods` dictionary contains externally visible function symbols

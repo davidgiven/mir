@@ -81,10 +81,6 @@
                                     "description": "Resource class string from the entry's second field (XtResource.resource_class, e.g. Background).",
                                     "type": "string"
                                 },
-                                "construct": {
-                                    "description": "Whether the resource can be supplied when constructing the widget.",
-                                    "type": "boolean"
-                                },
                                 "set": {
                                     "description": "Whether the resource can be set after widget construction.",
                                     "type": "boolean"

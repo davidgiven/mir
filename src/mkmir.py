@@ -320,7 +320,7 @@ def get_resources(widget_class, cindex, definitions=None):
                         name = ast.literal_eval(literal.spelling)
                     except (ValueError, SyntaxError):
                         break
-                    resource = {}
+                    resource = {"set": True, "get": True}
                     for index, field in ((1, "class"), (2, "rtype")):
                         if len(values) <= index:
                             continue

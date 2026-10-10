@@ -16,7 +16,7 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                        "description": "Human-readable name of the widget, derived by stripping the toolkit prefix and the trailing WidgetClass suffix.",
+                        "description": "Widget class name string from core.class_name (e.g. XmPushButton).",
                         "type": "string"
                     },
                     "include": {
@@ -75,7 +75,7 @@
                     },
                     {
                         "required": ["resources"],
-                        "propertyNames": {"enum": ["superclass", "resources"]}
+                        "propertyNames": {"enum": ["name", "superclass", "resources"]}
                     },
                     {
                         "required": [

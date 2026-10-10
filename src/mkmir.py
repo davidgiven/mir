@@ -117,7 +117,7 @@ def main(argv=None):
     for widget_class in widget_classes.values():
         class_name = get_class_name(widget_class, cindex, definitions)
         if class_name is not None:
-            widget = {}
+            widget = {"name": class_name}
             superclass = get_superclass(widget_class, cindex, definitions, record_to_widget)
             if superclass is not None:
                 widget["superclass"] = superclass

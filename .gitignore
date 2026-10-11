@@ -1,3 +1,6 @@
 mir
 .obj/
 **/__pycache__
+a.out
+.gdb_history
+

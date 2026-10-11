@@ -3,6 +3,7 @@
 #include <Xm/RowColumn.h>
 #include <tuple>
 #include <utility>
+#include "include/cmotif.h"
 
 template <template <typename...> class Chain, typename... Args>
 class ResourceValuesBase

@@ -9,7 +9,7 @@ all: mir.json include/cmotif_impl.h
 mir.json: src/mkmir.py
 	$(PYTHON) src/mkmir.py "$(MOTIF_SOURCE)" -o "$@" $(MKMIR_ARGS)
 
-include/cmotif_impl.h: mir.json
+include/cmotif_impl.h: mir.json src/mkcpp.py
 	$(PYTHON) src/mkcpp.py "$<" -o "$@"
 
 test:

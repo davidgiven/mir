@@ -99,12 +99,16 @@ typedef names.
 The top-level `types` dictionary contains an enum description keyed by the C
 type spelling for each enum referenced by a resource's `ctype`, a method
 parameter's `type`, or a method's `return_type`. Typedef aliases to enums are
-resolved across all loaded translation units; unreferenced enums and non-enum
-types are excluded. Each entry has `type` set to `"enum"` and a `fields`
+resolved across all loaded translation units; unreferenced named enums are
+excluded. Each enum entry has `type` set to `"enum"` and a `fields`
 dictionary mapping enum constant names to their evaluated integer values.
 The synthetic `XtEnum` entry collects `Xm`- and `Xt`-prefixed constants from
 anonymous enums across all loaded translation units, excluding enums with a
 tag or typedef name. Distinct constants may share the same integer value.
+Referenced typedefs resolving to integral C types also have entries with
+`type` set to `"integer"` and `ctype` containing the underlying C type spelling
+after resolving typedef chains. Bare integral types and typedefs to pointers,
+arrays, floating-point types, or records do not get integer entries.
 Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can

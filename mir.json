@@ -1,12 +1,64 @@
 {
   "prefix": "Xm",
   "types": {
+    "Atom": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "Boolean": {
+      "ctype": "char",
+      "type": "integer"
+    },
+    "Cardinal": {
+      "ctype": "unsigned int",
+      "type": "integer"
+    },
+    "Cursor": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "Dimension": {
+      "ctype": "unsigned short",
+      "type": "integer"
+    },
+    "KeySym": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "Pixel": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "Pixmap": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "Position": {
+      "ctype": "short",
+      "type": "integer"
+    },
+    "Time": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "Window": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
+    "XID": {
+      "ctype": "unsigned long",
+      "type": "integer"
+    },
     "XmColorMode": {
       "fields": {
         "XmListMode": 0,
         "XmScaleMode": 1
       },
       "type": "enum"
+    },
+    "XmDirection": {
+      "ctype": "unsigned char",
+      "type": "integer"
     },
     "XmFillOption": {
       "fields": {
@@ -37,6 +89,10 @@
       },
       "type": "enum"
     },
+    "XmNavigationType": {
+      "ctype": "unsigned char",
+      "type": "integer"
+    },
     "XmNotebookPageStatus": {
       "fields": {
         "XmPAGE_DUPLICATED": 3,
@@ -56,6 +112,10 @@
         "XmPIXMAP_TOP": 0
       },
       "type": "enum"
+    },
+    "XmStringDirection": {
+      "ctype": "unsigned char",
+      "type": "integer"
     },
     "XmTabEdge": {
       "fields": {
@@ -107,6 +167,14 @@
         "XmTEXT_FORWARD": 0
       },
       "type": "enum"
+    },
+    "XmTextPosition": {
+      "ctype": "long",
+      "type": "integer"
+    },
+    "XmToggleButtonState": {
+      "ctype": "unsigned char",
+      "type": "integer"
     },
     "XmTreeCompressStyle": {
       "fields": {
@@ -889,6 +957,10 @@
         "XmZERO_BASED": 0
       },
       "type": "enum"
+    },
+    "size_t": {
+      "ctype": "unsigned long",
+      "type": "integer"
     }
   },
   "widgets": {

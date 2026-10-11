@@ -165,7 +165,7 @@ def get_header_path(sourcefile, prefix):
 
 
 def get_api_types(widgets, translation_units, cindex):
-    """Describe enum types actually referenced by the API."""
+    """Describe enums and integral typedefs referenced by the API."""
     def type_key(spelling):
         # sizeof tokens have different spacing from libclang type spellings.
         return "".join(token for token in spelling.split()
@@ -182,6 +182,14 @@ def get_api_types(widgets, translation_units, cindex):
                               for parameter in method["parameters"].values())
 
     enum_types = {}
+    integer_types = {}
+    integral_kinds = {
+        getattr(cindex.TypeKind, name) for name in (
+            "BOOL", "CHAR_U", "CHAR_S", "UCHAR", "SCHAR", "WCHAR",
+            "CHAR16", "CHAR32", "USHORT", "SHORT", "UINT", "INT",
+            "ULONG", "LONG", "ULONGLONG", "LONGLONG", "UINT128", "INT128",
+        )
+    }
     enum_fields = {}
     anonymous_enums = set()
     named_enums = set()
@@ -195,8 +203,12 @@ def get_api_types(widgets, translation_units, cindex):
             if cursor.kind not in (cindex.CursorKind.ENUM_DECL,
                                    cindex.CursorKind.TYPEDEF_DECL):
                 continue
-            if cursor.type.get_canonical().kind == cindex.TypeKind.ENUM:
-                declaration = cursor.type.get_canonical().get_declaration()
+            canonical = cursor.type.get_canonical()
+            if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+                    and canonical.kind in integral_kinds):
+                integer_types[type_key(cursor.type.spelling)] = canonical.spelling
+            if canonical.kind == cindex.TypeKind.ENUM:
+                declaration = canonical.get_declaration()
                 declaration = declaration.get_definition() or declaration
                 usr = declaration.get_usr()
                 enum_types[type_key(cursor.type.spelling)] = usr
@@ -217,6 +229,11 @@ def get_api_types(widgets, translation_units, cindex):
                 "fields": enum_fields.get(enum_types[type_key(spelling)], {}),
             } for spelling in sorted(referenced)
             if type_key(spelling) in enum_types}
+    for spelling in sorted(referenced):
+        if spelling not in types and type_key(spelling) in integer_types:
+            types[spelling] = {
+                "type": "integer", "ctype": integer_types[type_key(spelling)],
+            }
     types["XtEnum"] = {
         "type": "enum",
         "fields": {

@@ -1,4 +1,4 @@
-"""Exercise API enum discovery using real libclang translation units."""
+"""Exercise API type discovery using real libclang translation units."""
 
 import json
 from pathlib import Path
@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ApiTypesTest(unittest.TestCase):
-    def test_referenced_enums(self):
+    def test_referenced_types(self):
         source = r'''
 typedef struct WidgetRec *Widget;
 enum Mode { MODE_A = -3, MODE_B, MODE_C = 1 << 5, MODE_D = MODE_C, MODE_E };
@@ -27,7 +27,15 @@ typedef __typeof__(enum_variable) LaterNamed;
 enum External;
 enum Unused { UNUSED };
 typedef int Number;
-typedef struct { Alias mode; } WidgetRec;
+typedef unsigned long Cardinal;
+typedef Cardinal Count;
+typedef unsigned char Byte;
+typedef _Bool Flag;
+typedef double Real;
+typedef int *Pointer;
+typedef int Array[2];
+typedef short UnusedInteger;
+typedef struct { Alias mode; Count count; } WidgetRec;
 typedef struct {
     char *name, *resource_class, *resource_type;
     unsigned long size, offset;
@@ -35,7 +43,10 @@ typedef struct {
 Resource resources[] = {
     {"mode", "Mode", "Mode", sizeof(Alias),
      __builtin_offsetof(WidgetRec, mode)},
-    {"fallback", "Mode", "Mode", sizeof(enum Mode), 0}
+    {"fallback", "Mode", "Mode", sizeof(enum Mode), 0},
+    {"count", "Count", "Count", sizeof(Count),
+     __builtin_offsetof(WidgetRec, count)},
+    {"byte", "Byte", "Byte", sizeof(Byte), 0}
 };
 typedef struct CoreClass {
     struct CoreClass *superclass;
@@ -52,6 +63,8 @@ void TestSet(Widget widget, const Mode mode, Number number, Mode *pointer);
 enum Mode TestMode(Widget widget);
 Anonymous TestAnonymous(Widget widget);
 enum External TestExternal(Widget widget);
+Count TestCount(Widget widget, const Count count, Flag flag, Real real,
+               Pointer pointer, Array array, int bare);
 enum Unused OtherFunction(void);
 '''
         with tempfile.TemporaryDirectory() as directory:
@@ -90,6 +103,14 @@ enum Unused OtherFunction(void);
                 "XtExternal": 42,
             },
         }
+        expected_types.update({
+            name: {"type": "integer", "ctype": ctype}
+            for name, ctype in (
+                ("Number", "int"), ("Count", "unsigned long"),
+                ("const Count", "unsigned long"), ("Byte", "unsigned char"),
+                ("Flag", "_Bool"),
+            )
+        })
         self.assertEqual(artifact["types"], expected_types)
         self.assertEqual(
             artifact["widgets"]["testWidgetClass"]["resources"]["mode"]["ctype"],

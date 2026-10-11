@@ -10,19 +10,34 @@
             "type": "string"
         },
         "types": {
-            "description": "Enum types referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
+            "description": "Enum types and integral typedefs referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
                 "properties": {
-                    "type": {"const": "enum"},
+                    "type": {"enum": ["enum", "integer"]},
+                    "ctype": {
+                        "description": "Underlying integral C type, with typedef chains resolved.",
+                        "type": "string"
+                    },
                     "fields": {
                         "description": "Enum constant names mapped to their evaluated integer values.",
                         "type": "object",
                         "additionalProperties": {"type": "integer"}
                     }
                 },
-                "required": ["type", "fields"],
+                "oneOf": [
+                    {
+                        "properties": {"type": {"const": "enum"}},
+                        "required": ["type", "fields"],
+                        "not": {"required": ["ctype"]}
+                    },
+                    {
+                        "properties": {"type": {"const": "integer"}},
+                        "required": ["type", "ctype"],
+                        "not": {"required": ["fields"]}
+                    }
+                ],
                 "additionalProperties": false
             }
         },

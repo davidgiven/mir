@@ -113,8 +113,8 @@ protected:
         Boolean* continue_to_dispatch);
     static int registerCallback(
         Widget widget, std::function<void(XtPointer)> callback);
-    static int registerEventHandler(
-        Widget widget, std::function<void(XtPointer, XEvent*, Boolean*)> handler);
+    static int registerEventHandler(Widget widget,
+        std::function<void(XtPointer, XEvent*, Boolean*)> handler);
     static void deregisterCallbacks(
         Widget widget, XtPointer client_data, XtPointer call_data);
 
@@ -166,4 +166,73 @@ public:
     }
 };
 
+template <template <typename, WidgetClass*, typename...> class Chain,
+    typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Args>
+class CWidgetBuilderBase
+{
+public:
+    CWidgetBuilderBase(Widget parent, const char* name):
+        _parent(parent),
+        _name(name)
+    {
+    }
+
+    // Public so derived classes can construct a Chain from a tuple.
+    explicit CWidgetBuilderBase(
+        Widget parent, const char* name, std::tuple<Args...> args):
+        _parent(parent),
+        _name(name),
+        _pairs(std::move(args))
+    {
+    }
+
+    // Shared helper: appends one key/value pair and returns the next Chain
+    // type.
+    template <typename K, typename V>
+    Chain<CWidgetClassT, WidgetClassP, Args..., K, V> set(K key, V value) const
+    {
+        return Chain<CWidgetClassT, WidgetClassP, Args..., K, V>(_parent,
+            _name,
+            std::tuple_cat(_pairs, std::make_tuple(key, value)));
+    }
+
+    CWidgetClassT build()
+    {
+        return CWidgetClassT(std::apply(
+            [this](auto&&... args)
+            {
+                return XtVaCreateWidget(this->_name,
+                    *WidgetClassP,
+                    this->_parent,
+                    args...,
+                    nullptr);
+            },
+            this->_pairs));
+    }
+
+public:
+    Widget _parent;
+    const char* _name;
+    std::tuple<Args...> _pairs;
+};
+
 #include "cmotif_impl.h"
+
+template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+class CXmRowColumnBuilderImpl :
+    public CWidgetBuilderBase<CXmRowColumnBuilderImpl, CWidgetClassT,
+        WidgetClassP, Pairs...>
+{
+public:
+    CXmRowColumnBuilderImpl() = default;
+    using CWidgetBuilderBase<CXmRowColumnBuilderImpl,
+        CWidgetClassT, WidgetClassP, Pairs...>::CWidgetBuilderBase;
+
+    auto setRowColumnType(unsigned char value) const
+    {
+        return this->set(XmNrowColumnType, value);
+    }
+};
+
+using CXmRowColumnBuilder =
+    CXmRowColumnBuilderImpl<CXmRowColumn, &xmRowColumnWidgetClass>;

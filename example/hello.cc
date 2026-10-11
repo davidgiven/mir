@@ -32,42 +32,52 @@ int main(int argc, char* argv[])
     auto toplevel =
         XtVaAppInitialize(&app, "HelloWorld", NULL, 0, &argc, argv, NULL, NULL);
 
-    Widget mainWindow = XtVaCreateManagedWidget(
-        "mainWindow", xmRowColumnWidgetClass, toplevel, NULL);
+    CXmMainWindow mainWindow = CXmMainWindow::create(toplevel,
+        "mainWindow");
 
-    CXmPushButton::create(mainWindow, "button1")
-        .setLabelString(XmStringCreateLocalized((char*)"Button 1"))
-        .setShowAsDefault(true)
-        .addActivateCallback(
-            [](XtPointer)
-            {
-                printf("Button 1 pressed\n");
-            })
+    auto menubar = CXmRowColumnBuilder(mainWindow, "menubar")
+        .setRowColumnType(XmMENU_BAR)
+        .build()
         .manageChild();
+    auto fileMenu = CXmRowColumnBuilder(menubar, "fileMenu")
+        .setRowColumnType(XmMENU_PULLDOWN)
+        .build()
+        .manageChild();
+    mainWindow.setMenuBar(menubar);
 
-    CXmPushButton button2 =
-        CXmPushButton::create(mainWindow, "button2")
-            .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
-            .setShowAsDefault(false)
-            .setAlignment(XmALIGNMENT_CENTER)
-            .addActivateCallback(
-                [](XtPointer)
-                {
-                    printf("Button 2 pressed\n");
-                })
-            .addEventHandler(
-                [&](XtPointer, XEvent* event, Boolean* continue_to_dispatch)
-                {
-                    button2.setLabelString(XmStringCreateLocalized(
-                        (char*)(std::format("width={}", button2.getWidth())
-                                .c_str())));
-                },
-                StructureNotifyMask)
-            .manageChild();
+    // CXmPushButton::create(mainWindow, "button1")
+    //     .setLabelString(XmStringCreateLocalized((char*)"Button 1"))
+    //     .setShowAsDefault(true)
+    //     .addActivateCallback(
+    //         [](XtPointer)
+    //         {
+    //             printf("Button 1 pressed\n");
+    //         })
+    //     .manageChild();
+
+    // CXmPushButton button2 =
+    //     CXmPushButton::create(mainWindow, "button2")
+    //         .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
+    //         .setShowAsDefault(false)
+    //         .setAlignment(XmALIGNMENT_CENTER)
+    //         .addActivateCallback(
+    //             [](XtPointer)
+    //             {
+    //                 printf("Button 2 pressed\n");
+    //             })
+    //         .addEventHandler(
+    //             [&](XtPointer, XEvent* event, Boolean* continue_to_dispatch)
+    //             {
+    //                 button2.setLabelString(XmStringCreateLocalized(
+    //                     (char*)(std::format("width={}", button2.getWidth())
+    //                             .c_str())));
+    //             },
+    //             StructureNotifyMask)
+    //         .manageChild();
 
     XtRealizeWidget(toplevel);
 
-    printf("button 2 width = %d\n", button2.getWidth());
+    // printf("button 2 width = %d\n", button2.getWidth());
 
     XtAppMainLoop(app);
 }

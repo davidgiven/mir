@@ -12,7 +12,7 @@ mir.json: src/mkmir.py
 include/cmotif_impl.h: mir.json src/mkcpp.py
 	$(PYTHON) src/mkcpp.py "$<" -o "$@"
 
-hello: example/hello.cc src/cmotif.cc include/cmotif_impl.h
+hello: example/hello.cc src/cmotif.cc include/cmotif_impl.h include/cmotif.h
 	$(CXX) -std=c++20 -Iinclude -I$(MOTIF_SOURCE) -o "$@" example/hello.cc src/cmotif.cc -lXm -lXt -lX11 -I. -Os -g
 
 test:

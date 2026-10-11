@@ -16,7 +16,6 @@ public:
     {
     }
 
-protected:
     // Shared helper: appends one key/value pair and returns the next Chain
     // type.
     template <typename K, typename V>
@@ -46,7 +45,8 @@ public:
 
     auto withLabelString(const char* value) const
     {
-        return this->with(XmNlabelString, XmStringCreateLocalized((char*)value));
+        return this->with(
+            XmNlabelString, XmStringCreateLocalized((char*)value));
     }
 
     auto withShadowThickness(int value) const
@@ -58,9 +58,20 @@ public:
     {
         return this->with(XmNshowAsDefault, value);
     }
+
+    auto withActivateCallback(XtCallbackProc value, XtPointer client_data) const
+    {
+        XtCallbackRec* callback_list =
+            (XtCallbackRec*)XtCalloc(2, sizeof(XtCallbackRec));
+        callback_list[0].callback = value;
+        callback_list[0].closure = client_data;
+        callback_list[1].callback = nullptr;
+        callback_list[1].closure = nullptr;
+        return this->with(XmNactivateCallback, callback_list);
+    }
 };
 
-template <typename Resources>
+template <template <typename...> class Resources>
 class WrappedWidget
 {
 public:
@@ -71,7 +82,8 @@ public:
         return _widget;
     }
 
-    WrappedWidget<Resources> setValues(const Resources& resources)
+    template <typename... Pairs>
+    WrappedWidget<Resources> setValues(const Resources<Pairs...>& resources)
     {
         std::apply(
             [&](const auto&... args)
@@ -87,19 +99,39 @@ private:
 };
 
 template <typename... Pairs>
-static WrappedWidget<XmPushButtonResources<Pairs...>> XmCreatePushButton(
-    const char* name,
+static WrappedWidget<XmPushButtonResources> XmCreatePushButton(const char* name,
     Widget parent,
     const XmPushButtonResources<Pairs...>& resources)
 {
     return std::apply(
         [&](const auto&... args)
         {
-            return WrappedWidget<XmPushButtonResources<Pairs...>>(
+            return WrappedWidget<XmPushButtonResources>(
                 XmVaCreatePushButton(parent, (char*)name, args..., nullptr));
         },
         resources._pairs);
 }
+
+template <typename Type>
+class CallbacksBase
+{
+public:
+    CallbacksBase(Widget w): _widget(w) {}
+
+protected:
+    Widget _widget;
+};
+
+class XmPushButtonCallbacks : public CallbacksBase<XmPushButtonCallbacks>
+{
+public:
+    using CallbacksBase<XmPushButtonCallbacks>::CallbacksBase;
+
+    auto withActivateCallback(XtCallbackProc value, XtPointer client_data) const
+    {
+        XtAddCallback(_widget, XmNactivateCallback, value, client_data);
+    }
+};
 
 int main(int argc, char* argv[])
 {
@@ -108,10 +140,10 @@ int main(int argc, char* argv[])
     auto toplevel =
         XtVaAppInitialize(&app, "HelloWorld", NULL, 0, &argc, argv, NULL, NULL);
 
-    auto mainWindow = XtVaCreateManagedWidget(
+    Widget mainWindow = XtVaCreateManagedWidget(
         "mainWindow", xmRowColumnWidgetClass, toplevel, NULL);
 
-    auto button1 = XmCreatePushButton("button",
+    Widget button1 = XmCreatePushButton("button",
         mainWindow,
         XmPushButtonResources()
             .withLabelString("Hello, world!")
@@ -121,6 +153,13 @@ int main(int argc, char* argv[])
     auto button2 = XmCreatePushButton("button2",
         mainWindow,
         XmPushButtonResources().withLabelString("Button 2"));
+    XmPushButtonCallbacks(button2).withActivateCallback(
+        [](Widget w, XtPointer client_data, XtPointer call_data)
+        {
+            printf("Button 2 pressed\n");
+        },
+        nullptr);
+    XtManageChild(button2);
     button2.setValues(
         XmPushButtonResources().withLabelString("Updated Button 2"));
     XtManageChild(button2);

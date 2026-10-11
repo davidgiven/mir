@@ -23,7 +23,7 @@ class BuilderArgumentsTest(unittest.TestCase):
 int main() {
     CXmRowColumnBuilder empty(nullptr, "menu");
     assert(empty.buildArgList().empty());
-    CXmPulldownBuilder pulldown(nullptr, "pulldown");
+    CXmPulldownMenuBuilder pulldown(nullptr, "pulldown");
     assert(pulldown.buildArgList().empty());
 
     int data = 42;

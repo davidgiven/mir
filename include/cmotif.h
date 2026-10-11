@@ -217,16 +217,10 @@ public:
 
     CWidgetClassT build()
     {
-        return CWidgetClassT(std::apply(
-            [this](auto&&... args)
-            {
-                return XtVaCreateWidget(this->_name,
-                    *WidgetClassP,
-                    this->_parent,
-                    args...,
-                    nullptr);
-            },
-            this->_pairs));
+        auto arglist = buildArgList();
+        return CWidgetClassT(XtCreateWidget(this->_name,
+            *WidgetClassP, this->_parent, arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
     }
 
 public:

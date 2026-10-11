@@ -122,6 +122,10 @@ typedef names and qualifiers in its pointee. Bare pointer types are excluded.
 Function pointer typedefs (including aliases and unprototyped functions) are
 excluded from `types`; they will be handled separately.
 Only symbols with a resolved core `class_name` are included;
+widget class symbol stems in `WIDGET_CLASS_BLACKLIST` in `src/mkmir.py` are
+excluded before indexing or emission (initially `xmColorObj`). Conventional
+`Class`, `WidgetClass`, `GadgetClass`, and `ObjectClass` suffixes are removed
+before matching the blacklist.
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can
 prevent extraction from some files. Successful loading does not guarantee

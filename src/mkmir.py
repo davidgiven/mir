@@ -10,21 +10,43 @@ import subprocess
 import sys
 from pathlib import Path
 
+# WidgetClass symbol stems, without the conventional Class/WidgetClass suffix.
+WIDGET_CLASS_BLACKLIST = {}
+
+
+def is_blacklisted_widget(symbol):
+    for suffix in ("WidgetClass", "GadgetClass", "ObjectClass", "Class"):
+        if symbol.endswith(suffix):
+            symbol = symbol[: -len(suffix)]
+            break
+    return symbol in WIDGET_CLASS_BLACKLIST
+
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "sources", nargs="*", type=Path,
+        "sources",
+        nargs="*",
+        type=Path,
         help="C files or directories to search recursively for .c files",
     )
     parser.add_argument(
-        "-o", "--output", type=Path, default=Path("mir.json"),
+        "-o",
+        "--output",
+        type=Path,
+        default=Path("mir.json"),
         help="output artifact path (default: mir.json)",
     )
-    parser.add_argument("--libclang", type=Path, help="path to the libclang shared library")
-    parser.add_argument("--prefix", default="Xm", help="toolkit prefix (default: Xm)")
     parser.add_argument(
-        "--clang-arg", action="append", default=[],
+        "--libclang", type=Path, help="path to the libclang shared library"
+    )
+    parser.add_argument(
+        "--prefix", default="Xm", help="toolkit prefix (default: Xm)"
+    )
+    parser.add_argument(
+        "--clang-arg",
+        action="append",
+        default=[],
         help="compiler argument; repeat as needed (e.g. --clang-arg=-I/usr/include)",
     )
     return parser, parser.parse_args(argv)
@@ -43,7 +65,9 @@ def find_c_files(sources):
         elif source.is_dir():
             candidates = (
                 Path(root) / name
-                for root, directories, files in os.walk(source, onerror=raise_walk_error)
+                for root, directories, files in os.walk(
+                    source, onerror=raise_walk_error
+                )
                 for name in sorted(files)
             )
         else:
@@ -63,7 +87,9 @@ def main(argv=None):
     try:
         from clang import cindex
     except ImportError:
-        parser.error("libclang Python bindings are required (module: clang.cindex)")
+        parser.error(
+            "libclang Python bindings are required (module: clang.cindex)"
+        )
 
     try:
         if args.libclang is not None:
@@ -78,13 +104,20 @@ def main(argv=None):
     # Python wheels can bundle libclang without its standard C headers.
     # Use the installed compiler's resource directory unless explicitly set.
     compiler = shutil.which("clang")
-    if compiler and not any(arg.startswith("-resource-dir") for arg in clang_args):
+    if compiler and not any(
+        arg.startswith("-resource-dir") for arg in clang_args
+    ):
         result = subprocess.run(
-            [compiler, "-print-resource-dir"], capture_output=True, text=True,
+            [compiler, "-print-resource-dir"],
+            capture_output=True,
+            text=True,
             check=False,
         )
         resource_dir = Path(result.stdout.strip())
-        if result.returncode == 0 and (resource_dir / "include" / "stddef.h").is_file():
+        if (
+            result.returncode == 0
+            and (resource_dir / "include" / "stddef.h").is_file()
+        ):
             clang_args.extend(["-isystem", str(resource_dir / "include")])
     translation_units = []
     try:
@@ -99,17 +132,24 @@ def main(argv=None):
     widget_classes = {}
     for unit in translation_units:
         for cursor in unit.cursor.get_children():
-            if cursor.kind != cindex.CursorKind.VAR_DECL or not cursor.is_definition():
+            if (
+                cursor.kind != cindex.CursorKind.VAR_DECL
+                or not cursor.is_definition()
+            ):
                 continue
             usr = cursor.get_usr()
             if usr not in definitions or get_initializer(cursor) is not None:
                 definitions[usr] = cursor
         source = Path(unit.spelling).resolve()
         for cursor in find_widget_classes(unit, source, cindex):
+            if is_blacklisted_widget(cursor.spelling):
+                continue
             widget_classes.setdefault(cursor.get_usr(), cursor)
 
     record_to_widget = {}
-    for widget_class in sorted(widget_classes.values(), key=lambda cursor: cursor.spelling):
+    for widget_class in sorted(
+        widget_classes.values(), key=lambda cursor: cursor.spelling
+    ):
         record = get_class_record(widget_class, cindex, definitions)
         if record is not None:
             record_to_widget.setdefault(record.get_usr(), widget_class.spelling)
@@ -121,25 +161,35 @@ def main(argv=None):
         if class_name is not None:
             widget = {"name": class_name}
             record = get_class_record(widget_class, cindex, definitions)
-            if (record is not None and record.is_definition()
-                    and get_initializer(record) is not None
-                    and record.location.file is not None):
-                widget["sourcefile"] = str(Path(record.location.file.name).resolve())
+            if (
+                record is not None
+                and record.is_definition()
+                and get_initializer(record) is not None
+                and record.location.file is not None
+            ):
+                widget["sourcefile"] = str(
+                    Path(record.location.file.name).resolve()
+                )
                 header = get_header_path(widget["sourcefile"], args.prefix)
                 if header is not None:
                     widget["header"] = header
-            superclass = get_superclass(widget_class, cindex, definitions, record_to_widget)
+            superclass = get_superclass(
+                widget_class, cindex, definitions, record_to_widget
+            )
             if superclass is not None:
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
-            widget["resources"] = dict(get_resources(widget_class, cindex, definitions))
+            widget["resources"] = dict(
+                get_resources(widget_class, cindex, definitions)
+            )
             widget["methods"] = {
                 name: {
-                    "name": name[len(class_name):],
+                    "name": name[len(class_name) :],
                     "return_type": method.result_type.spelling,
                     "parameters": get_method_parameters(method),
                 }
-                for name, method in methods.items() if name.startswith(class_name)
+                for name, method in methods.items()
+                if name.startswith(class_name)
             }
 
     artifact = {
@@ -148,8 +198,10 @@ def main(argv=None):
         "types": get_api_types(widgets, translation_units, cindex),
     }
     try:
-        args.output.write_text(json.dumps(artifact, indent=2, sort_keys=True) + "\n",
-                               encoding="utf-8")
+        args.output.write_text(
+            json.dumps(artifact, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
     except OSError as exc:
         parser.error(f"could not write output: {exc}")
     return 0
@@ -166,10 +218,14 @@ def get_header_path(sourcefile, prefix):
 
 def get_api_types(widgets, translation_units, cindex):
     """Describe enums and integral or pointer typedefs referenced by the API."""
+
     def type_key(spelling):
         # sizeof tokens have different spacing from libclang type spellings.
-        return "".join(token for token in spelling.split()
-                       if token not in ("const", "volatile", "restrict"))
+        return "".join(
+            token
+            for token in spelling.split()
+            if token not in ("const", "volatile", "restrict")
+        )
 
     referenced = set()
     for widget in widgets.values():
@@ -178,17 +234,34 @@ def get_api_types(widgets, translation_units, cindex):
                 referenced.add(resource["ctype"])
         for method in widget["methods"].values():
             referenced.add(method["return_type"])
-            referenced.update(parameter["type"]
-                              for parameter in method["parameters"].values())
+            referenced.update(
+                parameter["type"] for parameter in method["parameters"].values()
+            )
 
     enum_types = {}
     integer_types = {}
     pointer_types = {}
     integral_kinds = {
-        getattr(cindex.TypeKind, name) for name in (
-            "BOOL", "CHAR_U", "CHAR_S", "UCHAR", "SCHAR", "WCHAR",
-            "CHAR16", "CHAR32", "USHORT", "SHORT", "UINT", "INT",
-            "ULONG", "LONG", "ULONGLONG", "LONGLONG", "UINT128", "INT128",
+        getattr(cindex.TypeKind, name)
+        for name in (
+            "BOOL",
+            "CHAR_U",
+            "CHAR_S",
+            "UCHAR",
+            "SCHAR",
+            "WCHAR",
+            "CHAR16",
+            "CHAR32",
+            "USHORT",
+            "SHORT",
+            "UINT",
+            "INT",
+            "ULONG",
+            "LONG",
+            "ULONGLONG",
+            "LONGLONG",
+            "UINT128",
+            "INT128",
         )
     }
     enum_fields = {}
@@ -198,22 +271,33 @@ def get_api_types(widgets, translation_units, cindex):
         pending = list(unit.cursor.get_children())
         while pending:
             cursor = pending.pop()
-            if cursor.kind in (cindex.CursorKind.STRUCT_DECL,
-                               cindex.CursorKind.UNION_DECL):
+            if cursor.kind in (
+                cindex.CursorKind.STRUCT_DECL,
+                cindex.CursorKind.UNION_DECL,
+            ):
                 pending.extend(cursor.get_children())
-            if cursor.kind not in (cindex.CursorKind.ENUM_DECL,
-                                   cindex.CursorKind.TYPEDEF_DECL):
+            if cursor.kind not in (
+                cindex.CursorKind.ENUM_DECL,
+                cindex.CursorKind.TYPEDEF_DECL,
+            ):
                 continue
             canonical = cursor.type.get_canonical()
-            if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
-                    and canonical.kind in integral_kinds):
-                integer_types[type_key(cursor.type.spelling)] = canonical.spelling
-            if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
-                    and canonical.kind == cindex.TypeKind.POINTER
-                    and canonical.get_pointee().kind not in (
-                        cindex.TypeKind.FUNCTIONPROTO,
-                        cindex.TypeKind.FUNCTIONNOPROTO,
-                    )):
+            if (
+                cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+                and canonical.kind in integral_kinds
+            ):
+                integer_types[type_key(cursor.type.spelling)] = (
+                    canonical.spelling
+                )
+            if (
+                cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+                and canonical.kind == cindex.TypeKind.POINTER
+                and canonical.get_pointee().kind
+                not in (
+                    cindex.TypeKind.FUNCTIONPROTO,
+                    cindex.TypeKind.FUNCTIONNOPROTO,
+                )
+            ):
                 underlying = cursor.underlying_typedef_type
                 # Resolve aliases to the pointer, preserving typedefs in its
                 # pointee (e.g. XmStringTable points to XmString).
@@ -231,8 +315,10 @@ def get_api_types(widgets, translation_units, cindex):
                 declaration = declaration.get_definition() or declaration
                 usr = declaration.get_usr()
                 enum_types[type_key(cursor.type.spelling)] = usr
-                if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
-                        or not declaration.is_anonymous()):
+                if (
+                    cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+                    or not declaration.is_anonymous()
+                ):
                     named_enums.add(usr)
                 else:
                     anonymous_enums.add(usr)
@@ -243,19 +329,24 @@ def get_api_types(widgets, translation_units, cindex):
                         if field.kind == cindex.CursorKind.ENUM_CONSTANT_DECL
                     }
 
-    types = {spelling: {
-                "type": "enum",
-                "fields": enum_fields.get(enum_types[type_key(spelling)], {}),
-            } for spelling in sorted(referenced)
-            if type_key(spelling) in enum_types}
+    types = {
+        spelling: {
+            "type": "enum",
+            "fields": enum_fields.get(enum_types[type_key(spelling)], {}),
+        }
+        for spelling in sorted(referenced)
+        if type_key(spelling) in enum_types
+    }
     for spelling in sorted(referenced):
         if spelling not in types and type_key(spelling) in integer_types:
             types[spelling] = {
-                "type": "integer", "ctype": integer_types[type_key(spelling)],
+                "type": "integer",
+                "ctype": integer_types[type_key(spelling)],
             }
         elif spelling not in types and type_key(spelling) in pointer_types:
             types[spelling] = {
-                "type": "pointer", "ctype": pointer_types[type_key(spelling)],
+                "type": "pointer",
+                "ctype": pointer_types[type_key(spelling)],
             }
     types["XtEnum"] = {
         "type": "enum",
@@ -273,10 +364,12 @@ def find_widget_classes(unit, source, cindex):
     """Find external WidgetClass variables declared in the source itself."""
     seen = set()
     for cursor in unit.cursor.get_children():
-        if (cursor.kind != cindex.CursorKind.VAR_DECL
-                or cursor.linkage != cindex.LinkageKind.EXTERNAL
-                or cursor.location.file is None
-                or Path(cursor.location.file.name).resolve() != source):
+        if (
+            cursor.kind != cindex.CursorKind.VAR_DECL
+            or cursor.linkage != cindex.LinkageKind.EXTERNAL
+            or cursor.location.file is None
+            or Path(cursor.location.file.name).resolve() != source
+        ):
             continue
 
         # Follow typedef aliases without matching arbitrary pointers that
@@ -292,8 +385,14 @@ def find_widget_classes(unit, source, cindex):
 
 
 def get_initializer(cursor):
-    return next((child for child in cursor.get_children()
-                 if child.kind.is_expression()), None)
+    return next(
+        (
+            child
+            for child in cursor.get_children()
+            if child.kind.is_expression()
+        ),
+        None,
+    )
 
 
 def find_widget_methods(translation_units, cindex):
@@ -301,8 +400,10 @@ def find_widget_methods(translation_units, cindex):
     methods = {}
     for unit in translation_units:
         for cursor in unit.cursor.get_children():
-            if (cursor.kind != cindex.CursorKind.FUNCTION_DECL
-                    or cursor.linkage != cindex.LinkageKind.EXTERNAL):
+            if (
+                cursor.kind != cindex.CursorKind.FUNCTION_DECL
+                or cursor.linkage != cindex.LinkageKind.EXTERNAL
+            ):
                 continue
             argument = next(cursor.get_arguments(), None)
             if argument is None:
@@ -311,27 +412,45 @@ def find_widget_methods(translation_units, cindex):
             while declaration.kind == cindex.CursorKind.TYPEDEF_DECL:
                 if declaration.spelling == "Widget":
                     previous = methods.get(cursor.spelling)
-                    if (previous is None or cursor.is_definition()
-                            or (not previous.is_definition()
-                                and sum(bool(arg.spelling) for arg in cursor.get_arguments())
-                                > sum(bool(arg.spelling) for arg in previous.get_arguments()))):
+                    if (
+                        previous is None
+                        or cursor.is_definition()
+                        or (
+                            not previous.is_definition()
+                            and sum(
+                                bool(arg.spelling)
+                                for arg in cursor.get_arguments()
+                            )
+                            > sum(
+                                bool(arg.spelling)
+                                for arg in previous.get_arguments()
+                            )
+                        )
+                    ):
                         methods[cursor.spelling] = cursor
                     break
-                declaration = declaration.underlying_typedef_type.get_declaration()
+                declaration = (
+                    declaration.underlying_typedef_type.get_declaration()
+                )
     return dict(sorted(methods.items()))
 
 
 def get_method_parameters(method):
     """Describe signature parameters after the leading Widget argument."""
     arguments = list(method.get_arguments())[1:]
-    reserved = {argument.spelling for argument in arguments if argument.spelling}
+    reserved = {
+        argument.spelling for argument in arguments if argument.spelling
+    }
     parameters = {}
     for position, argument in enumerate(arguments, start=1):
         key = argument.spelling or f"arg{position}"
         if not argument.spelling:
             while key in reserved or key in parameters:
                 key += "_"
-        parameters[key] = {"name": argument.spelling, "type": argument.type.spelling}
+        parameters[key] = {
+            "name": argument.spelling,
+            "type": argument.type.spelling,
+        }
     return parameters
 
 
@@ -339,7 +458,9 @@ def get_class_record(widget_class, cindex, definitions=None):
     """Resolve a WidgetClass pointer to its ClassRec across loaded TUs."""
     kind = cindex.CursorKind
     definitions = definitions or {}
-    definition = definitions.get(widget_class.get_usr()) or widget_class.get_definition()
+    definition = (
+        definitions.get(widget_class.get_usr()) or widget_class.get_definition()
+    )
     if definition is None:
         return None
     initializer = get_initializer(definition)
@@ -354,7 +475,11 @@ def get_class_record(widget_class, cindex, definitions=None):
             continue
         if target.type.get_canonical().kind != cindex.TypeKind.RECORD:
             continue
-        return definitions.get(target.get_usr()) or target.get_definition() or target
+        return (
+            definitions.get(target.get_usr())
+            or target.get_definition()
+            or target
+        )
     return None
 
 
@@ -363,8 +488,14 @@ def get_core_fields(widget_class, cindex, definitions=None):
     kind = cindex.CursorKind
     record = get_class_record(widget_class, cindex, definitions)
     if record is not None:
-        record_initializer = next((child for child in record.get_children()
-                                   if child.kind == kind.INIT_LIST_EXPR), None)
+        record_initializer = next(
+            (
+                child
+                for child in record.get_children()
+                if child.kind == kind.INIT_LIST_EXPR
+            ),
+            None,
+        )
         if record_initializer is None:
             return None
         # WidgetClass points to the leading CoreClassPart of the concrete
@@ -372,15 +503,21 @@ def get_core_fields(widget_class, cindex, definitions=None):
         # Object and gadget records have layout-compatible leading parts.
         fields = list(record_initializer.type.get_canonical().get_fields())
         values = list(record_initializer.get_children())
-        if not fields or not values or fields[0].spelling not in (
-                "core", "core_class", "object_class", "rect_class"):
+        if (
+            not fields
+            or not values
+            or fields[0].spelling
+            not in ("core", "core_class", "object_class", "rect_class")
+        ):
             return None
         core = values[0]
         if core.kind != kind.INIT_LIST_EXPR:
             return None
         core_fields = list(core.type.get_canonical().get_fields())
-        return {field.spelling: value
-                for field, value in zip(core_fields, core.get_children())}
+        return {
+            field.spelling: value
+            for field, value in zip(core_fields, core.get_children())
+        }
     return None
 
 
@@ -397,7 +534,9 @@ def get_class_name(widget_class, cindex, definitions=None):
     return None
 
 
-def get_superclass(widget_class, cindex, definitions=None, record_to_widget=None):
+def get_superclass(
+    widget_class, cindex, definitions=None, record_to_widget=None
+):
     """Map core.superclass's ClassRec reference to its WidgetClass symbol."""
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     value = fields.get("superclass")
@@ -405,7 +544,10 @@ def get_superclass(widget_class, cindex, definitions=None, record_to_widget=None
         for reference in value.walk_preorder():
             if reference.kind == cindex.CursorKind.DECL_REF_EXPR:
                 target = reference.referenced
-                if target is not None and target.kind == cindex.CursorKind.VAR_DECL:
+                if (
+                    target is not None
+                    and target.kind == cindex.CursorKind.VAR_DECL
+                ):
                     return (record_to_widget or {}).get(target.get_usr())
     return None
 
@@ -427,7 +569,10 @@ def get_resources(widget_class, cindex, definitions=None):
         if array is None:
             continue
         initializer = get_initializer(array)
-        if initializer is None or initializer.kind != cindex.CursorKind.INIT_LIST_EXPR:
+        if (
+            initializer is None
+            or initializer.kind != cindex.CursorKind.INIT_LIST_EXPR
+        ):
             continue
         for entry in initializer.get_children():
             if entry.kind != cindex.CursorKind.INIT_LIST_EXPR:
@@ -446,20 +591,42 @@ def get_resources(widget_class, cindex, definitions=None):
                         if len(values) <= index:
                             continue
                         for field_literal in values[index].walk_preorder():
-                            if field_literal.kind == cindex.CursorKind.STRING_LITERAL:
+                            if (
+                                field_literal.kind
+                                == cindex.CursorKind.STRING_LITERAL
+                            ):
                                 try:
-                                    resource[field] = ast.literal_eval(field_literal.spelling)
+                                    resource[field] = ast.literal_eval(
+                                        field_literal.spelling
+                                    )
                                 except (ValueError, SyntaxError):
                                     pass
                                 break
-                    sizeof_type = get_sizeof_type(values[3], cindex) if len(values) > 3 else None
-                    field_type = get_offset_field_type(values[4], cindex) if len(values) > 4 else None
-                    if (field_type is not None and sizeof_type is not None
-                            and "".join(field_type.split()) != "".join(sizeof_type.split())):
-                        print(f"{entry.location}: warning: {widget_class.spelling}.{name}: "
-                              f"offset field type {field_type!r} differs from "
-                              f"sizeof type {sizeof_type!r}", file=sys.stderr)
-                    resource_type = field_type if field_type is not None else sizeof_type
+                    sizeof_type = (
+                        get_sizeof_type(values[3], cindex)
+                        if len(values) > 3
+                        else None
+                    )
+                    field_type = (
+                        get_offset_field_type(values[4], cindex)
+                        if len(values) > 4
+                        else None
+                    )
+                    if (
+                        field_type is not None
+                        and sizeof_type is not None
+                        and "".join(field_type.split())
+                        != "".join(sizeof_type.split())
+                    ):
+                        print(
+                            f"{entry.location}: warning: {widget_class.spelling}.{name}: "
+                            f"offset field type {field_type!r} differs from "
+                            f"sizeof type {sizeof_type!r}",
+                            file=sys.stderr,
+                        )
+                    resource_type = (
+                        field_type if field_type is not None else sizeof_type
+                    )
                     if resource_type is not None:
                         resource["ctype"] = resource_type
                     yield name, resource
@@ -472,8 +639,10 @@ def get_offset_field_type(expression, cindex):
     field_type = None
     expression_field_type = None
     for cursor in expression.walk_preorder():
-        if cursor.kind not in (cindex.CursorKind.MEMBER_REF,
-                               cindex.CursorKind.MEMBER_REF_EXPR):
+        if cursor.kind not in (
+            cindex.CursorKind.MEMBER_REF,
+            cindex.CursorKind.MEMBER_REF_EXPR,
+        ):
             continue
         field = cursor.referenced
         if field is not None and field.kind == cindex.CursorKind.FIELD_DECL:
@@ -490,9 +659,16 @@ def get_sizeof_type(expression, cindex):
     for cursor in expression.walk_preorder():
         if cursor.kind != cindex.CursorKind.CXX_UNARY_EXPR:
             continue
-        tokens = [token.spelling for token in cursor.get_tokens()
-                  if token.kind != cindex.TokenKind.COMMENT]
-        if len(tokens) < 4 or tokens[:2] != ["sizeof", "("] or tokens[-1] != ")":
+        tokens = [
+            token.spelling
+            for token in cursor.get_tokens()
+            if token.kind != cindex.TokenKind.COMMENT
+        ]
+        if (
+            len(tokens) < 4
+            or tokens[:2] != ["sizeof", "("]
+            or tokens[-1] != ")"
+        ):
             continue
         # sizeof(expression) has an expression child; sizeof(TYPE) does not.
         if any(child.kind.is_expression() for child in cursor.get_children()):

@@ -68,6 +68,8 @@ struct { CoreClass core; } testClassRec = {
     {0, "Test", resources}
 };
 WidgetClass testWidgetClass = &testClassRec.core;
+WidgetClass xmColorObjClass = &testClassRec.core;
+WidgetClass xmColorObjExtraClass = &testClassRec.core;
 Alias TestGet(Widget widget);
 void TestSet(Widget widget, const Mode mode, Number number, Mode *pointer);
 enum Mode TestMode(Widget widget);
@@ -138,6 +140,8 @@ enum Unused OtherFunction(void);
             )
         })
         self.assertEqual(artifact["types"], expected_types)
+        self.assertNotIn("xmColorObjClass", artifact["widgets"])
+        self.assertIn("xmColorObjExtraClass", artifact["widgets"])
         self.assertEqual(
             artifact["widgets"]["testWidgetClass"]["resources"]["mode"]["ctype"],
             "Alias",

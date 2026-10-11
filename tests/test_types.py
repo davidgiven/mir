@@ -15,9 +15,11 @@ class ApiTypesTest(unittest.TestCase):
     def test_referenced_enums(self):
         source = r'''
 typedef struct WidgetRec *Widget;
-enum Mode { MODE_A, MODE_B };
+enum Mode { MODE_A = -3, MODE_B, MODE_C = 1 << 5, MODE_D = MODE_C, MODE_E };
 typedef enum Mode Mode;
 typedef Mode Alias;
+typedef enum { ANON_A = 7, ANON_B } Anonymous;
+enum External;
 enum Unused { UNUSED };
 typedef int Number;
 typedef struct { Alias mode; } WidgetRec;
@@ -43,20 +45,37 @@ WidgetClass testWidgetClass = &testClassRec.core;
 Alias TestGet(Widget widget);
 void TestSet(Widget widget, const Mode mode, Number number, Mode *pointer);
 enum Mode TestMode(Widget widget);
+Anonymous TestAnonymous(Widget widget);
+enum External TestExternal(Widget widget);
 enum Unused OtherFunction(void);
 '''
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
             (path / "test.c").write_text(source)
+            (path / "external.c").write_text("enum External { EXTERNAL_A = 42 };\n")
             subprocess.run(
                 [sys.executable, str(ROOT / "src/mkmir.py"), str(path),
                  "-o", str(path / "mir.json")],
                 check=True, capture_output=True, text=True,
             )
             artifact = json.loads((path / "mir.json").read_text())
-        self.assertEqual(artifact["types"], {
-            "Alias": {}, "const Mode": {}, "enum Mode": {},
-        })
+        expected_enum = {
+            "type": "enum",
+            "fields": {
+                "MODE_A": -3, "MODE_B": -2, "MODE_C": 32,
+                "MODE_D": 32, "MODE_E": 33,
+            },
+        }
+        expected_types = {
+            name: expected_enum for name in ("Alias", "const Mode", "enum Mode")
+        }
+        expected_types["Anonymous"] = {
+            "type": "enum", "fields": {"ANON_A": 7, "ANON_B": 8},
+        }
+        expected_types["enum External"] = {
+            "type": "enum", "fields": {"EXTERNAL_A": 42},
+        }
+        self.assertEqual(artifact["types"], expected_types)
         self.assertEqual(
             artifact["widgets"]["testWidgetClass"]["resources"]["mode"]["ctype"],
             "Alias",

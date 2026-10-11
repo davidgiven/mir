@@ -165,7 +165,7 @@ def get_header_path(sourcefile, prefix):
 
 
 def get_api_types(widgets, translation_units, cindex):
-    """Add placeholders for enum types actually referenced by the API."""
+    """Describe enum types actually referenced by the API."""
     def type_key(spelling):
         # sizeof tokens have different spacing from libclang type spellings.
         return "".join(token for token in spelling.split()
@@ -181,7 +181,8 @@ def get_api_types(widgets, translation_units, cindex):
             referenced.update(parameter["type"]
                               for parameter in method["parameters"].values())
 
-    enum_types = set()
+    enum_types = {}
+    enum_fields = {}
     for unit in translation_units:
         pending = list(unit.cursor.get_children())
         while pending:
@@ -193,9 +194,21 @@ def get_api_types(widgets, translation_units, cindex):
                                    cindex.CursorKind.TYPEDEF_DECL):
                 continue
             if cursor.type.get_canonical().kind == cindex.TypeKind.ENUM:
-                enum_types.add(type_key(cursor.type.spelling))
+                declaration = cursor.type.get_canonical().get_declaration()
+                declaration = declaration.get_definition() or declaration
+                usr = declaration.get_usr()
+                enum_types[type_key(cursor.type.spelling)] = usr
+                if declaration.is_definition():
+                    enum_fields[usr] = {
+                        field.spelling: field.enum_value
+                        for field in declaration.get_children()
+                        if field.kind == cindex.CursorKind.ENUM_CONSTANT_DECL
+                    }
 
-    return {spelling: {} for spelling in sorted(referenced)
+    return {spelling: {
+                "type": "enum",
+                "fields": enum_fields.get(enum_types[type_key(spelling)], {}),
+            } for spelling in sorted(referenced)
             if type_key(spelling) in enum_types}
 
 

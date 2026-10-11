@@ -10,11 +10,20 @@
             "type": "string"
         },
         "types": {
-            "description": "Enum types referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. Entries are empty placeholders pending enum metadata extraction.",
+            "description": "Enum types referenced by resource ctypes or method parameter and return types, keyed by their C type spelling.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
-                "maxProperties": 0
+                "properties": {
+                    "type": {"const": "enum"},
+                    "fields": {
+                        "description": "Enum constant names mapped to their evaluated integer values.",
+                        "type": "object",
+                        "additionalProperties": {"type": "integer"}
+                    }
+                },
+                "required": ["type", "fields"],
+                "additionalProperties": false
             }
         },
         "widgets": {

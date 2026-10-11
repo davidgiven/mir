@@ -1,20 +1,128 @@
 {
   "prefix": "Xm",
   "types": {
-    "XmColorMode": {},
-    "XmFillOption": {},
-    "XmHighlightMode": {},
-    "XmIconPlacement": {},
-    "XmNotebookPageStatus": {},
-    "XmPixmapPlacement": {},
-    "XmTabEdge": {},
-    "XmTabMode": {},
-    "XmTabOrientation": {},
-    "XmTabSide": {},
-    "XmTabStyle": {},
-    "XmTextDirection": {},
-    "XmTreeCompressStyle": {},
-    "XmTreeConnectStyle": {}
+    "XmColorMode": {
+      "fields": {
+        "XmListMode": 0,
+        "XmScaleMode": 1
+      },
+      "type": "enum"
+    },
+    "XmFillOption": {
+      "fields": {
+        "XmFillAll": 3,
+        "XmFillMajor": 1,
+        "XmFillMinor": 2,
+        "XmFillNone": 0
+      },
+      "type": "enum"
+    },
+    "XmHighlightMode": {
+      "fields": {
+        "XmHIGHLIGHT_NORMAL": 0,
+        "XmHIGHLIGHT_SECONDARY_SELECTED": 2,
+        "XmHIGHLIGHT_SELECTED": 1,
+        "XmSEE_DETAIL": 3
+      },
+      "type": "enum"
+    },
+    "XmIconPlacement": {
+      "fields": {
+        "XmIconBottom": 3,
+        "XmIconLeft": 1,
+        "XmIconNone": 5,
+        "XmIconOnly": 4,
+        "XmIconRight": 2,
+        "XmIconTop": 0
+      },
+      "type": "enum"
+    },
+    "XmNotebookPageStatus": {
+      "fields": {
+        "XmPAGE_DUPLICATED": 3,
+        "XmPAGE_EMPTY": 2,
+        "XmPAGE_FOUND": 0,
+        "XmPAGE_INVALID": 1
+      },
+      "type": "enum"
+    },
+    "XmPixmapPlacement": {
+      "fields": {
+        "XmPIXMAP_BOTTOM": 1,
+        "XmPIXMAP_LEFT": 3,
+        "XmPIXMAP_NONE": 4,
+        "XmPIXMAP_ONLY": 5,
+        "XmPIXMAP_RIGHT": 2,
+        "XmPIXMAP_TOP": 0
+      },
+      "type": "enum"
+    },
+    "XmTabEdge": {
+      "fields": {
+        "XmTAB_EDGE_BOTTOM_RIGHT": 1,
+        "XmTAB_EDGE_TOP_LEFT": 0
+      },
+      "type": "enum"
+    },
+    "XmTabMode": {
+      "fields": {
+        "XmTABS_BASIC": 0,
+        "XmTABS_OVERLAYED": 4,
+        "XmTABS_SCROLLED": 3,
+        "XmTABS_STACKED": 1,
+        "XmTABS_STACKED_STATIC": 2
+      },
+      "type": "enum"
+    },
+    "XmTabOrientation": {
+      "fields": {
+        "XmTABS_BOTTOM_TO_TOP": 4,
+        "XmTABS_LEFT_TO_RIGHT": 2,
+        "XmTABS_RIGHT_TO_LEFT": 1,
+        "XmTABS_TOP_TO_BOTTOM": 3,
+        "XmTAB_ORIENTATION_DYNAMIC": 0
+      },
+      "type": "enum"
+    },
+    "XmTabSide": {
+      "fields": {
+        "XmTABS_ON_BOTTOM": 1,
+        "XmTABS_ON_LEFT": 3,
+        "XmTABS_ON_RIGHT": 2,
+        "XmTABS_ON_TOP": 0
+      },
+      "type": "enum"
+    },
+    "XmTabStyle": {
+      "fields": {
+        "XmTABS_BEVELED": 2,
+        "XmTABS_ROUNDED": 1,
+        "XmTABS_SQUARED": 0
+      },
+      "type": "enum"
+    },
+    "XmTextDirection": {
+      "fields": {
+        "XmTEXT_BACKWARD": 1,
+        "XmTEXT_FORWARD": 0
+      },
+      "type": "enum"
+    },
+    "XmTreeCompressStyle": {
+      "fields": {
+        "XmTreeCompressAll": 2,
+        "XmTreeCompressLeaves": 1,
+        "XmTreeCompressNone": 0
+      },
+      "type": "enum"
+    },
+    "XmTreeConnectStyle": {
+      "fields": {
+        "XmTreeDirect": 1,
+        "XmTreeLadder": 0
+      },
+      "type": "enum"
+    }
   },
   "widgets": {
     "vendorShellWidgetClass": {

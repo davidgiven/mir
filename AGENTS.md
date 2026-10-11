@@ -96,11 +96,12 @@ are preferred over prototypes for parameter names. Unnamed parameters use
 `name`; methods with no remaining parameters have an empty dictionary.
 Each method's `return_type` contains its signature's C return type, preserving
 typedef names.
-The top-level `types` dictionary contains an empty placeholder keyed by the C
+The top-level `types` dictionary contains an enum description keyed by the C
 type spelling for each enum referenced by a resource's `ctype`, a method
 parameter's `type`, or a method's `return_type`. Typedef aliases to enums are
 resolved across all loaded translation units; unreferenced enums and non-enum
-types are excluded.
+types are excluded. Each entry has `type` set to `"enum"` and a `fields`
+dictionary mapping enum constant names to their evaluated integer values.
 Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can

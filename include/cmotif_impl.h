@@ -4,6 +4,7 @@
 
 template <typename Derived> class CVendorShellImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setBaseHeight(int value) {
         XtVaSetValues(this->_widget, "baseHeight", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -100,12 +101,16 @@ public:
 class CVendorShell : public CVendorShellImpl<CVendorShell> {
 public:
     using CVendorShellImpl<CVendorShell>::CVendorShellImpl;
+    static CVendorShell create(Widget parent, const char* name) {
+        return CVendorShell(XtCreateWidget(name, vendorShellWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmGadgetImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setBorderWidth(Dimension value) {
         XtVaSetValues(this->_widget, "borderWidth", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -166,12 +171,16 @@ public:
 class CXmGadget : public CXmGadgetImpl<CXmGadget> {
 public:
     using CXmGadgetImpl<CXmGadget>::CXmGadgetImpl;
+    static CXmGadget create(Widget parent, const char* name) {
+        return CXmGadget(XtCreateWidget(name, xmGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmPrimitiveImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setBackground(Pixel value) {
         XtVaSetValues(this->_widget, "background", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -276,12 +285,16 @@ public:
 class CXmPrimitive : public CXmPrimitiveImpl<CXmPrimitive> {
 public:
     using CXmPrimitiveImpl<CXmPrimitive>::CXmPrimitiveImpl;
+    static CXmPrimitive create(Widget parent, const char* name) {
+        return CXmPrimitive(XtCreateWidget(name, xmPrimitiveWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmManagerImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setBackground(Pixel value) {
         XtVaSetValues(this->_widget, "background", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -382,12 +395,16 @@ public:
 class CXmManager : public CXmManagerImpl<CXmManager> {
 public:
     using CXmManagerImpl<CXmManager>::CXmManagerImpl;
+    static CXmManager create(Widget parent, const char* name) {
+        return CXmManager(XtCreateWidget(name, xmManagerWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmColorObjImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setActiveColorSetId(int value) {
         XtVaSetValues(this->_widget, "activeColorSetId", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -436,12 +453,16 @@ public:
 class CXmColorObj : public CXmColorObjImpl<CXmColorObj> {
 public:
     using CXmColorObjImpl<CXmColorObj>::CXmColorObjImpl;
+    static CXmColorObj create(Widget parent, const char* name) {
+        return CXmColorObj(XtCreateWidget(name, xmColorObjClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CdynamicImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setExtensionType(unsigned char value) {
         XtVaSetValues(this->_widget, "extensionType", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -454,12 +475,16 @@ public:
 class Cdynamic : public CdynamicImpl<Cdynamic> {
 public:
     using CdynamicImpl<Cdynamic>::CdynamicImpl;
+    static Cdynamic create(Widget parent, const char* name) {
+        return Cdynamic(XtCreateWidget(name, xmExtObjectClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDialogShellImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setDeleteResponse(unsigned char value) {
         XtVaSetValues(this->_widget, "deleteResponse", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -468,12 +493,16 @@ public:
 class CXmDialogShell : public CXmDialogShellImpl<CXmDialogShell> {
 public:
     using CXmDialogShellImpl<CXmDialogShell>::CXmDialogShellImpl;
+    static CXmDialogShell create(Widget parent, const char* name) {
+        return CXmDialogShell(XtCreateWidget(name, xmDialogShellExtObjectClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDisplayImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setDefaultButtonEmphasis(Boolean value) {
         XtVaSetValues(this->_widget, "defaultButtonEmphasis", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -570,12 +599,16 @@ public:
 class CXmDisplay : public CXmDisplayImpl<CXmDisplay> {
 public:
     using CXmDisplayImpl<CXmDisplay>::CXmDisplayImpl;
+    static CXmDisplay create(Widget parent, const char* name) {
+        return CXmDisplay(XtCreateWidget(name, xmDisplayClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDragContextImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setBlendModel(unsigned char value) {
         XtVaSetValues(this->_widget, "blendModel", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -700,12 +733,16 @@ public:
 class CXmDragContext : public CXmDragContextImpl<CXmDragContext> {
 public:
     using CXmDragContextImpl<CXmDragContext>::CXmDragContextImpl;
+    static CXmDragContext create(Widget parent, const char* name) {
+        return CXmDragContext(XtCreateWidget(name, xmDragContextClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDropSiteManagerImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setClientData(XtPointer value) {
         XtVaSetValues(this->_widget, "clientData", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -722,12 +759,16 @@ public:
 class CXmDropSiteManager : public CXmDropSiteManagerImpl<CXmDropSiteManager> {
 public:
     using CXmDropSiteManagerImpl<CXmDropSiteManager>::CXmDropSiteManagerImpl;
+    static CXmDropSiteManager create(Widget parent, const char* name) {
+        return CXmDropSiteManager(XtCreateWidget(name, xmDropSiteManagerObjectClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDropTransferImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setDropTransfers(XmDropTransferEntry value) {
         XtVaSetValues(this->_widget, "dropTransfers", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -752,12 +793,16 @@ public:
 class CXmDropTransfer : public CXmDropTransferImpl<CXmDropTransfer> {
 public:
     using CXmDropTransferImpl<CXmDropTransfer>::CXmDropTransferImpl;
+    static CXmDropTransfer create(Widget parent, const char* name) {
+        return CXmDropTransfer(XtCreateWidget(name, xmDropTransferObjectClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmMenuShellImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setAnimate(Boolean value) {
         XtVaSetValues(this->_widget, "animate", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -794,12 +839,16 @@ public:
 class CXmMenuShell : public CXmMenuShellImpl<CXmMenuShell> {
 public:
     using CXmMenuShellImpl<CXmMenuShell>::CXmMenuShellImpl;
+    static CXmMenuShell create(Widget parent, const char* name) {
+        return CXmMenuShell(XtCreateWidget(name, xmMenuShellWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmScreenImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setBitmapConversionModel(XtEnum value) {
         XtVaSetValues(this->_widget, "bitmapConversionModel", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -888,12 +937,16 @@ public:
 class CXmScreen : public CXmScreenImpl<CXmScreen> {
 public:
     using CXmScreenImpl<CXmScreen>::CXmScreenImpl;
+    static CXmScreen create(Widget parent, const char* name) {
+        return CXmScreen(XtCreateWidget(name, xmScreenClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmSlideContextImpl : public CWidgetImpl<Derived> {
 public:
+    using CWidgetImpl<Derived>::CWidgetImpl;
     Derived& setSlideDestHeight(Dimension value) {
         XtVaSetValues(this->_widget, "slideDestHeight", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -930,12 +983,16 @@ public:
 class CXmSlideContext : public CXmSlideContextImpl<CXmSlideContext> {
 public:
     using CXmSlideContextImpl<CXmSlideContext>::CXmSlideContextImpl;
+    static CXmSlideContext create(Widget parent, const char* name) {
+        return CXmSlideContext(XtCreateWidget(name, xmSlideContextWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDragOverShellImpl : public CVendorShellImpl<Derived> {
 public:
+    using CVendorShellImpl<Derived>::CVendorShellImpl;
     Derived& setDragOverActiveMode(unsigned char value) {
         XtVaSetValues(this->_widget, "dragOverActiveMode", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -968,12 +1025,16 @@ public:
 class CXmDragOverShell : public CXmDragOverShellImpl<CXmDragOverShell> {
 public:
     using CXmDragOverShellImpl<CXmDragOverShell>::CXmDragOverShellImpl;
+    static CXmDragOverShell create(Widget parent, const char* name) {
+        return CXmDragOverShell(XtCreateWidget(name, xmDragOverShellWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmGrabShellImpl : public CVendorShellImpl<Derived> {
 public:
+    using CVendorShellImpl<Derived>::CVendorShellImpl;
     Derived& setAllowShellResize(Boolean value) {
         XtVaSetValues(this->_widget, "allowShellResize", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1030,12 +1091,16 @@ public:
 class CXmGrabShell : public CXmGrabShellImpl<CXmGrabShell> {
 public:
     using CXmGrabShellImpl<CXmGrabShell>::CXmGrabShellImpl;
+    static CXmGrabShell create(Widget parent, const char* name) {
+        return CXmGrabShell(XtCreateWidget(name, xmGrabShellWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmArrowButtonGadgetImpl : public CXmGadgetImpl<Derived> {
 public:
+    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1096,12 +1161,16 @@ public:
 class CXmArrowButtonGadget : public CXmArrowButtonGadgetImpl<CXmArrowButtonGadget> {
 public:
     using CXmArrowButtonGadgetImpl<CXmArrowButtonGadget>::CXmArrowButtonGadgetImpl;
+    static CXmArrowButtonGadget create(Widget parent, const char* name) {
+        return CXmArrowButtonGadget(XtCreateWidget(name, xmArrowButtonGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmIconGadgetImpl : public CXmGadgetImpl<Derived> {
 public:
+    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
     Derived& set_cache(XmIconGCacheObjPart * value) {
         XtVaSetValues(this->_widget, ".cache", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1150,12 +1219,16 @@ public:
 class CXmIconGadget : public CXmIconGadgetImpl<CXmIconGadget> {
 public:
     using CXmIconGadgetImpl<CXmIconGadget>::CXmIconGadgetImpl;
+    static CXmIconGadget create(Widget parent, const char* name) {
+        return CXmIconGadget(XtCreateWidget(name, xmIconGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmLabelGadgetImpl : public CXmGadgetImpl<Derived> {
 public:
+    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
     Derived& set_cache(XmLabelGCacheObjPart * value) {
         XtVaSetValues(this->_widget, ".cache", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1224,12 +1297,16 @@ public:
 class CXmLabelGadget : public CXmLabelGadgetImpl<CXmLabelGadget> {
 public:
     using CXmLabelGadgetImpl<CXmLabelGadget>::CXmLabelGadgetImpl;
+    static CXmLabelGadget create(Widget parent, const char* name) {
+        return CXmLabelGadget(XtCreateWidget(name, xmLabelGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmSeparatorGadgetImpl : public CXmGadgetImpl<Derived> {
 public:
+    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
     Derived& setHighlightThickness(Dimension value) {
         XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1246,12 +1323,16 @@ public:
 class CXmSeparatorGadget : public CXmSeparatorGadgetImpl<CXmSeparatorGadget> {
 public:
     using CXmSeparatorGadgetImpl<CXmSeparatorGadget>::CXmSeparatorGadgetImpl;
+    static CXmSeparatorGadget create(Widget parent, const char* name) {
+        return CXmSeparatorGadget(XtCreateWidget(name, xmSeparatorGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmArrowButtonImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1280,12 +1361,16 @@ public:
 class CXmArrowButton : public CXmArrowButtonImpl<CXmArrowButton> {
 public:
     using CXmArrowButtonImpl<CXmArrowButton>::CXmArrowButtonImpl;
+    static CXmArrowButton create(Widget parent, const char* name) {
+        return CXmArrowButton(XtCreateWidget(name, xmArrowButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmI18ListImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setAlignment(unsigned char value) {
         XtVaSetValues(this->_widget, "alignment", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1382,12 +1467,16 @@ public:
 class CXmI18List : public CXmI18ListImpl<CXmI18List> {
 public:
     using CXmI18ListImpl<CXmI18List>::CXmI18ListImpl;
+    static CXmI18List create(Widget parent, const char* name) {
+        return CXmI18List(XtCreateWidget(name, xmI18ListWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmIconButtonImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1472,12 +1561,16 @@ public:
 class CXmIconButton : public CXmIconButtonImpl<CXmIconButton> {
 public:
     using CXmIconButtonImpl<CXmIconButton>::CXmIconButtonImpl;
+    static CXmIconButton create(Widget parent, const char* name) {
+        return CXmIconButton(XtCreateWidget(name, xmIconButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmLabelImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setAccelerator(char * value) {
         XtVaSetValues(this->_widget, "accelerator", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1586,12 +1679,16 @@ public:
 class CXmLabel : public CXmLabelImpl<CXmLabel> {
 public:
     using CXmLabelImpl<CXmLabel>::CXmLabelImpl;
+    static CXmLabel create(Widget parent, const char* name) {
+        return CXmLabel(XtCreateWidget(name, xmLabelWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmListImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setAutomaticSelection(XtEnum value) {
         XtVaSetValues(this->_widget, "automaticSelection", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1732,12 +1829,16 @@ public:
 class CXmList : public CXmListImpl<CXmList> {
 public:
     using CXmListImpl<CXmList>::CXmListImpl;
+    static CXmList create(Widget parent, const char* name) {
+        return CXmList(XtCreateWidget(name, xmListWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmScrollBarImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setBackground(Pixel value) {
         XtVaSetValues(this->_widget, "background", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1858,12 +1959,16 @@ public:
 class CXmScrollBar : public CXmScrollBarImpl<CXmScrollBar> {
 public:
     using CXmScrollBarImpl<CXmScrollBar>::CXmScrollBarImpl;
+    static CXmScrollBar create(Widget parent, const char* name) {
+        return CXmScrollBar(XtCreateWidget(name, xmScrollBarWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmSeparatorImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setHighlightThickness(Dimension value) {
         XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -1892,23 +1997,31 @@ public:
 class CXmSeparator : public CXmSeparatorImpl<CXmSeparator> {
 public:
     using CXmSeparatorImpl<CXmSeparator>::CXmSeparatorImpl;
+    static CXmSeparator create(Widget parent, const char* name) {
+        return CXmSeparator(XtCreateWidget(name, xmSeparatorWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXiTabCanvasImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
 
 };
 class CXiTabCanvas : public CXiTabCanvasImpl<CXiTabCanvas> {
 public:
     using CXiTabCanvasImpl<CXiTabCanvas>::CXiTabCanvasImpl;
+    static CXiTabCanvas create(Widget parent, const char* name) {
+        return CXiTabCanvas(XtCreateWidget(name, xmTabCanvasWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmTextImpl : public CXmPrimitiveImpl<Derived> {
 public:
+    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2017,12 +2130,16 @@ public:
 class CXmText : public CXmTextImpl<CXmText> {
 public:
     using CXmTextImpl<CXmText>::CXmTextImpl;
+    static CXmText create(Widget parent, const char* name) {
+        return CXmText(XtCreateWidget(name, xmTextWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmBulletinBoardImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setAllowOverlap(Boolean value) {
         XtVaSetValues(this->_widget, "allowOverlap", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2123,12 +2240,16 @@ public:
 class CXmBulletinBoard : public CXmBulletinBoardImpl<CXmBulletinBoard> {
 public:
     using CXmBulletinBoardImpl<CXmBulletinBoard>::CXmBulletinBoardImpl;
+    static CXmBulletinBoard create(Widget parent, const char* name) {
+        return CXmBulletinBoard(XtCreateWidget(name, xmBulletinBoardWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmButtonBoxImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setDefaultButton(Widget value) {
         XtVaSetValues(this->_widget, "defaultButton", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2157,12 +2278,16 @@ public:
 class CXmButtonBox : public CXmButtonBoxImpl<CXmButtonBox> {
 public:
     using CXmButtonBoxImpl<CXmButtonBox>::CXmButtonBoxImpl;
+    static CXmButtonBox create(Widget parent, const char* name) {
+        return CXmButtonBox(XtCreateWidget(name, xmButtonBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmColorSelectorImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setBlueSliderLabel(XmString value[3]) {
         XtVaSetValues(this->_widget, "blueSliderLabel", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2207,12 +2332,16 @@ public:
 class CXmColorSelector : public CXmColorSelectorImpl<CXmColorSelector> {
 public:
     using CXmColorSelectorImpl<CXmColorSelector>::CXmColorSelectorImpl;
+    static CXmColorSelector create(Widget parent, const char* name) {
+        return CXmColorSelector(XtCreateWidget(name, xmColorSelectorWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmComboBoxImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setArrowSize(Dimension value) {
         XtVaSetValues(this->_widget, "arrowSize", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2305,12 +2434,16 @@ public:
 class CXmComboBox : public CXmComboBoxImpl<CXmComboBox> {
 public:
     using CXmComboBoxImpl<CXmComboBox>::CXmComboBoxImpl;
+    static CXmComboBox create(Widget parent, const char* name) {
+        return CXmComboBox(XtCreateWidget(name, xmComboBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmContainerImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setAutomaticSelection(unsigned char value) {
         XtVaSetValues(this->_widget, "automaticSelection", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2467,12 +2600,16 @@ public:
 class CXmContainer : public CXmContainerImpl<CXmContainer> {
 public:
     using CXmContainerImpl<CXmContainer>::CXmContainerImpl;
+    static CXmContainer create(Widget parent, const char* name) {
+        return CXmContainer(XtCreateWidget(name, xmContainerWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDrawingAreaImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setConvertCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "convertCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2509,12 +2646,16 @@ public:
 class CXmDrawingArea : public CXmDrawingAreaImpl<CXmDrawingArea> {
 public:
     using CXmDrawingAreaImpl<CXmDrawingArea>::CXmDrawingAreaImpl;
+    static CXmDrawingArea create(Widget parent, const char* name) {
+        return CXmDrawingArea(XtCreateWidget(name, xmDrawingAreaWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDropDownImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setActivateOnFill(int value) {
         XtVaSetValues(this->_widget, "activateOnFill", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2599,12 +2740,16 @@ public:
 class CXmDropDown : public CXmDropDownImpl<CXmDropDown> {
 public:
     using CXmDropDownImpl<CXmDropDown>::CXmDropDownImpl;
+    static CXmDropDown create(Widget parent, const char* name) {
+        return CXmDropDown(XtCreateWidget(name, xmDropDownWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmFrameImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setMarginHeight(Dimension value) {
         XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2625,12 +2770,16 @@ public:
 class CXmFrame : public CXmFrameImpl<CXmFrame> {
 public:
     using CXmFrameImpl<CXmFrame>::CXmFrameImpl;
+    static CXmFrame create(Widget parent, const char* name) {
+        return CXmFrame(XtCreateWidget(name, xmFrameWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmHierarchyImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setAutoClose(Boolean value) {
         XtVaSetValues(this->_widget, "autoClose", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2683,12 +2832,16 @@ public:
 class CXmHierarchy : public CXmHierarchyImpl<CXmHierarchy> {
 public:
     using CXmHierarchyImpl<CXmHierarchy>::CXmHierarchyImpl;
+    static CXmHierarchy create(Widget parent, const char* name) {
+        return CXmHierarchy(XtCreateWidget(name, xmHierarchyWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmIconBoxImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setHorizontalMargin(Dimension value) {
         XtVaSetValues(this->_widget, "horizontalMargin", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2717,12 +2870,16 @@ public:
 class CXmIconBox : public CXmIconBoxImpl<CXmIconBox> {
 public:
     using CXmIconBoxImpl<CXmIconBox>::CXmIconBoxImpl;
+    static CXmIconBox create(Widget parent, const char* name) {
+        return CXmIconBox(XtCreateWidget(name, xmIconBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmMultiListImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setDoubleClickCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "doubleClickCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2779,12 +2936,16 @@ public:
 class CXmMultiList : public CXmMultiListImpl<CXmMultiList> {
 public:
     using CXmMultiListImpl<CXmMultiList>::CXmMultiListImpl;
+    static CXmMultiList create(Widget parent, const char* name) {
+        return CXmMultiList(XtCreateWidget(name, xmMultiListWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmNotebookImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setBackPageBackground(Pixel value) {
         XtVaSetValues(this->_widget, "backPageBackground", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -2865,12 +3026,16 @@ public:
 class CXmNotebook : public CXmNotebookImpl<CXmNotebook> {
 public:
     using CXmNotebookImpl<CXmNotebook>::CXmNotebookImpl;
+    static CXmNotebook create(Widget parent, const char* name) {
+        return CXmNotebook(XtCreateWidget(name, xmNotebookWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmRowColumnImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setAdjustLast(Boolean value) {
         XtVaSetValues(this->_widget, "adjustLast", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3039,12 +3204,16 @@ public:
 class CXmRowColumn : public CXmRowColumnImpl<CXmRowColumn> {
 public:
     using CXmRowColumnImpl<CXmRowColumn>::CXmRowColumnImpl;
+    static CXmRowColumn create(Widget parent, const char* name) {
+        return CXmRowColumn(XtCreateWidget(name, xmRowColumnWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmScaleImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setConvertCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "convertCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3153,12 +3322,16 @@ public:
 class CXmScale : public CXmScaleImpl<CXmScale> {
 public:
     using CXmScaleImpl<CXmScale>::CXmScaleImpl;
+    static CXmScale create(Widget parent, const char* name) {
+        return CXmScale(XtCreateWidget(name, xmScaleWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmScrolledWindowImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setAutoDragModel(XtEnum value) {
         XtVaSetValues(this->_widget, "autoDragModel", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3219,12 +3392,16 @@ public:
 class CXmScrolledWindow : public CXmScrolledWindowImpl<CXmScrolledWindow> {
 public:
     using CXmScrolledWindowImpl<CXmScrolledWindow>::CXmScrolledWindowImpl;
+    static CXmScrolledWindow create(Widget parent, const char* name) {
+        return CXmScrolledWindow(XtCreateWidget(name, xmScrolledWindowWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmSpinBoxImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setArrowLayout(unsigned char value) {
         XtVaSetValues(this->_widget, "arrowLayout", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3277,12 +3454,16 @@ public:
 class CXmSpinBox : public CXmSpinBoxImpl<CXmSpinBox> {
 public:
     using CXmSpinBoxImpl<CXmSpinBox>::CXmSpinBoxImpl;
+    static CXmSpinBox create(Widget parent, const char* name) {
+        return CXmSpinBox(XtCreateWidget(name, xmSpinBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmTabBoxImpl : public CXmManagerImpl<Derived> {
 public:
+    using CXmManagerImpl<Derived>::CXmManagerImpl;
     Derived& setFontList(XmFontList value) {
         XtVaSetValues(this->_widget, "fontList", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3395,12 +3576,16 @@ public:
 class CXmTabBox : public CXmTabBoxImpl<CXmTabBox> {
 public:
     using CXmTabBoxImpl<CXmTabBox>::CXmTabBoxImpl;
+    static CXmTabBox create(Widget parent, const char* name) {
+        return CXmTabBox(XtCreateWidget(name, xmTabBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CDesktopImpl : public CdynamicImpl<Derived> {
 public:
+    using CdynamicImpl<Derived>::CdynamicImpl;
     Derived& setDesktopParent(Widget value) {
         XtVaSetValues(this->_widget, "desktopParent", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3413,12 +3598,16 @@ public:
 class CDesktop : public CDesktopImpl<CDesktop> {
 public:
     using CDesktopImpl<CDesktop>::CDesktopImpl;
+    static CDesktop create(Widget parent, const char* name) {
+        return CDesktop(XtCreateWidget(name, xmDesktopClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CprotocolImpl : public CdynamicImpl<Derived> {
 public:
+    using CdynamicImpl<Derived>::CdynamicImpl;
     Derived& setExtensionType(unsigned char value) {
         XtVaSetValues(this->_widget, "extensionType", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3431,12 +3620,16 @@ public:
 class Cprotocol : public CprotocolImpl<Cprotocol> {
 public:
     using CprotocolImpl<Cprotocol>::CprotocolImpl;
+    static Cprotocol create(Widget parent, const char* name) {
+        return Cprotocol(XtCreateWidget(name, xmProtocolObjectClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmIconHeaderImpl : public CXmIconGadgetImpl<Derived> {
 public:
+    using CXmIconGadgetImpl<Derived>::CXmIconGadgetImpl;
     Derived& setContainerID(Widget value) {
         XtVaSetValues(this->_widget, "containerID", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3445,12 +3638,16 @@ public:
 class CXmIconHeader : public CXmIconHeaderImpl<CXmIconHeader> {
 public:
     using CXmIconHeaderImpl<CXmIconHeader>::CXmIconHeaderImpl;
+    static CXmIconHeader create(Widget parent, const char* name) {
+        return CXmIconHeader(XtCreateWidget(name, xmIconHeaderClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmCascadeButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
 public:
+    using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3479,12 +3676,16 @@ public:
 class CXmCascadeButtonGadget : public CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget> {
 public:
     using CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget>::CXmCascadeButtonGadgetImpl;
+    static CXmCascadeButtonGadget create(Widget parent, const char* name) {
+        return CXmCascadeButtonGadget(XtCreateWidget(name, xmCascadeButtonGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmPushButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
 public:
+    using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3517,12 +3718,16 @@ public:
 class CXmPushButtonGadget : public CXmPushButtonGadgetImpl<CXmPushButtonGadget> {
 public:
     using CXmPushButtonGadgetImpl<CXmPushButtonGadget>::CXmPushButtonGadgetImpl;
+    static CXmPushButtonGadget create(Widget parent, const char* name) {
+        return CXmPushButtonGadget(XtCreateWidget(name, xmPushButtonGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmToggleButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
 public:
+    using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
     Derived& setArmCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "armCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3555,12 +3760,16 @@ public:
 class CXmToggleButtonGadget : public CXmToggleButtonGadgetImpl<CXmToggleButtonGadget> {
 public:
     using CXmToggleButtonGadgetImpl<CXmToggleButtonGadget>::CXmToggleButtonGadgetImpl;
+    static CXmToggleButtonGadget create(Widget parent, const char* name) {
+        return CXmToggleButtonGadget(XtCreateWidget(name, xmToggleButtonGadgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmCascadeButtonImpl : public CXmLabelImpl<Derived> {
 public:
+    using CXmLabelImpl<Derived>::CXmLabelImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3601,12 +3810,16 @@ public:
 class CXmCascadeButton : public CXmCascadeButtonImpl<CXmCascadeButton> {
 public:
     using CXmCascadeButtonImpl<CXmCascadeButton>::CXmCascadeButtonImpl;
+    static CXmCascadeButton create(Widget parent, const char* name) {
+        return CXmCascadeButton(XtCreateWidget(name, xmCascadeButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmDrawnButtonImpl : public CXmLabelImpl<Derived> {
 public:
+    using CXmLabelImpl<Derived>::CXmLabelImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3659,12 +3872,16 @@ public:
 class CXmDrawnButton : public CXmDrawnButtonImpl<CXmDrawnButton> {
 public:
     using CXmDrawnButtonImpl<CXmDrawnButton>::CXmDrawnButtonImpl;
+    static CXmDrawnButton create(Widget parent, const char* name) {
+        return CXmDrawnButton(XtCreateWidget(name, xmDrawnButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmPushButtonImpl : public CXmLabelImpl<Derived> {
 public:
+    using CXmLabelImpl<Derived>::CXmLabelImpl;
     Derived& setActivateCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3717,12 +3934,16 @@ public:
 class CXmPushButton : public CXmPushButtonImpl<CXmPushButton> {
 public:
     using CXmPushButtonImpl<CXmPushButton>::CXmPushButtonImpl;
+    static CXmPushButton create(Widget parent, const char* name) {
+        return CXmPushButton(XtCreateWidget(name, xmPushButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmToggleButtonImpl : public CXmLabelImpl<Derived> {
 public:
+    using CXmLabelImpl<Derived>::CXmLabelImpl;
     Derived& setArmCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "armCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3807,12 +4028,16 @@ public:
 class CXmToggleButton : public CXmToggleButtonImpl<CXmToggleButton> {
 public:
     using CXmToggleButtonImpl<CXmToggleButton>::CXmToggleButtonImpl;
+    static CXmToggleButton create(Widget parent, const char* name) {
+        return CXmToggleButton(XtCreateWidget(name, xmToggleButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmColumnImpl : public CXmBulletinBoardImpl<Derived> {
 public:
+    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     Derived& setDefaultEntryLabelAlignment(unsigned char value) {
         XtVaSetValues(this->_widget, "defaultEntryLabelAlignment", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3853,12 +4078,16 @@ public:
 class CXmColumn : public CXmColumnImpl<CXmColumn> {
 public:
     using CXmColumnImpl<CXmColumn>::CXmColumnImpl;
+    static CXmColumn create(Widget parent, const char* name) {
+        return CXmColumn(XtCreateWidget(name, xmColumnWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmFormImpl : public CXmBulletinBoardImpl<Derived> {
 public:
+    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     Derived& setFractionBase(int value) {
         XtVaSetValues(this->_widget, "fractionBase", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3887,12 +4116,16 @@ public:
 class CXmForm : public CXmFormImpl<CXmForm> {
 public:
     using CXmFormImpl<CXmForm>::CXmFormImpl;
+    static CXmForm create(Widget parent, const char* name) {
+        return CXmForm(XtCreateWidget(name, xmFormWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmMessageBoxImpl : public CXmBulletinBoardImpl<Derived> {
 public:
+    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     Derived& setCancelCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "cancelCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -3941,12 +4174,16 @@ public:
 class CXmMessageBox : public CXmMessageBoxImpl<CXmMessageBox> {
 public:
     using CXmMessageBoxImpl<CXmMessageBox>::CXmMessageBoxImpl;
+    static CXmMessageBox create(Widget parent, const char* name) {
+        return CXmMessageBox(XtCreateWidget(name, xmMessageBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmSelectionBoxImpl : public CXmBulletinBoardImpl<Derived> {
 public:
+    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     Derived& setApplyCallback(XtCallbackList value) {
         XtVaSetValues(this->_widget, "applyCallback", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4031,12 +4268,16 @@ public:
 class CXmSelectionBox : public CXmSelectionBoxImpl<CXmSelectionBox> {
 public:
     using CXmSelectionBoxImpl<CXmSelectionBox>::CXmSelectionBoxImpl;
+    static CXmSelectionBox create(Widget parent, const char* name) {
+        return CXmSelectionBox(XtCreateWidget(name, xmSelectionBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmTabStackImpl : public CXmBulletinBoardImpl<Derived> {
 public:
+    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     Derived& setAutoUnmanage(Boolean value) {
         XtVaSetValues(this->_widget, "autoUnmanage", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4133,23 +4374,31 @@ public:
 class CXmTabStack : public CXmTabStackImpl<CXmTabStack> {
 public:
     using CXmTabStackImpl<CXmTabStack>::CXmTabStackImpl;
+    static CXmTabStack create(Widget parent, const char* name) {
+        return CXmTabStack(XtCreateWidget(name, xmTabStackWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmClipWindowImpl : public CXmDrawingAreaImpl<Derived> {
 public:
+    using CXmDrawingAreaImpl<Derived>::CXmDrawingAreaImpl;
 
 };
 class CXmClipWindow : public CXmClipWindowImpl<CXmClipWindow> {
 public:
     using CXmClipWindowImpl<CXmClipWindow>::CXmClipWindowImpl;
+    static CXmClipWindow create(Widget parent, const char* name) {
+        return CXmClipWindow(XtCreateWidget(name, xmClipWindowWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmOutlineImpl : public CXmHierarchyImpl<Derived> {
 public:
+    using CXmHierarchyImpl<Derived>::CXmHierarchyImpl;
     Derived& setConnectNodes(Boolean value) {
         XtVaSetValues(this->_widget, "connectNodes", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4166,12 +4415,16 @@ public:
 class CXmOutline : public CXmOutlineImpl<CXmOutline> {
 public:
     using CXmOutlineImpl<CXmOutline>::CXmOutlineImpl;
+    static CXmOutline create(Widget parent, const char* name) {
+        return CXmOutline(XtCreateWidget(name, xmOutlineWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmTreeImpl : public CXmHierarchyImpl<Derived> {
 public:
+    using CXmHierarchyImpl<Derived>::CXmHierarchyImpl;
     Derived& setCompressStyle(XmTreeCompressStyle value) {
         XtVaSetValues(this->_widget, "compressStyle", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4204,12 +4457,16 @@ public:
 class CXmTree : public CXmTreeImpl<CXmTree> {
 public:
     using CXmTreeImpl<CXmTree>::CXmTreeImpl;
+    static CXmTree create(Widget parent, const char* name) {
+        return CXmTree(XtCreateWidget(name, xmTreeWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmMainWindowImpl : public CXmScrolledWindowImpl<Derived> {
 public:
+    using CXmScrolledWindowImpl<Derived>::CXmScrolledWindowImpl;
     Derived& setCommandWindow(Widget value) {
         XtVaSetValues(this->_widget, "commandWindow", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4242,12 +4499,16 @@ public:
 class CXmMainWindow : public CXmMainWindowImpl<CXmMainWindow> {
 public:
     using CXmMainWindowImpl<CXmMainWindow>::CXmMainWindowImpl;
+    static CXmMainWindow create(Widget parent, const char* name) {
+        return CXmMainWindow(XtCreateWidget(name, xmMainWindowWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmSimpleSpinBoxImpl : public CXmSpinBoxImpl<Derived> {
 public:
+    using CXmSpinBoxImpl<Derived>::CXmSpinBoxImpl;
     Derived& setArrowSensitivity(unsigned char value) {
         XtVaSetValues(this->_widget, "arrowSensitivity", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4312,12 +4573,16 @@ public:
 class CXmSimpleSpinBox : public CXmSimpleSpinBoxImpl<CXmSimpleSpinBox> {
 public:
     using CXmSimpleSpinBoxImpl<CXmSimpleSpinBox>::CXmSimpleSpinBoxImpl;
+    static CXmSimpleSpinBox create(Widget parent, const char* name) {
+        return CXmSimpleSpinBox(XtCreateWidget(name, xmSimpleSpinBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CShellImpl : public CDesktopImpl<Derived> {
 public:
+    using CDesktopImpl<Derived>::CDesktopImpl;
     Derived& setUseAsyncGeometry(Boolean value) {
         XtVaSetValues(this->_widget, "useAsyncGeometry", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4326,23 +4591,31 @@ public:
 class CShell : public CShellImpl<CShell> {
 public:
     using CShellImpl<CShell>::CShellImpl;
+    static CShell create(Widget parent, const char* name) {
+        return CShell(XtCreateWidget(name, xmShellExtObjectClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CWorldImpl : public CDesktopImpl<Derived> {
 public:
+    using CDesktopImpl<Derived>::CDesktopImpl;
 
 };
 class CWorld : public CWorldImpl<CWorld> {
 public:
     using CWorldImpl<CWorld>::CWorldImpl;
+    static CWorld create(Widget parent, const char* name) {
+        return CWorld(XtCreateWidget(name, xmWorldClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmTearOffButtonImpl : public CXmPushButtonImpl<Derived> {
 public:
+    using CXmPushButtonImpl<Derived>::CXmPushButtonImpl;
     Derived& setHeight(Dimension value) {
         XtVaSetValues(this->_widget, "height", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4363,12 +4636,16 @@ public:
 class CXmTearOffButton : public CXmTearOffButtonImpl<CXmTearOffButton> {
 public:
     using CXmTearOffButtonImpl<CXmTearOffButton>::CXmTearOffButtonImpl;
+    static CXmTearOffButton create(Widget parent, const char* name) {
+        return CXmTearOffButton(XtCreateWidget(name, xmTearOffButtonWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmCommandImpl : public CXmSelectionBoxImpl<Derived> {
 public:
+    using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
     Derived& setAutoUnmanage(Boolean value) {
         XtVaSetValues(this->_widget, "autoUnmanage", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4421,12 +4698,16 @@ public:
 class CXmCommand : public CXmCommandImpl<CXmCommand> {
 public:
     using CXmCommandImpl<CXmCommand>::CXmCommandImpl;
+    static CXmCommand create(Widget parent, const char* name) {
+        return CXmCommand(XtCreateWidget(name, xmCommandWidgetClass, parent, nullptr, 0));
+    }
 };
 
 
 
 template <typename Derived> class CXmFileSelectionBoxImpl : public CXmSelectionBoxImpl<Derived> {
 public:
+    using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
     Derived& setApplyLabelString(XmString value) {
         XtVaSetValues(this->_widget, "applyLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
@@ -4527,5 +4808,8 @@ public:
 class CXmFileSelectionBox : public CXmFileSelectionBoxImpl<CXmFileSelectionBox> {
 public:
     using CXmFileSelectionBoxImpl<CXmFileSelectionBox>::CXmFileSelectionBoxImpl;
+    static CXmFileSelectionBox create(Widget parent, const char* name) {
+        return CXmFileSelectionBox(XtCreateWidget(name, xmFileSelectionBoxWidgetClass, parent, nullptr, 0));
+    }
 };
 

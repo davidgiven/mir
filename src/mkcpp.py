@@ -30,12 +30,14 @@ def parse_args(argv=None):
 def generate_header(artifact):
     """Generate widget classes with each superclass before its subclasses."""
     widgets = artifact["widgets"]
+    symbols = {}
     headers = {}
     parents = {}
     resources = {}
     for symbol in sorted(widgets):
         widget = widgets[symbol]
         name = widget["name"]
+        symbols.setdefault(name, symbol)
         headers.setdefault(name, widget["header"])
         superclass = widgets.get(widget.get("superclass"))
         parent = superclass["name"] if superclass is not None else None
@@ -72,16 +74,21 @@ def generate_header(artifact):
         return static_cast<Derived&>(*this);
     }}"""
             )
+
         setters = "\n".join(accessors)
         blocks.append(
             f"""
 template <typename Derived> class C{name}Impl : public {superclass}Impl<Derived> {{
 public:
+    using {superclass}Impl<Derived>::{superclass}Impl;
 {setters}
 }};
 class C{name} : public C{name}Impl<C{name}> {{
 public:
     using C{name}Impl<C{name}>::C{name}Impl;
+    static C{name} create(Widget parent, const char* name) {{
+        return C{name}(XtCreateWidget(name, {symbols[name]}, parent, nullptr, 0));
+    }}
 }};
 """
         )

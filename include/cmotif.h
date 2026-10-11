@@ -66,6 +66,18 @@
 #include "Xm/ToggleB.h"
 #include "Xm/Tree.h"
 
+extern WidgetClass xmWorldClass;
+extern WidgetClass xmTearOffButtonWidgetClass;
+extern WidgetClass xmShellExtObjectClass;
+extern WidgetClass xmClipWindowWidgetClass;
+extern WidgetClass xmProtocolObjectClass;
+extern WidgetClass xmDesktopClass;
+extern WidgetClass xmTabCanvasWidgetClass;
+extern WidgetClass xmI18ListWidgetClass;
+extern WidgetClass xmDialogShellExtObjectClass;
+extern WidgetClass xmExtObjectClass;
+extern WidgetClass xmColorObjClass;
+
 struct XmIconGCacheObjPart;
 struct XmLabelGCacheObjPart;
 
@@ -87,6 +99,18 @@ public:
     operator Widget() const
     {
         return _widget;
+    }
+
+    Derived& manageChild()
+    {
+        XtManageChild(_widget);
+        return static_cast<Derived&>(*this);
+    }
+
+    Derived& realize()
+    {
+        XtRealizeWidget(_widget);
+        return static_cast<Derived&>(*this);
     }
 
 protected:

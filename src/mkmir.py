@@ -22,7 +22,7 @@ def parse_args(argv=None):
         help="output artifact path (default: mir.json)",
     )
     parser.add_argument("--libclang", type=Path, help="path to the libclang shared library")
-    parser.add_argument("--prefix", default="xm", help="toolkit prefix (default: xm)")
+    parser.add_argument("--prefix", default="Xm", help="toolkit prefix (default: Xm)")
     parser.add_argument(
         "--clang-arg", action="append", default=[],
         help="compiler argument; repeat as needed (e.g. --clang-arg=-I/usr/include)",
@@ -125,6 +125,9 @@ def main(argv=None):
                     and get_initializer(record) is not None
                     and record.location.file is not None):
                 widget["sourcefile"] = str(Path(record.location.file.name).resolve())
+                header = get_header_path(widget["sourcefile"], args.prefix)
+                if header is not None:
+                    widget["header"] = header
             superclass = get_superclass(widget_class, cindex, definitions, record_to_widget)
             if superclass is not None:
                 widget["superclass"] = superclass
@@ -146,6 +149,15 @@ def main(argv=None):
     except OSError as exc:
         parser.error(f"could not write output: {exc}")
     return 0
+
+
+def get_header_path(sourcefile, prefix):
+    """Keep the source path from the toolkit directory and change its suffix."""
+    parts = Path(sourcefile).parts
+    for index, part in enumerate(parts[:-1]):
+        if part.casefold() == prefix.casefold():
+            return Path(*parts[index:]).with_suffix(".h").as_posix()
+    return None
 
 
 def find_widget_classes(unit, source, cindex):

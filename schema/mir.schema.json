@@ -27,6 +27,10 @@
                         "description": "Absolute path to the source file containing the initialized ClassRec definition pointed to by the WidgetClass, excluding declarations.",
                         "type": "string"
                     },
+                    "header": {
+                        "description": "Include path derived from sourcefile, starting at the directory matching the toolkit prefix (case-insensitive) and replacing .c with .h (e.g. Xm/PushB.h).",
+                        "type": "string"
+                    },
                     "superclass": {
                         "description": "The WidgetClass symbol pointing to the class record referenced by core.superclass (e.g. xmPrimitiveWidgetClass).",
                         "type": "string"
@@ -102,7 +106,7 @@
                     },
                     {
                         "required": ["resources"],
-                        "propertyNames": {"enum": ["name", "sourcefile", "superclass", "resources", "methods"]}
+                        "propertyNames": {"enum": ["name", "sourcefile", "header", "superclass", "resources", "methods"]}
                     },
                     {
                         "required": [

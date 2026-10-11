@@ -65,6 +65,10 @@
 #include "Xm/ToggleBG.h"
 #include "Xm/ToggleB.h"
 #include "Xm/Tree.h"
+#include <functional>
+#include <set>
+#include <cstdint>
+#include <map>
 
 extern WidgetClass xmWorldClass;
 extern WidgetClass xmTearOffButtonWidgetClass;
@@ -90,16 +94,37 @@ typedef union _XmConvertSelectionRec
     XtConvertSelectionProc sel;
 } XmConvertSelectionRec;
 
-template <typename Derived>
-class CWidgetImpl
+class CWidgetImplBase
 {
 public:
-    CWidgetImpl(Widget w): _widget(w) {}
+    CWidgetImplBase(Widget w): _widget(w) {}
 
     operator Widget() const
     {
         return _widget;
     }
+
+protected:
+    static void executeCallback(
+        Widget w, XtPointer client_data, XtPointer call_data);
+    static int registerCallback(
+        Widget widget, std::function<void(XtPointer)> callback);
+    static void deregisterCallbacks(
+        Widget widget, XtPointer client_data, XtPointer call_data);
+
+public:
+    Widget _widget;
+    static int _callbackId;
+    static std::set<Widget> _registeredWidgets;
+    static std::map<std::pair<Widget, int>, std::function<void(XtPointer)>>
+        _callbacks;
+};
+
+template <typename Derived>
+class CWidgetImpl : public CWidgetImplBase
+{
+public:
+    using CWidgetImplBase::CWidgetImplBase;
 
     Derived& manageChild()
     {
@@ -113,8 +138,17 @@ public:
         return static_cast<Derived&>(*this);
     }
 
-protected:
-    Widget _widget;
+    Derived& addCallback(
+        const char* callback_name, std::function<void(XtPointer)> callback)
+    {
+        int cbid = registerCallback(_widget, std::move(callback));
+        XtAddCallback(_widget,
+            callback_name,
+            executeCallback,
+            reinterpret_cast<XtPointer>(cbid));
+
+        return static_cast<Derived&>(*this);
+    }
 };
 
 #include "cmotif_impl.h"

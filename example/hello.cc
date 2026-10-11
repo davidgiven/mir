@@ -40,12 +40,18 @@ int main(int argc, char* argv[])
         .setLabelString(XmStringCreateLocalized((char*)"Button 1"))
         .setShadowThickness(5)
         .setShowAsDefault(true)
+        .addActivateCallback([](XtPointer) {
+            printf("Button 1 pressed\n");
+        })
         .manageChild();
 
     CXmPushButton::create(mainWindow, "button2")
         .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
         .setShadowThickness(5)
         .setShowAsDefault(false)
+        .addActivateCallback([](XtPointer) {
+            printf("Button 2 pressed\n");
+        })
         .manageChild();
 
     XtRealizeWidget(toplevel);

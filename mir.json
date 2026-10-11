@@ -1,5 +1,21 @@
 {
   "prefix": "Xm",
+  "types": {
+    "XmColorMode": {},
+    "XmFillOption": {},
+    "XmHighlightMode": {},
+    "XmIconPlacement": {},
+    "XmNotebookPageStatus": {},
+    "XmPixmapPlacement": {},
+    "XmTabEdge": {},
+    "XmTabMode": {},
+    "XmTabOrientation": {},
+    "XmTabSide": {},
+    "XmTabStyle": {},
+    "XmTextDirection": {},
+    "XmTreeCompressStyle": {},
+    "XmTreeConnectStyle": {}
+  },
   "widgets": {
     "vendorShellWidgetClass": {
       "header": "Xm/VendorS.h",

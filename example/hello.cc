@@ -46,7 +46,7 @@ public:
 
     auto withLabelString(const char* value) const
     {
-        return this->with(XmNlabelString, XmStringCreateSimple((char*)value));
+        return this->with(XmNlabelString, XmStringCreateLocalized((char*)value));
     }
 
     auto withShadowThickness(int value) const

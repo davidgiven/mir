@@ -9,6 +9,14 @@
             "description": "Toolkit prefix stripped from widget class names to derive widget keys.",
             "type": "string"
         },
+        "types": {
+            "description": "Enum types referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. Entries are empty placeholders pending enum metadata extraction.",
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "maxProperties": 0
+            }
+        },
         "widgets": {
             "description": "Widgets keyed by widget class symbol (e.g. xmPushButtonWidgetClass).",
             "type": "object",
@@ -124,7 +132,8 @@
     },
     "required": [
         "prefix",
-        "widgets"
+        "widgets",
+        "types"
     ],
     "additionalProperties": false
 }

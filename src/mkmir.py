@@ -142,7 +142,11 @@ def main(argv=None):
                 for name, method in methods.items() if name.startswith(class_name)
             }
 
-    artifact = {"prefix": args.prefix, "widgets": widgets}
+    artifact = {
+        "prefix": args.prefix,
+        "widgets": widgets,
+        "types": get_api_types(widgets, translation_units, cindex),
+    }
     try:
         args.output.write_text(json.dumps(artifact, indent=2, sort_keys=True) + "\n",
                                encoding="utf-8")
@@ -158,6 +162,41 @@ def get_header_path(sourcefile, prefix):
         if part.casefold() == prefix.casefold():
             return Path(*parts[index:]).with_suffix(".h").as_posix()
     return None
+
+
+def get_api_types(widgets, translation_units, cindex):
+    """Add placeholders for enum types actually referenced by the API."""
+    def type_key(spelling):
+        # sizeof tokens have different spacing from libclang type spellings.
+        return "".join(token for token in spelling.split()
+                       if token not in ("const", "volatile", "restrict"))
+
+    referenced = set()
+    for widget in widgets.values():
+        for resource in widget["resources"].values():
+            if "ctype" in resource:
+                referenced.add(resource["ctype"])
+        for method in widget["methods"].values():
+            referenced.add(method["return_type"])
+            referenced.update(parameter["type"]
+                              for parameter in method["parameters"].values())
+
+    enum_types = set()
+    for unit in translation_units:
+        pending = list(unit.cursor.get_children())
+        while pending:
+            cursor = pending.pop()
+            if cursor.kind in (cindex.CursorKind.STRUCT_DECL,
+                               cindex.CursorKind.UNION_DECL):
+                pending.extend(cursor.get_children())
+            if cursor.kind not in (cindex.CursorKind.ENUM_DECL,
+                                   cindex.CursorKind.TYPEDEF_DECL):
+                continue
+            if cursor.type.get_canonical().kind == cindex.TypeKind.ENUM:
+                enum_types.add(type_key(cursor.type.spelling))
+
+    return {spelling: {} for spelling in sorted(referenced)
+            if type_key(spelling) in enum_types}
 
 
 def find_widget_classes(unit, source, cindex):

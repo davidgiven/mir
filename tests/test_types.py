@@ -93,7 +93,11 @@ enum Unused OtherFunction(void);
                 "enum { XtExternal = 42 };\n"
             )
             subprocess.run(
-                [sys.executable, str(ROOT / "src/mkmir.py"), str(path),
+                [sys.executable, "-c",
+                 "import sys; sys.path.insert(0, sys.argv.pop(1)); "
+                 "import mkmir; mkmir.WIDGET_CLASS_BLACKLIST = {'xmColorObj'}; "
+                 "raise SystemExit(mkmir.main())",
+                 str(ROOT / "src"), str(path),
                  "-o", str(path / "mir.json")],
                 check=True, capture_output=True, text=True,
             )

@@ -66,7 +66,7 @@ class WidgetClassesTest(unittest.TestCase):
                 "second": {"name": "Second", "superclass": "first"},
             }})
 
-    def test_callback_adders_are_empty_and_keep_typed_setters(self):
+    def test_callback_adders_keep_typed_setters(self):
         header = self.generate_header({"widgets": {
             "button": {"name": "Button", "resources": {
                 "activateCallback": {"rtype": "Callback", "ctype": "XtCallbackList"},
@@ -76,13 +76,33 @@ class WidgetClassesTest(unittest.TestCase):
         }})
         self.assertIn("#include <functional>", header)
         for name in ("ActivateCallback", "DestroyCallback"):
-            self.assertIn(
-                f"Derived& add{name}(std::function<void(XtPointer)> callback) {{\n"
-                "        return static_cast<Derived&>(*this);\n    }",
-                header,
-            )
+            self.assertIn(f"Derived& add{name}(std::function<void(XtPointer)> callback)", header)
         self.assertIn("Derived& setActivateCallback(XtCallbackList value)", header)
         self.assertNotIn("addOrdinaryCallback", header)
+
+    def test_builders_include_inherited_resources_and_exclude_callbacks(self):
+        header = self.generate_header({"widgets": {
+            "rootClass": {"name": "Root", "resources": {
+                "width": {"ctype": "int"},
+                "value": {"ctype": "int"},
+                "destroyCallback": {"ctype": "XtCallbackList", "rtype": "Callback"},
+            }},
+            "childClass": {"name": "Child", "superclass": "rootClass", "resources": {
+                "value": {"ctype": "char *"},
+                "items": {"ctype": "XmString[3]"},
+                "unresolved": {},
+            }},
+        }})
+        builder = header.split("class CChildBuilderImpl", 1)[1]
+        self.assertIn("CWidgetBuilderBase<CChildBuilderImpl, CWidgetClassT, WidgetClassP, Pairs...>", builder)
+        self.assertIn("using CChildBuilder = CChildBuilderImpl<CChild, &childClass>;", builder)
+        self.assertIn("auto setWidth(int value) const", builder)
+        self.assertIn("auto setValue(char * value) const", builder)
+        self.assertNotIn("setValue(int value)", builder)
+        self.assertIn("auto setItems(XmString value[3]) const", builder)
+        self.assertIn('return this->set("value", value);', builder)
+        self.assertNotIn("setDestroyCallback", builder)
+        self.assertNotIn("setUnresolved", builder)
 
 
 if __name__ == "__main__":

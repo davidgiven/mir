@@ -4,15 +4,15 @@
 #include <functional>
 
 
-template <typename Derived> class CVendorShellImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setBaseHeight(int value) {
+            template <typename Derived> class CVendorShellImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setBaseHeight(int value) {
                 XtVaSetValues(this->_widget, "baseHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getBaseHeight() {
+int getBaseHeight() {
                     int value;
                     XtVaGetValues(this->_widget, "baseHeight", &value, nullptr);
                     return value;
@@ -21,7 +21,7 @@ public:
                 XtVaSetValues(this->_widget, "baseWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getBaseWidth() {
+int getBaseWidth() {
                     int value;
                     XtVaGetValues(this->_widget, "baseWidth", &value, nullptr);
                     return value;
@@ -30,7 +30,7 @@ public:
                 XtVaSetValues(this->_widget, "borderWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getBorderWidth() {
+Dimension getBorderWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "borderWidth", &value, nullptr);
                     return value;
@@ -39,7 +39,7 @@ public:
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
@@ -48,7 +48,7 @@ public:
                 XtVaSetValues(this->_widget, "heightInc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getHeightInc() {
+int getHeightInc() {
                     int value;
                     XtVaGetValues(this->_widget, "heightInc", &value, nullptr);
                     return value;
@@ -57,7 +57,7 @@ public:
                 XtVaSetValues(this->_widget, "iconPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getIconPixmap() {
+Pixmap getIconPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "iconPixmap", &value, nullptr);
                     return value;
@@ -66,7 +66,7 @@ public:
                 XtVaSetValues(this->_widget, "iconX", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getIconX() {
+int getIconX() {
                     int value;
                     XtVaGetValues(this->_widget, "iconX", &value, nullptr);
                     return value;
@@ -75,7 +75,7 @@ public:
                 XtVaSetValues(this->_widget, "iconY", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getIconY() {
+int getIconY() {
                     int value;
                     XtVaGetValues(this->_widget, "iconY", &value, nullptr);
                     return value;
@@ -84,7 +84,7 @@ public:
                 XtVaSetValues(this->_widget, "input", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getInput() {
+int getInput() {
                     int value;
                     XtVaGetValues(this->_widget, "input", &value, nullptr);
                     return value;
@@ -93,7 +93,7 @@ public:
                 XtVaSetValues(this->_widget, "maxAspectX", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaxAspectX() {
+int getMaxAspectX() {
                     int value;
                     XtVaGetValues(this->_widget, "maxAspectX", &value, nullptr);
                     return value;
@@ -102,7 +102,7 @@ public:
                 XtVaSetValues(this->_widget, "maxAspectY", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaxAspectY() {
+int getMaxAspectY() {
                     int value;
                     XtVaGetValues(this->_widget, "maxAspectY", &value, nullptr);
                     return value;
@@ -111,7 +111,7 @@ public:
                 XtVaSetValues(this->_widget, "maxHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaxHeight() {
+int getMaxHeight() {
                     int value;
                     XtVaGetValues(this->_widget, "maxHeight", &value, nullptr);
                     return value;
@@ -120,7 +120,7 @@ public:
                 XtVaSetValues(this->_widget, "maxWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaxWidth() {
+int getMaxWidth() {
                     int value;
                     XtVaGetValues(this->_widget, "maxWidth", &value, nullptr);
                     return value;
@@ -129,7 +129,7 @@ public:
                 XtVaSetValues(this->_widget, "minAspectX", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinAspectX() {
+int getMinAspectX() {
                     int value;
                     XtVaGetValues(this->_widget, "minAspectX", &value, nullptr);
                     return value;
@@ -138,7 +138,7 @@ public:
                 XtVaSetValues(this->_widget, "minAspectY", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinAspectY() {
+int getMinAspectY() {
                     int value;
                     XtVaGetValues(this->_widget, "minAspectY", &value, nullptr);
                     return value;
@@ -147,7 +147,7 @@ public:
                 XtVaSetValues(this->_widget, "minHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinHeight() {
+int getMinHeight() {
                     int value;
                     XtVaGetValues(this->_widget, "minHeight", &value, nullptr);
                     return value;
@@ -156,7 +156,7 @@ public:
                 XtVaSetValues(this->_widget, "minWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinWidth() {
+int getMinWidth() {
                     int value;
                     XtVaGetValues(this->_widget, "minWidth", &value, nullptr);
                     return value;
@@ -165,7 +165,7 @@ public:
                 XtVaSetValues(this->_widget, "visual", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Visual * getVisual() {
+Visual * getVisual() {
                     Visual * value;
                     XtVaGetValues(this->_widget, "visual", &value, nullptr);
                     return value;
@@ -174,7 +174,7 @@ public:
                 XtVaSetValues(this->_widget, "width", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getWidth() {
+Dimension getWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "width", &value, nullptr);
                     return value;
@@ -183,7 +183,7 @@ public:
                 XtVaSetValues(this->_widget, "widthInc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getWidthInc() {
+int getWidthInc() {
                     int value;
                     XtVaGetValues(this->_widget, "widthInc", &value, nullptr);
                     return value;
@@ -192,7 +192,7 @@ public:
                 XtVaSetValues(this->_widget, "windowGroup", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XID getWindowGroup() {
+XID getWindowGroup() {
                     XID value;
                     XtVaGetValues(this->_widget, "windowGroup", &value, nullptr);
                     return value;
@@ -201,7 +201,7 @@ public:
                 XtVaSetValues(this->_widget, "x", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getX() {
+Position getX() {
                     Position value;
                     XtVaGetValues(this->_widget, "x", &value, nullptr);
                     return value;
@@ -210,31 +210,31 @@ public:
                 XtVaSetValues(this->_widget, "y", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getY() {
+Position getY() {
                     Position value;
                     XtVaGetValues(this->_widget, "y", &value, nullptr);
                     return value;
                 }
-};
-class CVendorShell : public CVendorShellImpl<CVendorShell> {
-public:
-    using CVendorShellImpl<CVendorShell>::CVendorShellImpl;
-    static CVendorShell create(Widget parent, const char* name) {
-        return CVendorShell(XtCreateWidget(name, vendorShellWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CVendorShell : public CVendorShellImpl<CVendorShell> {
+            public:
+                using CVendorShellImpl<CVendorShell>::CVendorShellImpl;
+                static CVendorShell create(Widget parent, const char* name) {
+                    return CVendorShell(XtCreateWidget(name, vendorShellWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmGadgetImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setBorderWidth(Dimension value) {
+            template <typename Derived> class CXmGadgetImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setBorderWidth(Dimension value) {
                 XtVaSetValues(this->_widget, "borderWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getBorderWidth() {
+Dimension getBorderWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "borderWidth", &value, nullptr);
                     return value;
@@ -243,20 +243,20 @@ public:
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
                 }
     Derived& addHelpCallback(std::function<void(XtPointer)> callback) {
-        addCallback("helpCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("helpCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setHelpCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "helpCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getHelpCallback() {
+XtCallbackList getHelpCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "helpCallback", &value, nullptr);
                     return value;
@@ -265,7 +265,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightOnEnter", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getHighlightOnEnter() {
+Boolean getHighlightOnEnter() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "highlightOnEnter", &value, nullptr);
                     return value;
@@ -274,7 +274,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -283,7 +283,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDirection getLayoutDirection() {
+XmDirection getLayoutDirection() {
                     XmDirection value;
                     XtVaGetValues(this->_widget, "layoutDirection", &value, nullptr);
                     return value;
@@ -292,7 +292,7 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
@@ -301,7 +301,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -310,7 +310,7 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
@@ -319,7 +319,7 @@ public:
                 XtVaSetValues(this->_widget, "unitType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getUnitType() {
+unsigned char getUnitType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "unitType", &value, nullptr);
                     return value;
@@ -328,7 +328,7 @@ public:
                 XtVaSetValues(this->_widget, "userData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getUserData() {
+XtPointer getUserData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "userData", &value, nullptr);
                     return value;
@@ -337,7 +337,7 @@ public:
                 XtVaSetValues(this->_widget, "width", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getWidth() {
+Dimension getWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "width", &value, nullptr);
                     return value;
@@ -346,7 +346,7 @@ public:
                 XtVaSetValues(this->_widget, "x", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getX() {
+Position getX() {
                     Position value;
                     XtVaGetValues(this->_widget, "x", &value, nullptr);
                     return value;
@@ -355,31 +355,31 @@ public:
                 XtVaSetValues(this->_widget, "y", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getY() {
+Position getY() {
                     Position value;
                     XtVaGetValues(this->_widget, "y", &value, nullptr);
                     return value;
                 }
-};
-class CXmGadget : public CXmGadgetImpl<CXmGadget> {
-public:
-    using CXmGadgetImpl<CXmGadget>::CXmGadgetImpl;
-    static CXmGadget create(Widget parent, const char* name) {
-        return CXmGadget(XtCreateWidget(name, xmGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmGadget : public CXmGadgetImpl<CXmGadget> {
+            public:
+                using CXmGadgetImpl<CXmGadget>::CXmGadgetImpl;
+                static CXmGadget create(Widget parent, const char* name) {
+                    return CXmGadget(XtCreateWidget(name, xmGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmPrimitiveImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setBackground(Pixel value) {
+            template <typename Derived> class CXmPrimitiveImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setBackground(Pixel value) {
                 XtVaSetValues(this->_widget, "background", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackground() {
+Pixel getBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "background", &value, nullptr);
                     return value;
@@ -388,7 +388,7 @@ public:
                 XtVaSetValues(this->_widget, "backgroundPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBackgroundPixmap() {
+Pixmap getBackgroundPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "backgroundPixmap", &value, nullptr);
                     return value;
@@ -397,7 +397,7 @@ public:
                 XtVaSetValues(this->_widget, "borderWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getBorderWidth() {
+Dimension getBorderWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "borderWidth", &value, nullptr);
                     return value;
@@ -406,7 +406,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBottomShadowColor() {
+Pixel getBottomShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "bottomShadowColor", &value, nullptr);
                     return value;
@@ -415,20 +415,20 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBottomShadowPixmap() {
+Pixmap getBottomShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "bottomShadowPixmap", &value, nullptr);
                     return value;
                 }
     Derived& addConvertCallback(std::function<void(XtPointer)> callback) {
-        addCallback("convertCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("convertCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setConvertCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "convertCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getConvertCallback() {
+XtCallbackList getConvertCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "convertCallback", &value, nullptr);
                     return value;
@@ -437,7 +437,7 @@ public:
                 XtVaSetValues(this->_widget, "foreground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getForeground() {
+Pixel getForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "foreground", &value, nullptr);
                     return value;
@@ -446,20 +446,20 @@ public:
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
                 }
     Derived& addHelpCallback(std::function<void(XtPointer)> callback) {
-        addCallback("helpCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("helpCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setHelpCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "helpCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getHelpCallback() {
+XtCallbackList getHelpCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "helpCallback", &value, nullptr);
                     return value;
@@ -468,7 +468,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getHighlightColor() {
+Pixel getHighlightColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "highlightColor", &value, nullptr);
                     return value;
@@ -477,7 +477,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightOnEnter", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getHighlightOnEnter() {
+Boolean getHighlightOnEnter() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "highlightOnEnter", &value, nullptr);
                     return value;
@@ -486,7 +486,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getHighlightPixmap() {
+Pixmap getHighlightPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "highlightPixmap", &value, nullptr);
                     return value;
@@ -495,7 +495,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -504,7 +504,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDirection getLayoutDirection() {
+XmDirection getLayoutDirection() {
                     XmDirection value;
                     XtVaGetValues(this->_widget, "layoutDirection", &value, nullptr);
                     return value;
@@ -513,20 +513,20 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
                 }
     Derived& addPopupHandlerCallback(std::function<void(XtPointer)> callback) {
-        addCallback("popupHandlerCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("popupHandlerCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setPopupHandlerCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "popupHandlerCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getPopupHandlerCallback() {
+XtCallbackList getPopupHandlerCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "popupHandlerCallback", &value, nullptr);
                     return value;
@@ -535,7 +535,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -544,7 +544,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTopShadowColor() {
+Pixel getTopShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "topShadowColor", &value, nullptr);
                     return value;
@@ -553,7 +553,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getTopShadowPixmap() {
+Pixmap getTopShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "topShadowPixmap", &value, nullptr);
                     return value;
@@ -562,7 +562,7 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
@@ -571,7 +571,7 @@ public:
                 XtVaSetValues(this->_widget, "unitType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getUnitType() {
+unsigned char getUnitType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "unitType", &value, nullptr);
                     return value;
@@ -580,7 +580,7 @@ public:
                 XtVaSetValues(this->_widget, "userData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getUserData() {
+XtPointer getUserData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "userData", &value, nullptr);
                     return value;
@@ -589,7 +589,7 @@ public:
                 XtVaSetValues(this->_widget, "width", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getWidth() {
+Dimension getWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "width", &value, nullptr);
                     return value;
@@ -598,7 +598,7 @@ public:
                 XtVaSetValues(this->_widget, "x", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getX() {
+Position getX() {
                     Position value;
                     XtVaGetValues(this->_widget, "x", &value, nullptr);
                     return value;
@@ -607,31 +607,31 @@ public:
                 XtVaSetValues(this->_widget, "y", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getY() {
+Position getY() {
                     Position value;
                     XtVaGetValues(this->_widget, "y", &value, nullptr);
                     return value;
                 }
-};
-class CXmPrimitive : public CXmPrimitiveImpl<CXmPrimitive> {
-public:
-    using CXmPrimitiveImpl<CXmPrimitive>::CXmPrimitiveImpl;
-    static CXmPrimitive create(Widget parent, const char* name) {
-        return CXmPrimitive(XtCreateWidget(name, xmPrimitiveWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmPrimitive : public CXmPrimitiveImpl<CXmPrimitive> {
+            public:
+                using CXmPrimitiveImpl<CXmPrimitive>::CXmPrimitiveImpl;
+                static CXmPrimitive create(Widget parent, const char* name) {
+                    return CXmPrimitive(XtCreateWidget(name, xmPrimitiveWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmManagerImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setBackground(Pixel value) {
+            template <typename Derived> class CXmManagerImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setBackground(Pixel value) {
                 XtVaSetValues(this->_widget, "background", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackground() {
+Pixel getBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "background", &value, nullptr);
                     return value;
@@ -640,7 +640,7 @@ public:
                 XtVaSetValues(this->_widget, "backgroundPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBackgroundPixmap() {
+Pixmap getBackgroundPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "backgroundPixmap", &value, nullptr);
                     return value;
@@ -649,7 +649,7 @@ public:
                 XtVaSetValues(this->_widget, "borderWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getBorderWidth() {
+Dimension getBorderWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "borderWidth", &value, nullptr);
                     return value;
@@ -658,7 +658,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBottomShadowColor() {
+Pixel getBottomShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "bottomShadowColor", &value, nullptr);
                     return value;
@@ -667,7 +667,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBottomShadowPixmap() {
+Pixmap getBottomShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "bottomShadowPixmap", &value, nullptr);
                     return value;
@@ -676,7 +676,7 @@ public:
                 XtVaSetValues(this->_widget, "foreground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getForeground() {
+Pixel getForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "foreground", &value, nullptr);
                     return value;
@@ -685,20 +685,20 @@ public:
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
                 }
     Derived& addHelpCallback(std::function<void(XtPointer)> callback) {
-        addCallback("helpCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("helpCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setHelpCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "helpCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getHelpCallback() {
+XtCallbackList getHelpCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "helpCallback", &value, nullptr);
                     return value;
@@ -707,7 +707,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getHighlightColor() {
+Pixel getHighlightColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "highlightColor", &value, nullptr);
                     return value;
@@ -716,7 +716,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getHighlightPixmap() {
+Pixmap getHighlightPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "highlightPixmap", &value, nullptr);
                     return value;
@@ -725,7 +725,7 @@ public:
                 XtVaSetValues(this->_widget, "initialFocus", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getInitialFocus() {
+Widget getInitialFocus() {
                     Widget value;
                     XtVaGetValues(this->_widget, "initialFocus", &value, nullptr);
                     return value;
@@ -734,7 +734,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringDirection getLayoutDirection() {
+XmStringDirection getLayoutDirection() {
                     XmStringDirection value;
                     XtVaGetValues(this->_widget, "layoutDirection", &value, nullptr);
                     return value;
@@ -743,20 +743,20 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
                 }
     Derived& addPopupHandlerCallback(std::function<void(XtPointer)> callback) {
-        addCallback("popupHandlerCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("popupHandlerCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setPopupHandlerCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "popupHandlerCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getPopupHandlerCallback() {
+XtCallbackList getPopupHandlerCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "popupHandlerCallback", &value, nullptr);
                     return value;
@@ -765,7 +765,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -774,7 +774,7 @@ public:
                 XtVaSetValues(this->_widget, "stringDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringDirection getStringDirection() {
+XmStringDirection getStringDirection() {
                     XmStringDirection value;
                     XtVaGetValues(this->_widget, "stringDirection", &value, nullptr);
                     return value;
@@ -783,7 +783,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTopShadowColor() {
+Pixel getTopShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "topShadowColor", &value, nullptr);
                     return value;
@@ -792,7 +792,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getTopShadowPixmap() {
+Pixmap getTopShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "topShadowPixmap", &value, nullptr);
                     return value;
@@ -801,7 +801,7 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
@@ -810,7 +810,7 @@ public:
                 XtVaSetValues(this->_widget, "unitType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getUnitType() {
+unsigned char getUnitType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "unitType", &value, nullptr);
                     return value;
@@ -819,7 +819,7 @@ public:
                 XtVaSetValues(this->_widget, "userData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getUserData() {
+XtPointer getUserData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "userData", &value, nullptr);
                     return value;
@@ -828,7 +828,7 @@ public:
                 XtVaSetValues(this->_widget, "width", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getWidth() {
+Dimension getWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "width", &value, nullptr);
                     return value;
@@ -837,7 +837,7 @@ public:
                 XtVaSetValues(this->_widget, "x", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getX() {
+Position getX() {
                     Position value;
                     XtVaGetValues(this->_widget, "x", &value, nullptr);
                     return value;
@@ -846,31 +846,31 @@ public:
                 XtVaSetValues(this->_widget, "y", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getY() {
+Position getY() {
                     Position value;
                     XtVaGetValues(this->_widget, "y", &value, nullptr);
                     return value;
                 }
-};
-class CXmManager : public CXmManagerImpl<CXmManager> {
-public:
-    using CXmManagerImpl<CXmManager>::CXmManagerImpl;
-    static CXmManager create(Widget parent, const char* name) {
-        return CXmManager(XtCreateWidget(name, xmManagerWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmManager : public CXmManagerImpl<CXmManager> {
+            public:
+                using CXmManagerImpl<CXmManager>::CXmManagerImpl;
+                static CXmManager create(Widget parent, const char* name) {
+                    return CXmManager(XtCreateWidget(name, xmManagerWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmColorObjImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setActiveColorSetId(int value) {
+            template <typename Derived> class CXmColorObjImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setActiveColorSetId(int value) {
                 XtVaSetValues(this->_widget, "activeColorSetId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getActiveColorSetId() {
+int getActiveColorSetId() {
                     int value;
                     XtVaGetValues(this->_widget, "activeColorSetId", &value, nullptr);
                     return value;
@@ -879,7 +879,7 @@ public:
                 XtVaSetValues(this->_widget, "inactiveColorSetId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getInactiveColorSetId() {
+int getInactiveColorSetId() {
                     int value;
                     XtVaGetValues(this->_widget, "inactiveColorSetId", &value, nullptr);
                     return value;
@@ -888,7 +888,7 @@ public:
                 XtVaSetValues(this->_widget, "primaryColorSetId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getPrimaryColorSetId() {
+int getPrimaryColorSetId() {
                     int value;
                     XtVaGetValues(this->_widget, "primaryColorSetId", &value, nullptr);
                     return value;
@@ -897,7 +897,7 @@ public:
                 XtVaSetValues(this->_widget, "secondaryColorSetId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSecondaryColorSetId() {
+int getSecondaryColorSetId() {
                     int value;
                     XtVaGetValues(this->_widget, "secondaryColorSetId", &value, nullptr);
                     return value;
@@ -906,7 +906,7 @@ public:
                 XtVaSetValues(this->_widget, "textColorSetId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getTextColorSetId() {
+int getTextColorSetId() {
                     int value;
                     XtVaGetValues(this->_widget, "textColorSetId", &value, nullptr);
                     return value;
@@ -915,7 +915,7 @@ public:
                 XtVaSetValues(this->_widget, "useColorObj", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseColorObj() {
+Boolean getUseColorObj() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useColorObj", &value, nullptr);
                     return value;
@@ -924,7 +924,7 @@ public:
                 XtVaSetValues(this->_widget, "useIconFileCache", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseIconFileCache() {
+Boolean getUseIconFileCache() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useIconFileCache", &value, nullptr);
                     return value;
@@ -933,7 +933,7 @@ public:
                 XtVaSetValues(this->_widget, "useMask", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseMask() {
+Boolean getUseMask() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useMask", &value, nullptr);
                     return value;
@@ -942,7 +942,7 @@ public:
                 XtVaSetValues(this->_widget, "useMultiColorIcons", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseMultiColorIcons() {
+Boolean getUseMultiColorIcons() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useMultiColorIcons", &value, nullptr);
                     return value;
@@ -951,7 +951,7 @@ public:
                 XtVaSetValues(this->_widget, "useTextColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseTextColor() {
+Boolean getUseTextColor() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useTextColor", &value, nullptr);
                     return value;
@@ -960,31 +960,31 @@ public:
                 XtVaSetValues(this->_widget, "useTextColorForList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseTextColorForList() {
+Boolean getUseTextColorForList() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useTextColorForList", &value, nullptr);
                     return value;
                 }
-};
-class CXmColorObj : public CXmColorObjImpl<CXmColorObj> {
-public:
-    using CXmColorObjImpl<CXmColorObj>::CXmColorObjImpl;
-    static CXmColorObj create(Widget parent, const char* name) {
-        return CXmColorObj(XtCreateWidget(name, xmColorObjClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmColorObj : public CXmColorObjImpl<CXmColorObj> {
+            public:
+                using CXmColorObjImpl<CXmColorObj>::CXmColorObjImpl;
+                static CXmColorObj create(Widget parent, const char* name) {
+                    return CXmColorObj(XtCreateWidget(name, xmColorObjClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CdynamicImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setExtensionType(unsigned char value) {
+            template <typename Derived> class CdynamicImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setExtensionType(unsigned char value) {
                 XtVaSetValues(this->_widget, "extensionType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getExtensionType() {
+unsigned char getExtensionType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "extensionType", &value, nullptr);
                     return value;
@@ -993,55 +993,55 @@ public:
                 XtVaSetValues(this->_widget, "logicalParent", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getLogicalParent() {
+Widget getLogicalParent() {
                     Widget value;
                     XtVaGetValues(this->_widget, "logicalParent", &value, nullptr);
                     return value;
                 }
-};
-class Cdynamic : public CdynamicImpl<Cdynamic> {
-public:
-    using CdynamicImpl<Cdynamic>::CdynamicImpl;
-    static Cdynamic create(Widget parent, const char* name) {
-        return Cdynamic(XtCreateWidget(name, xmExtObjectClass, parent, nullptr, 0));
-    }
-};
+            };
+            class Cdynamic : public CdynamicImpl<Cdynamic> {
+            public:
+                using CdynamicImpl<Cdynamic>::CdynamicImpl;
+                static Cdynamic create(Widget parent, const char* name) {
+                    return Cdynamic(XtCreateWidget(name, xmExtObjectClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDialogShellImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setDeleteResponse(unsigned char value) {
+            template <typename Derived> class CXmDialogShellImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setDeleteResponse(unsigned char value) {
                 XtVaSetValues(this->_widget, "deleteResponse", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDeleteResponse() {
+unsigned char getDeleteResponse() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "deleteResponse", &value, nullptr);
                     return value;
                 }
-};
-class CXmDialogShell : public CXmDialogShellImpl<CXmDialogShell> {
-public:
-    using CXmDialogShellImpl<CXmDialogShell>::CXmDialogShellImpl;
-    static CXmDialogShell create(Widget parent, const char* name) {
-        return CXmDialogShell(XtCreateWidget(name, xmDialogShellExtObjectClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDialogShell : public CXmDialogShellImpl<CXmDialogShell> {
+            public:
+                using CXmDialogShellImpl<CXmDialogShell>::CXmDialogShellImpl;
+                static CXmDialogShell create(Widget parent, const char* name) {
+                    return CXmDialogShell(XtCreateWidget(name, xmDialogShellExtObjectClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDisplayImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setDefaultButtonEmphasis(Boolean value) {
+            template <typename Derived> class CXmDisplayImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setDefaultButtonEmphasis(Boolean value) {
                 XtVaSetValues(this->_widget, "defaultButtonEmphasis", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getDefaultButtonEmphasis() {
+Boolean getDefaultButtonEmphasis() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "defaultButtonEmphasis", &value, nullptr);
                     return value;
@@ -1050,7 +1050,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultVirtualBindings", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    String getDefaultVirtualBindings() {
+String getDefaultVirtualBindings() {
                     String value;
                     XtVaGetValues(this->_widget, "defaultVirtualBindings", &value, nullptr);
                     return value;
@@ -1059,7 +1059,7 @@ public:
                 XtVaSetValues(this->_widget, "dragContextClass", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    WidgetClass getDragContextClass() {
+WidgetClass getDragContextClass() {
                     WidgetClass value;
                     XtVaGetValues(this->_widget, "dragContextClass", &value, nullptr);
                     return value;
@@ -1068,7 +1068,7 @@ public:
                 XtVaSetValues(this->_widget, "dragInitiatorProtocolStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDragInitiatorProtocolStyle() {
+unsigned char getDragInitiatorProtocolStyle() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dragInitiatorProtocolStyle", &value, nullptr);
                     return value;
@@ -1077,20 +1077,20 @@ public:
                 XtVaSetValues(this->_widget, "dragReceiverProtocolStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDragReceiverProtocolStyle() {
+unsigned char getDragReceiverProtocolStyle() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dragReceiverProtocolStyle", &value, nullptr);
                     return value;
                 }
     Derived& addDragStartCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dragStartCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dragStartCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDragStartCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dragStartCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDragStartCallback() {
+XtCallbackList getDragStartCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dragStartCallback", &value, nullptr);
                     return value;
@@ -1099,7 +1099,7 @@ public:
                 XtVaSetValues(this->_widget, "dropSiteManagerClass", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    WidgetClass getDropSiteManagerClass() {
+WidgetClass getDropSiteManagerClass() {
                     WidgetClass value;
                     XtVaGetValues(this->_widget, "dropSiteManagerClass", &value, nullptr);
                     return value;
@@ -1108,7 +1108,7 @@ public:
                 XtVaSetValues(this->_widget, "dropTransferClass", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    WidgetClass getDropTransferClass() {
+WidgetClass getDropTransferClass() {
                     WidgetClass value;
                     XtVaGetValues(this->_widget, "dropTransferClass", &value, nullptr);
                     return value;
@@ -1117,7 +1117,7 @@ public:
                 XtVaSetValues(this->_widget, "enableBtn1Transfer", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getEnableBtn1Transfer() {
+XtEnum getEnableBtn1Transfer() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "enableBtn1Transfer", &value, nullptr);
                     return value;
@@ -1126,7 +1126,7 @@ public:
                 XtVaSetValues(this->_widget, "enableButtonTab", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableButtonTab() {
+Boolean getEnableButtonTab() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableButtonTab", &value, nullptr);
                     return value;
@@ -1135,7 +1135,7 @@ public:
                 XtVaSetValues(this->_widget, "enableDragIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableDragIcon() {
+Boolean getEnableDragIcon() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableDragIcon", &value, nullptr);
                     return value;
@@ -1144,7 +1144,7 @@ public:
                 XtVaSetValues(this->_widget, "enableEtchedInMenu", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableEtchedInMenu() {
+Boolean getEnableEtchedInMenu() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableEtchedInMenu", &value, nullptr);
                     return value;
@@ -1153,7 +1153,7 @@ public:
                 XtVaSetValues(this->_widget, "enableMultiKeyBindings", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableMultiKeyBindings() {
+Boolean getEnableMultiKeyBindings() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableMultiKeyBindings", &value, nullptr);
                     return value;
@@ -1162,7 +1162,7 @@ public:
                 XtVaSetValues(this->_widget, "enableThinThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableThinThickness() {
+Boolean getEnableThinThickness() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableThinThickness", &value, nullptr);
                     return value;
@@ -1171,7 +1171,7 @@ public:
                 XtVaSetValues(this->_widget, "enableToggleColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableToggleColor() {
+Boolean getEnableToggleColor() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableToggleColor", &value, nullptr);
                     return value;
@@ -1180,7 +1180,7 @@ public:
                 XtVaSetValues(this->_widget, "enableToggleVisual", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableToggleVisual() {
+Boolean getEnableToggleVisual() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableToggleVisual", &value, nullptr);
                     return value;
@@ -1189,7 +1189,7 @@ public:
                 XtVaSetValues(this->_widget, "enableUnselectableDrag", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEnableUnselectableDrag() {
+Boolean getEnableUnselectableDrag() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "enableUnselectableDrag", &value, nullptr);
                     return value;
@@ -1198,7 +1198,7 @@ public:
                 XtVaSetValues(this->_widget, "enableWarp", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getEnableWarp() {
+XtEnum getEnableWarp() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "enableWarp", &value, nullptr);
                     return value;
@@ -1207,7 +1207,7 @@ public:
                 XtVaSetValues(this->_widget, "iconPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getIconPixmap() {
+Pixmap getIconPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "iconPixmap", &value, nullptr);
                     return value;
@@ -1216,33 +1216,33 @@ public:
                 XtVaSetValues(this->_widget, "motifVersion", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMotifVersion() {
+int getMotifVersion() {
                     int value;
                     XtVaGetValues(this->_widget, "motifVersion", &value, nullptr);
                     return value;
                 }
     Derived& addNoFontCallback(std::function<void(XtPointer)> callback) {
-        addCallback("noFontCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("noFontCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNoFontCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "noFontCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNoFontCallback() {
+XtCallbackList getNoFontCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "noFontCallback", &value, nullptr);
                     return value;
                 }
     Derived& addNoRenditionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("noRenditionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("noRenditionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNoRenditionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "noRenditionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNoRenditionCallback() {
+XtCallbackList getNoRenditionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "noRenditionCallback", &value, nullptr);
                     return value;
@@ -1251,31 +1251,31 @@ public:
                 XtVaSetValues(this->_widget, "userData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getUserData() {
+XtPointer getUserData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "userData", &value, nullptr);
                     return value;
                 }
-};
-class CXmDisplay : public CXmDisplayImpl<CXmDisplay> {
-public:
-    using CXmDisplayImpl<CXmDisplay>::CXmDisplayImpl;
-    static CXmDisplay create(Widget parent, const char* name) {
-        return CXmDisplay(XtCreateWidget(name, xmDisplayClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDisplay : public CXmDisplayImpl<CXmDisplay> {
+            public:
+                using CXmDisplayImpl<CXmDisplay>::CXmDisplayImpl;
+                static CXmDisplay create(Widget parent, const char* name) {
+                    return CXmDisplay(XtCreateWidget(name, xmDisplayClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDragContextImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setBlendModel(unsigned char value) {
+            template <typename Derived> class CXmDragContextImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setBlendModel(unsigned char value) {
                 XtVaSetValues(this->_widget, "blendModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getBlendModel() {
+unsigned char getBlendModel() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "blendModel", &value, nullptr);
                     return value;
@@ -1284,7 +1284,7 @@ public:
                 XtVaSetValues(this->_widget, "clientData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getClientData() {
+XtPointer getClientData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "clientData", &value, nullptr);
                     return value;
@@ -1293,7 +1293,7 @@ public:
                 XtVaSetValues(this->_widget, "convertProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmConvertSelectionRec getConvertProc() {
+XmConvertSelectionRec getConvertProc() {
                     XmConvertSelectionRec value;
                     XtVaGetValues(this->_widget, "convertProc", &value, nullptr);
                     return value;
@@ -1302,7 +1302,7 @@ public:
                 XtVaSetValues(this->_widget, "cursorBackground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getCursorBackground() {
+Pixel getCursorBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "cursorBackground", &value, nullptr);
                     return value;
@@ -1311,33 +1311,33 @@ public:
                 XtVaSetValues(this->_widget, "cursorForeground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getCursorForeground() {
+Pixel getCursorForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "cursorForeground", &value, nullptr);
                     return value;
                 }
     Derived& addDragDropFinishCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dragDropFinishCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dragDropFinishCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDragDropFinishCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dragDropFinishCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDragDropFinishCallback() {
+XtCallbackList getDragDropFinishCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dragDropFinishCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDragMotionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dragMotionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dragMotionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDragMotionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dragMotionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDragMotionCallback() {
+XtCallbackList getDragMotionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dragMotionCallback", &value, nullptr);
                     return value;
@@ -1346,59 +1346,59 @@ public:
                 XtVaSetValues(this->_widget, "dragOperations", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDragOperations() {
+unsigned char getDragOperations() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dragOperations", &value, nullptr);
                     return value;
                 }
     Derived& addDropFinishCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dropFinishCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dropFinishCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDropFinishCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dropFinishCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDropFinishCallback() {
+XtCallbackList getDropFinishCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dropFinishCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDropSiteEnterCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dropSiteEnterCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dropSiteEnterCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDropSiteEnterCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dropSiteEnterCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDropSiteEnterCallback() {
+XtCallbackList getDropSiteEnterCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dropSiteEnterCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDropSiteLeaveCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dropSiteLeaveCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dropSiteLeaveCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDropSiteLeaveCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dropSiteLeaveCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDropSiteLeaveCallback() {
+XtCallbackList getDropSiteLeaveCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dropSiteLeaveCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDropStartCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dropStartCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dropStartCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDropStartCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dropStartCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDropStartCallback() {
+XtCallbackList getDropStartCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dropStartCallback", &value, nullptr);
                     return value;
@@ -1407,7 +1407,7 @@ public:
                 XtVaSetValues(this->_widget, "exportTargets", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Atom * getExportTargets() {
+Atom * getExportTargets() {
                     Atom * value;
                     XtVaGetValues(this->_widget, "exportTargets", &value, nullptr);
                     return value;
@@ -1416,7 +1416,7 @@ public:
                 XtVaSetValues(this->_widget, "iccHandle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Atom getIccHandle() {
+Atom getIccHandle() {
                     Atom value;
                     XtVaGetValues(this->_widget, "iccHandle", &value, nullptr);
                     return value;
@@ -1425,7 +1425,7 @@ public:
                 XtVaSetValues(this->_widget, "incremental", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getIncremental() {
+Boolean getIncremental() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "incremental", &value, nullptr);
                     return value;
@@ -1434,7 +1434,7 @@ public:
                 XtVaSetValues(this->_widget, "invalidCursorForeground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getInvalidCursorForeground() {
+Pixel getInvalidCursorForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "invalidCursorForeground", &value, nullptr);
                     return value;
@@ -1443,7 +1443,7 @@ public:
                 XtVaSetValues(this->_widget, "noneCursorForeground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getNoneCursorForeground() {
+Pixel getNoneCursorForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "noneCursorForeground", &value, nullptr);
                     return value;
@@ -1452,20 +1452,20 @@ public:
                 XtVaSetValues(this->_widget, "numExportTargets", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal getNumExportTargets() {
+Cardinal getNumExportTargets() {
                     Cardinal value;
                     XtVaGetValues(this->_widget, "numExportTargets", &value, nullptr);
                     return value;
                 }
     Derived& addOperationChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("operationChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("operationChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setOperationChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "operationChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getOperationChangedCallback() {
+XtCallbackList getOperationChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "operationChangedCallback", &value, nullptr);
                     return value;
@@ -1474,7 +1474,7 @@ public:
                 XtVaSetValues(this->_widget, "operationCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getOperationCursorIcon() {
+XmDragIconObject getOperationCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "operationCursorIcon", &value, nullptr);
                     return value;
@@ -1483,7 +1483,7 @@ public:
                 XtVaSetValues(this->_widget, "sourceCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getSourceCursorIcon() {
+XmDragIconObject getSourceCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "sourceCursorIcon", &value, nullptr);
                     return value;
@@ -1492,7 +1492,7 @@ public:
                 XtVaSetValues(this->_widget, "sourceIsExternal", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getSourceIsExternal() {
+Boolean getSourceIsExternal() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "sourceIsExternal", &value, nullptr);
                     return value;
@@ -1501,7 +1501,7 @@ public:
                 XtVaSetValues(this->_widget, "sourcePixmapIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getSourcePixmapIcon() {
+XmDragIconObject getSourcePixmapIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "sourcePixmapIcon", &value, nullptr);
                     return value;
@@ -1510,7 +1510,7 @@ public:
                 XtVaSetValues(this->_widget, "sourceWidget", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getSourceWidget() {
+Widget getSourceWidget() {
                     Widget value;
                     XtVaGetValues(this->_widget, "sourceWidget", &value, nullptr);
                     return value;
@@ -1519,7 +1519,7 @@ public:
                 XtVaSetValues(this->_widget, "sourceWindow", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Window getSourceWindow() {
+Window getSourceWindow() {
                     Window value;
                     XtVaGetValues(this->_widget, "sourceWindow", &value, nullptr);
                     return value;
@@ -1528,7 +1528,7 @@ public:
                 XtVaSetValues(this->_widget, "startTime", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Time getStartTime() {
+Time getStartTime() {
                     Time value;
                     XtVaGetValues(this->_widget, "startTime", &value, nullptr);
                     return value;
@@ -1537,33 +1537,33 @@ public:
                 XtVaSetValues(this->_widget, "stateCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getStateCursorIcon() {
+XmDragIconObject getStateCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "stateCursorIcon", &value, nullptr);
                     return value;
                 }
     Derived& addTopLevelEnterCallback(std::function<void(XtPointer)> callback) {
-        addCallback("topLevelEnterCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("topLevelEnterCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setTopLevelEnterCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "topLevelEnterCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getTopLevelEnterCallback() {
+XtCallbackList getTopLevelEnterCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "topLevelEnterCallback", &value, nullptr);
                     return value;
                 }
     Derived& addTopLevelLeaveCallback(std::function<void(XtPointer)> callback) {
-        addCallback("topLevelLeaveCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("topLevelLeaveCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setTopLevelLeaveCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "topLevelLeaveCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getTopLevelLeaveCallback() {
+XtCallbackList getTopLevelLeaveCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "topLevelLeaveCallback", &value, nullptr);
                     return value;
@@ -1572,31 +1572,31 @@ public:
                 XtVaSetValues(this->_widget, "validCursorForeground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getValidCursorForeground() {
+Pixel getValidCursorForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "validCursorForeground", &value, nullptr);
                     return value;
                 }
-};
-class CXmDragContext : public CXmDragContextImpl<CXmDragContext> {
-public:
-    using CXmDragContextImpl<CXmDragContext>::CXmDragContextImpl;
-    static CXmDragContext create(Widget parent, const char* name) {
-        return CXmDragContext(XtCreateWidget(name, xmDragContextClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDragContext : public CXmDragContextImpl<CXmDragContext> {
+            public:
+                using CXmDragContextImpl<CXmDragContext>::CXmDragContextImpl;
+                static CXmDragContext create(Widget parent, const char* name) {
+                    return CXmDragContext(XtCreateWidget(name, xmDragContextClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDropSiteManagerImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setClientData(XtPointer value) {
+            template <typename Derived> class CXmDropSiteManagerImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setClientData(XtPointer value) {
                 XtVaSetValues(this->_widget, "clientData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getClientData() {
+XtPointer getClientData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "clientData", &value, nullptr);
                     return value;
@@ -1605,7 +1605,7 @@ public:
                 XtVaSetValues(this->_widget, "notifyProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackProc getNotifyProc() {
+XtCallbackProc getNotifyProc() {
                     XtCallbackProc value;
                     XtVaGetValues(this->_widget, "notifyProc", &value, nullptr);
                     return value;
@@ -1614,31 +1614,31 @@ public:
                 XtVaSetValues(this->_widget, "treeUpdateProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackProc getTreeUpdateProc() {
+XtCallbackProc getTreeUpdateProc() {
                     XtCallbackProc value;
                     XtVaGetValues(this->_widget, "treeUpdateProc", &value, nullptr);
                     return value;
                 }
-};
-class CXmDropSiteManager : public CXmDropSiteManagerImpl<CXmDropSiteManager> {
-public:
-    using CXmDropSiteManagerImpl<CXmDropSiteManager>::CXmDropSiteManagerImpl;
-    static CXmDropSiteManager create(Widget parent, const char* name) {
-        return CXmDropSiteManager(XtCreateWidget(name, xmDropSiteManagerObjectClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDropSiteManager : public CXmDropSiteManagerImpl<CXmDropSiteManager> {
+            public:
+                using CXmDropSiteManagerImpl<CXmDropSiteManager>::CXmDropSiteManagerImpl;
+                static CXmDropSiteManager create(Widget parent, const char* name) {
+                    return CXmDropSiteManager(XtCreateWidget(name, xmDropSiteManagerObjectClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDropTransferImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setDropTransfers(XmDropTransferEntry value) {
+            template <typename Derived> class CXmDropTransferImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setDropTransfers(XmDropTransferEntry value) {
                 XtVaSetValues(this->_widget, "dropTransfers", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDropTransferEntry getDropTransfers() {
+XmDropTransferEntry getDropTransfers() {
                     XmDropTransferEntry value;
                     XtVaGetValues(this->_widget, "dropTransfers", &value, nullptr);
                     return value;
@@ -1647,7 +1647,7 @@ public:
                 XtVaSetValues(this->_widget, "incremental", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getIncremental() {
+Boolean getIncremental() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "incremental", &value, nullptr);
                     return value;
@@ -1656,7 +1656,7 @@ public:
                 XtVaSetValues(this->_widget, "numDropTransfers", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal getNumDropTransfers() {
+Cardinal getNumDropTransfers() {
                     Cardinal value;
                     XtVaGetValues(this->_widget, "numDropTransfers", &value, nullptr);
                     return value;
@@ -1665,7 +1665,7 @@ public:
                 XtVaSetValues(this->_widget, "transferProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtSelectionCallbackProc getTransferProc() {
+XtSelectionCallbackProc getTransferProc() {
                     XtSelectionCallbackProc value;
                     XtVaGetValues(this->_widget, "transferProc", &value, nullptr);
                     return value;
@@ -1674,31 +1674,31 @@ public:
                 XtVaSetValues(this->_widget, "transferStatus", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getTransferStatus() {
+unsigned char getTransferStatus() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "transferStatus", &value, nullptr);
                     return value;
                 }
-};
-class CXmDropTransfer : public CXmDropTransferImpl<CXmDropTransfer> {
-public:
-    using CXmDropTransferImpl<CXmDropTransfer>::CXmDropTransferImpl;
-    static CXmDropTransfer create(Widget parent, const char* name) {
-        return CXmDropTransfer(XtCreateWidget(name, xmDropTransferObjectClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDropTransfer : public CXmDropTransferImpl<CXmDropTransfer> {
+            public:
+                using CXmDropTransferImpl<CXmDropTransfer>::CXmDropTransferImpl;
+                static CXmDropTransfer create(Widget parent, const char* name) {
+                    return CXmDropTransfer(XtCreateWidget(name, xmDropTransferObjectClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmMenuShellImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setAnimate(Boolean value) {
+            template <typename Derived> class CXmMenuShellImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setAnimate(Boolean value) {
                 XtVaSetValues(this->_widget, "animate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAnimate() {
+Boolean getAnimate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "animate", &value, nullptr);
                     return value;
@@ -1707,7 +1707,7 @@ public:
                 XtVaSetValues(this->_widget, "buttonFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getButtonFontList() {
+XmFontList getButtonFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "buttonFontList", &value, nullptr);
                     return value;
@@ -1716,7 +1716,7 @@ public:
                 XtVaSetValues(this->_widget, "buttonRenderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getButtonRenderTable() {
+XmFontList getButtonRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "buttonRenderTable", &value, nullptr);
                     return value;
@@ -1725,7 +1725,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getDefaultFontList() {
+XmFontList getDefaultFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "defaultFontList", &value, nullptr);
                     return value;
@@ -1734,7 +1734,7 @@ public:
                 XtVaSetValues(this->_widget, "labelFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getLabelFontList() {
+XmFontList getLabelFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "labelFontList", &value, nullptr);
                     return value;
@@ -1743,7 +1743,7 @@ public:
                 XtVaSetValues(this->_widget, "labelRenderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getLabelRenderTable() {
+XmFontList getLabelRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "labelRenderTable", &value, nullptr);
                     return value;
@@ -1752,7 +1752,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDirection getLayoutDirection() {
+XmDirection getLayoutDirection() {
                     XmDirection value;
                     XtVaGetValues(this->_widget, "layoutDirection", &value, nullptr);
                     return value;
@@ -1761,31 +1761,31 @@ public:
                 XtVaSetValues(this->_widget, "visual", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Visual * getVisual() {
+Visual * getVisual() {
                     Visual * value;
                     XtVaGetValues(this->_widget, "visual", &value, nullptr);
                     return value;
                 }
-};
-class CXmMenuShell : public CXmMenuShellImpl<CXmMenuShell> {
-public:
-    using CXmMenuShellImpl<CXmMenuShell>::CXmMenuShellImpl;
-    static CXmMenuShell create(Widget parent, const char* name) {
-        return CXmMenuShell(XtCreateWidget(name, xmMenuShellWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmMenuShell : public CXmMenuShellImpl<CXmMenuShell> {
+            public:
+                using CXmMenuShellImpl<CXmMenuShell>::CXmMenuShellImpl;
+                static CXmMenuShell create(Widget parent, const char* name) {
+                    return CXmMenuShell(XtCreateWidget(name, xmMenuShellWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmScreenImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setBitmapConversionModel(XtEnum value) {
+            template <typename Derived> class CXmScreenImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setBitmapConversionModel(XtEnum value) {
                 XtVaSetValues(this->_widget, "bitmapConversionModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getBitmapConversionModel() {
+XtEnum getBitmapConversionModel() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "bitmapConversionModel", &value, nullptr);
                     return value;
@@ -1794,7 +1794,7 @@ public:
                 XtVaSetValues(this->_widget, "colorAllocationProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmAllocColorProc getColorAllocationProc() {
+XmAllocColorProc getColorAllocationProc() {
                     XmAllocColorProc value;
                     XtVaGetValues(this->_widget, "colorAllocationProc", &value, nullptr);
                     return value;
@@ -1803,7 +1803,7 @@ public:
                 XtVaSetValues(this->_widget, "colorCalculationProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmScreenColorProc getColorCalculationProc() {
+XmScreenColorProc getColorCalculationProc() {
                     XmScreenColorProc value;
                     XtVaGetValues(this->_widget, "colorCalculationProc", &value, nullptr);
                     return value;
@@ -1812,7 +1812,7 @@ public:
                 XtVaSetValues(this->_widget, "darkThreshold", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getDarkThreshold() {
+int getDarkThreshold() {
                     int value;
                     XtVaGetValues(this->_widget, "darkThreshold", &value, nullptr);
                     return value;
@@ -1821,7 +1821,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultCopyCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultCopyCursorIcon() {
+XmDragIconObject getDefaultCopyCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultCopyCursorIcon", &value, nullptr);
                     return value;
@@ -1830,7 +1830,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultInvalidCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultInvalidCursorIcon() {
+XmDragIconObject getDefaultInvalidCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultInvalidCursorIcon", &value, nullptr);
                     return value;
@@ -1839,7 +1839,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultLinkCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultLinkCursorIcon() {
+XmDragIconObject getDefaultLinkCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultLinkCursorIcon", &value, nullptr);
                     return value;
@@ -1848,7 +1848,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultMoveCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultMoveCursorIcon() {
+XmDragIconObject getDefaultMoveCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultMoveCursorIcon", &value, nullptr);
                     return value;
@@ -1857,7 +1857,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultNoneCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultNoneCursorIcon() {
+XmDragIconObject getDefaultNoneCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultNoneCursorIcon", &value, nullptr);
                     return value;
@@ -1866,7 +1866,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultSourceCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultSourceCursorIcon() {
+XmDragIconObject getDefaultSourceCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultSourceCursorIcon", &value, nullptr);
                     return value;
@@ -1875,7 +1875,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultValidCursorIcon", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDragIconObject getDefaultValidCursorIcon() {
+XmDragIconObject getDefaultValidCursorIcon() {
                     XmDragIconObject value;
                     XtVaGetValues(this->_widget, "defaultValidCursorIcon", &value, nullptr);
                     return value;
@@ -1884,7 +1884,7 @@ public:
                 XtVaSetValues(this->_widget, "font", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XFontStruct * getFont() {
+XFontStruct * getFont() {
                     XFontStruct * value;
                     XtVaGetValues(this->_widget, "font", &value, nullptr);
                     return value;
@@ -1893,7 +1893,7 @@ public:
                 XtVaSetValues(this->_widget, "foregroundThreshold", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getForegroundThreshold() {
+int getForegroundThreshold() {
                     int value;
                     XtVaGetValues(this->_widget, "foregroundThreshold", &value, nullptr);
                     return value;
@@ -1902,7 +1902,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalFontUnit", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getHorizontalFontUnit() {
+int getHorizontalFontUnit() {
                     int value;
                     XtVaGetValues(this->_widget, "horizontalFontUnit", &value, nullptr);
                     return value;
@@ -1911,7 +1911,7 @@ public:
                 XtVaSetValues(this->_widget, "insensitiveStippleBitmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getInsensitiveStippleBitmap() {
+Pixmap getInsensitiveStippleBitmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "insensitiveStippleBitmap", &value, nullptr);
                     return value;
@@ -1920,7 +1920,7 @@ public:
                 XtVaSetValues(this->_widget, "lightThreshold", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getLightThreshold() {
+int getLightThreshold() {
                     int value;
                     XtVaGetValues(this->_widget, "lightThreshold", &value, nullptr);
                     return value;
@@ -1929,7 +1929,7 @@ public:
                 XtVaSetValues(this->_widget, "menuCursor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cursor getMenuCursor() {
+Cursor getMenuCursor() {
                     Cursor value;
                     XtVaGetValues(this->_widget, "menuCursor", &value, nullptr);
                     return value;
@@ -1938,7 +1938,7 @@ public:
                 XtVaSetValues(this->_widget, "moveOpaque", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMoveOpaque() {
+unsigned char getMoveOpaque() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "moveOpaque", &value, nullptr);
                     return value;
@@ -1947,7 +1947,7 @@ public:
                 XtVaSetValues(this->_widget, "unpostBehavior", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getUnpostBehavior() {
+unsigned char getUnpostBehavior() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "unpostBehavior", &value, nullptr);
                     return value;
@@ -1956,7 +1956,7 @@ public:
                 XtVaSetValues(this->_widget, "userData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtPointer getUserData() {
+XtPointer getUserData() {
                     XtPointer value;
                     XtVaGetValues(this->_widget, "userData", &value, nullptr);
                     return value;
@@ -1965,31 +1965,31 @@ public:
                 XtVaSetValues(this->_widget, "verticalFontUnit", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getVerticalFontUnit() {
+int getVerticalFontUnit() {
                     int value;
                     XtVaGetValues(this->_widget, "verticalFontUnit", &value, nullptr);
                     return value;
                 }
-};
-class CXmScreen : public CXmScreenImpl<CXmScreen> {
-public:
-    using CXmScreenImpl<CXmScreen>::CXmScreenImpl;
-    static CXmScreen create(Widget parent, const char* name) {
-        return CXmScreen(XtCreateWidget(name, xmScreenClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmScreen : public CXmScreenImpl<CXmScreen> {
+            public:
+                using CXmScreenImpl<CXmScreen>::CXmScreenImpl;
+                static CXmScreen create(Widget parent, const char* name) {
+                    return CXmScreen(XtCreateWidget(name, xmScreenClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmSlideContextImpl : public CWidgetImpl<Derived> {
-public:
-    using CWidgetImpl<Derived>::CWidgetImpl;
-    using CWidgetImpl<Derived>::addCallback;
-    Derived& setSlideDestHeight(Dimension value) {
+            template <typename Derived> class CXmSlideContextImpl : public CWidgetImpl<Derived> {
+            public:
+                using CWidgetImpl<Derived>::CWidgetImpl;
+                using CWidgetImpl<Derived>::addCallback;
+                    Derived& setSlideDestHeight(Dimension value) {
                 XtVaSetValues(this->_widget, "slideDestHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSlideDestHeight() {
+Dimension getSlideDestHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "slideDestHeight", &value, nullptr);
                     return value;
@@ -1998,7 +1998,7 @@ public:
                 XtVaSetValues(this->_widget, "slideDestWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSlideDestWidth() {
+Dimension getSlideDestWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "slideDestWidth", &value, nullptr);
                     return value;
@@ -2007,7 +2007,7 @@ public:
                 XtVaSetValues(this->_widget, "slideDestX", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getSlideDestX() {
+Position getSlideDestX() {
                     Position value;
                     XtVaGetValues(this->_widget, "slideDestX", &value, nullptr);
                     return value;
@@ -2016,20 +2016,20 @@ public:
                 XtVaSetValues(this->_widget, "slideDestY", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getSlideDestY() {
+Position getSlideDestY() {
                     Position value;
                     XtVaGetValues(this->_widget, "slideDestY", &value, nullptr);
                     return value;
                 }
     Derived& addSlideFinishCallback(std::function<void(XtPointer)> callback) {
-        addCallback("slideFinishCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("slideFinishCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSlideFinishCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "slideFinishCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSlideFinishCallback() {
+XtCallbackList getSlideFinishCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "slideFinishCallback", &value, nullptr);
                     return value;
@@ -2038,20 +2038,20 @@ public:
                 XtVaSetValues(this->_widget, "slideInterval", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned long getSlideInterval() {
+unsigned long getSlideInterval() {
                     unsigned long value;
                     XtVaGetValues(this->_widget, "slideInterval", &value, nullptr);
                     return value;
                 }
     Derived& addSlideMotionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("slideMotionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("slideMotionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSlideMotionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "slideMotionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSlideMotionCallback() {
+XtCallbackList getSlideMotionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "slideMotionCallback", &value, nullptr);
                     return value;
@@ -2060,31 +2060,31 @@ public:
                 XtVaSetValues(this->_widget, "slideWidget", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getSlideWidget() {
+Widget getSlideWidget() {
                     Widget value;
                     XtVaGetValues(this->_widget, "slideWidget", &value, nullptr);
                     return value;
                 }
-};
-class CXmSlideContext : public CXmSlideContextImpl<CXmSlideContext> {
-public:
-    using CXmSlideContextImpl<CXmSlideContext>::CXmSlideContextImpl;
-    static CXmSlideContext create(Widget parent, const char* name) {
-        return CXmSlideContext(XtCreateWidget(name, xmSlideContextWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmSlideContext : public CXmSlideContextImpl<CXmSlideContext> {
+            public:
+                using CXmSlideContextImpl<CXmSlideContext>::CXmSlideContextImpl;
+                static CXmSlideContext create(Widget parent, const char* name) {
+                    return CXmSlideContext(XtCreateWidget(name, xmSlideContextWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDragOverShellImpl : public CVendorShellImpl<Derived> {
-public:
-    using CVendorShellImpl<Derived>::CVendorShellImpl;
-    using CVendorShellImpl<Derived>::addCallback;
-    Derived& setDragOverActiveMode(unsigned char value) {
+            template <typename Derived> class CXmDragOverShellImpl : public CVendorShellImpl<Derived> {
+            public:
+                using CVendorShellImpl<Derived>::CVendorShellImpl;
+                using CVendorShellImpl<Derived>::addCallback;
+                    Derived& setDragOverActiveMode(unsigned char value) {
                 XtVaSetValues(this->_widget, "dragOverActiveMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDragOverActiveMode() {
+unsigned char getDragOverActiveMode() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dragOverActiveMode", &value, nullptr);
                     return value;
@@ -2093,7 +2093,7 @@ public:
                 XtVaSetValues(this->_widget, "dragOverMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDragOverMode() {
+unsigned char getDragOverMode() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dragOverMode", &value, nullptr);
                     return value;
@@ -2102,7 +2102,7 @@ public:
                 XtVaSetValues(this->_widget, "hotX", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getHotX() {
+Position getHotX() {
                     Position value;
                     XtVaGetValues(this->_widget, "hotX", &value, nullptr);
                     return value;
@@ -2111,7 +2111,7 @@ public:
                 XtVaSetValues(this->_widget, "hotY", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Position getHotY() {
+Position getHotY() {
                     Position value;
                     XtVaGetValues(this->_widget, "hotY", &value, nullptr);
                     return value;
@@ -2120,7 +2120,7 @@ public:
                 XtVaSetValues(this->_widget, "installColormap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getInstallColormap() {
+Boolean getInstallColormap() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "installColormap", &value, nullptr);
                     return value;
@@ -2129,7 +2129,7 @@ public:
                 XtVaSetValues(this->_widget, "overrideRedirect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getOverrideRedirect() {
+Boolean getOverrideRedirect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "overrideRedirect", &value, nullptr);
                     return value;
@@ -2138,31 +2138,31 @@ public:
                 XtVaSetValues(this->_widget, "saveUnder", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getSaveUnder() {
+Boolean getSaveUnder() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "saveUnder", &value, nullptr);
                     return value;
                 }
-};
-class CXmDragOverShell : public CXmDragOverShellImpl<CXmDragOverShell> {
-public:
-    using CXmDragOverShellImpl<CXmDragOverShell>::CXmDragOverShellImpl;
-    static CXmDragOverShell create(Widget parent, const char* name) {
-        return CXmDragOverShell(XtCreateWidget(name, xmDragOverShellWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDragOverShell : public CXmDragOverShellImpl<CXmDragOverShell> {
+            public:
+                using CXmDragOverShellImpl<CXmDragOverShell>::CXmDragOverShellImpl;
+                static CXmDragOverShell create(Widget parent, const char* name) {
+                    return CXmDragOverShell(XtCreateWidget(name, xmDragOverShellWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmGrabShellImpl : public CVendorShellImpl<Derived> {
-public:
-    using CVendorShellImpl<Derived>::CVendorShellImpl;
-    using CVendorShellImpl<Derived>::addCallback;
-    Derived& setAllowShellResize(Boolean value) {
+            template <typename Derived> class CXmGrabShellImpl : public CVendorShellImpl<Derived> {
+            public:
+                using CVendorShellImpl<Derived>::CVendorShellImpl;
+                using CVendorShellImpl<Derived>::addCallback;
+                    Derived& setAllowShellResize(Boolean value) {
                 XtVaSetValues(this->_widget, "allowShellResize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAllowShellResize() {
+Boolean getAllowShellResize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "allowShellResize", &value, nullptr);
                     return value;
@@ -2171,7 +2171,7 @@ public:
                 XtVaSetValues(this->_widget, "background", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackground() {
+Pixel getBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "background", &value, nullptr);
                     return value;
@@ -2180,7 +2180,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBottomShadowColor() {
+Pixel getBottomShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "bottomShadowColor", &value, nullptr);
                     return value;
@@ -2189,7 +2189,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBottomShadowPixmap() {
+Pixmap getBottomShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "bottomShadowPixmap", &value, nullptr);
                     return value;
@@ -2198,7 +2198,7 @@ public:
                 XtVaSetValues(this->_widget, "grabStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getGrabStyle() {
+int getGrabStyle() {
                     int value;
                     XtVaGetValues(this->_widget, "grabStyle", &value, nullptr);
                     return value;
@@ -2207,7 +2207,7 @@ public:
                 XtVaSetValues(this->_widget, "overrideRedirect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getOverrideRedirect() {
+Boolean getOverrideRedirect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "overrideRedirect", &value, nullptr);
                     return value;
@@ -2216,7 +2216,7 @@ public:
                 XtVaSetValues(this->_widget, "ownerEvents", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getOwnerEvents() {
+Boolean getOwnerEvents() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "ownerEvents", &value, nullptr);
                     return value;
@@ -2225,7 +2225,7 @@ public:
                 XtVaSetValues(this->_widget, "saveUnder", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getSaveUnder() {
+Boolean getSaveUnder() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "saveUnder", &value, nullptr);
                     return value;
@@ -2234,7 +2234,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -2243,7 +2243,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTopShadowColor() {
+Pixel getTopShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "topShadowColor", &value, nullptr);
                     return value;
@@ -2252,7 +2252,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getTopShadowPixmap() {
+Pixmap getTopShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "topShadowPixmap", &value, nullptr);
                     return value;
@@ -2261,7 +2261,7 @@ public:
                 XtVaSetValues(this->_widget, "transient", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTransient() {
+Boolean getTransient() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "transient", &value, nullptr);
                     return value;
@@ -2270,48 +2270,48 @@ public:
                 XtVaSetValues(this->_widget, "waitforwm", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getWaitforwm() {
+Boolean getWaitforwm() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "waitforwm", &value, nullptr);
                     return value;
                 }
-};
-class CXmGrabShell : public CXmGrabShellImpl<CXmGrabShell> {
-public:
-    using CXmGrabShellImpl<CXmGrabShell>::CXmGrabShellImpl;
-    static CXmGrabShell create(Widget parent, const char* name) {
-        return CXmGrabShell(XtCreateWidget(name, xmGrabShellWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmGrabShell : public CXmGrabShellImpl<CXmGrabShell> {
+            public:
+                using CXmGrabShellImpl<CXmGrabShell>::CXmGrabShellImpl;
+                static CXmGrabShell create(Widget parent, const char* name) {
+                    return CXmGrabShell(XtCreateWidget(name, xmGrabShellWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmArrowButtonGadgetImpl : public CXmGadgetImpl<Derived> {
-public:
-    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
-    using CXmGadgetImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmArrowButtonGadgetImpl : public CXmGadgetImpl<Derived> {
+            public:
+                using CXmGadgetImpl<Derived>::CXmGadgetImpl;
+                using CXmGadgetImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
@@ -2320,7 +2320,7 @@ public:
                 XtVaSetValues(this->_widget, "arrowDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getArrowDirection() {
+unsigned char getArrowDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "arrowDirection", &value, nullptr);
                     return value;
@@ -2329,7 +2329,7 @@ public:
                 XtVaSetValues(this->_widget, "background", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackground() {
+Pixel getBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "background", &value, nullptr);
                     return value;
@@ -2338,7 +2338,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBottomShadowColor() {
+Pixel getBottomShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "bottomShadowColor", &value, nullptr);
                     return value;
@@ -2347,7 +2347,7 @@ public:
                 XtVaSetValues(this->_widget, "bottomShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBottomShadowPixmap() {
+Pixmap getBottomShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "bottomShadowPixmap", &value, nullptr);
                     return value;
@@ -2356,20 +2356,20 @@ public:
                 XtVaSetValues(this->_widget, "detailShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getDetailShadowThickness() {
+Dimension getDetailShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
@@ -2378,7 +2378,7 @@ public:
                 XtVaSetValues(this->_widget, "foreground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getForeground() {
+Pixel getForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "foreground", &value, nullptr);
                     return value;
@@ -2387,7 +2387,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getHighlightColor() {
+Pixel getHighlightColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "highlightColor", &value, nullptr);
                     return value;
@@ -2396,7 +2396,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getHighlightPixmap() {
+Pixmap getHighlightPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "highlightPixmap", &value, nullptr);
                     return value;
@@ -2405,7 +2405,7 @@ public:
                 XtVaSetValues(this->_widget, "multiClick", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMultiClick() {
+unsigned char getMultiClick() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "multiClick", &value, nullptr);
                     return value;
@@ -2414,7 +2414,7 @@ public:
                 XtVaSetValues(this->_widget, "topShadowColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTopShadowColor() {
+Pixel getTopShadowColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "topShadowColor", &value, nullptr);
                     return value;
@@ -2423,31 +2423,31 @@ public:
                 XtVaSetValues(this->_widget, "topShadowPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getTopShadowPixmap() {
+Pixmap getTopShadowPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "topShadowPixmap", &value, nullptr);
                     return value;
                 }
-};
-class CXmArrowButtonGadget : public CXmArrowButtonGadgetImpl<CXmArrowButtonGadget> {
-public:
-    using CXmArrowButtonGadgetImpl<CXmArrowButtonGadget>::CXmArrowButtonGadgetImpl;
-    static CXmArrowButtonGadget create(Widget parent, const char* name) {
-        return CXmArrowButtonGadget(XtCreateWidget(name, xmArrowButtonGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmArrowButtonGadget : public CXmArrowButtonGadgetImpl<CXmArrowButtonGadget> {
+            public:
+                using CXmArrowButtonGadgetImpl<CXmArrowButtonGadget>::CXmArrowButtonGadgetImpl;
+                static CXmArrowButtonGadget create(Widget parent, const char* name) {
+                    return CXmArrowButtonGadget(XtCreateWidget(name, xmArrowButtonGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmIconGadgetImpl : public CXmGadgetImpl<Derived> {
-public:
-    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
-    using CXmGadgetImpl<Derived>::addCallback;
-    Derived& set_cache(XmIconGCacheObjPart * value) {
+            template <typename Derived> class CXmIconGadgetImpl : public CXmGadgetImpl<Derived> {
+            public:
+                using CXmGadgetImpl<Derived>::CXmGadgetImpl;
+                using CXmGadgetImpl<Derived>::addCallback;
+                    Derived& set_cache(XmIconGCacheObjPart * value) {
                 XtVaSetValues(this->_widget, ".cache", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmIconGCacheObjPart * get_cache() {
+XmIconGCacheObjPart * get_cache() {
                     XmIconGCacheObjPart * value;
                     XtVaGetValues(this->_widget, ".cache", &value, nullptr);
                     return value;
@@ -2456,7 +2456,7 @@ public:
                 XtVaSetValues(this->_widget, "detail", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getDetail() {
+XmString * getDetail() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "detail", &value, nullptr);
                     return value;
@@ -2465,7 +2465,7 @@ public:
                 XtVaSetValues(this->_widget, "detailCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal getDetailCount() {
+Cardinal getDetailCount() {
                     Cardinal value;
                     XtVaGetValues(this->_widget, "detailCount", &value, nullptr);
                     return value;
@@ -2474,7 +2474,7 @@ public:
                 XtVaSetValues(this->_widget, "labelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getLabelString() {
+XmString getLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "labelString", &value, nullptr);
                     return value;
@@ -2483,7 +2483,7 @@ public:
                 XtVaSetValues(this->_widget, "largeIconMask", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getLargeIconMask() {
+Pixmap getLargeIconMask() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "largeIconMask", &value, nullptr);
                     return value;
@@ -2492,7 +2492,7 @@ public:
                 XtVaSetValues(this->_widget, "largeIconPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getLargeIconPixmap() {
+Pixmap getLargeIconPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "largeIconPixmap", &value, nullptr);
                     return value;
@@ -2501,7 +2501,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -2510,7 +2510,7 @@ public:
                 XtVaSetValues(this->_widget, "smallIconMask", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getSmallIconMask() {
+Pixmap getSmallIconMask() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "smallIconMask", &value, nullptr);
                     return value;
@@ -2519,7 +2519,7 @@ public:
                 XtVaSetValues(this->_widget, "smallIconPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getSmallIconPixmap() {
+Pixmap getSmallIconPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "smallIconPixmap", &value, nullptr);
                     return value;
@@ -2528,7 +2528,7 @@ public:
                 XtVaSetValues(this->_widget, "viewType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getViewType() {
+unsigned char getViewType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "viewType", &value, nullptr);
                     return value;
@@ -2537,31 +2537,31 @@ public:
                 XtVaSetValues(this->_widget, "visualEmphasis", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getVisualEmphasis() {
+unsigned char getVisualEmphasis() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "visualEmphasis", &value, nullptr);
                     return value;
                 }
-};
-class CXmIconGadget : public CXmIconGadgetImpl<CXmIconGadget> {
-public:
-    using CXmIconGadgetImpl<CXmIconGadget>::CXmIconGadgetImpl;
-    static CXmIconGadget create(Widget parent, const char* name) {
-        return CXmIconGadget(XtCreateWidget(name, xmIconGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmIconGadget : public CXmIconGadgetImpl<CXmIconGadget> {
+            public:
+                using CXmIconGadgetImpl<CXmIconGadget>::CXmIconGadgetImpl;
+                static CXmIconGadget create(Widget parent, const char* name) {
+                    return CXmIconGadget(XtCreateWidget(name, xmIconGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmLabelGadgetImpl : public CXmGadgetImpl<Derived> {
-public:
-    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
-    using CXmGadgetImpl<Derived>::addCallback;
-    Derived& set_cache(XmLabelGCacheObjPart * value) {
+            template <typename Derived> class CXmLabelGadgetImpl : public CXmGadgetImpl<Derived> {
+            public:
+                using CXmGadgetImpl<Derived>::CXmGadgetImpl;
+                using CXmGadgetImpl<Derived>::addCallback;
+                    Derived& set_cache(XmLabelGCacheObjPart * value) {
                 XtVaSetValues(this->_widget, ".cache", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmLabelGCacheObjPart * get_cache() {
+XmLabelGCacheObjPart * get_cache() {
                     XmLabelGCacheObjPart * value;
                     XtVaGetValues(this->_widget, ".cache", &value, nullptr);
                     return value;
@@ -2570,7 +2570,7 @@ public:
                 XtVaSetValues(this->_widget, "accelerator", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    char * getAccelerator() {
+char * getAccelerator() {
                     char * value;
                     XtVaGetValues(this->_widget, "accelerator", &value, nullptr);
                     return value;
@@ -2579,7 +2579,7 @@ public:
                 XtVaSetValues(this->_widget, "acceleratorText", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    _XmString getAcceleratorText() {
+_XmString getAcceleratorText() {
                     _XmString value;
                     XtVaGetValues(this->_widget, "acceleratorText", &value, nullptr);
                     return value;
@@ -2588,7 +2588,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -2597,7 +2597,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -2606,7 +2606,7 @@ public:
                 XtVaSetValues(this->_widget, "labelInsensitivePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getLabelInsensitivePixmap() {
+Pixmap getLabelInsensitivePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "labelInsensitivePixmap", &value, nullptr);
                     return value;
@@ -2615,7 +2615,7 @@ public:
                 XtVaSetValues(this->_widget, "labelPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getLabelPixmap() {
+Pixmap getLabelPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "labelPixmap", &value, nullptr);
                     return value;
@@ -2624,7 +2624,7 @@ public:
                 XtVaSetValues(this->_widget, "labelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    _XmString getLabelString() {
+_XmString getLabelString() {
                     _XmString value;
                     XtVaGetValues(this->_widget, "labelString", &value, nullptr);
                     return value;
@@ -2633,7 +2633,7 @@ public:
                 XtVaSetValues(this->_widget, "mnemonic", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    KeySym getMnemonic() {
+KeySym getMnemonic() {
                     KeySym value;
                     XtVaGetValues(this->_widget, "mnemonic", &value, nullptr);
                     return value;
@@ -2642,7 +2642,7 @@ public:
                 XtVaSetValues(this->_widget, "mnemonicCharSet", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringCharSet getMnemonicCharSet() {
+XmStringCharSet getMnemonicCharSet() {
                     XmStringCharSet value;
                     XtVaGetValues(this->_widget, "mnemonicCharSet", &value, nullptr);
                     return value;
@@ -2651,7 +2651,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapPlacement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmPixmapPlacement getPixmapPlacement() {
+XmPixmapPlacement getPixmapPlacement() {
                     XmPixmapPlacement value;
                     XtVaGetValues(this->_widget, "pixmapPlacement", &value, nullptr);
                     return value;
@@ -2660,7 +2660,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapTextPadding", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getPixmapTextPadding() {
+Dimension getPixmapTextPadding() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "pixmapTextPadding", &value, nullptr);
                     return value;
@@ -2669,7 +2669,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -2678,7 +2678,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -2687,7 +2687,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -2696,31 +2696,31 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmLabelGadget : public CXmLabelGadgetImpl<CXmLabelGadget> {
-public:
-    using CXmLabelGadgetImpl<CXmLabelGadget>::CXmLabelGadgetImpl;
-    static CXmLabelGadget create(Widget parent, const char* name) {
-        return CXmLabelGadget(XtCreateWidget(name, xmLabelGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmLabelGadget : public CXmLabelGadgetImpl<CXmLabelGadget> {
+            public:
+                using CXmLabelGadgetImpl<CXmLabelGadget>::CXmLabelGadgetImpl;
+                static CXmLabelGadget create(Widget parent, const char* name) {
+                    return CXmLabelGadget(XtCreateWidget(name, xmLabelGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmSeparatorGadgetImpl : public CXmGadgetImpl<Derived> {
-public:
-    using CXmGadgetImpl<Derived>::CXmGadgetImpl;
-    using CXmGadgetImpl<Derived>::addCallback;
-    Derived& setHighlightThickness(Dimension value) {
+            template <typename Derived> class CXmSeparatorGadgetImpl : public CXmGadgetImpl<Derived> {
+            public:
+                using CXmGadgetImpl<Derived>::CXmGadgetImpl;
+                using CXmGadgetImpl<Derived>::addCallback;
+                    Derived& setHighlightThickness(Dimension value) {
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -2729,7 +2729,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -2738,48 +2738,48 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmSeparatorGadget : public CXmSeparatorGadgetImpl<CXmSeparatorGadget> {
-public:
-    using CXmSeparatorGadgetImpl<CXmSeparatorGadget>::CXmSeparatorGadgetImpl;
-    static CXmSeparatorGadget create(Widget parent, const char* name) {
-        return CXmSeparatorGadget(XtCreateWidget(name, xmSeparatorGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmSeparatorGadget : public CXmSeparatorGadgetImpl<CXmSeparatorGadget> {
+            public:
+                using CXmSeparatorGadgetImpl<CXmSeparatorGadget>::CXmSeparatorGadgetImpl;
+                static CXmSeparatorGadget create(Widget parent, const char* name) {
+                    return CXmSeparatorGadget(XtCreateWidget(name, xmSeparatorGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmArrowButtonImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmArrowButtonImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
@@ -2788,7 +2788,7 @@ public:
                 XtVaSetValues(this->_widget, "arrowDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getArrowDirection() {
+unsigned char getArrowDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "arrowDirection", &value, nullptr);
                     return value;
@@ -2797,20 +2797,20 @@ public:
                 XtVaSetValues(this->_widget, "detailShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getDetailShadowThickness() {
+Dimension getDetailShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
@@ -2819,31 +2819,31 @@ public:
                 XtVaSetValues(this->_widget, "multiClick", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMultiClick() {
+unsigned char getMultiClick() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "multiClick", &value, nullptr);
                     return value;
                 }
-};
-class CXmArrowButton : public CXmArrowButtonImpl<CXmArrowButton> {
-public:
-    using CXmArrowButtonImpl<CXmArrowButton>::CXmArrowButtonImpl;
-    static CXmArrowButton create(Widget parent, const char* name) {
-        return CXmArrowButton(XtCreateWidget(name, xmArrowButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmArrowButton : public CXmArrowButtonImpl<CXmArrowButton> {
+            public:
+                using CXmArrowButtonImpl<CXmArrowButton>::CXmArrowButtonImpl;
+                static CXmArrowButton create(Widget parent, const char* name) {
+                    return CXmArrowButton(XtCreateWidget(name, xmArrowButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmI18ListImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& setAlignment(unsigned char value) {
+            template <typename Derived> class CXmI18ListImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& setAlignment(unsigned char value) {
                 XtVaSetValues(this->_widget, "alignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getAlignment() {
+unsigned char getAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "alignment", &value, nullptr);
                     return value;
@@ -2852,20 +2852,20 @@ public:
                 XtVaSetValues(this->_widget, "columnTitles", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getColumnTitles() {
+XmString * getColumnTitles() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "columnTitles", &value, nullptr);
                     return value;
                 }
     Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback) {
-        addCallback("doubleClickCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("doubleClickCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDoubleClickCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "doubleClickCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDoubleClickCallback() {
+XtCallbackList getDoubleClickCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "doubleClickCallback", &value, nullptr);
                     return value;
@@ -2874,7 +2874,7 @@ public:
                 XtVaSetValues(this->_widget, "entryBackground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getEntryBackground() {
+Pixel getEntryBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "entryBackground", &value, nullptr);
                     return value;
@@ -2883,7 +2883,7 @@ public:
                 XtVaSetValues(this->_widget, "entryData", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmMultiListRowInfo * getEntryData() {
+XmMultiListRowInfo * getEntryData() {
                     XmMultiListRowInfo * value;
                     XtVaGetValues(this->_widget, "entryData", &value, nullptr);
                     return value;
@@ -2892,7 +2892,7 @@ public:
                 XtVaSetValues(this->_widget, "firstColumn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getFirstColumn() {
+short getFirstColumn() {
                     short value;
                     XtVaGetValues(this->_widget, "firstColumn", &value, nullptr);
                     return value;
@@ -2901,7 +2901,7 @@ public:
                 XtVaSetValues(this->_widget, "firstColumnPixmaps", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getFirstColumnPixmaps() {
+Boolean getFirstColumnPixmaps() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "firstColumnPixmaps", &value, nullptr);
                     return value;
@@ -2910,7 +2910,7 @@ public:
                 XtVaSetValues(this->_widget, "firstRow", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getFirstRow() {
+short getFirstRow() {
                     short value;
                     XtVaGetValues(this->_widget, "firstRow", &value, nullptr);
                     return value;
@@ -2919,7 +2919,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -2928,7 +2928,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalScrollBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getHorizontalScrollBar() {
+Widget getHorizontalScrollBar() {
                     Widget value;
                     XtVaGetValues(this->_widget, "horizontalScrollBar", &value, nullptr);
                     return value;
@@ -2937,7 +2937,7 @@ public:
                 XtVaSetValues(this->_widget, "is.entry.background.set", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getIs_entry_background_set() {
+Boolean getIs_entry_background_set() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "is.entry.background.set", &value, nullptr);
                     return value;
@@ -2946,7 +2946,7 @@ public:
                 XtVaSetValues(this->_widget, "newVisualStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getNewVisualStyle() {
+Boolean getNewVisualStyle() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "newVisualStyle", &value, nullptr);
                     return value;
@@ -2955,7 +2955,7 @@ public:
                 XtVaSetValues(this->_widget, "numColumns", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getNumColumns() {
+short getNumColumns() {
                     short value;
                     XtVaGetValues(this->_widget, "numColumns", &value, nullptr);
                     return value;
@@ -2964,7 +2964,7 @@ public:
                 XtVaSetValues(this->_widget, "numRows", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getNumRows() {
+short getNumRows() {
                     short value;
                     XtVaGetValues(this->_widget, "numRows", &value, nullptr);
                     return value;
@@ -2973,7 +2973,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -2982,7 +2982,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -2991,7 +2991,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedColumn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getSelectedColumn() {
+short getSelectedColumn() {
                     short value;
                     XtVaGetValues(this->_widget, "selectedColumn", &value, nullptr);
                     return value;
@@ -3000,20 +3000,20 @@ public:
                 XtVaSetValues(this->_widget, "selectionPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSelectionPolicy() {
+unsigned char getSelectionPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "selectionPolicy", &value, nullptr);
                     return value;
                 }
     Derived& addSingleSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("singleSelectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("singleSelectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSingleSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "singleSelectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSingleSelectionCallback() {
+XtCallbackList getSingleSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "singleSelectionCallback", &value, nullptr);
                     return value;
@@ -3022,7 +3022,7 @@ public:
                 XtVaSetValues(this->_widget, "sortFunctions", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Xm18SortFunction * getSortFunctions() {
+Xm18SortFunction * getSortFunctions() {
                     Xm18SortFunction * value;
                     XtVaGetValues(this->_widget, "sortFunctions", &value, nullptr);
                     return value;
@@ -3031,7 +3031,7 @@ public:
                 XtVaSetValues(this->_widget, "stringDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getStringDirection() {
+unsigned char getStringDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "stringDirection", &value, nullptr);
                     return value;
@@ -3040,7 +3040,7 @@ public:
                 XtVaSetValues(this->_widget, "verticalScrollBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getVerticalScrollBar() {
+Widget getVerticalScrollBar() {
                     Widget value;
                     XtVaGetValues(this->_widget, "verticalScrollBar", &value, nullptr);
                     return value;
@@ -3049,35 +3049,35 @@ public:
                 XtVaSetValues(this->_widget, "visibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getVisibleItemCount() {
+int getVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
                     return value;
                 }
-};
-class CXmI18List : public CXmI18ListImpl<CXmI18List> {
-public:
-    using CXmI18ListImpl<CXmI18List>::CXmI18ListImpl;
-    static CXmI18List create(Widget parent, const char* name) {
-        return CXmI18List(XtCreateWidget(name, xmI18ListWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmI18List : public CXmI18ListImpl<CXmI18List> {
+            public:
+                using CXmI18ListImpl<CXmI18List>::CXmI18ListImpl;
+                static CXmI18List create(Widget parent, const char* name) {
+                    return CXmI18List(XtCreateWidget(name, xmI18ListWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmIconButtonImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmIconButtonImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
@@ -3086,7 +3086,7 @@ public:
                 XtVaSetValues(this->_widget, "alignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getAlignment() {
+unsigned char getAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "alignment", &value, nullptr);
                     return value;
@@ -3095,20 +3095,20 @@ public:
                 XtVaSetValues(this->_widget, "armColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getArmColor() {
+Pixel getArmColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "armColor", &value, nullptr);
                     return value;
                 }
     Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback) {
-        addCallback("doubleClickCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("doubleClickCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDoubleClickCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "doubleClickCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDoubleClickCallback() {
+XtCallbackList getDoubleClickCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "doubleClickCallback", &value, nullptr);
                     return value;
@@ -3117,7 +3117,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -3126,7 +3126,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalMargin() {
+Dimension getHorizontalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalMargin", &value, nullptr);
                     return value;
@@ -3135,7 +3135,7 @@ public:
                 XtVaSetValues(this->_widget, "iconPlacement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmIconPlacement getIconPlacement() {
+XmIconPlacement getIconPlacement() {
                     XmIconPlacement value;
                     XtVaGetValues(this->_widget, "iconPlacement", &value, nullptr);
                     return value;
@@ -3144,7 +3144,7 @@ public:
                 XtVaSetValues(this->_widget, "iconTextPadding", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getIconTextPadding() {
+Dimension getIconTextPadding() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "iconTextPadding", &value, nullptr);
                     return value;
@@ -3153,7 +3153,7 @@ public:
                 XtVaSetValues(this->_widget, "label", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    String getLabel() {
+String getLabel() {
                     String value;
                     XtVaGetValues(this->_widget, "label", &value, nullptr);
                     return value;
@@ -3162,7 +3162,7 @@ public:
                 XtVaSetValues(this->_widget, "labelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getLabelString() {
+XmString getLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "labelString", &value, nullptr);
                     return value;
@@ -3171,7 +3171,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getPixmap() {
+Pixmap getPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "pixmap", &value, nullptr);
                     return value;
@@ -3180,7 +3180,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapDepth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getPixmapDepth() {
+Dimension getPixmapDepth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "pixmapDepth", &value, nullptr);
                     return value;
@@ -3189,7 +3189,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getPixmapHeight() {
+Dimension getPixmapHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "pixmapHeight", &value, nullptr);
                     return value;
@@ -3198,7 +3198,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getPixmapWidth() {
+Dimension getPixmapWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "pixmapWidth", &value, nullptr);
                     return value;
@@ -3207,7 +3207,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -3216,7 +3216,7 @@ public:
                 XtVaSetValues(this->_widget, "recomputeSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getRecomputeSize() {
+Boolean getRecomputeSize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "recomputeSize", &value, nullptr);
                     return value;
@@ -3225,7 +3225,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -3234,7 +3234,7 @@ public:
                 XtVaSetValues(this->_widget, "set", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getSet() {
+Boolean getSet() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "set", &value, nullptr);
                     return value;
@@ -3243,7 +3243,7 @@ public:
                 XtVaSetValues(this->_widget, "stringDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getStringDirection() {
+unsigned char getStringDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "stringDirection", &value, nullptr);
                     return value;
@@ -3252,31 +3252,31 @@ public:
                 XtVaSetValues(this->_widget, "verticalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalMargin() {
+Dimension getVerticalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalMargin", &value, nullptr);
                     return value;
                 }
-};
-class CXmIconButton : public CXmIconButtonImpl<CXmIconButton> {
-public:
-    using CXmIconButtonImpl<CXmIconButton>::CXmIconButtonImpl;
-    static CXmIconButton create(Widget parent, const char* name) {
-        return CXmIconButton(XtCreateWidget(name, xmIconButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmIconButton : public CXmIconButtonImpl<CXmIconButton> {
+            public:
+                using CXmIconButtonImpl<CXmIconButton>::CXmIconButtonImpl;
+                static CXmIconButton create(Widget parent, const char* name) {
+                    return CXmIconButton(XtCreateWidget(name, xmIconButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmLabelImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& setAccelerator(char * value) {
+            template <typename Derived> class CXmLabelImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& setAccelerator(char * value) {
                 XtVaSetValues(this->_widget, "accelerator", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    char * getAccelerator() {
+char * getAccelerator() {
                     char * value;
                     XtVaGetValues(this->_widget, "accelerator", &value, nullptr);
                     return value;
@@ -3285,7 +3285,7 @@ public:
                 XtVaSetValues(this->_widget, "acceleratorText", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    _XmString getAcceleratorText() {
+_XmString getAcceleratorText() {
                     _XmString value;
                     XtVaGetValues(this->_widget, "acceleratorText", &value, nullptr);
                     return value;
@@ -3294,7 +3294,7 @@ public:
                 XtVaSetValues(this->_widget, "alignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getAlignment() {
+unsigned char getAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "alignment", &value, nullptr);
                     return value;
@@ -3303,7 +3303,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -3312,7 +3312,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -3321,7 +3321,7 @@ public:
                 XtVaSetValues(this->_widget, "labelInsensitivePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getLabelInsensitivePixmap() {
+Pixmap getLabelInsensitivePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "labelInsensitivePixmap", &value, nullptr);
                     return value;
@@ -3330,7 +3330,7 @@ public:
                 XtVaSetValues(this->_widget, "labelPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getLabelPixmap() {
+Pixmap getLabelPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "labelPixmap", &value, nullptr);
                     return value;
@@ -3339,7 +3339,7 @@ public:
                 XtVaSetValues(this->_widget, "labelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    _XmString getLabelString() {
+_XmString getLabelString() {
                     _XmString value;
                     XtVaGetValues(this->_widget, "labelString", &value, nullptr);
                     return value;
@@ -3348,7 +3348,7 @@ public:
                 XtVaSetValues(this->_widget, "labelType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getLabelType() {
+unsigned char getLabelType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "labelType", &value, nullptr);
                     return value;
@@ -3357,7 +3357,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDirection getLayoutDirection() {
+XmDirection getLayoutDirection() {
                     XmDirection value;
                     XtVaGetValues(this->_widget, "layoutDirection", &value, nullptr);
                     return value;
@@ -3366,7 +3366,7 @@ public:
                 XtVaSetValues(this->_widget, "marginBottom", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginBottom() {
+Dimension getMarginBottom() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginBottom", &value, nullptr);
                     return value;
@@ -3375,7 +3375,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -3384,7 +3384,7 @@ public:
                 XtVaSetValues(this->_widget, "marginLeft", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginLeft() {
+Dimension getMarginLeft() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginLeft", &value, nullptr);
                     return value;
@@ -3393,7 +3393,7 @@ public:
                 XtVaSetValues(this->_widget, "marginRight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginRight() {
+Dimension getMarginRight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginRight", &value, nullptr);
                     return value;
@@ -3402,7 +3402,7 @@ public:
                 XtVaSetValues(this->_widget, "marginTop", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginTop() {
+Dimension getMarginTop() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginTop", &value, nullptr);
                     return value;
@@ -3411,7 +3411,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -3420,7 +3420,7 @@ public:
                 XtVaSetValues(this->_widget, "mnemonic", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    KeySym getMnemonic() {
+KeySym getMnemonic() {
                     KeySym value;
                     XtVaGetValues(this->_widget, "mnemonic", &value, nullptr);
                     return value;
@@ -3429,7 +3429,7 @@ public:
                 XtVaSetValues(this->_widget, "mnemonicCharSet", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringCharSet getMnemonicCharSet() {
+XmStringCharSet getMnemonicCharSet() {
                     XmStringCharSet value;
                     XtVaGetValues(this->_widget, "mnemonicCharSet", &value, nullptr);
                     return value;
@@ -3438,7 +3438,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapPlacement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmPixmapPlacement getPixmapPlacement() {
+XmPixmapPlacement getPixmapPlacement() {
                     XmPixmapPlacement value;
                     XtVaGetValues(this->_widget, "pixmapPlacement", &value, nullptr);
                     return value;
@@ -3447,7 +3447,7 @@ public:
                 XtVaSetValues(this->_widget, "pixmapTextPadding", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getPixmapTextPadding() {
+Dimension getPixmapTextPadding() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "pixmapTextPadding", &value, nullptr);
                     return value;
@@ -3456,7 +3456,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -3465,7 +3465,7 @@ public:
                 XtVaSetValues(this->_widget, "recomputeSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getRecomputeSize() {
+Boolean getRecomputeSize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "recomputeSize", &value, nullptr);
                     return value;
@@ -3474,7 +3474,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -3483,7 +3483,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -3492,7 +3492,7 @@ public:
                 XtVaSetValues(this->_widget, "stringDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getStringDirection() {
+unsigned char getStringDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "stringDirection", &value, nullptr);
                     return value;
@@ -3501,70 +3501,70 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmLabel : public CXmLabelImpl<CXmLabel> {
-public:
-    using CXmLabelImpl<CXmLabel>::CXmLabelImpl;
-    static CXmLabel create(Widget parent, const char* name) {
-        return CXmLabel(XtCreateWidget(name, xmLabelWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmLabel : public CXmLabelImpl<CXmLabel> {
+            public:
+                using CXmLabelImpl<CXmLabel>::CXmLabelImpl;
+                static CXmLabel create(Widget parent, const char* name) {
+                    return CXmLabel(XtCreateWidget(name, xmLabelWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmListImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& setAutomaticSelection(XtEnum value) {
+            template <typename Derived> class CXmListImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& setAutomaticSelection(XtEnum value) {
                 XtVaSetValues(this->_widget, "automaticSelection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getAutomaticSelection() {
+XtEnum getAutomaticSelection() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "automaticSelection", &value, nullptr);
                     return value;
                 }
     Derived& addBrowseSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("browseSelectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("browseSelectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setBrowseSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "browseSelectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getBrowseSelectionCallback() {
+XtCallbackList getBrowseSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "browseSelectionCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDefaultActionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("defaultActionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("defaultActionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDefaultActionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "defaultActionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDefaultActionCallback() {
+XtCallbackList getDefaultActionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "defaultActionCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDestinationCallback(std::function<void(XtPointer)> callback) {
-        addCallback("destinationCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("destinationCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDestinationCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "destinationCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDestinationCallback() {
+XtCallbackList getDestinationCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "destinationCallback", &value, nullptr);
                     return value;
@@ -3573,20 +3573,20 @@ public:
                 XtVaSetValues(this->_widget, "doubleClickInterval", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getDoubleClickInterval() {
+int getDoubleClickInterval() {
                     int value;
                     XtVaGetValues(this->_widget, "doubleClickInterval", &value, nullptr);
                     return value;
                 }
     Derived& addExtendedSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("extendedSelectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("extendedSelectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setExtendedSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "extendedSelectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getExtendedSelectionCallback() {
+XtCallbackList getExtendedSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "extendedSelectionCallback", &value, nullptr);
                     return value;
@@ -3595,7 +3595,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -3604,7 +3604,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalScrollBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmScrollBarWidget getHorizontalScrollBar() {
+XmScrollBarWidget getHorizontalScrollBar() {
                     XmScrollBarWidget value;
                     XtVaGetValues(this->_widget, "horizontalScrollBar", &value, nullptr);
                     return value;
@@ -3613,7 +3613,7 @@ public:
                 XtVaSetValues(this->_widget, "itemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getItemCount() {
+int getItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "itemCount", &value, nullptr);
                     return value;
@@ -3622,7 +3622,7 @@ public:
                 XtVaSetValues(this->_widget, "items", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getItems() {
+XmString * getItems() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "items", &value, nullptr);
                     return value;
@@ -3631,7 +3631,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDirection getLayoutDirection() {
+XmDirection getLayoutDirection() {
                     XmDirection value;
                     XtVaGetValues(this->_widget, "layoutDirection", &value, nullptr);
                     return value;
@@ -3640,7 +3640,7 @@ public:
                 XtVaSetValues(this->_widget, "listMarginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getListMarginHeight() {
+Dimension getListMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "listMarginHeight", &value, nullptr);
                     return value;
@@ -3649,7 +3649,7 @@ public:
                 XtVaSetValues(this->_widget, "listMarginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getListMarginWidth() {
+Dimension getListMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "listMarginWidth", &value, nullptr);
                     return value;
@@ -3658,7 +3658,7 @@ public:
                 XtVaSetValues(this->_widget, "listSizePolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getListSizePolicy() {
+unsigned char getListSizePolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "listSizePolicy", &value, nullptr);
                     return value;
@@ -3667,7 +3667,7 @@ public:
                 XtVaSetValues(this->_widget, "listSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getListSpacing() {
+short getListSpacing() {
                     short value;
                     XtVaGetValues(this->_widget, "listSpacing", &value, nullptr);
                     return value;
@@ -3676,20 +3676,20 @@ public:
                 XtVaSetValues(this->_widget, "matchBehavior", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMatchBehavior() {
+unsigned char getMatchBehavior() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "matchBehavior", &value, nullptr);
                     return value;
                 }
     Derived& addMultipleSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("multipleSelectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("multipleSelectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setMultipleSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "multipleSelectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getMultipleSelectionCallback() {
+XtCallbackList getMultipleSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "multipleSelectionCallback", &value, nullptr);
                     return value;
@@ -3698,7 +3698,7 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
@@ -3707,7 +3707,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -3716,7 +3716,7 @@ public:
                 XtVaSetValues(this->_widget, "primaryOwnership", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getPrimaryOwnership() {
+unsigned char getPrimaryOwnership() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "primaryOwnership", &value, nullptr);
                     return value;
@@ -3725,7 +3725,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -3734,7 +3734,7 @@ public:
                 XtVaSetValues(this->_widget, "scrollBarDisplayPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getScrollBarDisplayPolicy() {
+unsigned char getScrollBarDisplayPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "scrollBarDisplayPolicy", &value, nullptr);
                     return value;
@@ -3743,7 +3743,7 @@ public:
                 XtVaSetValues(this->_widget, "selectColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getSelectColor() {
+Pixel getSelectColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "selectColor", &value, nullptr);
                     return value;
@@ -3752,7 +3752,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSelectedItemCount() {
+int getSelectedItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "selectedItemCount", &value, nullptr);
                     return value;
@@ -3761,7 +3761,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedItems", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getSelectedItems() {
+XmString * getSelectedItems() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "selectedItems", &value, nullptr);
                     return value;
@@ -3770,7 +3770,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedPositionCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSelectedPositionCount() {
+int getSelectedPositionCount() {
                     int value;
                     XtVaGetValues(this->_widget, "selectedPositionCount", &value, nullptr);
                     return value;
@@ -3779,7 +3779,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedPositions", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int * getSelectedPositions() {
+int * getSelectedPositions() {
                     int * value;
                     XtVaGetValues(this->_widget, "selectedPositions", &value, nullptr);
                     return value;
@@ -3788,7 +3788,7 @@ public:
                 XtVaSetValues(this->_widget, "selectionMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSelectionMode() {
+unsigned char getSelectionMode() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "selectionMode", &value, nullptr);
                     return value;
@@ -3797,20 +3797,20 @@ public:
                 XtVaSetValues(this->_widget, "selectionPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSelectionPolicy() {
+unsigned char getSelectionPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "selectionPolicy", &value, nullptr);
                     return value;
                 }
     Derived& addSingleSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("singleSelectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("singleSelectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSingleSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "singleSelectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSingleSelectionCallback() {
+XtCallbackList getSingleSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "singleSelectionCallback", &value, nullptr);
                     return value;
@@ -3819,7 +3819,7 @@ public:
                 XtVaSetValues(this->_widget, "stringDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringDirection getStringDirection() {
+XmStringDirection getStringDirection() {
                     XmStringDirection value;
                     XtVaGetValues(this->_widget, "stringDirection", &value, nullptr);
                     return value;
@@ -3828,7 +3828,7 @@ public:
                 XtVaSetValues(this->_widget, "topItemPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getTopItemPosition() {
+int getTopItemPosition() {
                     int value;
                     XtVaGetValues(this->_widget, "topItemPosition", &value, nullptr);
                     return value;
@@ -3837,7 +3837,7 @@ public:
                 XtVaSetValues(this->_widget, "verticalScrollBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmScrollBarWidget getVerticalScrollBar() {
+XmScrollBarWidget getVerticalScrollBar() {
                     XmScrollBarWidget value;
                     XtVaGetValues(this->_widget, "verticalScrollBar", &value, nullptr);
                     return value;
@@ -3846,57 +3846,57 @@ public:
                 XtVaSetValues(this->_widget, "visibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getVisibleItemCount() {
+int getVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
                     return value;
                 }
-};
-class CXmList : public CXmListImpl<CXmList> {
-public:
-    using CXmListImpl<CXmList>::CXmListImpl;
-    static CXmList create(Widget parent, const char* name) {
-        return CXmList(XtCreateWidget(name, xmListWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmList : public CXmListImpl<CXmList> {
+            public:
+                using CXmListImpl<CXmList>::CXmListImpl;
+                static CXmList create(Widget parent, const char* name) {
+                    return CXmList(XtCreateWidget(name, xmListWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmScrollBarImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& setBackground(Pixel value) {
+            template <typename Derived> class CXmScrollBarImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& setBackground(Pixel value) {
                 XtVaSetValues(this->_widget, "background", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackground() {
+Pixel getBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "background", &value, nullptr);
                     return value;
                 }
     Derived& addDecrementCallback(std::function<void(XtPointer)> callback) {
-        addCallback("decrementCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("decrementCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDecrementCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "decrementCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDecrementCallback() {
+XtCallbackList getDecrementCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "decrementCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDragCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dragCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dragCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDragCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dragCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDragCallback() {
+XtCallbackList getDragCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dragCallback", &value, nullptr);
                     return value;
@@ -3905,7 +3905,7 @@ public:
                 XtVaSetValues(this->_widget, "editable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEditable() {
+Boolean getEditable() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "editable", &value, nullptr);
                     return value;
@@ -3914,7 +3914,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -3923,20 +3923,20 @@ public:
                 XtVaSetValues(this->_widget, "increment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getIncrement() {
+int getIncrement() {
                     int value;
                     XtVaGetValues(this->_widget, "increment", &value, nullptr);
                     return value;
                 }
     Derived& addIncrementCallback(std::function<void(XtPointer)> callback) {
-        addCallback("incrementCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("incrementCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setIncrementCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "incrementCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getIncrementCallback() {
+XtCallbackList getIncrementCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "incrementCallback", &value, nullptr);
                     return value;
@@ -3945,7 +3945,7 @@ public:
                 XtVaSetValues(this->_widget, "initialDelay", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getInitialDelay() {
+int getInitialDelay() {
                     int value;
                     XtVaGetValues(this->_widget, "initialDelay", &value, nullptr);
                     return value;
@@ -3954,7 +3954,7 @@ public:
                 XtVaSetValues(this->_widget, "maximum", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaximum() {
+int getMaximum() {
                     int value;
                     XtVaGetValues(this->_widget, "maximum", &value, nullptr);
                     return value;
@@ -3963,7 +3963,7 @@ public:
                 XtVaSetValues(this->_widget, "minimum", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinimum() {
+int getMinimum() {
                     int value;
                     XtVaGetValues(this->_widget, "minimum", &value, nullptr);
                     return value;
@@ -3972,7 +3972,7 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
@@ -3981,20 +3981,20 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
                 }
     Derived& addPageDecrementCallback(std::function<void(XtPointer)> callback) {
-        addCallback("pageDecrementCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("pageDecrementCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setPageDecrementCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "pageDecrementCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getPageDecrementCallback() {
+XtCallbackList getPageDecrementCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "pageDecrementCallback", &value, nullptr);
                     return value;
@@ -4003,20 +4003,20 @@ public:
                 XtVaSetValues(this->_widget, "pageIncrement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getPageIncrement() {
+int getPageIncrement() {
                     int value;
                     XtVaGetValues(this->_widget, "pageIncrement", &value, nullptr);
                     return value;
                 }
     Derived& addPageIncrementCallback(std::function<void(XtPointer)> callback) {
-        addCallback("pageIncrementCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("pageIncrementCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setPageIncrementCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "pageIncrementCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getPageIncrementCallback() {
+XtCallbackList getPageIncrementCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "pageIncrementCallback", &value, nullptr);
                     return value;
@@ -4025,7 +4025,7 @@ public:
                 XtVaSetValues(this->_widget, "processingDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getProcessingDirection() {
+unsigned char getProcessingDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "processingDirection", &value, nullptr);
                     return value;
@@ -4034,7 +4034,7 @@ public:
                 XtVaSetValues(this->_widget, "repeatDelay", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getRepeatDelay() {
+int getRepeatDelay() {
                     int value;
                     XtVaGetValues(this->_widget, "repeatDelay", &value, nullptr);
                     return value;
@@ -4043,7 +4043,7 @@ public:
                 XtVaSetValues(this->_widget, "showArrows", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getShowArrows() {
+XtEnum getShowArrows() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "showArrows", &value, nullptr);
                     return value;
@@ -4052,7 +4052,7 @@ public:
                 XtVaSetValues(this->_widget, "sliderMark", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getSliderMark() {
+XtEnum getSliderMark() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "sliderMark", &value, nullptr);
                     return value;
@@ -4061,7 +4061,7 @@ public:
                 XtVaSetValues(this->_widget, "sliderSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSliderSize() {
+int getSliderSize() {
                     int value;
                     XtVaGetValues(this->_widget, "sliderSize", &value, nullptr);
                     return value;
@@ -4070,7 +4070,7 @@ public:
                 XtVaSetValues(this->_widget, "sliderVisual", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getSliderVisual() {
+XtEnum getSliderVisual() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "sliderVisual", &value, nullptr);
                     return value;
@@ -4079,7 +4079,7 @@ public:
                 XtVaSetValues(this->_widget, "slidingMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getSlidingMode() {
+XtEnum getSlidingMode() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "slidingMode", &value, nullptr);
                     return value;
@@ -4088,33 +4088,33 @@ public:
                 XtVaSetValues(this->_widget, "snapBackMultiple", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned short getSnapBackMultiple() {
+unsigned short getSnapBackMultiple() {
                     unsigned short value;
                     XtVaGetValues(this->_widget, "snapBackMultiple", &value, nullptr);
                     return value;
                 }
     Derived& addToBottomCallback(std::function<void(XtPointer)> callback) {
-        addCallback("toBottomCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("toBottomCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setToBottomCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "toBottomCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getToBottomCallback() {
+XtCallbackList getToBottomCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "toBottomCallback", &value, nullptr);
                     return value;
                 }
     Derived& addToTopCallback(std::function<void(XtPointer)> callback) {
-        addCallback("toTopCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("toTopCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setToTopCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "toTopCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getToTopCallback() {
+XtCallbackList getToTopCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "toTopCallback", &value, nullptr);
                     return value;
@@ -4123,7 +4123,7 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
@@ -4132,7 +4132,7 @@ public:
                 XtVaSetValues(this->_widget, "troughColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTroughColor() {
+Pixel getTroughColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "troughColor", &value, nullptr);
                     return value;
@@ -4141,44 +4141,44 @@ public:
                 XtVaSetValues(this->_widget, "value", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getValue() {
+int getValue() {
                     int value;
                     XtVaGetValues(this->_widget, "value", &value, nullptr);
                     return value;
                 }
     Derived& addValueChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("valueChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("valueChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setValueChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "valueChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getValueChangedCallback() {
+XtCallbackList getValueChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
                     return value;
                 }
-};
-class CXmScrollBar : public CXmScrollBarImpl<CXmScrollBar> {
-public:
-    using CXmScrollBarImpl<CXmScrollBar>::CXmScrollBarImpl;
-    static CXmScrollBar create(Widget parent, const char* name) {
-        return CXmScrollBar(XtCreateWidget(name, xmScrollBarWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmScrollBar : public CXmScrollBarImpl<CXmScrollBar> {
+            public:
+                using CXmScrollBarImpl<CXmScrollBar>::CXmScrollBarImpl;
+                static CXmScrollBar create(Widget parent, const char* name) {
+                    return CXmScrollBar(XtCreateWidget(name, xmScrollBarWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmSeparatorImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& setHighlightThickness(Dimension value) {
+            template <typename Derived> class CXmSeparatorImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& setHighlightThickness(Dimension value) {
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -4187,7 +4187,7 @@ public:
                 XtVaSetValues(this->_widget, "margin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMargin() {
+Dimension getMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "margin", &value, nullptr);
                     return value;
@@ -4196,7 +4196,7 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
@@ -4205,7 +4205,7 @@ public:
                 XtVaSetValues(this->_widget, "separatorType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSeparatorType() {
+unsigned char getSeparatorType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "separatorType", &value, nullptr);
                     return value;
@@ -4214,7 +4214,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -4223,51 +4223,51 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmSeparator : public CXmSeparatorImpl<CXmSeparator> {
-public:
-    using CXmSeparatorImpl<CXmSeparator>::CXmSeparatorImpl;
-    static CXmSeparator create(Widget parent, const char* name) {
-        return CXmSeparator(XtCreateWidget(name, xmSeparatorWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmSeparator : public CXmSeparatorImpl<CXmSeparator> {
+            public:
+                using CXmSeparatorImpl<CXmSeparator>::CXmSeparatorImpl;
+                static CXmSeparator create(Widget parent, const char* name) {
+                    return CXmSeparator(XtCreateWidget(name, xmSeparatorWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
+            template <typename Derived> class CXiTabCanvasImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                
+            };
+            class CXiTabCanvas : public CXiTabCanvasImpl<CXiTabCanvas> {
+            public:
+                using CXiTabCanvasImpl<CXiTabCanvas>::CXiTabCanvasImpl;
+                static CXiTabCanvas create(Widget parent, const char* name) {
+                    return CXiTabCanvas(XtCreateWidget(name, xmTabCanvasWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
-template <typename Derived> class CXiTabCanvasImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
 
-};
-class CXiTabCanvas : public CXiTabCanvasImpl<CXiTabCanvas> {
-public:
-    using CXiTabCanvasImpl<CXiTabCanvas>::CXiTabCanvasImpl;
-    static CXiTabCanvas create(Widget parent, const char* name) {
-        return CXiTabCanvas(XtCreateWidget(name, xmTabCanvasWidgetClass, parent, nullptr, 0));
-    }
-};
-
-
-
-template <typename Derived> class CXmTextImpl : public CXmPrimitiveImpl<Derived> {
-public:
-    using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
-    using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmTextImpl : public CXmPrimitiveImpl<Derived> {
+            public:
+                using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
+                using CXmPrimitiveImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
@@ -4276,7 +4276,7 @@ public:
                 XtVaSetValues(this->_widget, "autoShowCursorPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoShowCursorPosition() {
+Boolean getAutoShowCursorPosition() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoShowCursorPosition", &value, nullptr);
                     return value;
@@ -4285,20 +4285,20 @@ public:
                 XtVaSetValues(this->_widget, "cursorPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTextPosition getCursorPosition() {
+XmTextPosition getCursorPosition() {
                     XmTextPosition value;
                     XtVaGetValues(this->_widget, "cursorPosition", &value, nullptr);
                     return value;
                 }
     Derived& addDestinationCallback(std::function<void(XtPointer)> callback) {
-        addCallback("destinationCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("destinationCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDestinationCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "destinationCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDestinationCallback() {
+XtCallbackList getDestinationCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "destinationCallback", &value, nullptr);
                     return value;
@@ -4307,7 +4307,7 @@ public:
                 XtVaSetValues(this->_widget, "editMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getEditMode() {
+int getEditMode() {
                     int value;
                     XtVaGetValues(this->_widget, "editMode", &value, nullptr);
                     return value;
@@ -4316,33 +4316,33 @@ public:
                 XtVaSetValues(this->_widget, "editable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEditable() {
+Boolean getEditable() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "editable", &value, nullptr);
                     return value;
                 }
     Derived& addFocusCallback(std::function<void(XtPointer)> callback) {
-        addCallback("focusCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("focusCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setFocusCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "focusCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getFocusCallback() {
+XtCallbackList getFocusCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "focusCallback", &value, nullptr);
                     return value;
                 }
     Derived& addGainPrimaryCallback(std::function<void(XtPointer)> callback) {
-        addCallback("gainPrimaryCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("gainPrimaryCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setGainPrimaryCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "gainPrimaryCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getGainPrimaryCallback() {
+XtCallbackList getGainPrimaryCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "gainPrimaryCallback", &value, nullptr);
                     return value;
@@ -4351,33 +4351,33 @@ public:
                 XtVaSetValues(this->_widget, "inputCreate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    InputCreateProc getInputCreate() {
+InputCreateProc getInputCreate() {
                     InputCreateProc value;
                     XtVaGetValues(this->_widget, "inputCreate", &value, nullptr);
                     return value;
                 }
     Derived& addLosePrimaryCallback(std::function<void(XtPointer)> callback) {
-        addCallback("losePrimaryCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("losePrimaryCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setLosePrimaryCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "losePrimaryCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getLosePrimaryCallback() {
+XtCallbackList getLosePrimaryCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "losePrimaryCallback", &value, nullptr);
                     return value;
                 }
     Derived& addLosingFocusCallback(std::function<void(XtPointer)> callback) {
-        addCallback("losingFocusCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("losingFocusCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setLosingFocusCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "losingFocusCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getLosingFocusCallback() {
+XtCallbackList getLosingFocusCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "losingFocusCallback", &value, nullptr);
                     return value;
@@ -4386,7 +4386,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -4395,7 +4395,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -4404,46 +4404,46 @@ public:
                 XtVaSetValues(this->_widget, "maxLength", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaxLength() {
+int getMaxLength() {
                     int value;
                     XtVaGetValues(this->_widget, "maxLength", &value, nullptr);
                     return value;
                 }
     Derived& addModifyVerifyCallback(std::function<void(XtPointer)> callback) {
-        addCallback("modifyVerifyCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("modifyVerifyCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setModifyVerifyCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "modifyVerifyCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getModifyVerifyCallback() {
+XtCallbackList getModifyVerifyCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "modifyVerifyCallback", &value, nullptr);
                     return value;
                 }
     Derived& addModifyVerifyCallbackWcs(std::function<void(XtPointer)> callback) {
-        addCallback("modifyVerifyCallbackWcs", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("modifyVerifyCallbackWcs", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setModifyVerifyCallbackWcs(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "modifyVerifyCallbackWcs", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getModifyVerifyCallbackWcs() {
+XtCallbackList getModifyVerifyCallbackWcs() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "modifyVerifyCallbackWcs", &value, nullptr);
                     return value;
                 }
     Derived& addMotionVerifyCallback(std::function<void(XtPointer)> callback) {
-        addCallback("motionVerifyCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("motionVerifyCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setMotionVerifyCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "motionVerifyCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getMotionVerifyCallback() {
+XtCallbackList getMotionVerifyCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "motionVerifyCallback", &value, nullptr);
                     return value;
@@ -4452,7 +4452,7 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
@@ -4461,7 +4461,7 @@ public:
                 XtVaSetValues(this->_widget, "outputCreate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    OutputCreateProc getOutputCreate() {
+OutputCreateProc getOutputCreate() {
                     OutputCreateProc value;
                     XtVaGetValues(this->_widget, "outputCreate", &value, nullptr);
                     return value;
@@ -4470,7 +4470,7 @@ public:
                 XtVaSetValues(this->_widget, "source", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTextSource getSource() {
+XmTextSource getSource() {
                     XmTextSource value;
                     XtVaGetValues(this->_widget, "source", &value, nullptr);
                     return value;
@@ -4479,7 +4479,7 @@ public:
                 XtVaSetValues(this->_widget, "topCharacter", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTextPosition getTopCharacter() {
+XmTextPosition getTopCharacter() {
                     XmTextPosition value;
                     XtVaGetValues(this->_widget, "topCharacter", &value, nullptr);
                     return value;
@@ -4488,7 +4488,7 @@ public:
                 XtVaSetValues(this->_widget, "totalLines", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getTotalLines() {
+int getTotalLines() {
                     int value;
                     XtVaGetValues(this->_widget, "totalLines", &value, nullptr);
                     return value;
@@ -4497,20 +4497,20 @@ public:
                 XtVaSetValues(this->_widget, "value", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    char * getValue() {
+char * getValue() {
                     char * value;
                     XtVaGetValues(this->_widget, "value", &value, nullptr);
                     return value;
                 }
     Derived& addValueChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("valueChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("valueChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setValueChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "valueChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getValueChangedCallback() {
+XtCallbackList getValueChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
                     return value;
@@ -4519,7 +4519,7 @@ public:
                 XtVaSetValues(this->_widget, "valueWcs", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    wchar_t * getValueWcs() {
+wchar_t * getValueWcs() {
                     wchar_t * value;
                     XtVaGetValues(this->_widget, "valueWcs", &value, nullptr);
                     return value;
@@ -4528,31 +4528,31 @@ public:
                 XtVaSetValues(this->_widget, "verifyBell", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getVerifyBell() {
+Boolean getVerifyBell() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "verifyBell", &value, nullptr);
                     return value;
                 }
-};
-class CXmText : public CXmTextImpl<CXmText> {
-public:
-    using CXmTextImpl<CXmText>::CXmTextImpl;
-    static CXmText create(Widget parent, const char* name) {
-        return CXmText(XtCreateWidget(name, xmTextWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmText : public CXmTextImpl<CXmText> {
+            public:
+                using CXmTextImpl<CXmText>::CXmTextImpl;
+                static CXmText create(Widget parent, const char* name) {
+                    return CXmText(XtCreateWidget(name, xmTextWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmBulletinBoardImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setAllowOverlap(Boolean value) {
+            template <typename Derived> class CXmBulletinBoardImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setAllowOverlap(Boolean value) {
                 XtVaSetValues(this->_widget, "allowOverlap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAllowOverlap() {
+Boolean getAllowOverlap() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "allowOverlap", &value, nullptr);
                     return value;
@@ -4561,7 +4561,7 @@ public:
                 XtVaSetValues(this->_widget, "autoUnmanage", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoUnmanage() {
+Boolean getAutoUnmanage() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoUnmanage", &value, nullptr);
                     return value;
@@ -4570,7 +4570,7 @@ public:
                 XtVaSetValues(this->_widget, "buttonFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getButtonFontList() {
+XmFontList getButtonFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "buttonFontList", &value, nullptr);
                     return value;
@@ -4579,7 +4579,7 @@ public:
                 XtVaSetValues(this->_widget, "buttonRenderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getButtonRenderTable() {
+XmFontList getButtonRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "buttonRenderTable", &value, nullptr);
                     return value;
@@ -4588,7 +4588,7 @@ public:
                 XtVaSetValues(this->_widget, "cancelButton", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getCancelButton() {
+Widget getCancelButton() {
                     Widget value;
                     XtVaGetValues(this->_widget, "cancelButton", &value, nullptr);
                     return value;
@@ -4597,7 +4597,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultButton", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getDefaultButton() {
+Widget getDefaultButton() {
                     Widget value;
                     XtVaGetValues(this->_widget, "defaultButton", &value, nullptr);
                     return value;
@@ -4606,7 +4606,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getDefaultPosition() {
+Boolean getDefaultPosition() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "defaultPosition", &value, nullptr);
                     return value;
@@ -4615,7 +4615,7 @@ public:
                 XtVaSetValues(this->_widget, "dialogStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDialogStyle() {
+unsigned char getDialogStyle() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dialogStyle", &value, nullptr);
                     return value;
@@ -4624,20 +4624,20 @@ public:
                 XtVaSetValues(this->_widget, "dialogTitle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getDialogTitle() {
+XmString getDialogTitle() {
                     XmString value;
                     XtVaGetValues(this->_widget, "dialogTitle", &value, nullptr);
                     return value;
                 }
     Derived& addFocusCallback(std::function<void(XtPointer)> callback) {
-        addCallback("focusCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("focusCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setFocusCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "focusCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getFocusCallback() {
+XtCallbackList getFocusCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "focusCallback", &value, nullptr);
                     return value;
@@ -4646,7 +4646,7 @@ public:
                 XtVaSetValues(this->_widget, "labelFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getLabelFontList() {
+XmFontList getLabelFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "labelFontList", &value, nullptr);
                     return value;
@@ -4655,20 +4655,20 @@ public:
                 XtVaSetValues(this->_widget, "labelRenderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getLabelRenderTable() {
+XmFontList getLabelRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "labelRenderTable", &value, nullptr);
                     return value;
                 }
     Derived& addMapCallback(std::function<void(XtPointer)> callback) {
-        addCallback("mapCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("mapCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setMapCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "mapCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getMapCallback() {
+XtCallbackList getMapCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "mapCallback", &value, nullptr);
                     return value;
@@ -4677,7 +4677,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -4686,7 +4686,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -4695,7 +4695,7 @@ public:
                 XtVaSetValues(this->_widget, "noResize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getNoResize() {
+Boolean getNoResize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "noResize", &value, nullptr);
                     return value;
@@ -4704,7 +4704,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getPri_vate() {
+unsigned char getPri_vate() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -4713,7 +4713,7 @@ public:
                 XtVaSetValues(this->_widget, "resizePolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getResizePolicy() {
+unsigned char getResizePolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "resizePolicy", &value, nullptr);
                     return value;
@@ -4722,7 +4722,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -4731,7 +4731,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getShadowType() {
+unsigned char getShadowType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "shadowType", &value, nullptr);
                     return value;
@@ -4740,7 +4740,7 @@ public:
                 XtVaSetValues(this->_widget, "textFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getTextFontList() {
+XmFontList getTextFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "textFontList", &value, nullptr);
                     return value;
@@ -4749,7 +4749,7 @@ public:
                 XtVaSetValues(this->_widget, "textRenderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getTextRenderTable() {
+XmFontList getTextRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "textRenderTable", &value, nullptr);
                     return value;
@@ -4758,44 +4758,44 @@ public:
                 XtVaSetValues(this->_widget, "textTranslations", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtTranslations getTextTranslations() {
+XtTranslations getTextTranslations() {
                     XtTranslations value;
                     XtVaGetValues(this->_widget, "textTranslations", &value, nullptr);
                     return value;
                 }
     Derived& addUnmapCallback(std::function<void(XtPointer)> callback) {
-        addCallback("unmapCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("unmapCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setUnmapCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "unmapCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getUnmapCallback() {
+XtCallbackList getUnmapCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "unmapCallback", &value, nullptr);
                     return value;
                 }
-};
-class CXmBulletinBoard : public CXmBulletinBoardImpl<CXmBulletinBoard> {
-public:
-    using CXmBulletinBoardImpl<CXmBulletinBoard>::CXmBulletinBoardImpl;
-    static CXmBulletinBoard create(Widget parent, const char* name) {
-        return CXmBulletinBoard(XtCreateWidget(name, xmBulletinBoardWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmBulletinBoard : public CXmBulletinBoardImpl<CXmBulletinBoard> {
+            public:
+                using CXmBulletinBoardImpl<CXmBulletinBoard>::CXmBulletinBoardImpl;
+                static CXmBulletinBoard create(Widget parent, const char* name) {
+                    return CXmBulletinBoard(XtCreateWidget(name, xmBulletinBoardWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmButtonBoxImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setDefaultButton(Widget value) {
+            template <typename Derived> class CXmButtonBoxImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setDefaultButton(Widget value) {
                 XtVaSetValues(this->_widget, "defaultButton", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getDefaultButton() {
+Widget getDefaultButton() {
                     Widget value;
                     XtVaGetValues(this->_widget, "defaultButton", &value, nullptr);
                     return value;
@@ -4804,7 +4804,7 @@ public:
                 XtVaSetValues(this->_widget, "equalSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEqualSize() {
+Boolean getEqualSize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "equalSize", &value, nullptr);
                     return value;
@@ -4813,7 +4813,7 @@ public:
                 XtVaSetValues(this->_widget, "fillOption", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFillOption getFillOption() {
+XmFillOption getFillOption() {
                     XmFillOption value;
                     XtVaGetValues(this->_widget, "fillOption", &value, nullptr);
                     return value;
@@ -4822,7 +4822,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -4831,7 +4831,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -4840,27 +4840,27 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
                 }
-};
-class CXmButtonBox : public CXmButtonBoxImpl<CXmButtonBox> {
-public:
-    using CXmButtonBoxImpl<CXmButtonBox>::CXmButtonBoxImpl;
-    static CXmButtonBox create(Widget parent, const char* name) {
-        return CXmButtonBox(XtCreateWidget(name, xmButtonBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmButtonBox : public CXmButtonBoxImpl<CXmButtonBox> {
+            public:
+                using CXmButtonBoxImpl<CXmButtonBox>::CXmButtonBoxImpl;
+                static CXmButtonBox create(Widget parent, const char* name) {
+                    return CXmButtonBox(XtCreateWidget(name, xmButtonBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmColorSelectorImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setBlueSliderLabel(XmString value[3]) {
+            template <typename Derived> class CXmColorSelectorImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setBlueSliderLabel(XmString value[3]) {
                 XtVaSetValues(this->_widget, "blueSliderLabel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
@@ -4872,7 +4872,7 @@ public:
                 XtVaSetValues(this->_widget, "colorMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmColorMode getColorMode() {
+XmColorMode getColorMode() {
                     XmColorMode value;
                     XtVaGetValues(this->_widget, "colorMode", &value, nullptr);
                     return value;
@@ -4881,7 +4881,7 @@ public:
                 XtVaSetValues(this->_widget, "colorName", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    char * getColorName() {
+char * getColorName() {
                     char * value;
                     XtVaGetValues(this->_widget, "colorName", &value, nullptr);
                     return value;
@@ -4894,7 +4894,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -4903,7 +4903,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -4912,7 +4912,7 @@ public:
                 XtVaSetValues(this->_widget, "noCellError", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getNoCellError() {
+XmString getNoCellError() {
                     XmString value;
                     XtVaGetValues(this->_widget, "noCellError", &value, nullptr);
                     return value;
@@ -4925,26 +4925,26 @@ public:
                 XtVaSetValues(this->_widget, "sliderTogLabel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-};
-class CXmColorSelector : public CXmColorSelectorImpl<CXmColorSelector> {
-public:
-    using CXmColorSelectorImpl<CXmColorSelector>::CXmColorSelectorImpl;
-    static CXmColorSelector create(Widget parent, const char* name) {
-        return CXmColorSelector(XtCreateWidget(name, xmColorSelectorWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmColorSelector : public CXmColorSelectorImpl<CXmColorSelector> {
+            public:
+                using CXmColorSelectorImpl<CXmColorSelector>::CXmColorSelectorImpl;
+                static CXmColorSelector create(Widget parent, const char* name) {
+                    return CXmColorSelector(XtCreateWidget(name, xmColorSelectorWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmComboBoxImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setArrowSize(Dimension value) {
+            template <typename Derived> class CXmComboBoxImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setArrowSize(Dimension value) {
                 XtVaSetValues(this->_widget, "arrowSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getArrowSize() {
+Dimension getArrowSize() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "arrowSize", &value, nullptr);
                     return value;
@@ -4953,7 +4953,7 @@ public:
                 XtVaSetValues(this->_widget, "arrowSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getArrowSpacing() {
+Dimension getArrowSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "arrowSpacing", &value, nullptr);
                     return value;
@@ -4962,7 +4962,7 @@ public:
                 XtVaSetValues(this->_widget, "columns", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getColumns() {
+short getColumns() {
                     short value;
                     XtVaGetValues(this->_widget, "columns", &value, nullptr);
                     return value;
@@ -4971,7 +4971,7 @@ public:
                 XtVaSetValues(this->_widget, "comboBoxType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getComboBoxType() {
+unsigned char getComboBoxType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "comboBoxType", &value, nullptr);
                     return value;
@@ -4980,7 +4980,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -4989,7 +4989,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -4998,7 +4998,7 @@ public:
                 XtVaSetValues(this->_widget, "itemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getItemCount() {
+int getItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "itemCount", &value, nullptr);
                     return value;
@@ -5007,7 +5007,7 @@ public:
                 XtVaSetValues(this->_widget, "items", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringTable getItems() {
+XmStringTable getItems() {
                     XmStringTable value;
                     XtVaGetValues(this->_widget, "items", &value, nullptr);
                     return value;
@@ -5016,7 +5016,7 @@ public:
                 XtVaSetValues(this->_widget, "list", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getList() {
+Widget getList() {
                     Widget value;
                     XtVaGetValues(this->_widget, "list", &value, nullptr);
                     return value;
@@ -5025,7 +5025,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -5034,7 +5034,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -5043,7 +5043,7 @@ public:
                 XtVaSetValues(this->_widget, "matchBehavior", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMatchBehavior() {
+unsigned char getMatchBehavior() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "matchBehavior", &value, nullptr);
                     return value;
@@ -5052,7 +5052,7 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
@@ -5061,7 +5061,7 @@ public:
                 XtVaSetValues(this->_widget, "positionMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getPositionMode() {
+XtEnum getPositionMode() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "positionMode", &value, nullptr);
                     return value;
@@ -5070,7 +5070,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -5079,7 +5079,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -5088,7 +5088,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedItem", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getSelectedItem() {
+XmString getSelectedItem() {
                     XmString value;
                     XtVaGetValues(this->_widget, "selectedItem", &value, nullptr);
                     return value;
@@ -5097,20 +5097,20 @@ public:
                 XtVaSetValues(this->_widget, "selectedPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSelectedPosition() {
+int getSelectedPosition() {
                     int value;
                     XtVaGetValues(this->_widget, "selectedPosition", &value, nullptr);
                     return value;
                 }
     Derived& addSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("selectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("selectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "selectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSelectionCallback() {
+XtCallbackList getSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "selectionCallback", &value, nullptr);
                     return value;
@@ -5119,7 +5119,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -5128,7 +5128,7 @@ public:
                 XtVaSetValues(this->_widget, "textField", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getTextField() {
+Widget getTextField() {
                     Widget value;
                     XtVaGetValues(this->_widget, "textField", &value, nullptr);
                     return value;
@@ -5137,31 +5137,31 @@ public:
                 XtVaSetValues(this->_widget, "visibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getVisibleItemCount() {
+int getVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
                     return value;
                 }
-};
-class CXmComboBox : public CXmComboBoxImpl<CXmComboBox> {
-public:
-    using CXmComboBoxImpl<CXmComboBox>::CXmComboBoxImpl;
-    static CXmComboBox create(Widget parent, const char* name) {
-        return CXmComboBox(XtCreateWidget(name, xmComboBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmComboBox : public CXmComboBoxImpl<CXmComboBox> {
+            public:
+                using CXmComboBoxImpl<CXmComboBox>::CXmComboBoxImpl;
+                static CXmComboBox create(Widget parent, const char* name) {
+                    return CXmComboBox(XtCreateWidget(name, xmComboBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmContainerImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setAutomaticSelection(unsigned char value) {
+            template <typename Derived> class CXmContainerImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setAutomaticSelection(unsigned char value) {
                 XtVaSetValues(this->_widget, "automaticSelection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getAutomaticSelection() {
+unsigned char getAutomaticSelection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "automaticSelection", &value, nullptr);
                     return value;
@@ -5170,46 +5170,46 @@ public:
                 XtVaSetValues(this->_widget, "collapsedStatePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getCollapsedStatePixmap() {
+Pixmap getCollapsedStatePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "collapsedStatePixmap", &value, nullptr);
                     return value;
                 }
     Derived& addConvertCallback(std::function<void(XtPointer)> callback) {
-        addCallback("convertCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("convertCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setConvertCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "convertCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getConvertCallback() {
+XtCallbackList getConvertCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "convertCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDefaultActionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("defaultActionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("defaultActionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDefaultActionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "defaultActionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDefaultActionCallback() {
+XtCallbackList getDefaultActionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "defaultActionCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDestinationCallback(std::function<void(XtPointer)> callback) {
-        addCallback("destinationCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("destinationCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDestinationCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "destinationCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDestinationCallback() {
+XtCallbackList getDestinationCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "destinationCallback", &value, nullptr);
                     return value;
@@ -5218,7 +5218,7 @@ public:
                 XtVaSetValues(this->_widget, "detailColumnHeading", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getDetailColumnHeading() {
+XmString * getDetailColumnHeading() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "detailColumnHeading", &value, nullptr);
                     return value;
@@ -5227,7 +5227,7 @@ public:
                 XtVaSetValues(this->_widget, "detailColumnHeadingCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal getDetailColumnHeadingCount() {
+Cardinal getDetailColumnHeadingCount() {
                     Cardinal value;
                     XtVaGetValues(this->_widget, "detailColumnHeadingCount", &value, nullptr);
                     return value;
@@ -5236,7 +5236,7 @@ public:
                 XtVaSetValues(this->_widget, "detailOrder", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal * getDetailOrder() {
+Cardinal * getDetailOrder() {
                     Cardinal * value;
                     XtVaGetValues(this->_widget, "detailOrder", &value, nullptr);
                     return value;
@@ -5245,7 +5245,7 @@ public:
                 XtVaSetValues(this->_widget, "detailOrderCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal getDetailOrderCount() {
+Cardinal getDetailOrderCount() {
                     Cardinal value;
                     XtVaGetValues(this->_widget, "detailOrderCount", &value, nullptr);
                     return value;
@@ -5254,7 +5254,7 @@ public:
                 XtVaSetValues(this->_widget, "detailTabList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabList getDetailTabList() {
+XmTabList getDetailTabList() {
                     XmTabList value;
                     XtVaGetValues(this->_widget, "detailTabList", &value, nullptr);
                     return value;
@@ -5263,7 +5263,7 @@ public:
                 XtVaSetValues(this->_widget, "entryViewType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getEntryViewType() {
+unsigned char getEntryViewType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "entryViewType", &value, nullptr);
                     return value;
@@ -5272,7 +5272,7 @@ public:
                 XtVaSetValues(this->_widget, "expandedStatePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getExpandedStatePixmap() {
+Pixmap getExpandedStatePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "expandedStatePixmap", &value, nullptr);
                     return value;
@@ -5281,7 +5281,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -5290,7 +5290,7 @@ public:
                 XtVaSetValues(this->_widget, "largeCellHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getLargeCellHeight() {
+Dimension getLargeCellHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "largeCellHeight", &value, nullptr);
                     return value;
@@ -5299,7 +5299,7 @@ public:
                 XtVaSetValues(this->_widget, "largeCellWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getLargeCellWidth() {
+Dimension getLargeCellWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "largeCellWidth", &value, nullptr);
                     return value;
@@ -5308,7 +5308,7 @@ public:
                 XtVaSetValues(this->_widget, "layoutType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getLayoutType() {
+unsigned char getLayoutType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "layoutType", &value, nullptr);
                     return value;
@@ -5317,7 +5317,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -5326,7 +5326,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -5335,20 +5335,20 @@ public:
                 XtVaSetValues(this->_widget, "outlineButtonPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOutlineButtonPolicy() {
+unsigned char getOutlineButtonPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "outlineButtonPolicy", &value, nullptr);
                     return value;
                 }
     Derived& addOutlineChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("outlineChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("outlineChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setOutlineChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "outlineChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getOutlineChangedCallback() {
+XtCallbackList getOutlineChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "outlineChangedCallback", &value, nullptr);
                     return value;
@@ -5357,7 +5357,7 @@ public:
                 XtVaSetValues(this->_widget, "outlineColumnWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getOutlineColumnWidth() {
+Dimension getOutlineColumnWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "outlineColumnWidth", &value, nullptr);
                     return value;
@@ -5366,7 +5366,7 @@ public:
                 XtVaSetValues(this->_widget, "outlineIndentation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getOutlineIndentation() {
+Dimension getOutlineIndentation() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "outlineIndentation", &value, nullptr);
                     return value;
@@ -5375,7 +5375,7 @@ public:
                 XtVaSetValues(this->_widget, "outlineLineStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOutlineLineStyle() {
+unsigned char getOutlineLineStyle() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "outlineLineStyle", &value, nullptr);
                     return value;
@@ -5384,7 +5384,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -5393,7 +5393,7 @@ public:
                 XtVaSetValues(this->_widget, "primaryOwnership", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getPrimaryOwnership() {
+unsigned char getPrimaryOwnership() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "primaryOwnership", &value, nullptr);
                     return value;
@@ -5402,7 +5402,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -5411,7 +5411,7 @@ public:
                 XtVaSetValues(this->_widget, "selectColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getSelectColor() {
+Pixel getSelectColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "selectColor", &value, nullptr);
                     return value;
@@ -5420,7 +5420,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedObjectCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned int getSelectedObjectCount() {
+unsigned int getSelectedObjectCount() {
                     unsigned int value;
                     XtVaGetValues(this->_widget, "selectedObjectCount", &value, nullptr);
                     return value;
@@ -5429,20 +5429,20 @@ public:
                 XtVaSetValues(this->_widget, "selectedObjects", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    WidgetList getSelectedObjects() {
+WidgetList getSelectedObjects() {
                     WidgetList value;
                     XtVaGetValues(this->_widget, "selectedObjects", &value, nullptr);
                     return value;
                 }
     Derived& addSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("selectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("selectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "selectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSelectionCallback() {
+XtCallbackList getSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "selectionCallback", &value, nullptr);
                     return value;
@@ -5451,7 +5451,7 @@ public:
                 XtVaSetValues(this->_widget, "selectionPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSelectionPolicy() {
+unsigned char getSelectionPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "selectionPolicy", &value, nullptr);
                     return value;
@@ -5460,7 +5460,7 @@ public:
                 XtVaSetValues(this->_widget, "selectionTechnique", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSelectionTechnique() {
+unsigned char getSelectionTechnique() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "selectionTechnique", &value, nullptr);
                     return value;
@@ -5469,7 +5469,7 @@ public:
                 XtVaSetValues(this->_widget, "smallCellHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSmallCellHeight() {
+Dimension getSmallCellHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "smallCellHeight", &value, nullptr);
                     return value;
@@ -5478,7 +5478,7 @@ public:
                 XtVaSetValues(this->_widget, "smallCellWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSmallCellWidth() {
+Dimension getSmallCellWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "smallCellWidth", &value, nullptr);
                     return value;
@@ -5487,7 +5487,7 @@ public:
                 XtVaSetValues(this->_widget, "spatialIncludeModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSpatialIncludeModel() {
+unsigned char getSpatialIncludeModel() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "spatialIncludeModel", &value, nullptr);
                     return value;
@@ -5496,7 +5496,7 @@ public:
                 XtVaSetValues(this->_widget, "spatialResizeModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSpatialResizeModel() {
+unsigned char getSpatialResizeModel() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "spatialResizeModel", &value, nullptr);
                     return value;
@@ -5505,7 +5505,7 @@ public:
                 XtVaSetValues(this->_widget, "spatialSnapModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSpatialSnapModel() {
+unsigned char getSpatialSnapModel() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "spatialSnapModel", &value, nullptr);
                     return value;
@@ -5514,74 +5514,74 @@ public:
                 XtVaSetValues(this->_widget, "spatialStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSpatialStyle() {
+unsigned char getSpatialStyle() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "spatialStyle", &value, nullptr);
                     return value;
                 }
-};
-class CXmContainer : public CXmContainerImpl<CXmContainer> {
-public:
-    using CXmContainerImpl<CXmContainer>::CXmContainerImpl;
-    static CXmContainer create(Widget parent, const char* name) {
-        return CXmContainer(XtCreateWidget(name, xmContainerWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmContainer : public CXmContainerImpl<CXmContainer> {
+            public:
+                using CXmContainerImpl<CXmContainer>::CXmContainerImpl;
+                static CXmContainer create(Widget parent, const char* name) {
+                    return CXmContainer(XtCreateWidget(name, xmContainerWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDrawingAreaImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& addConvertCallback(std::function<void(XtPointer)> callback) {
-        addCallback("convertCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmDrawingAreaImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& addConvertCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("convertCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setConvertCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "convertCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getConvertCallback() {
+XtCallbackList getConvertCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "convertCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDestinationCallback(std::function<void(XtPointer)> callback) {
-        addCallback("destinationCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("destinationCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDestinationCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "destinationCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDestinationCallback() {
+XtCallbackList getDestinationCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "destinationCallback", &value, nullptr);
                     return value;
                 }
     Derived& addExposeCallback(std::function<void(XtPointer)> callback) {
-        addCallback("exposeCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("exposeCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setExposeCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "exposeCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getExposeCallback() {
+XtCallbackList getExposeCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "exposeCallback", &value, nullptr);
                     return value;
                 }
     Derived& addInputCallback(std::function<void(XtPointer)> callback) {
-        addCallback("inputCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("inputCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setInputCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "inputCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getInputCallback() {
+XtCallbackList getInputCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "inputCallback", &value, nullptr);
                     return value;
@@ -5590,7 +5590,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -5599,20 +5599,20 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
                 }
     Derived& addResizeCallback(std::function<void(XtPointer)> callback) {
-        addCallback("resizeCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("resizeCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setResizeCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "resizeCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getResizeCallback() {
+XtCallbackList getResizeCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "resizeCallback", &value, nullptr);
                     return value;
@@ -5621,31 +5621,31 @@ public:
                 XtVaSetValues(this->_widget, "resizePolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getResizePolicy() {
+unsigned char getResizePolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "resizePolicy", &value, nullptr);
                     return value;
                 }
-};
-class CXmDrawingArea : public CXmDrawingAreaImpl<CXmDrawingArea> {
-public:
-    using CXmDrawingAreaImpl<CXmDrawingArea>::CXmDrawingAreaImpl;
-    static CXmDrawingArea create(Widget parent, const char* name) {
-        return CXmDrawingArea(XtCreateWidget(name, xmDrawingAreaWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDrawingArea : public CXmDrawingAreaImpl<CXmDrawingArea> {
+            public:
+                using CXmDrawingAreaImpl<CXmDrawingArea>::CXmDrawingAreaImpl;
+                static CXmDrawingArea create(Widget parent, const char* name) {
+                    return CXmDrawingArea(XtCreateWidget(name, xmDrawingAreaWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDropDownImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setActivateOnFill(int value) {
+            template <typename Derived> class CXmDropDownImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setActivateOnFill(int value) {
                 XtVaSetValues(this->_widget, "activateOnFill", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getActivateOnFill() {
+int getActivateOnFill() {
                     int value;
                     XtVaGetValues(this->_widget, "activateOnFill", &value, nullptr);
                     return value;
@@ -5654,7 +5654,7 @@ public:
                 XtVaSetValues(this->_widget, "autoTraversal", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoTraversal() {
+Boolean getAutoTraversal() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoTraversal", &value, nullptr);
                     return value;
@@ -5663,7 +5663,7 @@ public:
                 XtVaSetValues(this->_widget, "comboTranslations", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtTranslations getComboTranslations() {
+XtTranslations getComboTranslations() {
                     XtTranslations value;
                     XtVaGetValues(this->_widget, "comboTranslations", &value, nullptr);
                     return value;
@@ -5672,7 +5672,7 @@ public:
                 XtVaSetValues(this->_widget, "customizedCombinationBox", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getCustomizedCombinationBox() {
+Boolean getCustomizedCombinationBox() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "customizedCombinationBox", &value, nullptr);
                     return value;
@@ -5681,7 +5681,7 @@ public:
                 XtVaSetValues(this->_widget, "editable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEditable() {
+Boolean getEditable() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "editable", &value, nullptr);
                     return value;
@@ -5690,7 +5690,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalMargin() {
+Dimension getHorizontalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalMargin", &value, nullptr);
                     return value;
@@ -5699,7 +5699,7 @@ public:
                 XtVaSetValues(this->_widget, "newVisualStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getNewVisualStyle() {
+Boolean getNewVisualStyle() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "newVisualStyle", &value, nullptr);
                     return value;
@@ -5708,7 +5708,7 @@ public:
                 XtVaSetValues(this->_widget, "popupCursor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cursor getPopupCursor() {
+Cursor getPopupCursor() {
                     Cursor value;
                     XtVaGetValues(this->_widget, "popupCursor", &value, nullptr);
                     return value;
@@ -5717,7 +5717,7 @@ public:
                 XtVaSetValues(this->_widget, "popupOffset", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getPopupOffset() {
+int getPopupOffset() {
                     int value;
                     XtVaGetValues(this->_widget, "popupOffset", &value, nullptr);
                     return value;
@@ -5726,7 +5726,7 @@ public:
                 XtVaSetValues(this->_widget, "popupShellWidget", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getPopupShellWidget() {
+Widget getPopupShellWidget() {
                     Widget value;
                     XtVaGetValues(this->_widget, "popupShellWidget", &value, nullptr);
                     return value;
@@ -5735,7 +5735,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -5744,33 +5744,33 @@ public:
                 XtVaSetValues(this->_widget, "showLabel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getShowLabel() {
+Boolean getShowLabel() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "showLabel", &value, nullptr);
                     return value;
                 }
     Derived& addUpdateShellCallback(std::function<void(XtPointer)> callback) {
-        addCallback("updateShellCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("updateShellCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setUpdateShellCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "updateShellCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getUpdateShellCallback() {
+XtCallbackList getUpdateShellCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "updateShellCallback", &value, nullptr);
                     return value;
                 }
     Derived& addUpdateTextCallback(std::function<void(XtPointer)> callback) {
-        addCallback("updateTextCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("updateTextCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setUpdateTextCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "updateTextCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getUpdateTextCallback() {
+XtCallbackList getUpdateTextCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "updateTextCallback", &value, nullptr);
                     return value;
@@ -5779,7 +5779,7 @@ public:
                 XtVaSetValues(this->_widget, "useTextField", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseTextField() {
+Boolean getUseTextField() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useTextField", &value, nullptr);
                     return value;
@@ -5788,33 +5788,33 @@ public:
                 XtVaSetValues(this->_widget, "verify", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getVerify() {
+Boolean getVerify() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "verify", &value, nullptr);
                     return value;
                 }
     Derived& addVerifyTextCallback(std::function<void(XtPointer)> callback) {
-        addCallback("verifyTextCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("verifyTextCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setVerifyTextCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "verifyTextCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getVerifyTextCallback() {
+XtCallbackList getVerifyTextCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "verifyTextCallback", &value, nullptr);
                     return value;
                 }
     Derived& addVerifyTextFailedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("verifyTextFailedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("verifyTextFailedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setVerifyTextFailedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "verifyTextFailedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getVerifyTextFailedCallback() {
+XtCallbackList getVerifyTextFailedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "verifyTextFailedCallback", &value, nullptr);
                     return value;
@@ -5823,7 +5823,7 @@ public:
                 XtVaSetValues(this->_widget, "verticalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalMargin() {
+Dimension getVerticalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalMargin", &value, nullptr);
                     return value;
@@ -5832,31 +5832,31 @@ public:
                 XtVaSetValues(this->_widget, "visibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getVisibleItemCount() {
+int getVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
                     return value;
                 }
-};
-class CXmDropDown : public CXmDropDownImpl<CXmDropDown> {
-public:
-    using CXmDropDownImpl<CXmDropDown>::CXmDropDownImpl;
-    static CXmDropDown create(Widget parent, const char* name) {
-        return CXmDropDown(XtCreateWidget(name, xmDropDownWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDropDown : public CXmDropDownImpl<CXmDropDown> {
+            public:
+                using CXmDropDownImpl<CXmDropDown>::CXmDropDownImpl;
+                static CXmDropDown create(Widget parent, const char* name) {
+                    return CXmDropDown(XtCreateWidget(name, xmDropDownWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmFrameImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setMarginHeight(Dimension value) {
+            template <typename Derived> class CXmFrameImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setMarginHeight(Dimension value) {
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -5865,7 +5865,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -5874,7 +5874,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -5883,31 +5883,31 @@ public:
                 XtVaSetValues(this->_widget, "shadowType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getShadowType() {
+unsigned char getShadowType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "shadowType", &value, nullptr);
                     return value;
                 }
-};
-class CXmFrame : public CXmFrameImpl<CXmFrame> {
-public:
-    using CXmFrameImpl<CXmFrame>::CXmFrameImpl;
-    static CXmFrame create(Widget parent, const char* name) {
-        return CXmFrame(XtCreateWidget(name, xmFrameWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmFrame : public CXmFrameImpl<CXmFrame> {
+            public:
+                using CXmFrameImpl<CXmFrame>::CXmFrameImpl;
+                static CXmFrame create(Widget parent, const char* name) {
+                    return CXmFrame(XtCreateWidget(name, xmFrameWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmHierarchyImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setAutoClose(Boolean value) {
+            template <typename Derived> class CXmHierarchyImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setAutoClose(Boolean value) {
                 XtVaSetValues(this->_widget, "autoClose", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoClose() {
+Boolean getAutoClose() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoClose", &value, nullptr);
                     return value;
@@ -5916,7 +5916,7 @@ public:
                 XtVaSetValues(this->_widget, "closeFolderPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getCloseFolderPixmap() {
+Pixmap getCloseFolderPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "closeFolderPixmap", &value, nullptr);
                     return value;
@@ -5925,7 +5925,7 @@ public:
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
@@ -5934,59 +5934,59 @@ public:
                 XtVaSetValues(this->_widget, "horizontalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalMargin() {
+Dimension getHorizontalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalMargin", &value, nullptr);
                     return value;
                 }
     Derived& addNodeStateBegEndCallback(std::function<void(XtPointer)> callback) {
-        addCallback("nodeStateBegEndCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("nodeStateBegEndCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNodeStateBegEndCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "nodeStateBegEndCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNodeStateBegEndCallback() {
+XtCallbackList getNodeStateBegEndCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "nodeStateBegEndCallback", &value, nullptr);
                     return value;
                 }
     Derived& addNodeStateBeginEndCallback(std::function<void(XtPointer)> callback) {
-        addCallback("nodeStateBeginEndCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("nodeStateBeginEndCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNodeStateBeginEndCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "nodeStateBeginEndCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNodeStateBeginEndCallback() {
+XtCallbackList getNodeStateBeginEndCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "nodeStateBeginEndCallback", &value, nullptr);
                     return value;
                 }
     Derived& addNodeStateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("nodeStateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("nodeStateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNodeStateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "nodeStateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNodeStateCallback() {
+XtCallbackList getNodeStateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "nodeStateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addNodeStateChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("nodeStateChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("nodeStateChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNodeStateChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "nodeStateChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNodeStateChangedCallback() {
+XtCallbackList getNodeStateChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "nodeStateChangedCallback", &value, nullptr);
                     return value;
@@ -5995,7 +5995,7 @@ public:
                 XtVaSetValues(this->_widget, "openFolderPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getOpenFolderPixmap() {
+Pixmap getOpenFolderPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "openFolderPixmap", &value, nullptr);
                     return value;
@@ -6004,7 +6004,7 @@ public:
                 XtVaSetValues(this->_widget, "refigureMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getRefigureMode() {
+Boolean getRefigureMode() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "refigureMode", &value, nullptr);
                     return value;
@@ -6013,7 +6013,7 @@ public:
                 XtVaSetValues(this->_widget, "verticalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalMargin() {
+Dimension getVerticalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalMargin", &value, nullptr);
                     return value;
@@ -6022,31 +6022,31 @@ public:
                 XtVaSetValues(this->_widget, "width", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getWidth() {
+Dimension getWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "width", &value, nullptr);
                     return value;
                 }
-};
-class CXmHierarchy : public CXmHierarchyImpl<CXmHierarchy> {
-public:
-    using CXmHierarchyImpl<CXmHierarchy>::CXmHierarchyImpl;
-    static CXmHierarchy create(Widget parent, const char* name) {
-        return CXmHierarchy(XtCreateWidget(name, xmHierarchyWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmHierarchy : public CXmHierarchyImpl<CXmHierarchy> {
+            public:
+                using CXmHierarchyImpl<CXmHierarchy>::CXmHierarchyImpl;
+                static CXmHierarchy create(Widget parent, const char* name) {
+                    return CXmHierarchy(XtCreateWidget(name, xmHierarchyWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmIconBoxImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setHorizontalMargin(Dimension value) {
+            template <typename Derived> class CXmIconBoxImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setHorizontalMargin(Dimension value) {
                 XtVaSetValues(this->_widget, "horizontalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalMargin() {
+Dimension getHorizontalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalMargin", &value, nullptr);
                     return value;
@@ -6055,7 +6055,7 @@ public:
                 XtVaSetValues(this->_widget, "minimumCellHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMinimumCellHeight() {
+Dimension getMinimumCellHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "minimumCellHeight", &value, nullptr);
                     return value;
@@ -6064,7 +6064,7 @@ public:
                 XtVaSetValues(this->_widget, "minimumCellWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMinimumCellWidth() {
+Dimension getMinimumCellWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "minimumCellWidth", &value, nullptr);
                     return value;
@@ -6073,7 +6073,7 @@ public:
                 XtVaSetValues(this->_widget, "minimumHorizontalCells", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMinimumHorizontalCells() {
+Dimension getMinimumHorizontalCells() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "minimumHorizontalCells", &value, nullptr);
                     return value;
@@ -6082,7 +6082,7 @@ public:
                 XtVaSetValues(this->_widget, "minimumVerticalCells", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMinimumVerticalCells() {
+Dimension getMinimumVerticalCells() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "minimumVerticalCells", &value, nullptr);
                     return value;
@@ -6091,35 +6091,35 @@ public:
                 XtVaSetValues(this->_widget, "verticalMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalMargin() {
+Dimension getVerticalMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalMargin", &value, nullptr);
                     return value;
                 }
-};
-class CXmIconBox : public CXmIconBoxImpl<CXmIconBox> {
-public:
-    using CXmIconBoxImpl<CXmIconBox>::CXmIconBoxImpl;
-    static CXmIconBox create(Widget parent, const char* name) {
-        return CXmIconBox(XtCreateWidget(name, xmIconBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmIconBox : public CXmIconBoxImpl<CXmIconBox> {
+            public:
+                using CXmIconBoxImpl<CXmIconBox>::CXmIconBoxImpl;
+                static CXmIconBox create(Widget parent, const char* name) {
+                    return CXmIconBox(XtCreateWidget(name, xmIconBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmMultiListImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback) {
-        addCallback("doubleClickCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmMultiListImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("doubleClickCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDoubleClickCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "doubleClickCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDoubleClickCallback() {
+XtCallbackList getDoubleClickCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "doubleClickCallback", &value, nullptr);
                     return value;
@@ -6128,7 +6128,7 @@ public:
                 XtVaSetValues(this->_widget, "findLabel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getFindLabel() {
+XmString getFindLabel() {
                     XmString value;
                     XtVaGetValues(this->_widget, "findLabel", &value, nullptr);
                     return value;
@@ -6137,33 +6137,33 @@ public:
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
                 }
     Derived& addItemFoundCallback(std::function<void(XtPointer)> callback) {
-        addCallback("itemFoundCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("itemFoundCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setItemFoundCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "itemFoundCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getItemFoundCallback() {
+XtCallbackList getItemFoundCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "itemFoundCallback", &value, nullptr);
                     return value;
                 }
     Derived& addItemNotFoundCallback(std::function<void(XtPointer)> callback) {
-        addCallback("itemNotFoundCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("itemNotFoundCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setItemNotFoundCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "itemNotFoundCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getItemNotFoundCallback() {
+XtCallbackList getItemNotFoundCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "itemNotFoundCallback", &value, nullptr);
                     return value;
@@ -6172,20 +6172,20 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
                 }
     Derived& addSelectCallback(std::function<void(XtPointer)> callback) {
-        addCallback("selectCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("selectCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSelectCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "selectCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSelectCallback() {
+XtCallbackList getSelectCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "selectCallback", &value, nullptr);
                     return value;
@@ -6194,20 +6194,20 @@ public:
                 XtVaSetValues(this->_widget, "showFind", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getShowFind() {
+Boolean getShowFind() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "showFind", &value, nullptr);
                     return value;
                 }
     Derived& addSingleSelectionCallback(std::function<void(XtPointer)> callback) {
-        addCallback("singleSelectionCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("singleSelectionCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSingleSelectionCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "singleSelectionCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSingleSelectionCallback() {
+XtCallbackList getSingleSelectionCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "singleSelectionCallback", &value, nullptr);
                     return value;
@@ -6216,7 +6216,7 @@ public:
                 XtVaSetValues(this->_widget, "title", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getTitle() {
+XmString getTitle() {
                     XmString value;
                     XtVaGetValues(this->_widget, "title", &value, nullptr);
                     return value;
@@ -6225,7 +6225,7 @@ public:
                 XtVaSetValues(this->_widget, "titleString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getTitleString() {
+XmString getTitleString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "titleString", &value, nullptr);
                     return value;
@@ -6234,7 +6234,7 @@ public:
                 XtVaSetValues(this->_widget, "visibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getVisibleItemCount() {
+int getVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
                     return value;
@@ -6243,31 +6243,31 @@ public:
                 XtVaSetValues(this->_widget, "width", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getWidth() {
+Dimension getWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "width", &value, nullptr);
                     return value;
                 }
-};
-class CXmMultiList : public CXmMultiListImpl<CXmMultiList> {
-public:
-    using CXmMultiListImpl<CXmMultiList>::CXmMultiListImpl;
-    static CXmMultiList create(Widget parent, const char* name) {
-        return CXmMultiList(XtCreateWidget(name, xmMultiListWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmMultiList : public CXmMultiListImpl<CXmMultiList> {
+            public:
+                using CXmMultiListImpl<CXmMultiList>::CXmMultiListImpl;
+                static CXmMultiList create(Widget parent, const char* name) {
+                    return CXmMultiList(XtCreateWidget(name, xmMultiListWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmNotebookImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setBackPageBackground(Pixel value) {
+            template <typename Derived> class CXmNotebookImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setBackPageBackground(Pixel value) {
                 XtVaSetValues(this->_widget, "backPageBackground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackPageBackground() {
+Pixel getBackPageBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "backPageBackground", &value, nullptr);
                     return value;
@@ -6276,7 +6276,7 @@ public:
                 XtVaSetValues(this->_widget, "backPageForeground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getBackPageForeground() {
+Pixel getBackPageForeground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "backPageForeground", &value, nullptr);
                     return value;
@@ -6285,7 +6285,7 @@ public:
                 XtVaSetValues(this->_widget, "backPageNumber", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Cardinal getBackPageNumber() {
+Cardinal getBackPageNumber() {
                     Cardinal value;
                     XtVaGetValues(this->_widget, "backPageNumber", &value, nullptr);
                     return value;
@@ -6294,7 +6294,7 @@ public:
                 XtVaSetValues(this->_widget, "backPagePlacement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getBackPagePlacement() {
+unsigned char getBackPagePlacement() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "backPagePlacement", &value, nullptr);
                     return value;
@@ -6303,7 +6303,7 @@ public:
                 XtVaSetValues(this->_widget, "backPageSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getBackPageSize() {
+Dimension getBackPageSize() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "backPageSize", &value, nullptr);
                     return value;
@@ -6312,7 +6312,7 @@ public:
                 XtVaSetValues(this->_widget, "bindingPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getBindingPixmap() {
+Pixmap getBindingPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "bindingPixmap", &value, nullptr);
                     return value;
@@ -6321,7 +6321,7 @@ public:
                 XtVaSetValues(this->_widget, "bindingType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getBindingType() {
+unsigned char getBindingType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "bindingType", &value, nullptr);
                     return value;
@@ -6330,7 +6330,7 @@ public:
                 XtVaSetValues(this->_widget, "bindingWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getBindingWidth() {
+Dimension getBindingWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "bindingWidth", &value, nullptr);
                     return value;
@@ -6339,7 +6339,7 @@ public:
                 XtVaSetValues(this->_widget, "currentPageNumber", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getCurrentPageNumber() {
+int getCurrentPageNumber() {
                     int value;
                     XtVaGetValues(this->_widget, "currentPageNumber", &value, nullptr);
                     return value;
@@ -6348,7 +6348,7 @@ public:
                 XtVaSetValues(this->_widget, "firstPageNumber", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getFirstPageNumber() {
+int getFirstPageNumber() {
                     int value;
                     XtVaGetValues(this->_widget, "firstPageNumber", &value, nullptr);
                     return value;
@@ -6357,7 +6357,7 @@ public:
                 XtVaSetValues(this->_widget, "frameBackground", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getFrameBackground() {
+Pixel getFrameBackground() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "frameBackground", &value, nullptr);
                     return value;
@@ -6366,7 +6366,7 @@ public:
                 XtVaSetValues(this->_widget, "frameShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getFrameShadowThickness() {
+Dimension getFrameShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "frameShadowThickness", &value, nullptr);
                     return value;
@@ -6375,7 +6375,7 @@ public:
                 XtVaSetValues(this->_widget, "innerMarginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getInnerMarginHeight() {
+Dimension getInnerMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "innerMarginHeight", &value, nullptr);
                     return value;
@@ -6384,7 +6384,7 @@ public:
                 XtVaSetValues(this->_widget, "innerMarginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getInnerMarginWidth() {
+Dimension getInnerMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "innerMarginWidth", &value, nullptr);
                     return value;
@@ -6393,7 +6393,7 @@ public:
                 XtVaSetValues(this->_widget, "lastPageNumber", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getLastPageNumber() {
+int getLastPageNumber() {
                     int value;
                     XtVaGetValues(this->_widget, "lastPageNumber", &value, nullptr);
                     return value;
@@ -6402,7 +6402,7 @@ public:
                 XtVaSetValues(this->_widget, "majorTabSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMajorTabSpacing() {
+Dimension getMajorTabSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "majorTabSpacing", &value, nullptr);
                     return value;
@@ -6411,7 +6411,7 @@ public:
                 XtVaSetValues(this->_widget, "minorTabSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMinorTabSpacing() {
+Dimension getMinorTabSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "minorTabSpacing", &value, nullptr);
                     return value;
@@ -6420,44 +6420,44 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
                 }
     Derived& addPageChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("pageChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("pageChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setPageChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "pageChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getPageChangedCallback() {
+XtCallbackList getPageChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "pageChangedCallback", &value, nullptr);
                     return value;
                 }
-};
-class CXmNotebook : public CXmNotebookImpl<CXmNotebook> {
-public:
-    using CXmNotebookImpl<CXmNotebook>::CXmNotebookImpl;
-    static CXmNotebook create(Widget parent, const char* name) {
-        return CXmNotebook(XtCreateWidget(name, xmNotebookWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmNotebook : public CXmNotebookImpl<CXmNotebook> {
+            public:
+                using CXmNotebookImpl<CXmNotebook>::CXmNotebookImpl;
+                static CXmNotebook create(Widget parent, const char* name) {
+                    return CXmNotebook(XtCreateWidget(name, xmNotebookWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmRowColumnImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setAdjustLast(Boolean value) {
+            template <typename Derived> class CXmRowColumnImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setAdjustLast(Boolean value) {
                 XtVaSetValues(this->_widget, "adjustLast", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAdjustLast() {
+Boolean getAdjustLast() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "adjustLast", &value, nullptr);
                     return value;
@@ -6466,7 +6466,7 @@ public:
                 XtVaSetValues(this->_widget, "adjustMargin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAdjustMargin() {
+Boolean getAdjustMargin() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "adjustMargin", &value, nullptr);
                     return value;
@@ -6475,7 +6475,7 @@ public:
                 XtVaSetValues(this->_widget, "entryAlignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getEntryAlignment() {
+unsigned char getEntryAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "entryAlignment", &value, nullptr);
                     return value;
@@ -6484,20 +6484,20 @@ public:
                 XtVaSetValues(this->_widget, "entryBorder", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getEntryBorder() {
+Dimension getEntryBorder() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "entryBorder", &value, nullptr);
                     return value;
                 }
     Derived& addEntryCallback(std::function<void(XtPointer)> callback) {
-        addCallback("entryCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("entryCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setEntryCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "entryCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getEntryCallback() {
+XtCallbackList getEntryCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "entryCallback", &value, nullptr);
                     return value;
@@ -6506,7 +6506,7 @@ public:
                 XtVaSetValues(this->_widget, "entryClass", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    WidgetClass getEntryClass() {
+WidgetClass getEntryClass() {
                     WidgetClass value;
                     XtVaGetValues(this->_widget, "entryClass", &value, nullptr);
                     return value;
@@ -6515,7 +6515,7 @@ public:
                 XtVaSetValues(this->_widget, "entryVerticalAlignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getEntryVerticalAlignment() {
+unsigned char getEntryVerticalAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "entryVerticalAlignment", &value, nullptr);
                     return value;
@@ -6524,7 +6524,7 @@ public:
                 XtVaSetValues(this->_widget, "insertPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtOrderProc getInsertPosition() {
+XtOrderProc getInsertPosition() {
                     XtOrderProc value;
                     XtVaGetValues(this->_widget, "insertPosition", &value, nullptr);
                     return value;
@@ -6533,7 +6533,7 @@ public:
                 XtVaSetValues(this->_widget, "isAligned", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getIsAligned() {
+Boolean getIsAligned() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "isAligned", &value, nullptr);
                     return value;
@@ -6542,7 +6542,7 @@ public:
                 XtVaSetValues(this->_widget, "isHomogeneous", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getIsHomogeneous() {
+Boolean getIsHomogeneous() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "isHomogeneous", &value, nullptr);
                     return value;
@@ -6551,20 +6551,20 @@ public:
                 XtVaSetValues(this->_widget, "labelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getLabelString() {
+XmString getLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "labelString", &value, nullptr);
                     return value;
                 }
     Derived& addMapCallback(std::function<void(XtPointer)> callback) {
-        addCallback("mapCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("mapCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setMapCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "mapCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getMapCallback() {
+XtCallbackList getMapCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "mapCallback", &value, nullptr);
                     return value;
@@ -6573,7 +6573,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -6582,7 +6582,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -6591,7 +6591,7 @@ public:
                 XtVaSetValues(this->_widget, "menuAccelerator", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    String getMenuAccelerator() {
+String getMenuAccelerator() {
                     String value;
                     XtVaGetValues(this->_widget, "menuAccelerator", &value, nullptr);
                     return value;
@@ -6600,7 +6600,7 @@ public:
                 XtVaSetValues(this->_widget, "menuHelpWidget", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getMenuHelpWidget() {
+Widget getMenuHelpWidget() {
                     Widget value;
                     XtVaGetValues(this->_widget, "menuHelpWidget", &value, nullptr);
                     return value;
@@ -6609,7 +6609,7 @@ public:
                 XtVaSetValues(this->_widget, "menuHistory", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getMenuHistory() {
+Widget getMenuHistory() {
                     Widget value;
                     XtVaGetValues(this->_widget, "menuHistory", &value, nullptr);
                     return value;
@@ -6618,7 +6618,7 @@ public:
                 XtVaSetValues(this->_widget, "menuPost", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    String getMenuPost() {
+String getMenuPost() {
                     String value;
                     XtVaGetValues(this->_widget, "menuPost", &value, nullptr);
                     return value;
@@ -6627,7 +6627,7 @@ public:
                 XtVaSetValues(this->_widget, "mnemonic", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    KeySym getMnemonic() {
+KeySym getMnemonic() {
                     KeySym value;
                     XtVaGetValues(this->_widget, "mnemonic", &value, nullptr);
                     return value;
@@ -6636,7 +6636,7 @@ public:
                 XtVaSetValues(this->_widget, "mnemonicCharSet", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringCharSet getMnemonicCharSet() {
+XmStringCharSet getMnemonicCharSet() {
                     XmStringCharSet value;
                     XtVaGetValues(this->_widget, "mnemonicCharSet", &value, nullptr);
                     return value;
@@ -6645,7 +6645,7 @@ public:
                 XtVaSetValues(this->_widget, "navigationType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmNavigationType getNavigationType() {
+XmNavigationType getNavigationType() {
                     XmNavigationType value;
                     XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
                     return value;
@@ -6654,7 +6654,7 @@ public:
                 XtVaSetValues(this->_widget, "numColumns", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getNumColumns() {
+short getNumColumns() {
                     short value;
                     XtVaGetValues(this->_widget, "numColumns", &value, nullptr);
                     return value;
@@ -6663,7 +6663,7 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
@@ -6672,7 +6672,7 @@ public:
                 XtVaSetValues(this->_widget, "packing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getPacking() {
+unsigned char getPacking() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "packing", &value, nullptr);
                     return value;
@@ -6681,7 +6681,7 @@ public:
                 XtVaSetValues(this->_widget, "popupEnabled", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getPopupEnabled() {
+XtEnum getPopupEnabled() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "popupEnabled", &value, nullptr);
                     return value;
@@ -6690,7 +6690,7 @@ public:
                 XtVaSetValues(this->_widget, "postFromCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getPostFromCount() {
+int getPostFromCount() {
                     int value;
                     XtVaGetValues(this->_widget, "postFromCount", &value, nullptr);
                     return value;
@@ -6699,7 +6699,7 @@ public:
                 XtVaSetValues(this->_widget, "postFromList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget * getPostFromList() {
+Widget * getPostFromList() {
                     Widget * value;
                     XtVaGetValues(this->_widget, "postFromList", &value, nullptr);
                     return value;
@@ -6708,7 +6708,7 @@ public:
                 XtVaSetValues(this->_widget, "radioAlwaysOne", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getRadioAlwaysOne() {
+Boolean getRadioAlwaysOne() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "radioAlwaysOne", &value, nullptr);
                     return value;
@@ -6717,7 +6717,7 @@ public:
                 XtVaSetValues(this->_widget, "radioBehavior", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getRadioBehavior() {
+Boolean getRadioBehavior() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "radioBehavior", &value, nullptr);
                     return value;
@@ -6726,7 +6726,7 @@ public:
                 XtVaSetValues(this->_widget, "resizeHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getResizeHeight() {
+Boolean getResizeHeight() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "resizeHeight", &value, nullptr);
                     return value;
@@ -6735,7 +6735,7 @@ public:
                 XtVaSetValues(this->_widget, "resizeWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getResizeWidth() {
+Boolean getResizeWidth() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "resizeWidth", &value, nullptr);
                     return value;
@@ -6744,7 +6744,7 @@ public:
                 XtVaSetValues(this->_widget, "rowColumnType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getRowColumnType() {
+unsigned char getRowColumnType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "rowColumnType", &value, nullptr);
                     return value;
@@ -6753,7 +6753,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -6762,7 +6762,7 @@ public:
                 XtVaSetValues(this->_widget, "spacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSpacing() {
+Dimension getSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "spacing", &value, nullptr);
                     return value;
@@ -6771,33 +6771,33 @@ public:
                 XtVaSetValues(this->_widget, "subMenuId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getSubMenuId() {
+Widget getSubMenuId() {
                     Widget value;
                     XtVaGetValues(this->_widget, "subMenuId", &value, nullptr);
                     return value;
                 }
     Derived& addTearOffMenuActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("tearOffMenuActivateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("tearOffMenuActivateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setTearOffMenuActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "tearOffMenuActivateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getTearOffMenuActivateCallback() {
+XtCallbackList getTearOffMenuActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "tearOffMenuActivateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addTearOffMenuDeactivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("tearOffMenuDeactivateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("tearOffMenuDeactivateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setTearOffMenuDeactivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "tearOffMenuDeactivateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getTearOffMenuDeactivateCallback() {
+XtCallbackList getTearOffMenuDeactivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "tearOffMenuDeactivateCallback", &value, nullptr);
                     return value;
@@ -6806,7 +6806,7 @@ public:
                 XtVaSetValues(this->_widget, "tearOffModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getTearOffModel() {
+unsigned char getTearOffModel() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "tearOffModel", &value, nullptr);
                     return value;
@@ -6815,20 +6815,20 @@ public:
                 XtVaSetValues(this->_widget, "tearOffTitle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getTearOffTitle() {
+XmString getTearOffTitle() {
                     XmString value;
                     XtVaGetValues(this->_widget, "tearOffTitle", &value, nullptr);
                     return value;
                 }
     Derived& addUnmapCallback(std::function<void(XtPointer)> callback) {
-        addCallback("unmapCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("unmapCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setUnmapCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "unmapCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getUnmapCallback() {
+XtCallbackList getUnmapCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "unmapCallback", &value, nullptr);
                     return value;
@@ -6837,35 +6837,35 @@ public:
                 XtVaSetValues(this->_widget, "whichButton", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned int getWhichButton() {
+unsigned int getWhichButton() {
                     unsigned int value;
                     XtVaGetValues(this->_widget, "whichButton", &value, nullptr);
                     return value;
                 }
-};
-class CXmRowColumn : public CXmRowColumnImpl<CXmRowColumn> {
-public:
-    using CXmRowColumnImpl<CXmRowColumn>::CXmRowColumnImpl;
-    static CXmRowColumn create(Widget parent, const char* name) {
-        return CXmRowColumn(XtCreateWidget(name, xmRowColumnWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmRowColumn : public CXmRowColumnImpl<CXmRowColumn> {
+            public:
+                using CXmRowColumnImpl<CXmRowColumn>::CXmRowColumnImpl;
+                static CXmRowColumn create(Widget parent, const char* name) {
+                    return CXmRowColumn(XtCreateWidget(name, xmRowColumnWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmScaleImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& addConvertCallback(std::function<void(XtPointer)> callback) {
-        addCallback("convertCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmScaleImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& addConvertCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("convertCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setConvertCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "convertCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getConvertCallback() {
+XtCallbackList getConvertCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "convertCallback", &value, nullptr);
                     return value;
@@ -6874,20 +6874,20 @@ public:
                 XtVaSetValues(this->_widget, "decimalPoints", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getDecimalPoints() {
+short getDecimalPoints() {
                     short value;
                     XtVaGetValues(this->_widget, "decimalPoints", &value, nullptr);
                     return value;
                 }
     Derived& addDragCallback(std::function<void(XtPointer)> callback) {
-        addCallback("dragCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("dragCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDragCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "dragCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDragCallback() {
+XtCallbackList getDragCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "dragCallback", &value, nullptr);
                     return value;
@@ -6896,7 +6896,7 @@ public:
                 XtVaSetValues(this->_widget, "editable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEditable() {
+Boolean getEditable() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "editable", &value, nullptr);
                     return value;
@@ -6905,7 +6905,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -6914,7 +6914,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightOnEnter", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getHighlightOnEnter() {
+Boolean getHighlightOnEnter() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "highlightOnEnter", &value, nullptr);
                     return value;
@@ -6923,7 +6923,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -6932,7 +6932,7 @@ public:
                 XtVaSetValues(this->_widget, "maximum", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaximum() {
+int getMaximum() {
                     int value;
                     XtVaGetValues(this->_widget, "maximum", &value, nullptr);
                     return value;
@@ -6941,7 +6941,7 @@ public:
                 XtVaSetValues(this->_widget, "minimum", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinimum() {
+int getMinimum() {
                     int value;
                     XtVaGetValues(this->_widget, "minimum", &value, nullptr);
                     return value;
@@ -6950,7 +6950,7 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
@@ -6959,7 +6959,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getPri_vate() {
+int getPri_vate() {
                     int value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -6968,7 +6968,7 @@ public:
                 XtVaSetValues(this->_widget, "processingDirection", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getProcessingDirection() {
+unsigned char getProcessingDirection() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "processingDirection", &value, nullptr);
                     return value;
@@ -6977,7 +6977,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -6986,7 +6986,7 @@ public:
                 XtVaSetValues(this->_widget, "scaleHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getScaleHeight() {
+Dimension getScaleHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "scaleHeight", &value, nullptr);
                     return value;
@@ -6995,7 +6995,7 @@ public:
                 XtVaSetValues(this->_widget, "scaleMultiple", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getScaleMultiple() {
+int getScaleMultiple() {
                     int value;
                     XtVaGetValues(this->_widget, "scaleMultiple", &value, nullptr);
                     return value;
@@ -7004,7 +7004,7 @@ public:
                 XtVaSetValues(this->_widget, "scaleWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getScaleWidth() {
+Dimension getScaleWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "scaleWidth", &value, nullptr);
                     return value;
@@ -7013,7 +7013,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -7022,7 +7022,7 @@ public:
                 XtVaSetValues(this->_widget, "showArrows", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getShowArrows() {
+XtEnum getShowArrows() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "showArrows", &value, nullptr);
                     return value;
@@ -7031,7 +7031,7 @@ public:
                 XtVaSetValues(this->_widget, "showValue", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getShowValue() {
+Boolean getShowValue() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "showValue", &value, nullptr);
                     return value;
@@ -7040,7 +7040,7 @@ public:
                 XtVaSetValues(this->_widget, "sliderMark", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getSliderMark() {
+XtEnum getSliderMark() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "sliderMark", &value, nullptr);
                     return value;
@@ -7049,7 +7049,7 @@ public:
                 XtVaSetValues(this->_widget, "sliderSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSliderSize() {
+int getSliderSize() {
                     int value;
                     XtVaGetValues(this->_widget, "sliderSize", &value, nullptr);
                     return value;
@@ -7058,7 +7058,7 @@ public:
                 XtVaSetValues(this->_widget, "sliderVisual", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getSliderVisual() {
+XtEnum getSliderVisual() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "sliderVisual", &value, nullptr);
                     return value;
@@ -7067,7 +7067,7 @@ public:
                 XtVaSetValues(this->_widget, "slidingMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getSlidingMode() {
+XtEnum getSlidingMode() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "slidingMode", &value, nullptr);
                     return value;
@@ -7076,7 +7076,7 @@ public:
                 XtVaSetValues(this->_widget, "titleString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getTitleString() {
+XmString getTitleString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "titleString", &value, nullptr);
                     return value;
@@ -7085,44 +7085,44 @@ public:
                 XtVaSetValues(this->_widget, "value", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getValue() {
+int getValue() {
                     int value;
                     XtVaGetValues(this->_widget, "value", &value, nullptr);
                     return value;
                 }
     Derived& addValueChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("valueChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("valueChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setValueChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "valueChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getValueChangedCallback() {
+XtCallbackList getValueChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
                     return value;
                 }
-};
-class CXmScale : public CXmScaleImpl<CXmScale> {
-public:
-    using CXmScaleImpl<CXmScale>::CXmScaleImpl;
-    static CXmScale create(Widget parent, const char* name) {
-        return CXmScale(XtCreateWidget(name, xmScaleWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmScale : public CXmScaleImpl<CXmScale> {
+            public:
+                using CXmScaleImpl<CXmScale>::CXmScaleImpl;
+                static CXmScale create(Widget parent, const char* name) {
+                    return CXmScale(XtCreateWidget(name, xmScaleWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmScrolledWindowImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setAutoDragModel(XtEnum value) {
+            template <typename Derived> class CXmScrolledWindowImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setAutoDragModel(XtEnum value) {
                 XtVaSetValues(this->_widget, "autoDragModel", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getAutoDragModel() {
+XtEnum getAutoDragModel() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "autoDragModel", &value, nullptr);
                     return value;
@@ -7131,7 +7131,7 @@ public:
                 XtVaSetValues(this->_widget, "clipWindow", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmDrawingAreaWidget getClipWindow() {
+XmDrawingAreaWidget getClipWindow() {
                     XmDrawingAreaWidget value;
                     XtVaGetValues(this->_widget, "clipWindow", &value, nullptr);
                     return value;
@@ -7140,7 +7140,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalScrollBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmScrollBarWidget getHorizontalScrollBar() {
+XmScrollBarWidget getHorizontalScrollBar() {
                     XmScrollBarWidget value;
                     XtVaGetValues(this->_widget, "horizontalScrollBar", &value, nullptr);
                     return value;
@@ -7149,7 +7149,7 @@ public:
                 XtVaSetValues(this->_widget, "scrollBarDisplayPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getScrollBarDisplayPolicy() {
+unsigned char getScrollBarDisplayPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "scrollBarDisplayPolicy", &value, nullptr);
                     return value;
@@ -7158,7 +7158,7 @@ public:
                 XtVaSetValues(this->_widget, "scrollBarPlacement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getScrollBarPlacement() {
+unsigned char getScrollBarPlacement() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "scrollBarPlacement", &value, nullptr);
                     return value;
@@ -7167,7 +7167,7 @@ public:
                 XtVaSetValues(this->_widget, "scrolledWindowMarginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getScrolledWindowMarginHeight() {
+Dimension getScrolledWindowMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "scrolledWindowMarginHeight", &value, nullptr);
                     return value;
@@ -7176,7 +7176,7 @@ public:
                 XtVaSetValues(this->_widget, "scrolledWindowMarginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getScrolledWindowMarginWidth() {
+Dimension getScrolledWindowMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "scrolledWindowMarginWidth", &value, nullptr);
                     return value;
@@ -7185,7 +7185,7 @@ public:
                 XtVaSetValues(this->_widget, "scrollingPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getScrollingPolicy() {
+unsigned char getScrollingPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "scrollingPolicy", &value, nullptr);
                     return value;
@@ -7194,7 +7194,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -7203,20 +7203,20 @@ public:
                 XtVaSetValues(this->_widget, "spacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSpacing() {
+Dimension getSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "spacing", &value, nullptr);
                     return value;
                 }
     Derived& addTraverseObscuredCallback(std::function<void(XtPointer)> callback) {
-        addCallback("traverseObscuredCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("traverseObscuredCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setTraverseObscuredCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "traverseObscuredCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getTraverseObscuredCallback() {
+XtCallbackList getTraverseObscuredCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "traverseObscuredCallback", &value, nullptr);
                     return value;
@@ -7225,7 +7225,7 @@ public:
                 XtVaSetValues(this->_widget, "verticalScrollBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmScrollBarWidget getVerticalScrollBar() {
+XmScrollBarWidget getVerticalScrollBar() {
                     XmScrollBarWidget value;
                     XtVaGetValues(this->_widget, "verticalScrollBar", &value, nullptr);
                     return value;
@@ -7234,7 +7234,7 @@ public:
                 XtVaSetValues(this->_widget, "visualPolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getVisualPolicy() {
+unsigned char getVisualPolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "visualPolicy", &value, nullptr);
                     return value;
@@ -7243,31 +7243,31 @@ public:
                 XtVaSetValues(this->_widget, "workWindow", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getWorkWindow() {
+Widget getWorkWindow() {
                     Widget value;
                     XtVaGetValues(this->_widget, "workWindow", &value, nullptr);
                     return value;
                 }
-};
-class CXmScrolledWindow : public CXmScrolledWindowImpl<CXmScrolledWindow> {
-public:
-    using CXmScrolledWindowImpl<CXmScrolledWindow>::CXmScrolledWindowImpl;
-    static CXmScrolledWindow create(Widget parent, const char* name) {
-        return CXmScrolledWindow(XtCreateWidget(name, xmScrolledWindowWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmScrolledWindow : public CXmScrolledWindowImpl<CXmScrolledWindow> {
+            public:
+                using CXmScrolledWindowImpl<CXmScrolledWindow>::CXmScrolledWindowImpl;
+                static CXmScrolledWindow create(Widget parent, const char* name) {
+                    return CXmScrolledWindow(XtCreateWidget(name, xmScrolledWindowWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmSpinBoxImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setArrowLayout(unsigned char value) {
+            template <typename Derived> class CXmSpinBoxImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setArrowLayout(unsigned char value) {
                 XtVaSetValues(this->_widget, "arrowLayout", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getArrowLayout() {
+unsigned char getArrowLayout() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "arrowLayout", &value, nullptr);
                     return value;
@@ -7276,7 +7276,7 @@ public:
                 XtVaSetValues(this->_widget, "arrowOrientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getArrowOrientation() {
+unsigned char getArrowOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "arrowOrientation", &value, nullptr);
                     return value;
@@ -7285,7 +7285,7 @@ public:
                 XtVaSetValues(this->_widget, "arrowSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getArrowSize() {
+Dimension getArrowSize() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "arrowSize", &value, nullptr);
                     return value;
@@ -7294,7 +7294,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultArrowSensitivity", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDefaultArrowSensitivity() {
+unsigned char getDefaultArrowSensitivity() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "defaultArrowSensitivity", &value, nullptr);
                     return value;
@@ -7303,7 +7303,7 @@ public:
                 XtVaSetValues(this->_widget, "detailShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getDetailShadowThickness() {
+Dimension getDetailShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
                     return value;
@@ -7312,7 +7312,7 @@ public:
                 XtVaSetValues(this->_widget, "initialDelay", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned int getInitialDelay() {
+unsigned int getInitialDelay() {
                     unsigned int value;
                     XtVaGetValues(this->_widget, "initialDelay", &value, nullptr);
                     return value;
@@ -7321,7 +7321,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -7330,20 +7330,20 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
                 }
     Derived& addModifyVerifyCallback(std::function<void(XtPointer)> callback) {
-        addCallback("modifyVerifyCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("modifyVerifyCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setModifyVerifyCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "modifyVerifyCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getModifyVerifyCallback() {
+XtCallbackList getModifyVerifyCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "modifyVerifyCallback", &value, nullptr);
                     return value;
@@ -7352,7 +7352,7 @@ public:
                 XtVaSetValues(this->_widget, "repeatDelay", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned int getRepeatDelay() {
+unsigned int getRepeatDelay() {
                     unsigned int value;
                     XtVaGetValues(this->_widget, "repeatDelay", &value, nullptr);
                     return value;
@@ -7361,44 +7361,44 @@ public:
                 XtVaSetValues(this->_widget, "spacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSpacing() {
+Dimension getSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "spacing", &value, nullptr);
                     return value;
                 }
     Derived& addValueChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("valueChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("valueChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setValueChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "valueChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getValueChangedCallback() {
+XtCallbackList getValueChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
                     return value;
                 }
-};
-class CXmSpinBox : public CXmSpinBoxImpl<CXmSpinBox> {
-public:
-    using CXmSpinBoxImpl<CXmSpinBox>::CXmSpinBoxImpl;
-    static CXmSpinBox create(Widget parent, const char* name) {
-        return CXmSpinBox(XtCreateWidget(name, xmSpinBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmSpinBox : public CXmSpinBoxImpl<CXmSpinBox> {
+            public:
+                using CXmSpinBoxImpl<CXmSpinBox>::CXmSpinBoxImpl;
+                static CXmSpinBox create(Widget parent, const char* name) {
+                    return CXmSpinBox(XtCreateWidget(name, xmSpinBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmTabBoxImpl : public CXmManagerImpl<Derived> {
-public:
-    using CXmManagerImpl<Derived>::CXmManagerImpl;
-    using CXmManagerImpl<Derived>::addCallback;
-    Derived& setFontList(XmFontList value) {
+            template <typename Derived> class CXmTabBoxImpl : public CXmManagerImpl<Derived> {
+            public:
+                using CXmManagerImpl<Derived>::CXmManagerImpl;
+                using CXmManagerImpl<Derived>::addCallback;
+                    Derived& setFontList(XmFontList value) {
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -7407,7 +7407,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -7416,7 +7416,7 @@ public:
                 XtVaSetValues(this->_widget, "numStacks", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getNumStacks() {
+int getNumStacks() {
                     int value;
                     XtVaGetValues(this->_widget, "numStacks", &value, nullptr);
                     return value;
@@ -7425,7 +7425,7 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
@@ -7434,7 +7434,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -7443,20 +7443,20 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
                 }
     Derived& addSelectCallback(std::function<void(XtPointer)> callback) {
-        addCallback("selectCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("selectCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setSelectCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "selectCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getSelectCallback() {
+XtCallbackList getSelectCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "selectCallback", &value, nullptr);
                     return value;
@@ -7465,7 +7465,7 @@ public:
                 XtVaSetValues(this->_widget, "selectedIndex", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getSelectedIndex() {
+int getSelectedIndex() {
                     int value;
                     XtVaGetValues(this->_widget, "selectedIndex", &value, nullptr);
                     return value;
@@ -7474,7 +7474,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -7483,7 +7483,7 @@ public:
                 XtVaSetValues(this->_widget, "stackedEffect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getStackedEffect() {
+Boolean getStackedEffect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "stackedEffect", &value, nullptr);
                     return value;
@@ -7492,7 +7492,7 @@ public:
                 XtVaSetValues(this->_widget, "tabAutoSelect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTabAutoSelect() {
+Boolean getTabAutoSelect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "tabAutoSelect", &value, nullptr);
                     return value;
@@ -7501,7 +7501,7 @@ public:
                 XtVaSetValues(this->_widget, "tabCornerPercent", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getTabCornerPercent() {
+int getTabCornerPercent() {
                     int value;
                     XtVaGetValues(this->_widget, "tabCornerPercent", &value, nullptr);
                     return value;
@@ -7510,7 +7510,7 @@ public:
                 XtVaSetValues(this->_widget, "tabEdge", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabEdge getTabEdge() {
+XmTabEdge getTabEdge() {
                     XmTabEdge value;
                     XtVaGetValues(this->_widget, "tabEdge", &value, nullptr);
                     return value;
@@ -7519,7 +7519,7 @@ public:
                 XtVaSetValues(this->_widget, "tabLabelSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabLabelSpacing() {
+Dimension getTabLabelSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabLabelSpacing", &value, nullptr);
                     return value;
@@ -7528,7 +7528,7 @@ public:
                 XtVaSetValues(this->_widget, "tabList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabbedStackList getTabList() {
+XmTabbedStackList getTabList() {
                     XmTabbedStackList value;
                     XtVaGetValues(this->_widget, "tabList", &value, nullptr);
                     return value;
@@ -7537,7 +7537,7 @@ public:
                 XtVaSetValues(this->_widget, "tabMarginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabMarginHeight() {
+Dimension getTabMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabMarginHeight", &value, nullptr);
                     return value;
@@ -7546,7 +7546,7 @@ public:
                 XtVaSetValues(this->_widget, "tabMarginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabMarginWidth() {
+Dimension getTabMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabMarginWidth", &value, nullptr);
                     return value;
@@ -7555,7 +7555,7 @@ public:
                 XtVaSetValues(this->_widget, "tabMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabMode getTabMode() {
+XmTabMode getTabMode() {
                     XmTabMode value;
                     XtVaGetValues(this->_widget, "tabMode", &value, nullptr);
                     return value;
@@ -7564,7 +7564,7 @@ public:
                 XtVaSetValues(this->_widget, "tabOffset", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabOffset() {
+Dimension getTabOffset() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabOffset", &value, nullptr);
                     return value;
@@ -7573,7 +7573,7 @@ public:
                 XtVaSetValues(this->_widget, "tabOrientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabOrientation getTabOrientation() {
+XmTabOrientation getTabOrientation() {
                     XmTabOrientation value;
                     XtVaGetValues(this->_widget, "tabOrientation", &value, nullptr);
                     return value;
@@ -7582,7 +7582,7 @@ public:
                 XtVaSetValues(this->_widget, "tabSelectColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTabSelectColor() {
+Pixel getTabSelectColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "tabSelectColor", &value, nullptr);
                     return value;
@@ -7591,7 +7591,7 @@ public:
                 XtVaSetValues(this->_widget, "tabSelectPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getTabSelectPixmap() {
+Pixmap getTabSelectPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "tabSelectPixmap", &value, nullptr);
                     return value;
@@ -7600,7 +7600,7 @@ public:
                 XtVaSetValues(this->_widget, "tabStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabStyle getTabStyle() {
+XmTabStyle getTabStyle() {
                     XmTabStyle value;
                     XtVaGetValues(this->_widget, "tabStyle", &value, nullptr);
                     return value;
@@ -7609,7 +7609,7 @@ public:
                 XtVaSetValues(this->_widget, "traversalIndex", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getTraversalIndex() {
+int getTraversalIndex() {
                     int value;
                     XtVaGetValues(this->_widget, "traversalIndex", &value, nullptr);
                     return value;
@@ -7618,20 +7618,20 @@ public:
                 XtVaSetValues(this->_widget, "uniformTabSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUniformTabSize() {
+Boolean getUniformTabSize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "uniformTabSize", &value, nullptr);
                     return value;
                 }
     Derived& addUnselectCallback(std::function<void(XtPointer)> callback) {
-        addCallback("unselectCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("unselectCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setUnselectCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "unselectCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getUnselectCallback() {
+XtCallbackList getUnselectCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "unselectCallback", &value, nullptr);
                     return value;
@@ -7640,31 +7640,31 @@ public:
                 XtVaSetValues(this->_widget, "useImageCache", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseImageCache() {
+Boolean getUseImageCache() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useImageCache", &value, nullptr);
                     return value;
                 }
-};
-class CXmTabBox : public CXmTabBoxImpl<CXmTabBox> {
-public:
-    using CXmTabBoxImpl<CXmTabBox>::CXmTabBoxImpl;
-    static CXmTabBox create(Widget parent, const char* name) {
-        return CXmTabBox(XtCreateWidget(name, xmTabBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmTabBox : public CXmTabBoxImpl<CXmTabBox> {
+            public:
+                using CXmTabBoxImpl<CXmTabBox>::CXmTabBoxImpl;
+                static CXmTabBox create(Widget parent, const char* name) {
+                    return CXmTabBox(XtCreateWidget(name, xmTabBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CDesktopImpl : public CdynamicImpl<Derived> {
-public:
-    using CdynamicImpl<Derived>::CdynamicImpl;
-    using CdynamicImpl<Derived>::addCallback;
-    Derived& setDesktopParent(Widget value) {
+            template <typename Derived> class CDesktopImpl : public CdynamicImpl<Derived> {
+            public:
+                using CdynamicImpl<Derived>::CdynamicImpl;
+                using CdynamicImpl<Derived>::addCallback;
+                    Derived& setDesktopParent(Widget value) {
                 XtVaSetValues(this->_widget, "desktopParent", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getDesktopParent() {
+Widget getDesktopParent() {
                     Widget value;
                     XtVaGetValues(this->_widget, "desktopParent", &value, nullptr);
                     return value;
@@ -7673,109 +7673,109 @@ public:
                 XtVaSetValues(this->_widget, "extensionType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getExtensionType() {
+unsigned char getExtensionType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "extensionType", &value, nullptr);
                     return value;
                 }
-};
-class CDesktop : public CDesktopImpl<CDesktop> {
-public:
-    using CDesktopImpl<CDesktop>::CDesktopImpl;
-    static CDesktop create(Widget parent, const char* name) {
-        return CDesktop(XtCreateWidget(name, xmDesktopClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CDesktop : public CDesktopImpl<CDesktop> {
+            public:
+                using CDesktopImpl<CDesktop>::CDesktopImpl;
+                static CDesktop create(Widget parent, const char* name) {
+                    return CDesktop(XtCreateWidget(name, xmDesktopClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CprotocolImpl : public CdynamicImpl<Derived> {
-public:
-    using CdynamicImpl<Derived>::CdynamicImpl;
-    using CdynamicImpl<Derived>::addCallback;
-    Derived& setExtensionType(unsigned char value) {
+            template <typename Derived> class CprotocolImpl : public CdynamicImpl<Derived> {
+            public:
+                using CdynamicImpl<Derived>::CdynamicImpl;
+                using CdynamicImpl<Derived>::addCallback;
+                    Derived& setExtensionType(unsigned char value) {
                 XtVaSetValues(this->_widget, "extensionType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getExtensionType() {
+unsigned char getExtensionType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "extensionType", &value, nullptr);
                     return value;
                 }
     Derived& addProtocolCallback(std::function<void(XtPointer)> callback) {
-        addCallback("protocolCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("protocolCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setProtocolCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "protocolCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getProtocolCallback() {
+XtCallbackList getProtocolCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "protocolCallback", &value, nullptr);
                     return value;
                 }
-};
-class Cprotocol : public CprotocolImpl<Cprotocol> {
-public:
-    using CprotocolImpl<Cprotocol>::CprotocolImpl;
-    static Cprotocol create(Widget parent, const char* name) {
-        return Cprotocol(XtCreateWidget(name, xmProtocolObjectClass, parent, nullptr, 0));
-    }
-};
+            };
+            class Cprotocol : public CprotocolImpl<Cprotocol> {
+            public:
+                using CprotocolImpl<Cprotocol>::CprotocolImpl;
+                static Cprotocol create(Widget parent, const char* name) {
+                    return Cprotocol(XtCreateWidget(name, xmProtocolObjectClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmIconHeaderImpl : public CXmIconGadgetImpl<Derived> {
-public:
-    using CXmIconGadgetImpl<Derived>::CXmIconGadgetImpl;
-    using CXmIconGadgetImpl<Derived>::addCallback;
-    Derived& setContainerID(Widget value) {
+            template <typename Derived> class CXmIconHeaderImpl : public CXmIconGadgetImpl<Derived> {
+            public:
+                using CXmIconGadgetImpl<Derived>::CXmIconGadgetImpl;
+                using CXmIconGadgetImpl<Derived>::addCallback;
+                    Derived& setContainerID(Widget value) {
                 XtVaSetValues(this->_widget, "containerID", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getContainerID() {
+Widget getContainerID() {
                     Widget value;
                     XtVaGetValues(this->_widget, "containerID", &value, nullptr);
                     return value;
                 }
-};
-class CXmIconHeader : public CXmIconHeaderImpl<CXmIconHeader> {
-public:
-    using CXmIconHeaderImpl<CXmIconHeader>::CXmIconHeaderImpl;
-    static CXmIconHeader create(Widget parent, const char* name) {
-        return CXmIconHeader(XtCreateWidget(name, xmIconHeaderClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmIconHeader : public CXmIconHeaderImpl<CXmIconHeader> {
+            public:
+                using CXmIconHeaderImpl<CXmIconHeader>::CXmIconHeaderImpl;
+                static CXmIconHeader create(Widget parent, const char* name) {
+                    return CXmIconHeader(XtCreateWidget(name, xmIconHeaderClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmCascadeButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
-public:
-    using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
-    using CXmLabelGadgetImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmCascadeButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
+            public:
+                using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
+                using CXmLabelGadgetImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addCascadingCallback(std::function<void(XtPointer)> callback) {
-        addCallback("cascadingCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("cascadingCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setCascadingCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "cascadingCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getCascadingCallback() {
+XtCallbackList getCascadingCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "cascadingCallback", &value, nullptr);
                     return value;
@@ -7784,7 +7784,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -7793,7 +7793,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -7802,7 +7802,7 @@ public:
                 XtVaSetValues(this->_widget, "subMenuId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getSubMenuId() {
+Widget getSubMenuId() {
                     Widget value;
                     XtVaGetValues(this->_widget, "subMenuId", &value, nullptr);
                     return value;
@@ -7811,61 +7811,61 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmCascadeButtonGadget : public CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget> {
-public:
-    using CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget>::CXmCascadeButtonGadgetImpl;
-    static CXmCascadeButtonGadget create(Widget parent, const char* name) {
-        return CXmCascadeButtonGadget(XtCreateWidget(name, xmCascadeButtonGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmCascadeButtonGadget : public CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget> {
+            public:
+                using CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget>::CXmCascadeButtonGadgetImpl;
+                static CXmCascadeButtonGadget create(Widget parent, const char* name) {
+                    return CXmCascadeButtonGadget(XtCreateWidget(name, xmCascadeButtonGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmPushButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
-public:
-    using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
-    using CXmLabelGadgetImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmPushButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
+            public:
+                using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
+                using CXmLabelGadgetImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
@@ -7874,7 +7874,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -7883,7 +7883,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -7892,7 +7892,7 @@ public:
                 XtVaSetValues(this->_widget, "showAsDefault", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShowAsDefault() {
+Dimension getShowAsDefault() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "showAsDefault", &value, nullptr);
                     return value;
@@ -7901,35 +7901,35 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmPushButtonGadget : public CXmPushButtonGadgetImpl<CXmPushButtonGadget> {
-public:
-    using CXmPushButtonGadgetImpl<CXmPushButtonGadget>::CXmPushButtonGadgetImpl;
-    static CXmPushButtonGadget create(Widget parent, const char* name) {
-        return CXmPushButtonGadget(XtCreateWidget(name, xmPushButtonGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmPushButtonGadget : public CXmPushButtonGadgetImpl<CXmPushButtonGadget> {
+            public:
+                using CXmPushButtonGadgetImpl<CXmPushButtonGadget>::CXmPushButtonGadgetImpl;
+                static CXmPushButtonGadget create(Widget parent, const char* name) {
+                    return CXmPushButtonGadget(XtCreateWidget(name, xmPushButtonGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmToggleButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
-public:
-    using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
-    using CXmLabelGadgetImpl<Derived>::addCallback;
-    Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmToggleButtonGadgetImpl : public CXmLabelGadgetImpl<Derived> {
+            public:
+                using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
+                using CXmLabelGadgetImpl<Derived>::addCallback;
+                    Derived& addArmCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
@@ -7938,20 +7938,20 @@ public:
                 XtVaSetValues(this->_widget, "detailShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getDetailShadowThickness() {
+Dimension getDetailShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
@@ -7960,7 +7960,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -7969,7 +7969,7 @@ public:
                 XtVaSetValues(this->_widget, "set", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSet() {
+unsigned char getSet() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "set", &value, nullptr);
                     return value;
@@ -7978,48 +7978,48 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
     Derived& addValueChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("valueChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("valueChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setValueChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "valueChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getValueChangedCallback() {
+XtCallbackList getValueChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
                     return value;
                 }
-};
-class CXmToggleButtonGadget : public CXmToggleButtonGadgetImpl<CXmToggleButtonGadget> {
-public:
-    using CXmToggleButtonGadgetImpl<CXmToggleButtonGadget>::CXmToggleButtonGadgetImpl;
-    static CXmToggleButtonGadget create(Widget parent, const char* name) {
-        return CXmToggleButtonGadget(XtCreateWidget(name, xmToggleButtonGadgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmToggleButtonGadget : public CXmToggleButtonGadgetImpl<CXmToggleButtonGadget> {
+            public:
+                using CXmToggleButtonGadgetImpl<CXmToggleButtonGadget>::CXmToggleButtonGadgetImpl;
+                static CXmToggleButtonGadget create(Widget parent, const char* name) {
+                    return CXmToggleButtonGadget(XtCreateWidget(name, xmToggleButtonGadgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmCascadeButtonImpl : public CXmLabelImpl<Derived> {
-public:
-    using CXmLabelImpl<Derived>::CXmLabelImpl;
-    using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmCascadeButtonImpl : public CXmLabelImpl<Derived> {
+            public:
+                using CXmLabelImpl<Derived>::CXmLabelImpl;
+                using CXmLabelImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
@@ -8028,20 +8028,20 @@ public:
                 XtVaSetValues(this->_widget, "cascadePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getCascadePixmap() {
+Pixmap getCascadePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "cascadePixmap", &value, nullptr);
                     return value;
                 }
     Derived& addCascadingCallback(std::function<void(XtPointer)> callback) {
-        addCallback("cascadingCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("cascadingCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setCascadingCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "cascadingCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getCascadingCallback() {
+XtCallbackList getCascadingCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "cascadingCallback", &value, nullptr);
                     return value;
@@ -8050,7 +8050,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -8059,7 +8059,7 @@ public:
                 XtVaSetValues(this->_widget, "mappingDelay", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMappingDelay() {
+int getMappingDelay() {
                     int value;
                     XtVaGetValues(this->_widget, "mappingDelay", &value, nullptr);
                     return value;
@@ -8068,7 +8068,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -8077,7 +8077,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -8086,7 +8086,7 @@ public:
                 XtVaSetValues(this->_widget, "subMenuId", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getSubMenuId() {
+Widget getSubMenuId() {
                     Widget value;
                     XtVaGetValues(this->_widget, "subMenuId", &value, nullptr);
                     return value;
@@ -8095,74 +8095,74 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmCascadeButton : public CXmCascadeButtonImpl<CXmCascadeButton> {
-public:
-    using CXmCascadeButtonImpl<CXmCascadeButton>::CXmCascadeButtonImpl;
-    static CXmCascadeButton create(Widget parent, const char* name) {
-        return CXmCascadeButton(XtCreateWidget(name, xmCascadeButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmCascadeButton : public CXmCascadeButtonImpl<CXmCascadeButton> {
+            public:
+                using CXmCascadeButtonImpl<CXmCascadeButton>::CXmCascadeButtonImpl;
+                static CXmCascadeButton create(Widget parent, const char* name) {
+                    return CXmCascadeButton(XtCreateWidget(name, xmCascadeButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmDrawnButtonImpl : public CXmLabelImpl<Derived> {
-public:
-    using CXmLabelImpl<Derived>::CXmLabelImpl;
-    using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmDrawnButtonImpl : public CXmLabelImpl<Derived> {
+            public:
+                using CXmLabelImpl<Derived>::CXmLabelImpl;
+                using CXmLabelImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
                 }
     Derived& addExposeCallback(std::function<void(XtPointer)> callback) {
-        addCallback("exposeCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("exposeCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setExposeCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "exposeCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getExposeCallback() {
+XtCallbackList getExposeCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "exposeCallback", &value, nullptr);
                     return value;
@@ -8171,7 +8171,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -8180,7 +8180,7 @@ public:
                 XtVaSetValues(this->_widget, "labelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    _XmString getLabelString() {
+_XmString getLabelString() {
                     _XmString value;
                     XtVaGetValues(this->_widget, "labelString", &value, nullptr);
                     return value;
@@ -8189,7 +8189,7 @@ public:
                 XtVaSetValues(this->_widget, "multiClick", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMultiClick() {
+unsigned char getMultiClick() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "multiClick", &value, nullptr);
                     return value;
@@ -8198,20 +8198,20 @@ public:
                 XtVaSetValues(this->_widget, "pushButtonEnabled", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPushButtonEnabled() {
+Boolean getPushButtonEnabled() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pushButtonEnabled", &value, nullptr);
                     return value;
                 }
     Derived& addResizeCallback(std::function<void(XtPointer)> callback) {
-        addCallback("resizeCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("resizeCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setResizeCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "resizeCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getResizeCallback() {
+XtCallbackList getResizeCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "resizeCallback", &value, nullptr);
                     return value;
@@ -8220,7 +8220,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -8229,7 +8229,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getShadowType() {
+unsigned char getShadowType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "shadowType", &value, nullptr);
                     return value;
@@ -8238,48 +8238,48 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmDrawnButton : public CXmDrawnButtonImpl<CXmDrawnButton> {
-public:
-    using CXmDrawnButtonImpl<CXmDrawnButton>::CXmDrawnButtonImpl;
-    static CXmDrawnButton create(Widget parent, const char* name) {
-        return CXmDrawnButton(XtCreateWidget(name, xmDrawnButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmDrawnButton : public CXmDrawnButtonImpl<CXmDrawnButton> {
+            public:
+                using CXmDrawnButtonImpl<CXmDrawnButton>::CXmDrawnButtonImpl;
+                static CXmDrawnButton create(Widget parent, const char* name) {
+                    return CXmDrawnButton(XtCreateWidget(name, xmDrawnButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmPushButtonImpl : public CXmLabelImpl<Derived> {
-public:
-    using CXmLabelImpl<Derived>::CXmLabelImpl;
-    using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
-        addCallback("activateCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmPushButtonImpl : public CXmLabelImpl<Derived> {
+            public:
+                using CXmLabelImpl<Derived>::CXmLabelImpl;
+                using CXmLabelImpl<Derived>::addCallback;
+                    Derived& addActivateCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("activateCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setActivateCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "activateCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getActivateCallback() {
+XtCallbackList getActivateCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
                     return value;
                 }
     Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
@@ -8288,7 +8288,7 @@ public:
                 XtVaSetValues(this->_widget, "armColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getArmColor() {
+Pixel getArmColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "armColor", &value, nullptr);
                     return value;
@@ -8297,7 +8297,7 @@ public:
                 XtVaSetValues(this->_widget, "armPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getArmPixmap() {
+Pixmap getArmPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "armPixmap", &value, nullptr);
                     return value;
@@ -8306,20 +8306,20 @@ public:
                 XtVaSetValues(this->_widget, "defaultButtonShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getDefaultButtonShadowThickness() {
+Dimension getDefaultButtonShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "defaultButtonShadowThickness", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
@@ -8328,7 +8328,7 @@ public:
                 XtVaSetValues(this->_widget, "fillOnArm", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getFillOnArm() {
+Boolean getFillOnArm() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "fillOnArm", &value, nullptr);
                     return value;
@@ -8337,7 +8337,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -8346,7 +8346,7 @@ public:
                 XtVaSetValues(this->_widget, "multiClick", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMultiClick() {
+unsigned char getMultiClick() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "multiClick", &value, nullptr);
                     return value;
@@ -8355,7 +8355,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -8364,7 +8364,7 @@ public:
                 XtVaSetValues(this->_widget, "showAsDefault", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShowAsDefault() {
+Dimension getShowAsDefault() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "showAsDefault", &value, nullptr);
                     return value;
@@ -8373,35 +8373,35 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
                 }
-};
-class CXmPushButton : public CXmPushButtonImpl<CXmPushButton> {
-public:
-    using CXmPushButtonImpl<CXmPushButton>::CXmPushButtonImpl;
-    static CXmPushButton create(Widget parent, const char* name) {
-        return CXmPushButton(XtCreateWidget(name, xmPushButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmPushButton : public CXmPushButtonImpl<CXmPushButton> {
+            public:
+                using CXmPushButtonImpl<CXmPushButton>::CXmPushButtonImpl;
+                static CXmPushButton create(Widget parent, const char* name) {
+                    return CXmPushButton(XtCreateWidget(name, xmPushButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmToggleButtonImpl : public CXmLabelImpl<Derived> {
-public:
-    using CXmLabelImpl<Derived>::CXmLabelImpl;
-    using CXmLabelImpl<Derived>::addCallback;
-    Derived& addArmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("armCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmToggleButtonImpl : public CXmLabelImpl<Derived> {
+            public:
+                using CXmLabelImpl<Derived>::CXmLabelImpl;
+                using CXmLabelImpl<Derived>::addCallback;
+                    Derived& addArmCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("armCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setArmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "armCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getArmCallback() {
+XtCallbackList getArmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
                     return value;
@@ -8410,20 +8410,20 @@ public:
                 XtVaSetValues(this->_widget, "detailShadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getDetailShadowThickness() {
+Dimension getDetailShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
                     return value;
                 }
     Derived& addDisarmCallback(std::function<void(XtPointer)> callback) {
-        addCallback("disarmCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("disarmCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setDisarmCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "disarmCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getDisarmCallback() {
+XtCallbackList getDisarmCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
                     return value;
@@ -8432,7 +8432,7 @@ public:
                 XtVaSetValues(this->_widget, "fillOnSelect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getFillOnSelect() {
+Boolean getFillOnSelect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "fillOnSelect", &value, nullptr);
                     return value;
@@ -8441,7 +8441,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -8450,7 +8450,7 @@ public:
                 XtVaSetValues(this->_widget, "indeterminateInsensitivePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getIndeterminateInsensitivePixmap() {
+Pixmap getIndeterminateInsensitivePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "indeterminateInsensitivePixmap", &value, nullptr);
                     return value;
@@ -8459,7 +8459,7 @@ public:
                 XtVaSetValues(this->_widget, "indeterminatePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getIndeterminatePixmap() {
+Pixmap getIndeterminatePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "indeterminatePixmap", &value, nullptr);
                     return value;
@@ -8468,7 +8468,7 @@ public:
                 XtVaSetValues(this->_widget, "indicatorOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getIndicatorOn() {
+unsigned char getIndicatorOn() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "indicatorOn", &value, nullptr);
                     return value;
@@ -8477,7 +8477,7 @@ public:
                 XtVaSetValues(this->_widget, "indicatorSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getIndicatorSize() {
+Dimension getIndicatorSize() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "indicatorSize", &value, nullptr);
                     return value;
@@ -8486,7 +8486,7 @@ public:
                 XtVaSetValues(this->_widget, "indicatorType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getIndicatorType() {
+unsigned char getIndicatorType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "indicatorType", &value, nullptr);
                     return value;
@@ -8495,7 +8495,7 @@ public:
                 XtVaSetValues(this->_widget, "selectColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getSelectColor() {
+Pixel getSelectColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "selectColor", &value, nullptr);
                     return value;
@@ -8504,7 +8504,7 @@ public:
                 XtVaSetValues(this->_widget, "selectInsensitivePixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getSelectInsensitivePixmap() {
+Pixmap getSelectInsensitivePixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "selectInsensitivePixmap", &value, nullptr);
                     return value;
@@ -8513,7 +8513,7 @@ public:
                 XtVaSetValues(this->_widget, "selectPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getSelectPixmap() {
+Pixmap getSelectPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "selectPixmap", &value, nullptr);
                     return value;
@@ -8522,7 +8522,7 @@ public:
                 XtVaSetValues(this->_widget, "set", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSet() {
+unsigned char getSet() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "set", &value, nullptr);
                     return value;
@@ -8531,7 +8531,7 @@ public:
                 XtVaSetValues(this->_widget, "spacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getSpacing() {
+Dimension getSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "spacing", &value, nullptr);
                     return value;
@@ -8540,7 +8540,7 @@ public:
                 XtVaSetValues(this->_widget, "toggleMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getToggleMode() {
+unsigned char getToggleMode() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "toggleMode", &value, nullptr);
                     return value;
@@ -8549,7 +8549,7 @@ public:
                 XtVaSetValues(this->_widget, "traversalOn", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTraversalOn() {
+Boolean getTraversalOn() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
                     return value;
@@ -8558,20 +8558,20 @@ public:
                 XtVaSetValues(this->_widget, "unselectColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getUnselectColor() {
+Pixel getUnselectColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "unselectColor", &value, nullptr);
                     return value;
                 }
     Derived& addValueChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("valueChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("valueChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setValueChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "valueChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getValueChangedCallback() {
+XtCallbackList getValueChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
                     return value;
@@ -8580,31 +8580,31 @@ public:
                 XtVaSetValues(this->_widget, "visibleWhenOff", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getVisibleWhenOff() {
+Boolean getVisibleWhenOff() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "visibleWhenOff", &value, nullptr);
                     return value;
                 }
-};
-class CXmToggleButton : public CXmToggleButtonImpl<CXmToggleButton> {
-public:
-    using CXmToggleButtonImpl<CXmToggleButton>::CXmToggleButtonImpl;
-    static CXmToggleButton create(Widget parent, const char* name) {
-        return CXmToggleButton(XtCreateWidget(name, xmToggleButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmToggleButton : public CXmToggleButtonImpl<CXmToggleButton> {
+            public:
+                using CXmToggleButtonImpl<CXmToggleButton>::CXmToggleButtonImpl;
+                static CXmToggleButton create(Widget parent, const char* name) {
+                    return CXmToggleButton(XtCreateWidget(name, xmToggleButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmColumnImpl : public CXmBulletinBoardImpl<Derived> {
-public:
-    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
-    using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& setDefaultEntryLabelAlignment(unsigned char value) {
+            template <typename Derived> class CXmColumnImpl : public CXmBulletinBoardImpl<Derived> {
+            public:
+                using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
+                using CXmBulletinBoardImpl<Derived>::addCallback;
+                    Derived& setDefaultEntryLabelAlignment(unsigned char value) {
                 XtVaSetValues(this->_widget, "defaultEntryLabelAlignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDefaultEntryLabelAlignment() {
+unsigned char getDefaultEntryLabelAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "defaultEntryLabelAlignment", &value, nullptr);
                     return value;
@@ -8613,7 +8613,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultEntryLabelFontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getDefaultEntryLabelFontList() {
+XmFontList getDefaultEntryLabelFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "defaultEntryLabelFontList", &value, nullptr);
                     return value;
@@ -8622,7 +8622,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultEntryLabelRenderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getDefaultEntryLabelRenderTable() {
+XmFontList getDefaultEntryLabelRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "defaultEntryLabelRenderTable", &value, nullptr);
                     return value;
@@ -8631,7 +8631,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultFillStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDefaultFillStyle() {
+unsigned char getDefaultFillStyle() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "defaultFillStyle", &value, nullptr);
                     return value;
@@ -8640,7 +8640,7 @@ public:
                 XtVaSetValues(this->_widget, "distribution", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDistribution() {
+unsigned char getDistribution() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "distribution", &value, nullptr);
                     return value;
@@ -8649,7 +8649,7 @@ public:
                 XtVaSetValues(this->_widget, "itemSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getItemSpacing() {
+Dimension getItemSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "itemSpacing", &value, nullptr);
                     return value;
@@ -8658,7 +8658,7 @@ public:
                 XtVaSetValues(this->_widget, "labelSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getLabelSpacing() {
+Dimension getLabelSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "labelSpacing", &value, nullptr);
                     return value;
@@ -8667,7 +8667,7 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
@@ -8676,31 +8676,31 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
                 }
-};
-class CXmColumn : public CXmColumnImpl<CXmColumn> {
-public:
-    using CXmColumnImpl<CXmColumn>::CXmColumnImpl;
-    static CXmColumn create(Widget parent, const char* name) {
-        return CXmColumn(XtCreateWidget(name, xmColumnWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmColumn : public CXmColumnImpl<CXmColumn> {
+            public:
+                using CXmColumnImpl<CXmColumn>::CXmColumnImpl;
+                static CXmColumn create(Widget parent, const char* name) {
+                    return CXmColumn(XtCreateWidget(name, xmColumnWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmFormImpl : public CXmBulletinBoardImpl<Derived> {
-public:
-    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
-    using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& setFractionBase(int value) {
+            template <typename Derived> class CXmFormImpl : public CXmBulletinBoardImpl<Derived> {
+            public:
+                using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
+                using CXmBulletinBoardImpl<Derived>::addCallback;
+                    Derived& setFractionBase(int value) {
                 XtVaSetValues(this->_widget, "fractionBase", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getFractionBase() {
+int getFractionBase() {
                     int value;
                     XtVaGetValues(this->_widget, "fractionBase", &value, nullptr);
                     return value;
@@ -8709,7 +8709,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalSpacing() {
+Dimension getHorizontalSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalSpacing", &value, nullptr);
                     return value;
@@ -8718,7 +8718,7 @@ public:
                 XtVaSetValues(this->_widget, "marginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginHeight() {
+Dimension getMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginHeight", &value, nullptr);
                     return value;
@@ -8727,7 +8727,7 @@ public:
                 XtVaSetValues(this->_widget, "marginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMarginWidth() {
+Dimension getMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
                     return value;
@@ -8736,7 +8736,7 @@ public:
                 XtVaSetValues(this->_widget, "rubberPositioning", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getRubberPositioning() {
+Boolean getRubberPositioning() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "rubberPositioning", &value, nullptr);
                     return value;
@@ -8745,35 +8745,35 @@ public:
                 XtVaSetValues(this->_widget, "verticalSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalSpacing() {
+Dimension getVerticalSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalSpacing", &value, nullptr);
                     return value;
                 }
-};
-class CXmForm : public CXmFormImpl<CXmForm> {
-public:
-    using CXmFormImpl<CXmForm>::CXmFormImpl;
-    static CXmForm create(Widget parent, const char* name) {
-        return CXmForm(XtCreateWidget(name, xmFormWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmForm : public CXmFormImpl<CXmForm> {
+            public:
+                using CXmFormImpl<CXmForm>::CXmFormImpl;
+                static CXmForm create(Widget parent, const char* name) {
+                    return CXmForm(XtCreateWidget(name, xmFormWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmMessageBoxImpl : public CXmBulletinBoardImpl<Derived> {
-public:
-    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
-    using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& addCancelCallback(std::function<void(XtPointer)> callback) {
-        addCallback("cancelCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmMessageBoxImpl : public CXmBulletinBoardImpl<Derived> {
+            public:
+                using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
+                using CXmBulletinBoardImpl<Derived>::addCallback;
+                    Derived& addCancelCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("cancelCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setCancelCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "cancelCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getCancelCallback() {
+XtCallbackList getCancelCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "cancelCallback", &value, nullptr);
                     return value;
@@ -8782,7 +8782,7 @@ public:
                 XtVaSetValues(this->_widget, "cancelLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getCancelLabelString() {
+XmString getCancelLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "cancelLabelString", &value, nullptr);
                     return value;
@@ -8791,7 +8791,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultButtonType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDefaultButtonType() {
+unsigned char getDefaultButtonType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "defaultButtonType", &value, nullptr);
                     return value;
@@ -8800,7 +8800,7 @@ public:
                 XtVaSetValues(this->_widget, "dialogType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDialogType() {
+unsigned char getDialogType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dialogType", &value, nullptr);
                     return value;
@@ -8809,7 +8809,7 @@ public:
                 XtVaSetValues(this->_widget, "helpLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getHelpLabelString() {
+XmString getHelpLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "helpLabelString", &value, nullptr);
                     return value;
@@ -8818,7 +8818,7 @@ public:
                 XtVaSetValues(this->_widget, "messageAlignment", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getMessageAlignment() {
+unsigned char getMessageAlignment() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "messageAlignment", &value, nullptr);
                     return value;
@@ -8827,7 +8827,7 @@ public:
                 XtVaSetValues(this->_widget, "messageString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getMessageString() {
+XmString getMessageString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "messageString", &value, nullptr);
                     return value;
@@ -8836,20 +8836,20 @@ public:
                 XtVaSetValues(this->_widget, "minimizeButtons", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getMinimizeButtons() {
+Boolean getMinimizeButtons() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "minimizeButtons", &value, nullptr);
                     return value;
                 }
     Derived& addOkCallback(std::function<void(XtPointer)> callback) {
-        addCallback("okCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("okCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setOkCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "okCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getOkCallback() {
+XtCallbackList getOkCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "okCallback", &value, nullptr);
                     return value;
@@ -8858,7 +8858,7 @@ public:
                 XtVaSetValues(this->_widget, "okLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getOkLabelString() {
+XmString getOkLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "okLabelString", &value, nullptr);
                     return value;
@@ -8867,35 +8867,35 @@ public:
                 XtVaSetValues(this->_widget, "symbolPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixmap getSymbolPixmap() {
+Pixmap getSymbolPixmap() {
                     Pixmap value;
                     XtVaGetValues(this->_widget, "symbolPixmap", &value, nullptr);
                     return value;
                 }
-};
-class CXmMessageBox : public CXmMessageBoxImpl<CXmMessageBox> {
-public:
-    using CXmMessageBoxImpl<CXmMessageBox>::CXmMessageBoxImpl;
-    static CXmMessageBox create(Widget parent, const char* name) {
-        return CXmMessageBox(XtCreateWidget(name, xmMessageBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmMessageBox : public CXmMessageBoxImpl<CXmMessageBox> {
+            public:
+                using CXmMessageBoxImpl<CXmMessageBox>::CXmMessageBoxImpl;
+                static CXmMessageBox create(Widget parent, const char* name) {
+                    return CXmMessageBox(XtCreateWidget(name, xmMessageBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmSelectionBoxImpl : public CXmBulletinBoardImpl<Derived> {
-public:
-    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
-    using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& addApplyCallback(std::function<void(XtPointer)> callback) {
-        addCallback("applyCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+            template <typename Derived> class CXmSelectionBoxImpl : public CXmBulletinBoardImpl<Derived> {
+            public:
+                using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
+                using CXmBulletinBoardImpl<Derived>::addCallback;
+                    Derived& addApplyCallback(std::function<void(XtPointer)> callback) {
+                        addCallback("applyCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setApplyCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "applyCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getApplyCallback() {
+XtCallbackList getApplyCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "applyCallback", &value, nullptr);
                     return value;
@@ -8904,20 +8904,20 @@ public:
                 XtVaSetValues(this->_widget, "applyLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getApplyLabelString() {
+XmString getApplyLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "applyLabelString", &value, nullptr);
                     return value;
                 }
     Derived& addCancelCallback(std::function<void(XtPointer)> callback) {
-        addCallback("cancelCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("cancelCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setCancelCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "cancelCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getCancelCallback() {
+XtCallbackList getCancelCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "cancelCallback", &value, nullptr);
                     return value;
@@ -8926,7 +8926,7 @@ public:
                 XtVaSetValues(this->_widget, "cancelLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getCancelLabelString() {
+XmString getCancelLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "cancelLabelString", &value, nullptr);
                     return value;
@@ -8935,7 +8935,7 @@ public:
                 XtVaSetValues(this->_widget, "childPlacement", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getChildPlacement() {
+unsigned char getChildPlacement() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "childPlacement", &value, nullptr);
                     return value;
@@ -8944,7 +8944,7 @@ public:
                 XtVaSetValues(this->_widget, "dialogType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDialogType() {
+unsigned char getDialogType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dialogType", &value, nullptr);
                     return value;
@@ -8953,7 +8953,7 @@ public:
                 XtVaSetValues(this->_widget, "helpLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getHelpLabelString() {
+XmString getHelpLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "helpLabelString", &value, nullptr);
                     return value;
@@ -8962,7 +8962,7 @@ public:
                 XtVaSetValues(this->_widget, "listItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getListItemCount() {
+int getListItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "listItemCount", &value, nullptr);
                     return value;
@@ -8971,7 +8971,7 @@ public:
                 XtVaSetValues(this->_widget, "listItems", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getListItems() {
+XmString * getListItems() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "listItems", &value, nullptr);
                     return value;
@@ -8980,7 +8980,7 @@ public:
                 XtVaSetValues(this->_widget, "listLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getListLabelString() {
+XmString getListLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "listLabelString", &value, nullptr);
                     return value;
@@ -8989,7 +8989,7 @@ public:
                 XtVaSetValues(this->_widget, "listVisibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getListVisibleItemCount() {
+int getListVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "listVisibleItemCount", &value, nullptr);
                     return value;
@@ -8998,7 +8998,7 @@ public:
                 XtVaSetValues(this->_widget, "minimizeButtons", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getMinimizeButtons() {
+Boolean getMinimizeButtons() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "minimizeButtons", &value, nullptr);
                     return value;
@@ -9007,33 +9007,33 @@ public:
                 XtVaSetValues(this->_widget, "mustMatch", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getMustMatch() {
+Boolean getMustMatch() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "mustMatch", &value, nullptr);
                     return value;
                 }
     Derived& addNoMatchCallback(std::function<void(XtPointer)> callback) {
-        addCallback("noMatchCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("noMatchCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setNoMatchCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "noMatchCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getNoMatchCallback() {
+XtCallbackList getNoMatchCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "noMatchCallback", &value, nullptr);
                     return value;
                 }
     Derived& addOkCallback(std::function<void(XtPointer)> callback) {
-        addCallback("okCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("okCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setOkCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "okCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getOkCallback() {
+XtCallbackList getOkCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "okCallback", &value, nullptr);
                     return value;
@@ -9042,7 +9042,7 @@ public:
                 XtVaSetValues(this->_widget, "okLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getOkLabelString() {
+XmString getOkLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "okLabelString", &value, nullptr);
                     return value;
@@ -9051,7 +9051,7 @@ public:
                 XtVaSetValues(this->_widget, "selectionLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getSelectionLabelString() {
+XmString getSelectionLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "selectionLabelString", &value, nullptr);
                     return value;
@@ -9060,7 +9060,7 @@ public:
                 XtVaSetValues(this->_widget, "textAccelerators", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtAccelerators getTextAccelerators() {
+XtAccelerators getTextAccelerators() {
                     XtAccelerators value;
                     XtVaGetValues(this->_widget, "textAccelerators", &value, nullptr);
                     return value;
@@ -9069,7 +9069,7 @@ public:
                 XtVaSetValues(this->_widget, "textColumns", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getTextColumns() {
+short getTextColumns() {
                     short value;
                     XtVaGetValues(this->_widget, "textColumns", &value, nullptr);
                     return value;
@@ -9078,31 +9078,31 @@ public:
                 XtVaSetValues(this->_widget, "textString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getTextString() {
+XmString getTextString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "textString", &value, nullptr);
                     return value;
                 }
-};
-class CXmSelectionBox : public CXmSelectionBoxImpl<CXmSelectionBox> {
-public:
-    using CXmSelectionBoxImpl<CXmSelectionBox>::CXmSelectionBoxImpl;
-    static CXmSelectionBox create(Widget parent, const char* name) {
-        return CXmSelectionBox(XtCreateWidget(name, xmSelectionBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmSelectionBox : public CXmSelectionBoxImpl<CXmSelectionBox> {
+            public:
+                using CXmSelectionBoxImpl<CXmSelectionBox>::CXmSelectionBoxImpl;
+                static CXmSelectionBox create(Widget parent, const char* name) {
+                    return CXmSelectionBox(XtCreateWidget(name, xmSelectionBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmTabStackImpl : public CXmBulletinBoardImpl<Derived> {
-public:
-    using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
-    using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& setAutoUnmanage(Boolean value) {
+            template <typename Derived> class CXmTabStackImpl : public CXmBulletinBoardImpl<Derived> {
+            public:
+                using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
+                using CXmBulletinBoardImpl<Derived>::addCallback;
+                    Derived& setAutoUnmanage(Boolean value) {
                 XtVaSetValues(this->_widget, "autoUnmanage", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoUnmanage() {
+Boolean getAutoUnmanage() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoUnmanage", &value, nullptr);
                     return value;
@@ -9111,7 +9111,7 @@ public:
                 XtVaSetValues(this->_widget, "fontList", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getFontList() {
+XmFontList getFontList() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "fontList", &value, nullptr);
                     return value;
@@ -9120,7 +9120,7 @@ public:
                 XtVaSetValues(this->_widget, "highlightThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHighlightThickness() {
+Dimension getHighlightThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "highlightThickness", &value, nullptr);
                     return value;
@@ -9129,7 +9129,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -9138,7 +9138,7 @@ public:
                 XtVaSetValues(this->_widget, "renderTable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmFontList getRenderTable() {
+XmFontList getRenderTable() {
                     XmFontList value;
                     XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
                     return value;
@@ -9147,7 +9147,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -9156,7 +9156,7 @@ public:
                 XtVaSetValues(this->_widget, "stackedEffect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getStackedEffect() {
+Boolean getStackedEffect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "stackedEffect", &value, nullptr);
                     return value;
@@ -9165,7 +9165,7 @@ public:
                 XtVaSetValues(this->_widget, "tabAutoSelect", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getTabAutoSelect() {
+Boolean getTabAutoSelect() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "tabAutoSelect", &value, nullptr);
                     return value;
@@ -9174,7 +9174,7 @@ public:
                 XtVaSetValues(this->_widget, "tabBoxWidget", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getTabBoxWidget() {
+Widget getTabBoxWidget() {
                     Widget value;
                     XtVaGetValues(this->_widget, "tabBoxWidget", &value, nullptr);
                     return value;
@@ -9183,7 +9183,7 @@ public:
                 XtVaSetValues(this->_widget, "tabCornerPercent", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getTabCornerPercent() {
+int getTabCornerPercent() {
                     int value;
                     XtVaGetValues(this->_widget, "tabCornerPercent", &value, nullptr);
                     return value;
@@ -9192,7 +9192,7 @@ public:
                 XtVaSetValues(this->_widget, "tabLabelSpacing", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabLabelSpacing() {
+Dimension getTabLabelSpacing() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabLabelSpacing", &value, nullptr);
                     return value;
@@ -9201,7 +9201,7 @@ public:
                 XtVaSetValues(this->_widget, "tabMarginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabMarginHeight() {
+Dimension getTabMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabMarginHeight", &value, nullptr);
                     return value;
@@ -9210,7 +9210,7 @@ public:
                 XtVaSetValues(this->_widget, "tabMarginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabMarginWidth() {
+Dimension getTabMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabMarginWidth", &value, nullptr);
                     return value;
@@ -9219,7 +9219,7 @@ public:
                 XtVaSetValues(this->_widget, "tabMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabMode getTabMode() {
+XmTabMode getTabMode() {
                     XmTabMode value;
                     XtVaGetValues(this->_widget, "tabMode", &value, nullptr);
                     return value;
@@ -9228,7 +9228,7 @@ public:
                 XtVaSetValues(this->_widget, "tabOffset", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getTabOffset() {
+Dimension getTabOffset() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "tabOffset", &value, nullptr);
                     return value;
@@ -9237,7 +9237,7 @@ public:
                 XtVaSetValues(this->_widget, "tabOrientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabOrientation getTabOrientation() {
+XmTabOrientation getTabOrientation() {
                     XmTabOrientation value;
                     XtVaGetValues(this->_widget, "tabOrientation", &value, nullptr);
                     return value;
@@ -9246,7 +9246,7 @@ public:
                 XtVaSetValues(this->_widget, "tabSelectColor", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTabSelectColor() {
+Pixel getTabSelectColor() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "tabSelectColor", &value, nullptr);
                     return value;
@@ -9255,20 +9255,20 @@ public:
                 XtVaSetValues(this->_widget, "tabSelectPixmap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Pixel getTabSelectPixmap() {
+Pixel getTabSelectPixmap() {
                     Pixel value;
                     XtVaGetValues(this->_widget, "tabSelectPixmap", &value, nullptr);
                     return value;
                 }
     Derived& addTabSelectedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("tabSelectedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("tabSelectedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setTabSelectedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "tabSelectedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getTabSelectedCallback() {
+XtCallbackList getTabSelectedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "tabSelectedCallback", &value, nullptr);
                     return value;
@@ -9277,7 +9277,7 @@ public:
                 XtVaSetValues(this->_widget, "tabSide", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabSide getTabSide() {
+XmTabSide getTabSide() {
                     XmTabSide value;
                     XtVaGetValues(this->_widget, "tabSide", &value, nullptr);
                     return value;
@@ -9286,7 +9286,7 @@ public:
                 XtVaSetValues(this->_widget, "tabStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTabStyle getTabStyle() {
+XmTabStyle getTabStyle() {
                     XmTabStyle value;
                     XtVaGetValues(this->_widget, "tabStyle", &value, nullptr);
                     return value;
@@ -9295,7 +9295,7 @@ public:
                 XtVaSetValues(this->_widget, "uniformTabSize", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUniformTabSize() {
+Boolean getUniformTabSize() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "uniformTabSize", &value, nullptr);
                     return value;
@@ -9304,47 +9304,47 @@ public:
                 XtVaSetValues(this->_widget, "useImageCache", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseImageCache() {
+Boolean getUseImageCache() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useImageCache", &value, nullptr);
                     return value;
                 }
-};
-class CXmTabStack : public CXmTabStackImpl<CXmTabStack> {
-public:
-    using CXmTabStackImpl<CXmTabStack>::CXmTabStackImpl;
-    static CXmTabStack create(Widget parent, const char* name) {
-        return CXmTabStack(XtCreateWidget(name, xmTabStackWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmTabStack : public CXmTabStackImpl<CXmTabStack> {
+            public:
+                using CXmTabStackImpl<CXmTabStack>::CXmTabStackImpl;
+                static CXmTabStack create(Widget parent, const char* name) {
+                    return CXmTabStack(XtCreateWidget(name, xmTabStackWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
+            template <typename Derived> class CXmClipWindowImpl : public CXmDrawingAreaImpl<Derived> {
+            public:
+                using CXmDrawingAreaImpl<Derived>::CXmDrawingAreaImpl;
+                using CXmDrawingAreaImpl<Derived>::addCallback;
+                
+            };
+            class CXmClipWindow : public CXmClipWindowImpl<CXmClipWindow> {
+            public:
+                using CXmClipWindowImpl<CXmClipWindow>::CXmClipWindowImpl;
+                static CXmClipWindow create(Widget parent, const char* name) {
+                    return CXmClipWindow(XtCreateWidget(name, xmClipWindowWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
-template <typename Derived> class CXmClipWindowImpl : public CXmDrawingAreaImpl<Derived> {
-public:
-    using CXmDrawingAreaImpl<Derived>::CXmDrawingAreaImpl;
-    using CXmDrawingAreaImpl<Derived>::addCallback;
 
-};
-class CXmClipWindow : public CXmClipWindowImpl<CXmClipWindow> {
-public:
-    using CXmClipWindowImpl<CXmClipWindow>::CXmClipWindowImpl;
-    static CXmClipWindow create(Widget parent, const char* name) {
-        return CXmClipWindow(XtCreateWidget(name, xmClipWindowWidgetClass, parent, nullptr, 0));
-    }
-};
-
-
-
-template <typename Derived> class CXmOutlineImpl : public CXmHierarchyImpl<Derived> {
-public:
-    using CXmHierarchyImpl<Derived>::CXmHierarchyImpl;
-    using CXmHierarchyImpl<Derived>::addCallback;
-    Derived& setConnectNodes(Boolean value) {
+            template <typename Derived> class CXmOutlineImpl : public CXmHierarchyImpl<Derived> {
+            public:
+                using CXmHierarchyImpl<Derived>::CXmHierarchyImpl;
+                using CXmHierarchyImpl<Derived>::addCallback;
+                    Derived& setConnectNodes(Boolean value) {
                 XtVaSetValues(this->_widget, "connectNodes", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getConnectNodes() {
+Boolean getConnectNodes() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "connectNodes", &value, nullptr);
                     return value;
@@ -9353,7 +9353,7 @@ public:
                 XtVaSetValues(this->_widget, "constrainWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getConstrainWidth() {
+Boolean getConstrainWidth() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "constrainWidth", &value, nullptr);
                     return value;
@@ -9362,31 +9362,31 @@ public:
                 XtVaSetValues(this->_widget, "indentSpace", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getIndentSpace() {
+Dimension getIndentSpace() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "indentSpace", &value, nullptr);
                     return value;
                 }
-};
-class CXmOutline : public CXmOutlineImpl<CXmOutline> {
-public:
-    using CXmOutlineImpl<CXmOutline>::CXmOutlineImpl;
-    static CXmOutline create(Widget parent, const char* name) {
-        return CXmOutline(XtCreateWidget(name, xmOutlineWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmOutline : public CXmOutlineImpl<CXmOutline> {
+            public:
+                using CXmOutlineImpl<CXmOutline>::CXmOutlineImpl;
+                static CXmOutline create(Widget parent, const char* name) {
+                    return CXmOutline(XtCreateWidget(name, xmOutlineWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmTreeImpl : public CXmHierarchyImpl<Derived> {
-public:
-    using CXmHierarchyImpl<Derived>::CXmHierarchyImpl;
-    using CXmHierarchyImpl<Derived>::addCallback;
-    Derived& setCompressStyle(XmTreeCompressStyle value) {
+            template <typename Derived> class CXmTreeImpl : public CXmHierarchyImpl<Derived> {
+            public:
+                using CXmHierarchyImpl<Derived>::CXmHierarchyImpl;
+                using CXmHierarchyImpl<Derived>::addCallback;
+                    Derived& setCompressStyle(XmTreeCompressStyle value) {
                 XtVaSetValues(this->_widget, "compressStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTreeCompressStyle getCompressStyle() {
+XmTreeCompressStyle getCompressStyle() {
                     XmTreeCompressStyle value;
                     XtVaGetValues(this->_widget, "compressStyle", &value, nullptr);
                     return value;
@@ -9395,7 +9395,7 @@ public:
                 XtVaSetValues(this->_widget, "connectStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmTreeConnectStyle getConnectStyle() {
+XmTreeConnectStyle getConnectStyle() {
                     XmTreeConnectStyle value;
                     XtVaGetValues(this->_widget, "connectStyle", &value, nullptr);
                     return value;
@@ -9404,7 +9404,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalDelta", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalDelta() {
+Dimension getHorizontalDelta() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalDelta", &value, nullptr);
                     return value;
@@ -9413,7 +9413,7 @@ public:
                 XtVaSetValues(this->_widget, "horizontalNodeSpace", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHorizontalNodeSpace() {
+Dimension getHorizontalNodeSpace() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "horizontalNodeSpace", &value, nullptr);
                     return value;
@@ -9422,7 +9422,7 @@ public:
                 XtVaSetValues(this->_widget, "orientation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getOrientation() {
+unsigned char getOrientation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "orientation", &value, nullptr);
                     return value;
@@ -9431,7 +9431,7 @@ public:
                 XtVaSetValues(this->_widget, "verticalDelta", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalDelta() {
+Dimension getVerticalDelta() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalDelta", &value, nullptr);
                     return value;
@@ -9440,31 +9440,31 @@ public:
                 XtVaSetValues(this->_widget, "verticalNodeSpace", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getVerticalNodeSpace() {
+Dimension getVerticalNodeSpace() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "verticalNodeSpace", &value, nullptr);
                     return value;
                 }
-};
-class CXmTree : public CXmTreeImpl<CXmTree> {
-public:
-    using CXmTreeImpl<CXmTree>::CXmTreeImpl;
-    static CXmTree create(Widget parent, const char* name) {
-        return CXmTree(XtCreateWidget(name, xmTreeWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmTree : public CXmTreeImpl<CXmTree> {
+            public:
+                using CXmTreeImpl<CXmTree>::CXmTreeImpl;
+                static CXmTree create(Widget parent, const char* name) {
+                    return CXmTree(XtCreateWidget(name, xmTreeWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmMainWindowImpl : public CXmScrolledWindowImpl<Derived> {
-public:
-    using CXmScrolledWindowImpl<Derived>::CXmScrolledWindowImpl;
-    using CXmScrolledWindowImpl<Derived>::addCallback;
-    Derived& setCommandWindow(Widget value) {
+            template <typename Derived> class CXmMainWindowImpl : public CXmScrolledWindowImpl<Derived> {
+            public:
+                using CXmScrolledWindowImpl<Derived>::CXmScrolledWindowImpl;
+                using CXmScrolledWindowImpl<Derived>::addCallback;
+                    Derived& setCommandWindow(Widget value) {
                 XtVaSetValues(this->_widget, "commandWindow", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getCommandWindow() {
+Widget getCommandWindow() {
                     Widget value;
                     XtVaGetValues(this->_widget, "commandWindow", &value, nullptr);
                     return value;
@@ -9473,7 +9473,7 @@ public:
                 XtVaSetValues(this->_widget, "commandWindowLocation", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getCommandWindowLocation() {
+unsigned char getCommandWindowLocation() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "commandWindowLocation", &value, nullptr);
                     return value;
@@ -9482,7 +9482,7 @@ public:
                 XtVaSetValues(this->_widget, "mainWindowMarginHeight", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMainWindowMarginHeight() {
+Dimension getMainWindowMarginHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "mainWindowMarginHeight", &value, nullptr);
                     return value;
@@ -9491,7 +9491,7 @@ public:
                 XtVaSetValues(this->_widget, "mainWindowMarginWidth", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMainWindowMarginWidth() {
+Dimension getMainWindowMarginWidth() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "mainWindowMarginWidth", &value, nullptr);
                     return value;
@@ -9500,7 +9500,7 @@ public:
                 XtVaSetValues(this->_widget, "menuBar", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getMenuBar() {
+Widget getMenuBar() {
                     Widget value;
                     XtVaGetValues(this->_widget, "menuBar", &value, nullptr);
                     return value;
@@ -9509,7 +9509,7 @@ public:
                 XtVaSetValues(this->_widget, "messageWindow", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getMessageWindow() {
+Widget getMessageWindow() {
                     Widget value;
                     XtVaGetValues(this->_widget, "messageWindow", &value, nullptr);
                     return value;
@@ -9518,31 +9518,31 @@ public:
                 XtVaSetValues(this->_widget, "showSeparator", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getShowSeparator() {
+Boolean getShowSeparator() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "showSeparator", &value, nullptr);
                     return value;
                 }
-};
-class CXmMainWindow : public CXmMainWindowImpl<CXmMainWindow> {
-public:
-    using CXmMainWindowImpl<CXmMainWindow>::CXmMainWindowImpl;
-    static CXmMainWindow create(Widget parent, const char* name) {
-        return CXmMainWindow(XtCreateWidget(name, xmMainWindowWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmMainWindow : public CXmMainWindowImpl<CXmMainWindow> {
+            public:
+                using CXmMainWindowImpl<CXmMainWindow>::CXmMainWindowImpl;
+                static CXmMainWindow create(Widget parent, const char* name) {
+                    return CXmMainWindow(XtCreateWidget(name, xmMainWindowWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmSimpleSpinBoxImpl : public CXmSpinBoxImpl<Derived> {
-public:
-    using CXmSpinBoxImpl<Derived>::CXmSpinBoxImpl;
-    using CXmSpinBoxImpl<Derived>::addCallback;
-    Derived& setArrowSensitivity(unsigned char value) {
+            template <typename Derived> class CXmSimpleSpinBoxImpl : public CXmSpinBoxImpl<Derived> {
+            public:
+                using CXmSpinBoxImpl<Derived>::CXmSpinBoxImpl;
+                using CXmSpinBoxImpl<Derived>::addCallback;
+                    Derived& setArrowSensitivity(unsigned char value) {
                 XtVaSetValues(this->_widget, "arrowSensitivity", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getArrowSensitivity() {
+unsigned char getArrowSensitivity() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "arrowSensitivity", &value, nullptr);
                     return value;
@@ -9551,7 +9551,7 @@ public:
                 XtVaSetValues(this->_widget, "columns", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getColumns() {
+short getColumns() {
                     short value;
                     XtVaGetValues(this->_widget, "columns", &value, nullptr);
                     return value;
@@ -9560,7 +9560,7 @@ public:
                 XtVaSetValues(this->_widget, "decimalPoints", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    short getDecimalPoints() {
+short getDecimalPoints() {
                     short value;
                     XtVaGetValues(this->_widget, "decimalPoints", &value, nullptr);
                     return value;
@@ -9569,7 +9569,7 @@ public:
                 XtVaSetValues(this->_widget, "editable", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getEditable() {
+Boolean getEditable() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "editable", &value, nullptr);
                     return value;
@@ -9578,7 +9578,7 @@ public:
                 XtVaSetValues(this->_widget, "incrementValue", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getIncrementValue() {
+int getIncrementValue() {
                     int value;
                     XtVaGetValues(this->_widget, "incrementValue", &value, nullptr);
                     return value;
@@ -9587,7 +9587,7 @@ public:
                 XtVaSetValues(this->_widget, "maximumValue", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMaximumValue() {
+int getMaximumValue() {
                     int value;
                     XtVaGetValues(this->_widget, "maximumValue", &value, nullptr);
                     return value;
@@ -9596,7 +9596,7 @@ public:
                 XtVaSetValues(this->_widget, "minimumValue", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getMinimumValue() {
+int getMinimumValue() {
                     int value;
                     XtVaGetValues(this->_widget, "minimumValue", &value, nullptr);
                     return value;
@@ -9605,7 +9605,7 @@ public:
                 XtVaSetValues(this->_widget, "numValues", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getNumValues() {
+int getNumValues() {
                     int value;
                     XtVaGetValues(this->_widget, "numValues", &value, nullptr);
                     return value;
@@ -9614,7 +9614,7 @@ public:
                 XtVaSetValues(this->_widget, "position", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getPosition() {
+int getPosition() {
                     int value;
                     XtVaGetValues(this->_widget, "position", &value, nullptr);
                     return value;
@@ -9623,7 +9623,7 @@ public:
                 XtVaSetValues(this->_widget, "positionType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getPositionType() {
+unsigned char getPositionType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "positionType", &value, nullptr);
                     return value;
@@ -9632,7 +9632,7 @@ public:
                 XtVaSetValues(this->_widget, "shadowThickness", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getShadowThickness() {
+Dimension getShadowThickness() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "shadowThickness", &value, nullptr);
                     return value;
@@ -9641,7 +9641,7 @@ public:
                 XtVaSetValues(this->_widget, "spinBoxChildType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSpinBoxChildType() {
+unsigned char getSpinBoxChildType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "spinBoxChildType", &value, nullptr);
                     return value;
@@ -9650,7 +9650,7 @@ public:
                 XtVaSetValues(this->_widget, "textField", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Widget getTextField() {
+Widget getTextField() {
                     Widget value;
                     XtVaGetValues(this->_widget, "textField", &value, nullptr);
                     return value;
@@ -9659,7 +9659,7 @@ public:
                 XtVaSetValues(this->_widget, "values", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmStringTable getValues() {
+XmStringTable getValues() {
                     XmStringTable value;
                     XtVaGetValues(this->_widget, "values", &value, nullptr);
                     return value;
@@ -9668,71 +9668,71 @@ public:
                 XtVaSetValues(this->_widget, "wrap", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getWrap() {
+Boolean getWrap() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "wrap", &value, nullptr);
                     return value;
                 }
-};
-class CXmSimpleSpinBox : public CXmSimpleSpinBoxImpl<CXmSimpleSpinBox> {
-public:
-    using CXmSimpleSpinBoxImpl<CXmSimpleSpinBox>::CXmSimpleSpinBoxImpl;
-    static CXmSimpleSpinBox create(Widget parent, const char* name) {
-        return CXmSimpleSpinBox(XtCreateWidget(name, xmSimpleSpinBoxWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmSimpleSpinBox : public CXmSimpleSpinBoxImpl<CXmSimpleSpinBox> {
+            public:
+                using CXmSimpleSpinBoxImpl<CXmSimpleSpinBox>::CXmSimpleSpinBoxImpl;
+                static CXmSimpleSpinBox create(Widget parent, const char* name) {
+                    return CXmSimpleSpinBox(XtCreateWidget(name, xmSimpleSpinBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CShellImpl : public CDesktopImpl<Derived> {
-public:
-    using CDesktopImpl<Derived>::CDesktopImpl;
-    using CDesktopImpl<Derived>::addCallback;
-    Derived& setUseAsyncGeometry(Boolean value) {
+            template <typename Derived> class CShellImpl : public CDesktopImpl<Derived> {
+            public:
+                using CDesktopImpl<Derived>::CDesktopImpl;
+                using CDesktopImpl<Derived>::addCallback;
+                    Derived& setUseAsyncGeometry(Boolean value) {
                 XtVaSetValues(this->_widget, "useAsyncGeometry", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getUseAsyncGeometry() {
+Boolean getUseAsyncGeometry() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "useAsyncGeometry", &value, nullptr);
                     return value;
                 }
-};
-class CShell : public CShellImpl<CShell> {
-public:
-    using CShellImpl<CShell>::CShellImpl;
-    static CShell create(Widget parent, const char* name) {
-        return CShell(XtCreateWidget(name, xmShellExtObjectClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CShell : public CShellImpl<CShell> {
+            public:
+                using CShellImpl<CShell>::CShellImpl;
+                static CShell create(Widget parent, const char* name) {
+                    return CShell(XtCreateWidget(name, xmShellExtObjectClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
+            template <typename Derived> class CWorldImpl : public CDesktopImpl<Derived> {
+            public:
+                using CDesktopImpl<Derived>::CDesktopImpl;
+                using CDesktopImpl<Derived>::addCallback;
+                
+            };
+            class CWorld : public CWorldImpl<CWorld> {
+            public:
+                using CWorldImpl<CWorld>::CWorldImpl;
+                static CWorld create(Widget parent, const char* name) {
+                    return CWorld(XtCreateWidget(name, xmWorldClass, parent, nullptr, 0));
+                }
+            };
+        
 
-template <typename Derived> class CWorldImpl : public CDesktopImpl<Derived> {
-public:
-    using CDesktopImpl<Derived>::CDesktopImpl;
-    using CDesktopImpl<Derived>::addCallback;
 
-};
-class CWorld : public CWorldImpl<CWorld> {
-public:
-    using CWorldImpl<CWorld>::CWorldImpl;
-    static CWorld create(Widget parent, const char* name) {
-        return CWorld(XtCreateWidget(name, xmWorldClass, parent, nullptr, 0));
-    }
-};
-
-
-
-template <typename Derived> class CXmTearOffButtonImpl : public CXmPushButtonImpl<Derived> {
-public:
-    using CXmPushButtonImpl<Derived>::CXmPushButtonImpl;
-    using CXmPushButtonImpl<Derived>::addCallback;
-    Derived& setHeight(Dimension value) {
+            template <typename Derived> class CXmTearOffButtonImpl : public CXmPushButtonImpl<Derived> {
+            public:
+                using CXmPushButtonImpl<Derived>::CXmPushButtonImpl;
+                using CXmPushButtonImpl<Derived>::addCallback;
+                    Derived& setHeight(Dimension value) {
                 XtVaSetValues(this->_widget, "height", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getHeight() {
+Dimension getHeight() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "height", &value, nullptr);
                     return value;
@@ -9741,7 +9741,7 @@ public:
                 XtVaSetValues(this->_widget, "margin", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Dimension getMargin() {
+Dimension getMargin() {
                     Dimension value;
                     XtVaGetValues(this->_widget, "margin", &value, nullptr);
                     return value;
@@ -9750,7 +9750,7 @@ public:
                 XtVaSetValues(this->_widget, "pri.vate", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getPri_vate() {
+Boolean getPri_vate() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
                     return value;
@@ -9759,31 +9759,31 @@ public:
                 XtVaSetValues(this->_widget, "separatorType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getSeparatorType() {
+unsigned char getSeparatorType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "separatorType", &value, nullptr);
                     return value;
                 }
-};
-class CXmTearOffButton : public CXmTearOffButtonImpl<CXmTearOffButton> {
-public:
-    using CXmTearOffButtonImpl<CXmTearOffButton>::CXmTearOffButtonImpl;
-    static CXmTearOffButton create(Widget parent, const char* name) {
-        return CXmTearOffButton(XtCreateWidget(name, xmTearOffButtonWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmTearOffButton : public CXmTearOffButtonImpl<CXmTearOffButton> {
+            public:
+                using CXmTearOffButtonImpl<CXmTearOffButton>::CXmTearOffButtonImpl;
+                static CXmTearOffButton create(Widget parent, const char* name) {
+                    return CXmTearOffButton(XtCreateWidget(name, xmTearOffButtonWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmCommandImpl : public CXmSelectionBoxImpl<Derived> {
-public:
-    using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
-    using CXmSelectionBoxImpl<Derived>::addCallback;
-    Derived& setAutoUnmanage(Boolean value) {
+            template <typename Derived> class CXmCommandImpl : public CXmSelectionBoxImpl<Derived> {
+            public:
+                using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
+                using CXmSelectionBoxImpl<Derived>::addCallback;
+                    Derived& setAutoUnmanage(Boolean value) {
                 XtVaSetValues(this->_widget, "autoUnmanage", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoUnmanage() {
+Boolean getAutoUnmanage() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoUnmanage", &value, nullptr);
                     return value;
@@ -9792,33 +9792,33 @@ public:
                 XtVaSetValues(this->_widget, "command", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getCommand() {
+XmString getCommand() {
                     XmString value;
                     XtVaGetValues(this->_widget, "command", &value, nullptr);
                     return value;
                 }
     Derived& addCommandChangedCallback(std::function<void(XtPointer)> callback) {
-        addCallback("commandChangedCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("commandChangedCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setCommandChangedCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "commandChangedCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getCommandChangedCallback() {
+XtCallbackList getCommandChangedCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "commandChangedCallback", &value, nullptr);
                     return value;
                 }
     Derived& addCommandEnteredCallback(std::function<void(XtPointer)> callback) {
-        addCallback("commandEnteredCallback", callback);
-        return static_cast<Derived&>(*this);
-    }
+                        addCallback("commandEnteredCallback", callback);
+                        return static_cast<Derived&>(*this);
+                    }
     Derived& setCommandEnteredCallback(XtCallbackList value) {
                 XtVaSetValues(this->_widget, "commandEnteredCallback", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtCallbackList getCommandEnteredCallback() {
+XtCallbackList getCommandEnteredCallback() {
                     XtCallbackList value;
                     XtVaGetValues(this->_widget, "commandEnteredCallback", &value, nullptr);
                     return value;
@@ -9827,7 +9827,7 @@ public:
                 XtVaSetValues(this->_widget, "defaultPosition", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getDefaultPosition() {
+Boolean getDefaultPosition() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "defaultPosition", &value, nullptr);
                     return value;
@@ -9836,7 +9836,7 @@ public:
                 XtVaSetValues(this->_widget, "dialogType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDialogType() {
+unsigned char getDialogType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dialogType", &value, nullptr);
                     return value;
@@ -9845,7 +9845,7 @@ public:
                 XtVaSetValues(this->_widget, "historyItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getHistoryItemCount() {
+int getHistoryItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "historyItemCount", &value, nullptr);
                     return value;
@@ -9854,7 +9854,7 @@ public:
                 XtVaSetValues(this->_widget, "historyItems", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getHistoryItems() {
+XmString * getHistoryItems() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "historyItems", &value, nullptr);
                     return value;
@@ -9863,7 +9863,7 @@ public:
                 XtVaSetValues(this->_widget, "historyMaxItems", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getHistoryMaxItems() {
+int getHistoryMaxItems() {
                     int value;
                     XtVaGetValues(this->_widget, "historyMaxItems", &value, nullptr);
                     return value;
@@ -9872,7 +9872,7 @@ public:
                 XtVaSetValues(this->_widget, "historyVisibleItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getHistoryVisibleItemCount() {
+int getHistoryVisibleItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "historyVisibleItemCount", &value, nullptr);
                     return value;
@@ -9881,7 +9881,7 @@ public:
                 XtVaSetValues(this->_widget, "promptString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getPromptString() {
+XmString getPromptString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "promptString", &value, nullptr);
                     return value;
@@ -9890,31 +9890,31 @@ public:
                 XtVaSetValues(this->_widget, "resizePolicy", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getResizePolicy() {
+unsigned char getResizePolicy() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "resizePolicy", &value, nullptr);
                     return value;
                 }
-};
-class CXmCommand : public CXmCommandImpl<CXmCommand> {
-public:
-    using CXmCommandImpl<CXmCommand>::CXmCommandImpl;
-    static CXmCommand create(Widget parent, const char* name) {
-        return CXmCommand(XtCreateWidget(name, xmCommandWidgetClass, parent, nullptr, 0));
-    }
-};
+            };
+            class CXmCommand : public CXmCommandImpl<CXmCommand> {
+            public:
+                using CXmCommandImpl<CXmCommand>::CXmCommandImpl;
+                static CXmCommand create(Widget parent, const char* name) {
+                    return CXmCommand(XtCreateWidget(name, xmCommandWidgetClass, parent, nullptr, 0));
+                }
+            };
+        
 
 
-
-template <typename Derived> class CXmFileSelectionBoxImpl : public CXmSelectionBoxImpl<Derived> {
-public:
-    using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
-    using CXmSelectionBoxImpl<Derived>::addCallback;
-    Derived& setApplyLabelString(XmString value) {
+            template <typename Derived> class CXmFileSelectionBoxImpl : public CXmSelectionBoxImpl<Derived> {
+            public:
+                using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
+                using CXmSelectionBoxImpl<Derived>::addCallback;
+                    Derived& setApplyLabelString(XmString value) {
                 XtVaSetValues(this->_widget, "applyLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getApplyLabelString() {
+XmString getApplyLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "applyLabelString", &value, nullptr);
                     return value;
@@ -9923,7 +9923,7 @@ public:
                 XtVaSetValues(this->_widget, "autoUnmanage", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getAutoUnmanage() {
+Boolean getAutoUnmanage() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "autoUnmanage", &value, nullptr);
                     return value;
@@ -9932,7 +9932,7 @@ public:
                 XtVaSetValues(this->_widget, "dialogType", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getDialogType() {
+unsigned char getDialogType() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "dialogType", &value, nullptr);
                     return value;
@@ -9941,7 +9941,7 @@ public:
                 XtVaSetValues(this->_widget, "dirListItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getDirListItemCount() {
+int getDirListItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "dirListItemCount", &value, nullptr);
                     return value;
@@ -9950,7 +9950,7 @@ public:
                 XtVaSetValues(this->_widget, "dirListItems", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getDirListItems() {
+XmString * getDirListItems() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "dirListItems", &value, nullptr);
                     return value;
@@ -9959,7 +9959,7 @@ public:
                 XtVaSetValues(this->_widget, "dirListLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getDirListLabelString() {
+XmString getDirListLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "dirListLabelString", &value, nullptr);
                     return value;
@@ -9968,7 +9968,7 @@ public:
                 XtVaSetValues(this->_widget, "dirMask", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getDirMask() {
+XmString getDirMask() {
                     XmString value;
                     XtVaGetValues(this->_widget, "dirMask", &value, nullptr);
                     return value;
@@ -9977,7 +9977,7 @@ public:
                 XtVaSetValues(this->_widget, "dirSearchProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmSearchProc getDirSearchProc() {
+XmSearchProc getDirSearchProc() {
                     XmSearchProc value;
                     XtVaGetValues(this->_widget, "dirSearchProc", &value, nullptr);
                     return value;
@@ -9986,7 +9986,7 @@ public:
                 XtVaSetValues(this->_widget, "dirSpec", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getDirSpec() {
+XmString getDirSpec() {
                     XmString value;
                     XtVaGetValues(this->_widget, "dirSpec", &value, nullptr);
                     return value;
@@ -9995,7 +9995,7 @@ public:
                 XtVaSetValues(this->_widget, "dirTextLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getDirTextLabelString() {
+XmString getDirTextLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "dirTextLabelString", &value, nullptr);
                     return value;
@@ -10004,7 +10004,7 @@ public:
                 XtVaSetValues(this->_widget, "directory", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getDirectory() {
+XmString getDirectory() {
                     XmString value;
                     XtVaGetValues(this->_widget, "directory", &value, nullptr);
                     return value;
@@ -10013,7 +10013,7 @@ public:
                 XtVaSetValues(this->_widget, "directoryValid", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getDirectoryValid() {
+Boolean getDirectoryValid() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "directoryValid", &value, nullptr);
                     return value;
@@ -10022,7 +10022,7 @@ public:
                 XtVaSetValues(this->_widget, "fileFilterStyle", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getFileFilterStyle() {
+XtEnum getFileFilterStyle() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "fileFilterStyle", &value, nullptr);
                     return value;
@@ -10031,7 +10031,7 @@ public:
                 XtVaSetValues(this->_widget, "fileListItemCount", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    int getFileListItemCount() {
+int getFileListItemCount() {
                     int value;
                     XtVaGetValues(this->_widget, "fileListItemCount", &value, nullptr);
                     return value;
@@ -10040,7 +10040,7 @@ public:
                 XtVaSetValues(this->_widget, "fileListItems", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString * getFileListItems() {
+XmString * getFileListItems() {
                     XmString * value;
                     XtVaGetValues(this->_widget, "fileListItems", &value, nullptr);
                     return value;
@@ -10049,7 +10049,7 @@ public:
                 XtVaSetValues(this->_widget, "fileListLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getFileListLabelString() {
+XmString getFileListLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "fileListLabelString", &value, nullptr);
                     return value;
@@ -10058,7 +10058,7 @@ public:
                 XtVaSetValues(this->_widget, "fileSearchProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmSearchProc getFileSearchProc() {
+XmSearchProc getFileSearchProc() {
                     XmSearchProc value;
                     XtVaGetValues(this->_widget, "fileSearchProc", &value, nullptr);
                     return value;
@@ -10067,7 +10067,7 @@ public:
                 XtVaSetValues(this->_widget, "fileTypeMask", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    unsigned char getFileTypeMask() {
+unsigned char getFileTypeMask() {
                     unsigned char value;
                     XtVaGetValues(this->_widget, "fileTypeMask", &value, nullptr);
                     return value;
@@ -10076,7 +10076,7 @@ public:
                 XtVaSetValues(this->_widget, "filterLabelString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getFilterLabelString() {
+XmString getFilterLabelString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "filterLabelString", &value, nullptr);
                     return value;
@@ -10085,7 +10085,7 @@ public:
                 XtVaSetValues(this->_widget, "listUpdated", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    Boolean getListUpdated() {
+Boolean getListUpdated() {
                     Boolean value;
                     XtVaGetValues(this->_widget, "listUpdated", &value, nullptr);
                     return value;
@@ -10094,7 +10094,7 @@ public:
                 XtVaSetValues(this->_widget, "noMatchString", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getNoMatchString() {
+XmString getNoMatchString() {
                     XmString value;
                     XtVaGetValues(this->_widget, "noMatchString", &value, nullptr);
                     return value;
@@ -10103,7 +10103,7 @@ public:
                 XtVaSetValues(this->_widget, "pathMode", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XtEnum getPathMode() {
+XtEnum getPathMode() {
                     XtEnum value;
                     XtVaGetValues(this->_widget, "pathMode", &value, nullptr);
                     return value;
@@ -10112,7 +10112,7 @@ public:
                 XtVaSetValues(this->_widget, "pattern", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmString getPattern() {
+XmString getPattern() {
                     XmString value;
                     XtVaGetValues(this->_widget, "pattern", &value, nullptr);
                     return value;
@@ -10121,17 +10121,17 @@ public:
                 XtVaSetValues(this->_widget, "qualifySearchDataProc", value, nullptr);
                 return static_cast<Derived&>(*this);
             }
-    XmQualifyProc getQualifySearchDataProc() {
+XmQualifyProc getQualifySearchDataProc() {
                     XmQualifyProc value;
                     XtVaGetValues(this->_widget, "qualifySearchDataProc", &value, nullptr);
                     return value;
                 }
-};
-class CXmFileSelectionBox : public CXmFileSelectionBoxImpl<CXmFileSelectionBox> {
-public:
-    using CXmFileSelectionBoxImpl<CXmFileSelectionBox>::CXmFileSelectionBoxImpl;
-    static CXmFileSelectionBox create(Widget parent, const char* name) {
-        return CXmFileSelectionBox(XtCreateWidget(name, xmFileSelectionBoxWidgetClass, parent, nullptr, 0));
-    }
-};
-
+            };
+            class CXmFileSelectionBox : public CXmFileSelectionBoxImpl<CXmFileSelectionBox> {
+            public:
+                using CXmFileSelectionBoxImpl<CXmFileSelectionBox>::CXmFileSelectionBoxImpl;
+                static CXmFileSelectionBox create(Widget parent, const char* name) {
+                    return CXmFileSelectionBox(XtCreateWidget(name, xmFileSelectionBoxWidgetClass, parent, nullptr, 0));
+                }
+            };
+        

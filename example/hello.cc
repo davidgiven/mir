@@ -1,8 +1,7 @@
-#include <Xm/Xm.h>
-#include <Xm/PushB.h>
-#include <Xm/RowColumn.h>
 #include <tuple>
 #include <utility>
+#include <string>
+#include <format>
 #include "include/cmotif.h"
 
 template <typename Type>
@@ -38,21 +37,33 @@ int main(int argc, char* argv[])
 
     CXmPushButton::create(mainWindow, "button1")
         .setLabelString(XmStringCreateLocalized((char*)"Button 1"))
-        .setShadowThickness(5)
         .setShowAsDefault(true)
-        .addActivateCallback([](XtPointer) {
-            printf("Button 1 pressed\n");
-        })
+        .addActivateCallback(
+            [](XtPointer)
+            {
+                printf("Button 1 pressed\n");
+            })
         .manageChild();
 
-    auto button2 = CXmPushButton::create(mainWindow, "button2")
-        .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
-        .setShadowThickness(5)
-        .setShowAsDefault(false)
-        .addActivateCallback([](XtPointer) {
-            printf("Button 2 pressed\n");
-        })
-        .manageChild();
+    CXmPushButton button2 =
+        CXmPushButton::create(mainWindow, "button2")
+            .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
+            .setShowAsDefault(false)
+            .setAlignment(XmALIGNMENT_CENTER)
+            .addActivateCallback(
+                [](XtPointer)
+                {
+                    printf("Button 2 pressed\n");
+                })
+            .addEventHandler(
+                [&](XtPointer, XEvent* event, Boolean* continue_to_dispatch)
+                {
+                    button2.setLabelString(XmStringCreateLocalized(
+                        (char*)(std::format("width={}", button2.getWidth())
+                                .c_str())));
+                },
+                StructureNotifyMask)
+            .manageChild();
 
     XtRealizeWidget(toplevel);
 

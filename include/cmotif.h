@@ -107,17 +107,19 @@ public:
 protected:
     static void executeCallback(
         Widget w, XtPointer client_data, XtPointer call_data);
+    static void executeEventHandler(Widget w,
+        XtPointer client_data,
+        XEvent* event,
+        Boolean* continue_to_dispatch);
     static int registerCallback(
         Widget widget, std::function<void(XtPointer)> callback);
+    static int registerEventHandler(
+        Widget widget, std::function<void(XtPointer, XEvent*, Boolean*)> handler);
     static void deregisterCallbacks(
         Widget widget, XtPointer client_data, XtPointer call_data);
 
 public:
     Widget _widget;
-    static int _callbackId;
-    static std::set<Widget> _registeredWidgets;
-    static std::map<std::pair<Widget, int>, std::function<void(XtPointer)>>
-        _callbacks;
 };
 
 template <typename Derived>
@@ -147,6 +149,19 @@ public:
             executeCallback,
             reinterpret_cast<XtPointer>(cbid));
 
+        return static_cast<Derived&>(*this);
+    }
+
+    Derived& addEventHandler(
+        std::function<void(XtPointer, XEvent*, Boolean*)> handler,
+        EventMask event_mask)
+    {
+        int cbid = registerEventHandler(_widget, std::move(handler));
+        XtAddEventHandler(_widget,
+            event_mask,
+            false,
+            executeEventHandler,
+            reinterpret_cast<XtPointer>(cbid));
         return static_cast<Derived&>(*this);
     }
 };

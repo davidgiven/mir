@@ -10,14 +10,14 @@
             "type": "string"
         },
         "types": {
-            "description": "Enum types and integral typedefs referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
+            "description": "Enum types and integral or non-function pointer typedefs referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. Function pointer typedefs are excluded. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
                 "properties": {
-                    "type": {"enum": ["enum", "integer"]},
+                    "type": {"enum": ["enum", "integer", "pointer"]},
                     "ctype": {
-                        "description": "Underlying integral C type, with typedef chains resolved.",
+                        "description": "Underlying integral C type for integer entries, or the pointed-to C type for pointer entries. Pointer aliases are resolved while pointee typedef names are preserved.",
                         "type": "string"
                     },
                     "fields": {
@@ -33,7 +33,7 @@
                         "not": {"required": ["ctype"]}
                     },
                     {
-                        "properties": {"type": {"const": "integer"}},
+                        "properties": {"type": {"enum": ["integer", "pointer"]}},
                         "required": ["type", "ctype"],
                         "not": {"required": ["fields"]}
                     }

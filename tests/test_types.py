@@ -33,6 +33,15 @@ typedef unsigned char Byte;
 typedef _Bool Flag;
 typedef double Real;
 typedef int *Pointer;
+typedef Pointer PointerAlias;
+typedef Count *CountPointer;
+typedef const Count *ConstCountPointer;
+typedef void *Opaque;
+typedef Pointer *DoublePointer;
+typedef void (*Callback)(Number);
+typedef Callback CallbackAlias;
+typedef int (*UnprototypedCallback)();
+typedef float *UnusedPointer;
 typedef int Array[2];
 typedef short UnusedInteger;
 typedef struct { Alias mode; Count count; } WidgetRec;
@@ -46,7 +55,8 @@ Resource resources[] = {
     {"fallback", "Mode", "Mode", sizeof(enum Mode), 0},
     {"count", "Count", "Count", sizeof(Count),
      __builtin_offsetof(WidgetRec, count)},
-    {"byte", "Byte", "Byte", sizeof(Byte), 0}
+    {"byte", "Byte", "Byte", sizeof(Byte), 0},
+    {"opaque", "Opaque", "Opaque", sizeof(Opaque), 0}
 };
 typedef struct CoreClass {
     struct CoreClass *superclass;
@@ -65,6 +75,12 @@ Anonymous TestAnonymous(Widget widget);
 enum External TestExternal(Widget widget);
 Count TestCount(Widget widget, const Count count, Flag flag, Real real,
                Pointer pointer, Array array, int bare);
+PointerAlias TestPointer(Widget widget, CountPointer count,
+                         ConstCountPointer const_count, DoublePointer nested,
+                         Callback callback, CallbackAlias callback_alias,
+                         UnprototypedCallback unprototyped,
+                         const PointerAlias alias,
+                         WidgetClass widget_class);
 enum Unused OtherFunction(void);
 '''
         with tempfile.TemporaryDirectory() as directory:
@@ -109,6 +125,16 @@ enum Unused OtherFunction(void);
                 ("Number", "int"), ("Count", "unsigned long"),
                 ("const Count", "unsigned long"), ("Byte", "unsigned char"),
                 ("Flag", "_Bool"),
+            )
+        })
+        expected_types.update({
+            name: {"type": "pointer", "ctype": ctype}
+            for name, ctype in (
+                ("Pointer", "int"), ("PointerAlias", "int"),
+                ("const PointerAlias", "int"), ("CountPointer", "Count"),
+                ("ConstCountPointer", "const Count"), ("Opaque", "void"),
+                ("DoublePointer", "Pointer"),
+                ("WidgetClass", "CoreClass"),
             )
         })
         self.assertEqual(artifact["types"], expected_types)

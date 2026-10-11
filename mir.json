@@ -1,6 +1,10 @@
 {
   "prefix": "Xm",
   "types": {
+    "ArgList": {
+      "ctype": "struct Arg",
+      "type": "pointer"
+    },
     "Atom": {
       "ctype": "unsigned long",
       "type": "integer"
@@ -37,9 +41,25 @@
       "ctype": "short",
       "type": "integer"
     },
+    "String": {
+      "ctype": "char",
+      "type": "pointer"
+    },
     "Time": {
       "ctype": "unsigned long",
       "type": "integer"
+    },
+    "Widget": {
+      "ctype": "struct _WidgetRec",
+      "type": "pointer"
+    },
+    "WidgetClass": {
+      "ctype": "struct _WidgetClassRec",
+      "type": "pointer"
+    },
+    "WidgetList": {
+      "ctype": "Widget",
+      "type": "pointer"
     },
     "Window": {
       "ctype": "unsigned long",
@@ -60,6 +80,18 @@
       "ctype": "unsigned char",
       "type": "integer"
     },
+    "XmDragIconObject": {
+      "ctype": "struct _XmDragIconRec",
+      "type": "pointer"
+    },
+    "XmDrawingAreaWidget": {
+      "ctype": "struct _XmDrawingAreaRec",
+      "type": "pointer"
+    },
+    "XmDropTransferEntry": {
+      "ctype": "struct _XmDropTransferEntryRec",
+      "type": "pointer"
+    },
     "XmFillOption": {
       "fields": {
         "XmFillAll": 3,
@@ -68,6 +100,10 @@
         "XmFillNone": 0
       },
       "type": "enum"
+    },
+    "XmFontList": {
+      "ctype": "struct __XmRenderTableRec *",
+      "type": "pointer"
     },
     "XmHighlightMode": {
       "fields": {
@@ -113,9 +149,25 @@
       },
       "type": "enum"
     },
+    "XmScrollBarWidget": {
+      "ctype": "struct _XmScrollBarRec",
+      "type": "pointer"
+    },
+    "XmString": {
+      "ctype": "union __XmStringRec",
+      "type": "pointer"
+    },
+    "XmStringCharSet": {
+      "ctype": "char",
+      "type": "pointer"
+    },
     "XmStringDirection": {
       "ctype": "unsigned char",
       "type": "integer"
+    },
+    "XmStringTable": {
+      "ctype": "XmString",
+      "type": "pointer"
     },
     "XmTabEdge": {
       "fields": {
@@ -123,6 +175,10 @@
         "XmTAB_EDGE_TOP_LEFT": 0
       },
       "type": "enum"
+    },
+    "XmTabList": {
+      "ctype": "struct __XmTabListRec",
+      "type": "pointer"
     },
     "XmTabMode": {
       "fields": {
@@ -161,6 +217,10 @@
       },
       "type": "enum"
     },
+    "XmTabbedStackList": {
+      "ctype": "struct _XmTabbedStackListRec",
+      "type": "pointer"
+    },
     "XmTextDirection": {
       "fields": {
         "XmTEXT_BACKWARD": 1,
@@ -171,6 +231,10 @@
     "XmTextPosition": {
       "ctype": "long",
       "type": "integer"
+    },
+    "XmTextSource": {
+      "ctype": "struct _XmTextSourceRec",
+      "type": "pointer"
     },
     "XmToggleButtonState": {
       "ctype": "unsigned char",
@@ -190,6 +254,14 @@
         "XmTreeLadder": 0
       },
       "type": "enum"
+    },
+    "XtAccelerators": {
+      "ctype": "struct _TranslationData",
+      "type": "pointer"
+    },
+    "XtCallbackList": {
+      "ctype": "struct _XtCallbackRec",
+      "type": "pointer"
     },
     "XtEnum": {
       "fields": {
@@ -957,6 +1029,18 @@
         "XmZERO_BASED": 0
       },
       "type": "enum"
+    },
+    "XtPointer": {
+      "ctype": "void",
+      "type": "pointer"
+    },
+    "XtTranslations": {
+      "ctype": "struct _TranslationData",
+      "type": "pointer"
+    },
+    "_XmString": {
+      "ctype": "union __XmStringRec",
+      "type": "pointer"
     },
     "size_t": {
       "ctype": "unsigned long",

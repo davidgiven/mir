@@ -165,7 +165,7 @@ def get_header_path(sourcefile, prefix):
 
 
 def get_api_types(widgets, translation_units, cindex):
-    """Describe enums and integral typedefs referenced by the API."""
+    """Describe enums and integral or pointer typedefs referenced by the API."""
     def type_key(spelling):
         # sizeof tokens have different spacing from libclang type spellings.
         return "".join(token for token in spelling.split()
@@ -183,6 +183,7 @@ def get_api_types(widgets, translation_units, cindex):
 
     enum_types = {}
     integer_types = {}
+    pointer_types = {}
     integral_kinds = {
         getattr(cindex.TypeKind, name) for name in (
             "BOOL", "CHAR_U", "CHAR_S", "UCHAR", "SCHAR", "WCHAR",
@@ -207,6 +208,24 @@ def get_api_types(widgets, translation_units, cindex):
             if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
                     and canonical.kind in integral_kinds):
                 integer_types[type_key(cursor.type.spelling)] = canonical.spelling
+            if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+                    and canonical.kind == cindex.TypeKind.POINTER
+                    and canonical.get_pointee().kind not in (
+                        cindex.TypeKind.FUNCTIONPROTO,
+                        cindex.TypeKind.FUNCTIONNOPROTO,
+                    )):
+                underlying = cursor.underlying_typedef_type
+                # Resolve aliases to the pointer, preserving typedefs in its
+                # pointee (e.g. XmStringTable points to XmString).
+                while underlying.kind != cindex.TypeKind.POINTER:
+                    alias = underlying.get_declaration()
+                    if alias.kind != cindex.CursorKind.TYPEDEF_DECL:
+                        underlying = canonical
+                        break
+                    underlying = alias.underlying_typedef_type
+                pointer_types[type_key(cursor.type.spelling)] = (
+                    underlying.get_pointee().spelling
+                )
             if canonical.kind == cindex.TypeKind.ENUM:
                 declaration = canonical.get_declaration()
                 declaration = declaration.get_definition() or declaration
@@ -233,6 +252,10 @@ def get_api_types(widgets, translation_units, cindex):
         if spelling not in types and type_key(spelling) in integer_types:
             types[spelling] = {
                 "type": "integer", "ctype": integer_types[type_key(spelling)],
+            }
+        elif spelling not in types and type_key(spelling) in pointer_types:
+            types[spelling] = {
+                "type": "pointer", "ctype": pointer_types[type_key(spelling)],
             }
     types["XtEnum"] = {
         "type": "enum",

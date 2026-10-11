@@ -114,8 +114,13 @@ anonymous enums across all loaded translation units, excluding enums with a
 tag or typedef name. Distinct constants may share the same integer value.
 Referenced typedefs resolving to integral C types also have entries with
 `type` set to `"integer"` and `ctype` containing the underlying C type spelling
-after resolving typedef chains. Bare integral types and typedefs to pointers,
-arrays, floating-point types, or records do not get integer entries.
+after resolving typedef chains. Bare integral types and typedefs to arrays,
+floating-point types, or records do not get integer entries.
+Referenced pointer typedefs have `type` set to `"pointer"` and `ctype` containing
+the pointed-to C type spelling. Aliases to the pointer are resolved, preserving
+typedef names and qualifiers in its pointee. Bare pointer types are excluded.
+Function pointer typedefs (including aliases and unprototyped functions) are
+excluded from `types`; they will be handled separately.
 Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can

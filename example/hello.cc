@@ -57,14 +57,14 @@ int main(int argc, char* argv[])
         .build()
         .manageChild();
 
-    auto layout = CXmRowColumnBuilder(mainWindow, "layout")
-                      .setOrientation(XmVERTICAL)
+    auto layout = CXmFormBuilder(mainWindow, "layout")
                       .build()
                       .manageChild();
 
-    CXmPushButton::create(layout, "button1")
+    CXmPushButtonBuilder(layout, "button1")
         .setLabelString(XmStringCreateLocalized((char*)"Button 1"))
         .setShowAsDefault(true)
+        .build()
         .addActivateCallback(
             [](XtPointer)
             {

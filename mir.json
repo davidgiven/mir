@@ -105,6 +105,16 @@
       "ctype": "struct __XmRenderTableRec *",
       "type": "pointer"
     },
+    "XmHierarchyNodeState": {
+      "fields": {
+        "XmAlwaysOpen": 0,
+        "XmClosed": 2,
+        "XmHidden": 3,
+        "XmNotInHierarchy": 4,
+        "XmOpen": 1
+      },
+      "type": "enum"
+    },
     "XmHighlightMode": {
       "fields": {
         "XmHIGHLIGHT_NORMAL": 0,
@@ -1387,6 +1397,7 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmBulletinBoardWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateBulletinBoard": {
           "name": "BulletinBoard"
@@ -1572,6 +1583,22 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmButtonBoxWidgetClass": {
+      "constraints": {
+        "pri.vate1": {
+          "class": "Pri.vate1",
+          "ctype": "Dimension",
+          "get": true,
+          "rtype": "Dimension",
+          "set": true
+        },
+        "pri.vate2": {
+          "class": "Pri.vate2",
+          "ctype": "Dimension",
+          "get": true,
+          "rtype": "Attachment",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateButtonBox": {
           "name": "ButtonBox"
@@ -1793,6 +1820,7 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmClipWindowWidgetClass": {
+      "constraints": {},
       "constructors": {},
       "header": "Xm/ClipWindow.h",
       "methods": {},
@@ -1888,6 +1916,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/ColorObj.c"
     },
     "xmColorSelectorWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateColorSelector": {
           "name": "ColorSelector"
@@ -1972,6 +2001,78 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmColumnWidgetClass": {
+      "constraints": {
+        "entryLabelAlignment": {
+          "class": "Alignment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "XmAlignment",
+          "set": true
+        },
+        "entryLabelFontList": {
+          "class": "FontList",
+          "ctype": "XmFontList",
+          "get": true,
+          "rtype": "FontList",
+          "set": true
+        },
+        "entryLabelPixmap": {
+          "class": "LabelPixmap",
+          "ctype": "Pixmap",
+          "get": true,
+          "rtype": "PrimForegroundPixmap",
+          "set": true
+        },
+        "entryLabelRenderTable": {
+          "class": "RenderTable",
+          "ctype": "XmFontList",
+          "get": true,
+          "rtype": "RenderTable",
+          "set": true
+        },
+        "entryLabelString": {
+          "class": "LabelString",
+          "ctype": "XmString",
+          "get": true,
+          "rtype": "XmString",
+          "set": true
+        },
+        "entryLabelType": {
+          "class": "LabelType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "LabelType",
+          "set": true
+        },
+        "fillStyle": {
+          "class": "FillStyle",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "FillStyle",
+          "set": true
+        },
+        "pri.vate": {
+          "class": "Pri.vate",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        },
+        "showEntryLabel": {
+          "class": "ShowLabel",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        },
+        "stretchable": {
+          "class": "Stretchable",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateColumn": {
           "name": "Column"
@@ -2049,6 +2150,7 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmComboBoxWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateComboBox": {
           "name": "ComboBox"
@@ -2277,6 +2379,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmCommandWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateCommand": {
           "name": "Command"
@@ -2419,6 +2522,29 @@
       "superclass": "xmSelectionBoxWidgetClass"
     },
     "xmContainerWidgetClass": {
+      "constraints": {
+        "entryParent": {
+          "class": "Widget",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        },
+        "outlineState": {
+          "class": "OutlineState",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "OutlineState",
+          "set": true
+        },
+        "positionIndex": {
+          "class": "PositionIndex",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateContainer": {
           "name": "Container"
@@ -3468,6 +3594,7 @@
       "superclass": "vendorShellWidgetClass"
     },
     "xmDrawingAreaWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateDrawingArea": {
           "name": "DrawingArea"
@@ -3636,6 +3763,7 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmDropDownWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateDropDown": {
           "name": "DropDown"
@@ -3957,6 +4085,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/ExtObject.c"
     },
     "xmFileSelectionBoxWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateFileSelectionBox": {
           "name": "FileSelectionBox"
@@ -4153,6 +4282,127 @@
       "superclass": "xmSelectionBoxWidgetClass"
     },
     "xmFormWidgetClass": {
+      "constraints": {
+        "bottomAttachment": {
+          "class": "Attachment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "Attachment",
+          "set": true
+        },
+        "bottomOffset": {
+          "class": "Offset",
+          "ctype": "int",
+          "get": true,
+          "rtype": "VerticalInt",
+          "set": true
+        },
+        "bottomPosition": {
+          "class": "Position",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "bottomWidget": {
+          "class": "Widget",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        },
+        "leftAttachment": {
+          "class": "Attachment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "Attachment",
+          "set": true
+        },
+        "leftOffset": {
+          "class": "Offset",
+          "ctype": "int",
+          "get": true,
+          "rtype": "HorizontalInt",
+          "set": true
+        },
+        "leftPosition": {
+          "class": "Position",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "leftWidget": {
+          "class": "Widget",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        },
+        "resizable": {
+          "class": "Boolean",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        },
+        "rightAttachment": {
+          "class": "Attachment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "Attachment",
+          "set": true
+        },
+        "rightOffset": {
+          "class": "Offset",
+          "ctype": "int",
+          "get": true,
+          "rtype": "HorizontalInt",
+          "set": true
+        },
+        "rightPosition": {
+          "class": "Position",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "rightWidget": {
+          "class": "Widget",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        },
+        "topAttachment": {
+          "class": "Attachment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "Attachment",
+          "set": true
+        },
+        "topOffset": {
+          "class": "Offset",
+          "ctype": "int",
+          "get": true,
+          "rtype": "VerticalInt",
+          "set": true
+        },
+        "topPosition": {
+          "class": "Position",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "topWidget": {
+          "class": "Widget",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateForm": {
           "name": "Form"
@@ -4212,6 +4462,50 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmFrameWidgetClass": {
+      "constraints": {
+        "childHorizontalAlignment": {
+          "class": "ChildHorizontalAlignment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "ChildHorizontalAlignment",
+          "set": true
+        },
+        "childHorizontalSpacing": {
+          "class": "ChildHorizontalSpacing",
+          "ctype": "Dimension",
+          "get": true,
+          "rtype": "HorizontalDimension",
+          "set": true
+        },
+        "childType": {
+          "class": "ChildType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "ChildType",
+          "set": true
+        },
+        "childVerticalAlignment": {
+          "class": "ChildVerticalAlignment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "ChildVerticalAlignment",
+          "set": true
+        },
+        "frameChildType": {
+          "class": "FrameChildType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "ChildType",
+          "set": true
+        },
+        "pri.vate": {
+          "class": "Pri.vate",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateFrame": {
           "name": "Frame"
@@ -4466,6 +4760,43 @@
       "superclass": "vendorShellWidgetClass"
     },
     "xmHierarchyWidgetClass": {
+      "constraints": {
+        "insertBefore": {
+          "class": "InsertBefore",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        },
+        "nodeCloseFolderPixmap": {
+          "class": "Pixmap",
+          "ctype": "Pixmap",
+          "get": true,
+          "rtype": "PrimForegroundPixmap",
+          "set": true
+        },
+        "nodeOpenFolderPixmap": {
+          "class": "Pixmap",
+          "ctype": "Pixmap",
+          "get": true,
+          "rtype": "PrimForegroundPixmap",
+          "set": true
+        },
+        "nodeState": {
+          "class": "NodeState",
+          "ctype": "XmHierarchyNodeState",
+          "get": true,
+          "rtype": "XmHierarchyNodeState",
+          "set": true
+        },
+        "parentNode": {
+          "class": "ParentNode",
+          "ctype": "Widget",
+          "get": true,
+          "rtype": "Widget",
+          "set": true
+        }
+      },
       "constructors": {},
       "header": "Xm/Hierarchy.h",
       "methods": {
@@ -4794,6 +5125,22 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmIconBoxWidgetClass": {
+      "constraints": {
+        "cellX": {
+          "class": "CellX",
+          "ctype": "short",
+          "get": true,
+          "rtype": "Short",
+          "set": true
+        },
+        "cellY": {
+          "class": "CellY",
+          "ctype": "short",
+          "get": true,
+          "rtype": "Short",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateIconBox": {
           "name": "IconBox"
@@ -6165,6 +6512,7 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmMainWindowWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateMainWindow": {
           "name": "MainWindow"
@@ -6270,6 +6618,7 @@
       "superclass": "xmScrolledWindowWidgetClass"
     },
     "xmManagerWidgetClass": {
+      "constraints": {},
       "constructors": {},
       "header": "Xm/Manager.h",
       "methods": {},
@@ -6516,6 +6865,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/MenuShell.c"
     },
     "xmMessageBoxWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateErrorDialog": {
           "name": "ErrorDialog"
@@ -6639,6 +6989,7 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmMultiListWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateMultiList": {
           "name": "MultiList"
@@ -6861,6 +7212,29 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmNotebookWidgetClass": {
+      "constraints": {
+        "notebookChildType": {
+          "class": "NotebookChildType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "NotebookChildType",
+          "set": true
+        },
+        "pageNumber": {
+          "class": "PageNumber",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "resizable": {
+          "class": "Resizable",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateNotebook": {
           "name": "Notebook"
@@ -7023,6 +7397,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmOutlineWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateOutline": {
           "name": "Outline"
@@ -7427,6 +7802,15 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmRowColumnWidgetClass": {
+      "constraints": {
+        "positionIndex": {
+          "class": "PositionIndex",
+          "ctype": "short",
+          "get": true,
+          "rtype": "Short",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateMenuBar": {
           "name": "MenuBar"
@@ -7746,6 +8130,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmScaleWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateScale": {
           "name": "Scale"
@@ -8571,6 +8956,15 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmScrolledWindowWidgetClass": {
+      "constraints": {
+        "scrolledWindowChildType": {
+          "class": "ScrolledWindowChildType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "ScrolledWindowChildType",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateScrolledWindow": {
           "name": "ScrolledWindow"
@@ -8702,6 +9096,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmSelectionBoxWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreatePromptDialog": {
           "name": "PromptDialog"
@@ -8981,6 +9376,7 @@
       "superclass": "xmDesktopClass"
     },
     "xmSimpleSpinBoxWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateSimpleSpinBox": {
           "name": "SimpleSpinBox"
@@ -9200,6 +9596,85 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/SlideC.c"
     },
     "xmSpinBoxWidgetClass": {
+      "constraints": {
+        "arrowSensitivity": {
+          "class": "ArrowSensitivity",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "ArrowSensitivity",
+          "set": true
+        },
+        "decimalPoints": {
+          "class": "DecimalPoints",
+          "ctype": "short",
+          "get": true,
+          "rtype": "Short",
+          "set": true
+        },
+        "incrementValue": {
+          "class": "IncrementValue",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "maximumValue": {
+          "class": "MaximumValue",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "minimumValue": {
+          "class": "MinimumValue",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "numValues": {
+          "class": "NumValues",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "position": {
+          "class": "Position",
+          "ctype": "int",
+          "get": true,
+          "rtype": "PositionValue",
+          "set": true
+        },
+        "positionType": {
+          "class": "PositionType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "PositionType",
+          "set": true
+        },
+        "spinBoxChildType": {
+          "class": "SpinBoxChildType",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "SpinBoxChildType",
+          "set": true
+        },
+        "values": {
+          "class": "Values",
+          "ctype": "XmStringTable",
+          "get": true,
+          "rtype": "XmStringTable",
+          "set": true
+        },
+        "wrap": {
+          "class": "Wrap",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateSpinBox": {
           "name": "SpinBox"
@@ -9309,6 +9784,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmTabBoxWidgetClass": {
+      "constraints": {},
       "constructors": {
         "XmCreateTabBox": {
           "name": "TabBox"
@@ -9579,6 +10055,71 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmTabStackWidgetClass": {
+      "constraints": {
+        "freeTabPixmap": {
+          "class": "FreeTabPixmap",
+          "ctype": "Boolean",
+          "get": true,
+          "rtype": "Boolean",
+          "set": true
+        },
+        "tabAlignment": {
+          "class": "Alignment",
+          "ctype": "unsigned char",
+          "get": true,
+          "rtype": "Alignment",
+          "set": true
+        },
+        "tabBackground": {
+          "class": "Background",
+          "ctype": "Pixel",
+          "get": true,
+          "rtype": "XmPixel",
+          "set": true
+        },
+        "tabBackgroundPixmap": {
+          "class": "BackgroundPixmap",
+          "ctype": "Pixmap",
+          "get": true,
+          "rtype": "XmPixmap",
+          "set": true
+        },
+        "tabForeground": {
+          "class": "Foreground",
+          "ctype": "Pixel",
+          "get": true,
+          "rtype": "XmPixel",
+          "set": true
+        },
+        "tabLabelPixmap": {
+          "class": "TabLabelPixmap",
+          "ctype": "Pixmap",
+          "get": true,
+          "rtype": "ManForegroundPixmap",
+          "set": true
+        },
+        "tabLabelString": {
+          "class": "TabLabelString",
+          "ctype": "XmString",
+          "get": true,
+          "rtype": "XmString",
+          "set": true
+        },
+        "tabPixmapPlacement": {
+          "class": "TabPixmapPlacement",
+          "ctype": "XmPixmapPlacement",
+          "get": true,
+          "rtype": "XmPixmapPlacement",
+          "set": true
+        },
+        "tabStringDirection": {
+          "class": "StringDirection",
+          "ctype": "XmStringDirection",
+          "get": true,
+          "rtype": "StringDirection",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateTabStack": {
           "name": "TabStack"
@@ -11293,6 +11834,43 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmTreeWidgetClass": {
+      "constraints": {
+        "lineBackgroundColor": {
+          "class": "Background",
+          "ctype": "Pixel",
+          "get": true,
+          "rtype": "Pixel",
+          "set": true
+        },
+        "lineColor": {
+          "class": "Foreground",
+          "ctype": "Pixel",
+          "get": true,
+          "rtype": "Pixel",
+          "set": true
+        },
+        "lineStyle": {
+          "class": "LineStyle",
+          "ctype": "int",
+          "get": true,
+          "rtype": "XmLineStyle",
+          "set": true
+        },
+        "lineWidth": {
+          "class": "LineWidth",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        },
+        "openClosePadding": {
+          "class": "OpenClosePadding",
+          "ctype": "int",
+          "get": true,
+          "rtype": "Int",
+          "set": true
+        }
+      },
       "constructors": {
         "XmCreateTree": {
           "name": "Tree"

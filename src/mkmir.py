@@ -183,6 +183,16 @@ def main(argv=None):
             widget["resources"] = dict(
                 get_resources(widget_class, cindex, definitions)
             )
+            constraint_fields = get_class_part_fields(
+                widget_class, ("constraint_part", "constraint_class", "constraint"),
+                cindex, definitions,
+            )
+            if constraint_fields is not None:
+                widget["constraints"] = dict(get_resource_entries(
+                    widget_class,
+                    constraint_fields.get("constraints", constraint_fields.get("resources")),
+                    cindex, definitions,
+                ))
             widget["methods"] = {
                 name: {
                     "name": name[len(class_name) :],
@@ -257,9 +267,10 @@ def get_api_types(widgets, translation_units, cindex):
     for widget in widgets.values():
         if widget.get("constructors"):
             referenced.update(("Widget", "char *", "ArgList", "Cardinal"))
-        for resource in widget["resources"].values():
-            if "ctype" in resource:
-                referenced.add(resource["ctype"])
+        for resources in (widget["resources"], widget.get("constraints", {})):
+            for resource in resources.values():
+                if "ctype" in resource:
+                    referenced.add(resource["ctype"])
         for method in widget["methods"].values():
             referenced.add(method["return_type"])
             referenced.update(
@@ -553,6 +564,26 @@ def get_class_record(widget_class, cindex, definitions=None):
     return None
 
 
+def get_class_part_fields(widget_class, part_names, cindex, definitions=None):
+    """Resolve a named class-record part to its field initializers."""
+    record = get_class_record(widget_class, cindex, definitions)
+    if record is None:
+        return None
+    initializer = get_initializer(record)
+    if initializer is None or initializer.kind != cindex.CursorKind.INIT_LIST_EXPR:
+        return None
+    for field, value in zip(initializer.type.get_canonical().get_fields(),
+                            initializer.get_children()):
+        if field.spelling not in part_names:
+            continue
+        if value.kind != cindex.CursorKind.INIT_LIST_EXPR:
+            return None
+        return {member.spelling: expression
+                for member, expression in zip(value.type.get_canonical().get_fields(),
+                                               value.get_children())}
+    return None
+
+
 def get_core_fields(widget_class, cindex, definitions=None):
     """Resolve the class record's leading core part to field initializers."""
     kind = cindex.CursorKind
@@ -624,9 +655,15 @@ def get_superclass(
 
 def get_resources(widget_class, cindex, definitions=None):
     """Read names, declared resource types, and C types from core.resources."""
-    definitions = definitions or {}
     fields = get_core_fields(widget_class, cindex, definitions) or {}
-    resources = fields.get("resources")
+    yield from get_resource_entries(
+        widget_class, fields.get("resources"), cindex, definitions,
+    )
+
+
+def get_resource_entries(widget_class, resources, cindex, definitions=None):
+    """Read an XtResource array referenced by a class-record initializer."""
+    definitions = definitions or {}
     if resources is None:
         return
     for reference in resources.walk_preorder():

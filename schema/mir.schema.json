@@ -10,7 +10,7 @@
             "type": "string"
         },
         "types": {
-            "description": "Enum types and integral or non-function pointer typedefs referenced by resource ctypes or method and constructor parameter and return types, keyed by their C type spelling. Function pointer typedefs are excluded. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
+            "description": "Enum types and integral or non-function pointer typedefs referenced by resource or constraint ctypes or method and constructor parameter and return types, keyed by their C type spelling. Function pointer typedefs are excluded. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
@@ -116,6 +116,10 @@
                             "additionalProperties": false
                         }
                     },
+                    "constraints": {
+                        "description": "Constraint resources owned by a widget whose class record contains a constraint part; uses the same metadata as resources.",
+                        "$ref": "#/properties/widgets/additionalProperties/properties/resources"
+                    },
                     "resources": {
                         "description": "Dictionary of resources declared in core.resources, keyed by resource name. Entries may be empty placeholders during extraction.",
                         "type": "object",
@@ -155,7 +159,7 @@
                     },
                     {
                         "required": ["resources"],
-                        "propertyNames": {"enum": ["name", "sourcefile", "header", "superclass", "resources", "methods", "constructors"]}
+                        "propertyNames": {"enum": ["name", "sourcefile", "header", "superclass", "resources", "constraints", "methods", "constructors"]}
                     },
                     {
                         "required": [

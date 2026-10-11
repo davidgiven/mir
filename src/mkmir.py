@@ -183,6 +183,8 @@ def get_api_types(widgets, translation_units, cindex):
 
     enum_types = {}
     enum_fields = {}
+    anonymous_enums = set()
+    named_enums = set()
     for unit in translation_units:
         pending = list(unit.cursor.get_children())
         while pending:
@@ -198,6 +200,11 @@ def get_api_types(widgets, translation_units, cindex):
                 declaration = declaration.get_definition() or declaration
                 usr = declaration.get_usr()
                 enum_types[type_key(cursor.type.spelling)] = usr
+                if (cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+                        or not declaration.is_anonymous()):
+                    named_enums.add(usr)
+                else:
+                    anonymous_enums.add(usr)
                 if declaration.is_definition():
                     enum_fields[usr] = {
                         field.spelling: field.enum_value
@@ -205,11 +212,21 @@ def get_api_types(widgets, translation_units, cindex):
                         if field.kind == cindex.CursorKind.ENUM_CONSTANT_DECL
                     }
 
-    return {spelling: {
+    types = {spelling: {
                 "type": "enum",
                 "fields": enum_fields.get(enum_types[type_key(spelling)], {}),
             } for spelling in sorted(referenced)
             if type_key(spelling) in enum_types}
+    types["XtEnum"] = {
+        "type": "enum",
+        "fields": {
+            name: value
+            for usr in sorted(anonymous_enums - named_enums)
+            for name, value in enum_fields.get(usr, {}).items()
+            if name.startswith(("Xm", "Xt"))
+        },
+    }
+    return types
 
 
 def find_widget_classes(unit, source, cindex):

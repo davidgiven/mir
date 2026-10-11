@@ -102,6 +102,9 @@ parameter's `type`, or a method's `return_type`. Typedef aliases to enums are
 resolved across all loaded translation units; unreferenced enums and non-enum
 types are excluded. Each entry has `type` set to `"enum"` and a `fields`
 dictionary mapping enum constant names to their evaluated integer values.
+The synthetic `XtEnum` entry collects `Xm`- and `Xt`-prefixed constants from
+anonymous enums across all loaded translation units, excluding enums with a
+tag or typedef name. Distinct constants may share the same integer value.
 Only symbols with a resolved core `class_name` are included;
 unresolved classes are silently skipped. Header-only declarations and variables
 with internal or no linkage are excluded. Missing generated Motif headers can

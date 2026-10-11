@@ -19,6 +19,11 @@ enum Mode { MODE_A = -3, MODE_B, MODE_C = 1 << 5, MODE_D = MODE_C, MODE_E };
 typedef enum Mode Mode;
 typedef Mode Alias;
 typedef enum { ANON_A = 7, ANON_B } Anonymous;
+enum { XmFirst = -1, XtSecond, OtherConstant = 5, XmSameValue = 7 };
+enum Named { XmNamed = 7 };
+typedef enum { XtTypedef = 8 } NamedTypedef;
+enum { XmLaterNamed = 9 } enum_variable;
+typedef __typeof__(enum_variable) LaterNamed;
 enum External;
 enum Unused { UNUSED };
 typedef int Number;
@@ -52,7 +57,10 @@ enum Unused OtherFunction(void);
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
             (path / "test.c").write_text(source)
-            (path / "external.c").write_text("enum External { EXTERNAL_A = 42 };\n")
+            (path / "external.c").write_text(
+                "enum External { EXTERNAL_A = 42 };\n"
+                "enum { XtExternal = 42 };\n"
+            )
             subprocess.run(
                 [sys.executable, str(ROOT / "src/mkmir.py"), str(path),
                  "-o", str(path / "mir.json")],
@@ -74,6 +82,13 @@ enum Unused OtherFunction(void);
         }
         expected_types["enum External"] = {
             "type": "enum", "fields": {"EXTERNAL_A": 42},
+        }
+        expected_types["XtEnum"] = {
+            "type": "enum",
+            "fields": {
+                "XmFirst": -1, "XtSecond": 0, "XmSameValue": 7,
+                "XtExternal": 42,
+            },
         }
         self.assertEqual(artifact["types"], expected_types)
         self.assertEqual(

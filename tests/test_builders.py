@@ -20,6 +20,32 @@ class BuilderArgumentsTest(unittest.TestCase):
 #include <cstring>
 #include "cmotif.h"
 
+template <typename T>
+concept Buildable = requires(T& builder) { builder.build(); };
+static_assert(!Buildable<CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
+    CXmRowColumn>>);
+static_assert(Buildable<CXmRowColumnBuilder<>>);
+static_assert(Buildable<CXmPulldownMenuBuilder<>>);
+
+static Cardinal observed_count;
+static XtArgVal observed_width;
+static XtArgVal observed_data;
+static Widget created = reinterpret_cast<Widget>(0x1234);
+
+extern "C" Widget XmCreatePulldownMenu(Widget parent, char *name,
+                                     ArgList args, Cardinal count) {
+    assert(parent == nullptr);
+    assert(std::strcmp(name, "pulldown") == 0);
+    observed_count = count;
+    if (count == 2) {
+        assert(std::strcmp(args[0].name, "width") == 0);
+        assert(std::strcmp(args[1].name, "userData") == 0);
+        observed_width = args[0].value;
+        observed_data = args[1].value;
+    }
+    return created;
+}
+
 int main() {
     CXmRowColumnBuilder empty(nullptr, "menu");
     assert(empty.buildArgList().empty());
@@ -36,6 +62,13 @@ int main() {
     assert(args[1].value == reinterpret_cast<XtArgVal>(&data));
     assert(std::strcmp(args[2].name, "x") == 0);
     assert(args[2].value == static_cast<XtArgVal>(-3));
+    assert(static_cast<Widget>(pulldown.build()) == created);
+    assert(observed_count == 0);
+    auto menu = pulldown.setWidth(120).setUserData(&data).build();
+    assert(static_cast<Widget>(menu) == created);
+    assert(observed_count == 2);
+    assert(observed_width == 120);
+    assert(observed_data == reinterpret_cast<XtArgVal>(&data));
 }
 '''
         with tempfile.TemporaryDirectory() as directory:

@@ -103,6 +103,16 @@ are preferred over prototypes for parameter names. Unnamed parameters use
 `name`; methods with no remaining parameters have an empty dictionary.
 Each method's `return_type` contains its signature's C return type, preserving
 typedef names.
+Each widget's `constructors` dictionary contains externally visible `XmCreate*`
+functions declared directly in the public header identified by `header`.
+Entries are keyed by full function symbol and contain only `name`, stripped
+of `XmCreate`. Only non-variadic functions returning `Widget` and taking
+exactly `(Widget, char *, ArgList, Cardinal)` are included, resolving typedef
+aliases when checking the signature. Neither `parameters` nor `return_type`
+is emitted.
+Included headers and source-only functions do
+not contribute constructors to that widget. Missing headers yield an empty
+dictionary. Constructor signature types also contribute to `types`.
 The top-level `types` dictionary contains an enum description keyed by the C
 type spelling for each enum referenced by a resource's `ctype`, a method
 parameter's `type`, or a method's `return_type`. Typedef aliases to enums are

@@ -15,6 +15,7 @@ class ApiTypesTest(unittest.TestCase):
     def test_referenced_types(self):
         source = r'''
 typedef struct WidgetRec *Widget;
+#include "test.h"
 enum Mode { MODE_A = -3, MODE_B, MODE_C = 1 << 5, MODE_D = MODE_C, MODE_E };
 typedef enum Mode Mode;
 typedef Mode Alias;
@@ -84,24 +85,55 @@ PointerAlias TestPointer(Widget widget, CountPointer count,
                          const PointerAlias alias,
                          WidgetClass widget_class);
 enum Unused OtherFunction(void);
+Widget XmCreateSourceOnly(Widget parent);
 '''
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
-            (path / "test.c").write_text(source)
+            toolkit = path / "Xm"
+            toolkit.mkdir()
+            (toolkit / "test.c").write_text(source)
+            (toolkit / "test.h").write_text(
+                'typedef struct WidgetRec *Widget;\n'
+                'typedef struct Arg { char *name; unsigned long value; } Arg;\n'
+                'typedef Arg *ArgList;\n'
+                'typedef unsigned long Cardinal;\n'
+                'typedef Widget Parent; typedef ArgList Arguments;\n'
+                '#include "other.h"\n'
+                'Widget XmCreateTest(Widget parent, char *name, ArgList args, Cardinal count);\n'
+                'Widget XmCreateAlternate(Parent, char *, Arguments, Cardinal);\n'
+                'int XmCreateSpecial(int count);\n'
+                'Widget XmCreateTooFew(Widget, char *, ArgList);\n'
+                'Widget XmCreateWrongName(Widget, const char *, ArgList, Cardinal);\n'
+                'Widget XmCreateWrongCount(Widget, char *, ArgList, int);\n'
+                'Widget XmCreateWrongArgs(Widget, char *, void *, Cardinal);\n'
+                'Widget XmCreateVariadic(Widget, char *, ArgList, Cardinal, ...);\n'
+                'int XmCreateWrongReturn(Widget, char *, ArgList, Cardinal);\n'
+                'Widget XmBuildExcluded(Widget parent);\n'
+            )
+            (toolkit / "other.h").write_text(
+                'Widget XmCreateOther(Widget, char *, ArgList, Cardinal);\n')
             (path / "external.c").write_text(
                 "enum External { EXTERNAL_A = 42 };\n"
                 "enum { XtExternal = 42 };\n"
             )
-            subprocess.run(
-                [sys.executable, "-c",
+            command = [sys.executable, "-c",
                  "import sys; sys.path.insert(0, sys.argv.pop(1)); "
                  "import mkmir; mkmir.WIDGET_CLASS_BLACKLIST = {'xmColorObj'}; "
                  "raise SystemExit(mkmir.main())",
                  str(ROOT / "src"), str(path),
-                 "-o", str(path / "mir.json")],
+                 "-o", str(path / "mir.json")]
+            subprocess.run(
+                command,
                 check=True, capture_output=True, text=True,
             )
             artifact = json.loads((path / "mir.json").read_text())
+            (toolkit / "test.c").write_text(source.replace('#include "test.h"\n', ''))
+            subprocess.run(command, check=True, capture_output=True, text=True)
+            standalone = json.loads((path / "mir.json").read_text())
+            self.assertEqual(
+                artifact["widgets"]["testWidgetClass"]["constructors"],
+                standalone["widgets"]["testWidgetClass"]["constructors"],
+            )
         expected_enum = {
             "type": "enum",
             "fields": {
@@ -131,6 +163,7 @@ enum Unused OtherFunction(void);
                 ("Number", "int"), ("Count", "unsigned long"),
                 ("const Count", "unsigned long"), ("Byte", "unsigned char"),
                 ("Flag", "_Bool"),
+                ("Cardinal", "unsigned long"),
             )
         })
         expected_types.update({
@@ -141,11 +174,22 @@ enum Unused OtherFunction(void);
                 ("ConstCountPointer", "const Count"), ("Opaque", "void"),
                 ("DoublePointer", "Pointer"),
                 ("WidgetClass", "CoreClass"),
+                ("Widget", "struct WidgetRec"),
+                ("ArgList", "Arg"),
             )
         })
         self.assertEqual(artifact["types"], expected_types)
         self.assertNotIn("xmColorObjClass", artifact["widgets"])
         self.assertIn("xmColorObjExtraClass", artifact["widgets"])
+        constructors = artifact["widgets"]["testWidgetClass"]["constructors"]
+        self.assertEqual(set(constructors), {
+            "XmCreateTest", "XmCreateAlternate",
+        })
+        self.assertEqual(constructors["XmCreateTest"], {
+            "name": "Test",
+        })
+        self.assertTrue(all(set(constructor) == {"name"}
+                            for constructor in constructors.values()))
         self.assertEqual(
             artifact["widgets"]["testWidgetClass"]["resources"]["mode"]["ctype"],
             "Alias",

@@ -10,7 +10,7 @@
             "type": "string"
         },
         "types": {
-            "description": "Enum types and integral or non-function pointer typedefs referenced by resource ctypes or method parameter and return types, keyed by their C type spelling. Function pointer typedefs are excluded. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
+            "description": "Enum types and integral or non-function pointer typedefs referenced by resource ctypes or method and constructor parameter and return types, keyed by their C type spelling. Function pointer typedefs are excluded. The synthetic XtEnum entry collects Xm/Xt-prefixed constants from anonymous enums without a tag or typedef name.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
@@ -99,6 +99,23 @@
                             "additionalProperties": false
                         }
                     },
+                    "constructors": {
+                        "description": "Public XmCreate-prefixed functions declared directly in the widget public header, returning Widget and taking exactly (Widget, char *, ArgList, Cardinal), with typedef aliases resolved.",
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "description": "Function symbol with the XmCreate prefix stripped.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
                     "resources": {
                         "description": "Dictionary of resources declared in core.resources, keyed by resource name. Entries may be empty placeholders during extraction.",
                         "type": "object",
@@ -138,7 +155,7 @@
                     },
                     {
                         "required": ["resources"],
-                        "propertyNames": {"enum": ["name", "sourcefile", "header", "superclass", "resources", "methods"]}
+                        "propertyNames": {"enum": ["name", "sourcefile", "header", "superclass", "resources", "methods", "constructors"]}
                     },
                     {
                         "required": [

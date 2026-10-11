@@ -155,6 +155,7 @@ def main(argv=None):
             record_to_widget.setdefault(record.get_usr(), widget_class.spelling)
 
     methods = find_widget_methods(translation_units, cindex)
+    constructors = find_widget_constructors(translation_units, args.prefix, cindex)
     widgets = {}
     for widget_class in widget_classes.values():
         class_name = get_class_name(widget_class, cindex, definitions)
@@ -191,6 +192,31 @@ def main(argv=None):
                 for name, method in methods.items()
                 if name.startswith(class_name)
             }
+    # Some source files include only private headers; read their public header
+    # independently when it has not contributed any constructor declarations.
+    parsed_headers = set()
+    for widget in widgets.values():
+        header = widget.get("header")
+        if header is None or header in constructors or header in parsed_headers:
+            continue
+        parsed_headers.add(header)
+        path = Path(widget["sourcefile"]).with_suffix(".h")
+        if not path.is_file():
+            continue
+        try:
+            unit = index.parse(str(path), args=["-x", "c", *clang_args])
+        except cindex.TranslationUnitLoadError as exc:
+            parser.error(f"could not load public header: {exc}")
+        translation_units.append(unit)
+        header_functions = find_widget_constructors([unit], args.prefix, cindex)
+        for key, functions in header_functions.items():
+            constructors.setdefault(key, {}).update(functions)
+
+    for widget in widgets.values():
+        widget["constructors"] = {
+            name: {"name": name.removeprefix("XmCreate")}
+            for name in constructors.get(widget.get("header"), {})
+        }
 
     artifact = {
         "prefix": args.prefix,
@@ -229,6 +255,8 @@ def get_api_types(widgets, translation_units, cindex):
 
     referenced = set()
     for widget in widgets.values():
+        if widget.get("constructors"):
+            referenced.update(("Widget", "char *", "ArgList", "Cardinal"))
         for resource in widget["resources"].values():
             if "ctype" in resource:
                 referenced.add(resource["ctype"])
@@ -433,6 +461,48 @@ def find_widget_methods(translation_units, cindex):
                     declaration.underlying_typedef_type.get_declaration()
                 )
     return dict(sorted(methods.items()))
+
+
+def find_widget_constructors(translation_units, prefix, cindex):
+    """Index public XmCreate declarations with the standard Xt signature."""
+    constructors = {}
+    for unit in translation_units:
+        signature_types = {
+            cursor.spelling: cursor.type.get_canonical()
+            for cursor in unit.cursor.get_children()
+            if cursor.kind == cindex.CursorKind.TYPEDEF_DECL
+            and cursor.spelling in ("Widget", "ArgList", "Cardinal")
+        }
+        if len(signature_types) != 3:
+            continue
+        for cursor in unit.cursor.get_children():
+            if (cursor.kind != cindex.CursorKind.FUNCTION_DECL
+                    or cursor.linkage != cindex.LinkageKind.EXTERNAL
+                    or not cursor.spelling.startswith("XmCreate")
+                    or cursor.location.file is None):
+                continue
+            arguments = list(cursor.get_arguments())
+            if (len(arguments) != 4 or cursor.type.is_function_variadic()
+                    or cursor.result_type.get_canonical() != signature_types["Widget"]
+                    or arguments[0].type.get_canonical() != signature_types["Widget"]
+                    or arguments[1].type.get_canonical().spelling != "char *"
+                    or arguments[2].type.get_canonical() != signature_types["ArgList"]
+                    or arguments[3].type.get_canonical() != signature_types["Cardinal"]):
+                continue
+            path = Path(cursor.location.file.name)
+            if path.suffix != ".h":
+                continue
+            header = get_header_path(path, prefix)
+            if header is None:
+                continue
+            functions = constructors.setdefault(header, {})
+            previous = functions.get(cursor.spelling)
+            if (previous is None
+                    or sum(bool(arg.spelling) for arg in cursor.get_arguments())
+                    > sum(bool(arg.spelling) for arg in previous.get_arguments())):
+                functions[cursor.spelling] = cursor
+    return {header: dict(sorted(functions.items()))
+            for header, functions in constructors.items()}
 
 
 def get_method_parameters(method):

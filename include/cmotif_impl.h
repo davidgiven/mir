@@ -274,19 +274,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CVendorShellBuilderImpl :
-    public CWidgetBuilderBase<CVendorShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CVendorShellBuilderImpl() = default;
-    using CWidgetBuilderBase<CVendorShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBaseHeight(int value) const
     {
         return this->set("baseHeight", value);
@@ -380,9 +377,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CVendorShellBuilder =
-    CVendorShellBuilderImpl<CVendorShell, &vendorShellWidgetClass>;
 
 template <typename Derived>
 class CXmGadgetImpl : public CWidgetImpl<Derived>
@@ -561,19 +555,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBorderWidth(Dimension value) const
     {
         return this->set("borderWidth", value);
@@ -627,8 +618,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmGadgetBuilder = CXmGadgetBuilderImpl<CXmGadget, &xmGadgetClass>;
 
 template <typename Derived>
 class CXmPrimitiveImpl : public CWidgetImpl<Derived>
@@ -938,19 +927,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmPrimitiveBuilderImpl :
-    public CWidgetBuilderBase<CXmPrimitiveBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmPrimitiveBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmPrimitiveBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -1040,9 +1026,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmPrimitiveBuilder =
-    CXmPrimitiveBuilderImpl<CXmPrimitive, &xmPrimitiveWidgetClass>;
 
 template <typename Derived>
 class CXmManagerImpl : public CWidgetImpl<Derived>
@@ -1336,19 +1319,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmManagerBuilderImpl :
-    public CWidgetBuilderBase<CXmManagerBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmManagerBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmManagerBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -1438,9 +1418,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmManagerBuilder =
-    CXmManagerBuilderImpl<CXmManager, &xmManagerWidgetClass>;
 
 template <typename Derived>
 class CXmColorObjImpl : public CWidgetImpl<Derived>
@@ -1581,19 +1558,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmColorObjBuilderImpl :
-    public CWidgetBuilderBase<CXmColorObjBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmColorObjBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmColorObjBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setActiveColorSetId(int value) const
     {
         return this->set("activeColorSetId", value);
@@ -1640,9 +1614,6 @@ public:
     }
 };
 
-using CXmColorObjBuilder =
-    CXmColorObjBuilderImpl<CXmColorObj, &xmColorObjClass>;
-
 template <typename Derived>
 class CdynamicImpl : public CWidgetImpl<Derived>
 {
@@ -1683,19 +1654,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CdynamicBuilderImpl :
-    public CWidgetBuilderBase<CdynamicBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CdynamicBuilderImpl() = default;
-    using CWidgetBuilderBase<CdynamicBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setExtensionType(unsigned char value) const
     {
         return this->set("extensionType", value);
@@ -1705,8 +1673,6 @@ public:
         return this->set("logicalParent", value);
     }
 };
-
-using CdynamicBuilder = CdynamicBuilderImpl<Cdynamic, &xmExtObjectClass>;
 
 template <typename Derived>
 class CXmDialogShellImpl : public CWidgetImpl<Derived>
@@ -1737,27 +1703,21 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDialogShellBuilderImpl :
-    public CWidgetBuilderBase<CXmDialogShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDialogShellBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDialogShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setDeleteResponse(unsigned char value) const
     {
         return this->set("deleteResponse", value);
     }
 };
-
-using CXmDialogShellBuilder =
-    CXmDialogShellBuilderImpl<CXmDialogShell, &xmDialogShellExtObjectClass>;
 
 template <typename Derived>
 class CXmDisplayImpl : public CWidgetImpl<Derived>
@@ -2049,19 +2009,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDisplayBuilderImpl :
-    public CWidgetBuilderBase<CXmDisplayBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDisplayBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDisplayBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setDefaultButtonEmphasis(Boolean value) const
     {
         return this->set("defaultButtonEmphasis", value);
@@ -2143,8 +2100,6 @@ public:
         return this->set("userData", value);
     }
 };
-
-using CXmDisplayBuilder = CXmDisplayBuilderImpl<CXmDisplay, &xmDisplayClass>;
 
 template <typename Derived>
 class CXmDragContextImpl : public CWidgetImpl<Derived>
@@ -2543,19 +2498,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDragContextBuilderImpl :
-    public CWidgetBuilderBase<CXmDragContextBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDragContextBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDragContextBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBlendModel(unsigned char value) const
     {
         return this->set("blendModel", value);
@@ -2642,9 +2594,6 @@ public:
     }
 };
 
-using CXmDragContextBuilder =
-    CXmDragContextBuilderImpl<CXmDragContext, &xmDragContextClass>;
-
 template <typename Derived>
 class CXmDropSiteManagerImpl : public CWidgetImpl<Derived>
 {
@@ -2696,19 +2645,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDropSiteManagerBuilderImpl :
-    public CWidgetBuilderBase<CXmDropSiteManagerBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDropSiteManagerBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDropSiteManagerBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setClientData(XtPointer value) const
     {
         return this->set("clientData", value);
@@ -2722,10 +2668,6 @@ public:
         return this->set("treeUpdateProc", value);
     }
 };
-
-using CXmDropSiteManagerBuilder =
-    CXmDropSiteManagerBuilderImpl<CXmDropSiteManager,
-        &xmDropSiteManagerObjectClass>;
 
 template <typename Derived>
 class CXmDropTransferImpl : public CWidgetImpl<Derived>
@@ -2800,19 +2742,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDropTransferBuilderImpl :
-    public CWidgetBuilderBase<CXmDropTransferBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDropTransferBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDropTransferBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setDropTransfers(XmDropTransferEntry value) const
     {
         return this->set("dropTransfers", value);
@@ -2834,9 +2773,6 @@ public:
         return this->set("transferStatus", value);
     }
 };
-
-using CXmDropTransferBuilder =
-    CXmDropTransferBuilderImpl<CXmDropTransfer, &xmDropTransferObjectClass>;
 
 template <typename Derived>
 class CXmMenuShellImpl : public CWidgetImpl<Derived>
@@ -2944,19 +2880,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmMenuShellBuilderImpl :
-    public CWidgetBuilderBase<CXmMenuShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmMenuShellBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmMenuShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAnimate(Boolean value) const
     {
         return this->set("animate", value);
@@ -2990,9 +2923,6 @@ public:
         return this->set("visual", value);
     }
 };
-
-using CXmMenuShellBuilder =
-    CXmMenuShellBuilderImpl<CXmMenuShell, &xmMenuShellWidgetClass>;
 
 template <typename Derived>
 class CXmScreenImpl : public CWidgetImpl<Derived>
@@ -3248,19 +3178,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmScreenBuilderImpl :
-    public CWidgetBuilderBase<CXmScreenBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmScreenBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmScreenBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBitmapConversionModel(XtEnum value) const
     {
         return this->set("bitmapConversionModel", value);
@@ -3346,8 +3273,6 @@ public:
         return this->set("verticalFontUnit", value);
     }
 };
-
-using CXmScreenBuilder = CXmScreenBuilderImpl<CXmScreen, &xmScreenClass>;
 
 template <typename Derived>
 class CXmSlideContextImpl : public CWidgetImpl<Derived>
@@ -3465,19 +3390,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmSlideContextBuilderImpl :
-    public CWidgetBuilderBase<CXmSlideContextBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmSlideContextBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmSlideContextBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setSlideDestHeight(Dimension value) const
     {
         return this->set("slideDestHeight", value);
@@ -3503,9 +3425,6 @@ public:
         return this->set("slideWidget", value);
     }
 };
-
-using CXmSlideContextBuilder =
-    CXmSlideContextBuilderImpl<CXmSlideContext, &xmSlideContextWidgetClass>;
 
 template <typename Derived>
 class CXmDragOverShellImpl : public CVendorShellImpl<Derived>
@@ -3602,19 +3521,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDragOverShellBuilderImpl :
-    public CWidgetBuilderBase<CXmDragOverShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDragOverShellBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDragOverShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBaseHeight(int value) const
     {
         return this->set("baseHeight", value);
@@ -3736,9 +3652,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmDragOverShellBuilder =
-    CXmDragOverShellBuilderImpl<CXmDragOverShell, &xmDragOverShellWidgetClass>;
 
 template <typename Derived>
 class CXmGrabShellImpl : public CVendorShellImpl<Derived>
@@ -3901,19 +3814,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmGrabShellBuilderImpl :
-    public CWidgetBuilderBase<CXmGrabShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmGrabShellBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmGrabShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowShellResize(Boolean value) const
     {
         return this->set("allowShellResize", value);
@@ -4059,9 +3969,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmGrabShellBuilder =
-    CXmGrabShellBuilderImpl<CXmGrabShell, &xmGrabShellWidgetClass>;
 
 template <typename Derived>
 class CXmArrowButtonGadgetImpl : public CXmGadgetImpl<Derived>
@@ -4252,19 +4159,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmArrowButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmArrowButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmArrowButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmArrowButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setArrowDirection(unsigned char value) const
     {
         return this->set("arrowDirection", value);
@@ -4362,10 +4266,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmArrowButtonGadgetBuilder =
-    CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadget,
-        &xmArrowButtonGadgetClass>;
 
 template <typename Derived>
 class CXmIconGadgetImpl : public CXmGadgetImpl<Derived>
@@ -4506,19 +4406,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmIconGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmIconGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmIconGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmIconGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto set_cache(XmIconGCacheObjPart* value) const
     {
         return this->set(".cache", value);
@@ -4616,9 +4513,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmIconGadgetBuilder =
-    CXmIconGadgetBuilderImpl<CXmIconGadget, &xmIconGadgetClass>;
 
 template <typename Derived>
 class CXmLabelGadgetImpl : public CXmGadgetImpl<Derived>
@@ -4814,19 +4708,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmLabelGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmLabelGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmLabelGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmLabelGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
         return this->set(".cache", value);
@@ -4933,9 +4824,6 @@ public:
     }
 };
 
-using CXmLabelGadgetBuilder =
-    CXmLabelGadgetBuilderImpl<CXmLabelGadget, &xmLabelGadgetClass>;
-
 template <typename Derived>
 class CXmSeparatorGadgetImpl : public CXmGadgetImpl<Derived>
 {
@@ -4987,19 +4875,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmSeparatorGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmSeparatorGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmSeparatorGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmSeparatorGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBorderWidth(Dimension value) const
     {
         return this->set("borderWidth", value);
@@ -5053,9 +4938,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmSeparatorGadgetBuilder =
-    CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadget, &xmSeparatorGadgetClass>;
 
 template <typename Derived>
 class CXmArrowButtonImpl : public CXmPrimitiveImpl<Derived>
@@ -5156,19 +5038,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmArrowButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmArrowButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmArrowButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmArrowButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setArrowDirection(unsigned char value) const
     {
         return this->set("arrowDirection", value);
@@ -5270,9 +5149,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmArrowButtonBuilder =
-    CXmArrowButtonBuilderImpl<CXmArrowButton, &xmArrowButtonWidgetClass>;
 
 template <typename Derived>
 class CXmI18ListImpl : public CXmPrimitiveImpl<Derived>
@@ -5557,19 +5433,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmI18ListBuilderImpl :
-    public CWidgetBuilderBase<CXmI18ListBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmI18ListBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmI18ListBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAlignment(unsigned char value) const
     {
         return this->set("alignment", value);
@@ -5743,9 +5616,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmI18ListBuilder =
-    CXmI18ListBuilderImpl<CXmI18List, &xmI18ListWidgetClass>;
 
 template <typename Derived>
 class CXmIconButtonImpl : public CXmPrimitiveImpl<Derived>
@@ -5995,19 +5865,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmIconButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmIconButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmIconButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmIconButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAlignment(unsigned char value) const
     {
         return this->set("alignment", value);
@@ -6169,9 +6036,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmIconButtonBuilder =
-    CXmIconButtonBuilderImpl<CXmIconButton, &xmIconButtonWidgetClass>;
 
 template <typename Derived>
 class CXmLabelImpl : public CXmPrimitiveImpl<Derived>
@@ -6477,19 +6341,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmLabelBuilderImpl :
-    public CWidgetBuilderBase<CXmLabelBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmLabelBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmLabelBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
         return this->set("accelerator", value);
@@ -6667,8 +6528,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmLabelBuilder = CXmLabelBuilderImpl<CXmLabel, &xmLabelWidgetClass>;
 
 template <typename Derived>
 class CXmListImpl : public CXmPrimitiveImpl<Derived>
@@ -7100,19 +6959,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmListBuilderImpl :
-    public CWidgetBuilderBase<CXmListBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmListBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmListBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutomaticSelection(XtEnum value) const
     {
         return this->set("automaticSelection", value);
@@ -7306,8 +7162,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmListBuilder = CXmListBuilderImpl<CXmList, &xmListWidgetClass>;
 
 template <typename Derived>
 class CXmScrollBarImpl : public CXmPrimitiveImpl<Derived>
@@ -7686,19 +7540,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmScrollBarBuilderImpl :
-    public CWidgetBuilderBase<CXmScrollBarBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmScrollBarBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmScrollBarBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -7857,9 +7708,6 @@ public:
     }
 };
 
-using CXmScrollBarBuilder =
-    CXmScrollBarBuilderImpl<CXmScrollBar, &xmScrollBarWidgetClass>;
-
 template <typename Derived>
 class CXmSeparatorImpl : public CXmPrimitiveImpl<Derived>
 {
@@ -7944,19 +7792,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmSeparatorBuilderImpl :
-    public CWidgetBuilderBase<CXmSeparatorBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmSeparatorBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmSeparatorBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -8059,9 +7904,6 @@ public:
     }
 };
 
-using CXmSeparatorBuilder =
-    CXmSeparatorBuilderImpl<CXmSeparator, &xmSeparatorWidgetClass>;
-
 template <typename Derived>
 class CXiTabCanvasImpl : public CXmPrimitiveImpl<Derived>
 {
@@ -8080,19 +7922,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXiTabCanvasBuilderImpl :
-    public CWidgetBuilderBase<CXiTabCanvasBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXiTabCanvasBuilderImpl() = default;
-    using CWidgetBuilderBase<CXiTabCanvasBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -8182,9 +8021,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXiTabCanvasBuilder =
-    CXiTabCanvasBuilderImpl<CXiTabCanvas, &xmTabCanvasWidgetClass>;
 
 template <typename Derived>
 class CXmTextImpl : public CXmPrimitiveImpl<Derived>
@@ -8541,19 +8377,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmTextBuilderImpl :
-    public CWidgetBuilderBase<CXmTextBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmTextBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmTextBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutoShowCursorPosition(Boolean value) const
     {
         return this->set("autoShowCursorPosition", value);
@@ -8703,8 +8536,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmTextBuilder = CXmTextBuilderImpl<CXmText, &xmTextWidgetClass>;
 
 template <typename Derived>
 class CXmBulletinBoardImpl : public CXmManagerImpl<Derived>
@@ -9003,19 +8834,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmBulletinBoardBuilderImpl :
-    public CWidgetBuilderBase<CXmBulletinBoardBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmBulletinBoardBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmBulletinBoardBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -9186,9 +9014,6 @@ public:
     }
 };
 
-using CXmBulletinBoardBuilder =
-    CXmBulletinBoardBuilderImpl<CXmBulletinBoard, &xmBulletinBoardWidgetClass>;
-
 template <typename Derived>
 class CXmButtonBoxImpl : public CXmManagerImpl<Derived>
 {
@@ -9273,19 +9098,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmButtonBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmButtonBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmButtonBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmButtonBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -9400,9 +9222,6 @@ public:
     }
 };
 
-using CXmButtonBoxBuilder =
-    CXmButtonBoxBuilderImpl<CXmButtonBox, &xmButtonBoxWidgetClass>;
-
 template <typename Derived>
 class CXmColorSelectorImpl : public CXmManagerImpl<Derived>
 {
@@ -9501,19 +9320,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmColorSelectorBuilderImpl :
-    public CWidgetBuilderBase<CXmColorSelectorBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmColorSelectorBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmColorSelectorBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -9643,9 +9459,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmColorSelectorBuilder =
-    CXmColorSelectorBuilderImpl<CXmColorSelector, &xmColorSelectorWidgetClass>;
 
 template <typename Derived>
 class CXmComboBoxImpl : public CXmManagerImpl<Derived>
@@ -9912,19 +9725,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmComboBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmComboBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmComboBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmComboBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setArrowSize(Dimension value) const
     {
         return this->set("arrowSize", value);
@@ -10090,9 +9900,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmComboBoxBuilder =
-    CXmComboBoxBuilderImpl<CXmComboBox, &xmComboBoxWidgetClass>;
 
 template <typename Derived>
 class CXmContainerImpl : public CXmManagerImpl<Derived>
@@ -10557,19 +10364,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmContainerBuilderImpl :
-    public CWidgetBuilderBase<CXmContainerBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmContainerBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmContainerBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutomaticSelection(unsigned char value) const
     {
         return this->set("automaticSelection", value);
@@ -10792,9 +10596,6 @@ public:
     }
 };
 
-using CXmContainerBuilder =
-    CXmContainerBuilderImpl<CXmContainer, &xmContainerWidgetClass>;
-
 template <typename Derived>
 class CXmDrawingAreaImpl : public CXmManagerImpl<Derived>
 {
@@ -10926,19 +10727,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDrawingAreaBuilderImpl :
-    public CWidgetBuilderBase<CXmDrawingAreaBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDrawingAreaBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDrawingAreaBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -11040,9 +10838,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmDrawingAreaBuilder =
-    CXmDrawingAreaBuilderImpl<CXmDrawingArea, &xmDrawingAreaWidgetClass>;
 
 template <typename Derived>
 class CXmDropDownImpl : public CXmManagerImpl<Derived>
@@ -11307,19 +11102,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDropDownBuilderImpl :
-    public CWidgetBuilderBase<CXmDropDownBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDropDownBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDropDownBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setActivateOnFill(int value) const
     {
         return this->set("activateOnFill", value);
@@ -11470,9 +11262,6 @@ public:
     }
 };
 
-using CXmDropDownBuilder =
-    CXmDropDownBuilderImpl<CXmDropDown, &xmDropDownWidgetClass>;
-
 template <typename Derived>
 class CXmFrameImpl : public CXmManagerImpl<Derived>
 {
@@ -11535,19 +11324,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmFrameBuilderImpl :
-    public CWidgetBuilderBase<CXmFrameBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmFrameBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmFrameBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -11649,8 +11435,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmFrameBuilder = CXmFrameBuilderImpl<CXmFrame, &xmFrameWidgetClass>;
 
 template <typename Derived>
 class CXmHierarchyImpl : public CXmManagerImpl<Derived>
@@ -11829,19 +11613,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmHierarchyBuilderImpl :
-    public CWidgetBuilderBase<CXmHierarchyBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmHierarchyBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmHierarchyBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutoClose(Boolean value) const
     {
         return this->set("autoClose", value);
@@ -11956,9 +11737,6 @@ public:
     }
 };
 
-using CXmHierarchyBuilder =
-    CXmHierarchyBuilderImpl<CXmHierarchy, &xmHierarchyWidgetClass>;
-
 template <typename Derived>
 class CXmIconBoxImpl : public CXmManagerImpl<Derived>
 {
@@ -12043,19 +11821,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmIconBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmIconBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmIconBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmIconBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -12169,9 +11944,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmIconBoxBuilder =
-    CXmIconBoxBuilderImpl<CXmIconBox, &xmIconBoxWidgetClass>;
 
 template <typename Derived>
 class CXmMultiListImpl : public CXmManagerImpl<Derived>
@@ -12360,19 +12132,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmMultiListBuilderImpl :
-    public CWidgetBuilderBase<CXmMultiListBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmMultiListBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmMultiListBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -12486,9 +12255,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmMultiListBuilder =
-    CXmMultiListBuilderImpl<CXmMultiList, &xmMultiListWidgetClass>;
 
 template <typename Derived>
 class CXmNotebookImpl : public CXmManagerImpl<Derived>
@@ -12722,19 +12488,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmNotebookBuilderImpl :
-    public CWidgetBuilderBase<CXmNotebookBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmNotebookBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmNotebookBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackPageBackground(Pixel value) const
     {
         return this->set("backPageBackground", value);
@@ -12896,9 +12659,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmNotebookBuilder =
-    CXmNotebookBuilderImpl<CXmNotebook, &xmNotebookWidgetClass>;
 
 template <typename Derived>
 class CXmRowColumnImpl : public CXmManagerImpl<Derived>
@@ -13400,19 +13160,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmRowColumnBuilderImpl :
-    public CWidgetBuilderBase<CXmRowColumnBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmRowColumnBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmRowColumnBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAdjustLast(Boolean value) const
     {
         return this->set("adjustLast", value);
@@ -13638,9 +13395,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmRowColumnBuilder =
-    CXmRowColumnBuilderImpl<CXmRowColumn, &xmRowColumnWidgetClass>;
 
 template <typename Derived>
 class CXmScaleImpl : public CXmManagerImpl<Derived>
@@ -13961,19 +13715,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmScaleBuilderImpl :
-    public CWidgetBuilderBase<CXmScaleBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmScaleBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmScaleBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -14151,8 +13902,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmScaleBuilder = CXmScaleBuilderImpl<CXmScale, &xmScaleWidgetClass>;
 
 template <typename Derived>
 class CXmScrolledWindowImpl : public CXmManagerImpl<Derived>
@@ -14338,19 +14087,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmScrolledWindowBuilderImpl :
-    public CWidgetBuilderBase<CXmScrolledWindowBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmScrolledWindowBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmScrolledWindowBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutoDragModel(XtEnum value) const
     {
         return this->set("autoDragModel", value);
@@ -14488,9 +14234,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmScrolledWindowBuilder = CXmScrolledWindowBuilderImpl<CXmScrolledWindow,
-    &xmScrolledWindowWidgetClass>;
 
 template <typename Derived>
 class CXmSpinBoxImpl : public CXmManagerImpl<Derived>
@@ -14653,19 +14396,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmSpinBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmSpinBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmSpinBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmSpinBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setArrowLayout(unsigned char value) const
     {
         return this->set("arrowLayout", value);
@@ -14795,9 +14535,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmSpinBoxBuilder =
-    CXmSpinBoxBuilderImpl<CXmSpinBox, &xmSpinBoxWidgetClass>;
 
 template <typename Derived>
 class CXmTabBoxImpl : public CXmManagerImpl<Derived>
@@ -15124,19 +14861,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmTabBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmTabBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmTabBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmTabBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -15323,8 +15057,6 @@ public:
     }
 };
 
-using CXmTabBoxBuilder = CXmTabBoxBuilderImpl<CXmTabBox, &xmTabBoxWidgetClass>;
-
 template <typename Derived>
 class CDesktopImpl : public CdynamicImpl<Derived>
 {
@@ -15365,19 +15097,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CDesktopBuilderImpl :
-    public CWidgetBuilderBase<CDesktopBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CDesktopBuilderImpl() = default;
-    using CWidgetBuilderBase<CDesktopBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setDesktopParent(Widget value) const
     {
         return this->set("desktopParent", value);
@@ -15391,8 +15120,6 @@ public:
         return this->set("logicalParent", value);
     }
 };
-
-using CDesktopBuilder = CDesktopBuilderImpl<CDesktop, &xmDesktopClass>;
 
 template <typename Derived>
 class CprotocolImpl : public CdynamicImpl<Derived>
@@ -15439,19 +15166,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CprotocolBuilderImpl :
-    public CWidgetBuilderBase<CprotocolBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CprotocolBuilderImpl() = default;
-    using CWidgetBuilderBase<CprotocolBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setExtensionType(unsigned char value) const
     {
         return this->set("extensionType", value);
@@ -15461,9 +15185,6 @@ public:
         return this->set("logicalParent", value);
     }
 };
-
-using CprotocolBuilder =
-    CprotocolBuilderImpl<Cprotocol, &xmProtocolObjectClass>;
 
 template <typename Derived>
 class CXmIconHeaderImpl : public CXmIconGadgetImpl<Derived>
@@ -15494,19 +15215,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmIconHeaderBuilderImpl :
-    public CWidgetBuilderBase<CXmIconHeaderBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmIconHeaderBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmIconHeaderBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto set_cache(XmIconGCacheObjPart* value) const
     {
         return this->set(".cache", value);
@@ -15609,9 +15327,6 @@ public:
     }
 };
 
-using CXmIconHeaderBuilder =
-    CXmIconHeaderBuilderImpl<CXmIconHeader, &xmIconHeaderClass>;
-
 template <typename Derived>
 class CXmCascadeButtonGadgetImpl : public CXmLabelGadgetImpl<Derived>
 {
@@ -15708,19 +15423,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmCascadeButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmCascadeButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmCascadeButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmCascadeButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
         return this->set(".cache", value);
@@ -15830,10 +15542,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmCascadeButtonGadgetBuilder =
-    CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadget,
-        &xmCascadeButtonGadgetClass>;
 
 template <typename Derived>
 class CXmPushButtonGadgetImpl : public CXmLabelGadgetImpl<Derived>
@@ -15945,19 +15653,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmPushButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmPushButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmPushButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmPushButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
         return this->set(".cache", value);
@@ -16067,10 +15772,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmPushButtonGadgetBuilder =
-    CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadget,
-        &xmPushButtonGadgetClass>;
 
 template <typename Derived>
 class CXmToggleButtonGadgetImpl : public CXmLabelGadgetImpl<Derived>
@@ -16184,19 +15885,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmToggleButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<CXmToggleButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmToggleButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmToggleButtonGadgetBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
         return this->set(".cache", value);
@@ -16310,10 +16008,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmToggleButtonGadgetBuilder =
-    CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadget,
-        &xmToggleButtonGadgetClass>;
 
 template <typename Derived>
 class CXmCascadeButtonImpl : public CXmLabelImpl<Derived>
@@ -16442,19 +16136,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmCascadeButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmCascadeButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmCascadeButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmCascadeButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
         return this->set("accelerator", value);
@@ -16645,9 +16336,6 @@ public:
     }
 };
 
-using CXmCascadeButtonBuilder =
-    CXmCascadeButtonBuilderImpl<CXmCascadeButton, &xmCascadeButtonWidgetClass>;
-
 template <typename Derived>
 class CXmDrawnButtonImpl : public CXmLabelImpl<Derived>
 {
@@ -16823,19 +16511,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmDrawnButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmDrawnButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmDrawnButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmDrawnButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
         return this->set("accelerator", value);
@@ -17026,9 +16711,6 @@ public:
     }
 };
 
-using CXmDrawnButtonBuilder =
-    CXmDrawnButtonBuilderImpl<CXmDrawnButton, &xmDrawnButtonWidgetClass>;
-
 template <typename Derived>
 class CXmPushButtonImpl : public CXmLabelImpl<Derived>
 {
@@ -17196,19 +16878,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmPushButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmPushButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmPushButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmPushButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
         return this->set("accelerator", value);
@@ -17410,9 +17089,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmPushButtonBuilder =
-    CXmPushButtonBuilderImpl<CXmPushButton, &xmPushButtonWidgetClass>;
 
 template <typename Derived>
 class CXmToggleButtonImpl : public CXmLabelImpl<Derived>
@@ -17670,19 +17346,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmToggleButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmToggleButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmToggleButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmToggleButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
         return this->set("accelerator", value);
@@ -17921,9 +17594,6 @@ public:
     }
 };
 
-using CXmToggleButtonBuilder =
-    CXmToggleButtonBuilderImpl<CXmToggleButton, &xmToggleButtonWidgetClass>;
-
 template <typename Derived>
 class CXmColumnImpl : public CXmBulletinBoardImpl<Derived>
 {
@@ -18047,19 +17717,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmColumnBuilderImpl :
-    public CWidgetBuilderBase<CXmColumnBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmColumnBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmColumnBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -18262,8 +17929,6 @@ public:
     }
 };
 
-using CXmColumnBuilder = CXmColumnBuilderImpl<CXmColumn, &xmColumnWidgetClass>;
-
 template <typename Derived>
 class CXmFormImpl : public CXmBulletinBoardImpl<Derived>
 {
@@ -18348,19 +18013,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmFormBuilderImpl :
-    public CWidgetBuilderBase<CXmFormBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmFormBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmFormBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -18547,8 +18209,6 @@ public:
     }
 };
 
-using CXmFormBuilder = CXmFormBuilderImpl<CXmForm, &xmFormWidgetClass>;
-
 template <typename Derived>
 class CXmMessageBoxImpl : public CXmBulletinBoardImpl<Derived>
 {
@@ -18698,19 +18358,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmMessageBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmMessageBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmMessageBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmMessageBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -18916,9 +18573,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmMessageBoxBuilder =
-    CXmMessageBoxBuilderImpl<CXmMessageBox, &xmMessageBoxWidgetClass>;
 
 template <typename Derived>
 class CXmSelectionBoxImpl : public CXmBulletinBoardImpl<Derived>
@@ -19178,19 +18832,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmSelectionBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmSelectionBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmSelectionBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmSelectionBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -19424,9 +19075,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmSelectionBoxBuilder =
-    CXmSelectionBoxBuilderImpl<CXmSelectionBox, &xmSelectionBoxWidgetClass>;
 
 template <typename Derived>
 class CXmTabStackImpl : public CXmBulletinBoardImpl<Derived>
@@ -19704,19 +19352,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmTabStackBuilderImpl :
-    public CWidgetBuilderBase<CXmTabStackBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmTabStackBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmTabStackBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -19963,9 +19608,6 @@ public:
     }
 };
 
-using CXmTabStackBuilder =
-    CXmTabStackBuilderImpl<CXmTabStack, &xmTabStackWidgetClass>;
-
 template <typename Derived>
 class CXmClipWindowImpl : public CXmDrawingAreaImpl<Derived>
 {
@@ -19984,19 +19626,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmClipWindowBuilderImpl :
-    public CWidgetBuilderBase<CXmClipWindowBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmClipWindowBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmClipWindowBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
         return this->set("background", value);
@@ -20099,9 +19738,6 @@ public:
     }
 };
 
-using CXmClipWindowBuilder =
-    CXmClipWindowBuilderImpl<CXmClipWindow, &xmClipWindowWidgetClass>;
-
 template <typename Derived>
 class CXmOutlineImpl : public CXmHierarchyImpl<Derived>
 {
@@ -20153,19 +19789,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmOutlineBuilderImpl :
-    public CWidgetBuilderBase<CXmOutlineBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmOutlineBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmOutlineBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutoClose(Boolean value) const
     {
         return this->set("autoClose", value);
@@ -20292,9 +19925,6 @@ public:
     }
 };
 
-using CXmOutlineBuilder =
-    CXmOutlineBuilderImpl<CXmOutline, &xmOutlineWidgetClass>;
-
 template <typename Derived>
 class CXmTreeImpl : public CXmHierarchyImpl<Derived>
 {
@@ -20390,19 +20020,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmTreeBuilderImpl :
-    public CWidgetBuilderBase<CXmTreeBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmTreeBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmTreeBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutoClose(Boolean value) const
     {
         return this->set("autoClose", value);
@@ -20545,8 +20172,6 @@ public:
     }
 };
 
-using CXmTreeBuilder = CXmTreeBuilderImpl<CXmTree, &xmTreeWidgetClass>;
-
 template <typename Derived>
 class CXmMainWindowImpl : public CXmScrolledWindowImpl<Derived>
 {
@@ -20642,19 +20267,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmMainWindowBuilderImpl :
-    public CWidgetBuilderBase<CXmMainWindowBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmMainWindowBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmMainWindowBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAutoDragModel(XtEnum value) const
     {
         return this->set("autoDragModel", value);
@@ -20820,9 +20442,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmMainWindowBuilder =
-    CXmMainWindowBuilderImpl<CXmMainWindow, &xmMainWindowWidgetClass>;
 
 template <typename Derived>
 class CXmSimpleSpinBoxImpl : public CXmSpinBoxImpl<Derived>
@@ -21007,19 +20626,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmSimpleSpinBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmSimpleSpinBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmSimpleSpinBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmSimpleSpinBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setArrowLayout(unsigned char value) const
     {
         return this->set("arrowLayout", value);
@@ -21206,9 +20822,6 @@ public:
     }
 };
 
-using CXmSimpleSpinBoxBuilder =
-    CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBox, &xmSimpleSpinBoxWidgetClass>;
-
 template <typename Derived>
 class CShellImpl : public CDesktopImpl<Derived>
 {
@@ -21238,19 +20851,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CShellBuilderImpl :
-    public CWidgetBuilderBase<CShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CShellBuilderImpl() = default;
-    using CWidgetBuilderBase<CShellBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setDesktopParent(Widget value) const
     {
         return this->set("desktopParent", value);
@@ -21269,8 +20879,6 @@ public:
     }
 };
 
-using CShellBuilder = CShellBuilderImpl<CShell, &xmShellExtObjectClass>;
-
 template <typename Derived>
 class CWorldImpl : public CDesktopImpl<Derived>
 {
@@ -21288,19 +20896,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CWorldBuilderImpl :
-    public CWidgetBuilderBase<CWorldBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CWorldBuilderImpl() = default;
-    using CWidgetBuilderBase<CWorldBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setDesktopParent(Widget value) const
     {
         return this->set("desktopParent", value);
@@ -21314,8 +20919,6 @@ public:
         return this->set("logicalParent", value);
     }
 };
-
-using CWorldBuilder = CWorldBuilderImpl<CWorld, &xmWorldClass>;
 
 template <typename Derived>
 class CXmTearOffButtonImpl : public CXmPushButtonImpl<Derived>
@@ -21379,19 +20982,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmTearOffButtonBuilderImpl :
-    public CWidgetBuilderBase<CXmTearOffButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmTearOffButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmTearOffButtonBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
         return this->set("accelerator", value);
@@ -21602,9 +21202,6 @@ public:
     }
 };
 
-using CXmTearOffButtonBuilder =
-    CXmTearOffButtonBuilderImpl<CXmTearOffButton, &xmTearOffButtonWidgetClass>;
-
 template <typename Derived>
 class CXmCommandImpl : public CXmSelectionBoxImpl<Derived>
 {
@@ -21766,19 +21363,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmCommandBuilderImpl :
-    public CWidgetBuilderBase<CXmCommandBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmCommandBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmCommandBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -22036,9 +21630,6 @@ public:
         return this->set("y", value);
     }
 };
-
-using CXmCommandBuilder =
-    CXmCommandBuilderImpl<CXmCommand, &xmCommandWidgetClass>;
 
 template <typename Derived>
 class CXmFileSelectionBoxImpl : public CXmSelectionBoxImpl<Derived>
@@ -22322,19 +21913,16 @@ public:
     }
 };
 
-template <typename CWidgetClassT, WidgetClass* WidgetClassP, typename... Pairs>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename... Pairs>
 class CXmFileSelectionBoxBuilderImpl :
-    public CWidgetBuilderBase<CXmFileSelectionBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
 {
 public:
     CXmFileSelectionBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<CXmFileSelectionBoxBuilderImpl,
-        CWidgetClassT,
-        WidgetClassP,
-        Pairs...>::CWidgetBuilderBase;
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+        CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
         return this->set("allowOverlap", value);
@@ -22653,6 +22241,1777 @@ public:
     }
 };
 
-using CXmFileSelectionBoxBuilder =
-    CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBox,
-        &xmFileSelectionBoxWidgetClass>;
+template <typename... Pairs>
+class CXmDialogShellBuilder :
+    public CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
+        CXmDialogShell,
+        Pairs...>
+{
+public:
+    using CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
+        CXmDialogShell,
+        Pairs...>::CXmDialogShellBuilderImpl;
+
+    CXmDialogShell build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmDialogShell(XmCreateDialogShell(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmDialogShellBuilder(Widget, const char*) -> CXmDialogShellBuilder<>;
+template <typename... Pairs>
+CXmDialogShellBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmDialogShellBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmMenuShellBuilder :
+    public CXmMenuShellBuilderImpl<CXmMenuShellBuilder, CXmMenuShell, Pairs...>
+{
+public:
+    using CXmMenuShellBuilderImpl<CXmMenuShellBuilder, CXmMenuShell, Pairs...>::
+        CXmMenuShellBuilderImpl;
+
+    CXmMenuShell build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMenuShell(XmCreateMenuShell(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmMenuShellBuilder(Widget, const char*) -> CXmMenuShellBuilder<>;
+template <typename... Pairs>
+CXmMenuShellBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmMenuShellBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmGrabShellBuilder :
+    public CXmGrabShellBuilderImpl<CXmGrabShellBuilder, CXmGrabShell, Pairs...>
+{
+public:
+    using CXmGrabShellBuilderImpl<CXmGrabShellBuilder, CXmGrabShell, Pairs...>::
+        CXmGrabShellBuilderImpl;
+
+    CXmGrabShell build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmGrabShell(XmCreateGrabShell(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmGrabShellBuilder(Widget, const char*) -> CXmGrabShellBuilder<>;
+template <typename... Pairs>
+CXmGrabShellBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmGrabShellBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmArrowButtonGadgetBuilder :
+    public CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
+        CXmArrowButtonGadget,
+        Pairs...>
+{
+public:
+    using CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
+        CXmArrowButtonGadget,
+        Pairs...>::CXmArrowButtonGadgetBuilderImpl;
+
+    CXmArrowButtonGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmArrowButtonGadget(XmCreateArrowButtonGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmArrowButtonGadgetBuilder(Widget, const char*)
+    -> CXmArrowButtonGadgetBuilder<>;
+template <typename... Pairs>
+CXmArrowButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmArrowButtonGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmIconGadgetBuilder :
+    public CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
+        CXmIconGadget,
+        Pairs...>
+{
+public:
+    using CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
+        CXmIconGadget,
+        Pairs...>::CXmIconGadgetBuilderImpl;
+
+    CXmIconGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmIconGadget(XmCreateIconGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmIconGadgetBuilder(Widget, const char*) -> CXmIconGadgetBuilder<>;
+template <typename... Pairs>
+CXmIconGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmIconGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmLabelGadgetBuilder :
+    public CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
+        CXmLabelGadget,
+        Pairs...>
+{
+public:
+    using CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
+        CXmLabelGadget,
+        Pairs...>::CXmLabelGadgetBuilderImpl;
+
+    CXmLabelGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmLabelGadget(XmCreateLabelGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmLabelGadgetBuilder(Widget, const char*) -> CXmLabelGadgetBuilder<>;
+template <typename... Pairs>
+CXmLabelGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmLabelGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmSeparatorGadgetBuilder :
+    public CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
+        CXmSeparatorGadget,
+        Pairs...>
+{
+public:
+    using CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
+        CXmSeparatorGadget,
+        Pairs...>::CXmSeparatorGadgetBuilderImpl;
+
+    CXmSeparatorGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSeparatorGadget(XmCreateSeparatorGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmSeparatorGadgetBuilder(Widget, const char*) -> CXmSeparatorGadgetBuilder<>;
+template <typename... Pairs>
+CXmSeparatorGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmSeparatorGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmArrowButtonBuilder :
+    public CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
+        CXmArrowButton,
+        Pairs...>
+{
+public:
+    using CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
+        CXmArrowButton,
+        Pairs...>::CXmArrowButtonBuilderImpl;
+
+    CXmArrowButton build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmArrowButton(XmCreateArrowButton(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmArrowButtonBuilder(Widget, const char*) -> CXmArrowButtonBuilder<>;
+template <typename... Pairs>
+CXmArrowButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmArrowButtonBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmIconButtonBuilder :
+    public CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
+        CXmIconButton,
+        Pairs...>
+{
+public:
+    using CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
+        CXmIconButton,
+        Pairs...>::CXmIconButtonBuilderImpl;
+
+    CXmIconButton build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmIconButton(XmCreateIconButton(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmIconButtonBuilder(Widget, const char*) -> CXmIconButtonBuilder<>;
+template <typename... Pairs>
+CXmIconButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmIconButtonBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmLabelBuilder :
+    public CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Pairs...>
+{
+public:
+    using CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Pairs...>::
+        CXmLabelBuilderImpl;
+
+    CXmLabel build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmLabel(XmCreateLabel(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmLabelBuilder(Widget, const char*) -> CXmLabelBuilder<>;
+template <typename... Pairs>
+CXmLabelBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmLabelBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmListBuilder :
+    public CXmListBuilderImpl<CXmListBuilder, CXmList, Pairs...>
+{
+public:
+    using CXmListBuilderImpl<CXmListBuilder, CXmList, Pairs...>::
+        CXmListBuilderImpl;
+
+    CXmList build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmList(XmCreateList(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmListBuilder(Widget, const char*) -> CXmListBuilder<>;
+template <typename... Pairs>
+CXmListBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmListBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmScrolledListBuilder :
+    public CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Pairs...>
+{
+public:
+    using CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Pairs...>::
+        CXmListBuilderImpl;
+
+    CXmList build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmList(XmCreateScrolledList(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmScrolledListBuilder(Widget, const char*) -> CXmScrolledListBuilder<>;
+template <typename... Pairs>
+CXmScrolledListBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmScrolledListBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmScrollBarBuilder :
+    public CXmScrollBarBuilderImpl<CXmScrollBarBuilder, CXmScrollBar, Pairs...>
+{
+public:
+    using CXmScrollBarBuilderImpl<CXmScrollBarBuilder, CXmScrollBar, Pairs...>::
+        CXmScrollBarBuilderImpl;
+
+    CXmScrollBar build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmScrollBar(XmCreateScrollBar(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmScrollBarBuilder(Widget, const char*) -> CXmScrollBarBuilder<>;
+template <typename... Pairs>
+CXmScrollBarBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmScrollBarBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmSeparatorBuilder :
+    public CXmSeparatorBuilderImpl<CXmSeparatorBuilder, CXmSeparator, Pairs...>
+{
+public:
+    using CXmSeparatorBuilderImpl<CXmSeparatorBuilder, CXmSeparator, Pairs...>::
+        CXmSeparatorBuilderImpl;
+
+    CXmSeparator build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSeparator(XmCreateSeparator(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmSeparatorBuilder(Widget, const char*) -> CXmSeparatorBuilder<>;
+template <typename... Pairs>
+CXmSeparatorBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmSeparatorBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmTextBuilder :
+    public CXmTextBuilderImpl<CXmTextBuilder, CXmText, Pairs...>
+{
+public:
+    using CXmTextBuilderImpl<CXmTextBuilder, CXmText, Pairs...>::
+        CXmTextBuilderImpl;
+
+    CXmText build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmText(XmCreateText(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmTextBuilder(Widget, const char*) -> CXmTextBuilder<>;
+template <typename... Pairs>
+CXmTextBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmTextBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmScrolledTextBuilder :
+    public CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Pairs...>
+{
+public:
+    using CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Pairs...>::
+        CXmTextBuilderImpl;
+
+    CXmText build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmText(XmCreateScrolledText(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmScrolledTextBuilder(Widget, const char*) -> CXmScrolledTextBuilder<>;
+template <typename... Pairs>
+CXmScrolledTextBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmScrolledTextBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmBulletinBoardBuilder :
+    public CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
+        CXmBulletinBoard,
+        Pairs...>
+{
+public:
+    using CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
+        CXmBulletinBoard,
+        Pairs...>::CXmBulletinBoardBuilderImpl;
+
+    CXmBulletinBoard build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmBulletinBoard(XmCreateBulletinBoard(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmBulletinBoardBuilder(Widget, const char*) -> CXmBulletinBoardBuilder<>;
+template <typename... Pairs>
+CXmBulletinBoardBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmBulletinBoardBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmBulletinBoardDialogBuilder :
+    public CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
+        CXmBulletinBoard,
+        Pairs...>
+{
+public:
+    using CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
+        CXmBulletinBoard,
+        Pairs...>::CXmBulletinBoardBuilderImpl;
+
+    CXmBulletinBoard build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmBulletinBoard(XmCreateBulletinBoardDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmBulletinBoardDialogBuilder(Widget, const char*)
+    -> CXmBulletinBoardDialogBuilder<>;
+template <typename... Pairs>
+CXmBulletinBoardDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmBulletinBoardDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmButtonBoxBuilder :
+    public CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder, CXmButtonBox, Pairs...>
+{
+public:
+    using CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder, CXmButtonBox, Pairs...>::
+        CXmButtonBoxBuilderImpl;
+
+    CXmButtonBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmButtonBox(XmCreateButtonBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmButtonBoxBuilder(Widget, const char*) -> CXmButtonBoxBuilder<>;
+template <typename... Pairs>
+CXmButtonBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmButtonBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmColorSelectorBuilder :
+    public CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
+        CXmColorSelector,
+        Pairs...>
+{
+public:
+    using CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
+        CXmColorSelector,
+        Pairs...>::CXmColorSelectorBuilderImpl;
+
+    CXmColorSelector build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmColorSelector(XmCreateColorSelector(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmColorSelectorBuilder(Widget, const char*) -> CXmColorSelectorBuilder<>;
+template <typename... Pairs>
+CXmColorSelectorBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmColorSelectorBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmComboBoxBuilder :
+    public CXmComboBoxBuilderImpl<CXmComboBoxBuilder, CXmComboBox, Pairs...>
+{
+public:
+    using CXmComboBoxBuilderImpl<CXmComboBoxBuilder, CXmComboBox, Pairs...>::
+        CXmComboBoxBuilderImpl;
+
+    CXmComboBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmComboBox(XmCreateComboBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmComboBoxBuilder(Widget, const char*) -> CXmComboBoxBuilder<>;
+template <typename... Pairs>
+CXmComboBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmComboBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmDropDownComboBoxBuilder :
+    public CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
+        CXmComboBox,
+        Pairs...>
+{
+public:
+    using CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
+        CXmComboBox,
+        Pairs...>::CXmComboBoxBuilderImpl;
+
+    CXmComboBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmComboBox(XmCreateDropDownComboBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmDropDownComboBoxBuilder(Widget, const char*) -> CXmDropDownComboBoxBuilder<>;
+template <typename... Pairs>
+CXmDropDownComboBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmDropDownComboBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmDropDownListBuilder :
+    public CXmComboBoxBuilderImpl<CXmDropDownListBuilder, CXmComboBox, Pairs...>
+{
+public:
+    using CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
+        CXmComboBox,
+        Pairs...>::CXmComboBoxBuilderImpl;
+
+    CXmComboBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmComboBox(XmCreateDropDownList(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmDropDownListBuilder(Widget, const char*) -> CXmDropDownListBuilder<>;
+template <typename... Pairs>
+CXmDropDownListBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmDropDownListBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmContainerBuilder :
+    public CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Pairs...>
+{
+public:
+    using CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Pairs...>::
+        CXmContainerBuilderImpl;
+
+    CXmContainer build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmContainer(XmCreateContainer(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmContainerBuilder(Widget, const char*) -> CXmContainerBuilder<>;
+template <typename... Pairs>
+CXmContainerBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmContainerBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmDrawingAreaBuilder :
+    public CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
+        CXmDrawingArea,
+        Pairs...>
+{
+public:
+    using CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
+        CXmDrawingArea,
+        Pairs...>::CXmDrawingAreaBuilderImpl;
+
+    CXmDrawingArea build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmDrawingArea(XmCreateDrawingArea(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmDrawingAreaBuilder(Widget, const char*) -> CXmDrawingAreaBuilder<>;
+template <typename... Pairs>
+CXmDrawingAreaBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmDrawingAreaBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmDropDownBuilder :
+    public CXmDropDownBuilderImpl<CXmDropDownBuilder, CXmDropDown, Pairs...>
+{
+public:
+    using CXmDropDownBuilderImpl<CXmDropDownBuilder, CXmDropDown, Pairs...>::
+        CXmDropDownBuilderImpl;
+
+    CXmDropDown build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmDropDown(XmCreateDropDown(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmDropDownBuilder(Widget, const char*) -> CXmDropDownBuilder<>;
+template <typename... Pairs>
+CXmDropDownBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmDropDownBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmFrameBuilder :
+    public CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Pairs...>
+{
+public:
+    using CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Pairs...>::
+        CXmFrameBuilderImpl;
+
+    CXmFrame build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmFrame(XmCreateFrame(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmFrameBuilder(Widget, const char*) -> CXmFrameBuilder<>;
+template <typename... Pairs>
+CXmFrameBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmFrameBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmIconBoxBuilder :
+    public CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Pairs...>
+{
+public:
+    using CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Pairs...>::
+        CXmIconBoxBuilderImpl;
+
+    CXmIconBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmIconBox(XmCreateIconBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmIconBoxBuilder(Widget, const char*) -> CXmIconBoxBuilder<>;
+template <typename... Pairs>
+CXmIconBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmIconBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmMultiListBuilder :
+    public CXmMultiListBuilderImpl<CXmMultiListBuilder, CXmMultiList, Pairs...>
+{
+public:
+    using CXmMultiListBuilderImpl<CXmMultiListBuilder, CXmMultiList, Pairs...>::
+        CXmMultiListBuilderImpl;
+
+    CXmMultiList build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMultiList(XmCreateMultiList(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmMultiListBuilder(Widget, const char*) -> CXmMultiListBuilder<>;
+template <typename... Pairs>
+CXmMultiListBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmMultiListBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmNotebookBuilder :
+    public CXmNotebookBuilderImpl<CXmNotebookBuilder, CXmNotebook, Pairs...>
+{
+public:
+    using CXmNotebookBuilderImpl<CXmNotebookBuilder, CXmNotebook, Pairs...>::
+        CXmNotebookBuilderImpl;
+
+    CXmNotebook build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmNotebook(XmCreateNotebook(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmNotebookBuilder(Widget, const char*) -> CXmNotebookBuilder<>;
+template <typename... Pairs>
+CXmNotebookBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmNotebookBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmRowColumnBuilder :
+    public CXmRowColumnBuilderImpl<CXmRowColumnBuilder, CXmRowColumn, Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmRowColumnBuilder, CXmRowColumn, Pairs...>::
+        CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreateRowColumn(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmRowColumnBuilder(Widget, const char*) -> CXmRowColumnBuilder<>;
+template <typename... Pairs>
+CXmRowColumnBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmRowColumnBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmMenuBarBuilder :
+    public CXmRowColumnBuilderImpl<CXmMenuBarBuilder, CXmRowColumn, Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmMenuBarBuilder, CXmRowColumn, Pairs...>::
+        CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreateMenuBar(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmMenuBarBuilder(Widget, const char*) -> CXmMenuBarBuilder<>;
+template <typename... Pairs>
+CXmMenuBarBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmMenuBarBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmOptionMenuBuilder :
+    public CXmRowColumnBuilderImpl<CXmOptionMenuBuilder, CXmRowColumn, Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
+        CXmRowColumn,
+        Pairs...>::CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreateOptionMenu(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmOptionMenuBuilder(Widget, const char*) -> CXmOptionMenuBuilder<>;
+template <typename... Pairs>
+CXmOptionMenuBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmOptionMenuBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmPopupMenuBuilder :
+    public CXmRowColumnBuilderImpl<CXmPopupMenuBuilder, CXmRowColumn, Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmPopupMenuBuilder, CXmRowColumn, Pairs...>::
+        CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreatePopupMenu(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmPopupMenuBuilder(Widget, const char*) -> CXmPopupMenuBuilder<>;
+template <typename... Pairs>
+CXmPopupMenuBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmPopupMenuBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmPulldownMenuBuilder :
+    public CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
+        CXmRowColumn,
+        Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
+        CXmRowColumn,
+        Pairs...>::CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreatePulldownMenu(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmPulldownMenuBuilder(Widget, const char*) -> CXmPulldownMenuBuilder<>;
+template <typename... Pairs>
+CXmPulldownMenuBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmPulldownMenuBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmRadioBoxBuilder :
+    public CXmRowColumnBuilderImpl<CXmRadioBoxBuilder, CXmRowColumn, Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmRadioBoxBuilder, CXmRowColumn, Pairs...>::
+        CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreateRadioBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmRadioBoxBuilder(Widget, const char*) -> CXmRadioBoxBuilder<>;
+template <typename... Pairs>
+CXmRadioBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmRadioBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmWorkAreaBuilder :
+    public CXmRowColumnBuilderImpl<CXmWorkAreaBuilder, CXmRowColumn, Pairs...>
+{
+public:
+    using CXmRowColumnBuilderImpl<CXmWorkAreaBuilder, CXmRowColumn, Pairs...>::
+        CXmRowColumnBuilderImpl;
+
+    CXmRowColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmRowColumn(XmCreateWorkArea(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmWorkAreaBuilder(Widget, const char*) -> CXmWorkAreaBuilder<>;
+template <typename... Pairs>
+CXmWorkAreaBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmWorkAreaBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmScaleBuilder :
+    public CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Pairs...>
+{
+public:
+    using CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Pairs...>::
+        CXmScaleBuilderImpl;
+
+    CXmScale build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmScale(XmCreateScale(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmScaleBuilder(Widget, const char*) -> CXmScaleBuilder<>;
+template <typename... Pairs>
+CXmScaleBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmScaleBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmScrolledWindowBuilder :
+    public CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
+        CXmScrolledWindow,
+        Pairs...>
+{
+public:
+    using CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
+        CXmScrolledWindow,
+        Pairs...>::CXmScrolledWindowBuilderImpl;
+
+    CXmScrolledWindow build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmScrolledWindow(XmCreateScrolledWindow(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmScrolledWindowBuilder(Widget, const char*) -> CXmScrolledWindowBuilder<>;
+template <typename... Pairs>
+CXmScrolledWindowBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmScrolledWindowBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmSpinBoxBuilder :
+    public CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Pairs...>
+{
+public:
+    using CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Pairs...>::
+        CXmSpinBoxBuilderImpl;
+
+    CXmSpinBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSpinBox(XmCreateSpinBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmSpinBoxBuilder(Widget, const char*) -> CXmSpinBoxBuilder<>;
+template <typename... Pairs>
+CXmSpinBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmSpinBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmTabBoxBuilder :
+    public CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Pairs...>
+{
+public:
+    using CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Pairs...>::
+        CXmTabBoxBuilderImpl;
+
+    CXmTabBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmTabBox(XmCreateTabBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmTabBoxBuilder(Widget, const char*) -> CXmTabBoxBuilder<>;
+template <typename... Pairs>
+CXmTabBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmTabBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmIconHeaderBuilder :
+    public CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
+        CXmIconHeader,
+        Pairs...>
+{
+public:
+    using CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
+        CXmIconHeader,
+        Pairs...>::CXmIconHeaderBuilderImpl;
+
+    CXmIconHeader build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmIconHeader(XmCreateIconHeader(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmIconHeaderBuilder(Widget, const char*) -> CXmIconHeaderBuilder<>;
+template <typename... Pairs>
+CXmIconHeaderBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmIconHeaderBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmCascadeButtonGadgetBuilder :
+    public CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
+        CXmCascadeButtonGadget,
+        Pairs...>
+{
+public:
+    using CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
+        CXmCascadeButtonGadget,
+        Pairs...>::CXmCascadeButtonGadgetBuilderImpl;
+
+    CXmCascadeButtonGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmCascadeButtonGadget(XmCreateCascadeButtonGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmCascadeButtonGadgetBuilder(Widget, const char*)
+    -> CXmCascadeButtonGadgetBuilder<>;
+template <typename... Pairs>
+CXmCascadeButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmCascadeButtonGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmPushButtonGadgetBuilder :
+    public CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
+        CXmPushButtonGadget,
+        Pairs...>
+{
+public:
+    using CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
+        CXmPushButtonGadget,
+        Pairs...>::CXmPushButtonGadgetBuilderImpl;
+
+    CXmPushButtonGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmPushButtonGadget(XmCreatePushButtonGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmPushButtonGadgetBuilder(Widget, const char*) -> CXmPushButtonGadgetBuilder<>;
+template <typename... Pairs>
+CXmPushButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmPushButtonGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmToggleButtonGadgetBuilder :
+    public CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
+        CXmToggleButtonGadget,
+        Pairs...>
+{
+public:
+    using CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
+        CXmToggleButtonGadget,
+        Pairs...>::CXmToggleButtonGadgetBuilderImpl;
+
+    CXmToggleButtonGadget build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmToggleButtonGadget(XmCreateToggleButtonGadget(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmToggleButtonGadgetBuilder(Widget, const char*)
+    -> CXmToggleButtonGadgetBuilder<>;
+template <typename... Pairs>
+CXmToggleButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmToggleButtonGadgetBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmCascadeButtonBuilder :
+    public CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
+        CXmCascadeButton,
+        Pairs...>
+{
+public:
+    using CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
+        CXmCascadeButton,
+        Pairs...>::CXmCascadeButtonBuilderImpl;
+
+    CXmCascadeButton build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmCascadeButton(XmCreateCascadeButton(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmCascadeButtonBuilder(Widget, const char*) -> CXmCascadeButtonBuilder<>;
+template <typename... Pairs>
+CXmCascadeButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmCascadeButtonBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmDrawnButtonBuilder :
+    public CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
+        CXmDrawnButton,
+        Pairs...>
+{
+public:
+    using CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
+        CXmDrawnButton,
+        Pairs...>::CXmDrawnButtonBuilderImpl;
+
+    CXmDrawnButton build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmDrawnButton(XmCreateDrawnButton(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmDrawnButtonBuilder(Widget, const char*) -> CXmDrawnButtonBuilder<>;
+template <typename... Pairs>
+CXmDrawnButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmDrawnButtonBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmPushButtonBuilder :
+    public CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
+        CXmPushButton,
+        Pairs...>
+{
+public:
+    using CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
+        CXmPushButton,
+        Pairs...>::CXmPushButtonBuilderImpl;
+
+    CXmPushButton build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmPushButton(XmCreatePushButton(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmPushButtonBuilder(Widget, const char*) -> CXmPushButtonBuilder<>;
+template <typename... Pairs>
+CXmPushButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmPushButtonBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmToggleButtonBuilder :
+    public CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
+        CXmToggleButton,
+        Pairs...>
+{
+public:
+    using CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
+        CXmToggleButton,
+        Pairs...>::CXmToggleButtonBuilderImpl;
+
+    CXmToggleButton build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmToggleButton(XmCreateToggleButton(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmToggleButtonBuilder(Widget, const char*) -> CXmToggleButtonBuilder<>;
+template <typename... Pairs>
+CXmToggleButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmToggleButtonBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmColumnBuilder :
+    public CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Pairs...>
+{
+public:
+    using CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Pairs...>::
+        CXmColumnBuilderImpl;
+
+    CXmColumn build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmColumn(XmCreateColumn(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmColumnBuilder(Widget, const char*) -> CXmColumnBuilder<>;
+template <typename... Pairs>
+CXmColumnBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmColumnBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmFormBuilder :
+    public CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Pairs...>
+{
+public:
+    using CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Pairs...>::
+        CXmFormBuilderImpl;
+
+    CXmForm build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmForm(XmCreateForm(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmFormBuilder(Widget, const char*) -> CXmFormBuilder<>;
+template <typename... Pairs>
+CXmFormBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmFormBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmFormDialogBuilder :
+    public CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Pairs...>
+{
+public:
+    using CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Pairs...>::
+        CXmFormBuilderImpl;
+
+    CXmForm build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmForm(XmCreateFormDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmFormDialogBuilder(Widget, const char*) -> CXmFormDialogBuilder<>;
+template <typename... Pairs>
+CXmFormDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmFormDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmMessageBoxBuilder :
+    public CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateMessageBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmMessageBoxBuilder(Widget, const char*) -> CXmMessageBoxBuilder<>;
+template <typename... Pairs>
+CXmMessageBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmMessageBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmErrorDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateErrorDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmErrorDialogBuilder(Widget, const char*) -> CXmErrorDialogBuilder<>;
+template <typename... Pairs>
+CXmErrorDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmErrorDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmInformationDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateInformationDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmInformationDialogBuilder(Widget, const char*)
+    -> CXmInformationDialogBuilder<>;
+template <typename... Pairs>
+CXmInformationDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmInformationDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmMessageDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateMessageDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmMessageDialogBuilder(Widget, const char*) -> CXmMessageDialogBuilder<>;
+template <typename... Pairs>
+CXmMessageDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmMessageDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmQuestionDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateQuestionDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmQuestionDialogBuilder(Widget, const char*) -> CXmQuestionDialogBuilder<>;
+template <typename... Pairs>
+CXmQuestionDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmQuestionDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmTemplateDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateTemplateDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmTemplateDialogBuilder(Widget, const char*) -> CXmTemplateDialogBuilder<>;
+template <typename... Pairs>
+CXmTemplateDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmTemplateDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmWarningDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateWarningDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmWarningDialogBuilder(Widget, const char*) -> CXmWarningDialogBuilder<>;
+template <typename... Pairs>
+CXmWarningDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmWarningDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmWorkingDialogBuilder :
+    public CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
+        CXmMessageBox,
+        Pairs...>
+{
+public:
+    using CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
+        CXmMessageBox,
+        Pairs...>::CXmMessageBoxBuilderImpl;
+
+    CXmMessageBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMessageBox(XmCreateWorkingDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmWorkingDialogBuilder(Widget, const char*) -> CXmWorkingDialogBuilder<>;
+template <typename... Pairs>
+CXmWorkingDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmWorkingDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmSelectionBoxBuilder :
+    public CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
+        CXmSelectionBox,
+        Pairs...>
+{
+public:
+    using CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
+        CXmSelectionBox,
+        Pairs...>::CXmSelectionBoxBuilderImpl;
+
+    CXmSelectionBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSelectionBox(XmCreateSelectionBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmSelectionBoxBuilder(Widget, const char*) -> CXmSelectionBoxBuilder<>;
+template <typename... Pairs>
+CXmSelectionBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmSelectionBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmPromptDialogBuilder :
+    public CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
+        CXmSelectionBox,
+        Pairs...>
+{
+public:
+    using CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
+        CXmSelectionBox,
+        Pairs...>::CXmSelectionBoxBuilderImpl;
+
+    CXmSelectionBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSelectionBox(XmCreatePromptDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmPromptDialogBuilder(Widget, const char*) -> CXmPromptDialogBuilder<>;
+template <typename... Pairs>
+CXmPromptDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmPromptDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmSelectionDialogBuilder :
+    public CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
+        CXmSelectionBox,
+        Pairs...>
+{
+public:
+    using CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
+        CXmSelectionBox,
+        Pairs...>::CXmSelectionBoxBuilderImpl;
+
+    CXmSelectionBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSelectionBox(XmCreateSelectionDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmSelectionDialogBuilder(Widget, const char*) -> CXmSelectionDialogBuilder<>;
+template <typename... Pairs>
+CXmSelectionDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmSelectionDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmTabStackBuilder :
+    public CXmTabStackBuilderImpl<CXmTabStackBuilder, CXmTabStack, Pairs...>
+{
+public:
+    using CXmTabStackBuilderImpl<CXmTabStackBuilder, CXmTabStack, Pairs...>::
+        CXmTabStackBuilderImpl;
+
+    CXmTabStack build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmTabStack(XmCreateTabStack(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmTabStackBuilder(Widget, const char*) -> CXmTabStackBuilder<>;
+template <typename... Pairs>
+CXmTabStackBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmTabStackBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmOutlineBuilder :
+    public CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Pairs...>
+{
+public:
+    using CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Pairs...>::
+        CXmOutlineBuilderImpl;
+
+    CXmOutline build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmOutline(XmCreateOutline(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmOutlineBuilder(Widget, const char*) -> CXmOutlineBuilder<>;
+template <typename... Pairs>
+CXmOutlineBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmOutlineBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmTreeBuilder :
+    public CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Pairs...>
+{
+public:
+    using CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Pairs...>::
+        CXmTreeBuilderImpl;
+
+    CXmTree build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmTree(XmCreateTree(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmTreeBuilder(Widget, const char*) -> CXmTreeBuilder<>;
+template <typename... Pairs>
+CXmTreeBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmTreeBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmMainWindowBuilder :
+    public CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
+        CXmMainWindow,
+        Pairs...>
+{
+public:
+    using CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
+        CXmMainWindow,
+        Pairs...>::CXmMainWindowBuilderImpl;
+
+    CXmMainWindow build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmMainWindow(XmCreateMainWindow(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmMainWindowBuilder(Widget, const char*) -> CXmMainWindowBuilder<>;
+template <typename... Pairs>
+CXmMainWindowBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmMainWindowBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmSimpleSpinBoxBuilder :
+    public CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
+        CXmSimpleSpinBox,
+        Pairs...>
+{
+public:
+    using CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
+        CXmSimpleSpinBox,
+        Pairs...>::CXmSimpleSpinBoxBuilderImpl;
+
+    CXmSimpleSpinBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmSimpleSpinBox(XmCreateSimpleSpinBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmSimpleSpinBoxBuilder(Widget, const char*) -> CXmSimpleSpinBoxBuilder<>;
+template <typename... Pairs>
+CXmSimpleSpinBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmSimpleSpinBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmCommandBuilder :
+    public CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Pairs...>
+{
+public:
+    using CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Pairs...>::
+        CXmCommandBuilderImpl;
+
+    CXmCommand build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmCommand(XmCreateCommand(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmCommandBuilder(Widget, const char*) -> CXmCommandBuilder<>;
+template <typename... Pairs>
+CXmCommandBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmCommandBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmCommandDialogBuilder :
+    public CXmCommandBuilderImpl<CXmCommandDialogBuilder, CXmCommand, Pairs...>
+{
+public:
+    using CXmCommandBuilderImpl<CXmCommandDialogBuilder, CXmCommand, Pairs...>::
+        CXmCommandBuilderImpl;
+
+    CXmCommand build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmCommand(XmCreateCommandDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmCommandDialogBuilder(Widget, const char*) -> CXmCommandDialogBuilder<>;
+template <typename... Pairs>
+CXmCommandDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmCommandDialogBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmFileSelectionBoxBuilder :
+    public CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
+        CXmFileSelectionBox,
+        Pairs...>
+{
+public:
+    using CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
+        CXmFileSelectionBox,
+        Pairs...>::CXmFileSelectionBoxBuilderImpl;
+
+    CXmFileSelectionBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmFileSelectionBox(XmCreateFileSelectionBox(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmFileSelectionBoxBuilder(Widget, const char*) -> CXmFileSelectionBoxBuilder<>;
+template <typename... Pairs>
+CXmFileSelectionBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmFileSelectionBoxBuilder<Pairs...>;
+
+template <typename... Pairs>
+class CXmFileSelectionDialogBuilder :
+    public CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
+        CXmFileSelectionBox,
+        Pairs...>
+{
+public:
+    using CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
+        CXmFileSelectionBox,
+        Pairs...>::CXmFileSelectionBoxBuilderImpl;
+
+    CXmFileSelectionBox build()
+    {
+        auto arglist = this->buildArgList();
+        return CXmFileSelectionBox(XmCreateFileSelectionDialog(this->_parent,
+            const_cast<char*>(this->_name),
+            arglist.data(),
+            static_cast<Cardinal>(arglist.size())));
+    }
+};
+
+CXmFileSelectionDialogBuilder(Widget, const char*)
+    -> CXmFileSelectionDialogBuilder<>;
+template <typename... Pairs>
+CXmFileSelectionDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
+    -> CXmFileSelectionDialogBuilder<Pairs...>;

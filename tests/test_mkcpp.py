@@ -94,8 +94,8 @@ class WidgetClassesTest(unittest.TestCase):
             }},
         }})
         builder = header.split("class CChildBuilderImpl", 1)[1]
-        self.assertIn("CWidgetBuilderBase<CChildBuilderImpl, CWidgetClassT, WidgetClassP, Pairs...>", builder)
-        self.assertIn("using CChildBuilder = CChildBuilderImpl<CChild, &childClass>;", builder)
+        self.assertIn("CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>", builder)
+        self.assertNotIn("using CChildBuilder", builder)
         self.assertIn("auto setWidth(int value) const", builder)
         self.assertIn("auto setValue(char * value) const", builder)
         self.assertNotIn("setValue(int value)", builder)
@@ -103,6 +103,26 @@ class WidgetClassesTest(unittest.TestCase):
         self.assertIn('return this->set("value", value);', builder)
         self.assertNotIn("setDestroyCallback", builder)
         self.assertNotIn("setUnresolved", builder)
+
+    def test_constructor_builders_are_stubs_inheriting_widget_builder(self):
+        header = self.generate_header({"widgets": {
+            "containerClass": {"name": "XmContainer", "constructors": {
+                "XmCreateContainer": {"name": "Container"},
+                "XmCreateContainerDialog": {"name": "ContainerDialog"},
+            }},
+        }})
+        self.assertIn("class CXmContainerBuilder : public CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Pairs...>", header)
+        self.assertIn("class CXmContainerDialogBuilder : public CXmContainerBuilderImpl<CXmContainerDialogBuilder, CXmContainer, Pairs...>", header)
+        self.assertNotIn("WidgetClassP", header)
+        dialog = header.split("class CXmContainerDialogBuilder", 1)[1]
+        self.assertIn("::CXmContainerBuilderImpl;", dialog)
+        self.assertNotIn("using CXmContainerBuilderBase", header)
+        self.assertIn("CXmContainerDialogBuilder(Widget, const char*) -> CXmContainerDialogBuilder<>;", dialog)
+        self.assertIn("CXmContainer build()", dialog)
+        self.assertIn("auto arglist = this->buildArgList();", dialog)
+        self.assertIn("return CXmContainer(XmCreateContainerDialog(this->_parent,", dialog)
+        self.assertNotIn("setWidth", dialog)
+        self.assertEqual(header.count("class CXmContainerBuilder :"), 1)
 
 
 if __name__ == "__main__":

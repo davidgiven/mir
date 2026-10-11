@@ -169,9 +169,8 @@ public:
     }
 };
 
-template <template <typename, WidgetClass*, typename...> class Chain,
+template <template <typename...> class Derived,
     typename CWidgetClassT,
-    WidgetClass* WidgetClassP,
     typename... Args>
 class CWidgetBuilderBase
 {
@@ -182,7 +181,7 @@ public:
     {
     }
 
-    // Public so derived classes can construct a Chain from a tuple.
+    // Public so derived builders can construct the next specialization.
     explicit CWidgetBuilderBase(
         Widget parent, const char* name, std::tuple<Args...> args):
         _parent(parent),
@@ -191,12 +190,12 @@ public:
     {
     }
 
-    // Shared helper: appends one key/value pair and returns the next Chain
+    // Shared helper: appends one key/value pair and returns the next Derived
     // type.
     template <typename K, typename V>
-    Chain<CWidgetClassT, WidgetClassP, Args..., K, V> set(K key, V value) const
+    Derived<Args..., K, V> set(K key, V value) const
     {
-        return Chain<CWidgetClassT, WidgetClassP, Args..., K, V>(_parent,
+        return Derived<Args..., K, V>(_parent,
             _name,
             std::tuple_cat(_pairs, std::make_tuple(key, value)));
     }
@@ -215,14 +214,6 @@ public:
         }(std::make_index_sequence<sizeof...(Args) / 2>{});
     }
 
-    CWidgetClassT build()
-    {
-        auto arglist = buildArgList();
-        return CWidgetClassT(XtCreateWidget(this->_name,
-            *WidgetClassP, this->_parent, arglist.data(),
-            static_cast<Cardinal>(arglist.size())));
-    }
-
 public:
     Widget _parent;
     const char* _name;
@@ -230,31 +221,3 @@ public:
 };
 
 #include "cmotif_impl.h"
-
-class CXmMenuBarBuilder : public CXmRowColumnBuilder
-{
-public:
-    using CXmRowColumnBuilder::CXmRowColumnBuilder;
-
-    CXmRowColumn build()
-    {
-        auto arglist = this->buildArgList();
-        return CXmRowColumn(XmCreateMenuBar(this->_parent,
-            (char*)this->_name, arglist.data(),
-            static_cast<Cardinal>(arglist.size())));
-    }
-};
-
-class CXmPulldownMenuBuilder : public CXmRowColumnBuilder
-{
-public:
-    using CXmRowColumnBuilder::CXmRowColumnBuilder;
-
-    CXmRowColumn build()
-    {
-        auto arglist = this->buildArgList();
-        return CXmRowColumn(XmCreatePulldownMenu(this->_parent,
-            (char*)this->_name, arglist.data(),
-            static_cast<Cardinal>(arglist.size())));
-    }
-};

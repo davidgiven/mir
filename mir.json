@@ -1049,6 +1049,7 @@
   },
   "widgets": {
     "vendorShellWidgetClass": {
+      "constructors": {},
       "header": "Xm/VendorS.h",
       "methods": {},
       "name": "VendorShell",
@@ -1218,6 +1219,11 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/VendorS.c"
     },
     "xmArrowButtonGadgetClass": {
+      "constructors": {
+        "XmCreateArrowButtonGadget": {
+          "name": "ArrowButtonGadget"
+        }
+      },
       "header": "Xm/ArrowBG.h",
       "methods": {},
       "name": "XmArrowButtonGadget",
@@ -1325,6 +1331,11 @@
       "superclass": "xmGadgetClass"
     },
     "xmArrowButtonWidgetClass": {
+      "constructors": {
+        "XmCreateArrowButton": {
+          "name": "ArrowButton"
+        }
+      },
       "header": "Xm/ArrowB.h",
       "methods": {},
       "name": "XmArrowButton",
@@ -1376,6 +1387,14 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmBulletinBoardWidgetClass": {
+      "constructors": {
+        "XmCreateBulletinBoard": {
+          "name": "BulletinBoard"
+        },
+        "XmCreateBulletinBoardDialog": {
+          "name": "BulletinBoardDialog"
+        }
+      },
       "header": "Xm/BulletinB.h",
       "methods": {},
       "name": "XmBulletinBoard",
@@ -1553,6 +1572,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmButtonBoxWidgetClass": {
+      "constructors": {
+        "XmCreateButtonBox": {
+          "name": "ButtonBox"
+        }
+      },
       "header": "Xm/ButtonBox.h",
       "methods": {},
       "name": "XmButtonBox",
@@ -1604,6 +1628,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmCascadeButtonGadgetClass": {
+      "constructors": {
+        "XmCreateCascadeButtonGadget": {
+          "name": "CascadeButtonGadget"
+        }
+      },
       "header": "Xm/CascadeBG.h",
       "methods": {
         "XmCascadeButtonGadgetHighlight": {
@@ -1666,6 +1695,11 @@
       "superclass": "xmLabelGadgetClass"
     },
     "xmCascadeButtonWidgetClass": {
+      "constructors": {
+        "XmCreateCascadeButton": {
+          "name": "CascadeButton"
+        }
+      },
       "header": "Xm/CascadeB.h",
       "methods": {
         "XmCascadeButtonGadgetHighlight": {
@@ -1759,6 +1793,7 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmClipWindowWidgetClass": {
+      "constructors": {},
       "header": "Xm/ClipWindow.h",
       "methods": {},
       "name": "XmClipWindow",
@@ -1767,6 +1802,7 @@
       "superclass": "xmDrawingAreaWidgetClass"
     },
     "xmColorObjClass": {
+      "constructors": {},
       "header": "Xm/ColorObj.h",
       "methods": {},
       "name": "XmColorObj",
@@ -1852,6 +1888,11 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/ColorObj.c"
     },
     "xmColorSelectorWidgetClass": {
+      "constructors": {
+        "XmCreateColorSelector": {
+          "name": "ColorSelector"
+        }
+      },
       "header": "Xm/ColorS.h",
       "methods": {},
       "name": "XmColorSelector",
@@ -1931,6 +1972,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmColumnWidgetClass": {
+      "constructors": {
+        "XmCreateColumn": {
+          "name": "Column"
+        }
+      },
       "header": "Xm/Column.h",
       "methods": {},
       "name": "XmColumn",
@@ -2003,6 +2049,17 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmComboBoxWidgetClass": {
+      "constructors": {
+        "XmCreateComboBox": {
+          "name": "ComboBox"
+        },
+        "XmCreateDropDownComboBox": {
+          "name": "DropDownComboBox"
+        },
+        "XmCreateDropDownList": {
+          "name": "DropDownList"
+        }
+      },
       "header": "Xm/ComboBox.h",
       "methods": {
         "XmComboBoxAddItem": {
@@ -2220,6 +2277,14 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmCommandWidgetClass": {
+      "constructors": {
+        "XmCreateCommand": {
+          "name": "Command"
+        },
+        "XmCreateCommandDialog": {
+          "name": "CommandDialog"
+        }
+      },
       "header": "Xm/Command.h",
       "methods": {
         "XmCommandAppendValue": {
@@ -2354,6 +2419,11 @@
       "superclass": "xmSelectionBoxWidgetClass"
     },
     "xmContainerWidgetClass": {
+      "constructors": {
+        "XmCreateContainer": {
+          "name": "Container"
+        }
+      },
       "header": "Xm/Container.h",
       "methods": {
         "XmContainerCopy": {
@@ -2703,6 +2773,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmDesktopClass": {
+      "constructors": {},
       "header": "Xm/Desktop.h",
       "methods": {},
       "name": "Desktop",
@@ -2726,6 +2797,7 @@
       "superclass": "xmExtObjectClass"
     },
     "xmDesktopObjectClass": {
+      "constructors": {},
       "header": "Xm/Desktop.h",
       "methods": {},
       "name": "Desktop",
@@ -2749,6 +2821,7 @@
       "superclass": "xmExtObjectClass"
     },
     "xmDialogShellExtObjectClass": {
+      "constructors": {},
       "header": "Xm/DialogSE.h",
       "methods": {},
       "name": "XmDialogShell",
@@ -2765,6 +2838,11 @@
       "superclass": "xmVendorShellExtObjectClass"
     },
     "xmDialogShellWidgetClass": {
+      "constructors": {
+        "XmCreateDialogShell": {
+          "name": "DialogShell"
+        }
+      },
       "header": "Xm/DialogS.h",
       "methods": {},
       "name": "XmDialogShell",
@@ -2772,6 +2850,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/DialogS.c"
     },
     "xmDisplayClass": {
+      "constructors": {},
       "header": "Xm/Display.h",
       "methods": {},
       "name": "XmDisplay",
@@ -2941,6 +3020,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Display.c"
     },
     "xmDisplayObjectClass": {
+      "constructors": {},
       "header": "Xm/Display.h",
       "methods": {},
       "name": "XmDisplay",
@@ -3110,6 +3190,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Display.c"
     },
     "xmDragContextClass": {
+      "constructors": {},
       "header": "Xm/DragC.h",
       "methods": {},
       "name": "XmDragContext",
@@ -3328,6 +3409,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/DragC.c"
     },
     "xmDragOverShellWidgetClass": {
+      "constructors": {},
       "header": "Xm/DragOverS.h",
       "methods": {},
       "name": "XmDragOverShell",
@@ -3386,6 +3468,11 @@
       "superclass": "vendorShellWidgetClass"
     },
     "xmDrawingAreaWidgetClass": {
+      "constructors": {
+        "XmCreateDrawingArea": {
+          "name": "DrawingArea"
+        }
+      },
       "header": "Xm/DrawingA.h",
       "methods": {},
       "name": "XmDrawingArea",
@@ -3451,6 +3538,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmDrawnButtonWidgetClass": {
+      "constructors": {
+        "XmCreateDrawnButton": {
+          "name": "DrawnButton"
+        }
+      },
       "header": "Xm/DrawnB.h",
       "methods": {},
       "name": "XmDrawnButton",
@@ -3544,6 +3636,11 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmDropDownWidgetClass": {
+      "constructors": {
+        "XmCreateDropDown": {
+          "name": "DropDown"
+        }
+      },
       "header": "Xm/DropDown.h",
       "methods": {
         "XmDropDownGetArrow": {
@@ -3734,6 +3831,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmDropSiteManagerObjectClass": {
+      "constructors": {},
       "header": "Xm/DropSMgr.h",
       "methods": {},
       "name": "XmDropSiteManager",
@@ -3763,6 +3861,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/DropSMgr.c"
     },
     "xmDropTransferObjectClass": {
+      "constructors": {},
       "header": "Xm/DropTrans.h",
       "methods": {
         "XmDropTransferAdd": {
@@ -3835,6 +3934,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/DropTrans.c"
     },
     "xmExtObjectClass": {
+      "constructors": {},
       "header": "Xm/ExtObject.h",
       "methods": {},
       "name": "dynamic",
@@ -3857,6 +3957,14 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/ExtObject.c"
     },
     "xmFileSelectionBoxWidgetClass": {
+      "constructors": {
+        "XmCreateFileSelectionBox": {
+          "name": "FileSelectionBox"
+        },
+        "XmCreateFileSelectionDialog": {
+          "name": "FileSelectionDialog"
+        }
+      },
       "header": "Xm/FileSB.h",
       "methods": {
         "XmFileSelectionBoxGetChild": {
@@ -4045,6 +4153,14 @@
       "superclass": "xmSelectionBoxWidgetClass"
     },
     "xmFormWidgetClass": {
+      "constructors": {
+        "XmCreateForm": {
+          "name": "Form"
+        },
+        "XmCreateFormDialog": {
+          "name": "FormDialog"
+        }
+      },
       "header": "Xm/Form.h",
       "methods": {},
       "name": "XmForm",
@@ -4096,6 +4212,11 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmFrameWidgetClass": {
+      "constructors": {
+        "XmCreateFrame": {
+          "name": "Frame"
+        }
+      },
       "header": "Xm/Frame.h",
       "methods": {},
       "name": "XmFrame",
@@ -4133,6 +4254,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmGadgetClass": {
+      "constructors": {},
       "header": "Xm/Gadget.h",
       "methods": {},
       "name": "XmGadget",
@@ -4239,6 +4361,11 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Gadget.c"
     },
     "xmGrabShellWidgetClass": {
+      "constructors": {
+        "XmCreateGrabShell": {
+          "name": "GrabShell"
+        }
+      },
       "header": "Xm/GrabShell.h",
       "methods": {},
       "name": "XmGrabShell",
@@ -4339,6 +4466,7 @@
       "superclass": "vendorShellWidgetClass"
     },
     "xmHierarchyWidgetClass": {
+      "constructors": {},
       "header": "Xm/Hierarchy.h",
       "methods": {
         "XmHierarchyGetChildNodes": {
@@ -4443,6 +4571,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmI18ListWidgetClass": {
+      "constructors": {},
       "header": "Xm/I18List.h",
       "methods": {
         "XmI18ListDoSearch": {
@@ -4665,6 +4794,11 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmIconBoxWidgetClass": {
+      "constructors": {
+        "XmCreateIconBox": {
+          "name": "IconBox"
+        }
+      },
       "header": "Xm/IconBox.h",
       "methods": {
         "XmIconBoxIsCellEmpty": {
@@ -4735,6 +4869,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmIconButtonWidgetClass": {
+      "constructors": {
+        "XmCreateIconButton": {
+          "name": "IconButton"
+        }
+      },
       "header": "Xm/IconButton.h",
       "methods": {},
       "name": "XmIconButton",
@@ -4884,6 +5023,11 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmIconGadgetClass": {
+      "constructors": {
+        "XmCreateIconGadget": {
+          "name": "IconGadget"
+        }
+      },
       "header": "Xm/IconG.h",
       "methods": {},
       "name": "XmIconGadget",
@@ -4970,6 +5114,11 @@
       "superclass": "xmGadgetClass"
     },
     "xmIconHeaderClass": {
+      "constructors": {
+        "XmCreateIconHeader": {
+          "name": "IconHeader"
+        }
+      },
       "header": "Xm/IconH.h",
       "methods": {},
       "name": "XmIconHeader",
@@ -4986,6 +5135,11 @@
       "superclass": "xmIconGadgetClass"
     },
     "xmLabelGadgetClass": {
+      "constructors": {
+        "XmCreateLabelGadget": {
+          "name": "LabelGadget"
+        }
+      },
       "header": "Xm/LabelG.h",
       "methods": {},
       "name": "XmLabelGadget",
@@ -5107,6 +5261,11 @@
       "superclass": "xmGadgetClass"
     },
     "xmLabelWidgetClass": {
+      "constructors": {
+        "XmCreateLabel": {
+          "name": "Label"
+        }
+      },
       "header": "Xm/Label.h",
       "methods": {},
       "name": "XmLabel",
@@ -5298,6 +5457,14 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmListWidgetClass": {
+      "constructors": {
+        "XmCreateList": {
+          "name": "List"
+        },
+        "XmCreateScrolledList": {
+          "name": "ScrolledList"
+        }
+      },
       "header": "Xm/List.h",
       "methods": {
         "XmListAddItem": {
@@ -5998,6 +6165,11 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmMainWindowWidgetClass": {
+      "constructors": {
+        "XmCreateMainWindow": {
+          "name": "MainWindow"
+        }
+      },
       "header": "Xm/MainW.h",
       "methods": {
         "XmMainWindowSep1": {
@@ -6098,6 +6270,7 @@
       "superclass": "xmScrolledWindowWidgetClass"
     },
     "xmManagerWidgetClass": {
+      "constructors": {},
       "header": "Xm/Manager.h",
       "methods": {},
       "name": "XmManager",
@@ -6274,6 +6447,11 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Manager.c"
     },
     "xmMenuShellWidgetClass": {
+      "constructors": {
+        "XmCreateMenuShell": {
+          "name": "MenuShell"
+        }
+      },
       "header": "Xm/MenuShell.h",
       "methods": {},
       "name": "XmMenuShell",
@@ -6338,6 +6516,32 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/MenuShell.c"
     },
     "xmMessageBoxWidgetClass": {
+      "constructors": {
+        "XmCreateErrorDialog": {
+          "name": "ErrorDialog"
+        },
+        "XmCreateInformationDialog": {
+          "name": "InformationDialog"
+        },
+        "XmCreateMessageBox": {
+          "name": "MessageBox"
+        },
+        "XmCreateMessageDialog": {
+          "name": "MessageDialog"
+        },
+        "XmCreateQuestionDialog": {
+          "name": "QuestionDialog"
+        },
+        "XmCreateTemplateDialog": {
+          "name": "TemplateDialog"
+        },
+        "XmCreateWarningDialog": {
+          "name": "WarningDialog"
+        },
+        "XmCreateWorkingDialog": {
+          "name": "WorkingDialog"
+        }
+      },
       "header": "Xm/MessageB.h",
       "methods": {
         "XmMessageBoxGetChild": {
@@ -6435,6 +6639,11 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmMultiListWidgetClass": {
+      "constructors": {
+        "XmCreateMultiList": {
+          "name": "MultiList"
+        }
+      },
       "header": "Xm/MultiList.h",
       "methods": {
         "XmMultiListDeselectItems": {
@@ -6652,6 +6861,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmNotebookWidgetClass": {
+      "constructors": {
+        "XmCreateNotebook": {
+          "name": "Notebook"
+        }
+      },
       "header": "Xm/Notebook.h",
       "methods": {
         "XmNotebookGetPageInfo": {
@@ -6809,6 +7023,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmOutlineWidgetClass": {
+      "constructors": {
+        "XmCreateOutline": {
+          "name": "Outline"
+        }
+      },
       "header": "Xm/Outline.h",
       "methods": {},
       "name": "XmOutline",
@@ -6839,6 +7058,7 @@
       "superclass": "xmHierarchyWidgetClass"
     },
     "xmPrimitiveWidgetClass": {
+      "constructors": {},
       "header": "Xm/Primitive.h",
       "methods": {},
       "name": "XmPrimitive",
@@ -7022,6 +7242,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Primitive.c"
     },
     "xmProtocolObjectClass": {
+      "constructors": {},
       "header": "Xm/Protocols.h",
       "methods": {},
       "name": "protocol",
@@ -7045,6 +7266,11 @@
       "superclass": "xmExtObjectClass"
     },
     "xmPushButtonGadgetClass": {
+      "constructors": {
+        "XmCreatePushButtonGadget": {
+          "name": "PushButtonGadget"
+        }
+      },
       "header": "Xm/PushBG.h",
       "methods": {},
       "name": "XmPushButtonGadget",
@@ -7103,6 +7329,11 @@
       "superclass": "xmLabelGadgetClass"
     },
     "xmPushButtonWidgetClass": {
+      "constructors": {
+        "XmCreatePushButton": {
+          "name": "PushButton"
+        }
+      },
       "header": "Xm/PushB.h",
       "methods": {},
       "name": "XmPushButton",
@@ -7196,6 +7427,29 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmRowColumnWidgetClass": {
+      "constructors": {
+        "XmCreateMenuBar": {
+          "name": "MenuBar"
+        },
+        "XmCreateOptionMenu": {
+          "name": "OptionMenu"
+        },
+        "XmCreatePopupMenu": {
+          "name": "PopupMenu"
+        },
+        "XmCreatePulldownMenu": {
+          "name": "PulldownMenu"
+        },
+        "XmCreateRadioBox": {
+          "name": "RadioBox"
+        },
+        "XmCreateRowColumn": {
+          "name": "RowColumn"
+        },
+        "XmCreateWorkArea": {
+          "name": "WorkArea"
+        }
+      },
       "header": "Xm/RowColumn.h",
       "methods": {},
       "name": "XmRowColumn",
@@ -7492,6 +7746,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmScaleWidgetClass": {
+      "constructors": {
+        "XmCreateScale": {
+          "name": "Scale"
+        }
+      },
       "header": "Xm/Scale.h",
       "methods": {
         "XmScaleGetValue": {
@@ -7734,6 +7993,7 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmScreenClass": {
+      "constructors": {},
       "header": "Xm/Screen.h",
       "methods": {},
       "name": "XmScreen",
@@ -7889,6 +8149,7 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Screen.c"
     },
     "xmScreenObjectClass": {
+      "constructors": {},
       "header": "Xm/Screen.h",
       "methods": {},
       "name": "XmScreen",
@@ -8044,6 +8305,11 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/Screen.c"
     },
     "xmScrollBarWidgetClass": {
+      "constructors": {
+        "XmCreateScrollBar": {
+          "name": "ScrollBar"
+        }
+      },
       "header": "Xm/ScrollBar.h",
       "methods": {
         "XmScrollBarGetValues": {
@@ -8305,6 +8571,11 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmScrolledWindowWidgetClass": {
+      "constructors": {
+        "XmCreateScrolledWindow": {
+          "name": "ScrolledWindow"
+        }
+      },
       "header": "Xm/ScrolledW.h",
       "methods": {
         "XmScrolledWindowSetAreas": {
@@ -8431,6 +8702,17 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmSelectionBoxWidgetClass": {
+      "constructors": {
+        "XmCreatePromptDialog": {
+          "name": "PromptDialog"
+        },
+        "XmCreateSelectionBox": {
+          "name": "SelectionBox"
+        },
+        "XmCreateSelectionDialog": {
+          "name": "SelectionDialog"
+        }
+      },
       "header": "Xm/SelectioB.h",
       "methods": {
         "XmSelectionBoxGetChild": {
@@ -8591,6 +8873,11 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmSeparatorGadgetClass": {
+      "constructors": {
+        "XmCreateSeparatorGadget": {
+          "name": "SeparatorGadget"
+        }
+      },
       "header": "Xm/SeparatoG.h",
       "methods": {},
       "name": "XmSeparatorGadget",
@@ -8621,6 +8908,11 @@
       "superclass": "xmGadgetClass"
     },
     "xmSeparatorWidgetClass": {
+      "constructors": {
+        "XmCreateSeparator": {
+          "name": "Separator"
+        }
+      },
       "header": "Xm/Separator.h",
       "methods": {},
       "name": "XmSeparator",
@@ -8672,6 +8964,7 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmShellExtObjectClass": {
+      "constructors": {},
       "header": "Xm/ShellE.h",
       "methods": {},
       "name": "Shell",
@@ -8688,6 +8981,11 @@
       "superclass": "xmDesktopClass"
     },
     "xmSimpleSpinBoxWidgetClass": {
+      "constructors": {
+        "XmCreateSimpleSpinBox": {
+          "name": "SimpleSpinBox"
+        }
+      },
       "header": "Xm/SSpinB.h",
       "methods": {
         "XmSimpleSpinBoxAddItem": {
@@ -8837,6 +9135,7 @@
       "superclass": "xmSpinBoxWidgetClass"
     },
     "xmSlideContextWidgetClass": {
+      "constructors": {},
       "header": "Xm/SlideC.h",
       "methods": {},
       "name": "XmSlideContext",
@@ -8901,6 +9200,11 @@
       "sourcefile": "/.big/@big/src/motif/lib/Xm/SlideC.c"
     },
     "xmSpinBoxWidgetClass": {
+      "constructors": {
+        "XmCreateSpinBox": {
+          "name": "SpinBox"
+        }
+      },
       "header": "Xm/SpinB.h",
       "methods": {
         "XmSpinBoxValidatePosition": {
@@ -9005,6 +9309,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmTabBoxWidgetClass": {
+      "constructors": {
+        "XmCreateTabBox": {
+          "name": "TabBox"
+        }
+      },
       "header": "Xm/TabBox.h",
       "methods": {
         "XmTabBoxGetIndex": {
@@ -9257,6 +9566,11 @@
       "superclass": "xmManagerWidgetClass"
     },
     "xmTabCanvasWidgetClass": {
+      "constructors": {
+        "XmCreateTabBox": {
+          "name": "TabBox"
+        }
+      },
       "header": "Xm/TabBox.h",
       "methods": {},
       "name": "XiTabCanvas",
@@ -9265,6 +9579,11 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmTabStackWidgetClass": {
+      "constructors": {
+        "XmCreateTabStack": {
+          "name": "TabStack"
+        }
+      },
       "header": "Xm/TabStack.h",
       "methods": {
         "XmTabStackGetSelectedTab": {
@@ -9475,6 +9794,7 @@
       "superclass": "xmBulletinBoardWidgetClass"
     },
     "xmTearOffButtonWidgetClass": {
+      "constructors": {},
       "header": "Xm/TearOffB.h",
       "methods": {},
       "name": "XmTearOffButton",
@@ -9512,6 +9832,14 @@
       "superclass": "xmPushButtonWidgetClass"
     },
     "xmTextWidgetClass": {
+      "constructors": {
+        "XmCreateScrolledText": {
+          "name": "ScrolledText"
+        },
+        "XmCreateText": {
+          "name": "Text"
+        }
+      },
       "header": "Xm/Text.h",
       "methods": {
         "XmTextClearSelection": {
@@ -10647,6 +10975,11 @@
       "superclass": "xmPrimitiveWidgetClass"
     },
     "xmToggleButtonGadgetClass": {
+      "constructors": {
+        "XmCreateToggleButtonGadget": {
+          "name": "ToggleButtonGadget"
+        }
+      },
       "header": "Xm/ToggleBG.h",
       "methods": {
         "XmToggleButtonGadgetGetState": {
@@ -10739,6 +11072,11 @@
       "superclass": "xmLabelGadgetClass"
     },
     "xmToggleButtonWidgetClass": {
+      "constructors": {
+        "XmCreateToggleButton": {
+          "name": "ToggleButton"
+        }
+      },
       "header": "Xm/ToggleB.h",
       "methods": {
         "XmToggleButtonGadgetGetState": {
@@ -10955,6 +11293,11 @@
       "superclass": "xmLabelWidgetClass"
     },
     "xmTreeWidgetClass": {
+      "constructors": {
+        "XmCreateTree": {
+          "name": "Tree"
+        }
+      },
       "header": "Xm/Tree.h",
       "methods": {},
       "name": "XmTree",
@@ -11013,6 +11356,7 @@
       "superclass": "xmHierarchyWidgetClass"
     },
     "xmWorldClass": {
+      "constructors": {},
       "header": "Xm/Obso2_0.h",
       "methods": {},
       "name": "World",

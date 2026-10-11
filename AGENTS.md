@@ -33,6 +33,13 @@ If a directory does not yet exist, create it following this layout.
 
 ## Testing
 
+Run `make` (or `make mir.json`) to rebuild the artifact on demand, and
+`make test` to run the test suite. Override `PYTHON`, `MOTIF_SOURCE`, or
+`MKMIR_ARGS` on the make command line as needed.
+Keep the Makefile's phony `test` target up to date whenever adding tests.
+Python tests named `test_*.py` under `tests/` are discovered automatically;
+add any tests requiring other runners to the target.
+
 Use `~/src/motif/lib/Xm` as the source tree when testing the Python extractor.
 From the repository root, run:
 

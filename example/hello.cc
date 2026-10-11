@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
         })
         .manageChild();
 
-    CXmPushButton::create(mainWindow, "button2")
+    auto button2 = CXmPushButton::create(mainWindow, "button2")
         .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
         .setShadowThickness(5)
         .setShowAsDefault(false)
@@ -55,5 +55,8 @@ int main(int argc, char* argv[])
         .manageChild();
 
     XtRealizeWidget(toplevel);
+
+    printf("button 2 width = %d\n", button2.getWidth());
+
     XtAppMainLoop(app);
 }

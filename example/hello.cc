@@ -3,8 +3,6 @@
 #include <Xm/RowColumn.h>
 #include <tuple>
 #include <utility>
-inline constexpr const char* FOO = "foo";
-inline constexpr const char* BAR = "bar";
 
 template <template <typename...> class Chain, typename... Args>
 class ResourceValuesBase
@@ -33,11 +31,13 @@ public:
 };
 
 template <typename... Pairs>
-class XmPushButtonResources : public ResourceValuesBase<XmPushButtonResources, Pairs...>
+class XmPushButtonResources :
+    public ResourceValuesBase<XmPushButtonResources, Pairs...>
 {
 public:
     XmPushButtonResources() = default;
-    using ResourceValuesBase<XmPushButtonResources, Pairs...>::ResourceValuesBase;
+    using ResourceValuesBase<XmPushButtonResources,
+        Pairs...>::ResourceValuesBase;
 
     auto withLabelString(XmString value) const
     {
@@ -46,8 +46,7 @@ public:
 
     auto withLabelString(const char* value) const
     {
-        return this->with(
-            XmNlabelString, XmStringCreateSimple((char*)value));
+        return this->with(XmNlabelString, XmStringCreateSimple((char*)value));
     }
 
     auto withShadowThickness(int value) const
@@ -59,23 +58,45 @@ public:
     {
         return this->with(XmNshowAsDefault, value);
     }
+};
 
-    auto withBar(const char* value) const
+template <typename Resources>
+class WrappedWidget
+{
+public:
+    WrappedWidget(Widget w): _widget(w) {}
+
+    operator Widget() const
     {
-        return this->with(BAR, value);
+        return _widget;
     }
+
+    WrappedWidget<Resources> setValues(const Resources& resources)
+    {
+        std::apply(
+            [&](const auto&... args)
+            {
+                XtVaSetValues(_widget, args..., nullptr);
+            },
+            resources._pairs);
+        return *this;
+    }
+
+private:
+    Widget _widget;
 };
 
 template <typename... Pairs>
-static Widget XmCreatePushButton(const char* name,
+static WrappedWidget<XmPushButtonResources<Pairs...>> XmCreatePushButton(
+    const char* name,
     Widget parent,
     const XmPushButtonResources<Pairs...>& resources)
 {
     return std::apply(
         [&](const auto&... args)
         {
-            return XmVaCreatePushButton(
-                parent, (char*)name, args..., nullptr);
+            return WrappedWidget<XmPushButtonResources<Pairs...>>(
+                XmVaCreatePushButton(parent, (char*)name, args..., nullptr));
         },
         resources._pairs);
 }
@@ -83,25 +104,25 @@ static Widget XmCreatePushButton(const char* name,
 int main(int argc, char* argv[])
 {
     XtAppContext app;
-    Widget toplevel, button1,button2;
 
-    toplevel =
+    auto toplevel =
         XtVaAppInitialize(&app, "HelloWorld", NULL, 0, &argc, argv, NULL, NULL);
 
-    Widget mainWindow = XtVaCreateManagedWidget(
+    auto mainWindow = XtVaCreateManagedWidget(
         "mainWindow", xmRowColumnWidgetClass, toplevel, NULL);
 
-    button1 = XmCreatePushButton("button",
+    auto button1 = XmCreatePushButton("button",
         mainWindow,
         XmPushButtonResources()
             .withLabelString("Hello, world!")
             .withShowAsDefault(true));
     XtManageChild(button1);
 
-    button2 = XmCreatePushButton("button2",
+    auto button2 = XmCreatePushButton("button2",
         mainWindow,
-        XmPushButtonResources()
-            .withLabelString("Button 2"));
+        XmPushButtonResources().withLabelString("Button 2"));
+    button2.setValues(
+        XmPushButtonResources().withLabelString("Updated Button 2"));
     XtManageChild(button2);
 
     XtRealizeWidget(toplevel);

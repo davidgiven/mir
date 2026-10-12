@@ -200,6 +200,20 @@ class CWidgetImpl : public CWidgetImplBase
 public:
     using CWidgetImplBase::CWidgetImplBase;
 
+    template <typename T>
+    Derived& set(const char* resourceName, T value)
+    {
+        XtVaSetValues(_widget, resourceName, value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+
+    template <typename T>
+    T get(const char* resourceName){
+        T value;
+        XtVaGetValues(_widget, resourceName, &value, nullptr);
+        return value;
+    }
+
     Derived& manageChild()
     {
         XtManageChild(_widget);

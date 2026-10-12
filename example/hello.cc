@@ -105,6 +105,15 @@ int main(int argc, char* argv[])
                     .build()
                     .manageChild();
 
+    Colormap colormap = layout.get<Colormap>(XtNcolormap);
+    XColor red{
+        .red = 65535, .green = 0, .blue = 0, .flags = DoRed | DoGreen | DoBlue};
+    if (!XAllocColor(XtDisplay(layout), colormap, &red))
+    {
+        fprintf(stderr, "Could not allocate red in the widget colormap\n");
+        return 1;
+    }
+
     CXmDrawingArea drawingArea =
         CXmDrawingAreaBuilder(layout, "drawingArea")
             .setLeftAttachment(XmATTACH_FORM)
@@ -130,7 +139,7 @@ int main(int argc, char* argv[])
 
                     XClearWindow(display, window);
                     CGC gc = CGCBuilder(display, window)
-                                 .setForeground(BlackPixel(display, 0))
+                                 .setForeground(red.pixel)
                                  .build();
                     gc.drawLine(0,
                         0,

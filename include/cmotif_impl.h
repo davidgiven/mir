@@ -267,11 +267,6 @@ class CVendorShell : public CVendorShellImpl<CVendorShell>
 {
 public:
     using CVendorShellImpl<CVendorShell>::CVendorShellImpl;
-    static CVendorShell create(Widget parent, const char* name)
-    {
-        return CVendorShell(
-            XtCreateWidget(name, vendorShellWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -548,11 +543,6 @@ class CXmGadget : public CXmGadgetImpl<CXmGadget>
 {
 public:
     using CXmGadgetImpl<CXmGadget>::CXmGadgetImpl;
-    static CXmGadget create(Widget parent, const char* name)
-    {
-        return CXmGadget(
-            XtCreateWidget(name, xmGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -920,11 +910,6 @@ class CXmPrimitive : public CXmPrimitiveImpl<CXmPrimitive>
 {
 public:
     using CXmPrimitiveImpl<CXmPrimitive>::CXmPrimitiveImpl;
-    static CXmPrimitive create(Widget parent, const char* name)
-    {
-        return CXmPrimitive(
-            XtCreateWidget(name, xmPrimitiveWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -1312,11 +1297,6 @@ class CXmManager : public CXmManagerImpl<CXmManager>
 {
 public:
     using CXmManagerImpl<CXmManager>::CXmManagerImpl;
-    static CXmManager create(Widget parent, const char* name)
-    {
-        return CXmManager(
-            XtCreateWidget(name, xmManagerWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -1551,11 +1531,6 @@ class CXmColorObj : public CXmColorObjImpl<CXmColorObj>
 {
 public:
     using CXmColorObjImpl<CXmColorObj>::CXmColorObjImpl;
-    static CXmColorObj create(Widget parent, const char* name)
-    {
-        return CXmColorObj(
-            XtCreateWidget(name, xmColorObjClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -1647,11 +1622,6 @@ class Cdynamic : public CdynamicImpl<Cdynamic>
 {
 public:
     using CdynamicImpl<Cdynamic>::CdynamicImpl;
-    static Cdynamic create(Widget parent, const char* name)
-    {
-        return Cdynamic(
-            XtCreateWidget(name, xmExtObjectClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -1696,11 +1666,6 @@ class CXmDialogShell : public CXmDialogShellImpl<CXmDialogShell>
 {
 public:
     using CXmDialogShellImpl<CXmDialogShell>::CXmDialogShellImpl;
-    static CXmDialogShell create(Widget parent, const char* name)
-    {
-        return CXmDialogShell(XtCreateWidget(
-            name, xmDialogShellExtObjectClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -2002,11 +1967,6 @@ class CXmDisplay : public CXmDisplayImpl<CXmDisplay>
 {
 public:
     using CXmDisplayImpl<CXmDisplay>::CXmDisplayImpl;
-    static CXmDisplay create(Widget parent, const char* name)
-    {
-        return CXmDisplay(
-            XtCreateWidget(name, xmDisplayClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -2491,11 +2451,6 @@ class CXmDragContext : public CXmDragContextImpl<CXmDragContext>
 {
 public:
     using CXmDragContextImpl<CXmDragContext>::CXmDragContextImpl;
-    static CXmDragContext create(Widget parent, const char* name)
-    {
-        return CXmDragContext(
-            XtCreateWidget(name, xmDragContextClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -2638,11 +2593,6 @@ class CXmDropSiteManager : public CXmDropSiteManagerImpl<CXmDropSiteManager>
 {
 public:
     using CXmDropSiteManagerImpl<CXmDropSiteManager>::CXmDropSiteManagerImpl;
-    static CXmDropSiteManager create(Widget parent, const char* name)
-    {
-        return CXmDropSiteManager(XtCreateWidget(
-            name, xmDropSiteManagerObjectClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -2735,11 +2685,6 @@ class CXmDropTransfer : public CXmDropTransferImpl<CXmDropTransfer>
 {
 public:
     using CXmDropTransferImpl<CXmDropTransfer>::CXmDropTransferImpl;
-    static CXmDropTransfer create(Widget parent, const char* name)
-    {
-        return CXmDropTransfer(XtCreateWidget(
-            name, xmDropTransferObjectClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -2873,11 +2818,6 @@ class CXmMenuShell : public CXmMenuShellImpl<CXmMenuShell>
 {
 public:
     using CXmMenuShellImpl<CXmMenuShell>::CXmMenuShellImpl;
-    static CXmMenuShell create(Widget parent, const char* name)
-    {
-        return CXmMenuShell(
-            XtCreateWidget(name, xmMenuShellWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -3171,11 +3111,6 @@ class CXmScreen : public CXmScreenImpl<CXmScreen>
 {
 public:
     using CXmScreenImpl<CXmScreen>::CXmScreenImpl;
-    static CXmScreen create(Widget parent, const char* name)
-    {
-        return CXmScreen(
-            XtCreateWidget(name, xmScreenClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -3383,11 +3318,6 @@ class CXmSlideContext : public CXmSlideContextImpl<CXmSlideContext>
 {
 public:
     using CXmSlideContextImpl<CXmSlideContext>::CXmSlideContextImpl;
-    static CXmSlideContext create(Widget parent, const char* name)
-    {
-        return CXmSlideContext(XtCreateWidget(
-            name, xmSlideContextWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -3514,11 +3444,6 @@ class CXmDragOverShell : public CXmDragOverShellImpl<CXmDragOverShell>
 {
 public:
     using CXmDragOverShellImpl<CXmDragOverShell>::CXmDragOverShellImpl;
-    static CXmDragOverShell create(Widget parent, const char* name)
-    {
-        return CXmDragOverShell(XtCreateWidget(
-            name, xmDragOverShellWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -3807,11 +3732,6 @@ class CXmGrabShell : public CXmGrabShellImpl<CXmGrabShell>
 {
 public:
     using CXmGrabShellImpl<CXmGrabShell>::CXmGrabShellImpl;
-    static CXmGrabShell create(Widget parent, const char* name)
-    {
-        return CXmGrabShell(
-            XtCreateWidget(name, xmGrabShellWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -4152,11 +4072,6 @@ class CXmArrowButtonGadget :
 public:
     using CXmArrowButtonGadgetImpl<
         CXmArrowButtonGadget>::CXmArrowButtonGadgetImpl;
-    static CXmArrowButtonGadget create(Widget parent, const char* name)
-    {
-        return CXmArrowButtonGadget(
-            XtCreateWidget(name, xmArrowButtonGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -4399,11 +4314,6 @@ class CXmIconGadget : public CXmIconGadgetImpl<CXmIconGadget>
 {
 public:
     using CXmIconGadgetImpl<CXmIconGadget>::CXmIconGadgetImpl;
-    static CXmIconGadget create(Widget parent, const char* name)
-    {
-        return CXmIconGadget(
-            XtCreateWidget(name, xmIconGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -4701,11 +4611,6 @@ class CXmLabelGadget : public CXmLabelGadgetImpl<CXmLabelGadget>
 {
 public:
     using CXmLabelGadgetImpl<CXmLabelGadget>::CXmLabelGadgetImpl;
-    static CXmLabelGadget create(Widget parent, const char* name)
-    {
-        return CXmLabelGadget(
-            XtCreateWidget(name, xmLabelGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -4868,11 +4773,6 @@ class CXmSeparatorGadget : public CXmSeparatorGadgetImpl<CXmSeparatorGadget>
 {
 public:
     using CXmSeparatorGadgetImpl<CXmSeparatorGadget>::CXmSeparatorGadgetImpl;
-    static CXmSeparatorGadget create(Widget parent, const char* name)
-    {
-        return CXmSeparatorGadget(
-            XtCreateWidget(name, xmSeparatorGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -5031,11 +4931,6 @@ class CXmArrowButton : public CXmArrowButtonImpl<CXmArrowButton>
 {
 public:
     using CXmArrowButtonImpl<CXmArrowButton>::CXmArrowButtonImpl;
-    static CXmArrowButton create(Widget parent, const char* name)
-    {
-        return CXmArrowButton(
-            XtCreateWidget(name, xmArrowButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -5426,11 +5321,6 @@ class CXmI18List : public CXmI18ListImpl<CXmI18List>
 {
 public:
     using CXmI18ListImpl<CXmI18List>::CXmI18ListImpl;
-    static CXmI18List create(Widget parent, const char* name)
-    {
-        return CXmI18List(
-            XtCreateWidget(name, xmI18ListWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -5858,11 +5748,6 @@ class CXmIconButton : public CXmIconButtonImpl<CXmIconButton>
 {
 public:
     using CXmIconButtonImpl<CXmIconButton>::CXmIconButtonImpl;
-    static CXmIconButton create(Widget parent, const char* name)
-    {
-        return CXmIconButton(
-            XtCreateWidget(name, xmIconButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -6334,11 +6219,6 @@ class CXmLabel : public CXmLabelImpl<CXmLabel>
 {
 public:
     using CXmLabelImpl<CXmLabel>::CXmLabelImpl;
-    static CXmLabel create(Widget parent, const char* name)
-    {
-        return CXmLabel(
-            XtCreateWidget(name, xmLabelWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -6952,11 +6832,6 @@ class CXmList : public CXmListImpl<CXmList>
 {
 public:
     using CXmListImpl<CXmList>::CXmListImpl;
-    static CXmList create(Widget parent, const char* name)
-    {
-        return CXmList(
-            XtCreateWidget(name, xmListWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -7533,11 +7408,6 @@ class CXmScrollBar : public CXmScrollBarImpl<CXmScrollBar>
 {
 public:
     using CXmScrollBarImpl<CXmScrollBar>::CXmScrollBarImpl;
-    static CXmScrollBar create(Widget parent, const char* name)
-    {
-        return CXmScrollBar(
-            XtCreateWidget(name, xmScrollBarWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -7785,11 +7655,6 @@ class CXmSeparator : public CXmSeparatorImpl<CXmSeparator>
 {
 public:
     using CXmSeparatorImpl<CXmSeparator>::CXmSeparatorImpl;
-    static CXmSeparator create(Widget parent, const char* name)
-    {
-        return CXmSeparator(
-            XtCreateWidget(name, xmSeparatorWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -7915,11 +7780,6 @@ class CXiTabCanvas : public CXiTabCanvasImpl<CXiTabCanvas>
 {
 public:
     using CXiTabCanvasImpl<CXiTabCanvas>::CXiTabCanvasImpl;
-    static CXiTabCanvas create(Widget parent, const char* name)
-    {
-        return CXiTabCanvas(
-            XtCreateWidget(name, xmTabCanvasWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -8370,11 +8230,6 @@ class CXmText : public CXmTextImpl<CXmText>
 {
 public:
     using CXmTextImpl<CXmText>::CXmTextImpl;
-    static CXmText create(Widget parent, const char* name)
-    {
-        return CXmText(
-            XtCreateWidget(name, xmTextWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -8827,11 +8682,6 @@ class CXmBulletinBoard : public CXmBulletinBoardImpl<CXmBulletinBoard>
 {
 public:
     using CXmBulletinBoardImpl<CXmBulletinBoard>::CXmBulletinBoardImpl;
-    static CXmBulletinBoard create(Widget parent, const char* name)
-    {
-        return CXmBulletinBoard(XtCreateWidget(
-            name, xmBulletinBoardWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -9091,11 +8941,6 @@ class CXmButtonBox : public CXmButtonBoxImpl<CXmButtonBox>
 {
 public:
     using CXmButtonBoxImpl<CXmButtonBox>::CXmButtonBoxImpl;
-    static CXmButtonBox create(Widget parent, const char* name)
-    {
-        return CXmButtonBox(
-            XtCreateWidget(name, xmButtonBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -9313,11 +9158,6 @@ class CXmColorSelector : public CXmColorSelectorImpl<CXmColorSelector>
 {
 public:
     using CXmColorSelectorImpl<CXmColorSelector>::CXmColorSelectorImpl;
-    static CXmColorSelector create(Widget parent, const char* name)
-    {
-        return CXmColorSelector(XtCreateWidget(
-            name, xmColorSelectorWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -9718,11 +9558,6 @@ class CXmComboBox : public CXmComboBoxImpl<CXmComboBox>
 {
 public:
     using CXmComboBoxImpl<CXmComboBox>::CXmComboBoxImpl;
-    static CXmComboBox create(Widget parent, const char* name)
-    {
-        return CXmComboBox(
-            XtCreateWidget(name, xmComboBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -10357,11 +10192,6 @@ class CXmContainer : public CXmContainerImpl<CXmContainer>
 {
 public:
     using CXmContainerImpl<CXmContainer>::CXmContainerImpl;
-    static CXmContainer create(Widget parent, const char* name)
-    {
-        return CXmContainer(
-            XtCreateWidget(name, xmContainerWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -10720,11 +10550,6 @@ class CXmDrawingArea : public CXmDrawingAreaImpl<CXmDrawingArea>
 {
 public:
     using CXmDrawingAreaImpl<CXmDrawingArea>::CXmDrawingAreaImpl;
-    static CXmDrawingArea create(Widget parent, const char* name)
-    {
-        return CXmDrawingArea(
-            XtCreateWidget(name, xmDrawingAreaWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -11095,11 +10920,6 @@ class CXmDropDown : public CXmDropDownImpl<CXmDropDown>
 {
 public:
     using CXmDropDownImpl<CXmDropDown>::CXmDropDownImpl;
-    static CXmDropDown create(Widget parent, const char* name)
-    {
-        return CXmDropDown(
-            XtCreateWidget(name, xmDropDownWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -11317,11 +11137,6 @@ class CXmFrame : public CXmFrameImpl<CXmFrame>
 {
 public:
     using CXmFrameImpl<CXmFrame>::CXmFrameImpl;
-    static CXmFrame create(Widget parent, const char* name)
-    {
-        return CXmFrame(
-            XtCreateWidget(name, xmFrameWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -11606,11 +11421,6 @@ class CXmHierarchy : public CXmHierarchyImpl<CXmHierarchy>
 {
 public:
     using CXmHierarchyImpl<CXmHierarchy>::CXmHierarchyImpl;
-    static CXmHierarchy create(Widget parent, const char* name)
-    {
-        return CXmHierarchy(
-            XtCreateWidget(name, xmHierarchyWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -11814,11 +11624,6 @@ class CXmIconBox : public CXmIconBoxImpl<CXmIconBox>
 {
 public:
     using CXmIconBoxImpl<CXmIconBox>::CXmIconBoxImpl;
-    static CXmIconBox create(Widget parent, const char* name)
-    {
-        return CXmIconBox(
-            XtCreateWidget(name, xmIconBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -12125,11 +11930,6 @@ class CXmMultiList : public CXmMultiListImpl<CXmMultiList>
 {
 public:
     using CXmMultiListImpl<CXmMultiList>::CXmMultiListImpl;
-    static CXmMultiList create(Widget parent, const char* name)
-    {
-        return CXmMultiList(
-            XtCreateWidget(name, xmMultiListWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -12481,11 +12281,6 @@ class CXmNotebook : public CXmNotebookImpl<CXmNotebook>
 {
 public:
     using CXmNotebookImpl<CXmNotebook>::CXmNotebookImpl;
-    static CXmNotebook create(Widget parent, const char* name)
-    {
-        return CXmNotebook(
-            XtCreateWidget(name, xmNotebookWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -13153,11 +12948,6 @@ class CXmRowColumn : public CXmRowColumnImpl<CXmRowColumn>
 {
 public:
     using CXmRowColumnImpl<CXmRowColumn>::CXmRowColumnImpl;
-    static CXmRowColumn create(Widget parent, const char* name)
-    {
-        return CXmRowColumn(
-            XtCreateWidget(name, xmRowColumnWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -13708,11 +13498,6 @@ class CXmScale : public CXmScaleImpl<CXmScale>
 {
 public:
     using CXmScaleImpl<CXmScale>::CXmScaleImpl;
-    static CXmScale create(Widget parent, const char* name)
-    {
-        return CXmScale(
-            XtCreateWidget(name, xmScaleWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -14080,11 +13865,6 @@ class CXmScrolledWindow : public CXmScrolledWindowImpl<CXmScrolledWindow>
 {
 public:
     using CXmScrolledWindowImpl<CXmScrolledWindow>::CXmScrolledWindowImpl;
-    static CXmScrolledWindow create(Widget parent, const char* name)
-    {
-        return CXmScrolledWindow(XtCreateWidget(
-            name, xmScrolledWindowWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -14389,11 +14169,6 @@ class CXmSpinBox : public CXmSpinBoxImpl<CXmSpinBox>
 {
 public:
     using CXmSpinBoxImpl<CXmSpinBox>::CXmSpinBoxImpl;
-    static CXmSpinBox create(Widget parent, const char* name)
-    {
-        return CXmSpinBox(
-            XtCreateWidget(name, xmSpinBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -14854,11 +14629,6 @@ class CXmTabBox : public CXmTabBoxImpl<CXmTabBox>
 {
 public:
     using CXmTabBoxImpl<CXmTabBox>::CXmTabBoxImpl;
-    static CXmTabBox create(Widget parent, const char* name)
-    {
-        return CXmTabBox(
-            XtCreateWidget(name, xmTabBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -15090,11 +14860,6 @@ class CDesktop : public CDesktopImpl<CDesktop>
 {
 public:
     using CDesktopImpl<CDesktop>::CDesktopImpl;
-    static CDesktop create(Widget parent, const char* name)
-    {
-        return CDesktop(
-            XtCreateWidget(name, xmDesktopClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -15159,11 +14924,6 @@ class Cprotocol : public CprotocolImpl<Cprotocol>
 {
 public:
     using CprotocolImpl<Cprotocol>::CprotocolImpl;
-    static Cprotocol create(Widget parent, const char* name)
-    {
-        return Cprotocol(
-            XtCreateWidget(name, xmProtocolObjectClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -15208,11 +14968,6 @@ class CXmIconHeader : public CXmIconHeaderImpl<CXmIconHeader>
 {
 public:
     using CXmIconHeaderImpl<CXmIconHeader>::CXmIconHeaderImpl;
-    static CXmIconHeader create(Widget parent, const char* name)
-    {
-        return CXmIconHeader(
-            XtCreateWidget(name, xmIconHeaderClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -15416,11 +15171,6 @@ class CXmCascadeButtonGadget :
 public:
     using CXmCascadeButtonGadgetImpl<
         CXmCascadeButtonGadget>::CXmCascadeButtonGadgetImpl;
-    static CXmCascadeButtonGadget create(Widget parent, const char* name)
-    {
-        return CXmCascadeButtonGadget(XtCreateWidget(
-            name, xmCascadeButtonGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -15646,11 +15396,6 @@ class CXmPushButtonGadget : public CXmPushButtonGadgetImpl<CXmPushButtonGadget>
 {
 public:
     using CXmPushButtonGadgetImpl<CXmPushButtonGadget>::CXmPushButtonGadgetImpl;
-    static CXmPushButtonGadget create(Widget parent, const char* name)
-    {
-        return CXmPushButtonGadget(
-            XtCreateWidget(name, xmPushButtonGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -15878,11 +15623,6 @@ class CXmToggleButtonGadget :
 public:
     using CXmToggleButtonGadgetImpl<
         CXmToggleButtonGadget>::CXmToggleButtonGadgetImpl;
-    static CXmToggleButtonGadget create(Widget parent, const char* name)
-    {
-        return CXmToggleButtonGadget(XtCreateWidget(
-            name, xmToggleButtonGadgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -16129,11 +15869,6 @@ class CXmCascadeButton : public CXmCascadeButtonImpl<CXmCascadeButton>
 {
 public:
     using CXmCascadeButtonImpl<CXmCascadeButton>::CXmCascadeButtonImpl;
-    static CXmCascadeButton create(Widget parent, const char* name)
-    {
-        return CXmCascadeButton(XtCreateWidget(
-            name, xmCascadeButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -16504,11 +16239,6 @@ class CXmDrawnButton : public CXmDrawnButtonImpl<CXmDrawnButton>
 {
 public:
     using CXmDrawnButtonImpl<CXmDrawnButton>::CXmDrawnButtonImpl;
-    static CXmDrawnButton create(Widget parent, const char* name)
-    {
-        return CXmDrawnButton(
-            XtCreateWidget(name, xmDrawnButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -16871,11 +16601,6 @@ class CXmPushButton : public CXmPushButtonImpl<CXmPushButton>
 {
 public:
     using CXmPushButtonImpl<CXmPushButton>::CXmPushButtonImpl;
-    static CXmPushButton create(Widget parent, const char* name)
-    {
-        return CXmPushButton(
-            XtCreateWidget(name, xmPushButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -17339,11 +17064,6 @@ class CXmToggleButton : public CXmToggleButtonImpl<CXmToggleButton>
 {
 public:
     using CXmToggleButtonImpl<CXmToggleButton>::CXmToggleButtonImpl;
-    static CXmToggleButton create(Widget parent, const char* name)
-    {
-        return CXmToggleButton(XtCreateWidget(
-            name, xmToggleButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -17710,11 +17430,6 @@ class CXmColumn : public CXmColumnImpl<CXmColumn>
 {
 public:
     using CXmColumnImpl<CXmColumn>::CXmColumnImpl;
-    static CXmColumn create(Widget parent, const char* name)
-    {
-        return CXmColumn(
-            XtCreateWidget(name, xmColumnWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -18006,11 +17721,6 @@ class CXmForm : public CXmFormImpl<CXmForm>
 {
 public:
     using CXmFormImpl<CXmForm>::CXmFormImpl;
-    static CXmForm create(Widget parent, const char* name)
-    {
-        return CXmForm(
-            XtCreateWidget(name, xmFormWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -18351,11 +18061,6 @@ class CXmMessageBox : public CXmMessageBoxImpl<CXmMessageBox>
 {
 public:
     using CXmMessageBoxImpl<CXmMessageBox>::CXmMessageBoxImpl;
-    static CXmMessageBox create(Widget parent, const char* name)
-    {
-        return CXmMessageBox(
-            XtCreateWidget(name, xmMessageBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -18825,11 +18530,6 @@ class CXmSelectionBox : public CXmSelectionBoxImpl<CXmSelectionBox>
 {
 public:
     using CXmSelectionBoxImpl<CXmSelectionBox>::CXmSelectionBoxImpl;
-    static CXmSelectionBox create(Widget parent, const char* name)
-    {
-        return CXmSelectionBox(XtCreateWidget(
-            name, xmSelectionBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -19345,11 +19045,6 @@ class CXmTabStack : public CXmTabStackImpl<CXmTabStack>
 {
 public:
     using CXmTabStackImpl<CXmTabStack>::CXmTabStackImpl;
-    static CXmTabStack create(Widget parent, const char* name)
-    {
-        return CXmTabStack(
-            XtCreateWidget(name, xmTabStackWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -19619,11 +19314,6 @@ class CXmClipWindow : public CXmClipWindowImpl<CXmClipWindow>
 {
 public:
     using CXmClipWindowImpl<CXmClipWindow>::CXmClipWindowImpl;
-    static CXmClipWindow create(Widget parent, const char* name)
-    {
-        return CXmClipWindow(
-            XtCreateWidget(name, xmClipWindowWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -19782,11 +19472,6 @@ class CXmOutline : public CXmOutlineImpl<CXmOutline>
 {
 public:
     using CXmOutlineImpl<CXmOutline>::CXmOutlineImpl;
-    static CXmOutline create(Widget parent, const char* name)
-    {
-        return CXmOutline(
-            XtCreateWidget(name, xmOutlineWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -20013,11 +19698,6 @@ class CXmTree : public CXmTreeImpl<CXmTree>
 {
 public:
     using CXmTreeImpl<CXmTree>::CXmTreeImpl;
-    static CXmTree create(Widget parent, const char* name)
-    {
-        return CXmTree(
-            XtCreateWidget(name, xmTreeWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -20260,11 +19940,6 @@ class CXmMainWindow : public CXmMainWindowImpl<CXmMainWindow>
 {
 public:
     using CXmMainWindowImpl<CXmMainWindow>::CXmMainWindowImpl;
-    static CXmMainWindow create(Widget parent, const char* name)
-    {
-        return CXmMainWindow(
-            XtCreateWidget(name, xmMainWindowWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -20619,11 +20294,6 @@ class CXmSimpleSpinBox : public CXmSimpleSpinBoxImpl<CXmSimpleSpinBox>
 {
 public:
     using CXmSimpleSpinBoxImpl<CXmSimpleSpinBox>::CXmSimpleSpinBoxImpl;
-    static CXmSimpleSpinBox create(Widget parent, const char* name)
-    {
-        return CXmSimpleSpinBox(XtCreateWidget(
-            name, xmSimpleSpinBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -20844,11 +20514,6 @@ class CShell : public CShellImpl<CShell>
 {
 public:
     using CShellImpl<CShell>::CShellImpl;
-    static CShell create(Widget parent, const char* name)
-    {
-        return CShell(
-            XtCreateWidget(name, xmShellExtObjectClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -20890,10 +20555,6 @@ class CWorld : public CWorldImpl<CWorld>
 {
 public:
     using CWorldImpl<CWorld>::CWorldImpl;
-    static CWorld create(Widget parent, const char* name)
-    {
-        return CWorld(XtCreateWidget(name, xmWorldClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -20975,11 +20636,6 @@ class CXmTearOffButton : public CXmTearOffButtonImpl<CXmTearOffButton>
 {
 public:
     using CXmTearOffButtonImpl<CXmTearOffButton>::CXmTearOffButtonImpl;
-    static CXmTearOffButton create(Widget parent, const char* name)
-    {
-        return CXmTearOffButton(XtCreateWidget(
-            name, xmTearOffButtonWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -21356,11 +21012,6 @@ class CXmCommand : public CXmCommandImpl<CXmCommand>
 {
 public:
     using CXmCommandImpl<CXmCommand>::CXmCommandImpl;
-    static CXmCommand create(Widget parent, const char* name)
-    {
-        return CXmCommand(
-            XtCreateWidget(name, xmCommandWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,
@@ -21906,11 +21557,6 @@ class CXmFileSelectionBox : public CXmFileSelectionBoxImpl<CXmFileSelectionBox>
 {
 public:
     using CXmFileSelectionBoxImpl<CXmFileSelectionBox>::CXmFileSelectionBoxImpl;
-    static CXmFileSelectionBox create(Widget parent, const char* name)
-    {
-        return CXmFileSelectionBox(XtCreateWidget(
-            name, xmFileSelectionBoxWidgetClass, parent, nullptr, 0));
-    }
 };
 
 template <template <typename...> class Derived,

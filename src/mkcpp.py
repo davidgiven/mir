@@ -119,9 +119,6 @@ def generate_widget_class(name, symbol, parent, resources):
             class C{name} : public C{name}Impl<C{name}> {{
             public:
                 using C{name}Impl<C{name}>::C{name}Impl;
-                static C{name} create(Widget parent, const char* name) {{
-                    return C{name}(XtCreateWidget(name, {symbol}, parent, nullptr, 0));
-                }}
             }};
         """
 

@@ -96,13 +96,50 @@ int main(int argc, char* argv[])
                 StructureNotifyMask)
             .manageChild();
 
-    CXmTextBuilder(layout, "text")
-        .setLeftAttachment(XmATTACH_FORM)
-        .setRightAttachment(XmATTACH_FORM)
-        .setTopAttachment(XmATTACH_WIDGET)
-        .setTopWidget(button2)
-        .build()
-        .manageChild();
+    auto text = CXmTextBuilder(layout, "text")
+                    .setLeftAttachment(XmATTACH_FORM)
+                    .setRightAttachment(XmATTACH_FORM)
+                    .setTopAttachment(XmATTACH_WIDGET)
+                    .setTopWidget(button2)
+                    .build()
+                    .manageChild();
+
+    CXmDrawingArea drawingArea =
+        CXmDrawingAreaBuilder(layout, "drawingArea")
+            .setLeftAttachment(XmATTACH_FORM)
+            .setRightAttachment(XmATTACH_FORM)
+            .setTopAttachment(XmATTACH_WIDGET)
+            .setTopWidget(text)
+            .setBottomAttachment(XmATTACH_FORM)
+            .build()
+            .addExposeCallback(
+                [&](XtPointer datap)
+                {
+                    XmDrawingAreaCallbackStruct* data =
+                        static_cast<XmDrawingAreaCallbackStruct*>(datap);
+                    Display* display = data->event->xany.display;
+                    Window window = data->window;
+
+                    static const XSetWindowAttributes attributes{
+                        .bit_gravity = ForgetGravity};
+                    XChangeWindowAttributes(display,
+                        window,
+                        CWBitGravity,
+                        (XSetWindowAttributes*)&attributes);
+
+                    GC gc = XCreateGC(display, window, 0, NULL);
+                    XSetForeground(display, gc, BlackPixel(display, 0));
+                    XClearWindow(display, window);
+                    XDrawLine(display,
+                        window,
+                        gc,
+                        0,
+                        0,
+                        static_cast<int>(drawingArea.getWidth()) - 1,
+                        static_cast<int>(drawingArea.getHeight()) - 1);
+                    XFreeGC(display, gc);
+                })
+            .manageChild();
 
     XmMainWindowSetAreas(mainWindow, menubar, NULL, NULL, NULL, layout);
     XtRealizeWidget(toplevel);

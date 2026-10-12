@@ -3,6 +3,7 @@
 #include <concepts>
 #include <tuple>
 #include <utility>
+#include <variant>
 #include <memory>
 #include <Xm/Xm.h>
 #include "Xm/VendorS.h"
@@ -144,9 +145,15 @@ template <template <typename...> class Derived,
     typename... Args>
 class CWidgetBuilderBase;
 
+class CWidget;
+
 class CWidgetImplBase
 {
 public:
+    using Callback = std::function<void(XtPointer)>;
+    using EventHandler = std::function<void(XEvent*, Boolean*)>;
+    using RegisteredCallback = std::variant<Callback, EventHandler>;
+
     template <typename Builder>
     class ConstraintsBuilder
     {
@@ -169,6 +176,8 @@ public:
         return _widget;
     }
 
+    CWidget findWidgetByName(const char* name);
+
 protected:
     static void executeCallback(
         Widget w, XtPointer client_data, XtPointer call_data);
@@ -177,9 +186,7 @@ protected:
         XEvent* event,
         Boolean* continue_to_dispatch);
     static int registerCallback(
-        Widget widget, std::function<void(XtPointer)> callback);
-    static int registerEventHandler(Widget widget,
-        std::function<void(XtPointer, XEvent*, Boolean*)> handler);
+        Widget widget, RegisteredCallback callback);
     static void deregisterCallbacks(
         Widget widget, XtPointer client_data, XtPointer call_data);
 
@@ -199,6 +206,11 @@ public:
         return static_cast<Derived&>(*this);
     }
 
+    Derived& unmanageChild()
+    {
+        XtUnmanageChild(_widget);
+        return static_cast<Derived&>(*this);
+    }
     Derived& realize()
     {
         XtRealizeWidget(_widget);
@@ -218,10 +230,10 @@ public:
     }
 
     Derived& addEventHandler(
-        std::function<void(XtPointer, XEvent*, Boolean*)> handler,
+        std::function<void(XEvent*, Boolean*)> handler,
         EventMask event_mask)
     {
-        int cbid = registerEventHandler(_widget, std::move(handler));
+        int cbid = registerCallback(_widget, std::move(handler));
         XtAddEventHandler(_widget,
             event_mask,
             false,
@@ -229,6 +241,7 @@ public:
             reinterpret_cast<XtPointer>(cbid));
         return static_cast<Derived&>(*this);
     }
+
 };
 
 class CWidget : public CWidgetImpl<CWidget>
@@ -236,6 +249,11 @@ class CWidget : public CWidgetImpl<CWidget>
 public:
     using CWidgetImpl<CWidget>::CWidgetImpl;
 };
+
+inline CWidget CWidgetImplBase::findWidgetByName(const char* name)
+{
+    return CWidget(XtNameToWidget(_widget, name));
+}
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,

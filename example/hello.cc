@@ -25,8 +25,18 @@ int main(int argc, char* argv[])
         .setLabelString("About")
         .build()
         .addActivateCallback(
-            [](XtPointer)
+            [=](XtPointer)
             {
+                CXmMessageBox dialogue =
+                    CXmInformationDialogBuilder(toplevel, "aboutDialog")
+                        .setDialogStyle(XmDIALOG_MODELESS)
+                        .setMessageString("Hello World!")
+                        .setDialogTitle("About")
+                        .setCancelLabelString("")
+                        .build()
+                        .manageChild();
+                XtUnmanageChild(dialogue.findWidgetByName("Cancel"));
+                XtUnmanageChild(dialogue.findWidgetByName("Help"));
             })
         .manageChild();
     CXmPushButtonBuilder(fileMenu, "quit")
@@ -78,7 +88,7 @@ int main(int argc, char* argv[])
                     printf("Button 2 pressed\n");
                 })
             .addEventHandler(
-                [&](XtPointer, XEvent* event, Boolean* continue_to_dispatch)
+                [&](XEvent* event, Boolean* continue_to_dispatch)
                 {
                     button2.setLabelString(std::make_unique<CXmString>(
                         std::format("width={}", button2.getWidth()).c_str()));

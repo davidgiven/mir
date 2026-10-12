@@ -3,6 +3,7 @@
 #include <string>
 #include <format>
 #include "include/cmotif.h"
+#include "include/cgc.h"
 
 int main(int argc, char* argv[])
 {
@@ -127,17 +128,14 @@ int main(int argc, char* argv[])
                         CWBitGravity,
                         (XSetWindowAttributes*)&attributes);
 
-                    GC gc = XCreateGC(display, window, 0, NULL);
-                    XSetForeground(display, gc, BlackPixel(display, 0));
                     XClearWindow(display, window);
-                    XDrawLine(display,
-                        window,
-                        gc,
-                        0,
+                    CGC gc = CGCBuilder(display, window)
+                                 .setForeground(BlackPixel(display, 0))
+                                 .build();
+                    gc.drawLine(0,
                         0,
                         static_cast<int>(drawingArea.getWidth()) - 1,
                         static_cast<int>(drawingArea.getHeight()) - 1);
-                    XFreeGC(display, gc);
                 })
             .manageChild();
 

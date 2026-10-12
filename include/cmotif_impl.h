@@ -271,13 +271,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CVendorShellBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CVendorShellBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBaseHeight(int value) const
     {
@@ -547,13 +548,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBorderWidth(Dimension value) const
     {
@@ -914,13 +916,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmPrimitiveBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmPrimitiveBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -1301,13 +1304,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmManagerBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmManagerBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -1535,13 +1539,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmColorObjBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmColorObjBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setActiveColorSetId(int value) const
     {
@@ -1626,13 +1631,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CdynamicBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CdynamicBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setExtensionType(unsigned char value) const
     {
@@ -1670,13 +1676,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDialogShellBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDialogShellBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDeleteResponse(unsigned char value) const
     {
@@ -1971,13 +1978,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDisplayBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDisplayBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDefaultButtonEmphasis(Boolean value) const
     {
@@ -2455,13 +2463,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDragContextBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDragContextBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBlendModel(unsigned char value) const
     {
@@ -2597,13 +2606,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDropSiteManagerBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDropSiteManagerBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setClientData(XtPointer value) const
     {
@@ -2689,13 +2699,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDropTransferBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDropTransferBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDropTransfers(XmDropTransferEntry value) const
     {
@@ -2822,13 +2833,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmMenuShellBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmMenuShellBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAnimate(Boolean value) const
     {
@@ -3115,13 +3127,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmScreenBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmScreenBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBitmapConversionModel(XtEnum value) const
     {
@@ -3322,13 +3335,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmSlideContextBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmSlideContextBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setSlideDestHeight(Dimension value) const
     {
@@ -3448,13 +3462,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDragOverShellBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDragOverShellBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBaseHeight(int value) const
     {
@@ -3736,13 +3751,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmGrabShellBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmGrabShellBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowShellResize(Boolean value) const
     {
@@ -4076,13 +4092,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmArrowButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmArrowButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowDirection(unsigned char value) const
     {
@@ -4318,13 +4335,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmIconGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmIconGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmIconGCacheObjPart* value) const
     {
@@ -4615,13 +4633,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmLabelGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmLabelGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
@@ -4777,13 +4796,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmSeparatorGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmSeparatorGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBorderWidth(Dimension value) const
     {
@@ -4935,13 +4955,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmArrowButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmArrowButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowDirection(unsigned char value) const
     {
@@ -5325,13 +5346,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmI18ListBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmI18ListBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAlignment(unsigned char value) const
     {
@@ -5752,13 +5774,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmIconButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmIconButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAlignment(unsigned char value) const
     {
@@ -6223,13 +6246,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmLabelBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmLabelBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
@@ -6836,13 +6860,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmListBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmListBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutomaticSelection(XtEnum value) const
     {
@@ -7412,13 +7437,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmScrollBarBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmScrollBarBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -7659,13 +7685,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmSeparatorBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmSeparatorBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -7784,13 +7811,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXiTabCanvasBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXiTabCanvasBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -8234,13 +8262,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmTextBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmTextBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoShowCursorPosition(Boolean value) const
     {
@@ -8686,13 +8715,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmBulletinBoardBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmBulletinBoardBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -8941,17 +8971,48 @@ class CXmButtonBox : public CXmButtonBoxImpl<CXmButtonBox>
 {
 public:
     using CXmButtonBoxImpl<CXmButtonBox>::CXmButtonBoxImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setPri_vate1(Dimension value) const
+        {
+            return widget->set("pri.vate1", value);
+        }
+        auto setPri_vate2(Dimension value) const
+        {
+            return widget->set("pri.vate2", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmButtonBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmButtonBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -9162,13 +9223,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmColorSelectorBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmColorSelectorBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -9562,13 +9624,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmComboBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmComboBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowSize(Dimension value) const
     {
@@ -10192,17 +10255,52 @@ class CXmContainer : public CXmContainerImpl<CXmContainer>
 {
 public:
     using CXmContainerImpl<CXmContainer>::CXmContainerImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setEntryParent(Widget value) const
+        {
+            return widget->set("entryParent", value);
+        }
+        auto setOutlineState(unsigned char value) const
+        {
+            return widget->set("outlineState", value);
+        }
+        auto setPositionIndex(int value) const
+        {
+            return widget->set("positionIndex", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmContainerBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmContainerBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutomaticSelection(unsigned char value) const
     {
@@ -10554,13 +10652,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDrawingAreaBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDrawingAreaBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -10924,13 +11023,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDropDownBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDropDownBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setActivateOnFill(int value) const
     {
@@ -11137,17 +11237,64 @@ class CXmFrame : public CXmFrameImpl<CXmFrame>
 {
 public:
     using CXmFrameImpl<CXmFrame>::CXmFrameImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setChildHorizontalAlignment(unsigned char value) const
+        {
+            return widget->set("childHorizontalAlignment", value);
+        }
+        auto setChildHorizontalSpacing(Dimension value) const
+        {
+            return widget->set("childHorizontalSpacing", value);
+        }
+        auto setChildType(unsigned char value) const
+        {
+            return widget->set("childType", value);
+        }
+        auto setChildVerticalAlignment(unsigned char value) const
+        {
+            return widget->set("childVerticalAlignment", value);
+        }
+        auto setFrameChildType(unsigned char value) const
+        {
+            return widget->set("frameChildType", value);
+        }
+        auto setPri_vate(int value) const
+        {
+            return widget->set("pri.vate", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmFrameBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmFrameBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -11421,17 +11568,60 @@ class CXmHierarchy : public CXmHierarchyImpl<CXmHierarchy>
 {
 public:
     using CXmHierarchyImpl<CXmHierarchy>::CXmHierarchyImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setInsertBefore(Widget value) const
+        {
+            return widget->set("insertBefore", value);
+        }
+        auto setNodeCloseFolderPixmap(Pixmap value) const
+        {
+            return widget->set("nodeCloseFolderPixmap", value);
+        }
+        auto setNodeOpenFolderPixmap(Pixmap value) const
+        {
+            return widget->set("nodeOpenFolderPixmap", value);
+        }
+        auto setNodeState(XmHierarchyNodeState value) const
+        {
+            return widget->set("nodeState", value);
+        }
+        auto setParentNode(Widget value) const
+        {
+            return widget->set("parentNode", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmHierarchyBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmHierarchyBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoClose(Boolean value) const
     {
@@ -11624,17 +11814,48 @@ class CXmIconBox : public CXmIconBoxImpl<CXmIconBox>
 {
 public:
     using CXmIconBoxImpl<CXmIconBox>::CXmIconBoxImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setCellX(short value) const
+        {
+            return widget->set("cellX", value);
+        }
+        auto setCellY(short value) const
+        {
+            return widget->set("cellY", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmIconBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmIconBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -11934,13 +12155,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmMultiListBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmMultiListBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -12281,17 +12503,52 @@ class CXmNotebook : public CXmNotebookImpl<CXmNotebook>
 {
 public:
     using CXmNotebookImpl<CXmNotebook>::CXmNotebookImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setNotebookChildType(unsigned char value) const
+        {
+            return widget->set("notebookChildType", value);
+        }
+        auto setPageNumber(int value) const
+        {
+            return widget->set("pageNumber", value);
+        }
+        auto setResizable(Boolean value) const
+        {
+            return widget->set("resizable", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmNotebookBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmNotebookBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackPageBackground(Pixel value) const
     {
@@ -12948,17 +13205,44 @@ class CXmRowColumn : public CXmRowColumnImpl<CXmRowColumn>
 {
 public:
     using CXmRowColumnImpl<CXmRowColumn>::CXmRowColumnImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setPositionIndex(short value) const
+        {
+            return widget->set("positionIndex", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmRowColumnBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmRowColumnBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAdjustLast(Boolean value) const
     {
@@ -13502,13 +13786,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmScaleBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmScaleBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -13865,17 +14150,44 @@ class CXmScrolledWindow : public CXmScrolledWindowImpl<CXmScrolledWindow>
 {
 public:
     using CXmScrolledWindowImpl<CXmScrolledWindow>::CXmScrolledWindowImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setScrolledWindowChildType(unsigned char value) const
+        {
+            return widget->set("scrolledWindowChildType", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmScrolledWindowBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmScrolledWindowBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoDragModel(XtEnum value) const
     {
@@ -14169,17 +14481,84 @@ class CXmSpinBox : public CXmSpinBoxImpl<CXmSpinBox>
 {
 public:
     using CXmSpinBoxImpl<CXmSpinBox>::CXmSpinBoxImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setArrowSensitivity(unsigned char value) const
+        {
+            return widget->set("arrowSensitivity", value);
+        }
+        auto setDecimalPoints(short value) const
+        {
+            return widget->set("decimalPoints", value);
+        }
+        auto setIncrementValue(int value) const
+        {
+            return widget->set("incrementValue", value);
+        }
+        auto setMaximumValue(int value) const
+        {
+            return widget->set("maximumValue", value);
+        }
+        auto setMinimumValue(int value) const
+        {
+            return widget->set("minimumValue", value);
+        }
+        auto setNumValues(int value) const
+        {
+            return widget->set("numValues", value);
+        }
+        auto setPosition(int value) const
+        {
+            return widget->set("position", value);
+        }
+        auto setPositionType(unsigned char value) const
+        {
+            return widget->set("positionType", value);
+        }
+        auto setSpinBoxChildType(unsigned char value) const
+        {
+            return widget->set("spinBoxChildType", value);
+        }
+        auto setValues(XmStringTable value) const
+        {
+            return widget->set("values", value);
+        }
+        auto setWrap(Boolean value) const
+        {
+            return widget->set("wrap", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmSpinBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmSpinBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowLayout(unsigned char value) const
     {
@@ -14633,13 +15012,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmTabBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmTabBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -14864,13 +15244,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CDesktopBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CDesktopBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDesktopParent(Widget value) const
     {
@@ -14928,13 +15309,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CprotocolBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CprotocolBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setExtensionType(unsigned char value) const
     {
@@ -14972,13 +15354,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmIconHeaderBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmIconHeaderBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmIconGCacheObjPart* value) const
     {
@@ -15175,13 +15558,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmCascadeButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmCascadeButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
@@ -15400,13 +15784,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmPushButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmPushButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
@@ -15627,13 +16012,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmToggleButtonGadgetBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmToggleButtonGadgetBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value) const
     {
@@ -15873,13 +16259,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmCascadeButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmCascadeButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
@@ -16243,13 +16630,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmDrawnButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmDrawnButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
@@ -16605,13 +16993,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmPushButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmPushButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
@@ -17068,13 +17457,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmToggleButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmToggleButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
@@ -17430,17 +17820,80 @@ class CXmColumn : public CXmColumnImpl<CXmColumn>
 {
 public:
     using CXmColumnImpl<CXmColumn>::CXmColumnImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setEntryLabelAlignment(unsigned char value) const
+        {
+            return widget->set("entryLabelAlignment", value);
+        }
+        auto setEntryLabelFontList(XmFontList value) const
+        {
+            return widget->set("entryLabelFontList", value);
+        }
+        auto setEntryLabelPixmap(Pixmap value) const
+        {
+            return widget->set("entryLabelPixmap", value);
+        }
+        auto setEntryLabelRenderTable(XmFontList value) const
+        {
+            return widget->set("entryLabelRenderTable", value);
+        }
+        auto setEntryLabelString(XmString value) const
+        {
+            return widget->set("entryLabelString", value);
+        }
+        auto setEntryLabelType(unsigned char value) const
+        {
+            return widget->set("entryLabelType", value);
+        }
+        auto setFillStyle(unsigned char value) const
+        {
+            return widget->set("fillStyle", value);
+        }
+        auto setPri_vate(Boolean value) const
+        {
+            return widget->set("pri.vate", value);
+        }
+        auto setShowEntryLabel(Boolean value) const
+        {
+            return widget->set("showEntryLabel", value);
+        }
+        auto setStretchable(Boolean value) const
+        {
+            return widget->set("stretchable", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmColumnBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmColumnBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -17721,17 +18174,108 @@ class CXmForm : public CXmFormImpl<CXmForm>
 {
 public:
     using CXmFormImpl<CXmForm>::CXmFormImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setBottomAttachment(unsigned char value) const
+        {
+            return widget->set("bottomAttachment", value);
+        }
+        auto setBottomOffset(int value) const
+        {
+            return widget->set("bottomOffset", value);
+        }
+        auto setBottomPosition(int value) const
+        {
+            return widget->set("bottomPosition", value);
+        }
+        auto setBottomWidget(Widget value) const
+        {
+            return widget->set("bottomWidget", value);
+        }
+        auto setLeftAttachment(unsigned char value) const
+        {
+            return widget->set("leftAttachment", value);
+        }
+        auto setLeftOffset(int value) const
+        {
+            return widget->set("leftOffset", value);
+        }
+        auto setLeftPosition(int value) const
+        {
+            return widget->set("leftPosition", value);
+        }
+        auto setLeftWidget(Widget value) const
+        {
+            return widget->set("leftWidget", value);
+        }
+        auto setResizable(Boolean value) const
+        {
+            return widget->set("resizable", value);
+        }
+        auto setRightAttachment(unsigned char value) const
+        {
+            return widget->set("rightAttachment", value);
+        }
+        auto setRightOffset(int value) const
+        {
+            return widget->set("rightOffset", value);
+        }
+        auto setRightPosition(int value) const
+        {
+            return widget->set("rightPosition", value);
+        }
+        auto setRightWidget(Widget value) const
+        {
+            return widget->set("rightWidget", value);
+        }
+        auto setTopAttachment(unsigned char value) const
+        {
+            return widget->set("topAttachment", value);
+        }
+        auto setTopOffset(int value) const
+        {
+            return widget->set("topOffset", value);
+        }
+        auto setTopPosition(int value) const
+        {
+            return widget->set("topPosition", value);
+        }
+        auto setTopWidget(Widget value) const
+        {
+            return widget->set("topWidget", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmFormBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmFormBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -18065,13 +18609,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmMessageBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmMessageBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -18534,13 +19079,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmSelectionBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmSelectionBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -19045,17 +19591,76 @@ class CXmTabStack : public CXmTabStackImpl<CXmTabStack>
 {
 public:
     using CXmTabStackImpl<CXmTabStack>::CXmTabStackImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setFreeTabPixmap(Boolean value) const
+        {
+            return widget->set("freeTabPixmap", value);
+        }
+        auto setTabAlignment(unsigned char value) const
+        {
+            return widget->set("tabAlignment", value);
+        }
+        auto setTabBackground(Pixel value) const
+        {
+            return widget->set("tabBackground", value);
+        }
+        auto setTabBackgroundPixmap(Pixmap value) const
+        {
+            return widget->set("tabBackgroundPixmap", value);
+        }
+        auto setTabForeground(Pixel value) const
+        {
+            return widget->set("tabForeground", value);
+        }
+        auto setTabLabelPixmap(Pixmap value) const
+        {
+            return widget->set("tabLabelPixmap", value);
+        }
+        auto setTabLabelString(XmString value) const
+        {
+            return widget->set("tabLabelString", value);
+        }
+        auto setTabPixmapPlacement(XmPixmapPlacement value) const
+        {
+            return widget->set("tabPixmapPlacement", value);
+        }
+        auto setTabStringDirection(XmStringDirection value) const
+        {
+            return widget->set("tabStringDirection", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmTabStackBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmTabStackBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -19318,13 +19923,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmClipWindowBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmClipWindowBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value) const
     {
@@ -19476,13 +20082,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmOutlineBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmOutlineBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoClose(Boolean value) const
     {
@@ -19698,17 +20305,60 @@ class CXmTree : public CXmTreeImpl<CXmTree>
 {
 public:
     using CXmTreeImpl<CXmTree>::CXmTreeImpl;
+    template <typename Builder>
+    class ConstraintsBuilder
+    {
+    public:
+        explicit ConstraintsBuilder(Builder& value): widget(&value) {}
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value):
+            widget(static_cast<Builder*>(&value))
+        {
+        }
+        ConstraintsBuilder& operator=(const ConstraintsBuilder&)
+        {
+            return *this;
+        }
+        auto setLineBackgroundColor(Pixel value) const
+        {
+            return widget->set("lineBackgroundColor", value);
+        }
+        auto setLineColor(Pixel value) const
+        {
+            return widget->set("lineColor", value);
+        }
+        auto setLineStyle(int value) const
+        {
+            return widget->set("lineStyle", value);
+        }
+        auto setLineWidth(int value) const
+        {
+            return widget->set("lineWidth", value);
+        }
+        auto setOpenClosePadding(int value) const
+        {
+            return widget->set("openClosePadding", value);
+        }
+
+    private:
+        Builder* widget;
+    };
 };
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmTreeBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmTreeBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoClose(Boolean value) const
     {
@@ -19944,13 +20594,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmMainWindowBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmMainWindowBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoDragModel(XtEnum value) const
     {
@@ -20298,13 +20949,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmSimpleSpinBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmSimpleSpinBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowLayout(unsigned char value) const
     {
@@ -20518,13 +21170,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CShellBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CShellBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDesktopParent(Widget value) const
     {
@@ -20559,13 +21212,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CWorldBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CWorldBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDesktopParent(Widget value) const
     {
@@ -20640,13 +21294,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmTearOffButtonBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmTearOffButtonBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value) const
     {
@@ -21016,13 +21671,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmCommandBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmCommandBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -21561,13 +22217,14 @@ public:
 
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Pairs>
 class CXmFileSelectionBoxBuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>
 {
 public:
     CXmFileSelectionBoxBuilderImpl() = default;
-    using CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>::
+    using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value) const
     {
@@ -21887,16 +22544,61 @@ public:
     }
 };
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmDialogShellBuilder :
     public CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
         CXmDialogShell,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmDialogShellBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
-        CXmDialogShell,
-        Pairs...>::CXmDialogShellBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmDialogShellBuilder(const ParentT& parent, const char* name):
+        CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
+            CXmDialogShell,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmDialogShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmDialogShellBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
+            CXmDialogShell,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmDialogShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDialogShellBuilder(const CXmDialogShellBuilder& other):
+        CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
+            CXmDialogShell,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmDialogShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDialogShellBuilder(CXmDialogShellBuilder&& other):
+        CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
+            CXmDialogShell,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmDialogShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDialogShellBuilder& operator=(const CXmDialogShellBuilder&) = default;
+    CXmDialogShellBuilder& operator=(CXmDialogShellBuilder&&) = default;
 
     CXmDialogShell build()
     {
@@ -21908,18 +22610,68 @@ public:
     }
 };
 
-CXmDialogShellBuilder(Widget, const char*) -> CXmDialogShellBuilder<>;
-template <typename... Pairs>
-CXmDialogShellBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmDialogShellBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmDialogShellBuilder(const Parent&, const char*)
+    -> CXmDialogShellBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmDialogShellBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmDialogShellBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmMenuShellBuilder :
-    public CXmMenuShellBuilderImpl<CXmMenuShellBuilder, CXmMenuShell, Pairs...>
+    public CXmMenuShellBuilderImpl<CXmMenuShellBuilder,
+        CXmMenuShell,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmMenuShellBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMenuShellBuilderImpl<CXmMenuShellBuilder, CXmMenuShell, Pairs...>::
-        CXmMenuShellBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmMenuShellBuilder(const ParentT& parent, const char* name):
+        CXmMenuShellBuilderImpl<CXmMenuShellBuilder,
+            CXmMenuShell,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmMenuShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmMenuShellBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMenuShellBuilderImpl<CXmMenuShellBuilder,
+            CXmMenuShell,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmMenuShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMenuShellBuilder(const CXmMenuShellBuilder& other):
+        CXmMenuShellBuilderImpl<CXmMenuShellBuilder,
+            CXmMenuShell,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmMenuShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMenuShellBuilder(CXmMenuShellBuilder&& other):
+        CXmMenuShellBuilderImpl<CXmMenuShellBuilder,
+            CXmMenuShell,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmMenuShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMenuShellBuilder& operator=(const CXmMenuShellBuilder&) = default;
+    CXmMenuShellBuilder& operator=(CXmMenuShellBuilder&&) = default;
 
     CXmMenuShell build()
     {
@@ -21931,18 +22683,67 @@ public:
     }
 };
 
-CXmMenuShellBuilder(Widget, const char*) -> CXmMenuShellBuilder<>;
-template <typename... Pairs>
-CXmMenuShellBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmMenuShellBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmMenuShellBuilder(const Parent&, const char*) -> CXmMenuShellBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmMenuShellBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmMenuShellBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmGrabShellBuilder :
-    public CXmGrabShellBuilderImpl<CXmGrabShellBuilder, CXmGrabShell, Pairs...>
+    public CXmGrabShellBuilderImpl<CXmGrabShellBuilder,
+        CXmGrabShell,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmGrabShellBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmGrabShellBuilderImpl<CXmGrabShellBuilder, CXmGrabShell, Pairs...>::
-        CXmGrabShellBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmGrabShellBuilder(const ParentT& parent, const char* name):
+        CXmGrabShellBuilderImpl<CXmGrabShellBuilder,
+            CXmGrabShell,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmGrabShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmGrabShellBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmGrabShellBuilderImpl<CXmGrabShellBuilder,
+            CXmGrabShell,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmGrabShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmGrabShellBuilder(const CXmGrabShellBuilder& other):
+        CXmGrabShellBuilderImpl<CXmGrabShellBuilder,
+            CXmGrabShell,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmGrabShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmGrabShellBuilder(CXmGrabShellBuilder&& other):
+        CXmGrabShellBuilderImpl<CXmGrabShellBuilder,
+            CXmGrabShell,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmGrabShellBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmGrabShellBuilder& operator=(const CXmGrabShellBuilder&) = default;
+    CXmGrabShellBuilder& operator=(CXmGrabShellBuilder&&) = default;
 
     CXmGrabShell build()
     {
@@ -21954,21 +22755,69 @@ public:
     }
 };
 
-CXmGrabShellBuilder(Widget, const char*) -> CXmGrabShellBuilder<>;
-template <typename... Pairs>
-CXmGrabShellBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmGrabShellBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmGrabShellBuilder(const Parent&, const char*) -> CXmGrabShellBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmGrabShellBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmGrabShellBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmArrowButtonGadgetBuilder :
     public CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
         CXmArrowButtonGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmArrowButtonGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
-        CXmArrowButtonGadget,
-        Pairs...>::CXmArrowButtonGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmArrowButtonGadgetBuilder(const ParentT& parent, const char* name):
+        CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
+            CXmArrowButtonGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmArrowButtonGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
+            CXmArrowButtonGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmArrowButtonGadgetBuilder(const CXmArrowButtonGadgetBuilder& other):
+        CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
+            CXmArrowButtonGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmArrowButtonGadgetBuilder(CXmArrowButtonGadgetBuilder&& other):
+        CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
+            CXmArrowButtonGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmArrowButtonGadgetBuilder& operator=(
+        const CXmArrowButtonGadgetBuilder&) = default;
+    CXmArrowButtonGadgetBuilder& operator=(
+        CXmArrowButtonGadgetBuilder&&) = default;
 
     CXmArrowButtonGadget build()
     {
@@ -21980,22 +22829,68 @@ public:
     }
 };
 
-CXmArrowButtonGadgetBuilder(Widget, const char*)
-    -> CXmArrowButtonGadgetBuilder<>;
-template <typename... Pairs>
-CXmArrowButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmArrowButtonGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmArrowButtonGadgetBuilder(const Parent&, const char*)
+    -> CXmArrowButtonGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmArrowButtonGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmArrowButtonGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmIconGadgetBuilder :
     public CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
         CXmIconGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmIconGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
-        CXmIconGadget,
-        Pairs...>::CXmIconGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmIconGadgetBuilder(const ParentT& parent, const char* name):
+        CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
+            CXmIconGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmIconGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmIconGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
+            CXmIconGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmIconGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconGadgetBuilder(const CXmIconGadgetBuilder& other):
+        CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
+            CXmIconGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmIconGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconGadgetBuilder(CXmIconGadgetBuilder&& other):
+        CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
+            CXmIconGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmIconGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconGadgetBuilder& operator=(const CXmIconGadgetBuilder&) = default;
+    CXmIconGadgetBuilder& operator=(CXmIconGadgetBuilder&&) = default;
 
     CXmIconGadget build()
     {
@@ -22007,21 +22902,68 @@ public:
     }
 };
 
-CXmIconGadgetBuilder(Widget, const char*) -> CXmIconGadgetBuilder<>;
-template <typename... Pairs>
-CXmIconGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmIconGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmIconGadgetBuilder(const Parent&, const char*)
+    -> CXmIconGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmIconGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmIconGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmLabelGadgetBuilder :
     public CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
         CXmLabelGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmLabelGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
-        CXmLabelGadget,
-        Pairs...>::CXmLabelGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmLabelGadgetBuilder(const ParentT& parent, const char* name):
+        CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
+            CXmLabelGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmLabelGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmLabelGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
+            CXmLabelGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmLabelGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmLabelGadgetBuilder(const CXmLabelGadgetBuilder& other):
+        CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
+            CXmLabelGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmLabelGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmLabelGadgetBuilder(CXmLabelGadgetBuilder&& other):
+        CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
+            CXmLabelGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmLabelGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmLabelGadgetBuilder& operator=(const CXmLabelGadgetBuilder&) = default;
+    CXmLabelGadgetBuilder& operator=(CXmLabelGadgetBuilder&&) = default;
 
     CXmLabelGadget build()
     {
@@ -22033,21 +22975,69 @@ public:
     }
 };
 
-CXmLabelGadgetBuilder(Widget, const char*) -> CXmLabelGadgetBuilder<>;
-template <typename... Pairs>
-CXmLabelGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmLabelGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmLabelGadgetBuilder(const Parent&, const char*)
+    -> CXmLabelGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmLabelGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmLabelGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmSeparatorGadgetBuilder :
     public CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
         CXmSeparatorGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmSeparatorGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
-        CXmSeparatorGadget,
-        Pairs...>::CXmSeparatorGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmSeparatorGadgetBuilder(const ParentT& parent, const char* name):
+        CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
+            CXmSeparatorGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmSeparatorGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
+            CXmSeparatorGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSeparatorGadgetBuilder(const CXmSeparatorGadgetBuilder& other):
+        CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
+            CXmSeparatorGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSeparatorGadgetBuilder(CXmSeparatorGadgetBuilder&& other):
+        CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
+            CXmSeparatorGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSeparatorGadgetBuilder& operator=(
+        const CXmSeparatorGadgetBuilder&) = default;
+    CXmSeparatorGadgetBuilder& operator=(CXmSeparatorGadgetBuilder&&) = default;
 
     CXmSeparatorGadget build()
     {
@@ -22059,21 +23049,68 @@ public:
     }
 };
 
-CXmSeparatorGadgetBuilder(Widget, const char*) -> CXmSeparatorGadgetBuilder<>;
-template <typename... Pairs>
-CXmSeparatorGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmSeparatorGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmSeparatorGadgetBuilder(const Parent&, const char*)
+    -> CXmSeparatorGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmSeparatorGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmSeparatorGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmArrowButtonBuilder :
     public CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
         CXmArrowButton,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmArrowButtonBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
-        CXmArrowButton,
-        Pairs...>::CXmArrowButtonBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmArrowButtonBuilder(const ParentT& parent, const char* name):
+        CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
+            CXmArrowButton,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmArrowButtonBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
+            CXmArrowButton,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmArrowButtonBuilder(const CXmArrowButtonBuilder& other):
+        CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
+            CXmArrowButton,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmArrowButtonBuilder(CXmArrowButtonBuilder&& other):
+        CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
+            CXmArrowButton,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmArrowButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmArrowButtonBuilder& operator=(const CXmArrowButtonBuilder&) = default;
+    CXmArrowButtonBuilder& operator=(CXmArrowButtonBuilder&&) = default;
 
     CXmArrowButton build()
     {
@@ -22085,21 +23122,68 @@ public:
     }
 };
 
-CXmArrowButtonBuilder(Widget, const char*) -> CXmArrowButtonBuilder<>;
-template <typename... Pairs>
-CXmArrowButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmArrowButtonBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmArrowButtonBuilder(const Parent&, const char*)
+    -> CXmArrowButtonBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmArrowButtonBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmArrowButtonBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmIconButtonBuilder :
     public CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
         CXmIconButton,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmIconButtonBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
-        CXmIconButton,
-        Pairs...>::CXmIconButtonBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmIconButtonBuilder(const ParentT& parent, const char* name):
+        CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
+            CXmIconButton,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmIconButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmIconButtonBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
+            CXmIconButton,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmIconButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconButtonBuilder(const CXmIconButtonBuilder& other):
+        CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
+            CXmIconButton,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmIconButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconButtonBuilder(CXmIconButtonBuilder&& other):
+        CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
+            CXmIconButton,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmIconButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconButtonBuilder& operator=(const CXmIconButtonBuilder&) = default;
+    CXmIconButtonBuilder& operator=(CXmIconButtonBuilder&&) = default;
 
     CXmIconButton build()
     {
@@ -22111,18 +23195,56 @@ public:
     }
 };
 
-CXmIconButtonBuilder(Widget, const char*) -> CXmIconButtonBuilder<>;
-template <typename... Pairs>
-CXmIconButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmIconButtonBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmIconButtonBuilder(const Parent&, const char*)
+    -> CXmIconButtonBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmIconButtonBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmIconButtonBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmLabelBuilder :
-    public CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Pairs...>
+    public CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmLabelBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Pairs...>::
-        CXmLabelBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmLabelBuilder(const ParentT& parent, const char* name):
+        CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmLabelBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmLabelBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmLabelBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmLabelBuilder(const CXmLabelBuilder& other):
+        CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmLabelBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmLabelBuilder(CXmLabelBuilder&& other):
+        CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmLabelBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmLabelBuilder& operator=(const CXmLabelBuilder&) = default;
+    CXmLabelBuilder& operator=(CXmLabelBuilder&&) = default;
 
     CXmLabel build()
     {
@@ -22134,18 +23256,54 @@ public:
     }
 };
 
-CXmLabelBuilder(Widget, const char*) -> CXmLabelBuilder<>;
-template <typename... Pairs>
-CXmLabelBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmLabelBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmLabelBuilder(const Parent&, const char*) -> CXmLabelBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmLabelBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmLabelBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmListBuilder :
-    public CXmListBuilderImpl<CXmListBuilder, CXmList, Pairs...>
+    public CXmListBuilderImpl<CXmListBuilder, CXmList, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<CXmListBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmListBuilderImpl<CXmListBuilder, CXmList, Pairs...>::
-        CXmListBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmListBuilder(const ParentT& parent, const char* name):
+        CXmListBuilderImpl<CXmListBuilder, CXmList, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmListBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmListBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmListBuilderImpl<CXmListBuilder, CXmList, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmListBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmListBuilder(const CXmListBuilder& other):
+        CXmListBuilderImpl<CXmListBuilder, CXmList, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmListBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmListBuilder(CXmListBuilder&& other):
+        CXmListBuilderImpl<CXmListBuilder, CXmList, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmListBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmListBuilder& operator=(const CXmListBuilder&) = default;
+    CXmListBuilder& operator=(CXmListBuilder&&) = default;
 
     CXmList build()
     {
@@ -22157,18 +23315,59 @@ public:
     }
 };
 
-CXmListBuilder(Widget, const char*) -> CXmListBuilder<>;
-template <typename... Pairs>
-CXmListBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmListBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmListBuilder(const Parent&, const char*) -> CXmListBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmListBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmListBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmScrolledListBuilder :
-    public CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Pairs...>
+    public CXmListBuilderImpl<CXmScrolledListBuilder,
+        CXmList,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmScrolledListBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Pairs...>::
-        CXmListBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmScrolledListBuilder(const ParentT& parent, const char* name):
+        CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmScrolledListBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledListBuilder(const CXmScrolledListBuilder& other):
+        CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledListBuilder(CXmScrolledListBuilder&& other):
+        CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledListBuilder& operator=(const CXmScrolledListBuilder&) = default;
+    CXmScrolledListBuilder& operator=(CXmScrolledListBuilder&&) = default;
 
     CXmList build()
     {
@@ -22180,18 +23379,68 @@ public:
     }
 };
 
-CXmScrolledListBuilder(Widget, const char*) -> CXmScrolledListBuilder<>;
-template <typename... Pairs>
-CXmScrolledListBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmScrolledListBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmScrolledListBuilder(const Parent&, const char*)
+    -> CXmScrolledListBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmScrolledListBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmScrolledListBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmScrollBarBuilder :
-    public CXmScrollBarBuilderImpl<CXmScrollBarBuilder, CXmScrollBar, Pairs...>
+    public CXmScrollBarBuilderImpl<CXmScrollBarBuilder,
+        CXmScrollBar,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmScrollBarBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmScrollBarBuilderImpl<CXmScrollBarBuilder, CXmScrollBar, Pairs...>::
-        CXmScrollBarBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmScrollBarBuilder(const ParentT& parent, const char* name):
+        CXmScrollBarBuilderImpl<CXmScrollBarBuilder,
+            CXmScrollBar,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmScrollBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmScrollBarBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmScrollBarBuilderImpl<CXmScrollBarBuilder,
+            CXmScrollBar,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmScrollBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrollBarBuilder(const CXmScrollBarBuilder& other):
+        CXmScrollBarBuilderImpl<CXmScrollBarBuilder,
+            CXmScrollBar,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmScrollBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrollBarBuilder(CXmScrollBarBuilder&& other):
+        CXmScrollBarBuilderImpl<CXmScrollBarBuilder,
+            CXmScrollBar,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmScrollBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrollBarBuilder& operator=(const CXmScrollBarBuilder&) = default;
+    CXmScrollBarBuilder& operator=(CXmScrollBarBuilder&&) = default;
 
     CXmScrollBar build()
     {
@@ -22203,18 +23452,67 @@ public:
     }
 };
 
-CXmScrollBarBuilder(Widget, const char*) -> CXmScrollBarBuilder<>;
-template <typename... Pairs>
-CXmScrollBarBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmScrollBarBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmScrollBarBuilder(const Parent&, const char*) -> CXmScrollBarBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmScrollBarBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmScrollBarBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmSeparatorBuilder :
-    public CXmSeparatorBuilderImpl<CXmSeparatorBuilder, CXmSeparator, Pairs...>
+    public CXmSeparatorBuilderImpl<CXmSeparatorBuilder,
+        CXmSeparator,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmSeparatorBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSeparatorBuilderImpl<CXmSeparatorBuilder, CXmSeparator, Pairs...>::
-        CXmSeparatorBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmSeparatorBuilder(const ParentT& parent, const char* name):
+        CXmSeparatorBuilderImpl<CXmSeparatorBuilder,
+            CXmSeparator,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmSeparatorBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSeparatorBuilderImpl<CXmSeparatorBuilder,
+            CXmSeparator,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSeparatorBuilder(const CXmSeparatorBuilder& other):
+        CXmSeparatorBuilderImpl<CXmSeparatorBuilder,
+            CXmSeparator,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSeparatorBuilder(CXmSeparatorBuilder&& other):
+        CXmSeparatorBuilderImpl<CXmSeparatorBuilder,
+            CXmSeparator,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmSeparatorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSeparatorBuilder& operator=(const CXmSeparatorBuilder&) = default;
+    CXmSeparatorBuilder& operator=(CXmSeparatorBuilder&&) = default;
 
     CXmSeparator build()
     {
@@ -22226,18 +23524,54 @@ public:
     }
 };
 
-CXmSeparatorBuilder(Widget, const char*) -> CXmSeparatorBuilder<>;
-template <typename... Pairs>
-CXmSeparatorBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmSeparatorBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmSeparatorBuilder(const Parent&, const char*) -> CXmSeparatorBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmSeparatorBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmSeparatorBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmTextBuilder :
-    public CXmTextBuilderImpl<CXmTextBuilder, CXmText, Pairs...>
+    public CXmTextBuilderImpl<CXmTextBuilder, CXmText, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<CXmTextBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmTextBuilderImpl<CXmTextBuilder, CXmText, Pairs...>::
-        CXmTextBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmTextBuilder(const ParentT& parent, const char* name):
+        CXmTextBuilderImpl<CXmTextBuilder, CXmText, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmTextBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmTextBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmTextBuilderImpl<CXmTextBuilder, CXmText, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmTextBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTextBuilder(const CXmTextBuilder& other):
+        CXmTextBuilderImpl<CXmTextBuilder, CXmText, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmTextBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTextBuilder(CXmTextBuilder&& other):
+        CXmTextBuilderImpl<CXmTextBuilder, CXmText, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmTextBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTextBuilder& operator=(const CXmTextBuilder&) = default;
+    CXmTextBuilder& operator=(CXmTextBuilder&&) = default;
 
     CXmText build()
     {
@@ -22249,18 +23583,59 @@ public:
     }
 };
 
-CXmTextBuilder(Widget, const char*) -> CXmTextBuilder<>;
-template <typename... Pairs>
-CXmTextBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmTextBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmTextBuilder(const Parent&, const char*) -> CXmTextBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmTextBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmTextBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmScrolledTextBuilder :
-    public CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Pairs...>
+    public CXmTextBuilderImpl<CXmScrolledTextBuilder,
+        CXmText,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmScrolledTextBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Pairs...>::
-        CXmTextBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmScrolledTextBuilder(const ParentT& parent, const char* name):
+        CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledTextBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmScrolledTextBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledTextBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledTextBuilder(const CXmScrolledTextBuilder& other):
+        CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledTextBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledTextBuilder(CXmScrolledTextBuilder&& other):
+        CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledTextBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledTextBuilder& operator=(const CXmScrolledTextBuilder&) = default;
+    CXmScrolledTextBuilder& operator=(CXmScrolledTextBuilder&&) = default;
 
     CXmText build()
     {
@@ -22272,21 +23647,69 @@ public:
     }
 };
 
-CXmScrolledTextBuilder(Widget, const char*) -> CXmScrolledTextBuilder<>;
-template <typename... Pairs>
-CXmScrolledTextBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmScrolledTextBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmScrolledTextBuilder(const Parent&, const char*)
+    -> CXmScrolledTextBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmScrolledTextBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmScrolledTextBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmBulletinBoardBuilder :
     public CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
         CXmBulletinBoard,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmBulletinBoardBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
-        CXmBulletinBoard,
-        Pairs...>::CXmBulletinBoardBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmBulletinBoardBuilder(const ParentT& parent, const char* name):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmBulletinBoardBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmBulletinBoardBuilder(const CXmBulletinBoardBuilder& other):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmBulletinBoardBuilder(CXmBulletinBoardBuilder&& other):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmBulletinBoardBuilder& operator=(
+        const CXmBulletinBoardBuilder&) = default;
+    CXmBulletinBoardBuilder& operator=(CXmBulletinBoardBuilder&&) = default;
 
     CXmBulletinBoard build()
     {
@@ -22298,21 +23721,70 @@ public:
     }
 };
 
-CXmBulletinBoardBuilder(Widget, const char*) -> CXmBulletinBoardBuilder<>;
-template <typename... Pairs>
-CXmBulletinBoardBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmBulletinBoardBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmBulletinBoardBuilder(const Parent&, const char*)
+    -> CXmBulletinBoardBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmBulletinBoardBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmBulletinBoardBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmBulletinBoardDialogBuilder :
     public CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
         CXmBulletinBoard,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmBulletinBoardDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
-        CXmBulletinBoard,
-        Pairs...>::CXmBulletinBoardBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmBulletinBoardDialogBuilder(const ParentT& parent, const char* name):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmBulletinBoardDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmBulletinBoardDialogBuilder(const CXmBulletinBoardDialogBuilder& other):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmBulletinBoardDialogBuilder(CXmBulletinBoardDialogBuilder&& other):
+        CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
+            CXmBulletinBoard,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmBulletinBoardDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmBulletinBoardDialogBuilder& operator=(
+        const CXmBulletinBoardDialogBuilder&) = default;
+    CXmBulletinBoardDialogBuilder& operator=(
+        CXmBulletinBoardDialogBuilder&&) = default;
 
     CXmBulletinBoard build()
     {
@@ -22324,19 +23796,68 @@ public:
     }
 };
 
-CXmBulletinBoardDialogBuilder(Widget, const char*)
-    -> CXmBulletinBoardDialogBuilder<>;
-template <typename... Pairs>
-CXmBulletinBoardDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmBulletinBoardDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmBulletinBoardDialogBuilder(const Parent&, const char*)
+    -> CXmBulletinBoardDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmBulletinBoardDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmBulletinBoardDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmButtonBoxBuilder :
-    public CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder, CXmButtonBox, Pairs...>
+    public CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder,
+        CXmButtonBox,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmButtonBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder, CXmButtonBox, Pairs...>::
-        CXmButtonBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmButtonBoxBuilder(const ParentT& parent, const char* name):
+        CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder,
+            CXmButtonBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmButtonBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmButtonBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder,
+            CXmButtonBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmButtonBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmButtonBoxBuilder(const CXmButtonBoxBuilder& other):
+        CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder,
+            CXmButtonBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmButtonBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmButtonBoxBuilder(CXmButtonBoxBuilder&& other):
+        CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder,
+            CXmButtonBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmButtonBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmButtonBoxBuilder& operator=(const CXmButtonBoxBuilder&) = default;
+    CXmButtonBoxBuilder& operator=(CXmButtonBoxBuilder&&) = default;
 
     CXmButtonBox build()
     {
@@ -22348,21 +23869,68 @@ public:
     }
 };
 
-CXmButtonBoxBuilder(Widget, const char*) -> CXmButtonBoxBuilder<>;
-template <typename... Pairs>
-CXmButtonBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmButtonBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmButtonBoxBuilder(const Parent&, const char*) -> CXmButtonBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmButtonBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmButtonBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmColorSelectorBuilder :
     public CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
         CXmColorSelector,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmColorSelectorBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
-        CXmColorSelector,
-        Pairs...>::CXmColorSelectorBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmColorSelectorBuilder(const ParentT& parent, const char* name):
+        CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
+            CXmColorSelector,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmColorSelectorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmColorSelectorBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
+            CXmColorSelector,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmColorSelectorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmColorSelectorBuilder(const CXmColorSelectorBuilder& other):
+        CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
+            CXmColorSelector,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmColorSelectorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmColorSelectorBuilder(CXmColorSelectorBuilder&& other):
+        CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
+            CXmColorSelector,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmColorSelectorBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmColorSelectorBuilder& operator=(
+        const CXmColorSelectorBuilder&) = default;
+    CXmColorSelectorBuilder& operator=(CXmColorSelectorBuilder&&) = default;
 
     CXmColorSelector build()
     {
@@ -22374,18 +23942,68 @@ public:
     }
 };
 
-CXmColorSelectorBuilder(Widget, const char*) -> CXmColorSelectorBuilder<>;
-template <typename... Pairs>
-CXmColorSelectorBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmColorSelectorBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmColorSelectorBuilder(const Parent&, const char*)
+    -> CXmColorSelectorBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmColorSelectorBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmColorSelectorBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmComboBoxBuilder :
-    public CXmComboBoxBuilderImpl<CXmComboBoxBuilder, CXmComboBox, Pairs...>
+    public CXmComboBoxBuilderImpl<CXmComboBoxBuilder,
+        CXmComboBox,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmComboBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmComboBoxBuilderImpl<CXmComboBoxBuilder, CXmComboBox, Pairs...>::
-        CXmComboBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmComboBoxBuilder(const ParentT& parent, const char* name):
+        CXmComboBoxBuilderImpl<CXmComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmComboBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmComboBoxBuilderImpl<CXmComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmComboBoxBuilder(const CXmComboBoxBuilder& other):
+        CXmComboBoxBuilderImpl<CXmComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmComboBoxBuilder(CXmComboBoxBuilder&& other):
+        CXmComboBoxBuilderImpl<CXmComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmComboBoxBuilder& operator=(const CXmComboBoxBuilder&) = default;
+    CXmComboBoxBuilder& operator=(CXmComboBoxBuilder&&) = default;
 
     CXmComboBox build()
     {
@@ -22397,21 +24015,69 @@ public:
     }
 };
 
-CXmComboBoxBuilder(Widget, const char*) -> CXmComboBoxBuilder<>;
-template <typename... Pairs>
-CXmComboBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmComboBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmComboBoxBuilder(const Parent&, const char*) -> CXmComboBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmComboBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmComboBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmDropDownComboBoxBuilder :
     public CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
         CXmComboBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmDropDownComboBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
-        CXmComboBox,
-        Pairs...>::CXmComboBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmDropDownComboBoxBuilder(const ParentT& parent, const char* name):
+        CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmDropDownComboBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownComboBoxBuilder(const CXmDropDownComboBoxBuilder& other):
+        CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownComboBoxBuilder(CXmDropDownComboBoxBuilder&& other):
+        CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownComboBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownComboBoxBuilder& operator=(
+        const CXmDropDownComboBoxBuilder&) = default;
+    CXmDropDownComboBoxBuilder& operator=(
+        CXmDropDownComboBoxBuilder&&) = default;
 
     CXmComboBox build()
     {
@@ -22423,19 +24089,68 @@ public:
     }
 };
 
-CXmDropDownComboBoxBuilder(Widget, const char*) -> CXmDropDownComboBoxBuilder<>;
-template <typename... Pairs>
-CXmDropDownComboBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmDropDownComboBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmDropDownComboBoxBuilder(const Parent&, const char*)
+    -> CXmDropDownComboBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmDropDownComboBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmDropDownComboBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmDropDownListBuilder :
-    public CXmComboBoxBuilderImpl<CXmDropDownListBuilder, CXmComboBox, Pairs...>
+    public CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
+        CXmComboBox,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmDropDownListBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
-        CXmComboBox,
-        Pairs...>::CXmComboBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmDropDownListBuilder(const ParentT& parent, const char* name):
+        CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmDropDownListBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownListBuilder(const CXmDropDownListBuilder& other):
+        CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownListBuilder(CXmDropDownListBuilder&& other):
+        CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
+            CXmComboBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownListBuilder& operator=(const CXmDropDownListBuilder&) = default;
+    CXmDropDownListBuilder& operator=(CXmDropDownListBuilder&&) = default;
 
     CXmComboBox build()
     {
@@ -22447,18 +24162,68 @@ public:
     }
 };
 
-CXmDropDownListBuilder(Widget, const char*) -> CXmDropDownListBuilder<>;
-template <typename... Pairs>
-CXmDropDownListBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmDropDownListBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmDropDownListBuilder(const Parent&, const char*)
+    -> CXmDropDownListBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmDropDownListBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmDropDownListBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmContainerBuilder :
-    public CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Pairs...>
+    public CXmContainerBuilderImpl<CXmContainerBuilder,
+        CXmContainer,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmContainerBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Pairs...>::
-        CXmContainerBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmContainerBuilder(const ParentT& parent, const char* name):
+        CXmContainerBuilderImpl<CXmContainerBuilder,
+            CXmContainer,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmContainerBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmContainerBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmContainerBuilderImpl<CXmContainerBuilder,
+            CXmContainer,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmContainerBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmContainerBuilder(const CXmContainerBuilder& other):
+        CXmContainerBuilderImpl<CXmContainerBuilder,
+            CXmContainer,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmContainerBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmContainerBuilder(CXmContainerBuilder&& other):
+        CXmContainerBuilderImpl<CXmContainerBuilder,
+            CXmContainer,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmContainerBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmContainerBuilder& operator=(const CXmContainerBuilder&) = default;
+    CXmContainerBuilder& operator=(CXmContainerBuilder&&) = default;
 
     CXmContainer build()
     {
@@ -22470,21 +24235,67 @@ public:
     }
 };
 
-CXmContainerBuilder(Widget, const char*) -> CXmContainerBuilder<>;
-template <typename... Pairs>
-CXmContainerBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmContainerBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmContainerBuilder(const Parent&, const char*) -> CXmContainerBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmContainerBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmContainerBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmDrawingAreaBuilder :
     public CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
         CXmDrawingArea,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmDrawingAreaBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
-        CXmDrawingArea,
-        Pairs...>::CXmDrawingAreaBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmDrawingAreaBuilder(const ParentT& parent, const char* name):
+        CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
+            CXmDrawingArea,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmDrawingAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmDrawingAreaBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
+            CXmDrawingArea,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmDrawingAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDrawingAreaBuilder(const CXmDrawingAreaBuilder& other):
+        CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
+            CXmDrawingArea,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmDrawingAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDrawingAreaBuilder(CXmDrawingAreaBuilder&& other):
+        CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
+            CXmDrawingArea,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmDrawingAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDrawingAreaBuilder& operator=(const CXmDrawingAreaBuilder&) = default;
+    CXmDrawingAreaBuilder& operator=(CXmDrawingAreaBuilder&&) = default;
 
     CXmDrawingArea build()
     {
@@ -22496,18 +24307,68 @@ public:
     }
 };
 
-CXmDrawingAreaBuilder(Widget, const char*) -> CXmDrawingAreaBuilder<>;
-template <typename... Pairs>
-CXmDrawingAreaBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmDrawingAreaBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmDrawingAreaBuilder(const Parent&, const char*)
+    -> CXmDrawingAreaBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmDrawingAreaBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmDrawingAreaBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmDropDownBuilder :
-    public CXmDropDownBuilderImpl<CXmDropDownBuilder, CXmDropDown, Pairs...>
+    public CXmDropDownBuilderImpl<CXmDropDownBuilder,
+        CXmDropDown,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmDropDownBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmDropDownBuilderImpl<CXmDropDownBuilder, CXmDropDown, Pairs...>::
-        CXmDropDownBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmDropDownBuilder(const ParentT& parent, const char* name):
+        CXmDropDownBuilderImpl<CXmDropDownBuilder,
+            CXmDropDown,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmDropDownBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmDropDownBuilderImpl<CXmDropDownBuilder,
+            CXmDropDown,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownBuilder(const CXmDropDownBuilder& other):
+        CXmDropDownBuilderImpl<CXmDropDownBuilder,
+            CXmDropDown,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownBuilder(CXmDropDownBuilder&& other):
+        CXmDropDownBuilderImpl<CXmDropDownBuilder,
+            CXmDropDown,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmDropDownBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDropDownBuilder& operator=(const CXmDropDownBuilder&) = default;
+    CXmDropDownBuilder& operator=(CXmDropDownBuilder&&) = default;
 
     CXmDropDown build()
     {
@@ -22519,18 +24380,55 @@ public:
     }
 };
 
-CXmDropDownBuilder(Widget, const char*) -> CXmDropDownBuilder<>;
-template <typename... Pairs>
-CXmDropDownBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmDropDownBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmDropDownBuilder(const Parent&, const char*) -> CXmDropDownBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmDropDownBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmDropDownBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmFrameBuilder :
-    public CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Pairs...>
+    public CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmFrameBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Pairs...>::
-        CXmFrameBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmFrameBuilder(const ParentT& parent, const char* name):
+        CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmFrameBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmFrameBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmFrameBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmFrameBuilder(const CXmFrameBuilder& other):
+        CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmFrameBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmFrameBuilder(CXmFrameBuilder&& other):
+        CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmFrameBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmFrameBuilder& operator=(const CXmFrameBuilder&) = default;
+    CXmFrameBuilder& operator=(CXmFrameBuilder&&) = default;
 
     CXmFrame build()
     {
@@ -22542,18 +24440,59 @@ public:
     }
 };
 
-CXmFrameBuilder(Widget, const char*) -> CXmFrameBuilder<>;
-template <typename... Pairs>
-CXmFrameBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmFrameBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmFrameBuilder(const Parent&, const char*) -> CXmFrameBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmFrameBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmFrameBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmIconBoxBuilder :
-    public CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Pairs...>
+    public CXmIconBoxBuilderImpl<CXmIconBoxBuilder,
+        CXmIconBox,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmIconBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Pairs...>::
-        CXmIconBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmIconBoxBuilder(const ParentT& parent, const char* name):
+        CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmIconBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmIconBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmIconBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconBoxBuilder(const CXmIconBoxBuilder& other):
+        CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmIconBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconBoxBuilder(CXmIconBoxBuilder&& other):
+        CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmIconBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconBoxBuilder& operator=(const CXmIconBoxBuilder&) = default;
+    CXmIconBoxBuilder& operator=(CXmIconBoxBuilder&&) = default;
 
     CXmIconBox build()
     {
@@ -22565,18 +24504,67 @@ public:
     }
 };
 
-CXmIconBoxBuilder(Widget, const char*) -> CXmIconBoxBuilder<>;
-template <typename... Pairs>
-CXmIconBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmIconBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmIconBoxBuilder(const Parent&, const char*) -> CXmIconBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmIconBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmIconBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmMultiListBuilder :
-    public CXmMultiListBuilderImpl<CXmMultiListBuilder, CXmMultiList, Pairs...>
+    public CXmMultiListBuilderImpl<CXmMultiListBuilder,
+        CXmMultiList,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmMultiListBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMultiListBuilderImpl<CXmMultiListBuilder, CXmMultiList, Pairs...>::
-        CXmMultiListBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmMultiListBuilder(const ParentT& parent, const char* name):
+        CXmMultiListBuilderImpl<CXmMultiListBuilder,
+            CXmMultiList,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmMultiListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmMultiListBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMultiListBuilderImpl<CXmMultiListBuilder,
+            CXmMultiList,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmMultiListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMultiListBuilder(const CXmMultiListBuilder& other):
+        CXmMultiListBuilderImpl<CXmMultiListBuilder,
+            CXmMultiList,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmMultiListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMultiListBuilder(CXmMultiListBuilder&& other):
+        CXmMultiListBuilderImpl<CXmMultiListBuilder,
+            CXmMultiList,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmMultiListBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMultiListBuilder& operator=(const CXmMultiListBuilder&) = default;
+    CXmMultiListBuilder& operator=(CXmMultiListBuilder&&) = default;
 
     CXmMultiList build()
     {
@@ -22588,18 +24576,67 @@ public:
     }
 };
 
-CXmMultiListBuilder(Widget, const char*) -> CXmMultiListBuilder<>;
-template <typename... Pairs>
-CXmMultiListBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmMultiListBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmMultiListBuilder(const Parent&, const char*) -> CXmMultiListBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmMultiListBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmMultiListBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmNotebookBuilder :
-    public CXmNotebookBuilderImpl<CXmNotebookBuilder, CXmNotebook, Pairs...>
+    public CXmNotebookBuilderImpl<CXmNotebookBuilder,
+        CXmNotebook,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmNotebookBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmNotebookBuilderImpl<CXmNotebookBuilder, CXmNotebook, Pairs...>::
-        CXmNotebookBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmNotebookBuilder(const ParentT& parent, const char* name):
+        CXmNotebookBuilderImpl<CXmNotebookBuilder,
+            CXmNotebook,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmNotebookBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmNotebookBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmNotebookBuilderImpl<CXmNotebookBuilder,
+            CXmNotebook,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmNotebookBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmNotebookBuilder(const CXmNotebookBuilder& other):
+        CXmNotebookBuilderImpl<CXmNotebookBuilder,
+            CXmNotebook,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmNotebookBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmNotebookBuilder(CXmNotebookBuilder&& other):
+        CXmNotebookBuilderImpl<CXmNotebookBuilder,
+            CXmNotebook,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmNotebookBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmNotebookBuilder& operator=(const CXmNotebookBuilder&) = default;
+    CXmNotebookBuilder& operator=(CXmNotebookBuilder&&) = default;
 
     CXmNotebook build()
     {
@@ -22611,18 +24648,67 @@ public:
     }
 };
 
-CXmNotebookBuilder(Widget, const char*) -> CXmNotebookBuilder<>;
-template <typename... Pairs>
-CXmNotebookBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmNotebookBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmNotebookBuilder(const Parent&, const char*) -> CXmNotebookBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmNotebookBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmNotebookBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmRowColumnBuilder :
-    public CXmRowColumnBuilderImpl<CXmRowColumnBuilder, CXmRowColumn, Pairs...>
+    public CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
+        CXmRowColumn,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmRowColumnBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmRowColumnBuilder, CXmRowColumn, Pairs...>::
-        CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmRowColumnBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmRowColumnBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmRowColumnBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmRowColumnBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmRowColumnBuilder(const CXmRowColumnBuilder& other):
+        CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmRowColumnBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmRowColumnBuilder(CXmRowColumnBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmRowColumnBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmRowColumnBuilder& operator=(const CXmRowColumnBuilder&) = default;
+    CXmRowColumnBuilder& operator=(CXmRowColumnBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22634,18 +24720,67 @@ public:
     }
 };
 
-CXmRowColumnBuilder(Widget, const char*) -> CXmRowColumnBuilder<>;
-template <typename... Pairs>
-CXmRowColumnBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmRowColumnBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmRowColumnBuilder(const Parent&, const char*) -> CXmRowColumnBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmRowColumnBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmRowColumnBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmMenuBarBuilder :
-    public CXmRowColumnBuilderImpl<CXmMenuBarBuilder, CXmRowColumn, Pairs...>
+    public CXmRowColumnBuilderImpl<CXmMenuBarBuilder,
+        CXmRowColumn,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmMenuBarBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmMenuBarBuilder, CXmRowColumn, Pairs...>::
-        CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmMenuBarBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmMenuBarBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmMenuBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmMenuBarBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmMenuBarBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmMenuBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMenuBarBuilder(const CXmMenuBarBuilder& other):
+        CXmRowColumnBuilderImpl<CXmMenuBarBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmMenuBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMenuBarBuilder(CXmMenuBarBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmMenuBarBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmMenuBarBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMenuBarBuilder& operator=(const CXmMenuBarBuilder&) = default;
+    CXmMenuBarBuilder& operator=(CXmMenuBarBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22657,19 +24792,67 @@ public:
     }
 };
 
-CXmMenuBarBuilder(Widget, const char*) -> CXmMenuBarBuilder<>;
-template <typename... Pairs>
-CXmMenuBarBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmMenuBarBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmMenuBarBuilder(const Parent&, const char*) -> CXmMenuBarBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmMenuBarBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmMenuBarBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmOptionMenuBuilder :
-    public CXmRowColumnBuilderImpl<CXmOptionMenuBuilder, CXmRowColumn, Pairs...>
+    public CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
+        CXmRowColumn,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmOptionMenuBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
-        CXmRowColumn,
-        Pairs...>::CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmOptionMenuBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmOptionMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmOptionMenuBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmOptionMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmOptionMenuBuilder(const CXmOptionMenuBuilder& other):
+        CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmOptionMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmOptionMenuBuilder(CXmOptionMenuBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmOptionMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmOptionMenuBuilder& operator=(const CXmOptionMenuBuilder&) = default;
+    CXmOptionMenuBuilder& operator=(CXmOptionMenuBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22681,18 +24864,68 @@ public:
     }
 };
 
-CXmOptionMenuBuilder(Widget, const char*) -> CXmOptionMenuBuilder<>;
-template <typename... Pairs>
-CXmOptionMenuBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmOptionMenuBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmOptionMenuBuilder(const Parent&, const char*)
+    -> CXmOptionMenuBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmOptionMenuBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmOptionMenuBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmPopupMenuBuilder :
-    public CXmRowColumnBuilderImpl<CXmPopupMenuBuilder, CXmRowColumn, Pairs...>
+    public CXmRowColumnBuilderImpl<CXmPopupMenuBuilder,
+        CXmRowColumn,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmPopupMenuBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmPopupMenuBuilder, CXmRowColumn, Pairs...>::
-        CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmPopupMenuBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmPopupMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmPopupMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmPopupMenuBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmPopupMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmPopupMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPopupMenuBuilder(const CXmPopupMenuBuilder& other):
+        CXmRowColumnBuilderImpl<CXmPopupMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmPopupMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPopupMenuBuilder(CXmPopupMenuBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmPopupMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmPopupMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPopupMenuBuilder& operator=(const CXmPopupMenuBuilder&) = default;
+    CXmPopupMenuBuilder& operator=(CXmPopupMenuBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22704,21 +24937,67 @@ public:
     }
 };
 
-CXmPopupMenuBuilder(Widget, const char*) -> CXmPopupMenuBuilder<>;
-template <typename... Pairs>
-CXmPopupMenuBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmPopupMenuBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmPopupMenuBuilder(const Parent&, const char*) -> CXmPopupMenuBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmPopupMenuBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmPopupMenuBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmPulldownMenuBuilder :
     public CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
         CXmRowColumn,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmPulldownMenuBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
-        CXmRowColumn,
-        Pairs...>::CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmPulldownMenuBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmPulldownMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmPulldownMenuBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmPulldownMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPulldownMenuBuilder(const CXmPulldownMenuBuilder& other):
+        CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmPulldownMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPulldownMenuBuilder(CXmPulldownMenuBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmPulldownMenuBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPulldownMenuBuilder& operator=(const CXmPulldownMenuBuilder&) = default;
+    CXmPulldownMenuBuilder& operator=(CXmPulldownMenuBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22730,18 +25009,68 @@ public:
     }
 };
 
-CXmPulldownMenuBuilder(Widget, const char*) -> CXmPulldownMenuBuilder<>;
-template <typename... Pairs>
-CXmPulldownMenuBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmPulldownMenuBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmPulldownMenuBuilder(const Parent&, const char*)
+    -> CXmPulldownMenuBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmPulldownMenuBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmPulldownMenuBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmRadioBoxBuilder :
-    public CXmRowColumnBuilderImpl<CXmRadioBoxBuilder, CXmRowColumn, Pairs...>
+    public CXmRowColumnBuilderImpl<CXmRadioBoxBuilder,
+        CXmRowColumn,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmRadioBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmRadioBoxBuilder, CXmRowColumn, Pairs...>::
-        CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmRadioBoxBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmRadioBoxBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmRadioBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmRadioBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmRadioBoxBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmRadioBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmRadioBoxBuilder(const CXmRadioBoxBuilder& other):
+        CXmRowColumnBuilderImpl<CXmRadioBoxBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmRadioBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmRadioBoxBuilder(CXmRadioBoxBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmRadioBoxBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmRadioBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmRadioBoxBuilder& operator=(const CXmRadioBoxBuilder&) = default;
+    CXmRadioBoxBuilder& operator=(CXmRadioBoxBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22753,18 +25082,67 @@ public:
     }
 };
 
-CXmRadioBoxBuilder(Widget, const char*) -> CXmRadioBoxBuilder<>;
-template <typename... Pairs>
-CXmRadioBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmRadioBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmRadioBoxBuilder(const Parent&, const char*) -> CXmRadioBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmRadioBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmRadioBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmWorkAreaBuilder :
-    public CXmRowColumnBuilderImpl<CXmWorkAreaBuilder, CXmRowColumn, Pairs...>
+    public CXmRowColumnBuilderImpl<CXmWorkAreaBuilder,
+        CXmRowColumn,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmWorkAreaBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmRowColumnBuilderImpl<CXmWorkAreaBuilder, CXmRowColumn, Pairs...>::
-        CXmRowColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmWorkAreaBuilder(const ParentT& parent, const char* name):
+        CXmRowColumnBuilderImpl<CXmWorkAreaBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmWorkAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmWorkAreaBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmRowColumnBuilderImpl<CXmWorkAreaBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmWorkAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWorkAreaBuilder(const CXmWorkAreaBuilder& other):
+        CXmRowColumnBuilderImpl<CXmWorkAreaBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmWorkAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWorkAreaBuilder(CXmWorkAreaBuilder&& other):
+        CXmRowColumnBuilderImpl<CXmWorkAreaBuilder,
+            CXmRowColumn,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmWorkAreaBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWorkAreaBuilder& operator=(const CXmWorkAreaBuilder&) = default;
+    CXmWorkAreaBuilder& operator=(CXmWorkAreaBuilder&&) = default;
 
     CXmRowColumn build()
     {
@@ -22776,18 +25154,55 @@ public:
     }
 };
 
-CXmWorkAreaBuilder(Widget, const char*) -> CXmWorkAreaBuilder<>;
-template <typename... Pairs>
-CXmWorkAreaBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmWorkAreaBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmWorkAreaBuilder(const Parent&, const char*) -> CXmWorkAreaBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmWorkAreaBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmWorkAreaBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmScaleBuilder :
-    public CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Pairs...>
+    public CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmScaleBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Pairs...>::
-        CXmScaleBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmScaleBuilder(const ParentT& parent, const char* name):
+        CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmScaleBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmScaleBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmScaleBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmScaleBuilder(const CXmScaleBuilder& other):
+        CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmScaleBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmScaleBuilder(CXmScaleBuilder&& other):
+        CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmScaleBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmScaleBuilder& operator=(const CXmScaleBuilder&) = default;
+    CXmScaleBuilder& operator=(CXmScaleBuilder&&) = default;
 
     CXmScale build()
     {
@@ -22799,21 +25214,68 @@ public:
     }
 };
 
-CXmScaleBuilder(Widget, const char*) -> CXmScaleBuilder<>;
-template <typename... Pairs>
-CXmScaleBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmScaleBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmScaleBuilder(const Parent&, const char*) -> CXmScaleBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmScaleBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmScaleBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmScrolledWindowBuilder :
     public CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
         CXmScrolledWindow,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmScrolledWindowBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
-        CXmScrolledWindow,
-        Pairs...>::CXmScrolledWindowBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmScrolledWindowBuilder(const ParentT& parent, const char* name):
+        CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
+            CXmScrolledWindow,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmScrolledWindowBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
+            CXmScrolledWindow,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledWindowBuilder(const CXmScrolledWindowBuilder& other):
+        CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
+            CXmScrolledWindow,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledWindowBuilder(CXmScrolledWindowBuilder&& other):
+        CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
+            CXmScrolledWindow,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmScrolledWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmScrolledWindowBuilder& operator=(
+        const CXmScrolledWindowBuilder&) = default;
+    CXmScrolledWindowBuilder& operator=(CXmScrolledWindowBuilder&&) = default;
 
     CXmScrolledWindow build()
     {
@@ -22825,18 +25287,60 @@ public:
     }
 };
 
-CXmScrolledWindowBuilder(Widget, const char*) -> CXmScrolledWindowBuilder<>;
-template <typename... Pairs>
-CXmScrolledWindowBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmScrolledWindowBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmScrolledWindowBuilder(const Parent&, const char*)
+    -> CXmScrolledWindowBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmScrolledWindowBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmScrolledWindowBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmSpinBoxBuilder :
-    public CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Pairs...>
+    public CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder,
+        CXmSpinBox,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmSpinBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Pairs...>::
-        CXmSpinBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmSpinBoxBuilder(const ParentT& parent, const char* name):
+        CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmSpinBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSpinBoxBuilder(const CXmSpinBoxBuilder& other):
+        CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSpinBoxBuilder(CXmSpinBoxBuilder&& other):
+        CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSpinBoxBuilder& operator=(const CXmSpinBoxBuilder&) = default;
+    CXmSpinBoxBuilder& operator=(CXmSpinBoxBuilder&&) = default;
 
     CXmSpinBox build()
     {
@@ -22848,18 +25352,56 @@ public:
     }
 };
 
-CXmSpinBoxBuilder(Widget, const char*) -> CXmSpinBoxBuilder<>;
-template <typename... Pairs>
-CXmSpinBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmSpinBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmSpinBoxBuilder(const Parent&, const char*) -> CXmSpinBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmSpinBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmSpinBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmTabBoxBuilder :
-    public CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Pairs...>
+    public CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmTabBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Pairs...>::
-        CXmTabBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmTabBoxBuilder(const ParentT& parent, const char* name):
+        CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmTabBoxBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmTabBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmTabBoxBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTabBoxBuilder(const CXmTabBoxBuilder& other):
+        CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<CXmTabBoxBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTabBoxBuilder(CXmTabBoxBuilder&& other):
+        CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmTabBoxBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTabBoxBuilder& operator=(const CXmTabBoxBuilder&) = default;
+    CXmTabBoxBuilder& operator=(CXmTabBoxBuilder&&) = default;
 
     CXmTabBox build()
     {
@@ -22871,21 +25413,67 @@ public:
     }
 };
 
-CXmTabBoxBuilder(Widget, const char*) -> CXmTabBoxBuilder<>;
-template <typename... Pairs>
-CXmTabBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmTabBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmTabBoxBuilder(const Parent&, const char*) -> CXmTabBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmTabBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmTabBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmIconHeaderBuilder :
     public CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
         CXmIconHeader,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmIconHeaderBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
-        CXmIconHeader,
-        Pairs...>::CXmIconHeaderBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmIconHeaderBuilder(const ParentT& parent, const char* name):
+        CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
+            CXmIconHeader,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmIconHeaderBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmIconHeaderBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
+            CXmIconHeader,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmIconHeaderBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconHeaderBuilder(const CXmIconHeaderBuilder& other):
+        CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
+            CXmIconHeader,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmIconHeaderBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconHeaderBuilder(CXmIconHeaderBuilder&& other):
+        CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
+            CXmIconHeader,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmIconHeaderBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmIconHeaderBuilder& operator=(const CXmIconHeaderBuilder&) = default;
+    CXmIconHeaderBuilder& operator=(CXmIconHeaderBuilder&&) = default;
 
     CXmIconHeader build()
     {
@@ -22897,21 +25485,70 @@ public:
     }
 };
 
-CXmIconHeaderBuilder(Widget, const char*) -> CXmIconHeaderBuilder<>;
-template <typename... Pairs>
-CXmIconHeaderBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmIconHeaderBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmIconHeaderBuilder(const Parent&, const char*)
+    -> CXmIconHeaderBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmIconHeaderBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmIconHeaderBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmCascadeButtonGadgetBuilder :
     public CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
         CXmCascadeButtonGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmCascadeButtonGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
-        CXmCascadeButtonGadget,
-        Pairs...>::CXmCascadeButtonGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmCascadeButtonGadgetBuilder(const ParentT& parent, const char* name):
+        CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
+            CXmCascadeButtonGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmCascadeButtonGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
+            CXmCascadeButtonGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCascadeButtonGadgetBuilder(const CXmCascadeButtonGadgetBuilder& other):
+        CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
+            CXmCascadeButtonGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCascadeButtonGadgetBuilder(CXmCascadeButtonGadgetBuilder&& other):
+        CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
+            CXmCascadeButtonGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCascadeButtonGadgetBuilder& operator=(
+        const CXmCascadeButtonGadgetBuilder&) = default;
+    CXmCascadeButtonGadgetBuilder& operator=(
+        CXmCascadeButtonGadgetBuilder&&) = default;
 
     CXmCascadeButtonGadget build()
     {
@@ -22923,22 +25560,70 @@ public:
     }
 };
 
-CXmCascadeButtonGadgetBuilder(Widget, const char*)
-    -> CXmCascadeButtonGadgetBuilder<>;
-template <typename... Pairs>
-CXmCascadeButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmCascadeButtonGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmCascadeButtonGadgetBuilder(const Parent&, const char*)
+    -> CXmCascadeButtonGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmCascadeButtonGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmCascadeButtonGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmPushButtonGadgetBuilder :
     public CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
         CXmPushButtonGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmPushButtonGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
-        CXmPushButtonGadget,
-        Pairs...>::CXmPushButtonGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmPushButtonGadgetBuilder(const ParentT& parent, const char* name):
+        CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
+            CXmPushButtonGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmPushButtonGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
+            CXmPushButtonGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPushButtonGadgetBuilder(const CXmPushButtonGadgetBuilder& other):
+        CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
+            CXmPushButtonGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPushButtonGadgetBuilder(CXmPushButtonGadgetBuilder&& other):
+        CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
+            CXmPushButtonGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPushButtonGadgetBuilder& operator=(
+        const CXmPushButtonGadgetBuilder&) = default;
+    CXmPushButtonGadgetBuilder& operator=(
+        CXmPushButtonGadgetBuilder&&) = default;
 
     CXmPushButtonGadget build()
     {
@@ -22950,21 +25635,70 @@ public:
     }
 };
 
-CXmPushButtonGadgetBuilder(Widget, const char*) -> CXmPushButtonGadgetBuilder<>;
-template <typename... Pairs>
-CXmPushButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmPushButtonGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmPushButtonGadgetBuilder(const Parent&, const char*)
+    -> CXmPushButtonGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmPushButtonGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmPushButtonGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmToggleButtonGadgetBuilder :
     public CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
         CXmToggleButtonGadget,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmToggleButtonGadgetBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
-        CXmToggleButtonGadget,
-        Pairs...>::CXmToggleButtonGadgetBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmToggleButtonGadgetBuilder(const ParentT& parent, const char* name):
+        CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
+            CXmToggleButtonGadget,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmToggleButtonGadgetBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
+            CXmToggleButtonGadget,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmToggleButtonGadgetBuilder(const CXmToggleButtonGadgetBuilder& other):
+        CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
+            CXmToggleButtonGadget,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmToggleButtonGadgetBuilder(CXmToggleButtonGadgetBuilder&& other):
+        CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
+            CXmToggleButtonGadget,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonGadgetBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmToggleButtonGadgetBuilder& operator=(
+        const CXmToggleButtonGadgetBuilder&) = default;
+    CXmToggleButtonGadgetBuilder& operator=(
+        CXmToggleButtonGadgetBuilder&&) = default;
 
     CXmToggleButtonGadget build()
     {
@@ -22976,22 +25710,69 @@ public:
     }
 };
 
-CXmToggleButtonGadgetBuilder(Widget, const char*)
-    -> CXmToggleButtonGadgetBuilder<>;
-template <typename... Pairs>
-CXmToggleButtonGadgetBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmToggleButtonGadgetBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmToggleButtonGadgetBuilder(const Parent&, const char*)
+    -> CXmToggleButtonGadgetBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmToggleButtonGadgetBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmToggleButtonGadgetBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmCascadeButtonBuilder :
     public CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
         CXmCascadeButton,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmCascadeButtonBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
-        CXmCascadeButton,
-        Pairs...>::CXmCascadeButtonBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmCascadeButtonBuilder(const ParentT& parent, const char* name):
+        CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
+            CXmCascadeButton,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmCascadeButtonBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
+            CXmCascadeButton,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCascadeButtonBuilder(const CXmCascadeButtonBuilder& other):
+        CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
+            CXmCascadeButton,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCascadeButtonBuilder(CXmCascadeButtonBuilder&& other):
+        CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
+            CXmCascadeButton,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmCascadeButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCascadeButtonBuilder& operator=(
+        const CXmCascadeButtonBuilder&) = default;
+    CXmCascadeButtonBuilder& operator=(CXmCascadeButtonBuilder&&) = default;
 
     CXmCascadeButton build()
     {
@@ -23003,21 +25784,68 @@ public:
     }
 };
 
-CXmCascadeButtonBuilder(Widget, const char*) -> CXmCascadeButtonBuilder<>;
-template <typename... Pairs>
-CXmCascadeButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmCascadeButtonBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmCascadeButtonBuilder(const Parent&, const char*)
+    -> CXmCascadeButtonBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmCascadeButtonBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmCascadeButtonBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmDrawnButtonBuilder :
     public CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
         CXmDrawnButton,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmDrawnButtonBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
-        CXmDrawnButton,
-        Pairs...>::CXmDrawnButtonBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmDrawnButtonBuilder(const ParentT& parent, const char* name):
+        CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
+            CXmDrawnButton,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmDrawnButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmDrawnButtonBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
+            CXmDrawnButton,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmDrawnButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDrawnButtonBuilder(const CXmDrawnButtonBuilder& other):
+        CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
+            CXmDrawnButton,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmDrawnButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDrawnButtonBuilder(CXmDrawnButtonBuilder&& other):
+        CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
+            CXmDrawnButton,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmDrawnButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmDrawnButtonBuilder& operator=(const CXmDrawnButtonBuilder&) = default;
+    CXmDrawnButtonBuilder& operator=(CXmDrawnButtonBuilder&&) = default;
 
     CXmDrawnButton build()
     {
@@ -23029,21 +25857,68 @@ public:
     }
 };
 
-CXmDrawnButtonBuilder(Widget, const char*) -> CXmDrawnButtonBuilder<>;
-template <typename... Pairs>
-CXmDrawnButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmDrawnButtonBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmDrawnButtonBuilder(const Parent&, const char*)
+    -> CXmDrawnButtonBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmDrawnButtonBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmDrawnButtonBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmPushButtonBuilder :
     public CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
         CXmPushButton,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmPushButtonBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
-        CXmPushButton,
-        Pairs...>::CXmPushButtonBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmPushButtonBuilder(const ParentT& parent, const char* name):
+        CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
+            CXmPushButton,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmPushButtonBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
+            CXmPushButton,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPushButtonBuilder(const CXmPushButtonBuilder& other):
+        CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
+            CXmPushButton,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPushButtonBuilder(CXmPushButtonBuilder&& other):
+        CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
+            CXmPushButton,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmPushButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPushButtonBuilder& operator=(const CXmPushButtonBuilder&) = default;
+    CXmPushButtonBuilder& operator=(CXmPushButtonBuilder&&) = default;
 
     CXmPushButton build()
     {
@@ -23055,21 +25930,68 @@ public:
     }
 };
 
-CXmPushButtonBuilder(Widget, const char*) -> CXmPushButtonBuilder<>;
-template <typename... Pairs>
-CXmPushButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmPushButtonBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmPushButtonBuilder(const Parent&, const char*)
+    -> CXmPushButtonBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmPushButtonBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmPushButtonBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmToggleButtonBuilder :
     public CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
         CXmToggleButton,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmToggleButtonBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
-        CXmToggleButton,
-        Pairs...>::CXmToggleButtonBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmToggleButtonBuilder(const ParentT& parent, const char* name):
+        CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
+            CXmToggleButton,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmToggleButtonBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
+            CXmToggleButton,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmToggleButtonBuilder(const CXmToggleButtonBuilder& other):
+        CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
+            CXmToggleButton,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmToggleButtonBuilder(CXmToggleButtonBuilder&& other):
+        CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
+            CXmToggleButton,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmToggleButtonBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmToggleButtonBuilder& operator=(const CXmToggleButtonBuilder&) = default;
+    CXmToggleButtonBuilder& operator=(CXmToggleButtonBuilder&&) = default;
 
     CXmToggleButton build()
     {
@@ -23081,18 +26003,57 @@ public:
     }
 };
 
-CXmToggleButtonBuilder(Widget, const char*) -> CXmToggleButtonBuilder<>;
-template <typename... Pairs>
-CXmToggleButtonBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmToggleButtonBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmToggleButtonBuilder(const Parent&, const char*)
+    -> CXmToggleButtonBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmToggleButtonBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmToggleButtonBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmColumnBuilder :
-    public CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Pairs...>
+    public CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmColumnBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Pairs...>::
-        CXmColumnBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmColumnBuilder(const ParentT& parent, const char* name):
+        CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmColumnBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmColumnBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmColumnBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmColumnBuilder(const CXmColumnBuilder& other):
+        CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<CXmColumnBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmColumnBuilder(CXmColumnBuilder&& other):
+        CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmColumnBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmColumnBuilder& operator=(const CXmColumnBuilder&) = default;
+    CXmColumnBuilder& operator=(CXmColumnBuilder&&) = default;
 
     CXmColumn build()
     {
@@ -23104,18 +26065,54 @@ public:
     }
 };
 
-CXmColumnBuilder(Widget, const char*) -> CXmColumnBuilder<>;
-template <typename... Pairs>
-CXmColumnBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmColumnBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmColumnBuilder(const Parent&, const char*) -> CXmColumnBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmColumnBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmColumnBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmFormBuilder :
-    public CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Pairs...>
+    public CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<CXmFormBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Pairs...>::
-        CXmFormBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmFormBuilder(const ParentT& parent, const char* name):
+        CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmFormBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmFormBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmFormBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmFormBuilder(const CXmFormBuilder& other):
+        CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmFormBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmFormBuilder(CXmFormBuilder&& other):
+        CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmFormBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmFormBuilder& operator=(const CXmFormBuilder&) = default;
+    CXmFormBuilder& operator=(CXmFormBuilder&&) = default;
 
     CXmForm build()
     {
@@ -23127,18 +26124,56 @@ public:
     }
 };
 
-CXmFormBuilder(Widget, const char*) -> CXmFormBuilder<>;
-template <typename... Pairs>
-CXmFormBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmFormBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmFormBuilder(const Parent&, const char*) -> CXmFormBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmFormBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmFormBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmFormDialogBuilder :
-    public CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Pairs...>
+    public CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmFormDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Pairs...>::
-        CXmFormBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmFormDialogBuilder(const ParentT& parent, const char* name):
+        CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmFormDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmFormDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmFormDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFormDialogBuilder(const CXmFormDialogBuilder& other):
+        CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmFormDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFormDialogBuilder(CXmFormDialogBuilder&& other):
+        CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmFormDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFormDialogBuilder& operator=(const CXmFormDialogBuilder&) = default;
+    CXmFormDialogBuilder& operator=(CXmFormDialogBuilder&&) = default;
 
     CXmForm build()
     {
@@ -23150,21 +26185,68 @@ public:
     }
 };
 
-CXmFormDialogBuilder(Widget, const char*) -> CXmFormDialogBuilder<>;
-template <typename... Pairs>
-CXmFormDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmFormDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmFormDialogBuilder(const Parent&, const char*)
+    -> CXmFormDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmFormDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmFormDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmMessageBoxBuilder :
     public CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmMessageBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmMessageBoxBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmMessageBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmMessageBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmMessageBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMessageBoxBuilder(const CXmMessageBoxBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmMessageBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMessageBoxBuilder(CXmMessageBoxBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmMessageBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMessageBoxBuilder& operator=(const CXmMessageBoxBuilder&) = default;
+    CXmMessageBoxBuilder& operator=(CXmMessageBoxBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23176,21 +26258,68 @@ public:
     }
 };
 
-CXmMessageBoxBuilder(Widget, const char*) -> CXmMessageBoxBuilder<>;
-template <typename... Pairs>
-CXmMessageBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmMessageBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmMessageBoxBuilder(const Parent&, const char*)
+    -> CXmMessageBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmMessageBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmMessageBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmErrorDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmErrorDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmErrorDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmErrorDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmErrorDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmErrorDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmErrorDialogBuilder(const CXmErrorDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmErrorDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmErrorDialogBuilder(CXmErrorDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmErrorDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmErrorDialogBuilder& operator=(const CXmErrorDialogBuilder&) = default;
+    CXmErrorDialogBuilder& operator=(CXmErrorDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23202,21 +26331,70 @@ public:
     }
 };
 
-CXmErrorDialogBuilder(Widget, const char*) -> CXmErrorDialogBuilder<>;
-template <typename... Pairs>
-CXmErrorDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmErrorDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmErrorDialogBuilder(const Parent&, const char*)
+    -> CXmErrorDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmErrorDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmErrorDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmInformationDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmInformationDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmInformationDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmInformationDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmInformationDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmInformationDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmInformationDialogBuilder(const CXmInformationDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmInformationDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmInformationDialogBuilder(CXmInformationDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmInformationDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmInformationDialogBuilder& operator=(
+        const CXmInformationDialogBuilder&) = default;
+    CXmInformationDialogBuilder& operator=(
+        CXmInformationDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23228,22 +26406,69 @@ public:
     }
 };
 
-CXmInformationDialogBuilder(Widget, const char*)
-    -> CXmInformationDialogBuilder<>;
-template <typename... Pairs>
-CXmInformationDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmInformationDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmInformationDialogBuilder(const Parent&, const char*)
+    -> CXmInformationDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmInformationDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmInformationDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmMessageDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmMessageDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmMessageDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmMessageDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmMessageDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmMessageDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMessageDialogBuilder(const CXmMessageDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmMessageDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMessageDialogBuilder(CXmMessageDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmMessageDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMessageDialogBuilder& operator=(
+        const CXmMessageDialogBuilder&) = default;
+    CXmMessageDialogBuilder& operator=(CXmMessageDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23255,21 +26480,69 @@ public:
     }
 };
 
-CXmMessageDialogBuilder(Widget, const char*) -> CXmMessageDialogBuilder<>;
-template <typename... Pairs>
-CXmMessageDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmMessageDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmMessageDialogBuilder(const Parent&, const char*)
+    -> CXmMessageDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmMessageDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmMessageDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmQuestionDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmQuestionDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmQuestionDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmQuestionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmQuestionDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmQuestionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmQuestionDialogBuilder(const CXmQuestionDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmQuestionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmQuestionDialogBuilder(CXmQuestionDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmQuestionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmQuestionDialogBuilder& operator=(
+        const CXmQuestionDialogBuilder&) = default;
+    CXmQuestionDialogBuilder& operator=(CXmQuestionDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23281,21 +26554,69 @@ public:
     }
 };
 
-CXmQuestionDialogBuilder(Widget, const char*) -> CXmQuestionDialogBuilder<>;
-template <typename... Pairs>
-CXmQuestionDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmQuestionDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmQuestionDialogBuilder(const Parent&, const char*)
+    -> CXmQuestionDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmQuestionDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmQuestionDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmTemplateDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmTemplateDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmTemplateDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmTemplateDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmTemplateDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmTemplateDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmTemplateDialogBuilder(const CXmTemplateDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmTemplateDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmTemplateDialogBuilder(CXmTemplateDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmTemplateDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmTemplateDialogBuilder& operator=(
+        const CXmTemplateDialogBuilder&) = default;
+    CXmTemplateDialogBuilder& operator=(CXmTemplateDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23307,21 +26628,69 @@ public:
     }
 };
 
-CXmTemplateDialogBuilder(Widget, const char*) -> CXmTemplateDialogBuilder<>;
-template <typename... Pairs>
-CXmTemplateDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmTemplateDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmTemplateDialogBuilder(const Parent&, const char*)
+    -> CXmTemplateDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmTemplateDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmTemplateDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmWarningDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmWarningDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmWarningDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmWarningDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmWarningDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmWarningDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWarningDialogBuilder(const CXmWarningDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmWarningDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWarningDialogBuilder(CXmWarningDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmWarningDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWarningDialogBuilder& operator=(
+        const CXmWarningDialogBuilder&) = default;
+    CXmWarningDialogBuilder& operator=(CXmWarningDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23333,21 +26702,69 @@ public:
     }
 };
 
-CXmWarningDialogBuilder(Widget, const char*) -> CXmWarningDialogBuilder<>;
-template <typename... Pairs>
-CXmWarningDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmWarningDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmWarningDialogBuilder(const Parent&, const char*)
+    -> CXmWarningDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmWarningDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmWarningDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmWorkingDialogBuilder :
     public CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
         CXmMessageBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmWorkingDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
-        CXmMessageBox,
-        Pairs...>::CXmMessageBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmWorkingDialogBuilder(const ParentT& parent, const char* name):
+        CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmWorkingDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmWorkingDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmWorkingDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWorkingDialogBuilder(const CXmWorkingDialogBuilder& other):
+        CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmWorkingDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWorkingDialogBuilder(CXmWorkingDialogBuilder&& other):
+        CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
+            CXmMessageBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmWorkingDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmWorkingDialogBuilder& operator=(
+        const CXmWorkingDialogBuilder&) = default;
+    CXmWorkingDialogBuilder& operator=(CXmWorkingDialogBuilder&&) = default;
 
     CXmMessageBox build()
     {
@@ -23359,21 +26776,68 @@ public:
     }
 };
 
-CXmWorkingDialogBuilder(Widget, const char*) -> CXmWorkingDialogBuilder<>;
-template <typename... Pairs>
-CXmWorkingDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmWorkingDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmWorkingDialogBuilder(const Parent&, const char*)
+    -> CXmWorkingDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmWorkingDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmWorkingDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmSelectionBoxBuilder :
     public CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
         CXmSelectionBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmSelectionBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
-        CXmSelectionBox,
-        Pairs...>::CXmSelectionBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmSelectionBoxBuilder(const ParentT& parent, const char* name):
+        CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmSelectionBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSelectionBoxBuilder(const CXmSelectionBoxBuilder& other):
+        CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSelectionBoxBuilder(CXmSelectionBoxBuilder&& other):
+        CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSelectionBoxBuilder& operator=(const CXmSelectionBoxBuilder&) = default;
+    CXmSelectionBoxBuilder& operator=(CXmSelectionBoxBuilder&&) = default;
 
     CXmSelectionBox build()
     {
@@ -23385,21 +26849,68 @@ public:
     }
 };
 
-CXmSelectionBoxBuilder(Widget, const char*) -> CXmSelectionBoxBuilder<>;
-template <typename... Pairs>
-CXmSelectionBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmSelectionBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmSelectionBoxBuilder(const Parent&, const char*)
+    -> CXmSelectionBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmSelectionBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmSelectionBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmPromptDialogBuilder :
     public CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
         CXmSelectionBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmPromptDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
-        CXmSelectionBox,
-        Pairs...>::CXmSelectionBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmPromptDialogBuilder(const ParentT& parent, const char* name):
+        CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmPromptDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmPromptDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmPromptDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPromptDialogBuilder(const CXmPromptDialogBuilder& other):
+        CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmPromptDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPromptDialogBuilder(CXmPromptDialogBuilder&& other):
+        CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmPromptDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmPromptDialogBuilder& operator=(const CXmPromptDialogBuilder&) = default;
+    CXmPromptDialogBuilder& operator=(CXmPromptDialogBuilder&&) = default;
 
     CXmSelectionBox build()
     {
@@ -23411,21 +26922,69 @@ public:
     }
 };
 
-CXmPromptDialogBuilder(Widget, const char*) -> CXmPromptDialogBuilder<>;
-template <typename... Pairs>
-CXmPromptDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmPromptDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmPromptDialogBuilder(const Parent&, const char*)
+    -> CXmPromptDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmPromptDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmPromptDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmSelectionDialogBuilder :
     public CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
         CXmSelectionBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmSelectionDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
-        CXmSelectionBox,
-        Pairs...>::CXmSelectionBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmSelectionDialogBuilder(const ParentT& parent, const char* name):
+        CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmSelectionDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSelectionDialogBuilder(const CXmSelectionDialogBuilder& other):
+        CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSelectionDialogBuilder(CXmSelectionDialogBuilder&& other):
+        CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
+            CXmSelectionBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSelectionDialogBuilder& operator=(
+        const CXmSelectionDialogBuilder&) = default;
+    CXmSelectionDialogBuilder& operator=(CXmSelectionDialogBuilder&&) = default;
 
     CXmSelectionBox build()
     {
@@ -23437,18 +26996,68 @@ public:
     }
 };
 
-CXmSelectionDialogBuilder(Widget, const char*) -> CXmSelectionDialogBuilder<>;
-template <typename... Pairs>
-CXmSelectionDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmSelectionDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmSelectionDialogBuilder(const Parent&, const char*)
+    -> CXmSelectionDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmSelectionDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmSelectionDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmTabStackBuilder :
-    public CXmTabStackBuilderImpl<CXmTabStackBuilder, CXmTabStack, Pairs...>
+    public CXmTabStackBuilderImpl<CXmTabStackBuilder,
+        CXmTabStack,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmTabStackBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmTabStackBuilderImpl<CXmTabStackBuilder, CXmTabStack, Pairs...>::
-        CXmTabStackBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmTabStackBuilder(const ParentT& parent, const char* name):
+        CXmTabStackBuilderImpl<CXmTabStackBuilder,
+            CXmTabStack,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmTabStackBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmTabStackBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmTabStackBuilderImpl<CXmTabStackBuilder,
+            CXmTabStack,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmTabStackBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmTabStackBuilder(const CXmTabStackBuilder& other):
+        CXmTabStackBuilderImpl<CXmTabStackBuilder,
+            CXmTabStack,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmTabStackBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmTabStackBuilder(CXmTabStackBuilder&& other):
+        CXmTabStackBuilderImpl<CXmTabStackBuilder,
+            CXmTabStack,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmTabStackBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmTabStackBuilder& operator=(const CXmTabStackBuilder&) = default;
+    CXmTabStackBuilder& operator=(CXmTabStackBuilder&&) = default;
 
     CXmTabStack build()
     {
@@ -23460,18 +27069,59 @@ public:
     }
 };
 
-CXmTabStackBuilder(Widget, const char*) -> CXmTabStackBuilder<>;
-template <typename... Pairs>
-CXmTabStackBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmTabStackBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmTabStackBuilder(const Parent&, const char*) -> CXmTabStackBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmTabStackBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmTabStackBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmOutlineBuilder :
-    public CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Pairs...>
+    public CXmOutlineBuilderImpl<CXmOutlineBuilder,
+        CXmOutline,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmOutlineBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Pairs...>::
-        CXmOutlineBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmOutlineBuilder(const ParentT& parent, const char* name):
+        CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmOutlineBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmOutlineBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmOutlineBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmOutlineBuilder(const CXmOutlineBuilder& other):
+        CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmOutlineBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmOutlineBuilder(CXmOutlineBuilder&& other):
+        CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmOutlineBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmOutlineBuilder& operator=(const CXmOutlineBuilder&) = default;
+    CXmOutlineBuilder& operator=(CXmOutlineBuilder&&) = default;
 
     CXmOutline build()
     {
@@ -23483,18 +27133,54 @@ public:
     }
 };
 
-CXmOutlineBuilder(Widget, const char*) -> CXmOutlineBuilder<>;
-template <typename... Pairs>
-CXmOutlineBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmOutlineBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmOutlineBuilder(const Parent&, const char*) -> CXmOutlineBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmOutlineBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmOutlineBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmTreeBuilder :
-    public CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Pairs...>
+    public CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Parent, Pairs...>,
+    public Parent::template ConstraintsBuilder<CXmTreeBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Pairs...>::
-        CXmTreeBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmTreeBuilder(const ParentT& parent, const char* name):
+        CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<CXmTreeBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmTreeBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<CXmTreeBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTreeBuilder(const CXmTreeBuilder& other):
+        CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Parent, Pairs...>(other),
+        Parent::template ConstraintsBuilder<CXmTreeBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTreeBuilder(CXmTreeBuilder&& other):
+        CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<CXmTreeBuilder<Parent, Pairs...>>(
+            *this)
+    {
+    }
+
+    CXmTreeBuilder& operator=(const CXmTreeBuilder&) = default;
+    CXmTreeBuilder& operator=(CXmTreeBuilder&&) = default;
 
     CXmTree build()
     {
@@ -23506,21 +27192,67 @@ public:
     }
 };
 
-CXmTreeBuilder(Widget, const char*) -> CXmTreeBuilder<>;
-template <typename... Pairs>
-CXmTreeBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmTreeBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmTreeBuilder(const Parent&, const char*) -> CXmTreeBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmTreeBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmTreeBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmMainWindowBuilder :
     public CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
         CXmMainWindow,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmMainWindowBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
-        CXmMainWindow,
-        Pairs...>::CXmMainWindowBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmMainWindowBuilder(const ParentT& parent, const char* name):
+        CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
+            CXmMainWindow,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmMainWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmMainWindowBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
+            CXmMainWindow,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmMainWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMainWindowBuilder(const CXmMainWindowBuilder& other):
+        CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
+            CXmMainWindow,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmMainWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMainWindowBuilder(CXmMainWindowBuilder&& other):
+        CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
+            CXmMainWindow,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmMainWindowBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmMainWindowBuilder& operator=(const CXmMainWindowBuilder&) = default;
+    CXmMainWindowBuilder& operator=(CXmMainWindowBuilder&&) = default;
 
     CXmMainWindow build()
     {
@@ -23532,21 +27264,69 @@ public:
     }
 };
 
-CXmMainWindowBuilder(Widget, const char*) -> CXmMainWindowBuilder<>;
-template <typename... Pairs>
-CXmMainWindowBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmMainWindowBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmMainWindowBuilder(const Parent&, const char*)
+    -> CXmMainWindowBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmMainWindowBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmMainWindowBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmSimpleSpinBoxBuilder :
     public CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
         CXmSimpleSpinBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmSimpleSpinBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
-        CXmSimpleSpinBox,
-        Pairs...>::CXmSimpleSpinBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmSimpleSpinBoxBuilder(const ParentT& parent, const char* name):
+        CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
+            CXmSimpleSpinBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmSimpleSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmSimpleSpinBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
+            CXmSimpleSpinBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmSimpleSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSimpleSpinBoxBuilder(const CXmSimpleSpinBoxBuilder& other):
+        CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
+            CXmSimpleSpinBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmSimpleSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSimpleSpinBoxBuilder(CXmSimpleSpinBoxBuilder&& other):
+        CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
+            CXmSimpleSpinBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmSimpleSpinBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmSimpleSpinBoxBuilder& operator=(
+        const CXmSimpleSpinBoxBuilder&) = default;
+    CXmSimpleSpinBoxBuilder& operator=(CXmSimpleSpinBoxBuilder&&) = default;
 
     CXmSimpleSpinBox build()
     {
@@ -23558,18 +27338,60 @@ public:
     }
 };
 
-CXmSimpleSpinBoxBuilder(Widget, const char*) -> CXmSimpleSpinBoxBuilder<>;
-template <typename... Pairs>
-CXmSimpleSpinBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmSimpleSpinBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmSimpleSpinBoxBuilder(const Parent&, const char*)
+    -> CXmSimpleSpinBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmSimpleSpinBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmSimpleSpinBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmCommandBuilder :
-    public CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Pairs...>
+    public CXmCommandBuilderImpl<CXmCommandBuilder,
+        CXmCommand,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmCommandBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Pairs...>::
-        CXmCommandBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmCommandBuilder(const ParentT& parent, const char* name):
+        CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Parent, Pairs...>(
+            parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmCommandBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmCommandBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Parent, Pairs...>(
+            parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmCommandBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCommandBuilder(const CXmCommandBuilder& other):
+        CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Parent, Pairs...>(
+            other),
+        Parent::template ConstraintsBuilder<
+            CXmCommandBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCommandBuilder(CXmCommandBuilder&& other):
+        CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Parent, Pairs...>(
+            std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmCommandBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCommandBuilder& operator=(const CXmCommandBuilder&) = default;
+    CXmCommandBuilder& operator=(CXmCommandBuilder&&) = default;
 
     CXmCommand build()
     {
@@ -23581,18 +27403,68 @@ public:
     }
 };
 
-CXmCommandBuilder(Widget, const char*) -> CXmCommandBuilder<>;
-template <typename... Pairs>
-CXmCommandBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmCommandBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmCommandBuilder(const Parent&, const char*) -> CXmCommandBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmCommandBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmCommandBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmCommandDialogBuilder :
-    public CXmCommandBuilderImpl<CXmCommandDialogBuilder, CXmCommand, Pairs...>
+    public CXmCommandBuilderImpl<CXmCommandDialogBuilder,
+        CXmCommand,
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmCommandDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmCommandBuilderImpl<CXmCommandDialogBuilder, CXmCommand, Pairs...>::
-        CXmCommandBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmCommandDialogBuilder(const ParentT& parent, const char* name):
+        CXmCommandBuilderImpl<CXmCommandDialogBuilder,
+            CXmCommand,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmCommandDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmCommandDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmCommandBuilderImpl<CXmCommandDialogBuilder,
+            CXmCommand,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmCommandDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCommandDialogBuilder(const CXmCommandDialogBuilder& other):
+        CXmCommandBuilderImpl<CXmCommandDialogBuilder,
+            CXmCommand,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmCommandDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCommandDialogBuilder(CXmCommandDialogBuilder&& other):
+        CXmCommandBuilderImpl<CXmCommandDialogBuilder,
+            CXmCommand,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmCommandDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmCommandDialogBuilder& operator=(
+        const CXmCommandDialogBuilder&) = default;
+    CXmCommandDialogBuilder& operator=(CXmCommandDialogBuilder&&) = default;
 
     CXmCommand build()
     {
@@ -23604,21 +27476,70 @@ public:
     }
 };
 
-CXmCommandDialogBuilder(Widget, const char*) -> CXmCommandDialogBuilder<>;
-template <typename... Pairs>
-CXmCommandDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmCommandDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmCommandDialogBuilder(const Parent&, const char*)
+    -> CXmCommandDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmCommandDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmCommandDialogBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmFileSelectionBoxBuilder :
     public CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
         CXmFileSelectionBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmFileSelectionBoxBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
-        CXmFileSelectionBox,
-        Pairs...>::CXmFileSelectionBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmFileSelectionBoxBuilder(const ParentT& parent, const char* name):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmFileSelectionBoxBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFileSelectionBoxBuilder(const CXmFileSelectionBoxBuilder& other):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFileSelectionBoxBuilder(CXmFileSelectionBoxBuilder&& other):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionBoxBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFileSelectionBoxBuilder& operator=(
+        const CXmFileSelectionBoxBuilder&) = default;
+    CXmFileSelectionBoxBuilder& operator=(
+        CXmFileSelectionBoxBuilder&&) = default;
 
     CXmFileSelectionBox build()
     {
@@ -23630,21 +27551,70 @@ public:
     }
 };
 
-CXmFileSelectionBoxBuilder(Widget, const char*) -> CXmFileSelectionBoxBuilder<>;
-template <typename... Pairs>
-CXmFileSelectionBoxBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmFileSelectionBoxBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmFileSelectionBoxBuilder(const Parent&, const char*)
+    -> CXmFileSelectionBoxBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmFileSelectionBoxBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmFileSelectionBoxBuilder<Parent, Pairs...>;
 
-template <typename... Pairs>
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
 class CXmFileSelectionDialogBuilder :
     public CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
         CXmFileSelectionBox,
-        Pairs...>
+        Parent,
+        Pairs...>,
+    public Parent::template ConstraintsBuilder<
+        CXmFileSelectionDialogBuilder<Parent, Pairs...>>
 {
 public:
-    using CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
-        CXmFileSelectionBox,
-        Pairs...>::CXmFileSelectionBoxBuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    CXmFileSelectionDialogBuilder(const ParentT& parent, const char* name):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(parent, name),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    template <std::same_as<Parent> ParentT>
+    CXmFileSelectionDialogBuilder(
+        const ParentT& parent, const char* name, std::tuple<Pairs...> pairs):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(parent, name, std::move(pairs)),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFileSelectionDialogBuilder(const CXmFileSelectionDialogBuilder& other):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(other),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFileSelectionDialogBuilder(CXmFileSelectionDialogBuilder&& other):
+        CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
+            CXmFileSelectionBox,
+            Parent,
+            Pairs...>(std::move(other)),
+        Parent::template ConstraintsBuilder<
+            CXmFileSelectionDialogBuilder<Parent, Pairs...>>(*this)
+    {
+    }
+
+    CXmFileSelectionDialogBuilder& operator=(
+        const CXmFileSelectionDialogBuilder&) = default;
+    CXmFileSelectionDialogBuilder& operator=(
+        CXmFileSelectionDialogBuilder&&) = default;
 
     CXmFileSelectionBox build()
     {
@@ -23656,8 +27626,9 @@ public:
     }
 };
 
-CXmFileSelectionDialogBuilder(Widget, const char*)
-    -> CXmFileSelectionDialogBuilder<>;
-template <typename... Pairs>
-CXmFileSelectionDialogBuilder(Widget, const char*, std::tuple<Pairs...>)
-    -> CXmFileSelectionDialogBuilder<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+CXmFileSelectionDialogBuilder(const Parent&, const char*)
+    -> CXmFileSelectionDialogBuilder<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+CXmFileSelectionDialogBuilder(const Parent&, const char*, std::tuple<Pairs...>)
+    -> CXmFileSelectionDialogBuilder<Parent, Pairs...>;

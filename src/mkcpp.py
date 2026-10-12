@@ -38,6 +38,7 @@ def index_widgets(widgets):
                 "symbol": symbol,
                 "parent": superclass["name"] if superclass else None,
                 "resources": widget.get("resources", {}),
+                "constraints": widget.get("constraints", {}),
             },
         )
     return indexed
@@ -106,9 +107,25 @@ def generate_accessors(resources):
     return "\n".join(accessors)
 
 
-def generate_widget_class(name, symbol, parent, resources):
+def generate_widget_class(name, symbol, parent, resources, constraints=None):
     superclass = "C" + parent if parent is not None else "CWidget"
     setters = generate_accessors(resources)
+    constraint_setters = generate_builder_methods(constraints or {}).replace("this->set", "widget->set")
+    constraints_class = """template <typename Builder>
+                class ConstraintsBuilder {
+                public:
+                    explicit ConstraintsBuilder(Builder& value) : widget(&value) {}
+                    template <template <typename...> class Derived,
+                        typename CWidgetClassT, typename Parent, typename... Args>
+                    explicit ConstraintsBuilder(
+                        CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>& value)
+                        : widget(static_cast<Builder*>(&value)) {}
+                    ConstraintsBuilder& operator=(const ConstraintsBuilder&) { return *this; }
+                    CONSTRAINT_SETTERS
+                private:
+                    Builder* widget;
+                };""" if constraints else ""
+    constraints_class = constraints_class.replace("CONSTRAINT_SETTERS", constraint_setters)
     return f"""
             template <typename Derived> class C{name}Impl : public {superclass}Impl<Derived> {{
             public:
@@ -119,6 +136,7 @@ def generate_widget_class(name, symbol, parent, resources):
             class C{name} : public C{name}Impl<C{name}> {{
             public:
                 using C{name}Impl<C{name}>::C{name}Impl;
+                {constraints_class}
             }};
         """
 
@@ -142,13 +160,13 @@ def generate_builder_impl(name, resources):
     builder_methods = generate_builder_methods(resources)
     return f"""
 template <template <typename...> class Derived, typename CWidgetClassT,
-    typename... Pairs>
+    typename Parent, typename... Pairs>
 class C{name}BuilderImpl :
-    public CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...> {{
+    public CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...> {{
 public:
     C{name}BuilderImpl() = default;
     using CWidgetBuilderBase<Derived,
-        CWidgetClassT, Pairs...>::CWidgetBuilderBase;
+        CWidgetClassT, Parent, Pairs...>::CWidgetBuilderBase;
 {builder_methods}
 }};
 
@@ -157,12 +175,29 @@ public:
 
 def generate_constructor_builder(name, constructor):
     builder = f"C{constructor_widget_name(constructor)}Builder"
-    base = f"C{name}BuilderImpl<{builder}, C{name}, Pairs...>"
+    base = f"C{name}BuilderImpl<{builder}, C{name}, Parent, Pairs...>"
+    constraint_base = f"Parent::template ConstraintsBuilder<{builder}<Parent, Pairs...>>"
     return f"""
-template <typename... Pairs>
-class {builder} : public {base} {{
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+class {builder} : public {base}, public {constraint_base} {{
 public:
-    using {base}::C{name}BuilderImpl;
+    template <std::same_as<Parent> ParentT>
+    {builder}(const ParentT& parent, const char* name)
+        : {base}(parent, name), {constraint_base}(*this) {{}}
+
+    template <std::same_as<Parent> ParentT>
+    {builder}(const ParentT& parent, const char* name, std::tuple<Pairs...> pairs)
+        : {base}(parent, name, std::move(pairs)),
+          {constraint_base}(*this) {{}}
+
+    {builder}(const {builder}& other)
+        : {base}(other), {constraint_base}(*this) {{}}
+
+    {builder}({builder}&& other)
+        : {base}(std::move(other)), {constraint_base}(*this) {{}}
+
+    {builder}& operator=(const {builder}&) = default;
+    {builder}& operator=({builder}&&) = default;
 
     C{name} build() {{
         auto arglist = this->buildArgList();
@@ -172,9 +207,10 @@ public:
     }}
 }};
 
-{builder}(Widget, const char*) -> {builder}<>;
-template <typename... Pairs>
-{builder}(Widget, const char*, std::tuple<Pairs...>) -> {builder}<Pairs...>;
+template <std::derived_from<CWidgetImplBase> Parent>
+{builder}(const Parent&, const char*) -> {builder}<Parent>;
+template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>
+{builder}(const Parent&, const char*, std::tuple<Pairs...>) -> {builder}<Parent, Pairs...>;
 """
 
 
@@ -195,7 +231,8 @@ def generate_header(artifact):
         resources.update(widget["resources"])
         inherited_resources[name] = resources
         blocks.append(generate_widget_class(
-            name, widget["symbol"], widget["parent"], widget["resources"]
+            name, widget["symbol"], widget["parent"], widget["resources"],
+            widget["constraints"]
         ))
         blocks.append(generate_builder_impl(name, resources))
     for name in ordered_names:

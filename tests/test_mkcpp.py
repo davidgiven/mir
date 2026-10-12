@@ -94,7 +94,7 @@ class WidgetClassesTest(unittest.TestCase):
             }},
         }})
         builder = header.split("class CChildBuilderImpl", 1)[1]
-        self.assertIn("CWidgetBuilderBase<Derived, CWidgetClassT, Pairs...>", builder)
+        self.assertIn("CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>", builder)
         self.assertNotIn("using CChildBuilder", builder)
         self.assertIn("auto setWidth(int value) const", builder)
         self.assertIn("auto setValue(char * value) const", builder)
@@ -111,13 +111,13 @@ class WidgetClassesTest(unittest.TestCase):
                 "XmCreateContainerDialog": {"name": "ContainerDialog"},
             }},
         }})
-        self.assertIn("class CXmContainerBuilder : public CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Pairs...>", header)
-        self.assertIn("class CXmContainerDialogBuilder : public CXmContainerBuilderImpl<CXmContainerDialogBuilder, CXmContainer, Pairs...>", header)
+        self.assertIn("class CXmContainerBuilder : public CXmContainerBuilderImpl<CXmContainerBuilder, CXmContainer, Parent, Pairs...>", header)
+        self.assertIn("class CXmContainerDialogBuilder : public CXmContainerBuilderImpl<CXmContainerDialogBuilder, CXmContainer, Parent, Pairs...>", header)
         self.assertNotIn("WidgetClassP", header)
         dialog = header.split("class CXmContainerDialogBuilder", 1)[1]
-        self.assertIn("::CXmContainerBuilderImpl;", dialog)
+        self.assertIn("Parent::template ConstraintsBuilder<CXmContainerDialogBuilder<Parent, Pairs...>>(*this)", dialog)
         self.assertNotIn("using CXmContainerBuilderBase", header)
-        self.assertIn("CXmContainerDialogBuilder(Widget, const char*) -> CXmContainerDialogBuilder<>;", dialog)
+        self.assertIn("CXmContainerDialogBuilder(const Parent&, const char*) -> CXmContainerDialogBuilder<Parent>;", dialog)
         self.assertIn("CXmContainer build()", dialog)
         self.assertIn("auto arglist = this->buildArgList();", dialog)
         self.assertIn("return CXmContainer(XmCreateContainerDialog(this->_parent,", dialog)

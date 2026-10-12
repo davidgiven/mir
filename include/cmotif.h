@@ -1,5 +1,6 @@
 #pragma once
 #include <array>
+#include <concepts>
 #include <tuple>
 #include <utility>
 #include <Xm/Xm.h>
@@ -97,9 +98,23 @@ typedef union _XmConvertSelectionRec
     XtConvertSelectionProc sel;
 } XmConvertSelectionRec;
 
+template <template <typename...> class Derived, typename CWidgetClassT,
+    typename Parent, typename... Args>
+class CWidgetBuilderBase;
+
 class CWidgetImplBase
 {
 public:
+    template <typename Builder>
+    class ConstraintsBuilder {
+    public:
+        explicit ConstraintsBuilder(Builder&) {}
+        template <template <typename...> class Derived, typename CWidgetClassT,
+            typename Parent, typename... Args>
+        explicit ConstraintsBuilder(
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>&) {}
+    };
+
     CWidgetImplBase(Widget w): _widget(w) {}
 
     operator Widget() const
@@ -169,21 +184,30 @@ public:
     }
 };
 
+class CWidget : public CWidgetImpl<CWidget>
+{
+public:
+    using CWidgetImpl<CWidget>::CWidgetImpl;
+};
+
 template <template <typename...> class Derived,
     typename CWidgetClassT,
+    typename Parent,
     typename... Args>
 class CWidgetBuilderBase
 {
 public:
-    CWidgetBuilderBase(Widget parent, const char* name):
+    template <std::same_as<Parent> ParentT>
+    CWidgetBuilderBase(const ParentT& parent, const char* name):
         _parent(parent),
         _name(name)
     {
     }
 
     // Public so derived builders can construct the next specialization.
+    template <std::same_as<Parent> ParentT>
     explicit CWidgetBuilderBase(
-        Widget parent, const char* name, std::tuple<Args...> args):
+        const ParentT& parent, const char* name, std::tuple<Args...> args):
         _parent(parent),
         _name(name),
         _pairs(std::move(args))
@@ -193,9 +217,9 @@ public:
     // Shared helper: appends one key/value pair and returns the next Derived
     // type.
     template <typename K, typename V>
-    Derived<Args..., K, V> set(K key, V value) const
+    Derived<Parent, Args..., K, V> set(K key, V value) const
     {
-        return Derived<Args..., K, V>(_parent,
+        return Derived<Parent, Args..., K, V>(_parent,
             _name,
             std::tuple_cat(_pairs, std::make_tuple(key, value)));
     }
@@ -215,7 +239,7 @@ public:
     }
 
 public:
-    Widget _parent;
+    Parent _parent;
     const char* _name;
     std::tuple<Args...> _pairs;
 };

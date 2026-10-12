@@ -23,9 +23,13 @@ class BuilderArgumentsTest(unittest.TestCase):
 template <typename T>
 concept Buildable = requires(T& builder) { builder.build(); };
 static_assert(!Buildable<CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
-    CXmRowColumn>>);
-static_assert(Buildable<CXmRowColumnBuilder<>>);
-static_assert(Buildable<CXmPulldownMenuBuilder<>>);
+    CXmRowColumn, CWidget>>);
+static_assert(Buildable<CXmRowColumnBuilder<CWidget>>);
+static_assert(Buildable<CXmPulldownMenuBuilder<CWidget>>);
+static_assert(std::is_constructible_v<CXmRowColumnBuilder<CWidget>, CWidget, const char*>);
+static_assert(std::is_constructible_v<CXmRowColumnBuilder<CXmForm>, CXmForm, const char*>);
+static_assert(!std::is_constructible_v<CXmRowColumnBuilder<CWidget>, Widget, const char*>);
+static_assert(!std::is_constructible_v<CXmRowColumnBuilder<CWidget>, std::nullptr_t, const char*>);
 
 static Cardinal observed_count;
 static XtArgVal observed_width;
@@ -47,10 +51,23 @@ extern "C" Widget XmCreatePulldownMenu(Widget parent, char *name,
 }
 
 int main() {
-    CXmRowColumnBuilder empty(nullptr, "menu");
+    CWidget parent(nullptr);
+    CXmRowColumnBuilder empty(parent, "menu");
     assert(empty.buildArgList().empty());
-    CXmPulldownMenuBuilder pulldown(nullptr, "pulldown");
+    CXmPulldownMenuBuilder pulldown(parent, "pulldown");
     assert(pulldown.buildArgList().empty());
+
+    CXmForm form(nullptr);
+    auto child = CXmRowColumnBuilder(form, "child").setWidth(10);
+    static_assert(std::is_base_of_v<CXmForm::ConstraintsBuilder<decltype(child)>, decltype(child)>);
+
+    auto constrained = child.setTopAttachment(XmATTACH_FORM);
+    auto copied = constrained;
+    auto constrained_args = copied.setLeftAttachment(XmATTACH_FORM).buildArgList();
+    assert(constrained_args.size() == 3);
+    assert(std::strcmp(constrained_args[1].name, "topAttachment") == 0);
+    assert(constrained_args[1].value == XmATTACH_FORM);
+    assert(std::strcmp(constrained_args[2].name, "leftAttachment") == 0);
 
     int data = 42;
     auto builder = empty.setWidth(120).setUserData(&data).setX(-3);

@@ -4,7 +4,6 @@
 #include <format>
 #include "include/cmotif.h"
 
-
 int main(int argc, char* argv[])
 {
     XtAppContext app;
@@ -20,8 +19,7 @@ int main(int argc, char* argv[])
 
     CXmRowColumn menubar =
         CXmMenuBarBuilder(mainWindow, "menubar").build().manageChild();
-    CXmRowColumn fileMenu =
-        CXmPulldownMenuBuilder(menubar, "fileMenu").build();
+    CXmRowColumn fileMenu = CXmPulldownMenuBuilder(menubar, "fileMenu").build();
 
     CXmPushButtonBuilder(fileMenu, "about")
         .setLabelString(XmStringCreateLocalized((char*)"About"))
@@ -65,7 +63,7 @@ int main(int argc, char* argv[])
 
     CXmPushButton button2 =
         CXmPushButtonBuilder(layout, "button2")
-            .setLabelString(XmStringCreateLocalized((char*)"Button 2"))
+            .setLabelString(CXmString("Button 2"))
             .setShowAsDefault(false)
             .setAlignment(XmALIGNMENT_CENTER)
             .setLeftAttachment(XmATTACH_FORM)
@@ -81,20 +79,19 @@ int main(int argc, char* argv[])
             .addEventHandler(
                 [&](XtPointer, XEvent* event, Boolean* continue_to_dispatch)
                 {
-                    button2.setLabelString(XmStringCreateLocalized(
-                        (char*)(std::format("width={}", button2.getWidth())
-                                .c_str())));
+                    button2.setLabelString(CXmString(
+                        std::format("width={}", button2.getWidth()).c_str()));
                 },
                 StructureNotifyMask)
             .manageChild();
 
-   auto text = CXmTextBuilder(layout, "text")
-        .setLeftAttachment(XmATTACH_FORM)
-        .setRightAttachment(XmATTACH_FORM)
-        .setTopAttachment(XmATTACH_WIDGET)
-        .setTopWidget(button2)
-        .build()
-        .manageChild();
+    CXmTextBuilder(layout, "text")
+                    .setLeftAttachment(XmATTACH_FORM)
+                    .setRightAttachment(XmATTACH_FORM)
+                    .setTopAttachment(XmATTACH_WIDGET)
+                    .setTopWidget(button2)
+                    .build()
+                    .manageChild();
 
     XmMainWindowSetAreas(mainWindow, menubar, NULL, NULL, NULL, layout);
     XtRealizeWidget(toplevel);

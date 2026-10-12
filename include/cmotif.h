@@ -3,6 +3,7 @@
 #include <concepts>
 #include <tuple>
 #include <utility>
+#include <memory>
 #include <Xm/Xm.h>
 #include "Xm/VendorS.h"
 #include "Xm/ArrowBG.h"
@@ -98,21 +99,28 @@ typedef union _XmConvertSelectionRec
     XtConvertSelectionProc sel;
 } XmConvertSelectionRec;
 
-template <template <typename...> class Derived, typename CWidgetClassT,
-    typename Parent, typename... Args>
+template <template <typename...> class Derived,
+    typename CWidgetClassT,
+    typename Parent,
+    typename... Args>
 class CWidgetBuilderBase;
 
 class CWidgetImplBase
 {
 public:
     template <typename Builder>
-    class ConstraintsBuilder {
+    class ConstraintsBuilder
+    {
     public:
         explicit ConstraintsBuilder(Builder&) {}
-        template <template <typename...> class Derived, typename CWidgetClassT,
-            typename Parent, typename... Args>
+        template <template <typename...> class Derived,
+            typename CWidgetClassT,
+            typename Parent,
+            typename... Args>
         explicit ConstraintsBuilder(
-            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>&) {}
+            CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Args...>&)
+        {
+        }
     };
 
     CWidgetImplBase(Widget w): _widget(w) {}
@@ -232,8 +240,10 @@ public:
         return [this]<std::size_t... I>(std::index_sequence<I...>)
         {
             std::array<Arg, sizeof...(I)> arglist{};
-            (XtSetArg(arglist[I], const_cast<char*>(std::get<2 * I>(_pairs)),
-                std::get<2 * I + 1>(_pairs)), ...);
+            (XtSetArg(arglist[I],
+                 const_cast<char*>(std::get<2 * I>(_pairs)),
+                 std::get<2 * I + 1>(_pairs)),
+                ...);
             return arglist;
         }(std::make_index_sequence<sizeof...(Args) / 2>{});
     }
@@ -242,6 +252,24 @@ public:
     Parent _parent;
     const char* _name;
     std::tuple<Args...> _pairs;
+};
+
+class CXmString
+{
+public:
+    CXmString(const char* str):
+        _xmstring(XmStringCreateLocalized((char*)str), XmStringFree)
+    {
+    }
+
+    operator XmString() const
+    {
+        return _xmstring.get();
+    }
+
+private:
+    using XmStringObj = std::remove_pointer_t<XmString>;
+    std::shared_ptr<XmStringObj> _xmstring;
 };
 
 #include "cmotif_impl.h"

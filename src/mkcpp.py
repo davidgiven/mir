@@ -98,6 +98,13 @@ def generate_accessors(resources):
                 XtVaSetValues(this->_widget, {json.dumps(resource_name)}, value, nullptr);
                 return static_cast<Derived&>(*this);
             }}""")
+        if ctype.strip() in {"XmString", "_XmString"}:
+            accessors.append(f"""    Derived& set{method_name}(std::unique_ptr<CXmString> value) {{
+                return set{method_name}(static_cast<XmString>(*value));
+            }}
+            Derived& set{method_name}(const char* value) {{
+                return set{method_name}(std::make_unique<CXmString>(value));
+            }}""")
         if not is_array:
             accessors.append(f"""{ctype} get{method_name}() {{
                     {parameter};
@@ -142,7 +149,7 @@ def generate_widget_class(name, symbol, parent, resources, constraints=None):
 
 
 def generate_builder_methods(resources):
-    """Emit immutable resource setters, excluding callback resources."""
+    """Emit resource setters that move accumulated arguments, excluding callbacks."""
     setters = []
     for resource_name, resource in sorted(resources.items()):
         ctype = resource.get("ctype")
@@ -150,8 +157,15 @@ def generate_builder_methods(resources):
             continue
         method_name = resource_method_name(resource_name)
         parameter, _ = resource_parameter(ctype)
-        setters.append(f"""    auto set{method_name}({parameter}) const {{
+        setters.append(f"""    auto set{method_name}({parameter}) {{
         return this->set({json.dumps(resource_name)}, value);
+    }}""")
+        if ctype.strip() in {"XmString", "_XmString"}:
+            setters.append(f"""    auto set{method_name}(std::unique_ptr<CXmString> value) {{
+        return this->set({json.dumps(resource_name)}, std::move(value));
+    }}
+    auto set{method_name}(const char* value) {{
+        return this->set({json.dumps(resource_name)}, std::make_unique<CXmString>(value));
     }}""")
     return "\n".join(setters)
 
@@ -191,12 +205,14 @@ public:
           {constraint_base}(*this) {{}}
 
     {builder}(const {builder}& other)
+        requires (std::is_copy_constructible_v<Pairs> && ...)
         : {base}(other), {constraint_base}(*this) {{}}
 
     {builder}({builder}&& other)
         : {base}(std::move(other)), {constraint_base}(*this) {{}}
 
-    {builder}& operator=(const {builder}&) = default;
+    {builder}& operator=(const {builder}&)
+        requires (std::is_copy_assignable_v<Pairs> && ...) = default;
     {builder}& operator=({builder}&&) = default;
 
     C{name} build() {{

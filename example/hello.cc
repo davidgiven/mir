@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
     CXmRowColumn fileMenu = CXmPulldownMenuBuilder(menubar, "fileMenu").build();
 
     CXmPushButtonBuilder(fileMenu, "about")
-        .setLabelString(XmStringCreateLocalized((char*)"About"))
+        .setLabelString("About")
         .build()
         .addActivateCallback(
             [](XtPointer)
@@ -30,7 +30,8 @@ int main(int argc, char* argv[])
             })
         .manageChild();
     CXmPushButtonBuilder(fileMenu, "quit")
-        .setLabelString(XmStringCreateLocalized((char*)"Quit"))
+        .setLabelString("Quit")
+        .setMnemonic(XStringToKeysym("Q"))
         .build()
         .addActivateCallback(
             [](XtPointer)
@@ -39,31 +40,31 @@ int main(int argc, char* argv[])
             })
         .manageChild();
     CXmCascadeButtonBuilder(menubar, "fileButton")
-        .setLabelString(XmStringCreateLocalized((char*)"File"))
+        .setLabelString("File")
+        .setMnemonic(XStringToKeysym("F"))
         .setSubMenuId(fileMenu)
         .build()
         .manageChild();
 
     CXmForm layout = CXmFormBuilder(mainWindow, "layout").build().manageChild();
 
-    CXmPushButton button1 =
-        CXmPushButtonBuilder(layout, "button1")
-            .setLabelString(XmStringCreateLocalized((char*)"Button 1"))
-            .setShowAsDefault(true)
-            .setTopAttachment(XmATTACH_FORM)
-            .setLeftAttachment(XmATTACH_FORM)
-            .setRightAttachment(XmATTACH_FORM)
-            .build()
-            .addActivateCallback(
-                [](XtPointer)
-                {
-                    printf("Button 1 pressed\n");
-                })
-            .manageChild();
+    CXmPushButton button1 = CXmPushButtonBuilder(layout, "button1")
+                                .setLabelString("Button 1")
+                                .setShowAsDefault(true)
+                                .setTopAttachment(XmATTACH_FORM)
+                                .setLeftAttachment(XmATTACH_FORM)
+                                .setRightAttachment(XmATTACH_FORM)
+                                .build()
+                                .addActivateCallback(
+                                    [](XtPointer)
+                                    {
+                                        printf("Button 1 pressed\n");
+                                    })
+                                .manageChild();
 
     CXmPushButton button2 =
         CXmPushButtonBuilder(layout, "button2")
-            .setLabelString(CXmString("Button 2"))
+            .setLabelString("Button 2")
             .setShowAsDefault(false)
             .setAlignment(XmALIGNMENT_CENTER)
             .setLeftAttachment(XmATTACH_FORM)
@@ -79,19 +80,19 @@ int main(int argc, char* argv[])
             .addEventHandler(
                 [&](XtPointer, XEvent* event, Boolean* continue_to_dispatch)
                 {
-                    button2.setLabelString(CXmString(
+                    button2.setLabelString(std::make_unique<CXmString>(
                         std::format("width={}", button2.getWidth()).c_str()));
                 },
                 StructureNotifyMask)
             .manageChild();
 
     CXmTextBuilder(layout, "text")
-                    .setLeftAttachment(XmATTACH_FORM)
-                    .setRightAttachment(XmATTACH_FORM)
-                    .setTopAttachment(XmATTACH_WIDGET)
-                    .setTopWidget(button2)
-                    .build()
-                    .manageChild();
+        .setLeftAttachment(XmATTACH_FORM)
+        .setRightAttachment(XmATTACH_FORM)
+        .setTopAttachment(XmATTACH_WIDGET)
+        .setTopWidget(button2)
+        .build()
+        .manageChild();
 
     XmMainWindowSetAreas(mainWindow, menubar, NULL, NULL, NULL, layout);
     XtRealizeWidget(toplevel);

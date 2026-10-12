@@ -96,10 +96,10 @@ class WidgetClassesTest(unittest.TestCase):
         builder = header.split("class CChildBuilderImpl", 1)[1]
         self.assertIn("CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>", builder)
         self.assertNotIn("using CChildBuilder", builder)
-        self.assertIn("auto setWidth(int value) const", builder)
-        self.assertIn("auto setValue(char * value) const", builder)
+        self.assertIn("auto setWidth(int value)", builder)
+        self.assertIn("auto setValue(char * value)", builder)
         self.assertNotIn("setValue(int value)", builder)
-        self.assertIn("auto setItems(XmString value[3]) const", builder)
+        self.assertIn("auto setItems(XmString value[3])", builder)
         self.assertIn('return this->set("value", value);', builder)
         self.assertNotIn("setDestroyCallback", builder)
         self.assertNotIn("setUnresolved", builder)

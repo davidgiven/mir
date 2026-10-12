@@ -26,6 +26,8 @@ static_assert(!Buildable<CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
     CXmRowColumn, CWidget>>);
 static_assert(Buildable<CXmRowColumnBuilder<CWidget>>);
 static_assert(Buildable<CXmPulldownMenuBuilder<CWidget>>);
+static_assert(!std::is_copy_constructible_v<CXmString>);
+static_assert(std::is_move_constructible_v<CXmString>);
 static_assert(std::is_constructible_v<CXmRowColumnBuilder<CWidget>, CWidget, const char*>);
 static_assert(std::is_constructible_v<CXmRowColumnBuilder<CXmForm>, CXmForm, const char*>);
 static_assert(!std::is_constructible_v<CXmRowColumnBuilder<CWidget>, Widget, const char*>);
@@ -52,6 +54,15 @@ extern "C" Widget XmCreatePulldownMenu(Widget parent, char *name,
 
 int main() {
     CWidget parent(nullptr);
+    auto expected = std::make_unique<CXmString>("hello");
+    XmString raw = *expected;
+    auto label = CXmLabelBuilder(parent, "label").setLabelString(std::move(expected));
+    assert(!expected);
+    static_assert(!std::is_copy_constructible_v<decltype(label)>);
+    auto label_copy = label.setWidth(120);
+    auto label_args = label_copy.buildArgList();
+    assert(std::strcmp(label_args[0].name, "labelString") == 0);
+    assert(reinterpret_cast<XmString>(label_args[0].value) == raw);
     CXmRowColumnBuilder empty(parent, "menu");
     assert(empty.buildArgList().empty());
     CXmPulldownMenuBuilder pulldown(parent, "pulldown");

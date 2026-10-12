@@ -99,6 +99,45 @@ typedef union _XmConvertSelectionRec
     XtConvertSelectionProc sel;
 } XmConvertSelectionRec;
 
+class CXmString
+{
+public:
+    CXmString(const char* str):
+        _xmstring(XmStringCreateLocalized((char*)str))
+    {
+    }
+
+    CXmString(const std::string& str):
+        _xmstring(XmStringCreateLocalized((char*)str.c_str()))
+    {
+    }
+
+    ~CXmString() { XmStringFree(_xmstring); }
+
+    CXmString(const CXmString&) = delete;
+    CXmString& operator=(const CXmString&) = delete;
+
+    CXmString(CXmString&& other) noexcept:
+        _xmstring(std::exchange(other._xmstring, nullptr)) {}
+
+    CXmString& operator=(CXmString&& other) noexcept
+    {
+        if (this != &other) {
+            XmStringFree(_xmstring);
+            _xmstring = std::exchange(other._xmstring, nullptr);
+        }
+        return *this;
+    }
+
+    operator XmString() const
+    {
+        return _xmstring;
+    }
+
+private:
+    XmString _xmstring;
+};
+
 template <template <typename...> class Derived,
     typename CWidgetClassT,
     typename Parent,
@@ -225,11 +264,10 @@ public:
     // Shared helper: appends one key/value pair and returns the next Derived
     // type.
     template <typename K, typename V>
-    Derived<Parent, Args..., K, V> set(K key, V value) const
+    Derived<Parent, Args..., K, V> set(K key, V value)
     {
-        return Derived<Parent, Args..., K, V>(_parent,
-            _name,
-            std::tuple_cat(_pairs, std::make_tuple(key, value)));
+        return Derived<Parent, Args..., K, V>(_parent, _name,
+            std::tuple_cat(std::move(_pairs), std::make_tuple(key, std::move(value))));
     }
 
     // Turns the tuple of key/value pairs into an ArgList.
@@ -240,9 +278,15 @@ public:
         return [this]<std::size_t... I>(std::index_sequence<I...>)
         {
             std::array<Arg, sizeof...(I)> arglist{};
+            auto argValue = [](const auto& value) {
+                if constexpr (std::is_same_v<std::remove_cvref_t<decltype(value)>, std::unique_ptr<CXmString>>)
+                    return static_cast<XmString>(*value);
+                else
+                    return value;
+            };
             (XtSetArg(arglist[I],
                  const_cast<char*>(std::get<2 * I>(_pairs)),
-                 std::get<2 * I + 1>(_pairs)),
+                 argValue(std::get<2 * I + 1>(_pairs))),
                 ...);
             return arglist;
         }(std::make_index_sequence<sizeof...(Args) / 2>{});
@@ -254,22 +298,5 @@ public:
     std::tuple<Args...> _pairs;
 };
 
-class CXmString
-{
-public:
-    CXmString(const char* str):
-        _xmstring(XmStringCreateLocalized((char*)str), XmStringFree)
-    {
-    }
-
-    operator XmString() const
-    {
-        return _xmstring.get();
-    }
-
-private:
-    using XmStringObj = std::remove_pointer_t<XmString>;
-    std::shared_ptr<XmStringObj> _xmstring;
-};
 
 #include "cmotif_impl.h"

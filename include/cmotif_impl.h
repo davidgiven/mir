@@ -280,95 +280,95 @@ public:
     CVendorShellBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBaseHeight(int value) const
+    auto setBaseHeight(int value)
     {
         return this->set("baseHeight", value);
     }
-    auto setBaseWidth(int value) const
+    auto setBaseWidth(int value)
     {
         return this->set("baseWidth", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHeightInc(int value) const
+    auto setHeightInc(int value)
     {
         return this->set("heightInc", value);
     }
-    auto setIconPixmap(Pixmap value) const
+    auto setIconPixmap(Pixmap value)
     {
         return this->set("iconPixmap", value);
     }
-    auto setIconX(int value) const
+    auto setIconX(int value)
     {
         return this->set("iconX", value);
     }
-    auto setIconY(int value) const
+    auto setIconY(int value)
     {
         return this->set("iconY", value);
     }
-    auto setInput(int value) const
+    auto setInput(int value)
     {
         return this->set("input", value);
     }
-    auto setMaxAspectX(int value) const
+    auto setMaxAspectX(int value)
     {
         return this->set("maxAspectX", value);
     }
-    auto setMaxAspectY(int value) const
+    auto setMaxAspectY(int value)
     {
         return this->set("maxAspectY", value);
     }
-    auto setMaxHeight(int value) const
+    auto setMaxHeight(int value)
     {
         return this->set("maxHeight", value);
     }
-    auto setMaxWidth(int value) const
+    auto setMaxWidth(int value)
     {
         return this->set("maxWidth", value);
     }
-    auto setMinAspectX(int value) const
+    auto setMinAspectX(int value)
     {
         return this->set("minAspectX", value);
     }
-    auto setMinAspectY(int value) const
+    auto setMinAspectY(int value)
     {
         return this->set("minAspectY", value);
     }
-    auto setMinHeight(int value) const
+    auto setMinHeight(int value)
     {
         return this->set("minHeight", value);
     }
-    auto setMinWidth(int value) const
+    auto setMinWidth(int value)
     {
         return this->set("minWidth", value);
     }
-    auto setVisual(Visual* value) const
+    auto setVisual(Visual* value)
     {
         return this->set("visual", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setWidthInc(int value) const
+    auto setWidthInc(int value)
     {
         return this->set("widthInc", value);
     }
-    auto setWindowGroup(XID value) const
+    auto setWindowGroup(XID value)
     {
         return this->set("windowGroup", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -557,55 +557,55 @@ public:
     CXmGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -925,91 +925,91 @@ public:
     CXmPrimitiveBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -1313,91 +1313,91 @@ public:
     CXmManagerBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -1548,47 +1548,47 @@ public:
     CXmColorObjBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setActiveColorSetId(int value) const
+    auto setActiveColorSetId(int value)
     {
         return this->set("activeColorSetId", value);
     }
-    auto setInactiveColorSetId(int value) const
+    auto setInactiveColorSetId(int value)
     {
         return this->set("inactiveColorSetId", value);
     }
-    auto setPrimaryColorSetId(int value) const
+    auto setPrimaryColorSetId(int value)
     {
         return this->set("primaryColorSetId", value);
     }
-    auto setSecondaryColorSetId(int value) const
+    auto setSecondaryColorSetId(int value)
     {
         return this->set("secondaryColorSetId", value);
     }
-    auto setTextColorSetId(int value) const
+    auto setTextColorSetId(int value)
     {
         return this->set("textColorSetId", value);
     }
-    auto setUseColorObj(Boolean value) const
+    auto setUseColorObj(Boolean value)
     {
         return this->set("useColorObj", value);
     }
-    auto setUseIconFileCache(Boolean value) const
+    auto setUseIconFileCache(Boolean value)
     {
         return this->set("useIconFileCache", value);
     }
-    auto setUseMask(Boolean value) const
+    auto setUseMask(Boolean value)
     {
         return this->set("useMask", value);
     }
-    auto setUseMultiColorIcons(Boolean value) const
+    auto setUseMultiColorIcons(Boolean value)
     {
         return this->set("useMultiColorIcons", value);
     }
-    auto setUseTextColor(Boolean value) const
+    auto setUseTextColor(Boolean value)
     {
         return this->set("useTextColor", value);
     }
-    auto setUseTextColorForList(Boolean value) const
+    auto setUseTextColorForList(Boolean value)
     {
         return this->set("useTextColorForList", value);
     }
@@ -1640,11 +1640,11 @@ public:
     CdynamicBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setExtensionType(unsigned char value) const
+    auto setExtensionType(unsigned char value)
     {
         return this->set("extensionType", value);
     }
-    auto setLogicalParent(Widget value) const
+    auto setLogicalParent(Widget value)
     {
         return this->set("logicalParent", value);
     }
@@ -1685,7 +1685,7 @@ public:
     CXmDialogShellBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setDeleteResponse(unsigned char value) const
+    auto setDeleteResponse(unsigned char value)
     {
         return this->set("deleteResponse", value);
     }
@@ -1987,83 +1987,83 @@ public:
     CXmDisplayBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setDefaultButtonEmphasis(Boolean value) const
+    auto setDefaultButtonEmphasis(Boolean value)
     {
         return this->set("defaultButtonEmphasis", value);
     }
-    auto setDefaultVirtualBindings(String value) const
+    auto setDefaultVirtualBindings(String value)
     {
         return this->set("defaultVirtualBindings", value);
     }
-    auto setDragContextClass(WidgetClass value) const
+    auto setDragContextClass(WidgetClass value)
     {
         return this->set("dragContextClass", value);
     }
-    auto setDragInitiatorProtocolStyle(unsigned char value) const
+    auto setDragInitiatorProtocolStyle(unsigned char value)
     {
         return this->set("dragInitiatorProtocolStyle", value);
     }
-    auto setDragReceiverProtocolStyle(unsigned char value) const
+    auto setDragReceiverProtocolStyle(unsigned char value)
     {
         return this->set("dragReceiverProtocolStyle", value);
     }
-    auto setDropSiteManagerClass(WidgetClass value) const
+    auto setDropSiteManagerClass(WidgetClass value)
     {
         return this->set("dropSiteManagerClass", value);
     }
-    auto setDropTransferClass(WidgetClass value) const
+    auto setDropTransferClass(WidgetClass value)
     {
         return this->set("dropTransferClass", value);
     }
-    auto setEnableBtn1Transfer(XtEnum value) const
+    auto setEnableBtn1Transfer(XtEnum value)
     {
         return this->set("enableBtn1Transfer", value);
     }
-    auto setEnableButtonTab(Boolean value) const
+    auto setEnableButtonTab(Boolean value)
     {
         return this->set("enableButtonTab", value);
     }
-    auto setEnableDragIcon(Boolean value) const
+    auto setEnableDragIcon(Boolean value)
     {
         return this->set("enableDragIcon", value);
     }
-    auto setEnableEtchedInMenu(Boolean value) const
+    auto setEnableEtchedInMenu(Boolean value)
     {
         return this->set("enableEtchedInMenu", value);
     }
-    auto setEnableMultiKeyBindings(Boolean value) const
+    auto setEnableMultiKeyBindings(Boolean value)
     {
         return this->set("enableMultiKeyBindings", value);
     }
-    auto setEnableThinThickness(Boolean value) const
+    auto setEnableThinThickness(Boolean value)
     {
         return this->set("enableThinThickness", value);
     }
-    auto setEnableToggleColor(Boolean value) const
+    auto setEnableToggleColor(Boolean value)
     {
         return this->set("enableToggleColor", value);
     }
-    auto setEnableToggleVisual(Boolean value) const
+    auto setEnableToggleVisual(Boolean value)
     {
         return this->set("enableToggleVisual", value);
     }
-    auto setEnableUnselectableDrag(Boolean value) const
+    auto setEnableUnselectableDrag(Boolean value)
     {
         return this->set("enableUnselectableDrag", value);
     }
-    auto setEnableWarp(XtEnum value) const
+    auto setEnableWarp(XtEnum value)
     {
         return this->set("enableWarp", value);
     }
-    auto setIconPixmap(Pixmap value) const
+    auto setIconPixmap(Pixmap value)
     {
         return this->set("iconPixmap", value);
     }
-    auto setMotifVersion(int value) const
+    auto setMotifVersion(int value)
     {
         return this->set("motifVersion", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
@@ -2472,87 +2472,87 @@ public:
     CXmDragContextBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBlendModel(unsigned char value) const
+    auto setBlendModel(unsigned char value)
     {
         return this->set("blendModel", value);
     }
-    auto setClientData(XtPointer value) const
+    auto setClientData(XtPointer value)
     {
         return this->set("clientData", value);
     }
-    auto setConvertProc(XmConvertSelectionRec value) const
+    auto setConvertProc(XmConvertSelectionRec value)
     {
         return this->set("convertProc", value);
     }
-    auto setCursorBackground(Pixel value) const
+    auto setCursorBackground(Pixel value)
     {
         return this->set("cursorBackground", value);
     }
-    auto setCursorForeground(Pixel value) const
+    auto setCursorForeground(Pixel value)
     {
         return this->set("cursorForeground", value);
     }
-    auto setDragOperations(unsigned char value) const
+    auto setDragOperations(unsigned char value)
     {
         return this->set("dragOperations", value);
     }
-    auto setExportTargets(Atom* value) const
+    auto setExportTargets(Atom* value)
     {
         return this->set("exportTargets", value);
     }
-    auto setIccHandle(Atom value) const
+    auto setIccHandle(Atom value)
     {
         return this->set("iccHandle", value);
     }
-    auto setIncremental(Boolean value) const
+    auto setIncremental(Boolean value)
     {
         return this->set("incremental", value);
     }
-    auto setInvalidCursorForeground(Pixel value) const
+    auto setInvalidCursorForeground(Pixel value)
     {
         return this->set("invalidCursorForeground", value);
     }
-    auto setNoneCursorForeground(Pixel value) const
+    auto setNoneCursorForeground(Pixel value)
     {
         return this->set("noneCursorForeground", value);
     }
-    auto setNumExportTargets(Cardinal value) const
+    auto setNumExportTargets(Cardinal value)
     {
         return this->set("numExportTargets", value);
     }
-    auto setOperationCursorIcon(XmDragIconObject value) const
+    auto setOperationCursorIcon(XmDragIconObject value)
     {
         return this->set("operationCursorIcon", value);
     }
-    auto setSourceCursorIcon(XmDragIconObject value) const
+    auto setSourceCursorIcon(XmDragIconObject value)
     {
         return this->set("sourceCursorIcon", value);
     }
-    auto setSourceIsExternal(Boolean value) const
+    auto setSourceIsExternal(Boolean value)
     {
         return this->set("sourceIsExternal", value);
     }
-    auto setSourcePixmapIcon(XmDragIconObject value) const
+    auto setSourcePixmapIcon(XmDragIconObject value)
     {
         return this->set("sourcePixmapIcon", value);
     }
-    auto setSourceWidget(Widget value) const
+    auto setSourceWidget(Widget value)
     {
         return this->set("sourceWidget", value);
     }
-    auto setSourceWindow(Window value) const
+    auto setSourceWindow(Window value)
     {
         return this->set("sourceWindow", value);
     }
-    auto setStartTime(Time value) const
+    auto setStartTime(Time value)
     {
         return this->set("startTime", value);
     }
-    auto setStateCursorIcon(XmDragIconObject value) const
+    auto setStateCursorIcon(XmDragIconObject value)
     {
         return this->set("stateCursorIcon", value);
     }
-    auto setValidCursorForeground(Pixel value) const
+    auto setValidCursorForeground(Pixel value)
     {
         return this->set("validCursorForeground", value);
     }
@@ -2615,15 +2615,15 @@ public:
     CXmDropSiteManagerBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setClientData(XtPointer value) const
+    auto setClientData(XtPointer value)
     {
         return this->set("clientData", value);
     }
-    auto setNotifyProc(XtCallbackProc value) const
+    auto setNotifyProc(XtCallbackProc value)
     {
         return this->set("notifyProc", value);
     }
-    auto setTreeUpdateProc(XtCallbackProc value) const
+    auto setTreeUpdateProc(XtCallbackProc value)
     {
         return this->set("treeUpdateProc", value);
     }
@@ -2708,23 +2708,23 @@ public:
     CXmDropTransferBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setDropTransfers(XmDropTransferEntry value) const
+    auto setDropTransfers(XmDropTransferEntry value)
     {
         return this->set("dropTransfers", value);
     }
-    auto setIncremental(Boolean value) const
+    auto setIncremental(Boolean value)
     {
         return this->set("incremental", value);
     }
-    auto setNumDropTransfers(Cardinal value) const
+    auto setNumDropTransfers(Cardinal value)
     {
         return this->set("numDropTransfers", value);
     }
-    auto setTransferProc(XtSelectionCallbackProc value) const
+    auto setTransferProc(XtSelectionCallbackProc value)
     {
         return this->set("transferProc", value);
     }
-    auto setTransferStatus(unsigned char value) const
+    auto setTransferStatus(unsigned char value)
     {
         return this->set("transferStatus", value);
     }
@@ -2842,35 +2842,35 @@ public:
     CXmMenuShellBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAnimate(Boolean value) const
+    auto setAnimate(Boolean value)
     {
         return this->set("animate", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setDefaultFontList(XmFontList value) const
+    auto setDefaultFontList(XmFontList value)
     {
         return this->set("defaultFontList", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setVisual(Visual* value) const
+    auto setVisual(Visual* value)
     {
         return this->set("visual", value);
     }
@@ -3136,87 +3136,87 @@ public:
     CXmScreenBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBitmapConversionModel(XtEnum value) const
+    auto setBitmapConversionModel(XtEnum value)
     {
         return this->set("bitmapConversionModel", value);
     }
-    auto setColorAllocationProc(XmAllocColorProc value) const
+    auto setColorAllocationProc(XmAllocColorProc value)
     {
         return this->set("colorAllocationProc", value);
     }
-    auto setColorCalculationProc(XmScreenColorProc value) const
+    auto setColorCalculationProc(XmScreenColorProc value)
     {
         return this->set("colorCalculationProc", value);
     }
-    auto setDarkThreshold(int value) const
+    auto setDarkThreshold(int value)
     {
         return this->set("darkThreshold", value);
     }
-    auto setDefaultCopyCursorIcon(XmDragIconObject value) const
+    auto setDefaultCopyCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultCopyCursorIcon", value);
     }
-    auto setDefaultInvalidCursorIcon(XmDragIconObject value) const
+    auto setDefaultInvalidCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultInvalidCursorIcon", value);
     }
-    auto setDefaultLinkCursorIcon(XmDragIconObject value) const
+    auto setDefaultLinkCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultLinkCursorIcon", value);
     }
-    auto setDefaultMoveCursorIcon(XmDragIconObject value) const
+    auto setDefaultMoveCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultMoveCursorIcon", value);
     }
-    auto setDefaultNoneCursorIcon(XmDragIconObject value) const
+    auto setDefaultNoneCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultNoneCursorIcon", value);
     }
-    auto setDefaultSourceCursorIcon(XmDragIconObject value) const
+    auto setDefaultSourceCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultSourceCursorIcon", value);
     }
-    auto setDefaultValidCursorIcon(XmDragIconObject value) const
+    auto setDefaultValidCursorIcon(XmDragIconObject value)
     {
         return this->set("defaultValidCursorIcon", value);
     }
-    auto setFont(XFontStruct* value) const
+    auto setFont(XFontStruct* value)
     {
         return this->set("font", value);
     }
-    auto setForegroundThreshold(int value) const
+    auto setForegroundThreshold(int value)
     {
         return this->set("foregroundThreshold", value);
     }
-    auto setHorizontalFontUnit(int value) const
+    auto setHorizontalFontUnit(int value)
     {
         return this->set("horizontalFontUnit", value);
     }
-    auto setInsensitiveStippleBitmap(Pixmap value) const
+    auto setInsensitiveStippleBitmap(Pixmap value)
     {
         return this->set("insensitiveStippleBitmap", value);
     }
-    auto setLightThreshold(int value) const
+    auto setLightThreshold(int value)
     {
         return this->set("lightThreshold", value);
     }
-    auto setMenuCursor(Cursor value) const
+    auto setMenuCursor(Cursor value)
     {
         return this->set("menuCursor", value);
     }
-    auto setMoveOpaque(unsigned char value) const
+    auto setMoveOpaque(unsigned char value)
     {
         return this->set("moveOpaque", value);
     }
-    auto setUnpostBehavior(unsigned char value) const
+    auto setUnpostBehavior(unsigned char value)
     {
         return this->set("unpostBehavior", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalFontUnit(int value) const
+    auto setVerticalFontUnit(int value)
     {
         return this->set("verticalFontUnit", value);
     }
@@ -3344,27 +3344,27 @@ public:
     CXmSlideContextBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setSlideDestHeight(Dimension value) const
+    auto setSlideDestHeight(Dimension value)
     {
         return this->set("slideDestHeight", value);
     }
-    auto setSlideDestWidth(Dimension value) const
+    auto setSlideDestWidth(Dimension value)
     {
         return this->set("slideDestWidth", value);
     }
-    auto setSlideDestX(Position value) const
+    auto setSlideDestX(Position value)
     {
         return this->set("slideDestX", value);
     }
-    auto setSlideDestY(Position value) const
+    auto setSlideDestY(Position value)
     {
         return this->set("slideDestY", value);
     }
-    auto setSlideInterval(unsigned long value) const
+    auto setSlideInterval(unsigned long value)
     {
         return this->set("slideInterval", value);
     }
-    auto setSlideWidget(Widget value) const
+    auto setSlideWidget(Widget value)
     {
         return this->set("slideWidget", value);
     }
@@ -3471,123 +3471,123 @@ public:
     CXmDragOverShellBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBaseHeight(int value) const
+    auto setBaseHeight(int value)
     {
         return this->set("baseHeight", value);
     }
-    auto setBaseWidth(int value) const
+    auto setBaseWidth(int value)
     {
         return this->set("baseWidth", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setDragOverActiveMode(unsigned char value) const
+    auto setDragOverActiveMode(unsigned char value)
     {
         return this->set("dragOverActiveMode", value);
     }
-    auto setDragOverMode(unsigned char value) const
+    auto setDragOverMode(unsigned char value)
     {
         return this->set("dragOverMode", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHeightInc(int value) const
+    auto setHeightInc(int value)
     {
         return this->set("heightInc", value);
     }
-    auto setHotX(Position value) const
+    auto setHotX(Position value)
     {
         return this->set("hotX", value);
     }
-    auto setHotY(Position value) const
+    auto setHotY(Position value)
     {
         return this->set("hotY", value);
     }
-    auto setIconPixmap(Pixmap value) const
+    auto setIconPixmap(Pixmap value)
     {
         return this->set("iconPixmap", value);
     }
-    auto setIconX(int value) const
+    auto setIconX(int value)
     {
         return this->set("iconX", value);
     }
-    auto setIconY(int value) const
+    auto setIconY(int value)
     {
         return this->set("iconY", value);
     }
-    auto setInput(int value) const
+    auto setInput(int value)
     {
         return this->set("input", value);
     }
-    auto setInstallColormap(Boolean value) const
+    auto setInstallColormap(Boolean value)
     {
         return this->set("installColormap", value);
     }
-    auto setMaxAspectX(int value) const
+    auto setMaxAspectX(int value)
     {
         return this->set("maxAspectX", value);
     }
-    auto setMaxAspectY(int value) const
+    auto setMaxAspectY(int value)
     {
         return this->set("maxAspectY", value);
     }
-    auto setMaxHeight(int value) const
+    auto setMaxHeight(int value)
     {
         return this->set("maxHeight", value);
     }
-    auto setMaxWidth(int value) const
+    auto setMaxWidth(int value)
     {
         return this->set("maxWidth", value);
     }
-    auto setMinAspectX(int value) const
+    auto setMinAspectX(int value)
     {
         return this->set("minAspectX", value);
     }
-    auto setMinAspectY(int value) const
+    auto setMinAspectY(int value)
     {
         return this->set("minAspectY", value);
     }
-    auto setMinHeight(int value) const
+    auto setMinHeight(int value)
     {
         return this->set("minHeight", value);
     }
-    auto setMinWidth(int value) const
+    auto setMinWidth(int value)
     {
         return this->set("minWidth", value);
     }
-    auto setOverrideRedirect(Boolean value) const
+    auto setOverrideRedirect(Boolean value)
     {
         return this->set("overrideRedirect", value);
     }
-    auto setSaveUnder(Boolean value) const
+    auto setSaveUnder(Boolean value)
     {
         return this->set("saveUnder", value);
     }
-    auto setVisual(Visual* value) const
+    auto setVisual(Visual* value)
     {
         return this->set("visual", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setWidthInc(int value) const
+    auto setWidthInc(int value)
     {
         return this->set("widthInc", value);
     }
-    auto setWindowGroup(XID value) const
+    auto setWindowGroup(XID value)
     {
         return this->set("windowGroup", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -3760,147 +3760,147 @@ public:
     CXmGrabShellBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowShellResize(Boolean value) const
+    auto setAllowShellResize(Boolean value)
     {
         return this->set("allowShellResize", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBaseHeight(int value) const
+    auto setBaseHeight(int value)
     {
         return this->set("baseHeight", value);
     }
-    auto setBaseWidth(int value) const
+    auto setBaseWidth(int value)
     {
         return this->set("baseWidth", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setGrabStyle(int value) const
+    auto setGrabStyle(int value)
     {
         return this->set("grabStyle", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHeightInc(int value) const
+    auto setHeightInc(int value)
     {
         return this->set("heightInc", value);
     }
-    auto setIconPixmap(Pixmap value) const
+    auto setIconPixmap(Pixmap value)
     {
         return this->set("iconPixmap", value);
     }
-    auto setIconX(int value) const
+    auto setIconX(int value)
     {
         return this->set("iconX", value);
     }
-    auto setIconY(int value) const
+    auto setIconY(int value)
     {
         return this->set("iconY", value);
     }
-    auto setInput(int value) const
+    auto setInput(int value)
     {
         return this->set("input", value);
     }
-    auto setMaxAspectX(int value) const
+    auto setMaxAspectX(int value)
     {
         return this->set("maxAspectX", value);
     }
-    auto setMaxAspectY(int value) const
+    auto setMaxAspectY(int value)
     {
         return this->set("maxAspectY", value);
     }
-    auto setMaxHeight(int value) const
+    auto setMaxHeight(int value)
     {
         return this->set("maxHeight", value);
     }
-    auto setMaxWidth(int value) const
+    auto setMaxWidth(int value)
     {
         return this->set("maxWidth", value);
     }
-    auto setMinAspectX(int value) const
+    auto setMinAspectX(int value)
     {
         return this->set("minAspectX", value);
     }
-    auto setMinAspectY(int value) const
+    auto setMinAspectY(int value)
     {
         return this->set("minAspectY", value);
     }
-    auto setMinHeight(int value) const
+    auto setMinHeight(int value)
     {
         return this->set("minHeight", value);
     }
-    auto setMinWidth(int value) const
+    auto setMinWidth(int value)
     {
         return this->set("minWidth", value);
     }
-    auto setOverrideRedirect(Boolean value) const
+    auto setOverrideRedirect(Boolean value)
     {
         return this->set("overrideRedirect", value);
     }
-    auto setOwnerEvents(Boolean value) const
+    auto setOwnerEvents(Boolean value)
     {
         return this->set("ownerEvents", value);
     }
-    auto setSaveUnder(Boolean value) const
+    auto setSaveUnder(Boolean value)
     {
         return this->set("saveUnder", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTransient(Boolean value) const
+    auto setTransient(Boolean value)
     {
         return this->set("transient", value);
     }
-    auto setVisual(Visual* value) const
+    auto setVisual(Visual* value)
     {
         return this->set("visual", value);
     }
-    auto setWaitforwm(Boolean value) const
+    auto setWaitforwm(Boolean value)
     {
         return this->set("waitforwm", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setWidthInc(int value) const
+    auto setWidthInc(int value)
     {
         return this->set("widthInc", value);
     }
-    auto setWindowGroup(XID value) const
+    auto setWindowGroup(XID value)
     {
         return this->set("windowGroup", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -4101,99 +4101,99 @@ public:
     CXmArrowButtonGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setArrowDirection(unsigned char value) const
+    auto setArrowDirection(unsigned char value)
     {
         return this->set("arrowDirection", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDetailShadowThickness(Dimension value) const
+    auto setDetailShadowThickness(Dimension value)
     {
         return this->set("detailShadowThickness", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMultiClick(unsigned char value) const
+    auto setMultiClick(unsigned char value)
     {
         return this->set("multiClick", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -4242,6 +4242,14 @@ public:
     {
         XtVaSetValues(this->_widget, "labelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setLabelString(const char* value)
+    {
+        return setLabelString(std::make_unique<CXmString>(value));
     }
     XmString getLabelString()
     {
@@ -4344,99 +4352,107 @@ public:
     CXmIconGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto set_cache(XmIconGCacheObjPart* value) const
+    auto set_cache(XmIconGCacheObjPart* value)
     {
         return this->set(".cache", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setDetail(XmString* value) const
+    auto setDetail(XmString* value)
     {
         return this->set("detail", value);
     }
-    auto setDetailCount(Cardinal value) const
+    auto setDetailCount(Cardinal value)
     {
         return this->set("detailCount", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelString(XmString value) const
+    auto setLabelString(XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLargeIconMask(Pixmap value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLargeIconMask(Pixmap value)
     {
         return this->set("largeIconMask", value);
     }
-    auto setLargeIconPixmap(Pixmap value) const
+    auto setLargeIconPixmap(Pixmap value)
     {
         return this->set("largeIconPixmap", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSmallIconMask(Pixmap value) const
+    auto setSmallIconMask(Pixmap value)
     {
         return this->set("smallIconMask", value);
     }
-    auto setSmallIconPixmap(Pixmap value) const
+    auto setSmallIconPixmap(Pixmap value)
     {
         return this->set("smallIconPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setViewType(unsigned char value) const
+    auto setViewType(unsigned char value)
     {
         return this->set("viewType", value);
     }
-    auto setVisualEmphasis(unsigned char value) const
+    auto setVisualEmphasis(unsigned char value)
     {
         return this->set("visualEmphasis", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -4474,6 +4490,14 @@ public:
     {
         XtVaSetValues(this->_widget, "acceleratorText", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return setAcceleratorText(static_cast<XmString>(*value));
+    }
+    Derived& setAcceleratorText(const char* value)
+    {
+        return setAcceleratorText(std::make_unique<CXmString>(value));
     }
     _XmString getAcceleratorText()
     {
@@ -4529,6 +4553,14 @@ public:
     {
         XtVaSetValues(this->_widget, "labelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setLabelString(const char* value)
+    {
+        return setLabelString(std::make_unique<CXmString>(value));
     }
     _XmString getLabelString()
     {
@@ -4642,107 +4674,123 @@ public:
     CXmLabelGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto set_cache(XmLabelGCacheObjPart* value) const
+    auto set_cache(XmLabelGCacheObjPart* value)
     {
         return this->set(".cache", value);
     }
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -4805,55 +4853,55 @@ public:
     CXmSeparatorGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -4964,103 +5012,103 @@ public:
     CXmArrowButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setArrowDirection(unsigned char value) const
+    auto setArrowDirection(unsigned char value)
     {
         return this->set("arrowDirection", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDetailShadowThickness(Dimension value) const
+    auto setDetailShadowThickness(Dimension value)
     {
         return this->set("detailShadowThickness", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMultiClick(unsigned char value) const
+    auto setMultiClick(unsigned char value)
     {
         return this->set("multiClick", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -5355,175 +5403,175 @@ public:
     CXmI18ListBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAlignment(unsigned char value) const
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setColumnTitles(XmString* value) const
+    auto setColumnTitles(XmString* value)
     {
         return this->set("columnTitles", value);
     }
-    auto setEntryBackground(Pixel value) const
+    auto setEntryBackground(Pixel value)
     {
         return this->set("entryBackground", value);
     }
-    auto setEntryData(XmMultiListRowInfo* value) const
+    auto setEntryData(XmMultiListRowInfo* value)
     {
         return this->set("entryData", value);
     }
-    auto setFirstColumn(short value) const
+    auto setFirstColumn(short value)
     {
         return this->set("firstColumn", value);
     }
-    auto setFirstColumnPixmaps(Boolean value) const
+    auto setFirstColumnPixmaps(Boolean value)
     {
         return this->set("firstColumnPixmaps", value);
     }
-    auto setFirstRow(short value) const
+    auto setFirstRow(short value)
     {
         return this->set("firstRow", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setHorizontalScrollBar(Widget value) const
+    auto setHorizontalScrollBar(Widget value)
     {
         return this->set("horizontalScrollBar", value);
     }
-    auto setIs_entry_background_set(Boolean value) const
+    auto setIs_entry_background_set(Boolean value)
     {
         return this->set("is.entry.background.set", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNewVisualStyle(Boolean value) const
+    auto setNewVisualStyle(Boolean value)
     {
         return this->set("newVisualStyle", value);
     }
-    auto setNumColumns(short value) const
+    auto setNumColumns(short value)
     {
         return this->set("numColumns", value);
     }
-    auto setNumRows(short value) const
+    auto setNumRows(short value)
     {
         return this->set("numRows", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSelectedColumn(short value) const
+    auto setSelectedColumn(short value)
     {
         return this->set("selectedColumn", value);
     }
-    auto setSelectionPolicy(unsigned char value) const
+    auto setSelectionPolicy(unsigned char value)
     {
         return this->set("selectionPolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSortFunctions(Xm18SortFunction* value) const
+    auto setSortFunctions(Xm18SortFunction* value)
     {
         return this->set("sortFunctions", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalScrollBar(Widget value) const
+    auto setVerticalScrollBar(Widget value)
     {
         return this->set("verticalScrollBar", value);
     }
-    auto setVisibleItemCount(int value) const
+    auto setVisibleItemCount(int value)
     {
         return this->set("visibleItemCount", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -5648,6 +5696,14 @@ public:
     {
         XtVaSetValues(this->_widget, "labelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setLabelString(const char* value)
+    {
+        return setLabelString(std::make_unique<CXmString>(value));
     }
     XmString getLabelString()
     {
@@ -5783,163 +5839,171 @@ public:
     CXmIconButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAlignment(unsigned char value) const
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setArmColor(Pixel value) const
+    auto setArmColor(Pixel value)
     {
         return this->set("armColor", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setHorizontalMargin(Dimension value) const
+    auto setHorizontalMargin(Dimension value)
     {
         return this->set("horizontalMargin", value);
     }
-    auto setIconPlacement(XmIconPlacement value) const
+    auto setIconPlacement(XmIconPlacement value)
     {
         return this->set("iconPlacement", value);
     }
-    auto setIconTextPadding(Dimension value) const
+    auto setIconTextPadding(Dimension value)
     {
         return this->set("iconTextPadding", value);
     }
-    auto setLabel(String value) const
+    auto setLabel(String value)
     {
         return this->set("label", value);
     }
-    auto setLabelString(XmString value) const
+    auto setLabelString(XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmap(Pixmap value) const
+    auto setPixmap(Pixmap value)
     {
         return this->set("pixmap", value);
     }
-    auto setPixmapDepth(Dimension value) const
+    auto setPixmapDepth(Dimension value)
     {
         return this->set("pixmapDepth", value);
     }
-    auto setPixmapHeight(Dimension value) const
+    auto setPixmapHeight(Dimension value)
     {
         return this->set("pixmapHeight", value);
     }
-    auto setPixmapWidth(Dimension value) const
+    auto setPixmapWidth(Dimension value)
     {
         return this->set("pixmapWidth", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSet(Boolean value) const
+    auto setSet(Boolean value)
     {
         return this->set("set", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalMargin(Dimension value) const
+    auto setVerticalMargin(Dimension value)
     {
         return this->set("verticalMargin", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -5966,6 +6030,14 @@ public:
     {
         XtVaSetValues(this->_widget, "acceleratorText", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return setAcceleratorText(static_cast<XmString>(*value));
+    }
+    Derived& setAcceleratorText(const char* value)
+    {
+        return setAcceleratorText(std::make_unique<CXmString>(value));
     }
     _XmString getAcceleratorText()
     {
@@ -6032,6 +6104,14 @@ public:
     {
         XtVaSetValues(this->_widget, "labelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setLabelString(const char* value)
+    {
+        return setLabelString(std::make_unique<CXmString>(value));
     }
     _XmString getLabelString()
     {
@@ -6255,179 +6335,195 @@ public:
     CXmLabelBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setAlignment(unsigned char value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLabelType(unsigned char value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLabelType(unsigned char value)
     {
         return this->set("labelType", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginBottom(Dimension value) const
+    auto setMarginBottom(Dimension value)
     {
         return this->set("marginBottom", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginLeft(Dimension value) const
+    auto setMarginLeft(Dimension value)
     {
         return this->set("marginLeft", value);
     }
-    auto setMarginRight(Dimension value) const
+    auto setMarginRight(Dimension value)
     {
         return this->set("marginRight", value);
     }
-    auto setMarginTop(Dimension value) const
+    auto setMarginTop(Dimension value)
     {
         return this->set("marginTop", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -6869,195 +6965,195 @@ public:
     CXmListBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutomaticSelection(XtEnum value) const
+    auto setAutomaticSelection(XtEnum value)
     {
         return this->set("automaticSelection", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDoubleClickInterval(int value) const
+    auto setDoubleClickInterval(int value)
     {
         return this->set("doubleClickInterval", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setHorizontalScrollBar(XmScrollBarWidget value) const
+    auto setHorizontalScrollBar(XmScrollBarWidget value)
     {
         return this->set("horizontalScrollBar", value);
     }
-    auto setItemCount(int value) const
+    auto setItemCount(int value)
     {
         return this->set("itemCount", value);
     }
-    auto setItems(XmString* value) const
+    auto setItems(XmString* value)
     {
         return this->set("items", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setListMarginHeight(Dimension value) const
+    auto setListMarginHeight(Dimension value)
     {
         return this->set("listMarginHeight", value);
     }
-    auto setListMarginWidth(Dimension value) const
+    auto setListMarginWidth(Dimension value)
     {
         return this->set("listMarginWidth", value);
     }
-    auto setListSizePolicy(unsigned char value) const
+    auto setListSizePolicy(unsigned char value)
     {
         return this->set("listSizePolicy", value);
     }
-    auto setListSpacing(short value) const
+    auto setListSpacing(short value)
     {
         return this->set("listSpacing", value);
     }
-    auto setMatchBehavior(unsigned char value) const
+    auto setMatchBehavior(unsigned char value)
     {
         return this->set("matchBehavior", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setPrimaryOwnership(unsigned char value) const
+    auto setPrimaryOwnership(unsigned char value)
     {
         return this->set("primaryOwnership", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setScrollBarDisplayPolicy(unsigned char value) const
+    auto setScrollBarDisplayPolicy(unsigned char value)
     {
         return this->set("scrollBarDisplayPolicy", value);
     }
-    auto setSelectColor(Pixel value) const
+    auto setSelectColor(Pixel value)
     {
         return this->set("selectColor", value);
     }
-    auto setSelectedItemCount(int value) const
+    auto setSelectedItemCount(int value)
     {
         return this->set("selectedItemCount", value);
     }
-    auto setSelectedItems(XmString* value) const
+    auto setSelectedItems(XmString* value)
     {
         return this->set("selectedItems", value);
     }
-    auto setSelectedPositionCount(int value) const
+    auto setSelectedPositionCount(int value)
     {
         return this->set("selectedPositionCount", value);
     }
-    auto setSelectedPositions(int* value) const
+    auto setSelectedPositions(int* value)
     {
         return this->set("selectedPositions", value);
     }
-    auto setSelectionMode(unsigned char value) const
+    auto setSelectionMode(unsigned char value)
     {
         return this->set("selectionMode", value);
     }
-    auto setSelectionPolicy(unsigned char value) const
+    auto setSelectionPolicy(unsigned char value)
     {
         return this->set("selectionPolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopItemPosition(int value) const
+    auto setTopItemPosition(int value)
     {
         return this->set("topItemPosition", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalScrollBar(XmScrollBarWidget value) const
+    auto setVerticalScrollBar(XmScrollBarWidget value)
     {
         return this->set("verticalScrollBar", value);
     }
-    auto setVisibleItemCount(int value) const
+    auto setVisibleItemCount(int value)
     {
         return this->set("visibleItemCount", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -7446,159 +7542,159 @@ public:
     CXmScrollBarBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setEditable(Boolean value) const
+    auto setEditable(Boolean value)
     {
         return this->set("editable", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setIncrement(int value) const
+    auto setIncrement(int value)
     {
         return this->set("increment", value);
     }
-    auto setInitialDelay(int value) const
+    auto setInitialDelay(int value)
     {
         return this->set("initialDelay", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMaximum(int value) const
+    auto setMaximum(int value)
     {
         return this->set("maximum", value);
     }
-    auto setMinimum(int value) const
+    auto setMinimum(int value)
     {
         return this->set("minimum", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setPageIncrement(int value) const
+    auto setPageIncrement(int value)
     {
         return this->set("pageIncrement", value);
     }
-    auto setProcessingDirection(unsigned char value) const
+    auto setProcessingDirection(unsigned char value)
     {
         return this->set("processingDirection", value);
     }
-    auto setRepeatDelay(int value) const
+    auto setRepeatDelay(int value)
     {
         return this->set("repeatDelay", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowArrows(XtEnum value) const
+    auto setShowArrows(XtEnum value)
     {
         return this->set("showArrows", value);
     }
-    auto setSliderMark(XtEnum value) const
+    auto setSliderMark(XtEnum value)
     {
         return this->set("sliderMark", value);
     }
-    auto setSliderSize(int value) const
+    auto setSliderSize(int value)
     {
         return this->set("sliderSize", value);
     }
-    auto setSliderVisual(XtEnum value) const
+    auto setSliderVisual(XtEnum value)
     {
         return this->set("sliderVisual", value);
     }
-    auto setSlidingMode(XtEnum value) const
+    auto setSlidingMode(XtEnum value)
     {
         return this->set("slidingMode", value);
     }
-    auto setSnapBackMultiple(unsigned short value) const
+    auto setSnapBackMultiple(unsigned short value)
     {
         return this->set("snapBackMultiple", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setTroughColor(Pixel value) const
+    auto setTroughColor(Pixel value)
     {
         return this->set("troughColor", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setValue(int value) const
+    auto setValue(int value)
     {
         return this->set("value", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -7694,103 +7790,103 @@ public:
     CXmSeparatorBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMargin(Dimension value) const
+    auto setMargin(Dimension value)
     {
         return this->set("margin", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setSeparatorType(unsigned char value) const
+    auto setSeparatorType(unsigned char value)
     {
         return this->set("separatorType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -7820,91 +7916,91 @@ public:
     CXiTabCanvasBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -8271,151 +8367,151 @@ public:
     CXmTextBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutoShowCursorPosition(Boolean value) const
+    auto setAutoShowCursorPosition(Boolean value)
     {
         return this->set("autoShowCursorPosition", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCursorPosition(XmTextPosition value) const
+    auto setCursorPosition(XmTextPosition value)
     {
         return this->set("cursorPosition", value);
     }
-    auto setEditMode(int value) const
+    auto setEditMode(int value)
     {
         return this->set("editMode", value);
     }
-    auto setEditable(Boolean value) const
+    auto setEditable(Boolean value)
     {
         return this->set("editable", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setInputCreate(InputCreateProc value) const
+    auto setInputCreate(InputCreateProc value)
     {
         return this->set("inputCreate", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMaxLength(int value) const
+    auto setMaxLength(int value)
     {
         return this->set("maxLength", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOutputCreate(OutputCreateProc value) const
+    auto setOutputCreate(OutputCreateProc value)
     {
         return this->set("outputCreate", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSource(XmTextSource value) const
+    auto setSource(XmTextSource value)
     {
         return this->set("source", value);
     }
-    auto setTopCharacter(XmTextPosition value) const
+    auto setTopCharacter(XmTextPosition value)
     {
         return this->set("topCharacter", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTotalLines(int value) const
+    auto setTotalLines(int value)
     {
         return this->set("totalLines", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setValue(char* value) const
+    auto setValue(char* value)
     {
         return this->set("value", value);
     }
-    auto setValueWcs(wchar_t* value) const
+    auto setValueWcs(wchar_t* value)
     {
         return this->set("valueWcs", value);
     }
-    auto setVerifyBell(Boolean value) const
+    auto setVerifyBell(Boolean value)
     {
         return this->set("verifyBell", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -8519,6 +8615,14 @@ public:
     {
         XtVaSetValues(this->_widget, "dialogTitle", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return setDialogTitle(static_cast<XmString>(*value));
+    }
+    Derived& setDialogTitle(const char* value)
+    {
+        return setDialogTitle(std::make_unique<CXmString>(value));
     }
     XmString getDialogTitle()
     {
@@ -8724,171 +8828,179 @@ public:
     CXmBulletinBoardBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setForeground(Pixel value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setPri_vate(unsigned char value) const
+    auto setPri_vate(unsigned char value)
     {
         return this->set("pri.vate", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -8989,11 +9101,11 @@ public:
         {
             return *this;
         }
-        auto setPri_vate1(Dimension value) const
+        auto setPri_vate1(Dimension value)
         {
             return widget->set("pri.vate1", value);
         }
-        auto setPri_vate2(Dimension value) const
+        auto setPri_vate2(Dimension value)
         {
             return widget->set("pri.vate2", value);
         }
@@ -9014,115 +9126,115 @@ public:
     CXmButtonBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setEqualSize(Boolean value) const
+    auto setEqualSize(Boolean value)
     {
         return this->set("equalSize", value);
     }
-    auto setFillOption(XmFillOption value) const
+    auto setFillOption(XmFillOption value)
     {
         return this->set("fillOption", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -9198,6 +9310,14 @@ public:
         XtVaSetValues(this->_widget, "noCellError", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setNoCellError(std::unique_ptr<CXmString> value)
+    {
+        return setNoCellError(static_cast<XmString>(*value));
+    }
+    Derived& setNoCellError(const char* value)
+    {
+        return setNoCellError(std::make_unique<CXmString>(value));
+    }
     XmString getNoCellError()
     {
         XmString value;
@@ -9232,131 +9352,139 @@ public:
     CXmColorSelectorBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBlueSliderLabel(XmString value[3]) const
+    auto setBlueSliderLabel(XmString value[3])
     {
         return this->set("blueSliderLabel", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setColorListTogLabel(XmString value[2]) const
+    auto setColorListTogLabel(XmString value[2])
     {
         return this->set("colorListTogLabel", value);
     }
-    auto setColorMode(XmColorMode value) const
+    auto setColorMode(XmColorMode value)
     {
         return this->set("colorMode", value);
     }
-    auto setColorName(char* value) const
+    auto setColorName(char* value)
     {
         return this->set("colorName", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setGreenSliderLabel(XmString value[3]) const
+    auto setGreenSliderLabel(XmString value[3])
     {
         return this->set("greenSliderLabel", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoCellError(XmString value) const
+    auto setNoCellError(XmString value)
     {
         return this->set("noCellError", value);
     }
-    auto setRedSliderLabel(XmString value[3]) const
+    auto setNoCellError(std::unique_ptr<CXmString> value)
+    {
+        return this->set("noCellError", std::move(value));
+    }
+    auto setNoCellError(const char* value)
+    {
+        return this->set("noCellError", std::make_unique<CXmString>(value));
+    }
+    auto setRedSliderLabel(XmString value[3])
     {
         return this->set("redSliderLabel", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSliderTogLabel(XmString value[2]) const
+    auto setSliderTogLabel(XmString value[2])
     {
         return this->set("sliderTogLabel", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -9549,6 +9677,14 @@ public:
         XtVaSetValues(this->_widget, "selectedItem", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setSelectedItem(std::unique_ptr<CXmString> value)
+    {
+        return setSelectedItem(static_cast<XmString>(*value));
+    }
+    Derived& setSelectedItem(const char* value)
+    {
+        return setSelectedItem(std::make_unique<CXmString>(value));
+    }
     XmString getSelectedItem()
     {
         XmString value;
@@ -9633,167 +9769,175 @@ public:
     CXmComboBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setArrowSize(Dimension value) const
+    auto setArrowSize(Dimension value)
     {
         return this->set("arrowSize", value);
     }
-    auto setArrowSpacing(Dimension value) const
+    auto setArrowSpacing(Dimension value)
     {
         return this->set("arrowSpacing", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setColumns(short value) const
+    auto setColumns(short value)
     {
         return this->set("columns", value);
     }
-    auto setComboBoxType(unsigned char value) const
+    auto setComboBoxType(unsigned char value)
     {
         return this->set("comboBoxType", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setItemCount(int value) const
+    auto setItemCount(int value)
     {
         return this->set("itemCount", value);
     }
-    auto setItems(XmStringTable value) const
+    auto setItems(XmStringTable value)
     {
         return this->set("items", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setList(Widget value) const
+    auto setList(Widget value)
     {
         return this->set("list", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMatchBehavior(unsigned char value) const
+    auto setMatchBehavior(unsigned char value)
     {
         return this->set("matchBehavior", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPositionMode(XtEnum value) const
+    auto setPositionMode(XtEnum value)
     {
         return this->set("positionMode", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSelectedItem(XmString value) const
+    auto setSelectedItem(XmString value)
     {
         return this->set("selectedItem", value);
     }
-    auto setSelectedPosition(int value) const
+    auto setSelectedItem(std::unique_ptr<CXmString> value)
+    {
+        return this->set("selectedItem", std::move(value));
+    }
+    auto setSelectedItem(const char* value)
+    {
+        return this->set("selectedItem", std::make_unique<CXmString>(value));
+    }
+    auto setSelectedPosition(int value)
     {
         return this->set("selectedPosition", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextField(Widget value) const
+    auto setTextField(Widget value)
     {
         return this->set("textField", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVisibleItemCount(int value) const
+    auto setVisibleItemCount(int value)
     {
         return this->set("visibleItemCount", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -10273,15 +10417,15 @@ public:
         {
             return *this;
         }
-        auto setEntryParent(Widget value) const
+        auto setEntryParent(Widget value)
         {
             return widget->set("entryParent", value);
         }
-        auto setOutlineState(unsigned char value) const
+        auto setOutlineState(unsigned char value)
         {
             return widget->set("outlineState", value);
         }
-        auto setPositionIndex(int value) const
+        auto setPositionIndex(int value)
         {
             return widget->set("positionIndex", value);
         }
@@ -10302,223 +10446,223 @@ public:
     CXmContainerBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutomaticSelection(unsigned char value) const
+    auto setAutomaticSelection(unsigned char value)
     {
         return this->set("automaticSelection", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCollapsedStatePixmap(Pixmap value) const
+    auto setCollapsedStatePixmap(Pixmap value)
     {
         return this->set("collapsedStatePixmap", value);
     }
-    auto setDetailColumnHeading(XmString* value) const
+    auto setDetailColumnHeading(XmString* value)
     {
         return this->set("detailColumnHeading", value);
     }
-    auto setDetailColumnHeadingCount(Cardinal value) const
+    auto setDetailColumnHeadingCount(Cardinal value)
     {
         return this->set("detailColumnHeadingCount", value);
     }
-    auto setDetailOrder(Cardinal* value) const
+    auto setDetailOrder(Cardinal* value)
     {
         return this->set("detailOrder", value);
     }
-    auto setDetailOrderCount(Cardinal value) const
+    auto setDetailOrderCount(Cardinal value)
     {
         return this->set("detailOrderCount", value);
     }
-    auto setDetailTabList(XmTabList value) const
+    auto setDetailTabList(XmTabList value)
     {
         return this->set("detailTabList", value);
     }
-    auto setEntryViewType(unsigned char value) const
+    auto setEntryViewType(unsigned char value)
     {
         return this->set("entryViewType", value);
     }
-    auto setExpandedStatePixmap(Pixmap value) const
+    auto setExpandedStatePixmap(Pixmap value)
     {
         return this->set("expandedStatePixmap", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLargeCellHeight(Dimension value) const
+    auto setLargeCellHeight(Dimension value)
     {
         return this->set("largeCellHeight", value);
     }
-    auto setLargeCellWidth(Dimension value) const
+    auto setLargeCellWidth(Dimension value)
     {
         return this->set("largeCellWidth", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setLayoutType(unsigned char value) const
+    auto setLayoutType(unsigned char value)
     {
         return this->set("layoutType", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOutlineButtonPolicy(unsigned char value) const
+    auto setOutlineButtonPolicy(unsigned char value)
     {
         return this->set("outlineButtonPolicy", value);
     }
-    auto setOutlineColumnWidth(Dimension value) const
+    auto setOutlineColumnWidth(Dimension value)
     {
         return this->set("outlineColumnWidth", value);
     }
-    auto setOutlineIndentation(Dimension value) const
+    auto setOutlineIndentation(Dimension value)
     {
         return this->set("outlineIndentation", value);
     }
-    auto setOutlineLineStyle(unsigned char value) const
+    auto setOutlineLineStyle(unsigned char value)
     {
         return this->set("outlineLineStyle", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setPrimaryOwnership(unsigned char value) const
+    auto setPrimaryOwnership(unsigned char value)
     {
         return this->set("primaryOwnership", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSelectColor(Pixel value) const
+    auto setSelectColor(Pixel value)
     {
         return this->set("selectColor", value);
     }
-    auto setSelectedObjectCount(unsigned int value) const
+    auto setSelectedObjectCount(unsigned int value)
     {
         return this->set("selectedObjectCount", value);
     }
-    auto setSelectedObjects(WidgetList value) const
+    auto setSelectedObjects(WidgetList value)
     {
         return this->set("selectedObjects", value);
     }
-    auto setSelectionPolicy(unsigned char value) const
+    auto setSelectionPolicy(unsigned char value)
     {
         return this->set("selectionPolicy", value);
     }
-    auto setSelectionTechnique(unsigned char value) const
+    auto setSelectionTechnique(unsigned char value)
     {
         return this->set("selectionTechnique", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSmallCellHeight(Dimension value) const
+    auto setSmallCellHeight(Dimension value)
     {
         return this->set("smallCellHeight", value);
     }
-    auto setSmallCellWidth(Dimension value) const
+    auto setSmallCellWidth(Dimension value)
     {
         return this->set("smallCellWidth", value);
     }
-    auto setSpatialIncludeModel(unsigned char value) const
+    auto setSpatialIncludeModel(unsigned char value)
     {
         return this->set("spatialIncludeModel", value);
     }
-    auto setSpatialResizeModel(unsigned char value) const
+    auto setSpatialResizeModel(unsigned char value)
     {
         return this->set("spatialResizeModel", value);
     }
-    auto setSpatialSnapModel(unsigned char value) const
+    auto setSpatialSnapModel(unsigned char value)
     {
         return this->set("spatialSnapModel", value);
     }
-    auto setSpatialStyle(unsigned char value) const
+    auto setSpatialStyle(unsigned char value)
     {
         return this->set("spatialStyle", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -10661,103 +10805,103 @@ public:
     CXmDrawingAreaBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -11032,151 +11176,151 @@ public:
     CXmDropDownBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setActivateOnFill(int value) const
+    auto setActivateOnFill(int value)
     {
         return this->set("activateOnFill", value);
     }
-    auto setAutoTraversal(Boolean value) const
+    auto setAutoTraversal(Boolean value)
     {
         return this->set("autoTraversal", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setComboTranslations(XtTranslations value) const
+    auto setComboTranslations(XtTranslations value)
     {
         return this->set("comboTranslations", value);
     }
-    auto setCustomizedCombinationBox(Boolean value) const
+    auto setCustomizedCombinationBox(Boolean value)
     {
         return this->set("customizedCombinationBox", value);
     }
-    auto setEditable(Boolean value) const
+    auto setEditable(Boolean value)
     {
         return this->set("editable", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalMargin(Dimension value) const
+    auto setHorizontalMargin(Dimension value)
     {
         return this->set("horizontalMargin", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNewVisualStyle(Boolean value) const
+    auto setNewVisualStyle(Boolean value)
     {
         return this->set("newVisualStyle", value);
     }
-    auto setPopupCursor(Cursor value) const
+    auto setPopupCursor(Cursor value)
     {
         return this->set("popupCursor", value);
     }
-    auto setPopupOffset(int value) const
+    auto setPopupOffset(int value)
     {
         return this->set("popupOffset", value);
     }
-    auto setPopupShellWidget(Widget value) const
+    auto setPopupShellWidget(Widget value)
     {
         return this->set("popupShellWidget", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowLabel(Boolean value) const
+    auto setShowLabel(Boolean value)
     {
         return this->set("showLabel", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUseTextField(Boolean value) const
+    auto setUseTextField(Boolean value)
     {
         return this->set("useTextField", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerify(Boolean value) const
+    auto setVerify(Boolean value)
     {
         return this->set("verify", value);
     }
-    auto setVerticalMargin(Dimension value) const
+    auto setVerticalMargin(Dimension value)
     {
         return this->set("verticalMargin", value);
     }
-    auto setVisibleItemCount(int value) const
+    auto setVisibleItemCount(int value)
     {
         return this->set("visibleItemCount", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -11255,27 +11399,27 @@ public:
         {
             return *this;
         }
-        auto setChildHorizontalAlignment(unsigned char value) const
+        auto setChildHorizontalAlignment(unsigned char value)
         {
             return widget->set("childHorizontalAlignment", value);
         }
-        auto setChildHorizontalSpacing(Dimension value) const
+        auto setChildHorizontalSpacing(Dimension value)
         {
             return widget->set("childHorizontalSpacing", value);
         }
-        auto setChildType(unsigned char value) const
+        auto setChildType(unsigned char value)
         {
             return widget->set("childType", value);
         }
-        auto setChildVerticalAlignment(unsigned char value) const
+        auto setChildVerticalAlignment(unsigned char value)
         {
             return widget->set("childVerticalAlignment", value);
         }
-        auto setFrameChildType(unsigned char value) const
+        auto setFrameChildType(unsigned char value)
         {
             return widget->set("frameChildType", value);
         }
-        auto setPri_vate(int value) const
+        auto setPri_vate(int value)
         {
             return widget->set("pri.vate", value);
         }
@@ -11296,103 +11440,103 @@ public:
     CXmFrameBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -11586,23 +11730,23 @@ public:
         {
             return *this;
         }
-        auto setInsertBefore(Widget value) const
+        auto setInsertBefore(Widget value)
         {
             return widget->set("insertBefore", value);
         }
-        auto setNodeCloseFolderPixmap(Pixmap value) const
+        auto setNodeCloseFolderPixmap(Pixmap value)
         {
             return widget->set("nodeCloseFolderPixmap", value);
         }
-        auto setNodeOpenFolderPixmap(Pixmap value) const
+        auto setNodeOpenFolderPixmap(Pixmap value)
         {
             return widget->set("nodeOpenFolderPixmap", value);
         }
-        auto setNodeState(XmHierarchyNodeState value) const
+        auto setNodeState(XmHierarchyNodeState value)
         {
             return widget->set("nodeState", value);
         }
-        auto setParentNode(Widget value) const
+        auto setParentNode(Widget value)
         {
             return widget->set("parentNode", value);
         }
@@ -11623,115 +11767,115 @@ public:
     CXmHierarchyBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutoClose(Boolean value) const
+    auto setAutoClose(Boolean value)
     {
         return this->set("autoClose", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCloseFolderPixmap(Pixmap value) const
+    auto setCloseFolderPixmap(Pixmap value)
     {
         return this->set("closeFolderPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalMargin(Dimension value) const
+    auto setHorizontalMargin(Dimension value)
     {
         return this->set("horizontalMargin", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOpenFolderPixmap(Pixmap value) const
+    auto setOpenFolderPixmap(Pixmap value)
     {
         return this->set("openFolderPixmap", value);
     }
-    auto setRefigureMode(Boolean value) const
+    auto setRefigureMode(Boolean value)
     {
         return this->set("refigureMode", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalMargin(Dimension value) const
+    auto setVerticalMargin(Dimension value)
     {
         return this->set("verticalMargin", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -11832,11 +11976,11 @@ public:
         {
             return *this;
         }
-        auto setCellX(short value) const
+        auto setCellX(short value)
         {
             return widget->set("cellX", value);
         }
-        auto setCellY(short value) const
+        auto setCellY(short value)
         {
             return widget->set("cellY", value);
         }
@@ -11857,115 +12001,115 @@ public:
     CXmIconBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalMargin(Dimension value) const
+    auto setHorizontalMargin(Dimension value)
     {
         return this->set("horizontalMargin", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMinimumCellHeight(Dimension value) const
+    auto setMinimumCellHeight(Dimension value)
     {
         return this->set("minimumCellHeight", value);
     }
-    auto setMinimumCellWidth(Dimension value) const
+    auto setMinimumCellWidth(Dimension value)
     {
         return this->set("minimumCellWidth", value);
     }
-    auto setMinimumHorizontalCells(Dimension value) const
+    auto setMinimumHorizontalCells(Dimension value)
     {
         return this->set("minimumHorizontalCells", value);
     }
-    auto setMinimumVerticalCells(Dimension value) const
+    auto setMinimumVerticalCells(Dimension value)
     {
         return this->set("minimumVerticalCells", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalMargin(Dimension value) const
+    auto setVerticalMargin(Dimension value)
     {
         return this->set("verticalMargin", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -11997,6 +12141,14 @@ public:
     {
         XtVaSetValues(this->_widget, "findLabel", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setFindLabel(std::unique_ptr<CXmString> value)
+    {
+        return setFindLabel(static_cast<XmString>(*value));
+    }
+    Derived& setFindLabel(const char* value)
+    {
+        return setFindLabel(std::make_unique<CXmString>(value));
     }
     XmString getFindLabel()
     {
@@ -12107,6 +12259,14 @@ public:
         XtVaSetValues(this->_widget, "title", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setTitle(std::unique_ptr<CXmString> value)
+    {
+        return setTitle(static_cast<XmString>(*value));
+    }
+    Derived& setTitle(const char* value)
+    {
+        return setTitle(std::make_unique<CXmString>(value));
+    }
     XmString getTitle()
     {
         XmString value;
@@ -12117,6 +12277,14 @@ public:
     {
         XtVaSetValues(this->_widget, "titleString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setTitleString(std::unique_ptr<CXmString> value)
+    {
+        return setTitleString(static_cast<XmString>(*value));
+    }
+    Derived& setTitleString(const char* value)
+    {
+        return setTitleString(std::make_unique<CXmString>(value));
     }
     XmString getTitleString()
     {
@@ -12164,115 +12332,139 @@ public:
     CXmMultiListBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setFindLabel(XmString value) const
+    auto setFindLabel(XmString value)
     {
         return this->set("findLabel", value);
     }
-    auto setForeground(Pixel value) const
+    auto setFindLabel(std::unique_ptr<CXmString> value)
+    {
+        return this->set("findLabel", std::move(value));
+    }
+    auto setFindLabel(const char* value)
+    {
+        return this->set("findLabel", std::make_unique<CXmString>(value));
+    }
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowFind(Boolean value) const
+    auto setShowFind(Boolean value)
     {
         return this->set("showFind", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTitle(XmString value) const
+    auto setTitle(XmString value)
     {
         return this->set("title", value);
     }
-    auto setTitleString(XmString value) const
+    auto setTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("title", std::move(value));
+    }
+    auto setTitle(const char* value)
+    {
+        return this->set("title", std::make_unique<CXmString>(value));
+    }
+    auto setTitleString(XmString value)
     {
         return this->set("titleString", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTitleString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("titleString", std::move(value));
+    }
+    auto setTitleString(const char* value)
+    {
+        return this->set("titleString", std::make_unique<CXmString>(value));
+    }
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVisibleItemCount(int value) const
+    auto setVisibleItemCount(int value)
     {
         return this->set("visibleItemCount", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -12521,15 +12713,15 @@ public:
         {
             return *this;
         }
-        auto setNotebookChildType(unsigned char value) const
+        auto setNotebookChildType(unsigned char value)
         {
             return widget->set("notebookChildType", value);
         }
-        auto setPageNumber(int value) const
+        auto setPageNumber(int value)
         {
             return widget->set("pageNumber", value);
         }
-        auto setResizable(Boolean value) const
+        auto setResizable(Boolean value)
         {
             return widget->set("resizable", value);
         }
@@ -12550,163 +12742,163 @@ public:
     CXmNotebookBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackPageBackground(Pixel value) const
+    auto setBackPageBackground(Pixel value)
     {
         return this->set("backPageBackground", value);
     }
-    auto setBackPageForeground(Pixel value) const
+    auto setBackPageForeground(Pixel value)
     {
         return this->set("backPageForeground", value);
     }
-    auto setBackPageNumber(Cardinal value) const
+    auto setBackPageNumber(Cardinal value)
     {
         return this->set("backPageNumber", value);
     }
-    auto setBackPagePlacement(unsigned char value) const
+    auto setBackPagePlacement(unsigned char value)
     {
         return this->set("backPagePlacement", value);
     }
-    auto setBackPageSize(Dimension value) const
+    auto setBackPageSize(Dimension value)
     {
         return this->set("backPageSize", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBindingPixmap(Pixmap value) const
+    auto setBindingPixmap(Pixmap value)
     {
         return this->set("bindingPixmap", value);
     }
-    auto setBindingType(unsigned char value) const
+    auto setBindingType(unsigned char value)
     {
         return this->set("bindingType", value);
     }
-    auto setBindingWidth(Dimension value) const
+    auto setBindingWidth(Dimension value)
     {
         return this->set("bindingWidth", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCurrentPageNumber(int value) const
+    auto setCurrentPageNumber(int value)
     {
         return this->set("currentPageNumber", value);
     }
-    auto setFirstPageNumber(int value) const
+    auto setFirstPageNumber(int value)
     {
         return this->set("firstPageNumber", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setFrameBackground(Pixel value) const
+    auto setFrameBackground(Pixel value)
     {
         return this->set("frameBackground", value);
     }
-    auto setFrameShadowThickness(Dimension value) const
+    auto setFrameShadowThickness(Dimension value)
     {
         return this->set("frameShadowThickness", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setInnerMarginHeight(Dimension value) const
+    auto setInnerMarginHeight(Dimension value)
     {
         return this->set("innerMarginHeight", value);
     }
-    auto setInnerMarginWidth(Dimension value) const
+    auto setInnerMarginWidth(Dimension value)
     {
         return this->set("innerMarginWidth", value);
     }
-    auto setLastPageNumber(int value) const
+    auto setLastPageNumber(int value)
     {
         return this->set("lastPageNumber", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMajorTabSpacing(Dimension value) const
+    auto setMajorTabSpacing(Dimension value)
     {
         return this->set("majorTabSpacing", value);
     }
-    auto setMinorTabSpacing(Dimension value) const
+    auto setMinorTabSpacing(Dimension value)
     {
         return this->set("minorTabSpacing", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -12837,6 +13029,14 @@ public:
     {
         XtVaSetValues(this->_widget, "labelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setLabelString(const char* value)
+    {
+        return setLabelString(std::make_unique<CXmString>(value));
     }
     XmString getLabelString()
     {
@@ -13167,6 +13367,14 @@ public:
         XtVaSetValues(this->_widget, "tearOffTitle", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setTearOffTitle(std::unique_ptr<CXmString> value)
+    {
+        return setTearOffTitle(static_cast<XmString>(*value));
+    }
+    Derived& setTearOffTitle(const char* value)
+    {
+        return setTearOffTitle(std::make_unique<CXmString>(value));
+    }
     XmString getTearOffTitle()
     {
         XmString value;
@@ -13223,7 +13431,7 @@ public:
         {
             return *this;
         }
-        auto setPositionIndex(short value) const
+        auto setPositionIndex(short value)
         {
             return widget->set("positionIndex", value);
         }
@@ -13244,227 +13452,243 @@ public:
     CXmRowColumnBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAdjustLast(Boolean value) const
+    auto setAdjustLast(Boolean value)
     {
         return this->set("adjustLast", value);
     }
-    auto setAdjustMargin(Boolean value) const
+    auto setAdjustMargin(Boolean value)
     {
         return this->set("adjustMargin", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setEntryAlignment(unsigned char value) const
+    auto setEntryAlignment(unsigned char value)
     {
         return this->set("entryAlignment", value);
     }
-    auto setEntryBorder(Dimension value) const
+    auto setEntryBorder(Dimension value)
     {
         return this->set("entryBorder", value);
     }
-    auto setEntryClass(WidgetClass value) const
+    auto setEntryClass(WidgetClass value)
     {
         return this->set("entryClass", value);
     }
-    auto setEntryVerticalAlignment(unsigned char value) const
+    auto setEntryVerticalAlignment(unsigned char value)
     {
         return this->set("entryVerticalAlignment", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setInsertPosition(XtOrderProc value) const
+    auto setInsertPosition(XtOrderProc value)
     {
         return this->set("insertPosition", value);
     }
-    auto setIsAligned(Boolean value) const
+    auto setIsAligned(Boolean value)
     {
         return this->set("isAligned", value);
     }
-    auto setIsHomogeneous(Boolean value) const
+    auto setIsHomogeneous(Boolean value)
     {
         return this->set("isHomogeneous", value);
     }
-    auto setLabelString(XmString value) const
+    auto setLabelString(XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMenuAccelerator(String value) const
+    auto setMenuAccelerator(String value)
     {
         return this->set("menuAccelerator", value);
     }
-    auto setMenuHelpWidget(Widget value) const
+    auto setMenuHelpWidget(Widget value)
     {
         return this->set("menuHelpWidget", value);
     }
-    auto setMenuHistory(Widget value) const
+    auto setMenuHistory(Widget value)
     {
         return this->set("menuHistory", value);
     }
-    auto setMenuPost(String value) const
+    auto setMenuPost(String value)
     {
         return this->set("menuPost", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNumColumns(short value) const
+    auto setNumColumns(short value)
     {
         return this->set("numColumns", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setPacking(unsigned char value) const
+    auto setPacking(unsigned char value)
     {
         return this->set("packing", value);
     }
-    auto setPopupEnabled(XtEnum value) const
+    auto setPopupEnabled(XtEnum value)
     {
         return this->set("popupEnabled", value);
     }
-    auto setPostFromCount(int value) const
+    auto setPostFromCount(int value)
     {
         return this->set("postFromCount", value);
     }
-    auto setPostFromList(Widget* value) const
+    auto setPostFromList(Widget* value)
     {
         return this->set("postFromList", value);
     }
-    auto setRadioAlwaysOne(Boolean value) const
+    auto setRadioAlwaysOne(Boolean value)
     {
         return this->set("radioAlwaysOne", value);
     }
-    auto setRadioBehavior(Boolean value) const
+    auto setRadioBehavior(Boolean value)
     {
         return this->set("radioBehavior", value);
     }
-    auto setResizeHeight(Boolean value) const
+    auto setResizeHeight(Boolean value)
     {
         return this->set("resizeHeight", value);
     }
-    auto setResizeWidth(Boolean value) const
+    auto setResizeWidth(Boolean value)
     {
         return this->set("resizeWidth", value);
     }
-    auto setRowColumnType(unsigned char value) const
+    auto setRowColumnType(unsigned char value)
     {
         return this->set("rowColumnType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSpacing(Dimension value) const
+    auto setSpacing(Dimension value)
     {
         return this->set("spacing", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setSubMenuId(Widget value) const
+    auto setSubMenuId(Widget value)
     {
         return this->set("subMenuId", value);
     }
-    auto setTearOffModel(unsigned char value) const
+    auto setTearOffModel(unsigned char value)
     {
         return this->set("tearOffModel", value);
     }
-    auto setTearOffTitle(XmString value) const
+    auto setTearOffTitle(XmString value)
     {
         return this->set("tearOffTitle", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTearOffTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("tearOffTitle", std::move(value));
+    }
+    auto setTearOffTitle(const char* value)
+    {
+        return this->set("tearOffTitle", std::make_unique<CXmString>(value));
+    }
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWhichButton(unsigned int value) const
+    auto setWhichButton(unsigned int value)
     {
         return this->set("whichButton", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -13744,6 +13968,14 @@ public:
         XtVaSetValues(this->_widget, "titleString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setTitleString(std::unique_ptr<CXmString> value)
+    {
+        return setTitleString(static_cast<XmString>(*value));
+    }
+    Derived& setTitleString(const char* value)
+    {
+        return setTitleString(std::make_unique<CXmString>(value));
+    }
     XmString getTitleString()
     {
         XmString value;
@@ -13795,179 +14027,187 @@ public:
     CXmScaleBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDecimalPoints(short value) const
+    auto setDecimalPoints(short value)
     {
         return this->set("decimalPoints", value);
     }
-    auto setEditable(Boolean value) const
+    auto setEditable(Boolean value)
     {
         return this->set("editable", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMaximum(int value) const
+    auto setMaximum(int value)
     {
         return this->set("maximum", value);
     }
-    auto setMinimum(int value) const
+    auto setMinimum(int value)
     {
         return this->set("minimum", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setPri_vate(int value) const
+    auto setPri_vate(int value)
     {
         return this->set("pri.vate", value);
     }
-    auto setProcessingDirection(unsigned char value) const
+    auto setProcessingDirection(unsigned char value)
     {
         return this->set("processingDirection", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setScaleHeight(Dimension value) const
+    auto setScaleHeight(Dimension value)
     {
         return this->set("scaleHeight", value);
     }
-    auto setScaleMultiple(int value) const
+    auto setScaleMultiple(int value)
     {
         return this->set("scaleMultiple", value);
     }
-    auto setScaleWidth(Dimension value) const
+    auto setScaleWidth(Dimension value)
     {
         return this->set("scaleWidth", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowArrows(XtEnum value) const
+    auto setShowArrows(XtEnum value)
     {
         return this->set("showArrows", value);
     }
-    auto setShowValue(Boolean value) const
+    auto setShowValue(Boolean value)
     {
         return this->set("showValue", value);
     }
-    auto setSliderMark(XtEnum value) const
+    auto setSliderMark(XtEnum value)
     {
         return this->set("sliderMark", value);
     }
-    auto setSliderSize(int value) const
+    auto setSliderSize(int value)
     {
         return this->set("sliderSize", value);
     }
-    auto setSliderVisual(XtEnum value) const
+    auto setSliderVisual(XtEnum value)
     {
         return this->set("sliderVisual", value);
     }
-    auto setSlidingMode(XtEnum value) const
+    auto setSlidingMode(XtEnum value)
     {
         return this->set("slidingMode", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTitleString(XmString value) const
+    auto setTitleString(XmString value)
     {
         return this->set("titleString", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTitleString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("titleString", std::move(value));
+    }
+    auto setTitleString(const char* value)
+    {
+        return this->set("titleString", std::make_unique<CXmString>(value));
+    }
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setValue(int value) const
+    auto setValue(int value)
     {
         return this->set("value", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -14168,7 +14408,7 @@ public:
         {
             return *this;
         }
-        auto setScrolledWindowChildType(unsigned char value) const
+        auto setScrolledWindowChildType(unsigned char value)
         {
             return widget->set("scrolledWindowChildType", value);
         }
@@ -14189,139 +14429,139 @@ public:
     CXmScrolledWindowBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutoDragModel(XtEnum value) const
+    auto setAutoDragModel(XtEnum value)
     {
         return this->set("autoDragModel", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setClipWindow(XmDrawingAreaWidget value) const
+    auto setClipWindow(XmDrawingAreaWidget value)
     {
         return this->set("clipWindow", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalScrollBar(XmScrollBarWidget value) const
+    auto setHorizontalScrollBar(XmScrollBarWidget value)
     {
         return this->set("horizontalScrollBar", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setScrollBarDisplayPolicy(unsigned char value) const
+    auto setScrollBarDisplayPolicy(unsigned char value)
     {
         return this->set("scrollBarDisplayPolicy", value);
     }
-    auto setScrollBarPlacement(unsigned char value) const
+    auto setScrollBarPlacement(unsigned char value)
     {
         return this->set("scrollBarPlacement", value);
     }
-    auto setScrolledWindowMarginHeight(Dimension value) const
+    auto setScrolledWindowMarginHeight(Dimension value)
     {
         return this->set("scrolledWindowMarginHeight", value);
     }
-    auto setScrolledWindowMarginWidth(Dimension value) const
+    auto setScrolledWindowMarginWidth(Dimension value)
     {
         return this->set("scrolledWindowMarginWidth", value);
     }
-    auto setScrollingPolicy(unsigned char value) const
+    auto setScrollingPolicy(unsigned char value)
     {
         return this->set("scrollingPolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSpacing(Dimension value) const
+    auto setSpacing(Dimension value)
     {
         return this->set("spacing", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalScrollBar(XmScrollBarWidget value) const
+    auto setVerticalScrollBar(XmScrollBarWidget value)
     {
         return this->set("verticalScrollBar", value);
     }
-    auto setVisualPolicy(unsigned char value) const
+    auto setVisualPolicy(unsigned char value)
     {
         return this->set("visualPolicy", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setWorkWindow(Widget value) const
+    auto setWorkWindow(Widget value)
     {
         return this->set("workWindow", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -14499,47 +14739,47 @@ public:
         {
             return *this;
         }
-        auto setArrowSensitivity(unsigned char value) const
+        auto setArrowSensitivity(unsigned char value)
         {
             return widget->set("arrowSensitivity", value);
         }
-        auto setDecimalPoints(short value) const
+        auto setDecimalPoints(short value)
         {
             return widget->set("decimalPoints", value);
         }
-        auto setIncrementValue(int value) const
+        auto setIncrementValue(int value)
         {
             return widget->set("incrementValue", value);
         }
-        auto setMaximumValue(int value) const
+        auto setMaximumValue(int value)
         {
             return widget->set("maximumValue", value);
         }
-        auto setMinimumValue(int value) const
+        auto setMinimumValue(int value)
         {
             return widget->set("minimumValue", value);
         }
-        auto setNumValues(int value) const
+        auto setNumValues(int value)
         {
             return widget->set("numValues", value);
         }
-        auto setPosition(int value) const
+        auto setPosition(int value)
         {
             return widget->set("position", value);
         }
-        auto setPositionType(unsigned char value) const
+        auto setPositionType(unsigned char value)
         {
             return widget->set("positionType", value);
         }
-        auto setSpinBoxChildType(unsigned char value) const
+        auto setSpinBoxChildType(unsigned char value)
         {
             return widget->set("spinBoxChildType", value);
         }
-        auto setValues(XmStringTable value) const
+        auto setValues(XmStringTable value)
         {
             return widget->set("values", value);
         }
-        auto setWrap(Boolean value) const
+        auto setWrap(Boolean value)
         {
             return widget->set("wrap", value);
         }
@@ -14560,131 +14800,131 @@ public:
     CXmSpinBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setArrowLayout(unsigned char value) const
+    auto setArrowLayout(unsigned char value)
     {
         return this->set("arrowLayout", value);
     }
-    auto setArrowOrientation(unsigned char value) const
+    auto setArrowOrientation(unsigned char value)
     {
         return this->set("arrowOrientation", value);
     }
-    auto setArrowSize(Dimension value) const
+    auto setArrowSize(Dimension value)
     {
         return this->set("arrowSize", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDefaultArrowSensitivity(unsigned char value) const
+    auto setDefaultArrowSensitivity(unsigned char value)
     {
         return this->set("defaultArrowSensitivity", value);
     }
-    auto setDetailShadowThickness(Dimension value) const
+    auto setDetailShadowThickness(Dimension value)
     {
         return this->set("detailShadowThickness", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialDelay(unsigned int value) const
+    auto setInitialDelay(unsigned int value)
     {
         return this->set("initialDelay", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setRepeatDelay(unsigned int value) const
+    auto setRepeatDelay(unsigned int value)
     {
         return this->set("repeatDelay", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSpacing(Dimension value) const
+    auto setSpacing(Dimension value)
     {
         return this->set("spacing", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -15021,187 +15261,187 @@ public:
     CXmTabBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNumStacks(int value) const
+    auto setNumStacks(int value)
     {
         return this->set("numStacks", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSelectedIndex(int value) const
+    auto setSelectedIndex(int value)
     {
         return this->set("selectedIndex", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStackedEffect(Boolean value) const
+    auto setStackedEffect(Boolean value)
     {
         return this->set("stackedEffect", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTabAutoSelect(Boolean value) const
+    auto setTabAutoSelect(Boolean value)
     {
         return this->set("tabAutoSelect", value);
     }
-    auto setTabCornerPercent(int value) const
+    auto setTabCornerPercent(int value)
     {
         return this->set("tabCornerPercent", value);
     }
-    auto setTabEdge(XmTabEdge value) const
+    auto setTabEdge(XmTabEdge value)
     {
         return this->set("tabEdge", value);
     }
-    auto setTabLabelSpacing(Dimension value) const
+    auto setTabLabelSpacing(Dimension value)
     {
         return this->set("tabLabelSpacing", value);
     }
-    auto setTabList(XmTabbedStackList value) const
+    auto setTabList(XmTabbedStackList value)
     {
         return this->set("tabList", value);
     }
-    auto setTabMarginHeight(Dimension value) const
+    auto setTabMarginHeight(Dimension value)
     {
         return this->set("tabMarginHeight", value);
     }
-    auto setTabMarginWidth(Dimension value) const
+    auto setTabMarginWidth(Dimension value)
     {
         return this->set("tabMarginWidth", value);
     }
-    auto setTabMode(XmTabMode value) const
+    auto setTabMode(XmTabMode value)
     {
         return this->set("tabMode", value);
     }
-    auto setTabOffset(Dimension value) const
+    auto setTabOffset(Dimension value)
     {
         return this->set("tabOffset", value);
     }
-    auto setTabOrientation(XmTabOrientation value) const
+    auto setTabOrientation(XmTabOrientation value)
     {
         return this->set("tabOrientation", value);
     }
-    auto setTabSelectColor(Pixel value) const
+    auto setTabSelectColor(Pixel value)
     {
         return this->set("tabSelectColor", value);
     }
-    auto setTabSelectPixmap(Pixmap value) const
+    auto setTabSelectPixmap(Pixmap value)
     {
         return this->set("tabSelectPixmap", value);
     }
-    auto setTabStyle(XmTabStyle value) const
+    auto setTabStyle(XmTabStyle value)
     {
         return this->set("tabStyle", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalIndex(int value) const
+    auto setTraversalIndex(int value)
     {
         return this->set("traversalIndex", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUniformTabSize(Boolean value) const
+    auto setUniformTabSize(Boolean value)
     {
         return this->set("uniformTabSize", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUseImageCache(Boolean value) const
+    auto setUseImageCache(Boolean value)
     {
         return this->set("useImageCache", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -15253,15 +15493,15 @@ public:
     CDesktopBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setDesktopParent(Widget value) const
+    auto setDesktopParent(Widget value)
     {
         return this->set("desktopParent", value);
     }
-    auto setExtensionType(unsigned char value) const
+    auto setExtensionType(unsigned char value)
     {
         return this->set("extensionType", value);
     }
-    auto setLogicalParent(Widget value) const
+    auto setLogicalParent(Widget value)
     {
         return this->set("logicalParent", value);
     }
@@ -15318,11 +15558,11 @@ public:
     CprotocolBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setExtensionType(unsigned char value) const
+    auto setExtensionType(unsigned char value)
     {
         return this->set("extensionType", value);
     }
-    auto setLogicalParent(Widget value) const
+    auto setLogicalParent(Widget value)
     {
         return this->set("logicalParent", value);
     }
@@ -15363,103 +15603,111 @@ public:
     CXmIconHeaderBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto set_cache(XmIconGCacheObjPart* value) const
+    auto set_cache(XmIconGCacheObjPart* value)
     {
         return this->set(".cache", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setContainerID(Widget value) const
+    auto setContainerID(Widget value)
     {
         return this->set("containerID", value);
     }
-    auto setDetail(XmString* value) const
+    auto setDetail(XmString* value)
     {
         return this->set("detail", value);
     }
-    auto setDetailCount(Cardinal value) const
+    auto setDetailCount(Cardinal value)
     {
         return this->set("detailCount", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelString(XmString value) const
+    auto setLabelString(XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLargeIconMask(Pixmap value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLargeIconMask(Pixmap value)
     {
         return this->set("largeIconMask", value);
     }
-    auto setLargeIconPixmap(Pixmap value) const
+    auto setLargeIconPixmap(Pixmap value)
     {
         return this->set("largeIconPixmap", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSmallIconMask(Pixmap value) const
+    auto setSmallIconMask(Pixmap value)
     {
         return this->set("smallIconMask", value);
     }
-    auto setSmallIconPixmap(Pixmap value) const
+    auto setSmallIconPixmap(Pixmap value)
     {
         return this->set("smallIconPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setViewType(unsigned char value) const
+    auto setViewType(unsigned char value)
     {
         return this->set("viewType", value);
     }
-    auto setVisualEmphasis(unsigned char value) const
+    auto setVisualEmphasis(unsigned char value)
     {
         return this->set("visualEmphasis", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -15567,111 +15815,127 @@ public:
     CXmCascadeButtonGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto set_cache(XmLabelGCacheObjPart* value) const
+    auto set_cache(XmLabelGCacheObjPart* value)
     {
         return this->set(".cache", value);
     }
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSubMenuId(Widget value) const
+    auto setSubMenuId(Widget value)
     {
         return this->set("subMenuId", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -15793,111 +16057,127 @@ public:
     CXmPushButtonGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto set_cache(XmLabelGCacheObjPart* value) const
+    auto set_cache(XmLabelGCacheObjPart* value)
     {
         return this->set(".cache", value);
     }
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowAsDefault(Dimension value) const
+    auto setShowAsDefault(Dimension value)
     {
         return this->set("showAsDefault", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -16021,115 +16301,131 @@ public:
     CXmToggleButtonGadgetBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto set_cache(XmLabelGCacheObjPart* value) const
+    auto set_cache(XmLabelGCacheObjPart* value)
     {
         return this->set(".cache", value);
     }
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setDetailShadowThickness(Dimension value) const
+    auto setDetailShadowThickness(Dimension value)
     {
         return this->set("detailShadowThickness", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSet(unsigned char value) const
+    auto setSet(unsigned char value)
     {
         return this->set("set", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -16268,191 +16564,207 @@ public:
     CXmCascadeButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setAlignment(unsigned char value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCascadePixmap(Pixmap value) const
+    auto setCascadePixmap(Pixmap value)
     {
         return this->set("cascadePixmap", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLabelType(unsigned char value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLabelType(unsigned char value)
     {
         return this->set("labelType", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMappingDelay(int value) const
+    auto setMappingDelay(int value)
     {
         return this->set("mappingDelay", value);
     }
-    auto setMarginBottom(Dimension value) const
+    auto setMarginBottom(Dimension value)
     {
         return this->set("marginBottom", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginLeft(Dimension value) const
+    auto setMarginLeft(Dimension value)
     {
         return this->set("marginLeft", value);
     }
-    auto setMarginRight(Dimension value) const
+    auto setMarginRight(Dimension value)
     {
         return this->set("marginRight", value);
     }
-    auto setMarginTop(Dimension value) const
+    auto setMarginTop(Dimension value)
     {
         return this->set("marginTop", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setSubMenuId(Widget value) const
+    auto setSubMenuId(Widget value)
     {
         return this->set("subMenuId", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -16543,6 +16855,14 @@ public:
     {
         XtVaSetValues(this->_widget, "labelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setLabelString(const char* value)
+    {
+        return setLabelString(std::make_unique<CXmString>(value));
     }
     _XmString getLabelString()
     {
@@ -16639,191 +16959,207 @@ public:
     CXmDrawnButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setAlignment(unsigned char value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLabelType(unsigned char value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLabelType(unsigned char value)
     {
         return this->set("labelType", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginBottom(Dimension value) const
+    auto setMarginBottom(Dimension value)
     {
         return this->set("marginBottom", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginLeft(Dimension value) const
+    auto setMarginLeft(Dimension value)
     {
         return this->set("marginLeft", value);
     }
-    auto setMarginRight(Dimension value) const
+    auto setMarginRight(Dimension value)
     {
         return this->set("marginRight", value);
     }
-    auto setMarginTop(Dimension value) const
+    auto setMarginTop(Dimension value)
     {
         return this->set("marginTop", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setMultiClick(unsigned char value) const
+    auto setMultiClick(unsigned char value)
     {
         return this->set("multiClick", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setPushButtonEnabled(Boolean value) const
+    auto setPushButtonEnabled(Boolean value)
     {
         return this->set("pushButtonEnabled", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -17002,203 +17338,219 @@ public:
     CXmPushButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setAlignment(unsigned char value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setArmColor(Pixel value) const
+    auto setArmColor(Pixel value)
     {
         return this->set("armColor", value);
     }
-    auto setArmPixmap(Pixmap value) const
+    auto setArmPixmap(Pixmap value)
     {
         return this->set("armPixmap", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDefaultButtonShadowThickness(Dimension value) const
+    auto setDefaultButtonShadowThickness(Dimension value)
     {
         return this->set("defaultButtonShadowThickness", value);
     }
-    auto setFillOnArm(Boolean value) const
+    auto setFillOnArm(Boolean value)
     {
         return this->set("fillOnArm", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLabelType(unsigned char value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLabelType(unsigned char value)
     {
         return this->set("labelType", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginBottom(Dimension value) const
+    auto setMarginBottom(Dimension value)
     {
         return this->set("marginBottom", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginLeft(Dimension value) const
+    auto setMarginLeft(Dimension value)
     {
         return this->set("marginLeft", value);
     }
-    auto setMarginRight(Dimension value) const
+    auto setMarginRight(Dimension value)
     {
         return this->set("marginRight", value);
     }
-    auto setMarginTop(Dimension value) const
+    auto setMarginTop(Dimension value)
     {
         return this->set("marginTop", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setMultiClick(unsigned char value) const
+    auto setMultiClick(unsigned char value)
     {
         return this->set("multiClick", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowAsDefault(Dimension value) const
+    auto setShowAsDefault(Dimension value)
     {
         return this->set("showAsDefault", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -17466,239 +17818,255 @@ public:
     CXmToggleButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setAlignment(unsigned char value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDetailShadowThickness(Dimension value) const
+    auto setDetailShadowThickness(Dimension value)
     {
         return this->set("detailShadowThickness", value);
     }
-    auto setFillOnSelect(Boolean value) const
+    auto setFillOnSelect(Boolean value)
     {
         return this->set("fillOnSelect", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setIndeterminateInsensitivePixmap(Pixmap value) const
+    auto setIndeterminateInsensitivePixmap(Pixmap value)
     {
         return this->set("indeterminateInsensitivePixmap", value);
     }
-    auto setIndeterminatePixmap(Pixmap value) const
+    auto setIndeterminatePixmap(Pixmap value)
     {
         return this->set("indeterminatePixmap", value);
     }
-    auto setIndicatorOn(unsigned char value) const
+    auto setIndicatorOn(unsigned char value)
     {
         return this->set("indicatorOn", value);
     }
-    auto setIndicatorSize(Dimension value) const
+    auto setIndicatorSize(Dimension value)
     {
         return this->set("indicatorSize", value);
     }
-    auto setIndicatorType(unsigned char value) const
+    auto setIndicatorType(unsigned char value)
     {
         return this->set("indicatorType", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLabelType(unsigned char value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLabelType(unsigned char value)
     {
         return this->set("labelType", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginBottom(Dimension value) const
+    auto setMarginBottom(Dimension value)
     {
         return this->set("marginBottom", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginLeft(Dimension value) const
+    auto setMarginLeft(Dimension value)
     {
         return this->set("marginLeft", value);
     }
-    auto setMarginRight(Dimension value) const
+    auto setMarginRight(Dimension value)
     {
         return this->set("marginRight", value);
     }
-    auto setMarginTop(Dimension value) const
+    auto setMarginTop(Dimension value)
     {
         return this->set("marginTop", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSelectColor(Pixel value) const
+    auto setSelectColor(Pixel value)
     {
         return this->set("selectColor", value);
     }
-    auto setSelectInsensitivePixmap(Pixmap value) const
+    auto setSelectInsensitivePixmap(Pixmap value)
     {
         return this->set("selectInsensitivePixmap", value);
     }
-    auto setSelectPixmap(Pixmap value) const
+    auto setSelectPixmap(Pixmap value)
     {
         return this->set("selectPixmap", value);
     }
-    auto setSet(unsigned char value) const
+    auto setSet(unsigned char value)
     {
         return this->set("set", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSpacing(Dimension value) const
+    auto setSpacing(Dimension value)
     {
         return this->set("spacing", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setToggleMode(unsigned char value) const
+    auto setToggleMode(unsigned char value)
     {
         return this->set("toggleMode", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUnselectColor(Pixel value) const
+    auto setUnselectColor(Pixel value)
     {
         return this->set("unselectColor", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVisibleWhenOff(Boolean value) const
+    auto setVisibleWhenOff(Boolean value)
     {
         return this->set("visibleWhenOff", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -17838,43 +18206,52 @@ public:
         {
             return *this;
         }
-        auto setEntryLabelAlignment(unsigned char value) const
+        auto setEntryLabelAlignment(unsigned char value)
         {
             return widget->set("entryLabelAlignment", value);
         }
-        auto setEntryLabelFontList(XmFontList value) const
+        auto setEntryLabelFontList(XmFontList value)
         {
             return widget->set("entryLabelFontList", value);
         }
-        auto setEntryLabelPixmap(Pixmap value) const
+        auto setEntryLabelPixmap(Pixmap value)
         {
             return widget->set("entryLabelPixmap", value);
         }
-        auto setEntryLabelRenderTable(XmFontList value) const
+        auto setEntryLabelRenderTable(XmFontList value)
         {
             return widget->set("entryLabelRenderTable", value);
         }
-        auto setEntryLabelString(XmString value) const
+        auto setEntryLabelString(XmString value)
         {
             return widget->set("entryLabelString", value);
         }
-        auto setEntryLabelType(unsigned char value) const
+        auto setEntryLabelString(std::unique_ptr<CXmString> value)
+        {
+            return widget->set("entryLabelString", std::move(value));
+        }
+        auto setEntryLabelString(const char* value)
+        {
+            return widget->set(
+                "entryLabelString", std::make_unique<CXmString>(value));
+        }
+        auto setEntryLabelType(unsigned char value)
         {
             return widget->set("entryLabelType", value);
         }
-        auto setFillStyle(unsigned char value) const
+        auto setFillStyle(unsigned char value)
         {
             return widget->set("fillStyle", value);
         }
-        auto setPri_vate(Boolean value) const
+        auto setPri_vate(Boolean value)
         {
             return widget->set("pri.vate", value);
         }
-        auto setShowEntryLabel(Boolean value) const
+        auto setShowEntryLabel(Boolean value)
         {
             return widget->set("showEntryLabel", value);
         }
-        auto setStretchable(Boolean value) const
+        auto setStretchable(Boolean value)
         {
             return widget->set("stretchable", value);
         }
@@ -17895,203 +18272,211 @@ public:
     CXmColumnBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultEntryLabelAlignment(unsigned char value) const
+    auto setDefaultEntryLabelAlignment(unsigned char value)
     {
         return this->set("defaultEntryLabelAlignment", value);
     }
-    auto setDefaultEntryLabelFontList(XmFontList value) const
+    auto setDefaultEntryLabelFontList(XmFontList value)
     {
         return this->set("defaultEntryLabelFontList", value);
     }
-    auto setDefaultEntryLabelRenderTable(XmFontList value) const
+    auto setDefaultEntryLabelRenderTable(XmFontList value)
     {
         return this->set("defaultEntryLabelRenderTable", value);
     }
-    auto setDefaultFillStyle(unsigned char value) const
+    auto setDefaultFillStyle(unsigned char value)
     {
         return this->set("defaultFillStyle", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setDistribution(unsigned char value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setDistribution(unsigned char value)
     {
         return this->set("distribution", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setItemSpacing(Dimension value) const
+    auto setItemSpacing(Dimension value)
     {
         return this->set("itemSpacing", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLabelSpacing(Dimension value) const
+    auto setLabelSpacing(Dimension value)
     {
         return this->set("labelSpacing", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -18192,71 +18577,71 @@ public:
         {
             return *this;
         }
-        auto setBottomAttachment(unsigned char value) const
+        auto setBottomAttachment(unsigned char value)
         {
             return widget->set("bottomAttachment", value);
         }
-        auto setBottomOffset(int value) const
+        auto setBottomOffset(int value)
         {
             return widget->set("bottomOffset", value);
         }
-        auto setBottomPosition(int value) const
+        auto setBottomPosition(int value)
         {
             return widget->set("bottomPosition", value);
         }
-        auto setBottomWidget(Widget value) const
+        auto setBottomWidget(Widget value)
         {
             return widget->set("bottomWidget", value);
         }
-        auto setLeftAttachment(unsigned char value) const
+        auto setLeftAttachment(unsigned char value)
         {
             return widget->set("leftAttachment", value);
         }
-        auto setLeftOffset(int value) const
+        auto setLeftOffset(int value)
         {
             return widget->set("leftOffset", value);
         }
-        auto setLeftPosition(int value) const
+        auto setLeftPosition(int value)
         {
             return widget->set("leftPosition", value);
         }
-        auto setLeftWidget(Widget value) const
+        auto setLeftWidget(Widget value)
         {
             return widget->set("leftWidget", value);
         }
-        auto setResizable(Boolean value) const
+        auto setResizable(Boolean value)
         {
             return widget->set("resizable", value);
         }
-        auto setRightAttachment(unsigned char value) const
+        auto setRightAttachment(unsigned char value)
         {
             return widget->set("rightAttachment", value);
         }
-        auto setRightOffset(int value) const
+        auto setRightOffset(int value)
         {
             return widget->set("rightOffset", value);
         }
-        auto setRightPosition(int value) const
+        auto setRightPosition(int value)
         {
             return widget->set("rightPosition", value);
         }
-        auto setRightWidget(Widget value) const
+        auto setRightWidget(Widget value)
         {
             return widget->set("rightWidget", value);
         }
-        auto setTopAttachment(unsigned char value) const
+        auto setTopAttachment(unsigned char value)
         {
             return widget->set("topAttachment", value);
         }
-        auto setTopOffset(int value) const
+        auto setTopOffset(int value)
         {
             return widget->set("topOffset", value);
         }
-        auto setTopPosition(int value) const
+        auto setTopPosition(int value)
         {
             return widget->set("topPosition", value);
         }
-        auto setTopWidget(Widget value) const
+        auto setTopWidget(Widget value)
         {
             return widget->set("topWidget", value);
         }
@@ -18277,187 +18662,195 @@ public:
     CXmFormBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setForeground(Pixel value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setFractionBase(int value) const
+    auto setFractionBase(int value)
     {
         return this->set("fractionBase", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalSpacing(Dimension value) const
+    auto setHorizontalSpacing(Dimension value)
     {
         return this->set("horizontalSpacing", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setPri_vate(unsigned char value) const
+    auto setPri_vate(unsigned char value)
     {
         return this->set("pri.vate", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setRubberPositioning(Boolean value) const
+    auto setRubberPositioning(Boolean value)
     {
         return this->set("rubberPositioning", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalSpacing(Dimension value) const
+    auto setVerticalSpacing(Dimension value)
     {
         return this->set("verticalSpacing", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -18489,6 +18882,14 @@ public:
     {
         XtVaSetValues(this->_widget, "cancelLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setCancelLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setCancelLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setCancelLabelString(const char* value)
+    {
+        return setCancelLabelString(std::make_unique<CXmString>(value));
     }
     XmString getCancelLabelString()
     {
@@ -18523,6 +18924,14 @@ public:
         XtVaSetValues(this->_widget, "helpLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setHelpLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setHelpLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setHelpLabelString(const char* value)
+    {
+        return setHelpLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getHelpLabelString()
     {
         XmString value;
@@ -18544,6 +18953,14 @@ public:
     {
         XtVaSetValues(this->_widget, "messageString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setMessageString(std::unique_ptr<CXmString> value)
+    {
+        return setMessageString(static_cast<XmString>(*value));
+    }
+    Derived& setMessageString(const char* value)
+    {
+        return setMessageString(std::make_unique<CXmString>(value));
     }
     XmString getMessageString()
     {
@@ -18583,6 +19000,14 @@ public:
         XtVaSetValues(this->_widget, "okLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setOkLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setOkLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setOkLabelString(const char* value)
+    {
+        return setOkLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getOkLabelString()
     {
         XmString value;
@@ -18618,207 +19043,248 @@ public:
     CXmMessageBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setCancelLabelString(XmString value) const
+    auto setCancelLabelString(XmString value)
     {
         return this->set("cancelLabelString", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setCancelLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("cancelLabelString", std::move(value));
+    }
+    auto setCancelLabelString(const char* value)
+    {
+        return this->set(
+            "cancelLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultButtonType(unsigned char value) const
+    auto setDefaultButtonType(unsigned char value)
     {
         return this->set("defaultButtonType", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setDialogType(unsigned char value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setDialogType(unsigned char value)
     {
         return this->set("dialogType", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHelpLabelString(XmString value) const
+    auto setHelpLabelString(XmString value)
     {
         return this->set("helpLabelString", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHelpLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("helpLabelString", std::move(value));
+    }
+    auto setHelpLabelString(const char* value)
+    {
+        return this->set("helpLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMessageAlignment(unsigned char value) const
+    auto setMessageAlignment(unsigned char value)
     {
         return this->set("messageAlignment", value);
     }
-    auto setMessageString(XmString value) const
+    auto setMessageString(XmString value)
     {
         return this->set("messageString", value);
     }
-    auto setMinimizeButtons(Boolean value) const
+    auto setMessageString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("messageString", std::move(value));
+    }
+    auto setMessageString(const char* value)
+    {
+        return this->set("messageString", std::make_unique<CXmString>(value));
+    }
+    auto setMinimizeButtons(Boolean value)
     {
         return this->set("minimizeButtons", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setOkLabelString(XmString value) const
+    auto setOkLabelString(XmString value)
     {
         return this->set("okLabelString", value);
     }
-    auto setPri_vate(unsigned char value) const
+    auto setOkLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("okLabelString", std::move(value));
+    }
+    auto setOkLabelString(const char* value)
+    {
+        return this->set("okLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setPri_vate(unsigned char value)
     {
         return this->set("pri.vate", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setSymbolPixmap(Pixmap value) const
+    auto setSymbolPixmap(Pixmap value)
     {
         return this->set("symbolPixmap", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -18851,6 +19317,14 @@ public:
         XtVaSetValues(this->_widget, "applyLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setApplyLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setApplyLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setApplyLabelString(const char* value)
+    {
+        return setApplyLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getApplyLabelString()
     {
         XmString value;
@@ -18877,6 +19351,14 @@ public:
     {
         XtVaSetValues(this->_widget, "cancelLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setCancelLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setCancelLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setCancelLabelString(const char* value)
+    {
+        return setCancelLabelString(std::make_unique<CXmString>(value));
     }
     XmString getCancelLabelString()
     {
@@ -18911,6 +19393,14 @@ public:
         XtVaSetValues(this->_widget, "helpLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setHelpLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setHelpLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setHelpLabelString(const char* value)
+    {
+        return setHelpLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getHelpLabelString()
     {
         XmString value;
@@ -18943,6 +19433,14 @@ public:
     {
         XtVaSetValues(this->_widget, "listLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setListLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setListLabelString(const char* value)
+    {
+        return setListLabelString(std::make_unique<CXmString>(value));
     }
     XmString getListLabelString()
     {
@@ -19020,6 +19518,14 @@ public:
         XtVaSetValues(this->_widget, "okLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setOkLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setOkLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setOkLabelString(const char* value)
+    {
+        return setOkLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getOkLabelString()
     {
         XmString value;
@@ -19030,6 +19536,14 @@ public:
     {
         XtVaSetValues(this->_widget, "selectionLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setSelectionLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setSelectionLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setSelectionLabelString(const char* value)
+    {
+        return setSelectionLabelString(std::make_unique<CXmString>(value));
     }
     XmString getSelectionLabelString()
     {
@@ -19064,6 +19578,14 @@ public:
         XtVaSetValues(this->_widget, "textString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setTextString(std::unique_ptr<CXmString> value)
+    {
+        return setTextString(static_cast<XmString>(*value));
+    }
+    Derived& setTextString(const char* value)
+    {
+        return setTextString(std::make_unique<CXmString>(value));
+    }
     XmString getTextString()
     {
         XmString value;
@@ -19088,235 +19610,302 @@ public:
     CXmSelectionBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setApplyLabelString(XmString value) const
+    auto setApplyLabelString(XmString value)
     {
         return this->set("applyLabelString", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setApplyLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("applyLabelString", std::move(value));
+    }
+    auto setApplyLabelString(const char* value)
+    {
+        return this->set(
+            "applyLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setCancelLabelString(XmString value) const
+    auto setCancelLabelString(XmString value)
     {
         return this->set("cancelLabelString", value);
     }
-    auto setChildPlacement(unsigned char value) const
+    auto setCancelLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("cancelLabelString", std::move(value));
+    }
+    auto setCancelLabelString(const char* value)
+    {
+        return this->set(
+            "cancelLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setChildPlacement(unsigned char value)
     {
         return this->set("childPlacement", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setDialogType(unsigned char value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setDialogType(unsigned char value)
     {
         return this->set("dialogType", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHelpLabelString(XmString value) const
+    auto setHelpLabelString(XmString value)
     {
         return this->set("helpLabelString", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHelpLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("helpLabelString", std::move(value));
+    }
+    auto setHelpLabelString(const char* value)
+    {
+        return this->set("helpLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setListItemCount(int value) const
+    auto setListItemCount(int value)
     {
         return this->set("listItemCount", value);
     }
-    auto setListItems(XmString* value) const
+    auto setListItems(XmString* value)
     {
         return this->set("listItems", value);
     }
-    auto setListLabelString(XmString value) const
+    auto setListLabelString(XmString value)
     {
         return this->set("listLabelString", value);
     }
-    auto setListVisibleItemCount(int value) const
+    auto setListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("listLabelString", std::move(value));
+    }
+    auto setListLabelString(const char* value)
+    {
+        return this->set("listLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setListVisibleItemCount(int value)
     {
         return this->set("listVisibleItemCount", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMinimizeButtons(Boolean value) const
+    auto setMinimizeButtons(Boolean value)
     {
         return this->set("minimizeButtons", value);
     }
-    auto setMustMatch(Boolean value) const
+    auto setMustMatch(Boolean value)
     {
         return this->set("mustMatch", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setOkLabelString(XmString value) const
+    auto setOkLabelString(XmString value)
     {
         return this->set("okLabelString", value);
     }
-    auto setPri_vate(unsigned char value) const
+    auto setOkLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("okLabelString", std::move(value));
+    }
+    auto setOkLabelString(const char* value)
+    {
+        return this->set("okLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setPri_vate(unsigned char value)
     {
         return this->set("pri.vate", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setSelectionLabelString(XmString value) const
+    auto setSelectionLabelString(XmString value)
     {
         return this->set("selectionLabelString", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setSelectionLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("selectionLabelString", std::move(value));
+    }
+    auto setSelectionLabelString(const char* value)
+    {
+        return this->set(
+            "selectionLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextAccelerators(XtAccelerators value) const
+    auto setTextAccelerators(XtAccelerators value)
     {
         return this->set("textAccelerators", value);
     }
-    auto setTextColumns(short value) const
+    auto setTextColumns(short value)
     {
         return this->set("textColumns", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextString(XmString value) const
+    auto setTextString(XmString value)
     {
         return this->set("textString", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("textString", std::move(value));
+    }
+    auto setTextString(const char* value)
+    {
+        return this->set("textString", std::make_unique<CXmString>(value));
+    }
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -19609,39 +20198,48 @@ public:
         {
             return *this;
         }
-        auto setFreeTabPixmap(Boolean value) const
+        auto setFreeTabPixmap(Boolean value)
         {
             return widget->set("freeTabPixmap", value);
         }
-        auto setTabAlignment(unsigned char value) const
+        auto setTabAlignment(unsigned char value)
         {
             return widget->set("tabAlignment", value);
         }
-        auto setTabBackground(Pixel value) const
+        auto setTabBackground(Pixel value)
         {
             return widget->set("tabBackground", value);
         }
-        auto setTabBackgroundPixmap(Pixmap value) const
+        auto setTabBackgroundPixmap(Pixmap value)
         {
             return widget->set("tabBackgroundPixmap", value);
         }
-        auto setTabForeground(Pixel value) const
+        auto setTabForeground(Pixel value)
         {
             return widget->set("tabForeground", value);
         }
-        auto setTabLabelPixmap(Pixmap value) const
+        auto setTabLabelPixmap(Pixmap value)
         {
             return widget->set("tabLabelPixmap", value);
         }
-        auto setTabLabelString(XmString value) const
+        auto setTabLabelString(XmString value)
         {
             return widget->set("tabLabelString", value);
         }
-        auto setTabPixmapPlacement(XmPixmapPlacement value) const
+        auto setTabLabelString(std::unique_ptr<CXmString> value)
+        {
+            return widget->set("tabLabelString", std::move(value));
+        }
+        auto setTabLabelString(const char* value)
+        {
+            return widget->set(
+                "tabLabelString", std::make_unique<CXmString>(value));
+        }
+        auto setTabPixmapPlacement(XmPixmapPlacement value)
         {
             return widget->set("tabPixmapPlacement", value);
         }
-        auto setTabStringDirection(XmStringDirection value) const
+        auto setTabStringDirection(XmStringDirection value)
         {
             return widget->set("tabStringDirection", value);
         }
@@ -19662,247 +20260,255 @@ public:
     CXmTabStackBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStackedEffect(Boolean value) const
+    auto setStackedEffect(Boolean value)
     {
         return this->set("stackedEffect", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTabAutoSelect(Boolean value) const
+    auto setTabAutoSelect(Boolean value)
     {
         return this->set("tabAutoSelect", value);
     }
-    auto setTabBoxWidget(Widget value) const
+    auto setTabBoxWidget(Widget value)
     {
         return this->set("tabBoxWidget", value);
     }
-    auto setTabCornerPercent(int value) const
+    auto setTabCornerPercent(int value)
     {
         return this->set("tabCornerPercent", value);
     }
-    auto setTabLabelSpacing(Dimension value) const
+    auto setTabLabelSpacing(Dimension value)
     {
         return this->set("tabLabelSpacing", value);
     }
-    auto setTabMarginHeight(Dimension value) const
+    auto setTabMarginHeight(Dimension value)
     {
         return this->set("tabMarginHeight", value);
     }
-    auto setTabMarginWidth(Dimension value) const
+    auto setTabMarginWidth(Dimension value)
     {
         return this->set("tabMarginWidth", value);
     }
-    auto setTabMode(XmTabMode value) const
+    auto setTabMode(XmTabMode value)
     {
         return this->set("tabMode", value);
     }
-    auto setTabOffset(Dimension value) const
+    auto setTabOffset(Dimension value)
     {
         return this->set("tabOffset", value);
     }
-    auto setTabOrientation(XmTabOrientation value) const
+    auto setTabOrientation(XmTabOrientation value)
     {
         return this->set("tabOrientation", value);
     }
-    auto setTabSelectColor(Pixel value) const
+    auto setTabSelectColor(Pixel value)
     {
         return this->set("tabSelectColor", value);
     }
-    auto setTabSelectPixmap(Pixel value) const
+    auto setTabSelectPixmap(Pixel value)
     {
         return this->set("tabSelectPixmap", value);
     }
-    auto setTabSide(XmTabSide value) const
+    auto setTabSide(XmTabSide value)
     {
         return this->set("tabSide", value);
     }
-    auto setTabStyle(XmTabStyle value) const
+    auto setTabStyle(XmTabStyle value)
     {
         return this->set("tabStyle", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUniformTabSize(Boolean value) const
+    auto setUniformTabSize(Boolean value)
     {
         return this->set("uniformTabSize", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUseImageCache(Boolean value) const
+    auto setUseImageCache(Boolean value)
     {
         return this->set("useImageCache", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -19932,103 +20538,103 @@ public:
     CXmClipWindowBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -20091,127 +20697,127 @@ public:
     CXmOutlineBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutoClose(Boolean value) const
+    auto setAutoClose(Boolean value)
     {
         return this->set("autoClose", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCloseFolderPixmap(Pixmap value) const
+    auto setCloseFolderPixmap(Pixmap value)
     {
         return this->set("closeFolderPixmap", value);
     }
-    auto setConnectNodes(Boolean value) const
+    auto setConnectNodes(Boolean value)
     {
         return this->set("connectNodes", value);
     }
-    auto setConstrainWidth(Boolean value) const
+    auto setConstrainWidth(Boolean value)
     {
         return this->set("constrainWidth", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalMargin(Dimension value) const
+    auto setHorizontalMargin(Dimension value)
     {
         return this->set("horizontalMargin", value);
     }
-    auto setIndentSpace(Dimension value) const
+    auto setIndentSpace(Dimension value)
     {
         return this->set("indentSpace", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOpenFolderPixmap(Pixmap value) const
+    auto setOpenFolderPixmap(Pixmap value)
     {
         return this->set("openFolderPixmap", value);
     }
-    auto setRefigureMode(Boolean value) const
+    auto setRefigureMode(Boolean value)
     {
         return this->set("refigureMode", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalMargin(Dimension value) const
+    auto setVerticalMargin(Dimension value)
     {
         return this->set("verticalMargin", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -20323,23 +20929,23 @@ public:
         {
             return *this;
         }
-        auto setLineBackgroundColor(Pixel value) const
+        auto setLineBackgroundColor(Pixel value)
         {
             return widget->set("lineBackgroundColor", value);
         }
-        auto setLineColor(Pixel value) const
+        auto setLineColor(Pixel value)
         {
             return widget->set("lineColor", value);
         }
-        auto setLineStyle(int value) const
+        auto setLineStyle(int value)
         {
             return widget->set("lineStyle", value);
         }
-        auto setLineWidth(int value) const
+        auto setLineWidth(int value)
         {
             return widget->set("lineWidth", value);
         }
-        auto setOpenClosePadding(int value) const
+        auto setOpenClosePadding(int value)
         {
             return widget->set("openClosePadding", value);
         }
@@ -20360,143 +20966,143 @@ public:
     CXmTreeBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutoClose(Boolean value) const
+    auto setAutoClose(Boolean value)
     {
         return this->set("autoClose", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setCloseFolderPixmap(Pixmap value) const
+    auto setCloseFolderPixmap(Pixmap value)
     {
         return this->set("closeFolderPixmap", value);
     }
-    auto setCompressStyle(XmTreeCompressStyle value) const
+    auto setCompressStyle(XmTreeCompressStyle value)
     {
         return this->set("compressStyle", value);
     }
-    auto setConnectStyle(XmTreeConnectStyle value) const
+    auto setConnectStyle(XmTreeConnectStyle value)
     {
         return this->set("connectStyle", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalDelta(Dimension value) const
+    auto setHorizontalDelta(Dimension value)
     {
         return this->set("horizontalDelta", value);
     }
-    auto setHorizontalMargin(Dimension value) const
+    auto setHorizontalMargin(Dimension value)
     {
         return this->set("horizontalMargin", value);
     }
-    auto setHorizontalNodeSpace(Dimension value) const
+    auto setHorizontalNodeSpace(Dimension value)
     {
         return this->set("horizontalNodeSpace", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setOpenFolderPixmap(Pixmap value) const
+    auto setOpenFolderPixmap(Pixmap value)
     {
         return this->set("openFolderPixmap", value);
     }
-    auto setOrientation(unsigned char value) const
+    auto setOrientation(unsigned char value)
     {
         return this->set("orientation", value);
     }
-    auto setRefigureMode(Boolean value) const
+    auto setRefigureMode(Boolean value)
     {
         return this->set("refigureMode", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalDelta(Dimension value) const
+    auto setVerticalDelta(Dimension value)
     {
         return this->set("verticalDelta", value);
     }
-    auto setVerticalMargin(Dimension value) const
+    auto setVerticalMargin(Dimension value)
     {
         return this->set("verticalMargin", value);
     }
-    auto setVerticalNodeSpace(Dimension value) const
+    auto setVerticalNodeSpace(Dimension value)
     {
         return this->set("verticalNodeSpace", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -20603,167 +21209,167 @@ public:
     CXmMainWindowBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAutoDragModel(XtEnum value) const
+    auto setAutoDragModel(XtEnum value)
     {
         return this->set("autoDragModel", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setClipWindow(XmDrawingAreaWidget value) const
+    auto setClipWindow(XmDrawingAreaWidget value)
     {
         return this->set("clipWindow", value);
     }
-    auto setCommandWindow(Widget value) const
+    auto setCommandWindow(Widget value)
     {
         return this->set("commandWindow", value);
     }
-    auto setCommandWindowLocation(unsigned char value) const
+    auto setCommandWindowLocation(unsigned char value)
     {
         return this->set("commandWindowLocation", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHorizontalScrollBar(XmScrollBarWidget value) const
+    auto setHorizontalScrollBar(XmScrollBarWidget value)
     {
         return this->set("horizontalScrollBar", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMainWindowMarginHeight(Dimension value) const
+    auto setMainWindowMarginHeight(Dimension value)
     {
         return this->set("mainWindowMarginHeight", value);
     }
-    auto setMainWindowMarginWidth(Dimension value) const
+    auto setMainWindowMarginWidth(Dimension value)
     {
         return this->set("mainWindowMarginWidth", value);
     }
-    auto setMenuBar(Widget value) const
+    auto setMenuBar(Widget value)
     {
         return this->set("menuBar", value);
     }
-    auto setMessageWindow(Widget value) const
+    auto setMessageWindow(Widget value)
     {
         return this->set("messageWindow", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setScrollBarDisplayPolicy(unsigned char value) const
+    auto setScrollBarDisplayPolicy(unsigned char value)
     {
         return this->set("scrollBarDisplayPolicy", value);
     }
-    auto setScrollBarPlacement(unsigned char value) const
+    auto setScrollBarPlacement(unsigned char value)
     {
         return this->set("scrollBarPlacement", value);
     }
-    auto setScrolledWindowMarginHeight(Dimension value) const
+    auto setScrolledWindowMarginHeight(Dimension value)
     {
         return this->set("scrolledWindowMarginHeight", value);
     }
-    auto setScrolledWindowMarginWidth(Dimension value) const
+    auto setScrolledWindowMarginWidth(Dimension value)
     {
         return this->set("scrolledWindowMarginWidth", value);
     }
-    auto setScrollingPolicy(unsigned char value) const
+    auto setScrollingPolicy(unsigned char value)
     {
         return this->set("scrollingPolicy", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowSeparator(Boolean value) const
+    auto setShowSeparator(Boolean value)
     {
         return this->set("showSeparator", value);
     }
-    auto setSpacing(Dimension value) const
+    auto setSpacing(Dimension value)
     {
         return this->set("spacing", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setVerticalScrollBar(XmScrollBarWidget value) const
+    auto setVerticalScrollBar(XmScrollBarWidget value)
     {
         return this->set("verticalScrollBar", value);
     }
-    auto setVisualPolicy(unsigned char value) const
+    auto setVisualPolicy(unsigned char value)
     {
         return this->set("visualPolicy", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setWorkWindow(Widget value) const
+    auto setWorkWindow(Widget value)
     {
         return this->set("workWindow", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -20958,187 +21564,187 @@ public:
     CXmSimpleSpinBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setArrowLayout(unsigned char value) const
+    auto setArrowLayout(unsigned char value)
     {
         return this->set("arrowLayout", value);
     }
-    auto setArrowOrientation(unsigned char value) const
+    auto setArrowOrientation(unsigned char value)
     {
         return this->set("arrowOrientation", value);
     }
-    auto setArrowSensitivity(unsigned char value) const
+    auto setArrowSensitivity(unsigned char value)
     {
         return this->set("arrowSensitivity", value);
     }
-    auto setArrowSize(Dimension value) const
+    auto setArrowSize(Dimension value)
     {
         return this->set("arrowSize", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setColumns(short value) const
+    auto setColumns(short value)
     {
         return this->set("columns", value);
     }
-    auto setDecimalPoints(short value) const
+    auto setDecimalPoints(short value)
     {
         return this->set("decimalPoints", value);
     }
-    auto setDefaultArrowSensitivity(unsigned char value) const
+    auto setDefaultArrowSensitivity(unsigned char value)
     {
         return this->set("defaultArrowSensitivity", value);
     }
-    auto setDetailShadowThickness(Dimension value) const
+    auto setDetailShadowThickness(Dimension value)
     {
         return this->set("detailShadowThickness", value);
     }
-    auto setEditable(Boolean value) const
+    auto setEditable(Boolean value)
     {
         return this->set("editable", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setIncrementValue(int value) const
+    auto setIncrementValue(int value)
     {
         return this->set("incrementValue", value);
     }
-    auto setInitialDelay(unsigned int value) const
+    auto setInitialDelay(unsigned int value)
     {
         return this->set("initialDelay", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMaximumValue(int value) const
+    auto setMaximumValue(int value)
     {
         return this->set("maximumValue", value);
     }
-    auto setMinimumValue(int value) const
+    auto setMinimumValue(int value)
     {
         return this->set("minimumValue", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNumValues(int value) const
+    auto setNumValues(int value)
     {
         return this->set("numValues", value);
     }
-    auto setPosition(int value) const
+    auto setPosition(int value)
     {
         return this->set("position", value);
     }
-    auto setPositionType(unsigned char value) const
+    auto setPositionType(unsigned char value)
     {
         return this->set("positionType", value);
     }
-    auto setRepeatDelay(unsigned int value) const
+    auto setRepeatDelay(unsigned int value)
     {
         return this->set("repeatDelay", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setSpacing(Dimension value) const
+    auto setSpacing(Dimension value)
     {
         return this->set("spacing", value);
     }
-    auto setSpinBoxChildType(unsigned char value) const
+    auto setSpinBoxChildType(unsigned char value)
     {
         return this->set("spinBoxChildType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextField(Widget value) const
+    auto setTextField(Widget value)
     {
         return this->set("textField", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setValues(XmStringTable value) const
+    auto setValues(XmStringTable value)
     {
         return this->set("values", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setWrap(Boolean value) const
+    auto setWrap(Boolean value)
     {
         return this->set("wrap", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -21179,19 +21785,19 @@ public:
     CShellBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setDesktopParent(Widget value) const
+    auto setDesktopParent(Widget value)
     {
         return this->set("desktopParent", value);
     }
-    auto setExtensionType(unsigned char value) const
+    auto setExtensionType(unsigned char value)
     {
         return this->set("extensionType", value);
     }
-    auto setLogicalParent(Widget value) const
+    auto setLogicalParent(Widget value)
     {
         return this->set("logicalParent", value);
     }
-    auto setUseAsyncGeometry(Boolean value) const
+    auto setUseAsyncGeometry(Boolean value)
     {
         return this->set("useAsyncGeometry", value);
     }
@@ -21221,15 +21827,15 @@ public:
     CWorldBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setDesktopParent(Widget value) const
+    auto setDesktopParent(Widget value)
     {
         return this->set("desktopParent", value);
     }
-    auto setExtensionType(unsigned char value) const
+    auto setExtensionType(unsigned char value)
     {
         return this->set("extensionType", value);
     }
-    auto setLogicalParent(Widget value) const
+    auto setLogicalParent(Widget value)
     {
         return this->set("logicalParent", value);
     }
@@ -21303,211 +21909,227 @@ public:
     CXmTearOffButtonBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAccelerator(char* value) const
+    auto setAccelerator(char* value)
     {
         return this->set("accelerator", value);
     }
-    auto setAcceleratorText(_XmString value) const
+    auto setAcceleratorText(_XmString value)
     {
         return this->set("acceleratorText", value);
     }
-    auto setAlignment(unsigned char value) const
+    auto setAcceleratorText(std::unique_ptr<CXmString> value)
+    {
+        return this->set("acceleratorText", std::move(value));
+    }
+    auto setAcceleratorText(const char* value)
+    {
+        return this->set("acceleratorText", std::make_unique<CXmString>(value));
+    }
+    auto setAlignment(unsigned char value)
     {
         return this->set("alignment", value);
     }
-    auto setArmColor(Pixel value) const
+    auto setArmColor(Pixel value)
     {
         return this->set("armColor", value);
     }
-    auto setArmPixmap(Pixmap value) const
+    auto setArmPixmap(Pixmap value)
     {
         return this->set("armPixmap", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setDefaultButtonShadowThickness(Dimension value) const
+    auto setDefaultButtonShadowThickness(Dimension value)
     {
         return this->set("defaultButtonShadowThickness", value);
     }
-    auto setFillOnArm(Boolean value) const
+    auto setFillOnArm(Boolean value)
     {
         return this->set("fillOnArm", value);
     }
-    auto setFontList(XmFontList value) const
+    auto setFontList(XmFontList value)
     {
         return this->set("fontList", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightOnEnter(Boolean value) const
+    auto setHighlightOnEnter(Boolean value)
     {
         return this->set("highlightOnEnter", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHighlightThickness(Dimension value) const
+    auto setHighlightThickness(Dimension value)
     {
         return this->set("highlightThickness", value);
     }
-    auto setLabelInsensitivePixmap(Pixmap value) const
+    auto setLabelInsensitivePixmap(Pixmap value)
     {
         return this->set("labelInsensitivePixmap", value);
     }
-    auto setLabelPixmap(Pixmap value) const
+    auto setLabelPixmap(Pixmap value)
     {
         return this->set("labelPixmap", value);
     }
-    auto setLabelString(_XmString value) const
+    auto setLabelString(_XmString value)
     {
         return this->set("labelString", value);
     }
-    auto setLabelType(unsigned char value) const
+    auto setLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("labelString", std::move(value));
+    }
+    auto setLabelString(const char* value)
+    {
+        return this->set("labelString", std::make_unique<CXmString>(value));
+    }
+    auto setLabelType(unsigned char value)
     {
         return this->set("labelType", value);
     }
-    auto setLayoutDirection(XmDirection value) const
+    auto setLayoutDirection(XmDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setMargin(Dimension value) const
+    auto setMargin(Dimension value)
     {
         return this->set("margin", value);
     }
-    auto setMarginBottom(Dimension value) const
+    auto setMarginBottom(Dimension value)
     {
         return this->set("marginBottom", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginLeft(Dimension value) const
+    auto setMarginLeft(Dimension value)
     {
         return this->set("marginLeft", value);
     }
-    auto setMarginRight(Dimension value) const
+    auto setMarginRight(Dimension value)
     {
         return this->set("marginRight", value);
     }
-    auto setMarginTop(Dimension value) const
+    auto setMarginTop(Dimension value)
     {
         return this->set("marginTop", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMnemonic(KeySym value) const
+    auto setMnemonic(KeySym value)
     {
         return this->set("mnemonic", value);
     }
-    auto setMnemonicCharSet(XmStringCharSet value) const
+    auto setMnemonicCharSet(XmStringCharSet value)
     {
         return this->set("mnemonicCharSet", value);
     }
-    auto setMultiClick(unsigned char value) const
+    auto setMultiClick(unsigned char value)
     {
         return this->set("multiClick", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setPixmapPlacement(XmPixmapPlacement value) const
+    auto setPixmapPlacement(XmPixmapPlacement value)
     {
         return this->set("pixmapPlacement", value);
     }
-    auto setPixmapTextPadding(Dimension value) const
+    auto setPixmapTextPadding(Dimension value)
     {
         return this->set("pixmapTextPadding", value);
     }
-    auto setPri_vate(Boolean value) const
+    auto setPri_vate(Boolean value)
     {
         return this->set("pri.vate", value);
     }
-    auto setRecomputeSize(Boolean value) const
+    auto setRecomputeSize(Boolean value)
     {
         return this->set("recomputeSize", value);
     }
-    auto setRenderTable(XmFontList value) const
+    auto setRenderTable(XmFontList value)
     {
         return this->set("renderTable", value);
     }
-    auto setSeparatorType(unsigned char value) const
+    auto setSeparatorType(unsigned char value)
     {
         return this->set("separatorType", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShowAsDefault(Dimension value) const
+    auto setShowAsDefault(Dimension value)
     {
         return this->set("showAsDefault", value);
     }
-    auto setStringDirection(unsigned char value) const
+    auto setStringDirection(unsigned char value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -21534,6 +22156,14 @@ public:
     {
         XtVaSetValues(this->_widget, "command", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setCommand(std::unique_ptr<CXmString> value)
+    {
+        return setCommand(static_cast<XmString>(*value));
+    }
+    Derived& setCommand(const char* value)
+    {
+        return setCommand(std::make_unique<CXmString>(value));
     }
     XmString getCommand()
     {
@@ -21645,6 +22275,14 @@ public:
         XtVaSetValues(this->_widget, "promptString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setPromptString(std::unique_ptr<CXmString> value)
+    {
+        return setPromptString(static_cast<XmString>(*value));
+    }
+    Derived& setPromptString(const char* value)
+    {
+        return setPromptString(std::make_unique<CXmString>(value));
+    }
     XmString getPromptString()
     {
         XmString value;
@@ -21680,259 +22318,342 @@ public:
     CXmCommandBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setApplyLabelString(XmString value) const
+    auto setApplyLabelString(XmString value)
     {
         return this->set("applyLabelString", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setApplyLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("applyLabelString", std::move(value));
+    }
+    auto setApplyLabelString(const char* value)
+    {
+        return this->set(
+            "applyLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setCancelLabelString(XmString value) const
+    auto setCancelLabelString(XmString value)
     {
         return this->set("cancelLabelString", value);
     }
-    auto setChildPlacement(unsigned char value) const
+    auto setCancelLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("cancelLabelString", std::move(value));
+    }
+    auto setCancelLabelString(const char* value)
+    {
+        return this->set(
+            "cancelLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setChildPlacement(unsigned char value)
     {
         return this->set("childPlacement", value);
     }
-    auto setCommand(XmString value) const
+    auto setCommand(XmString value)
     {
         return this->set("command", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setCommand(std::unique_ptr<CXmString> value)
+    {
+        return this->set("command", std::move(value));
+    }
+    auto setCommand(const char* value)
+    {
+        return this->set("command", std::make_unique<CXmString>(value));
+    }
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setDialogType(unsigned char value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setDialogType(unsigned char value)
     {
         return this->set("dialogType", value);
     }
-    auto setForeground(Pixel value) const
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHelpLabelString(XmString value) const
+    auto setHelpLabelString(XmString value)
     {
         return this->set("helpLabelString", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHelpLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("helpLabelString", std::move(value));
+    }
+    auto setHelpLabelString(const char* value)
+    {
+        return this->set("helpLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setHistoryItemCount(int value) const
+    auto setHistoryItemCount(int value)
     {
         return this->set("historyItemCount", value);
     }
-    auto setHistoryItems(XmString* value) const
+    auto setHistoryItems(XmString* value)
     {
         return this->set("historyItems", value);
     }
-    auto setHistoryMaxItems(int value) const
+    auto setHistoryMaxItems(int value)
     {
         return this->set("historyMaxItems", value);
     }
-    auto setHistoryVisibleItemCount(int value) const
+    auto setHistoryVisibleItemCount(int value)
     {
         return this->set("historyVisibleItemCount", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setListItemCount(int value) const
+    auto setListItemCount(int value)
     {
         return this->set("listItemCount", value);
     }
-    auto setListItems(XmString* value) const
+    auto setListItems(XmString* value)
     {
         return this->set("listItems", value);
     }
-    auto setListLabelString(XmString value) const
+    auto setListLabelString(XmString value)
     {
         return this->set("listLabelString", value);
     }
-    auto setListVisibleItemCount(int value) const
+    auto setListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("listLabelString", std::move(value));
+    }
+    auto setListLabelString(const char* value)
+    {
+        return this->set("listLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setListVisibleItemCount(int value)
     {
         return this->set("listVisibleItemCount", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMinimizeButtons(Boolean value) const
+    auto setMinimizeButtons(Boolean value)
     {
         return this->set("minimizeButtons", value);
     }
-    auto setMustMatch(Boolean value) const
+    auto setMustMatch(Boolean value)
     {
         return this->set("mustMatch", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setOkLabelString(XmString value) const
+    auto setOkLabelString(XmString value)
     {
         return this->set("okLabelString", value);
     }
-    auto setPri_vate(unsigned char value) const
+    auto setOkLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("okLabelString", std::move(value));
+    }
+    auto setOkLabelString(const char* value)
+    {
+        return this->set("okLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setPri_vate(unsigned char value)
     {
         return this->set("pri.vate", value);
     }
-    auto setPromptString(XmString value) const
+    auto setPromptString(XmString value)
     {
         return this->set("promptString", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setPromptString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("promptString", std::move(value));
+    }
+    auto setPromptString(const char* value)
+    {
+        return this->set("promptString", std::make_unique<CXmString>(value));
+    }
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setSelectionLabelString(XmString value) const
+    auto setSelectionLabelString(XmString value)
     {
         return this->set("selectionLabelString", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setSelectionLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("selectionLabelString", std::move(value));
+    }
+    auto setSelectionLabelString(const char* value)
+    {
+        return this->set(
+            "selectionLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextAccelerators(XtAccelerators value) const
+    auto setTextAccelerators(XtAccelerators value)
     {
         return this->set("textAccelerators", value);
     }
-    auto setTextColumns(short value) const
+    auto setTextColumns(short value)
     {
         return this->set("textColumns", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextString(XmString value) const
+    auto setTextString(XmString value)
     {
         return this->set("textString", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("textString", std::move(value));
+    }
+    auto setTextString(const char* value)
+    {
+        return this->set("textString", std::make_unique<CXmString>(value));
+    }
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -21948,6 +22669,14 @@ public:
     {
         XtVaSetValues(this->_widget, "applyLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setApplyLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setApplyLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setApplyLabelString(const char* value)
+    {
+        return setApplyLabelString(std::make_unique<CXmString>(value));
     }
     XmString getApplyLabelString()
     {
@@ -22004,6 +22733,14 @@ public:
         XtVaSetValues(this->_widget, "dirListLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setDirListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setDirListLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setDirListLabelString(const char* value)
+    {
+        return setDirListLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getDirListLabelString()
     {
         XmString value;
@@ -22014,6 +22751,14 @@ public:
     {
         XtVaSetValues(this->_widget, "dirMask", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setDirMask(std::unique_ptr<CXmString> value)
+    {
+        return setDirMask(static_cast<XmString>(*value));
+    }
+    Derived& setDirMask(const char* value)
+    {
+        return setDirMask(std::make_unique<CXmString>(value));
     }
     XmString getDirMask()
     {
@@ -22037,6 +22782,14 @@ public:
         XtVaSetValues(this->_widget, "dirSpec", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setDirSpec(std::unique_ptr<CXmString> value)
+    {
+        return setDirSpec(static_cast<XmString>(*value));
+    }
+    Derived& setDirSpec(const char* value)
+    {
+        return setDirSpec(std::make_unique<CXmString>(value));
+    }
     XmString getDirSpec()
     {
         XmString value;
@@ -22048,6 +22801,14 @@ public:
         XtVaSetValues(this->_widget, "dirTextLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setDirTextLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setDirTextLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setDirTextLabelString(const char* value)
+    {
+        return setDirTextLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getDirTextLabelString()
     {
         XmString value;
@@ -22058,6 +22819,14 @@ public:
     {
         XtVaSetValues(this->_widget, "directory", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setDirectory(std::unique_ptr<CXmString> value)
+    {
+        return setDirectory(static_cast<XmString>(*value));
+    }
+    Derived& setDirectory(const char* value)
+    {
+        return setDirectory(std::make_unique<CXmString>(value));
     }
     XmString getDirectory()
     {
@@ -22114,6 +22883,14 @@ public:
         XtVaSetValues(this->_widget, "fileListLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setFileListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setFileListLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setFileListLabelString(const char* value)
+    {
+        return setFileListLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getFileListLabelString()
     {
         XmString value;
@@ -22147,6 +22924,14 @@ public:
         XtVaSetValues(this->_widget, "filterLabelString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setFilterLabelString(std::unique_ptr<CXmString> value)
+    {
+        return setFilterLabelString(static_cast<XmString>(*value));
+    }
+    Derived& setFilterLabelString(const char* value)
+    {
+        return setFilterLabelString(std::make_unique<CXmString>(value));
+    }
     XmString getFilterLabelString()
     {
         XmString value;
@@ -22169,6 +22954,14 @@ public:
         XtVaSetValues(this->_widget, "noMatchString", value, nullptr);
         return static_cast<Derived&>(*this);
     }
+    Derived& setNoMatchString(std::unique_ptr<CXmString> value)
+    {
+        return setNoMatchString(static_cast<XmString>(*value));
+    }
+    Derived& setNoMatchString(const char* value)
+    {
+        return setNoMatchString(std::make_unique<CXmString>(value));
+    }
     XmString getNoMatchString()
     {
         XmString value;
@@ -22190,6 +22983,14 @@ public:
     {
         XtVaSetValues(this->_widget, "pattern", value, nullptr);
         return static_cast<Derived&>(*this);
+    }
+    Derived& setPattern(std::unique_ptr<CXmString> value)
+    {
+        return setPattern(static_cast<XmString>(*value));
+    }
+    Derived& setPattern(const char* value)
+    {
+        return setPattern(std::make_unique<CXmString>(value));
     }
     XmString getPattern()
     {
@@ -22226,319 +23027,462 @@ public:
     CXmFileSelectionBoxBuilderImpl() = default;
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
-    auto setAllowOverlap(Boolean value) const
+    auto setAllowOverlap(Boolean value)
     {
         return this->set("allowOverlap", value);
     }
-    auto setApplyLabelString(XmString value) const
+    auto setApplyLabelString(XmString value)
     {
         return this->set("applyLabelString", value);
     }
-    auto setAutoUnmanage(Boolean value) const
+    auto setApplyLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("applyLabelString", std::move(value));
+    }
+    auto setApplyLabelString(const char* value)
+    {
+        return this->set(
+            "applyLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setAutoUnmanage(Boolean value)
     {
         return this->set("autoUnmanage", value);
     }
-    auto setBackground(Pixel value) const
+    auto setBackground(Pixel value)
     {
         return this->set("background", value);
     }
-    auto setBackgroundPixmap(Pixmap value) const
+    auto setBackgroundPixmap(Pixmap value)
     {
         return this->set("backgroundPixmap", value);
     }
-    auto setBorderWidth(Dimension value) const
+    auto setBorderWidth(Dimension value)
     {
         return this->set("borderWidth", value);
     }
-    auto setBottomShadowColor(Pixel value) const
+    auto setBottomShadowColor(Pixel value)
     {
         return this->set("bottomShadowColor", value);
     }
-    auto setBottomShadowPixmap(Pixmap value) const
+    auto setBottomShadowPixmap(Pixmap value)
     {
         return this->set("bottomShadowPixmap", value);
     }
-    auto setButtonFontList(XmFontList value) const
+    auto setButtonFontList(XmFontList value)
     {
         return this->set("buttonFontList", value);
     }
-    auto setButtonRenderTable(XmFontList value) const
+    auto setButtonRenderTable(XmFontList value)
     {
         return this->set("buttonRenderTable", value);
     }
-    auto setCancelButton(Widget value) const
+    auto setCancelButton(Widget value)
     {
         return this->set("cancelButton", value);
     }
-    auto setCancelLabelString(XmString value) const
+    auto setCancelLabelString(XmString value)
     {
         return this->set("cancelLabelString", value);
     }
-    auto setChildPlacement(unsigned char value) const
+    auto setCancelLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("cancelLabelString", std::move(value));
+    }
+    auto setCancelLabelString(const char* value)
+    {
+        return this->set(
+            "cancelLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setChildPlacement(unsigned char value)
     {
         return this->set("childPlacement", value);
     }
-    auto setDefaultButton(Widget value) const
+    auto setDefaultButton(Widget value)
     {
         return this->set("defaultButton", value);
     }
-    auto setDefaultPosition(Boolean value) const
+    auto setDefaultPosition(Boolean value)
     {
         return this->set("defaultPosition", value);
     }
-    auto setDialogStyle(unsigned char value) const
+    auto setDialogStyle(unsigned char value)
     {
         return this->set("dialogStyle", value);
     }
-    auto setDialogTitle(XmString value) const
+    auto setDialogTitle(XmString value)
     {
         return this->set("dialogTitle", value);
     }
-    auto setDialogType(unsigned char value) const
+    auto setDialogTitle(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dialogTitle", std::move(value));
+    }
+    auto setDialogTitle(const char* value)
+    {
+        return this->set("dialogTitle", std::make_unique<CXmString>(value));
+    }
+    auto setDialogType(unsigned char value)
     {
         return this->set("dialogType", value);
     }
-    auto setDirListItemCount(int value) const
+    auto setDirListItemCount(int value)
     {
         return this->set("dirListItemCount", value);
     }
-    auto setDirListItems(XmString* value) const
+    auto setDirListItems(XmString* value)
     {
         return this->set("dirListItems", value);
     }
-    auto setDirListLabelString(XmString value) const
+    auto setDirListLabelString(XmString value)
     {
         return this->set("dirListLabelString", value);
     }
-    auto setDirMask(XmString value) const
+    auto setDirListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dirListLabelString", std::move(value));
+    }
+    auto setDirListLabelString(const char* value)
+    {
+        return this->set(
+            "dirListLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setDirMask(XmString value)
     {
         return this->set("dirMask", value);
     }
-    auto setDirSearchProc(XmSearchProc value) const
+    auto setDirMask(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dirMask", std::move(value));
+    }
+    auto setDirMask(const char* value)
+    {
+        return this->set("dirMask", std::make_unique<CXmString>(value));
+    }
+    auto setDirSearchProc(XmSearchProc value)
     {
         return this->set("dirSearchProc", value);
     }
-    auto setDirSpec(XmString value) const
+    auto setDirSpec(XmString value)
     {
         return this->set("dirSpec", value);
     }
-    auto setDirTextLabelString(XmString value) const
+    auto setDirSpec(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dirSpec", std::move(value));
+    }
+    auto setDirSpec(const char* value)
+    {
+        return this->set("dirSpec", std::make_unique<CXmString>(value));
+    }
+    auto setDirTextLabelString(XmString value)
     {
         return this->set("dirTextLabelString", value);
     }
-    auto setDirectory(XmString value) const
+    auto setDirTextLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("dirTextLabelString", std::move(value));
+    }
+    auto setDirTextLabelString(const char* value)
+    {
+        return this->set(
+            "dirTextLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setDirectory(XmString value)
     {
         return this->set("directory", value);
     }
-    auto setDirectoryValid(Boolean value) const
+    auto setDirectory(std::unique_ptr<CXmString> value)
+    {
+        return this->set("directory", std::move(value));
+    }
+    auto setDirectory(const char* value)
+    {
+        return this->set("directory", std::make_unique<CXmString>(value));
+    }
+    auto setDirectoryValid(Boolean value)
     {
         return this->set("directoryValid", value);
     }
-    auto setFileFilterStyle(XtEnum value) const
+    auto setFileFilterStyle(XtEnum value)
     {
         return this->set("fileFilterStyle", value);
     }
-    auto setFileListItemCount(int value) const
+    auto setFileListItemCount(int value)
     {
         return this->set("fileListItemCount", value);
     }
-    auto setFileListItems(XmString* value) const
+    auto setFileListItems(XmString* value)
     {
         return this->set("fileListItems", value);
     }
-    auto setFileListLabelString(XmString value) const
+    auto setFileListLabelString(XmString value)
     {
         return this->set("fileListLabelString", value);
     }
-    auto setFileSearchProc(XmSearchProc value) const
+    auto setFileListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("fileListLabelString", std::move(value));
+    }
+    auto setFileListLabelString(const char* value)
+    {
+        return this->set(
+            "fileListLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setFileSearchProc(XmSearchProc value)
     {
         return this->set("fileSearchProc", value);
     }
-    auto setFileTypeMask(unsigned char value) const
+    auto setFileTypeMask(unsigned char value)
     {
         return this->set("fileTypeMask", value);
     }
-    auto setFilterLabelString(XmString value) const
+    auto setFilterLabelString(XmString value)
     {
         return this->set("filterLabelString", value);
     }
-    auto setForeground(Pixel value) const
+    auto setFilterLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("filterLabelString", std::move(value));
+    }
+    auto setFilterLabelString(const char* value)
+    {
+        return this->set(
+            "filterLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setForeground(Pixel value)
     {
         return this->set("foreground", value);
     }
-    auto setHeight(Dimension value) const
+    auto setHeight(Dimension value)
     {
         return this->set("height", value);
     }
-    auto setHelpLabelString(XmString value) const
+    auto setHelpLabelString(XmString value)
     {
         return this->set("helpLabelString", value);
     }
-    auto setHighlightColor(Pixel value) const
+    auto setHelpLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("helpLabelString", std::move(value));
+    }
+    auto setHelpLabelString(const char* value)
+    {
+        return this->set("helpLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setHighlightColor(Pixel value)
     {
         return this->set("highlightColor", value);
     }
-    auto setHighlightPixmap(Pixmap value) const
+    auto setHighlightPixmap(Pixmap value)
     {
         return this->set("highlightPixmap", value);
     }
-    auto setInitialFocus(Widget value) const
+    auto setInitialFocus(Widget value)
     {
         return this->set("initialFocus", value);
     }
-    auto setLabelFontList(XmFontList value) const
+    auto setLabelFontList(XmFontList value)
     {
         return this->set("labelFontList", value);
     }
-    auto setLabelRenderTable(XmFontList value) const
+    auto setLabelRenderTable(XmFontList value)
     {
         return this->set("labelRenderTable", value);
     }
-    auto setLayoutDirection(XmStringDirection value) const
+    auto setLayoutDirection(XmStringDirection value)
     {
         return this->set("layoutDirection", value);
     }
-    auto setListItemCount(int value) const
+    auto setListItemCount(int value)
     {
         return this->set("listItemCount", value);
     }
-    auto setListItems(XmString* value) const
+    auto setListItems(XmString* value)
     {
         return this->set("listItems", value);
     }
-    auto setListLabelString(XmString value) const
+    auto setListLabelString(XmString value)
     {
         return this->set("listLabelString", value);
     }
-    auto setListUpdated(Boolean value) const
+    auto setListLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("listLabelString", std::move(value));
+    }
+    auto setListLabelString(const char* value)
+    {
+        return this->set("listLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setListUpdated(Boolean value)
     {
         return this->set("listUpdated", value);
     }
-    auto setListVisibleItemCount(int value) const
+    auto setListVisibleItemCount(int value)
     {
         return this->set("listVisibleItemCount", value);
     }
-    auto setMarginHeight(Dimension value) const
+    auto setMarginHeight(Dimension value)
     {
         return this->set("marginHeight", value);
     }
-    auto setMarginWidth(Dimension value) const
+    auto setMarginWidth(Dimension value)
     {
         return this->set("marginWidth", value);
     }
-    auto setMinimizeButtons(Boolean value) const
+    auto setMinimizeButtons(Boolean value)
     {
         return this->set("minimizeButtons", value);
     }
-    auto setMustMatch(Boolean value) const
+    auto setMustMatch(Boolean value)
     {
         return this->set("mustMatch", value);
     }
-    auto setNavigationType(XmNavigationType value) const
+    auto setNavigationType(XmNavigationType value)
     {
         return this->set("navigationType", value);
     }
-    auto setNoMatchString(XmString value) const
+    auto setNoMatchString(XmString value)
     {
         return this->set("noMatchString", value);
     }
-    auto setNoResize(Boolean value) const
+    auto setNoMatchString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("noMatchString", std::move(value));
+    }
+    auto setNoMatchString(const char* value)
+    {
+        return this->set("noMatchString", std::make_unique<CXmString>(value));
+    }
+    auto setNoResize(Boolean value)
     {
         return this->set("noResize", value);
     }
-    auto setOkLabelString(XmString value) const
+    auto setOkLabelString(XmString value)
     {
         return this->set("okLabelString", value);
     }
-    auto setPathMode(XtEnum value) const
+    auto setOkLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("okLabelString", std::move(value));
+    }
+    auto setOkLabelString(const char* value)
+    {
+        return this->set("okLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setPathMode(XtEnum value)
     {
         return this->set("pathMode", value);
     }
-    auto setPattern(XmString value) const
+    auto setPattern(XmString value)
     {
         return this->set("pattern", value);
     }
-    auto setPri_vate(unsigned char value) const
+    auto setPattern(std::unique_ptr<CXmString> value)
+    {
+        return this->set("pattern", std::move(value));
+    }
+    auto setPattern(const char* value)
+    {
+        return this->set("pattern", std::make_unique<CXmString>(value));
+    }
+    auto setPri_vate(unsigned char value)
     {
         return this->set("pri.vate", value);
     }
-    auto setQualifySearchDataProc(XmQualifyProc value) const
+    auto setQualifySearchDataProc(XmQualifyProc value)
     {
         return this->set("qualifySearchDataProc", value);
     }
-    auto setResizePolicy(unsigned char value) const
+    auto setResizePolicy(unsigned char value)
     {
         return this->set("resizePolicy", value);
     }
-    auto setSelectionLabelString(XmString value) const
+    auto setSelectionLabelString(XmString value)
     {
         return this->set("selectionLabelString", value);
     }
-    auto setShadowThickness(Dimension value) const
+    auto setSelectionLabelString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("selectionLabelString", std::move(value));
+    }
+    auto setSelectionLabelString(const char* value)
+    {
+        return this->set(
+            "selectionLabelString", std::make_unique<CXmString>(value));
+    }
+    auto setShadowThickness(Dimension value)
     {
         return this->set("shadowThickness", value);
     }
-    auto setShadowType(unsigned char value) const
+    auto setShadowType(unsigned char value)
     {
         return this->set("shadowType", value);
     }
-    auto setStringDirection(XmStringDirection value) const
+    auto setStringDirection(XmStringDirection value)
     {
         return this->set("stringDirection", value);
     }
-    auto setTextAccelerators(XtAccelerators value) const
+    auto setTextAccelerators(XtAccelerators value)
     {
         return this->set("textAccelerators", value);
     }
-    auto setTextColumns(short value) const
+    auto setTextColumns(short value)
     {
         return this->set("textColumns", value);
     }
-    auto setTextFontList(XmFontList value) const
+    auto setTextFontList(XmFontList value)
     {
         return this->set("textFontList", value);
     }
-    auto setTextRenderTable(XmFontList value) const
+    auto setTextRenderTable(XmFontList value)
     {
         return this->set("textRenderTable", value);
     }
-    auto setTextString(XmString value) const
+    auto setTextString(XmString value)
     {
         return this->set("textString", value);
     }
-    auto setTextTranslations(XtTranslations value) const
+    auto setTextString(std::unique_ptr<CXmString> value)
+    {
+        return this->set("textString", std::move(value));
+    }
+    auto setTextString(const char* value)
+    {
+        return this->set("textString", std::make_unique<CXmString>(value));
+    }
+    auto setTextTranslations(XtTranslations value)
     {
         return this->set("textTranslations", value);
     }
-    auto setTopShadowColor(Pixel value) const
+    auto setTopShadowColor(Pixel value)
     {
         return this->set("topShadowColor", value);
     }
-    auto setTopShadowPixmap(Pixmap value) const
+    auto setTopShadowPixmap(Pixmap value)
     {
         return this->set("topShadowPixmap", value);
     }
-    auto setTraversalOn(Boolean value) const
+    auto setTraversalOn(Boolean value)
     {
         return this->set("traversalOn", value);
     }
-    auto setUnitType(unsigned char value) const
+    auto setUnitType(unsigned char value)
     {
         return this->set("unitType", value);
     }
-    auto setUserData(XtPointer value) const
+    auto setUserData(XtPointer value)
     {
         return this->set("userData", value);
     }
-    auto setWidth(Dimension value) const
+    auto setWidth(Dimension value)
     {
         return this->set("width", value);
     }
-    auto setX(Position value) const
+    auto setX(Position value)
     {
         return this->set("x", value);
     }
-    auto setY(Position value) const
+    auto setY(Position value)
     {
         return this->set("y", value);
     }
@@ -22577,7 +23521,9 @@ public:
     {
     }
 
-    CXmDialogShellBuilder(const CXmDialogShellBuilder& other):
+    CXmDialogShellBuilder(const CXmDialogShellBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmDialogShellBuilderImpl<CXmDialogShellBuilder,
             CXmDialogShell,
             Parent,
@@ -22597,7 +23543,9 @@ public:
     {
     }
 
-    CXmDialogShellBuilder& operator=(const CXmDialogShellBuilder&) = default;
+    CXmDialogShellBuilder& operator=(const CXmDialogShellBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmDialogShellBuilder& operator=(CXmDialogShellBuilder&&) = default;
 
     CXmDialogShell build()
@@ -22650,7 +23598,9 @@ public:
     {
     }
 
-    CXmMenuShellBuilder(const CXmMenuShellBuilder& other):
+    CXmMenuShellBuilder(const CXmMenuShellBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMenuShellBuilderImpl<CXmMenuShellBuilder,
             CXmMenuShell,
             Parent,
@@ -22670,7 +23620,9 @@ public:
     {
     }
 
-    CXmMenuShellBuilder& operator=(const CXmMenuShellBuilder&) = default;
+    CXmMenuShellBuilder& operator=(const CXmMenuShellBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmMenuShellBuilder& operator=(CXmMenuShellBuilder&&) = default;
 
     CXmMenuShell build()
@@ -22722,7 +23674,9 @@ public:
     {
     }
 
-    CXmGrabShellBuilder(const CXmGrabShellBuilder& other):
+    CXmGrabShellBuilder(const CXmGrabShellBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmGrabShellBuilderImpl<CXmGrabShellBuilder,
             CXmGrabShell,
             Parent,
@@ -22742,7 +23696,9 @@ public:
     {
     }
 
-    CXmGrabShellBuilder& operator=(const CXmGrabShellBuilder&) = default;
+    CXmGrabShellBuilder& operator=(const CXmGrabShellBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmGrabShellBuilder& operator=(CXmGrabShellBuilder&&) = default;
 
     CXmGrabShell build()
@@ -22794,7 +23750,9 @@ public:
     {
     }
 
-    CXmArrowButtonGadgetBuilder(const CXmArrowButtonGadgetBuilder& other):
+    CXmArrowButtonGadgetBuilder(const CXmArrowButtonGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmArrowButtonGadgetBuilderImpl<CXmArrowButtonGadgetBuilder,
             CXmArrowButtonGadget,
             Parent,
@@ -22814,8 +23772,9 @@ public:
     {
     }
 
-    CXmArrowButtonGadgetBuilder& operator=(
-        const CXmArrowButtonGadgetBuilder&) = default;
+    CXmArrowButtonGadgetBuilder& operator=(const CXmArrowButtonGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmArrowButtonGadgetBuilder& operator=(
         CXmArrowButtonGadgetBuilder&&) = default;
 
@@ -22869,7 +23828,9 @@ public:
     {
     }
 
-    CXmIconGadgetBuilder(const CXmIconGadgetBuilder& other):
+    CXmIconGadgetBuilder(const CXmIconGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmIconGadgetBuilderImpl<CXmIconGadgetBuilder,
             CXmIconGadget,
             Parent,
@@ -22889,7 +23850,9 @@ public:
     {
     }
 
-    CXmIconGadgetBuilder& operator=(const CXmIconGadgetBuilder&) = default;
+    CXmIconGadgetBuilder& operator=(const CXmIconGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmIconGadgetBuilder& operator=(CXmIconGadgetBuilder&&) = default;
 
     CXmIconGadget build()
@@ -22942,7 +23905,9 @@ public:
     {
     }
 
-    CXmLabelGadgetBuilder(const CXmLabelGadgetBuilder& other):
+    CXmLabelGadgetBuilder(const CXmLabelGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmLabelGadgetBuilderImpl<CXmLabelGadgetBuilder,
             CXmLabelGadget,
             Parent,
@@ -22962,7 +23927,9 @@ public:
     {
     }
 
-    CXmLabelGadgetBuilder& operator=(const CXmLabelGadgetBuilder&) = default;
+    CXmLabelGadgetBuilder& operator=(const CXmLabelGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmLabelGadgetBuilder& operator=(CXmLabelGadgetBuilder&&) = default;
 
     CXmLabelGadget build()
@@ -23015,7 +23982,9 @@ public:
     {
     }
 
-    CXmSeparatorGadgetBuilder(const CXmSeparatorGadgetBuilder& other):
+    CXmSeparatorGadgetBuilder(const CXmSeparatorGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSeparatorGadgetBuilderImpl<CXmSeparatorGadgetBuilder,
             CXmSeparatorGadget,
             Parent,
@@ -23035,8 +24004,9 @@ public:
     {
     }
 
-    CXmSeparatorGadgetBuilder& operator=(
-        const CXmSeparatorGadgetBuilder&) = default;
+    CXmSeparatorGadgetBuilder& operator=(const CXmSeparatorGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmSeparatorGadgetBuilder& operator=(CXmSeparatorGadgetBuilder&&) = default;
 
     CXmSeparatorGadget build()
@@ -23089,7 +24059,9 @@ public:
     {
     }
 
-    CXmArrowButtonBuilder(const CXmArrowButtonBuilder& other):
+    CXmArrowButtonBuilder(const CXmArrowButtonBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmArrowButtonBuilderImpl<CXmArrowButtonBuilder,
             CXmArrowButton,
             Parent,
@@ -23109,7 +24081,9 @@ public:
     {
     }
 
-    CXmArrowButtonBuilder& operator=(const CXmArrowButtonBuilder&) = default;
+    CXmArrowButtonBuilder& operator=(const CXmArrowButtonBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmArrowButtonBuilder& operator=(CXmArrowButtonBuilder&&) = default;
 
     CXmArrowButton build()
@@ -23162,7 +24136,9 @@ public:
     {
     }
 
-    CXmIconButtonBuilder(const CXmIconButtonBuilder& other):
+    CXmIconButtonBuilder(const CXmIconButtonBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmIconButtonBuilderImpl<CXmIconButtonBuilder,
             CXmIconButton,
             Parent,
@@ -23182,7 +24158,9 @@ public:
     {
     }
 
-    CXmIconButtonBuilder& operator=(const CXmIconButtonBuilder&) = default;
+    CXmIconButtonBuilder& operator=(const CXmIconButtonBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmIconButtonBuilder& operator=(CXmIconButtonBuilder&&) = default;
 
     CXmIconButton build()
@@ -23228,7 +24206,9 @@ public:
     {
     }
 
-    CXmLabelBuilder(const CXmLabelBuilder& other):
+    CXmLabelBuilder(const CXmLabelBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmLabelBuilderImpl<CXmLabelBuilder, CXmLabel, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmLabelBuilder<Parent, Pairs...>>(
             *this)
@@ -23243,7 +24223,9 @@ public:
     {
     }
 
-    CXmLabelBuilder& operator=(const CXmLabelBuilder&) = default;
+    CXmLabelBuilder& operator=(const CXmLabelBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmLabelBuilder& operator=(CXmLabelBuilder&&) = default;
 
     CXmLabel build()
@@ -23287,7 +24269,9 @@ public:
     {
     }
 
-    CXmListBuilder(const CXmListBuilder& other):
+    CXmListBuilder(const CXmListBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmListBuilderImpl<CXmListBuilder, CXmList, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmListBuilder<Parent, Pairs...>>(
             *this)
@@ -23302,7 +24286,9 @@ public:
     {
     }
 
-    CXmListBuilder& operator=(const CXmListBuilder&) = default;
+    CXmListBuilder& operator=(const CXmListBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmListBuilder& operator=(CXmListBuilder&&) = default;
 
     CXmList build()
@@ -23350,7 +24336,9 @@ public:
     {
     }
 
-    CXmScrolledListBuilder(const CXmScrolledListBuilder& other):
+    CXmScrolledListBuilder(const CXmScrolledListBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmListBuilderImpl<CXmScrolledListBuilder, CXmList, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -23366,7 +24354,9 @@ public:
     {
     }
 
-    CXmScrolledListBuilder& operator=(const CXmScrolledListBuilder&) = default;
+    CXmScrolledListBuilder& operator=(const CXmScrolledListBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmScrolledListBuilder& operator=(CXmScrolledListBuilder&&) = default;
 
     CXmList build()
@@ -23419,7 +24409,9 @@ public:
     {
     }
 
-    CXmScrollBarBuilder(const CXmScrollBarBuilder& other):
+    CXmScrollBarBuilder(const CXmScrollBarBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmScrollBarBuilderImpl<CXmScrollBarBuilder,
             CXmScrollBar,
             Parent,
@@ -23439,7 +24431,9 @@ public:
     {
     }
 
-    CXmScrollBarBuilder& operator=(const CXmScrollBarBuilder&) = default;
+    CXmScrollBarBuilder& operator=(const CXmScrollBarBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmScrollBarBuilder& operator=(CXmScrollBarBuilder&&) = default;
 
     CXmScrollBar build()
@@ -23491,7 +24485,9 @@ public:
     {
     }
 
-    CXmSeparatorBuilder(const CXmSeparatorBuilder& other):
+    CXmSeparatorBuilder(const CXmSeparatorBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSeparatorBuilderImpl<CXmSeparatorBuilder,
             CXmSeparator,
             Parent,
@@ -23511,7 +24507,9 @@ public:
     {
     }
 
-    CXmSeparatorBuilder& operator=(const CXmSeparatorBuilder&) = default;
+    CXmSeparatorBuilder& operator=(const CXmSeparatorBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmSeparatorBuilder& operator=(CXmSeparatorBuilder&&) = default;
 
     CXmSeparator build()
@@ -23555,7 +24553,9 @@ public:
     {
     }
 
-    CXmTextBuilder(const CXmTextBuilder& other):
+    CXmTextBuilder(const CXmTextBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmTextBuilderImpl<CXmTextBuilder, CXmText, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmTextBuilder<Parent, Pairs...>>(
             *this)
@@ -23570,7 +24570,9 @@ public:
     {
     }
 
-    CXmTextBuilder& operator=(const CXmTextBuilder&) = default;
+    CXmTextBuilder& operator=(const CXmTextBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmTextBuilder& operator=(CXmTextBuilder&&) = default;
 
     CXmText build()
@@ -23618,7 +24620,9 @@ public:
     {
     }
 
-    CXmScrolledTextBuilder(const CXmScrolledTextBuilder& other):
+    CXmScrolledTextBuilder(const CXmScrolledTextBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmTextBuilderImpl<CXmScrolledTextBuilder, CXmText, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -23634,7 +24638,9 @@ public:
     {
     }
 
-    CXmScrolledTextBuilder& operator=(const CXmScrolledTextBuilder&) = default;
+    CXmScrolledTextBuilder& operator=(const CXmScrolledTextBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmScrolledTextBuilder& operator=(CXmScrolledTextBuilder&&) = default;
 
     CXmText build()
@@ -23687,7 +24693,9 @@ public:
     {
     }
 
-    CXmBulletinBoardBuilder(const CXmBulletinBoardBuilder& other):
+    CXmBulletinBoardBuilder(const CXmBulletinBoardBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmBulletinBoardBuilderImpl<CXmBulletinBoardBuilder,
             CXmBulletinBoard,
             Parent,
@@ -23707,8 +24715,9 @@ public:
     {
     }
 
-    CXmBulletinBoardBuilder& operator=(
-        const CXmBulletinBoardBuilder&) = default;
+    CXmBulletinBoardBuilder& operator=(const CXmBulletinBoardBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmBulletinBoardBuilder& operator=(CXmBulletinBoardBuilder&&) = default;
 
     CXmBulletinBoard build()
@@ -23761,7 +24770,9 @@ public:
     {
     }
 
-    CXmBulletinBoardDialogBuilder(const CXmBulletinBoardDialogBuilder& other):
+    CXmBulletinBoardDialogBuilder(const CXmBulletinBoardDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmBulletinBoardBuilderImpl<CXmBulletinBoardDialogBuilder,
             CXmBulletinBoard,
             Parent,
@@ -23782,7 +24793,9 @@ public:
     }
 
     CXmBulletinBoardDialogBuilder& operator=(
-        const CXmBulletinBoardDialogBuilder&) = default;
+        const CXmBulletinBoardDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmBulletinBoardDialogBuilder& operator=(
         CXmBulletinBoardDialogBuilder&&) = default;
 
@@ -23836,7 +24849,9 @@ public:
     {
     }
 
-    CXmButtonBoxBuilder(const CXmButtonBoxBuilder& other):
+    CXmButtonBoxBuilder(const CXmButtonBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmButtonBoxBuilderImpl<CXmButtonBoxBuilder,
             CXmButtonBox,
             Parent,
@@ -23856,7 +24871,9 @@ public:
     {
     }
 
-    CXmButtonBoxBuilder& operator=(const CXmButtonBoxBuilder&) = default;
+    CXmButtonBoxBuilder& operator=(const CXmButtonBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmButtonBoxBuilder& operator=(CXmButtonBoxBuilder&&) = default;
 
     CXmButtonBox build()
@@ -23908,7 +24925,9 @@ public:
     {
     }
 
-    CXmColorSelectorBuilder(const CXmColorSelectorBuilder& other):
+    CXmColorSelectorBuilder(const CXmColorSelectorBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmColorSelectorBuilderImpl<CXmColorSelectorBuilder,
             CXmColorSelector,
             Parent,
@@ -23928,8 +24947,9 @@ public:
     {
     }
 
-    CXmColorSelectorBuilder& operator=(
-        const CXmColorSelectorBuilder&) = default;
+    CXmColorSelectorBuilder& operator=(const CXmColorSelectorBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmColorSelectorBuilder& operator=(CXmColorSelectorBuilder&&) = default;
 
     CXmColorSelector build()
@@ -23982,7 +25002,9 @@ public:
     {
     }
 
-    CXmComboBoxBuilder(const CXmComboBoxBuilder& other):
+    CXmComboBoxBuilder(const CXmComboBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmComboBoxBuilderImpl<CXmComboBoxBuilder,
             CXmComboBox,
             Parent,
@@ -24002,7 +25024,9 @@ public:
     {
     }
 
-    CXmComboBoxBuilder& operator=(const CXmComboBoxBuilder&) = default;
+    CXmComboBoxBuilder& operator=(const CXmComboBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmComboBoxBuilder& operator=(CXmComboBoxBuilder&&) = default;
 
     CXmComboBox build()
@@ -24054,7 +25078,9 @@ public:
     {
     }
 
-    CXmDropDownComboBoxBuilder(const CXmDropDownComboBoxBuilder& other):
+    CXmDropDownComboBoxBuilder(const CXmDropDownComboBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmComboBoxBuilderImpl<CXmDropDownComboBoxBuilder,
             CXmComboBox,
             Parent,
@@ -24074,8 +25100,9 @@ public:
     {
     }
 
-    CXmDropDownComboBoxBuilder& operator=(
-        const CXmDropDownComboBoxBuilder&) = default;
+    CXmDropDownComboBoxBuilder& operator=(const CXmDropDownComboBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmDropDownComboBoxBuilder& operator=(
         CXmDropDownComboBoxBuilder&&) = default;
 
@@ -24129,7 +25156,9 @@ public:
     {
     }
 
-    CXmDropDownListBuilder(const CXmDropDownListBuilder& other):
+    CXmDropDownListBuilder(const CXmDropDownListBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmComboBoxBuilderImpl<CXmDropDownListBuilder,
             CXmComboBox,
             Parent,
@@ -24149,7 +25178,9 @@ public:
     {
     }
 
-    CXmDropDownListBuilder& operator=(const CXmDropDownListBuilder&) = default;
+    CXmDropDownListBuilder& operator=(const CXmDropDownListBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmDropDownListBuilder& operator=(CXmDropDownListBuilder&&) = default;
 
     CXmComboBox build()
@@ -24202,7 +25233,9 @@ public:
     {
     }
 
-    CXmContainerBuilder(const CXmContainerBuilder& other):
+    CXmContainerBuilder(const CXmContainerBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmContainerBuilderImpl<CXmContainerBuilder,
             CXmContainer,
             Parent,
@@ -24222,7 +25255,9 @@ public:
     {
     }
 
-    CXmContainerBuilder& operator=(const CXmContainerBuilder&) = default;
+    CXmContainerBuilder& operator=(const CXmContainerBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmContainerBuilder& operator=(CXmContainerBuilder&&) = default;
 
     CXmContainer build()
@@ -24274,7 +25309,9 @@ public:
     {
     }
 
-    CXmDrawingAreaBuilder(const CXmDrawingAreaBuilder& other):
+    CXmDrawingAreaBuilder(const CXmDrawingAreaBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmDrawingAreaBuilderImpl<CXmDrawingAreaBuilder,
             CXmDrawingArea,
             Parent,
@@ -24294,7 +25331,9 @@ public:
     {
     }
 
-    CXmDrawingAreaBuilder& operator=(const CXmDrawingAreaBuilder&) = default;
+    CXmDrawingAreaBuilder& operator=(const CXmDrawingAreaBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmDrawingAreaBuilder& operator=(CXmDrawingAreaBuilder&&) = default;
 
     CXmDrawingArea build()
@@ -24347,7 +25386,9 @@ public:
     {
     }
 
-    CXmDropDownBuilder(const CXmDropDownBuilder& other):
+    CXmDropDownBuilder(const CXmDropDownBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmDropDownBuilderImpl<CXmDropDownBuilder,
             CXmDropDown,
             Parent,
@@ -24367,7 +25408,9 @@ public:
     {
     }
 
-    CXmDropDownBuilder& operator=(const CXmDropDownBuilder&) = default;
+    CXmDropDownBuilder& operator=(const CXmDropDownBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmDropDownBuilder& operator=(CXmDropDownBuilder&&) = default;
 
     CXmDropDown build()
@@ -24412,7 +25455,9 @@ public:
     {
     }
 
-    CXmFrameBuilder(const CXmFrameBuilder& other):
+    CXmFrameBuilder(const CXmFrameBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmFrameBuilderImpl<CXmFrameBuilder, CXmFrame, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmFrameBuilder<Parent, Pairs...>>(
             *this)
@@ -24427,7 +25472,9 @@ public:
     {
     }
 
-    CXmFrameBuilder& operator=(const CXmFrameBuilder&) = default;
+    CXmFrameBuilder& operator=(const CXmFrameBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmFrameBuilder& operator=(CXmFrameBuilder&&) = default;
 
     CXmFrame build()
@@ -24475,7 +25522,9 @@ public:
     {
     }
 
-    CXmIconBoxBuilder(const CXmIconBoxBuilder& other):
+    CXmIconBoxBuilder(const CXmIconBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmIconBoxBuilderImpl<CXmIconBoxBuilder, CXmIconBox, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -24491,7 +25540,9 @@ public:
     {
     }
 
-    CXmIconBoxBuilder& operator=(const CXmIconBoxBuilder&) = default;
+    CXmIconBoxBuilder& operator=(const CXmIconBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmIconBoxBuilder& operator=(CXmIconBoxBuilder&&) = default;
 
     CXmIconBox build()
@@ -24543,7 +25594,9 @@ public:
     {
     }
 
-    CXmMultiListBuilder(const CXmMultiListBuilder& other):
+    CXmMultiListBuilder(const CXmMultiListBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMultiListBuilderImpl<CXmMultiListBuilder,
             CXmMultiList,
             Parent,
@@ -24563,7 +25616,9 @@ public:
     {
     }
 
-    CXmMultiListBuilder& operator=(const CXmMultiListBuilder&) = default;
+    CXmMultiListBuilder& operator=(const CXmMultiListBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmMultiListBuilder& operator=(CXmMultiListBuilder&&) = default;
 
     CXmMultiList build()
@@ -24615,7 +25670,9 @@ public:
     {
     }
 
-    CXmNotebookBuilder(const CXmNotebookBuilder& other):
+    CXmNotebookBuilder(const CXmNotebookBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmNotebookBuilderImpl<CXmNotebookBuilder,
             CXmNotebook,
             Parent,
@@ -24635,7 +25692,9 @@ public:
     {
     }
 
-    CXmNotebookBuilder& operator=(const CXmNotebookBuilder&) = default;
+    CXmNotebookBuilder& operator=(const CXmNotebookBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmNotebookBuilder& operator=(CXmNotebookBuilder&&) = default;
 
     CXmNotebook build()
@@ -24687,7 +25746,9 @@ public:
     {
     }
 
-    CXmRowColumnBuilder(const CXmRowColumnBuilder& other):
+    CXmRowColumnBuilder(const CXmRowColumnBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmRowColumnBuilder,
             CXmRowColumn,
             Parent,
@@ -24707,7 +25768,9 @@ public:
     {
     }
 
-    CXmRowColumnBuilder& operator=(const CXmRowColumnBuilder&) = default;
+    CXmRowColumnBuilder& operator=(const CXmRowColumnBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmRowColumnBuilder& operator=(CXmRowColumnBuilder&&) = default;
 
     CXmRowColumn build()
@@ -24759,7 +25822,9 @@ public:
     {
     }
 
-    CXmMenuBarBuilder(const CXmMenuBarBuilder& other):
+    CXmMenuBarBuilder(const CXmMenuBarBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmMenuBarBuilder,
             CXmRowColumn,
             Parent,
@@ -24779,7 +25844,9 @@ public:
     {
     }
 
-    CXmMenuBarBuilder& operator=(const CXmMenuBarBuilder&) = default;
+    CXmMenuBarBuilder& operator=(const CXmMenuBarBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmMenuBarBuilder& operator=(CXmMenuBarBuilder&&) = default;
 
     CXmRowColumn build()
@@ -24831,7 +25898,9 @@ public:
     {
     }
 
-    CXmOptionMenuBuilder(const CXmOptionMenuBuilder& other):
+    CXmOptionMenuBuilder(const CXmOptionMenuBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmOptionMenuBuilder,
             CXmRowColumn,
             Parent,
@@ -24851,7 +25920,9 @@ public:
     {
     }
 
-    CXmOptionMenuBuilder& operator=(const CXmOptionMenuBuilder&) = default;
+    CXmOptionMenuBuilder& operator=(const CXmOptionMenuBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmOptionMenuBuilder& operator=(CXmOptionMenuBuilder&&) = default;
 
     CXmRowColumn build()
@@ -24904,7 +25975,9 @@ public:
     {
     }
 
-    CXmPopupMenuBuilder(const CXmPopupMenuBuilder& other):
+    CXmPopupMenuBuilder(const CXmPopupMenuBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmPopupMenuBuilder,
             CXmRowColumn,
             Parent,
@@ -24924,7 +25997,9 @@ public:
     {
     }
 
-    CXmPopupMenuBuilder& operator=(const CXmPopupMenuBuilder&) = default;
+    CXmPopupMenuBuilder& operator=(const CXmPopupMenuBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmPopupMenuBuilder& operator=(CXmPopupMenuBuilder&&) = default;
 
     CXmRowColumn build()
@@ -24976,7 +26051,9 @@ public:
     {
     }
 
-    CXmPulldownMenuBuilder(const CXmPulldownMenuBuilder& other):
+    CXmPulldownMenuBuilder(const CXmPulldownMenuBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmPulldownMenuBuilder,
             CXmRowColumn,
             Parent,
@@ -24996,7 +26073,9 @@ public:
     {
     }
 
-    CXmPulldownMenuBuilder& operator=(const CXmPulldownMenuBuilder&) = default;
+    CXmPulldownMenuBuilder& operator=(const CXmPulldownMenuBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmPulldownMenuBuilder& operator=(CXmPulldownMenuBuilder&&) = default;
 
     CXmRowColumn build()
@@ -25049,7 +26128,9 @@ public:
     {
     }
 
-    CXmRadioBoxBuilder(const CXmRadioBoxBuilder& other):
+    CXmRadioBoxBuilder(const CXmRadioBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmRadioBoxBuilder,
             CXmRowColumn,
             Parent,
@@ -25069,7 +26150,9 @@ public:
     {
     }
 
-    CXmRadioBoxBuilder& operator=(const CXmRadioBoxBuilder&) = default;
+    CXmRadioBoxBuilder& operator=(const CXmRadioBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmRadioBoxBuilder& operator=(CXmRadioBoxBuilder&&) = default;
 
     CXmRowColumn build()
@@ -25121,7 +26204,9 @@ public:
     {
     }
 
-    CXmWorkAreaBuilder(const CXmWorkAreaBuilder& other):
+    CXmWorkAreaBuilder(const CXmWorkAreaBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmRowColumnBuilderImpl<CXmWorkAreaBuilder,
             CXmRowColumn,
             Parent,
@@ -25141,7 +26226,9 @@ public:
     {
     }
 
-    CXmWorkAreaBuilder& operator=(const CXmWorkAreaBuilder&) = default;
+    CXmWorkAreaBuilder& operator=(const CXmWorkAreaBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmWorkAreaBuilder& operator=(CXmWorkAreaBuilder&&) = default;
 
     CXmRowColumn build()
@@ -25186,7 +26273,9 @@ public:
     {
     }
 
-    CXmScaleBuilder(const CXmScaleBuilder& other):
+    CXmScaleBuilder(const CXmScaleBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmScaleBuilderImpl<CXmScaleBuilder, CXmScale, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmScaleBuilder<Parent, Pairs...>>(
             *this)
@@ -25201,7 +26290,9 @@ public:
     {
     }
 
-    CXmScaleBuilder& operator=(const CXmScaleBuilder&) = default;
+    CXmScaleBuilder& operator=(const CXmScaleBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmScaleBuilder& operator=(CXmScaleBuilder&&) = default;
 
     CXmScale build()
@@ -25253,7 +26344,9 @@ public:
     {
     }
 
-    CXmScrolledWindowBuilder(const CXmScrolledWindowBuilder& other):
+    CXmScrolledWindowBuilder(const CXmScrolledWindowBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmScrolledWindowBuilderImpl<CXmScrolledWindowBuilder,
             CXmScrolledWindow,
             Parent,
@@ -25273,8 +26366,9 @@ public:
     {
     }
 
-    CXmScrolledWindowBuilder& operator=(
-        const CXmScrolledWindowBuilder&) = default;
+    CXmScrolledWindowBuilder& operator=(const CXmScrolledWindowBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmScrolledWindowBuilder& operator=(CXmScrolledWindowBuilder&&) = default;
 
     CXmScrolledWindow build()
@@ -25323,7 +26417,9 @@ public:
     {
     }
 
-    CXmSpinBoxBuilder(const CXmSpinBoxBuilder& other):
+    CXmSpinBoxBuilder(const CXmSpinBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSpinBoxBuilderImpl<CXmSpinBoxBuilder, CXmSpinBox, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -25339,7 +26435,9 @@ public:
     {
     }
 
-    CXmSpinBoxBuilder& operator=(const CXmSpinBoxBuilder&) = default;
+    CXmSpinBoxBuilder& operator=(const CXmSpinBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmSpinBoxBuilder& operator=(CXmSpinBoxBuilder&&) = default;
 
     CXmSpinBox build()
@@ -25384,7 +26482,9 @@ public:
     {
     }
 
-    CXmTabBoxBuilder(const CXmTabBoxBuilder& other):
+    CXmTabBoxBuilder(const CXmTabBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmTabBoxBuilderImpl<CXmTabBoxBuilder, CXmTabBox, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<CXmTabBoxBuilder<Parent, Pairs...>>(
@@ -25400,7 +26500,9 @@ public:
     {
     }
 
-    CXmTabBoxBuilder& operator=(const CXmTabBoxBuilder&) = default;
+    CXmTabBoxBuilder& operator=(const CXmTabBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmTabBoxBuilder& operator=(CXmTabBoxBuilder&&) = default;
 
     CXmTabBox build()
@@ -25452,7 +26554,9 @@ public:
     {
     }
 
-    CXmIconHeaderBuilder(const CXmIconHeaderBuilder& other):
+    CXmIconHeaderBuilder(const CXmIconHeaderBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmIconHeaderBuilderImpl<CXmIconHeaderBuilder,
             CXmIconHeader,
             Parent,
@@ -25472,7 +26576,9 @@ public:
     {
     }
 
-    CXmIconHeaderBuilder& operator=(const CXmIconHeaderBuilder&) = default;
+    CXmIconHeaderBuilder& operator=(const CXmIconHeaderBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmIconHeaderBuilder& operator=(CXmIconHeaderBuilder&&) = default;
 
     CXmIconHeader build()
@@ -25525,7 +26631,9 @@ public:
     {
     }
 
-    CXmCascadeButtonGadgetBuilder(const CXmCascadeButtonGadgetBuilder& other):
+    CXmCascadeButtonGadgetBuilder(const CXmCascadeButtonGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmCascadeButtonGadgetBuilderImpl<CXmCascadeButtonGadgetBuilder,
             CXmCascadeButtonGadget,
             Parent,
@@ -25546,7 +26654,9 @@ public:
     }
 
     CXmCascadeButtonGadgetBuilder& operator=(
-        const CXmCascadeButtonGadgetBuilder&) = default;
+        const CXmCascadeButtonGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmCascadeButtonGadgetBuilder& operator=(
         CXmCascadeButtonGadgetBuilder&&) = default;
 
@@ -25600,7 +26710,9 @@ public:
     {
     }
 
-    CXmPushButtonGadgetBuilder(const CXmPushButtonGadgetBuilder& other):
+    CXmPushButtonGadgetBuilder(const CXmPushButtonGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmPushButtonGadgetBuilderImpl<CXmPushButtonGadgetBuilder,
             CXmPushButtonGadget,
             Parent,
@@ -25620,8 +26732,9 @@ public:
     {
     }
 
-    CXmPushButtonGadgetBuilder& operator=(
-        const CXmPushButtonGadgetBuilder&) = default;
+    CXmPushButtonGadgetBuilder& operator=(const CXmPushButtonGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmPushButtonGadgetBuilder& operator=(
         CXmPushButtonGadgetBuilder&&) = default;
 
@@ -25675,7 +26788,9 @@ public:
     {
     }
 
-    CXmToggleButtonGadgetBuilder(const CXmToggleButtonGadgetBuilder& other):
+    CXmToggleButtonGadgetBuilder(const CXmToggleButtonGadgetBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmToggleButtonGadgetBuilderImpl<CXmToggleButtonGadgetBuilder,
             CXmToggleButtonGadget,
             Parent,
@@ -25695,8 +26810,9 @@ public:
     {
     }
 
-    CXmToggleButtonGadgetBuilder& operator=(
-        const CXmToggleButtonGadgetBuilder&) = default;
+    CXmToggleButtonGadgetBuilder& operator=(const CXmToggleButtonGadgetBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmToggleButtonGadgetBuilder& operator=(
         CXmToggleButtonGadgetBuilder&&) = default;
 
@@ -25750,7 +26866,9 @@ public:
     {
     }
 
-    CXmCascadeButtonBuilder(const CXmCascadeButtonBuilder& other):
+    CXmCascadeButtonBuilder(const CXmCascadeButtonBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmCascadeButtonBuilderImpl<CXmCascadeButtonBuilder,
             CXmCascadeButton,
             Parent,
@@ -25770,8 +26888,9 @@ public:
     {
     }
 
-    CXmCascadeButtonBuilder& operator=(
-        const CXmCascadeButtonBuilder&) = default;
+    CXmCascadeButtonBuilder& operator=(const CXmCascadeButtonBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmCascadeButtonBuilder& operator=(CXmCascadeButtonBuilder&&) = default;
 
     CXmCascadeButton build()
@@ -25824,7 +26943,9 @@ public:
     {
     }
 
-    CXmDrawnButtonBuilder(const CXmDrawnButtonBuilder& other):
+    CXmDrawnButtonBuilder(const CXmDrawnButtonBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmDrawnButtonBuilderImpl<CXmDrawnButtonBuilder,
             CXmDrawnButton,
             Parent,
@@ -25844,7 +26965,9 @@ public:
     {
     }
 
-    CXmDrawnButtonBuilder& operator=(const CXmDrawnButtonBuilder&) = default;
+    CXmDrawnButtonBuilder& operator=(const CXmDrawnButtonBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmDrawnButtonBuilder& operator=(CXmDrawnButtonBuilder&&) = default;
 
     CXmDrawnButton build()
@@ -25897,7 +27020,9 @@ public:
     {
     }
 
-    CXmPushButtonBuilder(const CXmPushButtonBuilder& other):
+    CXmPushButtonBuilder(const CXmPushButtonBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmPushButtonBuilderImpl<CXmPushButtonBuilder,
             CXmPushButton,
             Parent,
@@ -25917,7 +27042,9 @@ public:
     {
     }
 
-    CXmPushButtonBuilder& operator=(const CXmPushButtonBuilder&) = default;
+    CXmPushButtonBuilder& operator=(const CXmPushButtonBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmPushButtonBuilder& operator=(CXmPushButtonBuilder&&) = default;
 
     CXmPushButton build()
@@ -25970,7 +27097,9 @@ public:
     {
     }
 
-    CXmToggleButtonBuilder(const CXmToggleButtonBuilder& other):
+    CXmToggleButtonBuilder(const CXmToggleButtonBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmToggleButtonBuilderImpl<CXmToggleButtonBuilder,
             CXmToggleButton,
             Parent,
@@ -25990,7 +27119,9 @@ public:
     {
     }
 
-    CXmToggleButtonBuilder& operator=(const CXmToggleButtonBuilder&) = default;
+    CXmToggleButtonBuilder& operator=(const CXmToggleButtonBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmToggleButtonBuilder& operator=(CXmToggleButtonBuilder&&) = default;
 
     CXmToggleButton build()
@@ -26036,7 +27167,9 @@ public:
     {
     }
 
-    CXmColumnBuilder(const CXmColumnBuilder& other):
+    CXmColumnBuilder(const CXmColumnBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmColumnBuilderImpl<CXmColumnBuilder, CXmColumn, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<CXmColumnBuilder<Parent, Pairs...>>(
@@ -26052,7 +27185,9 @@ public:
     {
     }
 
-    CXmColumnBuilder& operator=(const CXmColumnBuilder&) = default;
+    CXmColumnBuilder& operator=(const CXmColumnBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmColumnBuilder& operator=(CXmColumnBuilder&&) = default;
 
     CXmColumn build()
@@ -26096,7 +27231,9 @@ public:
     {
     }
 
-    CXmFormBuilder(const CXmFormBuilder& other):
+    CXmFormBuilder(const CXmFormBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmFormBuilderImpl<CXmFormBuilder, CXmForm, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmFormBuilder<Parent, Pairs...>>(
             *this)
@@ -26111,7 +27248,9 @@ public:
     {
     }
 
-    CXmFormBuilder& operator=(const CXmFormBuilder&) = default;
+    CXmFormBuilder& operator=(const CXmFormBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmFormBuilder& operator=(CXmFormBuilder&&) = default;
 
     CXmForm build()
@@ -26156,7 +27295,9 @@ public:
     {
     }
 
-    CXmFormDialogBuilder(const CXmFormDialogBuilder& other):
+    CXmFormDialogBuilder(const CXmFormDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmFormBuilderImpl<CXmFormDialogBuilder, CXmForm, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -26172,7 +27313,9 @@ public:
     {
     }
 
-    CXmFormDialogBuilder& operator=(const CXmFormDialogBuilder&) = default;
+    CXmFormDialogBuilder& operator=(const CXmFormDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmFormDialogBuilder& operator=(CXmFormDialogBuilder&&) = default;
 
     CXmForm build()
@@ -26225,7 +27368,9 @@ public:
     {
     }
 
-    CXmMessageBoxBuilder(const CXmMessageBoxBuilder& other):
+    CXmMessageBoxBuilder(const CXmMessageBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmMessageBoxBuilder,
             CXmMessageBox,
             Parent,
@@ -26245,7 +27390,9 @@ public:
     {
     }
 
-    CXmMessageBoxBuilder& operator=(const CXmMessageBoxBuilder&) = default;
+    CXmMessageBoxBuilder& operator=(const CXmMessageBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmMessageBoxBuilder& operator=(CXmMessageBoxBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26298,7 +27445,9 @@ public:
     {
     }
 
-    CXmErrorDialogBuilder(const CXmErrorDialogBuilder& other):
+    CXmErrorDialogBuilder(const CXmErrorDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmErrorDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26318,7 +27467,9 @@ public:
     {
     }
 
-    CXmErrorDialogBuilder& operator=(const CXmErrorDialogBuilder&) = default;
+    CXmErrorDialogBuilder& operator=(const CXmErrorDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmErrorDialogBuilder& operator=(CXmErrorDialogBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26371,7 +27522,9 @@ public:
     {
     }
 
-    CXmInformationDialogBuilder(const CXmInformationDialogBuilder& other):
+    CXmInformationDialogBuilder(const CXmInformationDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmInformationDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26391,8 +27544,9 @@ public:
     {
     }
 
-    CXmInformationDialogBuilder& operator=(
-        const CXmInformationDialogBuilder&) = default;
+    CXmInformationDialogBuilder& operator=(const CXmInformationDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmInformationDialogBuilder& operator=(
         CXmInformationDialogBuilder&&) = default;
 
@@ -26446,7 +27600,9 @@ public:
     {
     }
 
-    CXmMessageDialogBuilder(const CXmMessageDialogBuilder& other):
+    CXmMessageDialogBuilder(const CXmMessageDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmMessageDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26466,8 +27622,9 @@ public:
     {
     }
 
-    CXmMessageDialogBuilder& operator=(
-        const CXmMessageDialogBuilder&) = default;
+    CXmMessageDialogBuilder& operator=(const CXmMessageDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmMessageDialogBuilder& operator=(CXmMessageDialogBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26520,7 +27677,9 @@ public:
     {
     }
 
-    CXmQuestionDialogBuilder(const CXmQuestionDialogBuilder& other):
+    CXmQuestionDialogBuilder(const CXmQuestionDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmQuestionDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26540,8 +27699,9 @@ public:
     {
     }
 
-    CXmQuestionDialogBuilder& operator=(
-        const CXmQuestionDialogBuilder&) = default;
+    CXmQuestionDialogBuilder& operator=(const CXmQuestionDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmQuestionDialogBuilder& operator=(CXmQuestionDialogBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26594,7 +27754,9 @@ public:
     {
     }
 
-    CXmTemplateDialogBuilder(const CXmTemplateDialogBuilder& other):
+    CXmTemplateDialogBuilder(const CXmTemplateDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmTemplateDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26614,8 +27776,9 @@ public:
     {
     }
 
-    CXmTemplateDialogBuilder& operator=(
-        const CXmTemplateDialogBuilder&) = default;
+    CXmTemplateDialogBuilder& operator=(const CXmTemplateDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmTemplateDialogBuilder& operator=(CXmTemplateDialogBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26668,7 +27831,9 @@ public:
     {
     }
 
-    CXmWarningDialogBuilder(const CXmWarningDialogBuilder& other):
+    CXmWarningDialogBuilder(const CXmWarningDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmWarningDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26688,8 +27853,9 @@ public:
     {
     }
 
-    CXmWarningDialogBuilder& operator=(
-        const CXmWarningDialogBuilder&) = default;
+    CXmWarningDialogBuilder& operator=(const CXmWarningDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmWarningDialogBuilder& operator=(CXmWarningDialogBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26742,7 +27908,9 @@ public:
     {
     }
 
-    CXmWorkingDialogBuilder(const CXmWorkingDialogBuilder& other):
+    CXmWorkingDialogBuilder(const CXmWorkingDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMessageBoxBuilderImpl<CXmWorkingDialogBuilder,
             CXmMessageBox,
             Parent,
@@ -26762,8 +27930,9 @@ public:
     {
     }
 
-    CXmWorkingDialogBuilder& operator=(
-        const CXmWorkingDialogBuilder&) = default;
+    CXmWorkingDialogBuilder& operator=(const CXmWorkingDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmWorkingDialogBuilder& operator=(CXmWorkingDialogBuilder&&) = default;
 
     CXmMessageBox build()
@@ -26816,7 +27985,9 @@ public:
     {
     }
 
-    CXmSelectionBoxBuilder(const CXmSelectionBoxBuilder& other):
+    CXmSelectionBoxBuilder(const CXmSelectionBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSelectionBoxBuilderImpl<CXmSelectionBoxBuilder,
             CXmSelectionBox,
             Parent,
@@ -26836,7 +28007,9 @@ public:
     {
     }
 
-    CXmSelectionBoxBuilder& operator=(const CXmSelectionBoxBuilder&) = default;
+    CXmSelectionBoxBuilder& operator=(const CXmSelectionBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmSelectionBoxBuilder& operator=(CXmSelectionBoxBuilder&&) = default;
 
     CXmSelectionBox build()
@@ -26889,7 +28062,9 @@ public:
     {
     }
 
-    CXmPromptDialogBuilder(const CXmPromptDialogBuilder& other):
+    CXmPromptDialogBuilder(const CXmPromptDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSelectionBoxBuilderImpl<CXmPromptDialogBuilder,
             CXmSelectionBox,
             Parent,
@@ -26909,7 +28084,9 @@ public:
     {
     }
 
-    CXmPromptDialogBuilder& operator=(const CXmPromptDialogBuilder&) = default;
+    CXmPromptDialogBuilder& operator=(const CXmPromptDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmPromptDialogBuilder& operator=(CXmPromptDialogBuilder&&) = default;
 
     CXmSelectionBox build()
@@ -26962,7 +28139,9 @@ public:
     {
     }
 
-    CXmSelectionDialogBuilder(const CXmSelectionDialogBuilder& other):
+    CXmSelectionDialogBuilder(const CXmSelectionDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSelectionBoxBuilderImpl<CXmSelectionDialogBuilder,
             CXmSelectionBox,
             Parent,
@@ -26982,8 +28161,9 @@ public:
     {
     }
 
-    CXmSelectionDialogBuilder& operator=(
-        const CXmSelectionDialogBuilder&) = default;
+    CXmSelectionDialogBuilder& operator=(const CXmSelectionDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmSelectionDialogBuilder& operator=(CXmSelectionDialogBuilder&&) = default;
 
     CXmSelectionBox build()
@@ -27036,7 +28216,9 @@ public:
     {
     }
 
-    CXmTabStackBuilder(const CXmTabStackBuilder& other):
+    CXmTabStackBuilder(const CXmTabStackBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmTabStackBuilderImpl<CXmTabStackBuilder,
             CXmTabStack,
             Parent,
@@ -27056,7 +28238,9 @@ public:
     {
     }
 
-    CXmTabStackBuilder& operator=(const CXmTabStackBuilder&) = default;
+    CXmTabStackBuilder& operator=(const CXmTabStackBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmTabStackBuilder& operator=(CXmTabStackBuilder&&) = default;
 
     CXmTabStack build()
@@ -27104,7 +28288,9 @@ public:
     {
     }
 
-    CXmOutlineBuilder(const CXmOutlineBuilder& other):
+    CXmOutlineBuilder(const CXmOutlineBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmOutlineBuilderImpl<CXmOutlineBuilder, CXmOutline, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -27120,7 +28306,9 @@ public:
     {
     }
 
-    CXmOutlineBuilder& operator=(const CXmOutlineBuilder&) = default;
+    CXmOutlineBuilder& operator=(const CXmOutlineBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmOutlineBuilder& operator=(CXmOutlineBuilder&&) = default;
 
     CXmOutline build()
@@ -27164,7 +28352,9 @@ public:
     {
     }
 
-    CXmTreeBuilder(const CXmTreeBuilder& other):
+    CXmTreeBuilder(const CXmTreeBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmTreeBuilderImpl<CXmTreeBuilder, CXmTree, Parent, Pairs...>(other),
         Parent::template ConstraintsBuilder<CXmTreeBuilder<Parent, Pairs...>>(
             *this)
@@ -27179,7 +28369,9 @@ public:
     {
     }
 
-    CXmTreeBuilder& operator=(const CXmTreeBuilder&) = default;
+    CXmTreeBuilder& operator=(const CXmTreeBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmTreeBuilder& operator=(CXmTreeBuilder&&) = default;
 
     CXmTree build()
@@ -27231,7 +28423,9 @@ public:
     {
     }
 
-    CXmMainWindowBuilder(const CXmMainWindowBuilder& other):
+    CXmMainWindowBuilder(const CXmMainWindowBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmMainWindowBuilderImpl<CXmMainWindowBuilder,
             CXmMainWindow,
             Parent,
@@ -27251,7 +28445,9 @@ public:
     {
     }
 
-    CXmMainWindowBuilder& operator=(const CXmMainWindowBuilder&) = default;
+    CXmMainWindowBuilder& operator=(const CXmMainWindowBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmMainWindowBuilder& operator=(CXmMainWindowBuilder&&) = default;
 
     CXmMainWindow build()
@@ -27304,7 +28500,9 @@ public:
     {
     }
 
-    CXmSimpleSpinBoxBuilder(const CXmSimpleSpinBoxBuilder& other):
+    CXmSimpleSpinBoxBuilder(const CXmSimpleSpinBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmSimpleSpinBoxBuilderImpl<CXmSimpleSpinBoxBuilder,
             CXmSimpleSpinBox,
             Parent,
@@ -27324,8 +28522,9 @@ public:
     {
     }
 
-    CXmSimpleSpinBoxBuilder& operator=(
-        const CXmSimpleSpinBoxBuilder&) = default;
+    CXmSimpleSpinBoxBuilder& operator=(const CXmSimpleSpinBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmSimpleSpinBoxBuilder& operator=(CXmSimpleSpinBoxBuilder&&) = default;
 
     CXmSimpleSpinBox build()
@@ -27374,7 +28573,9 @@ public:
     {
     }
 
-    CXmCommandBuilder(const CXmCommandBuilder& other):
+    CXmCommandBuilder(const CXmCommandBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmCommandBuilderImpl<CXmCommandBuilder, CXmCommand, Parent, Pairs...>(
             other),
         Parent::template ConstraintsBuilder<
@@ -27390,7 +28591,9 @@ public:
     {
     }
 
-    CXmCommandBuilder& operator=(const CXmCommandBuilder&) = default;
+    CXmCommandBuilder& operator=(const CXmCommandBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmCommandBuilder& operator=(CXmCommandBuilder&&) = default;
 
     CXmCommand build()
@@ -27442,7 +28645,9 @@ public:
     {
     }
 
-    CXmCommandDialogBuilder(const CXmCommandDialogBuilder& other):
+    CXmCommandDialogBuilder(const CXmCommandDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmCommandBuilderImpl<CXmCommandDialogBuilder,
             CXmCommand,
             Parent,
@@ -27462,8 +28667,9 @@ public:
     {
     }
 
-    CXmCommandDialogBuilder& operator=(
-        const CXmCommandDialogBuilder&) = default;
+    CXmCommandDialogBuilder& operator=(const CXmCommandDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmCommandDialogBuilder& operator=(CXmCommandDialogBuilder&&) = default;
 
     CXmCommand build()
@@ -27516,7 +28722,9 @@ public:
     {
     }
 
-    CXmFileSelectionBoxBuilder(const CXmFileSelectionBoxBuilder& other):
+    CXmFileSelectionBoxBuilder(const CXmFileSelectionBoxBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmFileSelectionBoxBuilderImpl<CXmFileSelectionBoxBuilder,
             CXmFileSelectionBox,
             Parent,
@@ -27536,8 +28744,9 @@ public:
     {
     }
 
-    CXmFileSelectionBoxBuilder& operator=(
-        const CXmFileSelectionBoxBuilder&) = default;
+    CXmFileSelectionBoxBuilder& operator=(const CXmFileSelectionBoxBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmFileSelectionBoxBuilder& operator=(
         CXmFileSelectionBoxBuilder&&) = default;
 
@@ -27591,7 +28800,9 @@ public:
     {
     }
 
-    CXmFileSelectionDialogBuilder(const CXmFileSelectionDialogBuilder& other):
+    CXmFileSelectionDialogBuilder(const CXmFileSelectionDialogBuilder& other)
+        requires(std::is_copy_constructible_v<Pairs> && ...)
+        :
         CXmFileSelectionBoxBuilderImpl<CXmFileSelectionDialogBuilder,
             CXmFileSelectionBox,
             Parent,
@@ -27612,7 +28823,9 @@ public:
     }
 
     CXmFileSelectionDialogBuilder& operator=(
-        const CXmFileSelectionDialogBuilder&) = default;
+        const CXmFileSelectionDialogBuilder&)
+        requires(std::is_copy_assignable_v<Pairs> && ...)
+    = default;
     CXmFileSelectionDialogBuilder& operator=(
         CXmFileSelectionDialogBuilder&&) = default;
 

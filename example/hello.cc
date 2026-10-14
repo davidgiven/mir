@@ -98,12 +98,12 @@ int main(int argc, char* argv[])
             .manageChild();
 
     CXmText text = CXmTextBuilder(layout, "text")
-                    .setLeftAttachment(XmATTACH_FORM)
-                    .setRightAttachment(XmATTACH_FORM)
-                    .setTopAttachment(XmATTACH_WIDGET)
-                    .setTopWidget(button2)
-                    .build()
-                    .manageChild();
+                       .setLeftAttachment(XmATTACH_FORM)
+                       .setRightAttachment(XmATTACH_FORM)
+                       .setTopAttachment(XmATTACH_WIDGET)
+                       .setTopWidget(button2)
+                       .build()
+                       .manageChild();
 
     Colormap colormap = layout.get<Colormap>(XtNcolormap);
     XColor red{
@@ -114,12 +114,28 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    CXmList list = CXmListBuilder(layout, "list")
+                       .setLeftAttachment(XmATTACH_FORM)
+                       .setRightAttachment(XmATTACH_FORM)
+                       .setTopAttachment(XmATTACH_WIDGET)
+                       .setTopWidget(text)
+                       .setHeight(100)
+                       .setSelectionPolicy(XmMULTIPLE_SELECT)
+                       .build()
+                       .addItem("item one", 0)
+                       .addItem("item two", 0)
+                       .addItem("item three", 0)
+                       .addItem("item four", 0)
+                       .addItem("item five", 0)
+                       .addItem("item six", 0)
+                       .manageChild();
+
     CXmDrawingArea drawingArea =
         CXmDrawingAreaBuilder(layout, "drawingArea")
             .setLeftAttachment(XmATTACH_FORM)
             .setRightAttachment(XmATTACH_FORM)
             .setTopAttachment(XmATTACH_WIDGET)
-            .setTopWidget(text)
+            .setTopWidget(list)
             .setBottomAttachment(XmATTACH_FORM)
             .build()
             .addExposeCallback(
@@ -139,8 +155,8 @@ int main(int argc, char* argv[])
                 })
             .manageChild();
 
-    XmMainWindowSetAreas(mainWindow, menubar, NULL, NULL, NULL, layout);
-    XtRealizeWidget(toplevel);
+    mainWindow.setAreas(menubar, NULL, NULL, NULL, layout);
+    toplevel.realize();
 
     static const XSetWindowAttributes attributes{.bit_gravity = ForgetGravity};
     XChangeWindowAttributes(XtDisplay(drawingArea),

@@ -114,11 +114,11 @@ whose names start with its `name` (case-sensitive) and whose first parameter is
 `Widget` (including typedef aliases). Functions are indexed across all loaded
 translation units, including header declarations; each method contains `name`
 with the widget's class-name prefix stripped from the full function symbol.
-Each method also has a `parameters` dictionary keyed by parameter name, with
-`name` and C `type` fields, omitting the leading Widget parameter. Definitions
-are preferred over prototypes for parameter names. Unnamed parameters use
-`arg1`, `arg2`, etc. as keys (adding underscores to avoid collisions) and an empty
-`name`; methods with no remaining parameters have an empty dictionary.
+Each method also has a `parameters` array in C declaration order, with `name`
+and C `type` fields, omitting the leading Widget parameter. Definitions are
+preferred over prototypes for parameter names. Unnamed parameters have an empty
+`name`; methods with no remaining parameters have an empty array. C++ wrappers
+assign unnamed parameters arg1, arg2, etc., adding underscores to avoid collisions.
 Each method's `return_type` contains its signature's C return type, preserving
 typedef names.
 Each widget's `constructors` dictionary contains externally visible `XmCreate*`

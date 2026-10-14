@@ -2,6 +2,7 @@
 #pragma once
 
 #include <functional>
+#include <memory>
 
 template <typename Derived>
 class CVendorShellImpl : public CWidgetImpl<Derived>
@@ -2438,6 +2439,13 @@ public:
         XtVaGetValues(this->_widget, "transferStatus", &value, nullptr);
         return value;
     }
+    Derived& add(XmDropTransferEntry transfers, Cardinal num_transfers)
+    {
+        XmDropTransferAdd(this->_widget, transfers, num_transfers);
+        return static_cast<Derived&>(*this);
+    }
+    Widget start(ArgList args, Cardinal argCount)
+    { return XmDropTransferStart(this->_widget, args, argCount); }
 };
 class CXmDropTransfer : public CXmDropTransferImpl<CXmDropTransfer>
 {
@@ -4686,6 +4694,21 @@ public:
         XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
         return value;
     }
+    Boolean doSearch(String str, Boolean reset)
+    { return XmI18ListDoSearch(this->_widget, str, reset); }
+    XmMultiListRowInfo* findRow(
+        String str, int* found_column, Boolean reset, Boolean do_visual)
+    {
+        return XmI18ListFindRow(
+            this->_widget, str, found_column, reset, do_visual);
+    }
+    XmMultiListRowInfo** getSelectedRows()
+    { return XmI18ListGetSelectedRows(this->_widget); }
+    Derived& toggleRow(short row)
+    {
+        XmI18ListToggleRow(this->_widget, row);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmI18List : public CXmI18ListImpl<CXmI18List>
 {
@@ -5983,6 +6006,273 @@ public:
         XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
         return value;
     }
+    Derived& addItem(XmString item, int pos)
+    {
+        XmListAddItem(this->_widget, item, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItem(const char* item, int pos)
+    {
+        XmListAddItem(
+            this->_widget, static_cast<XmString>(CXmString(item)), pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItem(std::unique_ptr<CXmString> item, int pos)
+    {
+        XmListAddItem(this->_widget, static_cast<XmString>(*item), pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItemUnselected(XmString item, int pos)
+    {
+        XmListAddItemUnselected(this->_widget, item, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItemUnselected(const char* item, int pos)
+    {
+        XmListAddItemUnselected(
+            this->_widget, static_cast<XmString>(CXmString(item)), pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItemUnselected(std::unique_ptr<CXmString> item, int pos)
+    {
+        XmListAddItemUnselected(
+            this->_widget, static_cast<XmString>(*item), pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItems(XmString* items, int item_count, int pos)
+    {
+        XmListAddItems(this->_widget, items, item_count, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItemsUnselected(XmString* items, int item_count, int pos)
+    {
+        XmListAddItemsUnselected(this->_widget, items, item_count, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deleteAllItems()
+    {
+        XmListDeleteAllItems(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deleteItem(XmString item)
+    {
+        XmListDeleteItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deleteItem(const char* item)
+    {
+        XmListDeleteItem(this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deleteItem(std::unique_ptr<CXmString> item)
+    {
+        XmListDeleteItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deleteItems(XmString* items, int item_count)
+    {
+        XmListDeleteItems(this->_widget, items, item_count);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deleteItemsPos(int item_count, int pos)
+    {
+        XmListDeleteItemsPos(this->_widget, item_count, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deletePos(int pos)
+    {
+        XmListDeletePos(this->_widget, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deletePositions(int* position_list, int position_count)
+    {
+        XmListDeletePositions(this->_widget, position_list, position_count);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectAllItems()
+    {
+        XmListDeselectAllItems(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectItem(XmString item)
+    {
+        XmListDeselectItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectItem(const char* item)
+    {
+        XmListDeselectItem(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectItem(std::unique_ptr<CXmString> item)
+    {
+        XmListDeselectItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectPos(int pos)
+    {
+        XmListDeselectPos(this->_widget, pos);
+        return static_cast<Derived&>(*this);
+    }
+    int getKbdItemPos()
+    { return XmListGetKbdItemPos(this->_widget); }
+    Boolean getMatchPos(XmString item, int** pos_list, int* pos_count)
+    { return XmListGetMatchPos(this->_widget, item, pos_list, pos_count); }
+    Boolean getMatchPos(const char* item, int** pos_list, int* pos_count)
+    {
+        return XmListGetMatchPos(this->_widget,
+            static_cast<XmString>(CXmString(item)),
+            pos_list,
+            pos_count);
+    }
+    Boolean getMatchPos(
+        std::unique_ptr<CXmString> item, int** pos_list, int* pos_count)
+    {
+        return XmListGetMatchPos(
+            this->_widget, static_cast<XmString>(*item), pos_list, pos_count);
+    }
+    Boolean getSelectedPos(int** pos_list, int* pos_count)
+    { return XmListGetSelectedPos(this->_widget, pos_list, pos_count); }
+    Boolean itemExists(XmString item)
+    { return XmListItemExists(this->_widget, item); }
+    Boolean itemExists(const char* item)
+    {
+        return XmListItemExists(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+    }
+    Boolean itemExists(std::unique_ptr<CXmString> item)
+    { return XmListItemExists(this->_widget, static_cast<XmString>(*item)); }
+    int itemPos(XmString item)
+    { return XmListItemPos(this->_widget, item); }
+    int itemPos(const char* item)
+    {
+        return XmListItemPos(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+    }
+    int itemPos(std::unique_ptr<CXmString> item)
+    { return XmListItemPos(this->_widget, static_cast<XmString>(*item)); }
+    Boolean posSelected(int pos)
+    { return XmListPosSelected(this->_widget, pos); }
+    Boolean posToBounds(int position,
+        Position* x,
+        Position* y,
+        Dimension* width,
+        Dimension* height)
+    { return XmListPosToBounds(this->_widget, position, x, y, width, height); }
+    Derived& replaceItems(
+        XmString* old_items, int item_count, XmString* new_items)
+    {
+        XmListReplaceItems(this->_widget, old_items, item_count, new_items);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& replaceItemsPos(XmString* new_items, int item_count, int position)
+    {
+        XmListReplaceItemsPos(this->_widget, new_items, item_count, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& replaceItemsPosUnselected(
+        XmString* new_items, int item_count, int position)
+    {
+        XmListReplaceItemsPosUnselected(
+            this->_widget, new_items, item_count, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& replaceItemsUnselected(
+        XmString* old_items, int item_count, XmString* new_items)
+    {
+        XmListReplaceItemsUnselected(
+            this->_widget, old_items, item_count, new_items);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& replacePositions(
+        int* position_list, XmString* item_list, int item_count)
+    {
+        XmListReplacePositions(
+            this->_widget, position_list, item_list, item_count);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItem(XmString item, Boolean notify)
+    {
+        XmListSelectItem(this->_widget, item, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItem(const char* item, Boolean notify)
+    {
+        XmListSelectItem(
+            this->_widget, static_cast<XmString>(CXmString(item)), notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItem(std::unique_ptr<CXmString> item, Boolean notify)
+    {
+        XmListSelectItem(this->_widget, static_cast<XmString>(*item), notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectPos(int pos, Boolean notify)
+    {
+        XmListSelectPos(this->_widget, pos, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setAddMode(Boolean add_mode)
+    {
+        XmListSetAddMode(this->_widget, add_mode);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setBottomItem(XmString item)
+    {
+        XmListSetBottomItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setBottomItem(const char* item)
+    {
+        XmListSetBottomItem(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setBottomItem(std::unique_ptr<CXmString> item)
+    {
+        XmListSetBottomItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setBottomPos(int pos)
+    {
+        XmListSetBottomPos(this->_widget, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setHorizPos(int position)
+    {
+        XmListSetHorizPos(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(XmString item)
+    {
+        XmListSetItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(const char* item)
+    {
+        XmListSetItem(this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(std::unique_ptr<CXmString> item)
+    {
+        XmListSetItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
+    }
+    Boolean setKbdItemPos(int pos)
+    { return XmListSetKbdItemPos(this->_widget, pos); }
+    Derived& setPos(int pos)
+    {
+        XmListSetPos(this->_widget, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& updateSelectedList()
+    {
+        XmListUpdateSelectedList(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    int yToPos(Position y)
+    { return XmListYToPos(this->_widget, y); }
 };
 class CXmList : public CXmListImpl<CXmList>
 {
@@ -6480,6 +6770,27 @@ public:
         XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
         return value;
     }
+    Derived& getValues(
+        int* value, int* slider_size, int* increment, int* page_increment)
+    {
+        XmScrollBarGetValues(
+            this->_widget, value, slider_size, increment, page_increment);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setValues(int value,
+        int slider_size,
+        int increment,
+        int page_increment,
+        Boolean notify)
+    {
+        XmScrollBarSetValues(this->_widget,
+            value,
+            slider_size,
+            increment,
+            page_increment,
+            notify);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmScrollBar : public CXmScrollBarImpl<CXmScrollBar>
 {
@@ -6825,17 +7136,6 @@ public:
         XtVaGetValues(this->_widget, "autoShowCursorPosition", &value, nullptr);
         return value;
     }
-    Derived& setCursorPosition(XmTextPosition value)
-    {
-        XtVaSetValues(this->_widget, "cursorPosition", value, nullptr);
-        return static_cast<Derived&>(*this);
-    }
-    XmTextPosition getCursorPosition()
-    {
-        XmTextPosition value;
-        XtVaGetValues(this->_widget, "cursorPosition", &value, nullptr);
-        return value;
-    }
     Derived& addDestinationCallback(CWidgetImplBase::Callback<void> callback)
     {
         this->template addCallback<void>(
@@ -6862,17 +7162,6 @@ public:
     {
         int value;
         XtVaGetValues(this->_widget, "editMode", &value, nullptr);
-        return value;
-    }
-    Derived& setEditable(Boolean value)
-    {
-        XtVaSetValues(this->_widget, "editable", value, nullptr);
-        return static_cast<Derived&>(*this);
-    }
-    Boolean getEditable()
-    {
-        Boolean value;
-        XtVaGetValues(this->_widget, "editable", &value, nullptr);
         return value;
     }
     Derived& addFocusCallback(
@@ -6980,17 +7269,6 @@ public:
         XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
         return value;
     }
-    Derived& setMaxLength(int value)
-    {
-        XtVaSetValues(this->_widget, "maxLength", value, nullptr);
-        return static_cast<Derived&>(*this);
-    }
-    int getMaxLength()
-    {
-        int value;
-        XtVaGetValues(this->_widget, "maxLength", &value, nullptr);
-        return value;
-    }
     Derived& addModifyVerifyCallback(
         CWidgetImplBase::Callback<XmTextVerifyCallbackStruct> callback)
     {
@@ -7073,23 +7351,6 @@ public:
         XtVaSetValues(this->_widget, "source", value, nullptr);
         return static_cast<Derived&>(*this);
     }
-    XmTextSource getSource()
-    {
-        XmTextSource value;
-        XtVaGetValues(this->_widget, "source", &value, nullptr);
-        return value;
-    }
-    Derived& setTopCharacter(XmTextPosition value)
-    {
-        XtVaSetValues(this->_widget, "topCharacter", value, nullptr);
-        return static_cast<Derived&>(*this);
-    }
-    XmTextPosition getTopCharacter()
-    {
-        XmTextPosition value;
-        XtVaGetValues(this->_widget, "topCharacter", &value, nullptr);
-        return value;
-    }
     Derived& setTotalLines(int value)
     {
         XtVaSetValues(this->_widget, "totalLines", value, nullptr);
@@ -7152,6 +7413,382 @@ public:
         XtVaGetValues(this->_widget, "verifyBell", &value, nullptr);
         return value;
     }
+    Derived& clearSelection(Time clear_time)
+    {
+        XmTextClearSelection(this->_widget, clear_time);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean copy(Time copy_time)
+    { return XmTextCopy(this->_widget, copy_time); }
+    Boolean copyLink(Time copy_time)
+    { return XmTextCopyLink(this->_widget, copy_time); }
+    Boolean cut(Time cut_time)
+    { return XmTextCut(this->_widget, cut_time); }
+    Derived& disableRedisplay()
+    {
+        XmTextDisableRedisplay(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& enableRedisplay()
+    {
+        XmTextEnableRedisplay(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldClearSelection(Time sel_time)
+    {
+        XmTextFieldClearSelection(this->_widget, sel_time);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean fieldCopy(Time clip_time)
+    { return XmTextFieldCopy(this->_widget, clip_time); }
+    Boolean fieldCopyLink(Time clip_time)
+    { return XmTextFieldCopyLink(this->_widget, clip_time); }
+    Boolean fieldCut(Time clip_time)
+    { return XmTextFieldCut(this->_widget, clip_time); }
+    Boolean fieldGetAddMode()
+    { return XmTextFieldGetAddMode(this->_widget); }
+    int fieldGetBaseLine()
+    { return XmTextFieldGetBaseLine(this->_widget); }
+    int fieldGetBaseline()
+    { return XmTextFieldGetBaseline(this->_widget); }
+    XmTextPosition fieldGetCursorPosition()
+    { return XmTextFieldGetCursorPosition(this->_widget); }
+    Boolean fieldGetEditable()
+    { return XmTextFieldGetEditable(this->_widget); }
+    XmTextPosition fieldGetInsertionPosition()
+    { return XmTextFieldGetInsertionPosition(this->_widget); }
+    XmTextPosition fieldGetLastPosition()
+    { return XmTextFieldGetLastPosition(this->_widget); }
+    int fieldGetMaxLength()
+    { return XmTextFieldGetMaxLength(this->_widget); }
+    char* fieldGetSelection()
+    { return XmTextFieldGetSelection(this->_widget); }
+    Boolean fieldGetSelectionPosition(
+        XmTextPosition* left, XmTextPosition* right)
+    { return XmTextFieldGetSelectionPosition(this->_widget, left, right); }
+    XmString fieldGetSelectionString()
+    { return XmTextFieldGetSelectionString(this->_widget); }
+    wchar_t* fieldGetSelectionWcs()
+    { return XmTextFieldGetSelectionWcs(this->_widget); }
+    char* fieldGetString()
+    { return XmTextFieldGetString(this->_widget); }
+    wchar_t* fieldGetStringWcs()
+    { return XmTextFieldGetStringWcs(this->_widget); }
+    int fieldGetSubstring(
+        XmTextPosition start, int num_chars, int buf_size, char* buffer)
+    {
+        return XmTextFieldGetSubstring(
+            this->_widget, start, num_chars, buf_size, buffer);
+    }
+    int fieldGetSubstringWcs(
+        XmTextPosition start, int num_chars, int buf_size, wchar_t* buffer)
+    {
+        return XmTextFieldGetSubstringWcs(
+            this->_widget, start, num_chars, buf_size, buffer);
+    }
+    XmString fieldGetXmString()
+    { return XmTextFieldGetXmString(this->_widget); }
+    Derived& fieldInsert(XmTextPosition position, char* value)
+    {
+        XmTextFieldInsert(this->_widget, position, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldInsertString(XmTextPosition pos, XmString value)
+    {
+        XmTextFieldInsertString(this->_widget, pos, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldInsertString(XmTextPosition pos, const char* value)
+    {
+        XmTextFieldInsertString(
+            this->_widget, pos, static_cast<XmString>(CXmString(value)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldInsertString(
+        XmTextPosition pos, std::unique_ptr<CXmString> value)
+    {
+        XmTextFieldInsertString(
+            this->_widget, pos, static_cast<XmString>(*value));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldInsertWcs(XmTextPosition position, wchar_t* wcstring)
+    {
+        XmTextFieldInsertWcs(this->_widget, position, wcstring);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean fieldPaste()
+    { return XmTextFieldPaste(this->_widget); }
+    Boolean fieldPasteLink()
+    { return XmTextFieldPasteLink(this->_widget); }
+    Boolean fieldPosToXY(XmTextPosition position, Position* x, Position* y)
+    { return XmTextFieldPosToXY(this->_widget, position, x, y); }
+    Boolean fieldRemove()
+    { return XmTextFieldRemove(this->_widget); }
+    Derived& fieldReplace(
+        XmTextPosition from_pos, XmTextPosition to_pos, char* value)
+    {
+        XmTextFieldReplace(this->_widget, from_pos, to_pos, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldReplaceString(
+        XmTextPosition from, XmTextPosition to, XmString value)
+    {
+        XmTextFieldReplaceString(this->_widget, from, to, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldReplaceString(
+        XmTextPosition from, XmTextPosition to, const char* value)
+    {
+        XmTextFieldReplaceString(
+            this->_widget, from, to, static_cast<XmString>(CXmString(value)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldReplaceString(XmTextPosition from,
+        XmTextPosition to,
+        std::unique_ptr<CXmString> value)
+    {
+        XmTextFieldReplaceString(
+            this->_widget, from, to, static_cast<XmString>(*value));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldReplaceWcs(
+        XmTextPosition from_pos, XmTextPosition to_pos, wchar_t* wc_value)
+    {
+        XmTextFieldReplaceWcs(this->_widget, from_pos, to_pos, wc_value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetAddMode(Boolean state)
+    {
+        XmTextFieldSetAddMode(this->_widget, state);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetCursorPosition(XmTextPosition position)
+    {
+        XmTextFieldSetCursorPosition(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetEditable(Boolean editable)
+    {
+        XmTextFieldSetEditable(this->_widget, editable);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetHighlight(
+        XmTextPosition left, XmTextPosition right, XmHighlightMode mode)
+    {
+        XmTextFieldSetHighlight(this->_widget, left, right, mode);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetInsertionPosition(XmTextPosition position)
+    {
+        XmTextFieldSetInsertionPosition(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetMaxLength(int max_length)
+    {
+        XmTextFieldSetMaxLength(this->_widget, max_length);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetSelection(
+        XmTextPosition first, XmTextPosition last, Time sel_time)
+    {
+        XmTextFieldSetSelection(this->_widget, first, last, sel_time);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetString(char* value)
+    {
+        XmTextFieldSetString(this->_widget, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetStringWcs(wchar_t* wc_value)
+    {
+        XmTextFieldSetStringWcs(this->_widget, wc_value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetXmString(XmString value)
+    {
+        XmTextFieldSetXmString(this->_widget, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetXmString(const char* value)
+    {
+        XmTextFieldSetXmString(
+            this->_widget, static_cast<XmString>(CXmString(value)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldSetXmString(std::unique_ptr<CXmString> value)
+    {
+        XmTextFieldSetXmString(this->_widget, static_cast<XmString>(*value));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& fieldShowPosition(XmTextPosition position)
+    {
+        XmTextFieldShowPosition(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    XmString fieldSubstring(XmTextPosition start, size_t length)
+    { return XmTextFieldSubstring(this->_widget, start, length); }
+    XmTextPosition fieldXYToPos(Position x, Position y)
+    { return XmTextFieldXYToPos(this->_widget, x, y); }
+    Boolean findString(XmTextPosition start,
+        char* search_string,
+        XmTextDirection direction,
+        XmTextPosition* position)
+    {
+        return XmTextFindString(
+            this->_widget, start, search_string, direction, position);
+    }
+    Boolean findStringWcs(XmTextPosition start,
+        wchar_t* wc_string,
+        XmTextDirection direction,
+        XmTextPosition* position)
+    {
+        return XmTextFindStringWcs(
+            this->_widget, start, wc_string, direction, position);
+    }
+    Boolean getAddMode()
+    { return XmTextGetAddMode(this->_widget); }
+    int getBaseLine()
+    { return XmTextGetBaseLine(this->_widget); }
+    int getBaseline()
+    { return XmTextGetBaseline(this->_widget); }
+    int getCenterline()
+    { return XmTextGetCenterline(this->_widget); }
+    XmTextPosition getCursorPosition()
+    { return XmTextGetCursorPosition(this->_widget); }
+    Boolean getEditable()
+    { return XmTextGetEditable(this->_widget); }
+    XmTextPosition getInsertionPosition()
+    { return XmTextGetInsertionPosition(this->_widget); }
+    XmTextPosition getLastPosition()
+    { return XmTextGetLastPosition(this->_widget); }
+    int getMaxLength()
+    { return XmTextGetMaxLength(this->_widget); }
+    char* getSelection()
+    { return XmTextGetSelection(this->_widget); }
+    Boolean getSelectionPosition(XmTextPosition* left, XmTextPosition* right)
+    { return XmTextGetSelectionPosition(this->_widget, left, right); }
+    wchar_t* getSelectionWcs()
+    { return XmTextGetSelectionWcs(this->_widget); }
+    XmTextSource getSource()
+    { return XmTextGetSource(this->_widget); }
+    char* getString()
+    { return XmTextGetString(this->_widget); }
+    wchar_t* getStringWcs()
+    { return XmTextGetStringWcs(this->_widget); }
+    int getSubstring(
+        XmTextPosition start, int num_chars, int buf_size, char* buffer)
+    {
+        return XmTextGetSubstring(
+            this->_widget, start, num_chars, buf_size, buffer);
+    }
+    int getSubstringWcs(
+        XmTextPosition start, int num_chars, int buf_size, wchar_t* buffer)
+    {
+        return XmTextGetSubstringWcs(
+            this->_widget, start, num_chars, buf_size, buffer);
+    }
+    XmTextPosition getTopCharacter()
+    { return XmTextGetTopCharacter(this->_widget); }
+    Derived& insert(XmTextPosition position, char* value)
+    {
+        XmTextInsert(this->_widget, position, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& insertWcs(XmTextPosition position, wchar_t* wc_value)
+    {
+        XmTextInsertWcs(this->_widget, position, wc_value);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean paste()
+    { return XmTextPaste(this->_widget); }
+    Boolean pasteLink()
+    { return XmTextPasteLink(this->_widget); }
+    Boolean posToXY(XmTextPosition position, Position* x, Position* y)
+    { return XmTextPosToXY(this->_widget, position, x, y); }
+    Boolean remove()
+    { return XmTextRemove(this->_widget); }
+    Derived& replace(XmTextPosition frompos, XmTextPosition topos, char* value)
+    {
+        XmTextReplace(this->_widget, frompos, topos, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& replaceWcs(
+        XmTextPosition frompos, XmTextPosition topos, wchar_t* value)
+    {
+        XmTextReplaceWcs(this->_widget, frompos, topos, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& scroll(int n)
+    {
+        XmTextScroll(this->_widget, n);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setAddMode(Boolean state)
+    {
+        XmTextSetAddMode(this->_widget, state);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setCursorPosition(XmTextPosition position)
+    {
+        XmTextSetCursorPosition(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setEditable(Boolean editable)
+    {
+        XmTextSetEditable(this->_widget, editable);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setHighlight(
+        XmTextPosition left, XmTextPosition right, XmHighlightMode mode)
+    {
+        XmTextSetHighlight(this->_widget, left, right, mode);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setInsertionPosition(XmTextPosition position)
+    {
+        XmTextSetInsertionPosition(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setMaxLength(int max_length)
+    {
+        XmTextSetMaxLength(this->_widget, max_length);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setSelection(
+        XmTextPosition first, XmTextPosition last, Time set_time)
+    {
+        XmTextSetSelection(this->_widget, first, last, set_time);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setSource(XmTextSource source,
+        XmTextPosition top_character,
+        XmTextPosition cursor_position)
+    {
+        XmTextSetSource(this->_widget, source, top_character, cursor_position);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setString(char* value)
+    {
+        XmTextSetString(this->_widget, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setStringWcs(wchar_t* wc_value)
+    {
+        XmTextSetStringWcs(this->_widget, wc_value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setTopCharacter(XmTextPosition top_character)
+    {
+        XmTextSetTopCharacter(this->_widget, top_character);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& showPosition(XmTextPosition position)
+    {
+        XmTextShowPosition(this->_widget, position);
+        return static_cast<Derived&>(*this);
+    }
+    XmTextPosition xYToPos(Position x, Position y)
+    { return XmTextXYToPos(this->_widget, x, y); }
 };
 class CXmText : public CXmTextImpl<CXmText>
 {
@@ -8258,6 +8895,65 @@ public:
         XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
         return value;
     }
+    Derived& addItem(XmString item, int pos, Boolean unique)
+    {
+        XmComboBoxAddItem(this->_widget, item, pos, unique);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItem(const char* item, int pos, Boolean unique)
+    {
+        XmComboBoxAddItem(
+            this->_widget, static_cast<XmString>(CXmString(item)), pos, unique);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItem(std::unique_ptr<CXmString> item, int pos, Boolean unique)
+    {
+        XmComboBoxAddItem(
+            this->_widget, static_cast<XmString>(*item), pos, unique);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deletePos(int pos)
+    {
+        XmComboBoxDeletePos(this->_widget, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItem(XmString item)
+    {
+        XmComboBoxSelectItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItem(const char* item)
+    {
+        XmComboBoxSelectItem(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItem(std::unique_ptr<CXmString> item)
+    {
+        XmComboBoxSelectItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(XmString item)
+    {
+        XmComboBoxSetItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(const char* item)
+    {
+        XmComboBoxSetItem(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(std::unique_ptr<CXmString> item)
+    {
+        XmComboBoxSetItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& update()
+    {
+        XmComboBoxUpdate(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmComboBox : public CXmComboBoxImpl<CXmComboBox>
 {
@@ -8822,6 +9518,28 @@ public:
         unsigned char value;
         XtVaGetValues(this->_widget, "spatialStyle", &value, nullptr);
         return value;
+    }
+    Boolean copy(Time timestamp)
+    { return XmContainerCopy(this->_widget, timestamp); }
+    Boolean copyLink(Time timestamp)
+    { return XmContainerCopyLink(this->_widget, timestamp); }
+    Boolean cut(Time timestamp)
+    { return XmContainerCut(this->_widget, timestamp); }
+    int getItemChildren(Widget item, WidgetList* item_children)
+    { return XmContainerGetItemChildren(this->_widget, item, item_children); }
+    Boolean paste()
+    { return XmContainerPaste(this->_widget); }
+    Boolean pasteLink()
+    { return XmContainerPasteLink(this->_widget); }
+    Derived& relayout()
+    {
+        XmContainerRelayout(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& reorder(WidgetList cwid_list, int cwid_count)
+    {
+        XmContainerReorder(this->_widget, cwid_list, cwid_count);
+        return static_cast<Derived&>(*this);
     }
 };
 class CXmContainer : public CXmContainerImpl<CXmContainer>
@@ -9434,6 +10152,20 @@ public:
         XtVaGetValues(this->_widget, "visibleItemCount", &value, nullptr);
         return value;
     }
+    Widget getArrow()
+    { return XmDropDownGetArrow(this->_widget); }
+    Widget getChild(int num)
+    { return XmDropDownGetChild(this->_widget, num); }
+    Widget getLabel()
+    { return XmDropDownGetLabel(this->_widget); }
+    Widget getList()
+    { return XmDropDownGetList(this->_widget); }
+    XmString getString()
+    { return XmDropDownGetString(this->_widget); }
+    Widget getText()
+    { return XmDropDownGetText(this->_widget); }
+    String getValue()
+    { return XmDropDownGetValue(this->_widget); }
 };
 class CXmDropDown : public CXmDropDownImpl<CXmDropDown>
 {
@@ -9851,6 +10583,13 @@ public:
         XtVaGetValues(this->_widget, "width", &value, nullptr);
         return value;
     }
+    WidgetList getChildNodes()
+    { return XmHierarchyGetChildNodes(this->_widget); }
+    Derived& openAllAncestors()
+    {
+        XmHierarchyOpenAllAncestors(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmHierarchy : public CXmHierarchyImpl<CXmHierarchy>
 {
@@ -10029,6 +10768,8 @@ public:
         XtVaGetValues(this->_widget, "verticalMargin", &value, nullptr);
         return value;
     }
+    Boolean isCellEmpty(Position x, Position y, Widget ignore)
+    { return XmIconBoxIsCellEmpty(this->_widget, x, y, ignore); }
 };
 class CXmIconBox : public CXmIconBoxImpl<CXmIconBox>
 {
@@ -10322,6 +11063,82 @@ public:
         Dimension value;
         XtVaGetValues(this->_widget, "width", &value, nullptr);
         return value;
+    }
+    Derived& deselectItems(XmString item, int column)
+    {
+        XmMultiListDeselectItems(this->_widget, item, column);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectItems(const char* item, int column)
+    {
+        XmMultiListDeselectItems(
+            this->_widget, static_cast<XmString>(CXmString(item)), column);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectItems(std::unique_ptr<CXmString> item, int column)
+    {
+        XmMultiListDeselectItems(
+            this->_widget, static_cast<XmString>(*item), column);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deselectRow(int row)
+    {
+        XmMultiListDeselectRow(this->_widget, row);
+        return static_cast<Derived&>(*this);
+    }
+    int* getSelectedRowArray(int* num_rows)
+    { return XmMultiListGetSelectedRowArray(this->_widget, num_rows); }
+    XmMultiListRowInfo** getSelectedRows()
+    { return XmMultiListGetSelectedRows(this->_widget); }
+    Derived& makeRowVisible(int row)
+    {
+        XmMultiListMakeRowVisible(this->_widget, row);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectAllItems(Boolean notify)
+    {
+        XmMultiListSelectAllItems(this->_widget, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItems(XmString item, int column, Boolean notify)
+    {
+        XmMultiListSelectItems(this->_widget, item, column, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItems(const char* item, int column, Boolean notify)
+    {
+        XmMultiListSelectItems(this->_widget,
+            static_cast<XmString>(CXmString(item)),
+            column,
+            notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectItems(
+        std::unique_ptr<CXmString> item, int column, Boolean notify)
+    {
+        XmMultiListSelectItems(
+            this->_widget, static_cast<XmString>(*item), column, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& selectRow(int row, Boolean notify)
+    {
+        XmMultiListSelectRow(this->_widget, row, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& toggleRow(short row)
+    {
+        XmMultiListToggleRow(this->_widget, row);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& unselectAllItems()
+    {
+        XmMultiListUnselectAllItems(this->_widget);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& unselectItem(XmMultiListRowInfo* row_info)
+    {
+        XmMultiListUnselectItem(this->_widget, row_info);
+        return static_cast<Derived&>(*this);
     }
 };
 class CXmMultiList : public CXmMultiListImpl<CXmMultiList>
@@ -10633,6 +11450,9 @@ public:
         XtVaGetValues(this->_widget, "pageChangedCallback", &value, nullptr);
         return value;
     }
+    XmNotebookPageStatus getPageInfo(
+        int page_number, XmNotebookPageInfo* page_info)
+    { return XmNotebookGetPageInfo(this->_widget, page_number, page_info); }
 };
 class CXmNotebook : public CXmNotebookImpl<CXmNotebook>
 {
@@ -11712,11 +12532,6 @@ public:
         XtVaGetValues(this->_widget, "titleString", &value, nullptr);
         return value;
     }
-    Derived& setValue(int value)
-    {
-        XtVaSetValues(this->_widget, "value", value, nullptr);
-        return static_cast<Derived&>(*this);
-    }
     int getValue()
     {
         int value;
@@ -11740,6 +12555,32 @@ public:
         XtCallbackList value;
         XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
         return value;
+    }
+    Derived& getValue(int* value)
+    {
+        XmScaleGetValue(this->_widget, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setTicks(int big_every,
+        Cardinal num_med,
+        Cardinal num_small,
+        Dimension size_big,
+        Dimension size_med,
+        Dimension size_small)
+    {
+        XmScaleSetTicks(this->_widget,
+            big_every,
+            num_med,
+            num_small,
+            size_big,
+            size_med,
+            size_small);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setValue(int value)
+    {
+        XmScaleSetValue(this->_widget, value);
+        return static_cast<Derived&>(*this);
     }
 };
 class CXmScale : public CXmScaleImpl<CXmScale>
@@ -12026,6 +12867,11 @@ public:
         XtVaGetValues(this->_widget, "workWindow", &value, nullptr);
         return value;
     }
+    Derived& setAreas(Widget hscroll, Widget vscroll, Widget wregion)
+    {
+        XmScrolledWindowSetAreas(this->_widget, hscroll, vscroll, wregion);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmScrolledWindow : public CXmScrolledWindowImpl<CXmScrolledWindow>
 {
@@ -12287,6 +13133,8 @@ public:
         XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
         return value;
     }
+    int validatePosition(int* position)
+    { return XmSpinBoxValidatePosition(this->_widget, position); }
 };
 class CXmSpinBox : public CXmSpinBoxImpl<CXmSpinBox>
 {
@@ -12730,6 +13578,18 @@ public:
         XtVaGetValues(this->_widget, "useImageCache", &value, nullptr);
         return value;
     }
+    int getIndex(int x, int y)
+    { return XmTabBoxGetIndex(this->_widget, x, y); }
+    int getNumColumns()
+    { return XmTabBoxGetNumColumns(this->_widget); }
+    int getNumRows()
+    { return XmTabBoxGetNumRows(this->_widget); }
+    int getNumTabs()
+    { return XmTabBoxGetNumTabs(this->_widget); }
+    int getTabRow(int idx)
+    { return XmTabBoxGetTabRow(this->_widget, idx); }
+    int xYToIndex(int x, int y)
+    { return XmTabBoxXYToIndex(this->_widget, x, y); }
 };
 class CXmTabBox : public CXmTabBoxImpl<CXmTabBox>
 {
@@ -13131,6 +13991,11 @@ public:
         XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
         return value;
     }
+    Derived& highlight(Boolean highlight)
+    {
+        XmCascadeButtonGadgetHighlight(this->_widget, highlight);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmCascadeButtonGadget :
     public CXmCascadeButtonGadgetImpl<CXmCascadeButtonGadget>
@@ -13505,6 +14370,15 @@ public:
         XtVaGetValues(this->_widget, "valueChangedCallback", &value, nullptr);
         return value;
     }
+    Boolean getState()
+    { return XmToggleButtonGadgetGetState(this->_widget); }
+    Derived& setState(Boolean bnewstate, Boolean notify)
+    {
+        XmToggleButtonGadgetSetState(this->_widget, bnewstate, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean setValue(XmToggleButtonState newstate, Boolean notify)
+    { return XmToggleButtonGadgetSetValue(this->_widget, newstate, notify); }
 };
 class CXmToggleButtonGadget :
     public CXmToggleButtonGadgetImpl<CXmToggleButtonGadget>
@@ -13709,6 +14583,16 @@ public:
         Boolean value;
         XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
         return value;
+    }
+    Derived& gadgetHighlight(Boolean highlight)
+    {
+        XmCascadeButtonGadgetHighlight(this->_widget, highlight);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& highlight(Boolean highlight)
+    {
+        XmCascadeButtonHighlight(this->_widget, highlight);
+        return static_cast<Derived&>(*this);
     }
 };
 class CXmCascadeButton : public CXmCascadeButtonImpl<CXmCascadeButton>
@@ -14670,6 +15554,24 @@ public:
         XtVaGetValues(this->_widget, "visibleWhenOff", &value, nullptr);
         return value;
     }
+    Boolean gadgetGetState()
+    { return XmToggleButtonGadgetGetState(this->_widget); }
+    Derived& gadgetSetState(Boolean bnewstate, Boolean notify)
+    {
+        XmToggleButtonGadgetSetState(this->_widget, bnewstate, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean gadgetSetValue(XmToggleButtonState newstate, Boolean notify)
+    { return XmToggleButtonGadgetSetValue(this->_widget, newstate, notify); }
+    Boolean getState()
+    { return XmToggleButtonGetState(this->_widget); }
+    Derived& setState(Boolean bnewstate, Boolean notify)
+    {
+        XmToggleButtonSetState(this->_widget, bnewstate, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Boolean setValue(XmToggleButtonState newstate, Boolean notify)
+    { return XmToggleButtonSetValue(this->_widget, newstate, notify); }
 };
 class CXmToggleButton : public CXmToggleButtonImpl<CXmToggleButton>
 {
@@ -15515,6 +16417,8 @@ public:
         XtVaGetValues(this->_widget, "symbolPixmap", &value, nullptr);
         return value;
     }
+    Widget getChild(unsigned char child)
+    { return XmMessageBoxGetChild(this->_widget, child); }
 };
 class CXmMessageBox : public CXmMessageBoxImpl<CXmMessageBox>
 {
@@ -15942,6 +16846,8 @@ public:
         XtVaGetValues(this->_widget, "textString", &value, nullptr);
         return value;
     }
+    Widget getChild(unsigned char which)
+    { return XmSelectionBoxGetChild(this->_widget, which); }
 };
 class CXmSelectionBox : public CXmSelectionBoxImpl<CXmSelectionBox>
 {
@@ -16385,6 +17291,17 @@ public:
         XtVaGetValues(this->_widget, "useImageCache", &value, nullptr);
         return value;
     }
+    Widget getSelectedTab()
+    { return XmTabStackGetSelectedTab(this->_widget); }
+    Widget indexToWidget(int idx)
+    { return XmTabStackIndexToWidget(this->_widget, idx); }
+    Derived& selectTab(Boolean notify)
+    {
+        XmTabStackSelectTab(this->_widget, notify);
+        return static_cast<Derived&>(*this);
+    }
+    Widget xYToWidget(int arg1, int arg2)
+    { return XmTabStackXYToWidget(this->_widget, arg1, arg2); }
 };
 class CXmTabStack : public CXmTabStackImpl<CXmTabStack>
 {
@@ -17059,6 +17976,22 @@ public:
         XtVaGetValues(this->_widget, "showSeparator", &value, nullptr);
         return value;
     }
+    Widget sep1()
+    { return XmMainWindowSep1(this->_widget); }
+    Widget sep2()
+    { return XmMainWindowSep2(this->_widget); }
+    Widget sep3()
+    { return XmMainWindowSep3(this->_widget); }
+    Derived& setAreas(Widget menu,
+        Widget command,
+        Widget hscroll,
+        Widget vscroll,
+        Widget wregion)
+    {
+        XmMainWindowSetAreas(
+            this->_widget, menu, command, hscroll, vscroll, wregion);
+        return static_cast<Derived&>(*this);
+    }
 };
 class CXmMainWindow : public CXmMainWindowImpl<CXmMainWindow>
 {
@@ -17331,6 +18264,44 @@ public:
         Boolean value;
         XtVaGetValues(this->_widget, "wrap", &value, nullptr);
         return value;
+    }
+    Derived& addItem(XmString item, int pos)
+    {
+        XmSimpleSpinBoxAddItem(this->_widget, item, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItem(const char* item, int pos)
+    {
+        XmSimpleSpinBoxAddItem(
+            this->_widget, static_cast<XmString>(CXmString(item)), pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& addItem(std::unique_ptr<CXmString> item, int pos)
+    {
+        XmSimpleSpinBoxAddItem(
+            this->_widget, static_cast<XmString>(*item), pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& deletePos(int pos)
+    {
+        XmSimpleSpinBoxDeletePos(this->_widget, pos);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(XmString item)
+    {
+        XmSimpleSpinBoxSetItem(this->_widget, item);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(const char* item)
+    {
+        XmSimpleSpinBoxSetItem(
+            this->_widget, static_cast<XmString>(CXmString(item)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setItem(std::unique_ptr<CXmString> item)
+    {
+        XmSimpleSpinBoxSetItem(this->_widget, static_cast<XmString>(*item));
+        return static_cast<Derived&>(*this);
     }
 };
 class CXmSimpleSpinBox : public CXmSimpleSpinBoxImpl<CXmSimpleSpinBox>
@@ -17863,6 +18834,55 @@ public:
         unsigned char value;
         XtVaGetValues(this->_widget, "resizePolicy", &value, nullptr);
         return value;
+    }
+    Derived& appendValue(XmString value)
+    {
+        XmCommandAppendValue(this->_widget, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& appendValue(const char* value)
+    {
+        XmCommandAppendValue(
+            this->_widget, static_cast<XmString>(CXmString(value)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& appendValue(std::unique_ptr<CXmString> value)
+    {
+        XmCommandAppendValue(this->_widget, static_cast<XmString>(*value));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& error(XmString error)
+    {
+        XmCommandError(this->_widget, error);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& error(const char* error)
+    {
+        XmCommandError(this->_widget, static_cast<XmString>(CXmString(error)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& error(std::unique_ptr<CXmString> error)
+    {
+        XmCommandError(this->_widget, static_cast<XmString>(*error));
+        return static_cast<Derived&>(*this);
+    }
+    Widget getChild(unsigned char child)
+    { return XmCommandGetChild(this->_widget, child); }
+    Derived& setValue(XmString value)
+    {
+        XmCommandSetValue(this->_widget, value);
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setValue(const char* value)
+    {
+        XmCommandSetValue(
+            this->_widget, static_cast<XmString>(CXmString(value)));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setValue(std::unique_ptr<CXmString> value)
+    {
+        XmCommandSetValue(this->_widget, static_cast<XmString>(*value));
+        return static_cast<Derived&>(*this);
     }
 };
 class CXmCommand : public CXmCommandImpl<CXmCommand>
@@ -18461,6 +19481,8 @@ public:
         XtVaGetValues(this->_widget, "qualifySearchDataProc", &value, nullptr);
         return value;
     }
+    Widget getChild(unsigned char which)
+    { return XmFileSelectionBoxGetChild(this->_widget, which); }
 };
 class CXmFileSelectionBox : public CXmFileSelectionBoxImpl<CXmFileSelectionBox>
 {

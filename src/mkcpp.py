@@ -2,6 +2,7 @@
 """Skeleton for generating a C++ Motif header from a mir JSON artifact."""
 
 import argparse
+from itertools import product
 from graphlib import CycleError, TopologicalSorter
 import json
 import re
@@ -39,6 +40,7 @@ def index_widgets(widgets):
                 "parent": superclass["name"] if superclass else None,
                 "resources": widget.get("resources", {}),
                 "constraints": widget.get("constraints", {}),
+                "methods": widget.get("methods", {}),
             },
         )
     return indexed
@@ -80,9 +82,14 @@ def resource_parameter(ctype):
     return parameter, bool(array)
 
 
-def generate_accessors(resources):
+def generate_accessors(resources, methods=None):
     """Emit live-widget setters, getters, and callback registration methods."""
     accessors = []
+    signatures = {
+        (method["name"][:1].lower() + method["name"][1:],
+         tuple("".join(parameter["type"].split()) for parameter in method["parameters"]))
+        for method in (methods or {}).values()
+    }
     for resource_name, resource in sorted(resources.items()):
         method_name = resource_method_name(resource_name)
         if resource.get("rtype") == "Callback":
@@ -95,7 +102,8 @@ def generate_accessors(resources):
         if ctype is None:
             continue
         parameter, is_array = resource_parameter(ctype)
-        accessors.append(f"""    Derived& set{method_name}({parameter}) {{
+        if (f"set{method_name}", ("".join(ctype.split()),)) not in signatures:
+            accessors.append(f"""    Derived& set{method_name}({parameter}) {{
                 XtVaSetValues(this->_widget, {json.dumps(resource_name)}, value, nullptr);
                 return static_cast<Derived&>(*this);
             }}""")
@@ -106,7 +114,7 @@ def generate_accessors(resources):
             Derived& set{method_name}(const char* value) {{
                 return set{method_name}(std::make_unique<CXmString>(value));
             }}""")
-        if not is_array:
+        if not is_array and (f"get{method_name}", ()) not in signatures:
             accessors.append(f"""{ctype} get{method_name}() {{
                     {parameter};
                     XtVaGetValues(this->_widget, {json.dumps(resource_name)}, &value, nullptr);
@@ -115,9 +123,71 @@ def generate_accessors(resources):
     return "\n".join(accessors)
 
 
-def generate_widget_class(name, symbol, parent, resources, constraints=None):
+def method_parameter(ctype, name):
+    """Insert a parameter name into a C type spelling."""
+    pointer = re.search(r"\(\s*\*\s*\)", ctype)
+    if pointer:
+        return ctype[:pointer.start()] + f"(*{name})" + ctype[pointer.end():]
+    array = re.fullmatch(r"(.+?)\s*((?:\[[^\]]*\]\s*)+)", ctype)
+    return f"{array[1]} {name}{array[2]}" if array else f"{ctype} {name}"
+
+
+def named_method_parameters(method):
+    """Keep signature order, assigning collision-free names to unnamed arguments."""
+    reserved = {parameter["name"] for parameter in method["parameters"]
+                if parameter["name"]}
+    parameters = []
+    for position, parameter in enumerate(method["parameters"], 1):
+        name = parameter["name"]
+        if not name:
+            name = f"arg{position}"
+            while name in reserved:
+                name += "_"
+        reserved.add(name)
+        parameters.append((name, parameter))
+    return parameters
+
+
+def generate_methods(methods):
+    """Forward described widget methods to their global C functions."""
+    wrappers = []
+    for symbol, method in sorted(methods.items()):
+        parameters = named_method_parameters(method)
+        name = method["name"][:1].lower() + method["name"][1:]
+        variants = [
+            (parameter["type"], "const char*", "std::unique_ptr<CXmString>")
+            if parameter["type"].strip() in {"XmString", "_XmString"}
+            else (parameter["type"],)
+            for _, parameter in parameters
+        ]
+        for types in product(*variants):
+            declarations = ", ".join(method_parameter(ctype, key)
+                                     for (key, _), ctype in zip(parameters, types))
+            arguments = ["this->_widget"]
+            for (key, parameter), ctype in zip(parameters, types):
+                if parameter["type"].strip() in {"XmString", "_XmString"}:
+                    if ctype == "const char*":
+                        key = f"static_cast<XmString>(CXmString({key}))"
+                    elif ctype == "std::unique_ptr<CXmString>":
+                        key = f"static_cast<XmString>(*{key})"
+                arguments.append(key)
+            call = f"{symbol}({', '.join(arguments)})"
+            return_type = method["return_type"]
+            if return_type.strip() == "void":
+                return_type = "Derived&"
+                body = f"{call};\n                return static_cast<Derived&>(*this);"
+            else:
+                body = f"return {call};"
+            wrappers.append(f"""    {return_type} {name}({declarations}) {{
+                {body}
+            }}""")
+    return "\n".join(wrappers)
+
+
+def generate_widget_class(name, symbol, parent, resources, constraints=None, methods=None):
     superclass = "C" + parent if parent is not None else "CWidget"
-    setters = generate_accessors(resources)
+    setters = generate_accessors(resources, methods)
+    method_wrappers = generate_methods(methods or {})
     constraint_setters = generate_builder_methods(constraints or {}).replace("this->set", "widget->set")
     constraints_class = """template <typename Builder>
                 class ConstraintsBuilder {
@@ -140,6 +210,7 @@ def generate_widget_class(name, symbol, parent, resources, constraints=None):
                 using {superclass}Impl<Derived>::{superclass}Impl;
                 using {superclass}Impl<Derived>::addCallback;
                 {setters}
+                {method_wrappers}
             }};
             class C{name} : public C{name}Impl<C{name}> {{
             public:
@@ -240,7 +311,7 @@ def generate_header(artifact):
         for name, widget in widgets.items()
     }
     ordered_names = list(TopologicalSorter(hierarchy).static_order())
-    blocks = ["// Generated by mkcpp.py.\n#pragma once\n\n#include <functional>"]
+    blocks = ["// Generated by mkcpp.py.\n#pragma once\n\n#include <functional>\n#include <memory>"]
     inherited_resources = {}
     for name in ordered_names:
         widget = widgets[name]
@@ -249,7 +320,7 @@ def generate_header(artifact):
         inherited_resources[name] = resources
         blocks.append(generate_widget_class(
             name, widget["symbol"], widget["parent"], widget["resources"],
-            widget["constraints"]
+            widget["constraints"], widget["methods"]
         ))
         blocks.append(generate_builder_impl(name, resources))
     for name in ordered_names:

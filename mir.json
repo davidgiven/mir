@@ -1762,7 +1762,6 @@
       "name": "XmCascadeButton",
       "resources": {
         "activateCallback": {
-          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1777,7 +1776,6 @@
           "set": true
         },
         "cascadingCallback": {
-          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -4151,6 +4149,14 @@
       },
       "name": "XmFileSelectionBox",
       "resources": {
+        "applyCallback": {
+          "callback_payload": "XmFileSelectionBoxCallbackStruct",
+          "class": "Callback",
+          "ctype": "XtCallbackList",
+          "get": true,
+          "rtype": "Callback",
+          "set": true
+        },
         "applyLabelString": {
           "class": "ApplyLabelString",
           "ctype": "XmString",
@@ -4163,6 +4169,14 @@
           "ctype": "Boolean",
           "get": true,
           "rtype": "Boolean",
+          "set": true
+        },
+        "cancelCallback": {
+          "callback_payload": "XmFileSelectionBoxCallbackStruct",
+          "class": "Callback",
+          "ctype": "XtCallbackList",
+          "get": true,
+          "rtype": "Callback",
           "set": true
         },
         "dialogType": {
@@ -4284,6 +4298,14 @@
           "rtype": "XmString",
           "set": true
         },
+        "helpCallback": {
+          "callback_payload": "XmFileSelectionBoxCallbackStruct",
+          "class": "Callback",
+          "ctype": "XtCallbackList",
+          "get": true,
+          "rtype": "Callback",
+          "set": true
+        },
         "listUpdated": {
           "class": "ListUpdated",
           "ctype": "Boolean",
@@ -4291,11 +4313,27 @@
           "rtype": "Boolean",
           "set": true
         },
+        "noMatchCallback": {
+          "callback_payload": "XmFileSelectionBoxCallbackStruct",
+          "class": "Callback",
+          "ctype": "XtCallbackList",
+          "get": true,
+          "rtype": "Callback",
+          "set": true
+        },
         "noMatchString": {
           "class": "NoMatchString",
           "ctype": "XmString",
           "get": true,
           "rtype": "XmString",
+          "set": true
+        },
+        "okCallback": {
+          "callback_payload": "XmFileSelectionBoxCallbackStruct",
+          "class": "Callback",
+          "ctype": "XtCallbackList",
+          "get": true,
+          "rtype": "Callback",
           "set": true
         },
         "pathMode": {
@@ -6987,6 +7025,14 @@
           "rtype": "DialogType",
           "set": true
         },
+        "helpCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
+          "class": "Callback",
+          "ctype": "XtCallbackList",
+          "get": true,
+          "rtype": "Callback",
+          "set": true
+        },
         "helpLabelString": {
           "class": "XmString",
           "ctype": "XmString",
@@ -9201,6 +9247,7 @@
       "name": "XmSelectionBox",
       "resources": {
         "applyCallback": {
+          "callback_payload": "XmSelectionBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -9215,6 +9262,7 @@
           "set": true
         },
         "cancelCallback": {
+          "callback_payload": "XmSelectionBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -9292,6 +9340,7 @@
           "set": true
         },
         "noMatchCallback": {
+          "callback_payload": "XmSelectionBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -9299,6 +9348,7 @@
           "set": true
         },
         "okCallback": {
+          "callback_payload": "XmSelectionBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,

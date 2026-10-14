@@ -97,7 +97,7 @@ int main(int argc, char* argv[])
                 StructureNotifyMask)
             .manageChild();
 
-    auto text = CXmTextBuilder(layout, "text")
+    CXmText text = CXmTextBuilder(layout, "text")
                     .setLeftAttachment(XmATTACH_FORM)
                     .setRightAttachment(XmATTACH_FORM)
                     .setTopAttachment(XmATTACH_WIDGET)
@@ -128,13 +128,6 @@ int main(int argc, char* argv[])
                     Display* display = data->event->xany.display;
                     Window window = data->window;
 
-                    static const XSetWindowAttributes attributes{
-                        .bit_gravity = ForgetGravity};
-                    XChangeWindowAttributes(display,
-                        window,
-                        CWBitGravity,
-                        (XSetWindowAttributes*)&attributes);
-
                     XClearWindow(display, window);
                     CGC gc = CGCBuilder(display, window)
                                  .setForeground(red.pixel)
@@ -148,6 +141,12 @@ int main(int argc, char* argv[])
 
     XmMainWindowSetAreas(mainWindow, menubar, NULL, NULL, NULL, layout);
     XtRealizeWidget(toplevel);
+
+    static const XSetWindowAttributes attributes{.bit_gravity = ForgetGravity};
+    XChangeWindowAttributes(XtDisplay(drawingArea),
+        XtWindow(drawingArea),
+        CWBitGravity,
+        (XSetWindowAttributes*)&attributes);
 
     XtAppMainLoop(app);
 }

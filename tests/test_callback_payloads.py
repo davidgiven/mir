@@ -19,8 +19,10 @@ typedef void *Widget;
 typedef void *XtPointer;
 typedef void *XtCallbackList;
 typedef struct { int reason; } Payload;
+typedef struct { int reason; char *value; } ChildPayload;
 typedef struct { XtCallbackList callback, opaque, ambiguous, unused; } Part;
 typedef struct { Part part; } Instance;
+typedef struct { Part part; int extra; } ChildInstance;
 typedef struct { XtCallbackList callback; } Other;
 void XtCallCallbackList(Widget, XtCallbackList, XtPointer);
 typedef struct {
@@ -31,6 +33,7 @@ typedef struct CoreClass {
     struct CoreClass *superclass;
     char *class_name;
     Resource *resources;
+    unsigned long widget_size;
 } CoreClass;
 typedef CoreClass *WidgetClass;
 '''
@@ -45,8 +48,12 @@ Resource resources[] = {
     R("unusedCallback", "Callback", unused),
     {"noOffsetCallback", "Callback", "Callback"}
 };
-struct { CoreClass core; } testRec = {{0, "Test", resources}};
+struct { CoreClass core; } testRec = {{0, "Test", resources, sizeof(Instance)}};
 WidgetClass testWidgetClass = &testRec.core;
+struct { CoreClass core; } childRec = {
+    {&testRec.core, "Child", 0, sizeof(ChildInstance)}
+};
+WidgetClass childWidgetClass = &childRec.core;
 '''
         calls = r'''
 #include "shared.h"
@@ -63,6 +70,10 @@ void invoke(Instance *w, Other *other, Payload *pointer, XtPointer opaque) {
     XtCallCallbackList(w, w->part.ambiguous, &value);
     XtCallCallbackList(w, w->part.ambiguous, &different);
 }
+void invokeChild(ChildInstance *child) {
+    ChildPayload value;
+    XtCallCallbackList((Widget)child, child->part.callback, &value);
+}
 '''
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
@@ -75,14 +86,27 @@ void invoke(Instance *w, Other *other, Payload *pointer, XtPointer opaque) {
             artifact = json.loads((path / 'mir.json').read_text())
         entries = artifact['widgets']['testWidgetClass']['resources']
         self.assertEqual(entries['activateCallback']['callback_payload'], 'Payload')
+        child = artifact['widgets']['childWidgetClass']
+        self.assertEqual(child['superclass'], 'testWidgetClass')
+        self.assertEqual(child['resources']['activateCallback'],
+                         {**entries['activateCallback'], 'callback_payload': 'ChildPayload'})
+        self.assertNotIn('ambiguousCallback', child['resources'])
         for name in ('ordinary', 'opaqueCallback', 'ambiguousCallback', 'unusedCallback',
                      'noOffsetCallback'):
             self.assertNotIn('callback_payload', entries[name])
-        for name in ('opaqueCallback', 'ambiguousCallback', 'unusedCallback',
+        for name in ('opaqueCallback', 'unusedCallback',
                      'noOffsetCallback'):
             self.assertIn(f'warning: testWidgetClass.{name}: could not determine '
                           'callback payload type', result.stderr)
-        self.assertEqual(result.stderr.count('could not determine callback payload type'), 4)
+        self.assertEqual(result.stderr.count('could not determine callback payload type'), 3)
+        conflict = next(line for line in result.stderr.splitlines()
+                        if 'warning: testWidgetClass.ambiguousCallback:' in line)
+        self.assertIn('conflicting callback payload types:', conflict)
+        for payload, expression in (('Payload', '&value'), ('int', '&different')):
+            line_number = next(number for number, line in enumerate(calls.splitlines(), 1)
+                               if f'w->part.ambiguous, {expression}' in line)
+            self.assertIn(f"'{payload}' at {path / 'calls.c'}:{line_number}:", conflict)
+        self.assertEqual(result.stderr.count('conflicting callback payload types:'), 1)
         jsonschema.validate(artifact, json.loads(
             (ROOT / 'schema/mir.schema.json').read_text()))
 

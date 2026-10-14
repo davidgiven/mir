@@ -165,6 +165,8 @@ def main(argv=None):
     callback_payloads = find_callback_payloads(translation_units, cindex)
     print("Extracting widget resources", file=sys.stderr, flush=True)
     widgets = {}
+    callback_fields = {}
+    instance_classes = {}
     for widget_class in widget_classes.values():
         class_name = get_class_name(widget_class, cindex, definitions)
         if class_name is not None:
@@ -188,8 +190,13 @@ def main(argv=None):
             if superclass is not None:
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
+            instance_classes[widget_class.spelling] = get_widget_instance_usr(
+                widget_class, cindex, definitions
+            )
+            callback_fields[widget_class.spelling] = {}
             widget["resources"] = dict(
-                get_resources(widget_class, cindex, definitions, callback_payloads)
+                get_resources(widget_class, cindex, definitions, callback_payloads,
+                              callback_fields[widget_class.spelling])
             )
             constraint_fields = get_class_part_fields(
                 widget_class, ("constraint_part", "constraint_class", "constraint"),
@@ -210,6 +217,26 @@ def main(argv=None):
                 for name, method in methods.items()
                 if name.startswith(class_name)
             }
+    # A subclass may use an inherited callback field with its own payload.
+    for symbol, widget in widgets.items():
+        ancestor = widget.get("superclass")
+        seen = {symbol}
+        inherited = {}
+        while ancestor in widgets and ancestor not in seen:
+            seen.add(ancestor)
+            for name, field in callback_fields[ancestor].items():
+                inherited.setdefault(name, (field, widgets[ancestor]["resources"][name]))
+            ancestor = widgets[ancestor].get("superclass")
+        for name, (field, resource) in inherited.items():
+            key = (instance_classes[symbol], field)
+            if name in widget["resources"] or key not in callback_payloads:
+                continue
+            override = dict(resource)
+            override.pop("callback_payload", None)
+            set_callback_payload(override, callback_payloads[key],
+                                 f"{widget.get('sourcefile', symbol)}: warning: {symbol}.{name}")
+            widget["resources"][name] = override
+
     # Some source files include only private headers; read their public header
     # independently when it has not contributed any constructor declarations.
     parsed_headers = set()
@@ -686,7 +713,7 @@ def find_call_expressions(unit, cindex):
 
 
 def find_callback_payloads(translation_units, cindex):
-    """Index callback argument types by the callback-list field's USR."""
+    """Index payloads by the receiver record and callback-list field USRs."""
     payloads = {}
     for number, unit in enumerate(translation_units, 1):
         print(f"Scanning callbacks [{number}/{len(translation_units)}] {unit.spelling}",
@@ -700,6 +727,9 @@ def find_callback_payloads(translation_units, cindex):
                 continue
             field = get_offset_field(arguments[-2], cindex)
             if field is None:
+                continue
+            receiver = get_callback_receiver_usr(arguments[0], arguments[1], cindex)
+            if receiver is None:
                 continue
             payload = arguments[-1]
             # Strip the implicit conversion to XtPointer, and explicit void*
@@ -727,26 +757,88 @@ def find_callback_payloads(translation_units, cindex):
             pointee = payload.type.get_pointee()
             if pointee.kind == cindex.TypeKind.INVALID:
                 pointee = canonical.get_pointee()
-            payloads.setdefault(field.get_usr(), set()).add(pointee.spelling)
-    # Do not arbitrarily choose a type for a field used with different payloads.
-    return {usr: next(iter(types)) for usr, types in payloads.items()
-            if len(types) == 1}
+            location = call.location
+            site = f"{location.file}:{location.line}:{location.column}"
+            payloads.setdefault((receiver, field.get_usr()), {}).setdefault(
+                pointee.spelling, set()
+            ).add(site)
+    return payloads
 
 
-def get_resources(widget_class, cindex, definitions=None, callback_payloads=None):
+def get_widget_instance_usr(widget_class, cindex, definitions=None):
+    fields = get_core_fields(widget_class, cindex, definitions) or {}
+    size = fields.get("widget_size")
+    return get_record_reference_usr(size, cindex) if size is not None else None
+
+
+def get_record_reference_usr(expression, cindex):
+    for cursor in expression.walk_preorder():
+        if cursor.kind == cindex.CursorKind.TYPE_REF and cursor.referenced is not None:
+            record = cursor.referenced.type.get_canonical()
+            if record.kind == cindex.TypeKind.RECORD:
+                return record.get_declaration().get_usr()
+    return None
+
+
+def get_callback_receiver_usr(receiver, callbacks, cindex):
+    # Peel the API's conversion to Widget, retaining a concrete widget cast.
+    while True:
+        canonical = receiver.type.get_canonical()
+        if canonical.kind == cindex.TypeKind.POINTER:
+            pointee = canonical.get_pointee()
+            if (pointee.kind == cindex.TypeKind.RECORD
+                    and pointee.get_declaration().spelling != "_WidgetRec"):
+                return pointee.get_declaration().get_usr()
+        children = [c for c in receiver.get_children() if c.kind.is_expression()]
+        if receiver.kind not in (cindex.CursorKind.UNEXPOSED_EXPR,
+                                 cindex.CursorKind.CSTYLE_CAST_EXPR,
+                                 cindex.CursorKind.PAREN_EXPR) or len(children) != 1:
+            break
+        receiver = children[0]
+    # A generic Widget argument can still have a typed callback-list receiver.
+    for cursor in callbacks.walk_preorder():
+        if cursor.kind == cindex.CursorKind.MEMBER_REF_EXPR:
+            for child in cursor.get_children():
+                canonical = child.type.get_canonical()
+                if canonical.kind == cindex.TypeKind.POINTER:
+                    pointee = canonical.get_pointee()
+                    if pointee.kind == cindex.TypeKind.RECORD:
+                        return pointee.get_declaration().get_usr()
+    return None
+
+
+def set_callback_payload(resource, payloads, context):
+    if len(payloads) == 1:
+        resource["callback_payload"] = next(iter(payloads))
+        return
+    if payloads:
+        details = "; ".join(
+            f"{payload!r} at {', '.join(sorted(sites))}"
+            for payload, sites in sorted(payloads.items())
+        )
+        message = f"conflicting callback payload types: {details}"
+    else:
+        message = "could not determine callback payload type"
+    print(f"{context}: {message}", file=sys.stderr)
+
+
+def get_resources(widget_class, cindex, definitions=None, callback_payloads=None,
+                  callback_fields=None):
     """Read names, declared resource types, and C types from core.resources."""
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     yield from get_resource_entries(
         widget_class, fields.get("resources"), cindex, definitions, callback_payloads,
+        callback_fields,
     )
 
 
 def get_resource_entries(widget_class, resources, cindex, definitions=None,
-                         callback_payloads=None):
+                         callback_payloads=None, callback_fields=None):
     """Read an XtResource array referenced by a class-record initializer."""
     definitions = definitions or {}
     if resources is None:
         return
+    widget_instance = get_widget_instance_usr(widget_class, cindex, definitions)
     for reference in resources.walk_preorder():
         if reference.kind != cindex.CursorKind.DECL_REF_EXPR:
             continue
@@ -808,17 +900,15 @@ def get_resource_entries(widget_class, resources, cindex, definitions=None,
                     if resource.get("rtype") == "Callback":
                         field = (get_offset_field(values[4], cindex)
                                  if len(values) > 4 else None)
-                        payload = (callback_payloads or {}).get(
-                            field.get_usr() if field is not None else None
-                        )
-                        if payload is not None:
-                            resource["callback_payload"] = payload
-                        else:
-                            print(
-                                f"{entry.location}: warning: {widget_class.spelling}.{name}: "
-                                "could not determine callback payload type",
-                                file=sys.stderr,
-                            )
+                        field_usr = field.get_usr() if field is not None else None
+                        if callback_fields is not None and field_usr is not None:
+                            callback_fields[name] = field_usr
+                        instance = widget_instance
+                        if instance is None and len(values) > 4:
+                            instance = get_record_reference_usr(values[4], cindex)
+                        payloads = (callback_payloads or {}).get((instance, field_usr), {})
+                        set_callback_payload(resource, payloads,
+                            f"{entry.location}: warning: {widget_class.spelling}.{name}")
                     yield name, resource
                     break
         return

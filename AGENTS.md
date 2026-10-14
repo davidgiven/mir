@@ -90,12 +90,17 @@ are omitted. No resource names are printed.
 Every discovered resource currently has `set` and `get` set to `true`.
 Callback resources also emit `callback_payload` when calls to
 `XtCallCallbackList` identify a unique typed pointer payload for their offset
-field. Fields are matched across translation units by Clang USR. The payload
+field and widget instance type. Both are matched across translation units by
+Clang USR; class instance types come from core.widget_size. Calls on subclasses
+do not contribute types to a base class's resource. Subclass payload overrides
+for inherited callback resources are emitted in the subclass's resources.
+The payload
 type preserves the pointee's typedef spelling without the pointer, stripping conversions
 to `XtPointer`/`void *`. Null and opaque void-pointer arguments do not supply a
 type; fields with conflicting payload types leave `callback_payload` absent.
 Each Callback resource with an unresolved payload emits a warning on stderr
-identifying its widget and resource name.
+identifying its widget and resource name. Conflicting payload types are reported
+separately, with each type and its call sites, and leave the payload absent.
 Widgets whose class record has a `constraint_part`, `constraint_class`, or
 `constraint` member also emit an optional `constraints` dictionary, populated
 from that part's `constraints` or `resources` array. Entries use the same

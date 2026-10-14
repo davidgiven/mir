@@ -13597,10 +13597,9 @@ class CXmCascadeButtonImpl : public CXmLabelImpl<Derived>
 public:
     using CXmLabelImpl<Derived>::CXmLabelImpl;
     using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(
-        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
+    Derived& addActivateCallback(CWidgetImplBase::Callback<void> callback)
     {
-        this->template addCallback<XmAnyCallbackStruct>(
+        this->template addCallback<void>(
             "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
@@ -13626,10 +13625,9 @@ public:
         XtVaGetValues(this->_widget, "cascadePixmap", &value, nullptr);
         return value;
     }
-    Derived& addCascadingCallback(
-        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
+    Derived& addCascadingCallback(CWidgetImplBase::Callback<void> callback)
     {
-        this->template addCallback<XmAnyCallbackStruct>(
+        this->template addCallback<void>(
             "cascadingCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
@@ -15401,6 +15399,24 @@ public:
         XtVaGetValues(this->_widget, "dialogType", &value, nullptr);
         return value;
     }
+    Derived& addHelpCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
+    {
+        this->template addCallback<XmAnyCallbackStruct>(
+            "helpCallback", std::move(callback));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setHelpCallback(XtCallbackList value)
+    {
+        XtVaSetValues(this->_widget, "helpCallback", value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+    XtCallbackList getHelpCallback()
+    {
+        XtCallbackList value;
+        XtVaGetValues(this->_widget, "helpCallback", &value, nullptr);
+        return value;
+    }
     Derived& setHelpLabelString(XmString value)
     {
         XtVaSetValues(this->_widget, "helpLabelString", value, nullptr);
@@ -15648,9 +15664,11 @@ class CXmSelectionBoxImpl : public CXmBulletinBoardImpl<Derived>
 public:
     using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& addApplyCallback(CWidgetImplBase::Callback<void> callback)
+    Derived& addApplyCallback(
+        CWidgetImplBase::Callback<XmSelectionBoxCallbackStruct> callback)
     {
-        this->template addCallback<void>("applyCallback", std::move(callback));
+        this->template addCallback<XmSelectionBoxCallbackStruct>(
+            "applyCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setApplyCallback(XtCallbackList value)
@@ -15679,9 +15697,11 @@ public:
         XtVaGetValues(this->_widget, "applyLabelString", &value, nullptr);
         return value;
     }
-    Derived& addCancelCallback(CWidgetImplBase::Callback<void> callback)
+    Derived& addCancelCallback(
+        CWidgetImplBase::Callback<XmSelectionBoxCallbackStruct> callback)
     {
-        this->template addCallback<void>("cancelCallback", std::move(callback));
+        this->template addCallback<XmSelectionBoxCallbackStruct>(
+            "cancelCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCancelCallback(XtCallbackList value)
@@ -15817,9 +15837,10 @@ public:
         XtVaGetValues(this->_widget, "mustMatch", &value, nullptr);
         return value;
     }
-    Derived& addNoMatchCallback(CWidgetImplBase::Callback<void> callback)
+    Derived& addNoMatchCallback(
+        CWidgetImplBase::Callback<XmSelectionBoxCallbackStruct> callback)
     {
-        this->template addCallback<void>(
+        this->template addCallback<XmSelectionBoxCallbackStruct>(
             "noMatchCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
@@ -15834,9 +15855,11 @@ public:
         XtVaGetValues(this->_widget, "noMatchCallback", &value, nullptr);
         return value;
     }
-    Derived& addOkCallback(CWidgetImplBase::Callback<void> callback)
+    Derived& addOkCallback(
+        CWidgetImplBase::Callback<XmSelectionBoxCallbackStruct> callback)
     {
-        this->template addCallback<void>("okCallback", std::move(callback));
+        this->template addCallback<XmSelectionBoxCallbackStruct>(
+            "okCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setOkCallback(XtCallbackList value)
@@ -18042,6 +18065,24 @@ class CXmFileSelectionBoxImpl : public CXmSelectionBoxImpl<Derived>
 public:
     using CXmSelectionBoxImpl<Derived>::CXmSelectionBoxImpl;
     using CXmSelectionBoxImpl<Derived>::addCallback;
+    Derived& addApplyCallback(
+        CWidgetImplBase::Callback<XmFileSelectionBoxCallbackStruct> callback)
+    {
+        this->template addCallback<XmFileSelectionBoxCallbackStruct>(
+            "applyCallback", std::move(callback));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setApplyCallback(XtCallbackList value)
+    {
+        XtVaSetValues(this->_widget, "applyCallback", value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+    XtCallbackList getApplyCallback()
+    {
+        XtCallbackList value;
+        XtVaGetValues(this->_widget, "applyCallback", &value, nullptr);
+        return value;
+    }
     Derived& setApplyLabelString(XmString value)
     {
         XtVaSetValues(this->_widget, "applyLabelString", value, nullptr);
@@ -18066,6 +18107,24 @@ public:
     {
         Boolean value;
         XtVaGetValues(this->_widget, "autoUnmanage", &value, nullptr);
+        return value;
+    }
+    Derived& addCancelCallback(
+        CWidgetImplBase::Callback<XmFileSelectionBoxCallbackStruct> callback)
+    {
+        this->template addCallback<XmFileSelectionBoxCallbackStruct>(
+            "cancelCallback", std::move(callback));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setCancelCallback(XtCallbackList value)
+    {
+        XtVaSetValues(this->_widget, "cancelCallback", value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+    XtCallbackList getCancelCallback()
+    {
+        XtCallbackList value;
+        XtVaGetValues(this->_widget, "cancelCallback", &value, nullptr);
         return value;
     }
     Derived& setDialogType(unsigned char value)
@@ -18283,6 +18342,24 @@ public:
         XtVaGetValues(this->_widget, "filterLabelString", &value, nullptr);
         return value;
     }
+    Derived& addHelpCallback(
+        CWidgetImplBase::Callback<XmFileSelectionBoxCallbackStruct> callback)
+    {
+        this->template addCallback<XmFileSelectionBoxCallbackStruct>(
+            "helpCallback", std::move(callback));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setHelpCallback(XtCallbackList value)
+    {
+        XtVaSetValues(this->_widget, "helpCallback", value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+    XtCallbackList getHelpCallback()
+    {
+        XtCallbackList value;
+        XtVaGetValues(this->_widget, "helpCallback", &value, nullptr);
+        return value;
+    }
     Derived& setListUpdated(Boolean value)
     {
         XtVaSetValues(this->_widget, "listUpdated", value, nullptr);
@@ -18292,6 +18369,24 @@ public:
     {
         Boolean value;
         XtVaGetValues(this->_widget, "listUpdated", &value, nullptr);
+        return value;
+    }
+    Derived& addNoMatchCallback(
+        CWidgetImplBase::Callback<XmFileSelectionBoxCallbackStruct> callback)
+    {
+        this->template addCallback<XmFileSelectionBoxCallbackStruct>(
+            "noMatchCallback", std::move(callback));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setNoMatchCallback(XtCallbackList value)
+    {
+        XtVaSetValues(this->_widget, "noMatchCallback", value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+    XtCallbackList getNoMatchCallback()
+    {
+        XtCallbackList value;
+        XtVaGetValues(this->_widget, "noMatchCallback", &value, nullptr);
         return value;
     }
     Derived& setNoMatchString(XmString value)
@@ -18307,6 +18402,24 @@ public:
     {
         XmString value;
         XtVaGetValues(this->_widget, "noMatchString", &value, nullptr);
+        return value;
+    }
+    Derived& addOkCallback(
+        CWidgetImplBase::Callback<XmFileSelectionBoxCallbackStruct> callback)
+    {
+        this->template addCallback<XmFileSelectionBoxCallbackStruct>(
+            "okCallback", std::move(callback));
+        return static_cast<Derived&>(*this);
+    }
+    Derived& setOkCallback(XtCallbackList value)
+    {
+        XtVaSetValues(this->_widget, "okCallback", value, nullptr);
+        return static_cast<Derived&>(*this);
+    }
+    XtCallbackList getOkCallback()
+    {
+        XtCallbackList value;
+        XtVaGetValues(this->_widget, "okCallback", &value, nullptr);
         return value;
     }
     Derived& setPathMode(XtEnum value)

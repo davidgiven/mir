@@ -1239,6 +1239,7 @@
       "name": "XmArrowButtonGadget",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1351,6 +1352,7 @@
       "name": "XmArrowButton",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmArrowButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1358,6 +1360,7 @@
           "set": true
         },
         "armCallback": {
+          "callback_payload": "XmArrowButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1379,6 +1382,7 @@
           "set": true
         },
         "disarmCallback": {
+          "callback_payload": "XmArrowButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1474,6 +1478,7 @@
           "set": true
         },
         "focusCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1495,6 +1500,7 @@
           "set": true
         },
         "mapCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1572,6 +1578,7 @@
           "set": true
         },
         "unmapCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1676,6 +1683,7 @@
       "name": "XmCascadeButtonGadget",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1683,6 +1691,7 @@
           "set": true
         },
         "cascadingCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1753,6 +1762,7 @@
       "name": "XmCascadeButton",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1767,6 +1777,7 @@
           "set": true
         },
         "cascadingCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -2347,6 +2358,7 @@
           "set": true
         },
         "selectionCallback": {
+          "callback_payload": "XmComboBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -2448,6 +2460,7 @@
           "set": true
         },
         "commandChangedCallback": {
+          "callback_payload": "XmCommandCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -2455,6 +2468,7 @@
           "set": true
         },
         "commandEnteredCallback": {
+          "callback_payload": "XmCommandCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -2650,6 +2664,7 @@
           "set": true
         },
         "defaultActionCallback": {
+          "callback_payload": "XmContainerSelectCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -2762,6 +2777,7 @@
           "set": true
         },
         "outlineChangedCallback": {
+          "callback_payload": "XmContainerOutlineCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -2832,6 +2848,7 @@
           "set": true
         },
         "selectionCallback": {
+          "callback_payload": "XmContainerSelectCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3017,6 +3034,7 @@
           "set": true
         },
         "dragStartCallback": {
+          "callback_payload": "XmDragStartCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3122,6 +3140,7 @@
           "set": true
         },
         "noFontCallback": {
+          "callback_payload": "XmDisplayCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3129,6 +3148,7 @@
           "set": true
         },
         "noRenditionCallback": {
+          "callback_payload": "XmDisplayCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3187,6 +3207,7 @@
           "set": true
         },
         "dragStartCallback": {
+          "callback_payload": "XmDragStartCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3292,6 +3313,7 @@
           "set": true
         },
         "noFontCallback": {
+          "callback_payload": "XmDisplayCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3299,6 +3321,7 @@
           "set": true
         },
         "noRenditionCallback": {
+          "callback_payload": "XmDisplayCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3357,6 +3380,7 @@
           "set": true
         },
         "dragDropFinishCallback": {
+          "callback_payload": "XmDragDropFinishCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3364,6 +3388,7 @@
           "set": true
         },
         "dragMotionCallback": {
+          "callback_payload": "XmDragMotionCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3378,6 +3403,7 @@
           "set": true
         },
         "dropFinishCallback": {
+          "callback_payload": "XmDropFinishCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3385,6 +3411,7 @@
           "set": true
         },
         "dropSiteEnterCallback": {
+          "callback_payload": "XmDropSiteEnterCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3392,6 +3419,7 @@
           "set": true
         },
         "dropSiteLeaveCallback": {
+          "callback_payload": "XmDropSiteLeaveCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3399,6 +3427,7 @@
           "set": true
         },
         "dropStartCallback": {
+          "callback_payload": "XmDropStartCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3448,6 +3477,7 @@
           "set": true
         },
         "operationChangedCallback": {
+          "callback_payload": "XmOperationChangedCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3619,6 +3649,7 @@
           "set": true
         },
         "exposeCallback": {
+          "callback_payload": "XmDrawingAreaCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3626,6 +3657,7 @@
           "set": true
         },
         "inputCallback": {
+          "callback_payload": "XmDrawingAreaCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3647,6 +3679,7 @@
           "set": true
         },
         "resizeCallback": {
+          "callback_payload": "XmDrawingAreaCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3675,6 +3708,7 @@
       "name": "XmDrawnButton",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmDrawnButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3682,6 +3716,7 @@
           "set": true
         },
         "armCallback": {
+          "callback_payload": "XmDrawnButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3689,6 +3724,7 @@
           "set": true
         },
         "disarmCallback": {
+          "callback_payload": "XmDrawnButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3696,6 +3732,7 @@
           "set": true
         },
         "exposeCallback": {
+          "callback_payload": "XmDrawnButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3731,6 +3768,7 @@
           "set": true
         },
         "resizeCallback": {
+          "callback_payload": "XmDrawnButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3899,6 +3937,7 @@
           "set": true
         },
         "updateShellCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3906,6 +3945,7 @@
           "set": true
         },
         "updateTextCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3927,6 +3967,7 @@
           "set": true
         },
         "verifyTextCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -3934,6 +3975,7 @@
           "set": true
         },
         "verifyTextFailedCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -4856,6 +4898,7 @@
           "set": true
         },
         "nodeStateCallback": {
+          "callback_payload": "XmHierarchyNodeStateData",
           "class": "NodeStateCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -4863,6 +4906,7 @@
           "set": true
         },
         "nodeStateChangedCallback": {
+          "callback_payload": "XmHierarchyNodeStateData",
           "class": "NodeStateChangedCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -5226,6 +5270,7 @@
       "name": "XmIconButton",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmIconButtonCallbackInfo",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -5247,6 +5292,7 @@
           "set": true
         },
         "doubleClickCallback": {
+          "callback_payload": "XmIconButtonCallbackInfo",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6277,6 +6323,7 @@
           "set": true
         },
         "browseSelectionCallback": {
+          "callback_payload": "XmListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6284,6 +6331,7 @@
           "set": true
         },
         "defaultActionCallback": {
+          "callback_payload": "XmListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6305,6 +6353,7 @@
           "set": true
         },
         "extendedSelectionCallback": {
+          "callback_payload": "XmListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6382,6 +6431,7 @@
           "set": true
         },
         "multipleSelectionCallback": {
+          "callback_payload": "XmListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6473,6 +6523,7 @@
           "set": true
         },
         "singleSelectionCallback": {
+          "callback_payload": "XmListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6908,6 +6959,7 @@
       "name": "XmMessageBox",
       "resources": {
         "cancelCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -6964,6 +7016,7 @@
           "set": true
         },
         "okCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7138,6 +7191,7 @@
           "set": true
         },
         "itemFoundCallback": {
+          "callback_payload": "XmMultiListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7145,6 +7199,7 @@
           "set": true
         },
         "itemNotFoundCallback": {
+          "callback_payload": "XmMultiListCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7386,6 +7441,7 @@
           "set": true
         },
         "pageChangedCallback": {
+          "callback_payload": "XmNotebookCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7651,6 +7707,7 @@
       "name": "XmPushButtonGadget",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7658,6 +7715,7 @@
           "set": true
         },
         "armCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7665,6 +7723,7 @@
           "set": true
         },
         "disarmCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7714,6 +7773,7 @@
       "name": "XmPushButton",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7721,6 +7781,7 @@
           "set": true
         },
         "armCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7749,6 +7810,7 @@
           "set": true
         },
         "disarmCallback": {
+          "callback_payload": "XmPushButtonCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7867,6 +7929,7 @@
           "set": true
         },
         "entryCallback": {
+          "callback_payload": "XmRowColumnCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -7916,6 +7979,7 @@
           "set": true
         },
         "mapCallback": {
+          "callback_payload": "XmRowColumnCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8084,6 +8148,7 @@
           "set": true
         },
         "tearOffMenuActivateCallback": {
+          "callback_payload": "XmRowColumnCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8091,6 +8156,7 @@
           "set": true
         },
         "tearOffMenuDeactivateCallback": {
+          "callback_payload": "XmRowColumnCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8112,6 +8178,7 @@
           "set": true
         },
         "unmapCallback": {
+          "callback_payload": "XmRowColumnCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8206,6 +8273,7 @@
           "set": true
         },
         "dragCallback": {
+          "callback_payload": "XmScaleCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8367,6 +8435,7 @@
           "set": true
         },
         "valueChangedCallback": {
+          "callback_payload": "XmScaleCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8756,6 +8825,7 @@
           "set": true
         },
         "decrementCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8763,6 +8833,7 @@
           "set": true
         },
         "dragCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8791,6 +8862,7 @@
           "set": true
         },
         "incrementCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8833,6 +8905,7 @@
           "set": true
         },
         "pageDecrementCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8847,6 +8920,7 @@
           "set": true
         },
         "pageIncrementCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8910,6 +8984,7 @@
           "set": true
         },
         "toBottomCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8917,6 +8992,7 @@
           "set": true
         },
         "toTopCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -8945,6 +9021,7 @@
           "set": true
         },
         "valueChangedCallback": {
+          "callback_payload": "XmScrollBarCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -9891,6 +9968,7 @@
           "set": true
         },
         "selectCallback": {
+          "callback_payload": "XmTabBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -10024,6 +10102,7 @@
           "set": true
         },
         "unselectCallback": {
+          "callback_payload": "XmTabBoxCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -10296,6 +10375,7 @@
           "set": true
         },
         "tabSelectedCallback": {
+          "callback_payload": "XmTabStackCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11330,6 +11410,7 @@
       "name": "XmText",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11372,6 +11453,7 @@
           "set": true
         },
         "focusCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11379,6 +11461,7 @@
           "set": true
         },
         "gainPrimaryCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11393,6 +11476,7 @@
           "set": true
         },
         "losePrimaryCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11400,6 +11484,7 @@
           "set": true
         },
         "losingFocusCallback": {
+          "callback_payload": "XmTextVerifyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11428,6 +11513,7 @@
           "set": true
         },
         "modifyVerifyCallback": {
+          "callback_payload": "XmTextVerifyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11435,6 +11521,7 @@
           "set": true
         },
         "modifyVerifyCallbackWcs": {
+          "callback_payload": "XmTextVerifyCallbackStructWcs",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11442,6 +11529,7 @@
           "set": true
         },
         "motionVerifyCallback": {
+          "callback_payload": "XmTextVerifyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11491,6 +11579,7 @@
           "set": true
         },
         "valueChangedCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11560,6 +11649,7 @@
       "name": "XmToggleButtonGadget",
       "resources": {
         "armCallback": {
+          "callback_payload": "XmToggleButtonCallbackStruct",
           "class": "ArmCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11574,6 +11664,7 @@
           "set": true
         },
         "disarmCallback": {
+          "callback_payload": "XmToggleButtonCallbackStruct",
           "class": "DisarmCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11602,6 +11693,7 @@
           "set": true
         },
         "valueChangedCallback": {
+          "callback_payload": "XmToggleButtonCallbackStruct",
           "class": "ValueChangedCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11690,6 +11782,7 @@
       "name": "XmToggleButton",
       "resources": {
         "armCallback": {
+          "callback_payload": "XmToggleButtonCallbackStruct",
           "class": "ArmCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11704,6 +11797,7 @@
           "set": true
         },
         "disarmCallback": {
+          "callback_payload": "XmToggleButtonCallbackStruct",
           "class": "DisarmCallback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -11816,6 +11910,7 @@
           "set": true
         },
         "valueChangedCallback": {
+          "callback_payload": "XmToggleButtonCallbackStruct",
           "class": "ValueChangedCallback",
           "ctype": "XtCallbackList",
           "get": true,

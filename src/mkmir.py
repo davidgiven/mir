@@ -156,6 +156,7 @@ def main(argv=None):
 
     methods = find_widget_methods(translation_units, cindex)
     constructors = find_widget_constructors(translation_units, args.prefix, cindex)
+    callback_payloads = find_callback_payloads(translation_units, cindex)
     widgets = {}
     for widget_class in widget_classes.values():
         class_name = get_class_name(widget_class, cindex, definitions)
@@ -181,7 +182,7 @@ def main(argv=None):
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
             widget["resources"] = dict(
-                get_resources(widget_class, cindex, definitions)
+                get_resources(widget_class, cindex, definitions, callback_payloads)
             )
             constraint_fields = get_class_part_fields(
                 widget_class, ("constraint_part", "constraint_class", "constraint"),
@@ -191,7 +192,7 @@ def main(argv=None):
                 widget["constraints"] = dict(get_resource_entries(
                     widget_class,
                     constraint_fields.get("constraints", constraint_fields.get("resources")),
-                    cindex, definitions,
+                    cindex, definitions, callback_payloads,
                 ))
             widget["methods"] = {
                 name: {
@@ -653,15 +654,64 @@ def get_superclass(
     return None
 
 
-def get_resources(widget_class, cindex, definitions=None):
+def find_callback_payloads(translation_units, cindex):
+    """Index callback argument types by the callback-list field's USR."""
+    payloads = {}
+    for unit in translation_units:
+        for call in unit.cursor.walk_preorder():
+            if call.kind != cindex.CursorKind.CALL_EXPR:
+                continue
+            function = call.referenced
+            if function is None or function.spelling != "XtCallCallbackList":
+                continue
+            arguments = list(call.get_arguments())
+            if len(arguments) != 3:
+                continue
+            field = get_offset_field(arguments[-2], cindex)
+            if field is None:
+                continue
+            payload = arguments[-1]
+            # Strip the implicit conversion to XtPointer, and explicit void*
+            # casts, to recover the type supplied by the caller.
+            while True:
+                children = [child for child in payload.get_children()
+                            if child.kind.is_expression()]
+                canonical = payload.type.get_canonical()
+                void_pointer = (
+                    canonical.kind == cindex.TypeKind.POINTER
+                    and canonical.get_pointee().kind == cindex.TypeKind.VOID
+                )
+                if len(children) != 1 or not (
+                    payload.kind == cindex.CursorKind.UNEXPOSED_EXPR
+                    or (payload.kind == cindex.CursorKind.CSTYLE_CAST_EXPR
+                        and void_pointer)
+                ):
+                    break
+                payload = children[0]
+            # Null pointers and opaque void pointers provide no payload type.
+            canonical = payload.type.get_canonical()
+            if (canonical.kind != cindex.TypeKind.POINTER
+                    or canonical.get_pointee().kind == cindex.TypeKind.VOID):
+                continue
+            pointee = payload.type.get_pointee()
+            if pointee.kind == cindex.TypeKind.INVALID:
+                pointee = canonical.get_pointee()
+            payloads.setdefault(field.get_usr(), set()).add(pointee.spelling)
+    # Do not arbitrarily choose a type for a field used with different payloads.
+    return {usr: next(iter(types)) for usr, types in payloads.items()
+            if len(types) == 1}
+
+
+def get_resources(widget_class, cindex, definitions=None, callback_payloads=None):
     """Read names, declared resource types, and C types from core.resources."""
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     yield from get_resource_entries(
-        widget_class, fields.get("resources"), cindex, definitions,
+        widget_class, fields.get("resources"), cindex, definitions, callback_payloads,
     )
 
 
-def get_resource_entries(widget_class, resources, cindex, definitions=None):
+def get_resource_entries(widget_class, resources, cindex, definitions=None,
+                         callback_payloads=None):
     """Read an XtResource array referenced by a class-record initializer."""
     definitions = definitions or {}
     if resources is None:
@@ -736,15 +786,29 @@ def get_resource_entries(widget_class, resources, cindex, definitions=None):
                     )
                     if resource_type is not None:
                         resource["ctype"] = resource_type
+                    if resource.get("rtype") == "Callback":
+                        field = (get_offset_field(values[4], cindex)
+                                 if len(values) > 4 else None)
+                        payload = (callback_payloads or {}).get(
+                            field.get_usr() if field is not None else None
+                        )
+                        if payload is not None:
+                            resource["callback_payload"] = payload
+                        else:
+                            print(
+                                f"{entry.location}: warning: {widget_class.spelling}.{name}: "
+                                "could not determine callback payload type",
+                                file=sys.stderr,
+                            )
                     yield name, resource
                     break
         return
 
 
-def get_offset_field_type(expression, cindex):
-    """Read the final field declaration in an expanded XtOffsetOf expression."""
-    field_type = None
-    expression_field_type = None
+def get_offset_field(expression, cindex):
+    """Read the final field in offsetof or a nested member expression."""
+    offset_field = None
+    expression_field = None
     for cursor in expression.walk_preorder():
         if cursor.kind not in (
             cindex.CursorKind.MEMBER_REF,
@@ -754,11 +818,17 @@ def get_offset_field_type(expression, cindex):
         field = cursor.referenced
         if field is not None and field.kind == cindex.CursorKind.FIELD_DECL:
             if cursor.kind == cindex.CursorKind.MEMBER_REF:
-                field_type = field.type.spelling
-            elif expression_field_type is None:
+                offset_field = field
+            elif expression_field is None:
                 # Member expressions nest from the final field inward.
-                expression_field_type = field.type.spelling
-    return field_type if field_type is not None else expression_field_type
+                expression_field = field
+    return offset_field if offset_field is not None else expression_field
+
+
+def get_offset_field_type(expression, cindex):
+    """Read the declared type of the final offset field."""
+    field = get_offset_field(expression, cindex)
+    return field.type.spelling if field is not None else None
 
 
 def get_sizeof_type(expression, cindex):

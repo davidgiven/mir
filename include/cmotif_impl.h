@@ -281,97 +281,51 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBaseHeight(int value)
-    {
-        return this->set("baseHeight", value);
-    }
+    { return this->set("baseHeight", value); }
     auto setBaseWidth(int value)
-    {
-        return this->set("baseWidth", value);
-    }
+    { return this->set("baseWidth", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHeightInc(int value)
-    {
-        return this->set("heightInc", value);
-    }
+    { return this->set("heightInc", value); }
     auto setIconPixmap(Pixmap value)
-    {
-        return this->set("iconPixmap", value);
-    }
+    { return this->set("iconPixmap", value); }
     auto setIconX(int value)
-    {
-        return this->set("iconX", value);
-    }
+    { return this->set("iconX", value); }
     auto setIconY(int value)
-    {
-        return this->set("iconY", value);
-    }
+    { return this->set("iconY", value); }
     auto setInput(int value)
-    {
-        return this->set("input", value);
-    }
+    { return this->set("input", value); }
     auto setMaxAspectX(int value)
-    {
-        return this->set("maxAspectX", value);
-    }
+    { return this->set("maxAspectX", value); }
     auto setMaxAspectY(int value)
-    {
-        return this->set("maxAspectY", value);
-    }
+    { return this->set("maxAspectY", value); }
     auto setMaxHeight(int value)
-    {
-        return this->set("maxHeight", value);
-    }
+    { return this->set("maxHeight", value); }
     auto setMaxWidth(int value)
-    {
-        return this->set("maxWidth", value);
-    }
+    { return this->set("maxWidth", value); }
     auto setMinAspectX(int value)
-    {
-        return this->set("minAspectX", value);
-    }
+    { return this->set("minAspectX", value); }
     auto setMinAspectY(int value)
-    {
-        return this->set("minAspectY", value);
-    }
+    { return this->set("minAspectY", value); }
     auto setMinHeight(int value)
-    {
-        return this->set("minHeight", value);
-    }
+    { return this->set("minHeight", value); }
     auto setMinWidth(int value)
-    {
-        return this->set("minWidth", value);
-    }
+    { return this->set("minWidth", value); }
     auto setVisual(Visual* value)
-    {
-        return this->set("visual", value);
-    }
+    { return this->set("visual", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setWidthInc(int value)
-    {
-        return this->set("widthInc", value);
-    }
+    { return this->set("widthInc", value); }
     auto setWindowGroup(XID value)
-    {
-        return this->set("windowGroup", value);
-    }
+    { return this->set("windowGroup", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -558,57 +512,31 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -926,93 +854,49 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -1314,93 +1198,49 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -1549,49 +1389,27 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setActiveColorSetId(int value)
-    {
-        return this->set("activeColorSetId", value);
-    }
+    { return this->set("activeColorSetId", value); }
     auto setInactiveColorSetId(int value)
-    {
-        return this->set("inactiveColorSetId", value);
-    }
+    { return this->set("inactiveColorSetId", value); }
     auto setPrimaryColorSetId(int value)
-    {
-        return this->set("primaryColorSetId", value);
-    }
+    { return this->set("primaryColorSetId", value); }
     auto setSecondaryColorSetId(int value)
-    {
-        return this->set("secondaryColorSetId", value);
-    }
+    { return this->set("secondaryColorSetId", value); }
     auto setTextColorSetId(int value)
-    {
-        return this->set("textColorSetId", value);
-    }
+    { return this->set("textColorSetId", value); }
     auto setUseColorObj(Boolean value)
-    {
-        return this->set("useColorObj", value);
-    }
+    { return this->set("useColorObj", value); }
     auto setUseIconFileCache(Boolean value)
-    {
-        return this->set("useIconFileCache", value);
-    }
+    { return this->set("useIconFileCache", value); }
     auto setUseMask(Boolean value)
-    {
-        return this->set("useMask", value);
-    }
+    { return this->set("useMask", value); }
     auto setUseMultiColorIcons(Boolean value)
-    {
-        return this->set("useMultiColorIcons", value);
-    }
+    { return this->set("useMultiColorIcons", value); }
     auto setUseTextColor(Boolean value)
-    {
-        return this->set("useTextColor", value);
-    }
+    { return this->set("useTextColor", value); }
     auto setUseTextColorForList(Boolean value)
-    {
-        return this->set("useTextColorForList", value);
-    }
+    { return this->set("useTextColorForList", value); }
 };
 
 template <typename Derived>
@@ -1641,13 +1459,9 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setExtensionType(unsigned char value)
-    {
-        return this->set("extensionType", value);
-    }
+    { return this->set("extensionType", value); }
     auto setLogicalParent(Widget value)
-    {
-        return this->set("logicalParent", value);
-    }
+    { return this->set("logicalParent", value); }
 };
 
 template <typename Derived>
@@ -1686,9 +1500,7 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDeleteResponse(unsigned char value)
-    {
-        return this->set("deleteResponse", value);
-    }
+    { return this->set("deleteResponse", value); }
 };
 
 template <typename Derived>
@@ -1988,85 +1800,45 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDefaultButtonEmphasis(Boolean value)
-    {
-        return this->set("defaultButtonEmphasis", value);
-    }
+    { return this->set("defaultButtonEmphasis", value); }
     auto setDefaultVirtualBindings(String value)
-    {
-        return this->set("defaultVirtualBindings", value);
-    }
+    { return this->set("defaultVirtualBindings", value); }
     auto setDragContextClass(WidgetClass value)
-    {
-        return this->set("dragContextClass", value);
-    }
+    { return this->set("dragContextClass", value); }
     auto setDragInitiatorProtocolStyle(unsigned char value)
-    {
-        return this->set("dragInitiatorProtocolStyle", value);
-    }
+    { return this->set("dragInitiatorProtocolStyle", value); }
     auto setDragReceiverProtocolStyle(unsigned char value)
-    {
-        return this->set("dragReceiverProtocolStyle", value);
-    }
+    { return this->set("dragReceiverProtocolStyle", value); }
     auto setDropSiteManagerClass(WidgetClass value)
-    {
-        return this->set("dropSiteManagerClass", value);
-    }
+    { return this->set("dropSiteManagerClass", value); }
     auto setDropTransferClass(WidgetClass value)
-    {
-        return this->set("dropTransferClass", value);
-    }
+    { return this->set("dropTransferClass", value); }
     auto setEnableBtn1Transfer(XtEnum value)
-    {
-        return this->set("enableBtn1Transfer", value);
-    }
+    { return this->set("enableBtn1Transfer", value); }
     auto setEnableButtonTab(Boolean value)
-    {
-        return this->set("enableButtonTab", value);
-    }
+    { return this->set("enableButtonTab", value); }
     auto setEnableDragIcon(Boolean value)
-    {
-        return this->set("enableDragIcon", value);
-    }
+    { return this->set("enableDragIcon", value); }
     auto setEnableEtchedInMenu(Boolean value)
-    {
-        return this->set("enableEtchedInMenu", value);
-    }
+    { return this->set("enableEtchedInMenu", value); }
     auto setEnableMultiKeyBindings(Boolean value)
-    {
-        return this->set("enableMultiKeyBindings", value);
-    }
+    { return this->set("enableMultiKeyBindings", value); }
     auto setEnableThinThickness(Boolean value)
-    {
-        return this->set("enableThinThickness", value);
-    }
+    { return this->set("enableThinThickness", value); }
     auto setEnableToggleColor(Boolean value)
-    {
-        return this->set("enableToggleColor", value);
-    }
+    { return this->set("enableToggleColor", value); }
     auto setEnableToggleVisual(Boolean value)
-    {
-        return this->set("enableToggleVisual", value);
-    }
+    { return this->set("enableToggleVisual", value); }
     auto setEnableUnselectableDrag(Boolean value)
-    {
-        return this->set("enableUnselectableDrag", value);
-    }
+    { return this->set("enableUnselectableDrag", value); }
     auto setEnableWarp(XtEnum value)
-    {
-        return this->set("enableWarp", value);
-    }
+    { return this->set("enableWarp", value); }
     auto setIconPixmap(Pixmap value)
-    {
-        return this->set("iconPixmap", value);
-    }
+    { return this->set("iconPixmap", value); }
     auto setMotifVersion(int value)
-    {
-        return this->set("motifVersion", value);
-    }
+    { return this->set("motifVersion", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
 };
 
 template <typename Derived>
@@ -2473,89 +2245,47 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBlendModel(unsigned char value)
-    {
-        return this->set("blendModel", value);
-    }
+    { return this->set("blendModel", value); }
     auto setClientData(XtPointer value)
-    {
-        return this->set("clientData", value);
-    }
+    { return this->set("clientData", value); }
     auto setConvertProc(XmConvertSelectionRec value)
-    {
-        return this->set("convertProc", value);
-    }
+    { return this->set("convertProc", value); }
     auto setCursorBackground(Pixel value)
-    {
-        return this->set("cursorBackground", value);
-    }
+    { return this->set("cursorBackground", value); }
     auto setCursorForeground(Pixel value)
-    {
-        return this->set("cursorForeground", value);
-    }
+    { return this->set("cursorForeground", value); }
     auto setDragOperations(unsigned char value)
-    {
-        return this->set("dragOperations", value);
-    }
+    { return this->set("dragOperations", value); }
     auto setExportTargets(Atom* value)
-    {
-        return this->set("exportTargets", value);
-    }
+    { return this->set("exportTargets", value); }
     auto setIccHandle(Atom value)
-    {
-        return this->set("iccHandle", value);
-    }
+    { return this->set("iccHandle", value); }
     auto setIncremental(Boolean value)
-    {
-        return this->set("incremental", value);
-    }
+    { return this->set("incremental", value); }
     auto setInvalidCursorForeground(Pixel value)
-    {
-        return this->set("invalidCursorForeground", value);
-    }
+    { return this->set("invalidCursorForeground", value); }
     auto setNoneCursorForeground(Pixel value)
-    {
-        return this->set("noneCursorForeground", value);
-    }
+    { return this->set("noneCursorForeground", value); }
     auto setNumExportTargets(Cardinal value)
-    {
-        return this->set("numExportTargets", value);
-    }
+    { return this->set("numExportTargets", value); }
     auto setOperationCursorIcon(XmDragIconObject value)
-    {
-        return this->set("operationCursorIcon", value);
-    }
+    { return this->set("operationCursorIcon", value); }
     auto setSourceCursorIcon(XmDragIconObject value)
-    {
-        return this->set("sourceCursorIcon", value);
-    }
+    { return this->set("sourceCursorIcon", value); }
     auto setSourceIsExternal(Boolean value)
-    {
-        return this->set("sourceIsExternal", value);
-    }
+    { return this->set("sourceIsExternal", value); }
     auto setSourcePixmapIcon(XmDragIconObject value)
-    {
-        return this->set("sourcePixmapIcon", value);
-    }
+    { return this->set("sourcePixmapIcon", value); }
     auto setSourceWidget(Widget value)
-    {
-        return this->set("sourceWidget", value);
-    }
+    { return this->set("sourceWidget", value); }
     auto setSourceWindow(Window value)
-    {
-        return this->set("sourceWindow", value);
-    }
+    { return this->set("sourceWindow", value); }
     auto setStartTime(Time value)
-    {
-        return this->set("startTime", value);
-    }
+    { return this->set("startTime", value); }
     auto setStateCursorIcon(XmDragIconObject value)
-    {
-        return this->set("stateCursorIcon", value);
-    }
+    { return this->set("stateCursorIcon", value); }
     auto setValidCursorForeground(Pixel value)
-    {
-        return this->set("validCursorForeground", value);
-    }
+    { return this->set("validCursorForeground", value); }
 };
 
 template <typename Derived>
@@ -2616,17 +2346,11 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setClientData(XtPointer value)
-    {
-        return this->set("clientData", value);
-    }
+    { return this->set("clientData", value); }
     auto setNotifyProc(XtCallbackProc value)
-    {
-        return this->set("notifyProc", value);
-    }
+    { return this->set("notifyProc", value); }
     auto setTreeUpdateProc(XtCallbackProc value)
-    {
-        return this->set("treeUpdateProc", value);
-    }
+    { return this->set("treeUpdateProc", value); }
 };
 
 template <typename Derived>
@@ -2709,25 +2433,15 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDropTransfers(XmDropTransferEntry value)
-    {
-        return this->set("dropTransfers", value);
-    }
+    { return this->set("dropTransfers", value); }
     auto setIncremental(Boolean value)
-    {
-        return this->set("incremental", value);
-    }
+    { return this->set("incremental", value); }
     auto setNumDropTransfers(Cardinal value)
-    {
-        return this->set("numDropTransfers", value);
-    }
+    { return this->set("numDropTransfers", value); }
     auto setTransferProc(XtSelectionCallbackProc value)
-    {
-        return this->set("transferProc", value);
-    }
+    { return this->set("transferProc", value); }
     auto setTransferStatus(unsigned char value)
-    {
-        return this->set("transferStatus", value);
-    }
+    { return this->set("transferStatus", value); }
 };
 
 template <typename Derived>
@@ -2843,37 +2557,21 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAnimate(Boolean value)
-    {
-        return this->set("animate", value);
-    }
+    { return this->set("animate", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setDefaultFontList(XmFontList value)
-    {
-        return this->set("defaultFontList", value);
-    }
+    { return this->set("defaultFontList", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setVisual(Visual* value)
-    {
-        return this->set("visual", value);
-    }
+    { return this->set("visual", value); }
 };
 
 template <typename Derived>
@@ -3137,89 +2835,47 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBitmapConversionModel(XtEnum value)
-    {
-        return this->set("bitmapConversionModel", value);
-    }
+    { return this->set("bitmapConversionModel", value); }
     auto setColorAllocationProc(XmAllocColorProc value)
-    {
-        return this->set("colorAllocationProc", value);
-    }
+    { return this->set("colorAllocationProc", value); }
     auto setColorCalculationProc(XmScreenColorProc value)
-    {
-        return this->set("colorCalculationProc", value);
-    }
+    { return this->set("colorCalculationProc", value); }
     auto setDarkThreshold(int value)
-    {
-        return this->set("darkThreshold", value);
-    }
+    { return this->set("darkThreshold", value); }
     auto setDefaultCopyCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultCopyCursorIcon", value);
-    }
+    { return this->set("defaultCopyCursorIcon", value); }
     auto setDefaultInvalidCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultInvalidCursorIcon", value);
-    }
+    { return this->set("defaultInvalidCursorIcon", value); }
     auto setDefaultLinkCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultLinkCursorIcon", value);
-    }
+    { return this->set("defaultLinkCursorIcon", value); }
     auto setDefaultMoveCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultMoveCursorIcon", value);
-    }
+    { return this->set("defaultMoveCursorIcon", value); }
     auto setDefaultNoneCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultNoneCursorIcon", value);
-    }
+    { return this->set("defaultNoneCursorIcon", value); }
     auto setDefaultSourceCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultSourceCursorIcon", value);
-    }
+    { return this->set("defaultSourceCursorIcon", value); }
     auto setDefaultValidCursorIcon(XmDragIconObject value)
-    {
-        return this->set("defaultValidCursorIcon", value);
-    }
+    { return this->set("defaultValidCursorIcon", value); }
     auto setFont(XFontStruct* value)
-    {
-        return this->set("font", value);
-    }
+    { return this->set("font", value); }
     auto setForegroundThreshold(int value)
-    {
-        return this->set("foregroundThreshold", value);
-    }
+    { return this->set("foregroundThreshold", value); }
     auto setHorizontalFontUnit(int value)
-    {
-        return this->set("horizontalFontUnit", value);
-    }
+    { return this->set("horizontalFontUnit", value); }
     auto setInsensitiveStippleBitmap(Pixmap value)
-    {
-        return this->set("insensitiveStippleBitmap", value);
-    }
+    { return this->set("insensitiveStippleBitmap", value); }
     auto setLightThreshold(int value)
-    {
-        return this->set("lightThreshold", value);
-    }
+    { return this->set("lightThreshold", value); }
     auto setMenuCursor(Cursor value)
-    {
-        return this->set("menuCursor", value);
-    }
+    { return this->set("menuCursor", value); }
     auto setMoveOpaque(unsigned char value)
-    {
-        return this->set("moveOpaque", value);
-    }
+    { return this->set("moveOpaque", value); }
     auto setUnpostBehavior(unsigned char value)
-    {
-        return this->set("unpostBehavior", value);
-    }
+    { return this->set("unpostBehavior", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalFontUnit(int value)
-    {
-        return this->set("verticalFontUnit", value);
-    }
+    { return this->set("verticalFontUnit", value); }
 };
 
 template <typename Derived>
@@ -3345,29 +3001,17 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setSlideDestHeight(Dimension value)
-    {
-        return this->set("slideDestHeight", value);
-    }
+    { return this->set("slideDestHeight", value); }
     auto setSlideDestWidth(Dimension value)
-    {
-        return this->set("slideDestWidth", value);
-    }
+    { return this->set("slideDestWidth", value); }
     auto setSlideDestX(Position value)
-    {
-        return this->set("slideDestX", value);
-    }
+    { return this->set("slideDestX", value); }
     auto setSlideDestY(Position value)
-    {
-        return this->set("slideDestY", value);
-    }
+    { return this->set("slideDestY", value); }
     auto setSlideInterval(unsigned long value)
-    {
-        return this->set("slideInterval", value);
-    }
+    { return this->set("slideInterval", value); }
     auto setSlideWidget(Widget value)
-    {
-        return this->set("slideWidget", value);
-    }
+    { return this->set("slideWidget", value); }
 };
 
 template <typename Derived>
@@ -3472,125 +3116,65 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBaseHeight(int value)
-    {
-        return this->set("baseHeight", value);
-    }
+    { return this->set("baseHeight", value); }
     auto setBaseWidth(int value)
-    {
-        return this->set("baseWidth", value);
-    }
+    { return this->set("baseWidth", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setDragOverActiveMode(unsigned char value)
-    {
-        return this->set("dragOverActiveMode", value);
-    }
+    { return this->set("dragOverActiveMode", value); }
     auto setDragOverMode(unsigned char value)
-    {
-        return this->set("dragOverMode", value);
-    }
+    { return this->set("dragOverMode", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHeightInc(int value)
-    {
-        return this->set("heightInc", value);
-    }
+    { return this->set("heightInc", value); }
     auto setHotX(Position value)
-    {
-        return this->set("hotX", value);
-    }
+    { return this->set("hotX", value); }
     auto setHotY(Position value)
-    {
-        return this->set("hotY", value);
-    }
+    { return this->set("hotY", value); }
     auto setIconPixmap(Pixmap value)
-    {
-        return this->set("iconPixmap", value);
-    }
+    { return this->set("iconPixmap", value); }
     auto setIconX(int value)
-    {
-        return this->set("iconX", value);
-    }
+    { return this->set("iconX", value); }
     auto setIconY(int value)
-    {
-        return this->set("iconY", value);
-    }
+    { return this->set("iconY", value); }
     auto setInput(int value)
-    {
-        return this->set("input", value);
-    }
+    { return this->set("input", value); }
     auto setInstallColormap(Boolean value)
-    {
-        return this->set("installColormap", value);
-    }
+    { return this->set("installColormap", value); }
     auto setMaxAspectX(int value)
-    {
-        return this->set("maxAspectX", value);
-    }
+    { return this->set("maxAspectX", value); }
     auto setMaxAspectY(int value)
-    {
-        return this->set("maxAspectY", value);
-    }
+    { return this->set("maxAspectY", value); }
     auto setMaxHeight(int value)
-    {
-        return this->set("maxHeight", value);
-    }
+    { return this->set("maxHeight", value); }
     auto setMaxWidth(int value)
-    {
-        return this->set("maxWidth", value);
-    }
+    { return this->set("maxWidth", value); }
     auto setMinAspectX(int value)
-    {
-        return this->set("minAspectX", value);
-    }
+    { return this->set("minAspectX", value); }
     auto setMinAspectY(int value)
-    {
-        return this->set("minAspectY", value);
-    }
+    { return this->set("minAspectY", value); }
     auto setMinHeight(int value)
-    {
-        return this->set("minHeight", value);
-    }
+    { return this->set("minHeight", value); }
     auto setMinWidth(int value)
-    {
-        return this->set("minWidth", value);
-    }
+    { return this->set("minWidth", value); }
     auto setOverrideRedirect(Boolean value)
-    {
-        return this->set("overrideRedirect", value);
-    }
+    { return this->set("overrideRedirect", value); }
     auto setSaveUnder(Boolean value)
-    {
-        return this->set("saveUnder", value);
-    }
+    { return this->set("saveUnder", value); }
     auto setVisual(Visual* value)
-    {
-        return this->set("visual", value);
-    }
+    { return this->set("visual", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setWidthInc(int value)
-    {
-        return this->set("widthInc", value);
-    }
+    { return this->set("widthInc", value); }
     auto setWindowGroup(XID value)
-    {
-        return this->set("windowGroup", value);
-    }
+    { return this->set("windowGroup", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -3761,149 +3345,77 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowShellResize(Boolean value)
-    {
-        return this->set("allowShellResize", value);
-    }
+    { return this->set("allowShellResize", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBaseHeight(int value)
-    {
-        return this->set("baseHeight", value);
-    }
+    { return this->set("baseHeight", value); }
     auto setBaseWidth(int value)
-    {
-        return this->set("baseWidth", value);
-    }
+    { return this->set("baseWidth", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setGrabStyle(int value)
-    {
-        return this->set("grabStyle", value);
-    }
+    { return this->set("grabStyle", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHeightInc(int value)
-    {
-        return this->set("heightInc", value);
-    }
+    { return this->set("heightInc", value); }
     auto setIconPixmap(Pixmap value)
-    {
-        return this->set("iconPixmap", value);
-    }
+    { return this->set("iconPixmap", value); }
     auto setIconX(int value)
-    {
-        return this->set("iconX", value);
-    }
+    { return this->set("iconX", value); }
     auto setIconY(int value)
-    {
-        return this->set("iconY", value);
-    }
+    { return this->set("iconY", value); }
     auto setInput(int value)
-    {
-        return this->set("input", value);
-    }
+    { return this->set("input", value); }
     auto setMaxAspectX(int value)
-    {
-        return this->set("maxAspectX", value);
-    }
+    { return this->set("maxAspectX", value); }
     auto setMaxAspectY(int value)
-    {
-        return this->set("maxAspectY", value);
-    }
+    { return this->set("maxAspectY", value); }
     auto setMaxHeight(int value)
-    {
-        return this->set("maxHeight", value);
-    }
+    { return this->set("maxHeight", value); }
     auto setMaxWidth(int value)
-    {
-        return this->set("maxWidth", value);
-    }
+    { return this->set("maxWidth", value); }
     auto setMinAspectX(int value)
-    {
-        return this->set("minAspectX", value);
-    }
+    { return this->set("minAspectX", value); }
     auto setMinAspectY(int value)
-    {
-        return this->set("minAspectY", value);
-    }
+    { return this->set("minAspectY", value); }
     auto setMinHeight(int value)
-    {
-        return this->set("minHeight", value);
-    }
+    { return this->set("minHeight", value); }
     auto setMinWidth(int value)
-    {
-        return this->set("minWidth", value);
-    }
+    { return this->set("minWidth", value); }
     auto setOverrideRedirect(Boolean value)
-    {
-        return this->set("overrideRedirect", value);
-    }
+    { return this->set("overrideRedirect", value); }
     auto setOwnerEvents(Boolean value)
-    {
-        return this->set("ownerEvents", value);
-    }
+    { return this->set("ownerEvents", value); }
     auto setSaveUnder(Boolean value)
-    {
-        return this->set("saveUnder", value);
-    }
+    { return this->set("saveUnder", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTransient(Boolean value)
-    {
-        return this->set("transient", value);
-    }
+    { return this->set("transient", value); }
     auto setVisual(Visual* value)
-    {
-        return this->set("visual", value);
-    }
+    { return this->set("visual", value); }
     auto setWaitforwm(Boolean value)
-    {
-        return this->set("waitforwm", value);
-    }
+    { return this->set("waitforwm", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setWidthInc(int value)
-    {
-        return this->set("widthInc", value);
-    }
+    { return this->set("widthInc", value); }
     auto setWindowGroup(XID value)
-    {
-        return this->set("windowGroup", value);
-    }
+    { return this->set("windowGroup", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -4102,101 +3614,53 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowDirection(unsigned char value)
-    {
-        return this->set("arrowDirection", value);
-    }
+    { return this->set("arrowDirection", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDetailShadowThickness(Dimension value)
-    {
-        return this->set("detailShadowThickness", value);
-    }
+    { return this->set("detailShadowThickness", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMultiClick(unsigned char value)
-    {
-        return this->set("multiClick", value);
-    }
+    { return this->set("multiClick", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -4244,13 +3708,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setLabelString(static_cast<XmString>(*value));
-    }
+    { return setLabelString(static_cast<XmString>(*value)); }
     Derived& setLabelString(const char* value)
-    {
-        return setLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setLabelString(std::make_unique<CXmString>(value)); }
     XmString getLabelString()
     {
         XmString value;
@@ -4353,109 +3813,57 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmIconGCacheObjPart* value)
-    {
-        return this->set(".cache", value);
-    }
+    { return this->set(".cache", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setDetail(XmString* value)
-    {
-        return this->set("detail", value);
-    }
+    { return this->set("detail", value); }
     auto setDetailCount(Cardinal value)
-    {
-        return this->set("detailCount", value);
-    }
+    { return this->set("detailCount", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelString(XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLargeIconMask(Pixmap value)
-    {
-        return this->set("largeIconMask", value);
-    }
+    { return this->set("largeIconMask", value); }
     auto setLargeIconPixmap(Pixmap value)
-    {
-        return this->set("largeIconPixmap", value);
-    }
+    { return this->set("largeIconPixmap", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSmallIconMask(Pixmap value)
-    {
-        return this->set("smallIconMask", value);
-    }
+    { return this->set("smallIconMask", value); }
     auto setSmallIconPixmap(Pixmap value)
-    {
-        return this->set("smallIconPixmap", value);
-    }
+    { return this->set("smallIconPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setViewType(unsigned char value)
-    {
-        return this->set("viewType", value);
-    }
+    { return this->set("viewType", value); }
     auto setVisualEmphasis(unsigned char value)
-    {
-        return this->set("visualEmphasis", value);
-    }
+    { return this->set("visualEmphasis", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -4492,13 +3900,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return setAcceleratorText(static_cast<XmString>(*value));
-    }
+    { return setAcceleratorText(static_cast<XmString>(*value)); }
     Derived& setAcceleratorText(const char* value)
-    {
-        return setAcceleratorText(std::make_unique<CXmString>(value));
-    }
+    { return setAcceleratorText(std::make_unique<CXmString>(value)); }
     _XmString getAcceleratorText()
     {
         _XmString value;
@@ -4555,13 +3959,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setLabelString(static_cast<XmString>(*value));
-    }
+    { return setLabelString(static_cast<XmString>(*value)); }
     Derived& setLabelString(const char* value)
-    {
-        return setLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setLabelString(std::make_unique<CXmString>(value)); }
     _XmString getLabelString()
     {
         _XmString value;
@@ -4675,125 +4075,65 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value)
-    {
-        return this->set(".cache", value);
-    }
+    { return this->set(".cache", value); }
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -4854,57 +4194,31 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -5013,105 +4327,55 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowDirection(unsigned char value)
-    {
-        return this->set("arrowDirection", value);
-    }
+    { return this->set("arrowDirection", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDetailShadowThickness(Dimension value)
-    {
-        return this->set("detailShadowThickness", value);
-    }
+    { return this->set("detailShadowThickness", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMultiClick(unsigned char value)
-    {
-        return this->set("multiClick", value);
-    }
+    { return this->set("multiClick", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -5404,177 +4668,91 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setColumnTitles(XmString* value)
-    {
-        return this->set("columnTitles", value);
-    }
+    { return this->set("columnTitles", value); }
     auto setEntryBackground(Pixel value)
-    {
-        return this->set("entryBackground", value);
-    }
+    { return this->set("entryBackground", value); }
     auto setEntryData(XmMultiListRowInfo* value)
-    {
-        return this->set("entryData", value);
-    }
+    { return this->set("entryData", value); }
     auto setFirstColumn(short value)
-    {
-        return this->set("firstColumn", value);
-    }
+    { return this->set("firstColumn", value); }
     auto setFirstColumnPixmaps(Boolean value)
-    {
-        return this->set("firstColumnPixmaps", value);
-    }
+    { return this->set("firstColumnPixmaps", value); }
     auto setFirstRow(short value)
-    {
-        return this->set("firstRow", value);
-    }
+    { return this->set("firstRow", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setHorizontalScrollBar(Widget value)
-    {
-        return this->set("horizontalScrollBar", value);
-    }
+    { return this->set("horizontalScrollBar", value); }
     auto setIs_entry_background_set(Boolean value)
-    {
-        return this->set("is.entry.background.set", value);
-    }
+    { return this->set("is.entry.background.set", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNewVisualStyle(Boolean value)
-    {
-        return this->set("newVisualStyle", value);
-    }
+    { return this->set("newVisualStyle", value); }
     auto setNumColumns(short value)
-    {
-        return this->set("numColumns", value);
-    }
+    { return this->set("numColumns", value); }
     auto setNumRows(short value)
-    {
-        return this->set("numRows", value);
-    }
+    { return this->set("numRows", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSelectedColumn(short value)
-    {
-        return this->set("selectedColumn", value);
-    }
+    { return this->set("selectedColumn", value); }
     auto setSelectionPolicy(unsigned char value)
-    {
-        return this->set("selectionPolicy", value);
-    }
+    { return this->set("selectionPolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSortFunctions(Xm18SortFunction* value)
-    {
-        return this->set("sortFunctions", value);
-    }
+    { return this->set("sortFunctions", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalScrollBar(Widget value)
-    {
-        return this->set("verticalScrollBar", value);
-    }
+    { return this->set("verticalScrollBar", value); }
     auto setVisibleItemCount(int value)
-    {
-        return this->set("visibleItemCount", value);
-    }
+    { return this->set("visibleItemCount", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -5698,13 +4876,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setLabelString(static_cast<XmString>(*value));
-    }
+    { return setLabelString(static_cast<XmString>(*value)); }
     Derived& setLabelString(const char* value)
-    {
-        return setLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setLabelString(std::make_unique<CXmString>(value)); }
     XmString getLabelString()
     {
         XmString value;
@@ -5840,173 +5014,89 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setArmColor(Pixel value)
-    {
-        return this->set("armColor", value);
-    }
+    { return this->set("armColor", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setHorizontalMargin(Dimension value)
-    {
-        return this->set("horizontalMargin", value);
-    }
+    { return this->set("horizontalMargin", value); }
     auto setIconPlacement(XmIconPlacement value)
-    {
-        return this->set("iconPlacement", value);
-    }
+    { return this->set("iconPlacement", value); }
     auto setIconTextPadding(Dimension value)
-    {
-        return this->set("iconTextPadding", value);
-    }
+    { return this->set("iconTextPadding", value); }
     auto setLabel(String value)
-    {
-        return this->set("label", value);
-    }
+    { return this->set("label", value); }
     auto setLabelString(XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmap(Pixmap value)
-    {
-        return this->set("pixmap", value);
-    }
+    { return this->set("pixmap", value); }
     auto setPixmapDepth(Dimension value)
-    {
-        return this->set("pixmapDepth", value);
-    }
+    { return this->set("pixmapDepth", value); }
     auto setPixmapHeight(Dimension value)
-    {
-        return this->set("pixmapHeight", value);
-    }
+    { return this->set("pixmapHeight", value); }
     auto setPixmapWidth(Dimension value)
-    {
-        return this->set("pixmapWidth", value);
-    }
+    { return this->set("pixmapWidth", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSet(Boolean value)
-    {
-        return this->set("set", value);
-    }
+    { return this->set("set", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalMargin(Dimension value)
-    {
-        return this->set("verticalMargin", value);
-    }
+    { return this->set("verticalMargin", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -6032,13 +5122,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return setAcceleratorText(static_cast<XmString>(*value));
-    }
+    { return setAcceleratorText(static_cast<XmString>(*value)); }
     Derived& setAcceleratorText(const char* value)
-    {
-        return setAcceleratorText(std::make_unique<CXmString>(value));
-    }
+    { return setAcceleratorText(std::make_unique<CXmString>(value)); }
     _XmString getAcceleratorText()
     {
         _XmString value;
@@ -6106,13 +5192,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setLabelString(static_cast<XmString>(*value));
-    }
+    { return setLabelString(static_cast<XmString>(*value)); }
     Derived& setLabelString(const char* value)
-    {
-        return setLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setLabelString(std::make_unique<CXmString>(value)); }
     _XmString getLabelString()
     {
         _XmString value;
@@ -6336,197 +5418,101 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLabelType(unsigned char value)
-    {
-        return this->set("labelType", value);
-    }
+    { return this->set("labelType", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginBottom(Dimension value)
-    {
-        return this->set("marginBottom", value);
-    }
+    { return this->set("marginBottom", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginLeft(Dimension value)
-    {
-        return this->set("marginLeft", value);
-    }
+    { return this->set("marginLeft", value); }
     auto setMarginRight(Dimension value)
-    {
-        return this->set("marginRight", value);
-    }
+    { return this->set("marginRight", value); }
     auto setMarginTop(Dimension value)
-    {
-        return this->set("marginTop", value);
-    }
+    { return this->set("marginTop", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -6966,197 +5952,101 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutomaticSelection(XtEnum value)
-    {
-        return this->set("automaticSelection", value);
-    }
+    { return this->set("automaticSelection", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDoubleClickInterval(int value)
-    {
-        return this->set("doubleClickInterval", value);
-    }
+    { return this->set("doubleClickInterval", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setHorizontalScrollBar(XmScrollBarWidget value)
-    {
-        return this->set("horizontalScrollBar", value);
-    }
+    { return this->set("horizontalScrollBar", value); }
     auto setItemCount(int value)
-    {
-        return this->set("itemCount", value);
-    }
+    { return this->set("itemCount", value); }
     auto setItems(XmString* value)
-    {
-        return this->set("items", value);
-    }
+    { return this->set("items", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setListMarginHeight(Dimension value)
-    {
-        return this->set("listMarginHeight", value);
-    }
+    { return this->set("listMarginHeight", value); }
     auto setListMarginWidth(Dimension value)
-    {
-        return this->set("listMarginWidth", value);
-    }
+    { return this->set("listMarginWidth", value); }
     auto setListSizePolicy(unsigned char value)
-    {
-        return this->set("listSizePolicy", value);
-    }
+    { return this->set("listSizePolicy", value); }
     auto setListSpacing(short value)
-    {
-        return this->set("listSpacing", value);
-    }
+    { return this->set("listSpacing", value); }
     auto setMatchBehavior(unsigned char value)
-    {
-        return this->set("matchBehavior", value);
-    }
+    { return this->set("matchBehavior", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setPrimaryOwnership(unsigned char value)
-    {
-        return this->set("primaryOwnership", value);
-    }
+    { return this->set("primaryOwnership", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setScrollBarDisplayPolicy(unsigned char value)
-    {
-        return this->set("scrollBarDisplayPolicy", value);
-    }
+    { return this->set("scrollBarDisplayPolicy", value); }
     auto setSelectColor(Pixel value)
-    {
-        return this->set("selectColor", value);
-    }
+    { return this->set("selectColor", value); }
     auto setSelectedItemCount(int value)
-    {
-        return this->set("selectedItemCount", value);
-    }
+    { return this->set("selectedItemCount", value); }
     auto setSelectedItems(XmString* value)
-    {
-        return this->set("selectedItems", value);
-    }
+    { return this->set("selectedItems", value); }
     auto setSelectedPositionCount(int value)
-    {
-        return this->set("selectedPositionCount", value);
-    }
+    { return this->set("selectedPositionCount", value); }
     auto setSelectedPositions(int* value)
-    {
-        return this->set("selectedPositions", value);
-    }
+    { return this->set("selectedPositions", value); }
     auto setSelectionMode(unsigned char value)
-    {
-        return this->set("selectionMode", value);
-    }
+    { return this->set("selectionMode", value); }
     auto setSelectionPolicy(unsigned char value)
-    {
-        return this->set("selectionPolicy", value);
-    }
+    { return this->set("selectionPolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopItemPosition(int value)
-    {
-        return this->set("topItemPosition", value);
-    }
+    { return this->set("topItemPosition", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalScrollBar(XmScrollBarWidget value)
-    {
-        return this->set("verticalScrollBar", value);
-    }
+    { return this->set("verticalScrollBar", value); }
     auto setVisibleItemCount(int value)
-    {
-        return this->set("visibleItemCount", value);
-    }
+    { return this->set("visibleItemCount", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -7543,161 +6433,83 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setEditable(Boolean value)
-    {
-        return this->set("editable", value);
-    }
+    { return this->set("editable", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setIncrement(int value)
-    {
-        return this->set("increment", value);
-    }
+    { return this->set("increment", value); }
     auto setInitialDelay(int value)
-    {
-        return this->set("initialDelay", value);
-    }
+    { return this->set("initialDelay", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMaximum(int value)
-    {
-        return this->set("maximum", value);
-    }
+    { return this->set("maximum", value); }
     auto setMinimum(int value)
-    {
-        return this->set("minimum", value);
-    }
+    { return this->set("minimum", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setPageIncrement(int value)
-    {
-        return this->set("pageIncrement", value);
-    }
+    { return this->set("pageIncrement", value); }
     auto setProcessingDirection(unsigned char value)
-    {
-        return this->set("processingDirection", value);
-    }
+    { return this->set("processingDirection", value); }
     auto setRepeatDelay(int value)
-    {
-        return this->set("repeatDelay", value);
-    }
+    { return this->set("repeatDelay", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowArrows(XtEnum value)
-    {
-        return this->set("showArrows", value);
-    }
+    { return this->set("showArrows", value); }
     auto setSliderMark(XtEnum value)
-    {
-        return this->set("sliderMark", value);
-    }
+    { return this->set("sliderMark", value); }
     auto setSliderSize(int value)
-    {
-        return this->set("sliderSize", value);
-    }
+    { return this->set("sliderSize", value); }
     auto setSliderVisual(XtEnum value)
-    {
-        return this->set("sliderVisual", value);
-    }
+    { return this->set("sliderVisual", value); }
     auto setSlidingMode(XtEnum value)
-    {
-        return this->set("slidingMode", value);
-    }
+    { return this->set("slidingMode", value); }
     auto setSnapBackMultiple(unsigned short value)
-    {
-        return this->set("snapBackMultiple", value);
-    }
+    { return this->set("snapBackMultiple", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setTroughColor(Pixel value)
-    {
-        return this->set("troughColor", value);
-    }
+    { return this->set("troughColor", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setValue(int value)
-    {
-        return this->set("value", value);
-    }
+    { return this->set("value", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -7791,105 +6603,55 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMargin(Dimension value)
-    {
-        return this->set("margin", value);
-    }
+    { return this->set("margin", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setSeparatorType(unsigned char value)
-    {
-        return this->set("separatorType", value);
-    }
+    { return this->set("separatorType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -7917,93 +6679,49 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -8368,153 +7086,79 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoShowCursorPosition(Boolean value)
-    {
-        return this->set("autoShowCursorPosition", value);
-    }
+    { return this->set("autoShowCursorPosition", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCursorPosition(XmTextPosition value)
-    {
-        return this->set("cursorPosition", value);
-    }
+    { return this->set("cursorPosition", value); }
     auto setEditMode(int value)
-    {
-        return this->set("editMode", value);
-    }
+    { return this->set("editMode", value); }
     auto setEditable(Boolean value)
-    {
-        return this->set("editable", value);
-    }
+    { return this->set("editable", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setInputCreate(InputCreateProc value)
-    {
-        return this->set("inputCreate", value);
-    }
+    { return this->set("inputCreate", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMaxLength(int value)
-    {
-        return this->set("maxLength", value);
-    }
+    { return this->set("maxLength", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOutputCreate(OutputCreateProc value)
-    {
-        return this->set("outputCreate", value);
-    }
+    { return this->set("outputCreate", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSource(XmTextSource value)
-    {
-        return this->set("source", value);
-    }
+    { return this->set("source", value); }
     auto setTopCharacter(XmTextPosition value)
-    {
-        return this->set("topCharacter", value);
-    }
+    { return this->set("topCharacter", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTotalLines(int value)
-    {
-        return this->set("totalLines", value);
-    }
+    { return this->set("totalLines", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setValue(char* value)
-    {
-        return this->set("value", value);
-    }
+    { return this->set("value", value); }
     auto setValueWcs(wchar_t* value)
-    {
-        return this->set("valueWcs", value);
-    }
+    { return this->set("valueWcs", value); }
     auto setVerifyBell(Boolean value)
-    {
-        return this->set("verifyBell", value);
-    }
+    { return this->set("verifyBell", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -8617,13 +7261,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return setDialogTitle(static_cast<XmString>(*value));
-    }
+    { return setDialogTitle(static_cast<XmString>(*value)); }
     Derived& setDialogTitle(const char* value)
-    {
-        return setDialogTitle(std::make_unique<CXmString>(value));
-    }
+    { return setDialogTitle(std::make_unique<CXmString>(value)); }
     XmString getDialogTitle()
     {
         XmString value;
@@ -8829,181 +7469,93 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setPri_vate(unsigned char value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -9098,17 +7650,11 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setPri_vate1(Dimension value)
-        {
-            return widget->set("pri.vate1", value);
-        }
+        { return widget->set("pri.vate1", value); }
         auto setPri_vate2(Dimension value)
-        {
-            return widget->set("pri.vate2", value);
-        }
+        { return widget->set("pri.vate2", value); }
 
     private:
         Builder* widget;
@@ -9127,117 +7673,61 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setEqualSize(Boolean value)
-    {
-        return this->set("equalSize", value);
-    }
+    { return this->set("equalSize", value); }
     auto setFillOption(XmFillOption value)
-    {
-        return this->set("fillOption", value);
-    }
+    { return this->set("fillOption", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -9311,13 +7801,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setNoCellError(std::unique_ptr<CXmString> value)
-    {
-        return setNoCellError(static_cast<XmString>(*value));
-    }
+    { return setNoCellError(static_cast<XmString>(*value)); }
     Derived& setNoCellError(const char* value)
-    {
-        return setNoCellError(std::make_unique<CXmString>(value));
-    }
+    { return setNoCellError(std::make_unique<CXmString>(value)); }
     XmString getNoCellError()
     {
         XmString value;
@@ -9353,141 +7839,73 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBlueSliderLabel(XmString value[3])
-    {
-        return this->set("blueSliderLabel", value);
-    }
+    { return this->set("blueSliderLabel", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setColorListTogLabel(XmString value[2])
-    {
-        return this->set("colorListTogLabel", value);
-    }
+    { return this->set("colorListTogLabel", value); }
     auto setColorMode(XmColorMode value)
-    {
-        return this->set("colorMode", value);
-    }
+    { return this->set("colorMode", value); }
     auto setColorName(char* value)
-    {
-        return this->set("colorName", value);
-    }
+    { return this->set("colorName", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setGreenSliderLabel(XmString value[3])
-    {
-        return this->set("greenSliderLabel", value);
-    }
+    { return this->set("greenSliderLabel", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoCellError(XmString value)
-    {
-        return this->set("noCellError", value);
-    }
+    { return this->set("noCellError", value); }
     auto setNoCellError(std::unique_ptr<CXmString> value)
-    {
-        return this->set("noCellError", std::move(value));
-    }
+    { return this->set("noCellError", std::move(value)); }
     auto setNoCellError(const char* value)
-    {
-        return this->set("noCellError", std::make_unique<CXmString>(value));
-    }
+    { return this->set("noCellError", std::make_unique<CXmString>(value)); }
     auto setRedSliderLabel(XmString value[3])
-    {
-        return this->set("redSliderLabel", value);
-    }
+    { return this->set("redSliderLabel", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSliderTogLabel(XmString value[2])
-    {
-        return this->set("sliderTogLabel", value);
-    }
+    { return this->set("sliderTogLabel", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -9678,13 +8096,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setSelectedItem(std::unique_ptr<CXmString> value)
-    {
-        return setSelectedItem(static_cast<XmString>(*value));
-    }
+    { return setSelectedItem(static_cast<XmString>(*value)); }
     Derived& setSelectedItem(const char* value)
-    {
-        return setSelectedItem(std::make_unique<CXmString>(value));
-    }
+    { return setSelectedItem(std::make_unique<CXmString>(value)); }
     XmString getSelectedItem()
     {
         XmString value;
@@ -9770,177 +8184,91 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowSize(Dimension value)
-    {
-        return this->set("arrowSize", value);
-    }
+    { return this->set("arrowSize", value); }
     auto setArrowSpacing(Dimension value)
-    {
-        return this->set("arrowSpacing", value);
-    }
+    { return this->set("arrowSpacing", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setColumns(short value)
-    {
-        return this->set("columns", value);
-    }
+    { return this->set("columns", value); }
     auto setComboBoxType(unsigned char value)
-    {
-        return this->set("comboBoxType", value);
-    }
+    { return this->set("comboBoxType", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setItemCount(int value)
-    {
-        return this->set("itemCount", value);
-    }
+    { return this->set("itemCount", value); }
     auto setItems(XmStringTable value)
-    {
-        return this->set("items", value);
-    }
+    { return this->set("items", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setList(Widget value)
-    {
-        return this->set("list", value);
-    }
+    { return this->set("list", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMatchBehavior(unsigned char value)
-    {
-        return this->set("matchBehavior", value);
-    }
+    { return this->set("matchBehavior", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPositionMode(XtEnum value)
-    {
-        return this->set("positionMode", value);
-    }
+    { return this->set("positionMode", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSelectedItem(XmString value)
-    {
-        return this->set("selectedItem", value);
-    }
+    { return this->set("selectedItem", value); }
     auto setSelectedItem(std::unique_ptr<CXmString> value)
-    {
-        return this->set("selectedItem", std::move(value));
-    }
+    { return this->set("selectedItem", std::move(value)); }
     auto setSelectedItem(const char* value)
-    {
-        return this->set("selectedItem", std::make_unique<CXmString>(value));
-    }
+    { return this->set("selectedItem", std::make_unique<CXmString>(value)); }
     auto setSelectedPosition(int value)
-    {
-        return this->set("selectedPosition", value);
-    }
+    { return this->set("selectedPosition", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextField(Widget value)
-    {
-        return this->set("textField", value);
-    }
+    { return this->set("textField", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVisibleItemCount(int value)
-    {
-        return this->set("visibleItemCount", value);
-    }
+    { return this->set("visibleItemCount", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -10414,21 +8742,13 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setEntryParent(Widget value)
-        {
-            return widget->set("entryParent", value);
-        }
+        { return widget->set("entryParent", value); }
         auto setOutlineState(unsigned char value)
-        {
-            return widget->set("outlineState", value);
-        }
+        { return widget->set("outlineState", value); }
         auto setPositionIndex(int value)
-        {
-            return widget->set("positionIndex", value);
-        }
+        { return widget->set("positionIndex", value); }
 
     private:
         Builder* widget;
@@ -10447,225 +8767,115 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutomaticSelection(unsigned char value)
-    {
-        return this->set("automaticSelection", value);
-    }
+    { return this->set("automaticSelection", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCollapsedStatePixmap(Pixmap value)
-    {
-        return this->set("collapsedStatePixmap", value);
-    }
+    { return this->set("collapsedStatePixmap", value); }
     auto setDetailColumnHeading(XmString* value)
-    {
-        return this->set("detailColumnHeading", value);
-    }
+    { return this->set("detailColumnHeading", value); }
     auto setDetailColumnHeadingCount(Cardinal value)
-    {
-        return this->set("detailColumnHeadingCount", value);
-    }
+    { return this->set("detailColumnHeadingCount", value); }
     auto setDetailOrder(Cardinal* value)
-    {
-        return this->set("detailOrder", value);
-    }
+    { return this->set("detailOrder", value); }
     auto setDetailOrderCount(Cardinal value)
-    {
-        return this->set("detailOrderCount", value);
-    }
+    { return this->set("detailOrderCount", value); }
     auto setDetailTabList(XmTabList value)
-    {
-        return this->set("detailTabList", value);
-    }
+    { return this->set("detailTabList", value); }
     auto setEntryViewType(unsigned char value)
-    {
-        return this->set("entryViewType", value);
-    }
+    { return this->set("entryViewType", value); }
     auto setExpandedStatePixmap(Pixmap value)
-    {
-        return this->set("expandedStatePixmap", value);
-    }
+    { return this->set("expandedStatePixmap", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLargeCellHeight(Dimension value)
-    {
-        return this->set("largeCellHeight", value);
-    }
+    { return this->set("largeCellHeight", value); }
     auto setLargeCellWidth(Dimension value)
-    {
-        return this->set("largeCellWidth", value);
-    }
+    { return this->set("largeCellWidth", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setLayoutType(unsigned char value)
-    {
-        return this->set("layoutType", value);
-    }
+    { return this->set("layoutType", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOutlineButtonPolicy(unsigned char value)
-    {
-        return this->set("outlineButtonPolicy", value);
-    }
+    { return this->set("outlineButtonPolicy", value); }
     auto setOutlineColumnWidth(Dimension value)
-    {
-        return this->set("outlineColumnWidth", value);
-    }
+    { return this->set("outlineColumnWidth", value); }
     auto setOutlineIndentation(Dimension value)
-    {
-        return this->set("outlineIndentation", value);
-    }
+    { return this->set("outlineIndentation", value); }
     auto setOutlineLineStyle(unsigned char value)
-    {
-        return this->set("outlineLineStyle", value);
-    }
+    { return this->set("outlineLineStyle", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setPrimaryOwnership(unsigned char value)
-    {
-        return this->set("primaryOwnership", value);
-    }
+    { return this->set("primaryOwnership", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSelectColor(Pixel value)
-    {
-        return this->set("selectColor", value);
-    }
+    { return this->set("selectColor", value); }
     auto setSelectedObjectCount(unsigned int value)
-    {
-        return this->set("selectedObjectCount", value);
-    }
+    { return this->set("selectedObjectCount", value); }
     auto setSelectedObjects(WidgetList value)
-    {
-        return this->set("selectedObjects", value);
-    }
+    { return this->set("selectedObjects", value); }
     auto setSelectionPolicy(unsigned char value)
-    {
-        return this->set("selectionPolicy", value);
-    }
+    { return this->set("selectionPolicy", value); }
     auto setSelectionTechnique(unsigned char value)
-    {
-        return this->set("selectionTechnique", value);
-    }
+    { return this->set("selectionTechnique", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSmallCellHeight(Dimension value)
-    {
-        return this->set("smallCellHeight", value);
-    }
+    { return this->set("smallCellHeight", value); }
     auto setSmallCellWidth(Dimension value)
-    {
-        return this->set("smallCellWidth", value);
-    }
+    { return this->set("smallCellWidth", value); }
     auto setSpatialIncludeModel(unsigned char value)
-    {
-        return this->set("spatialIncludeModel", value);
-    }
+    { return this->set("spatialIncludeModel", value); }
     auto setSpatialResizeModel(unsigned char value)
-    {
-        return this->set("spatialResizeModel", value);
-    }
+    { return this->set("spatialResizeModel", value); }
     auto setSpatialSnapModel(unsigned char value)
-    {
-        return this->set("spatialSnapModel", value);
-    }
+    { return this->set("spatialSnapModel", value); }
     auto setSpatialStyle(unsigned char value)
-    {
-        return this->set("spatialStyle", value);
-    }
+    { return this->set("spatialStyle", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -10806,105 +9016,55 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -11177,153 +9337,79 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setActivateOnFill(int value)
-    {
-        return this->set("activateOnFill", value);
-    }
+    { return this->set("activateOnFill", value); }
     auto setAutoTraversal(Boolean value)
-    {
-        return this->set("autoTraversal", value);
-    }
+    { return this->set("autoTraversal", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setComboTranslations(XtTranslations value)
-    {
-        return this->set("comboTranslations", value);
-    }
+    { return this->set("comboTranslations", value); }
     auto setCustomizedCombinationBox(Boolean value)
-    {
-        return this->set("customizedCombinationBox", value);
-    }
+    { return this->set("customizedCombinationBox", value); }
     auto setEditable(Boolean value)
-    {
-        return this->set("editable", value);
-    }
+    { return this->set("editable", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalMargin(Dimension value)
-    {
-        return this->set("horizontalMargin", value);
-    }
+    { return this->set("horizontalMargin", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNewVisualStyle(Boolean value)
-    {
-        return this->set("newVisualStyle", value);
-    }
+    { return this->set("newVisualStyle", value); }
     auto setPopupCursor(Cursor value)
-    {
-        return this->set("popupCursor", value);
-    }
+    { return this->set("popupCursor", value); }
     auto setPopupOffset(int value)
-    {
-        return this->set("popupOffset", value);
-    }
+    { return this->set("popupOffset", value); }
     auto setPopupShellWidget(Widget value)
-    {
-        return this->set("popupShellWidget", value);
-    }
+    { return this->set("popupShellWidget", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowLabel(Boolean value)
-    {
-        return this->set("showLabel", value);
-    }
+    { return this->set("showLabel", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUseTextField(Boolean value)
-    {
-        return this->set("useTextField", value);
-    }
+    { return this->set("useTextField", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerify(Boolean value)
-    {
-        return this->set("verify", value);
-    }
+    { return this->set("verify", value); }
     auto setVerticalMargin(Dimension value)
-    {
-        return this->set("verticalMargin", value);
-    }
+    { return this->set("verticalMargin", value); }
     auto setVisibleItemCount(int value)
-    {
-        return this->set("visibleItemCount", value);
-    }
+    { return this->set("visibleItemCount", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -11396,33 +9482,19 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setChildHorizontalAlignment(unsigned char value)
-        {
-            return widget->set("childHorizontalAlignment", value);
-        }
+        { return widget->set("childHorizontalAlignment", value); }
         auto setChildHorizontalSpacing(Dimension value)
-        {
-            return widget->set("childHorizontalSpacing", value);
-        }
+        { return widget->set("childHorizontalSpacing", value); }
         auto setChildType(unsigned char value)
-        {
-            return widget->set("childType", value);
-        }
+        { return widget->set("childType", value); }
         auto setChildVerticalAlignment(unsigned char value)
-        {
-            return widget->set("childVerticalAlignment", value);
-        }
+        { return widget->set("childVerticalAlignment", value); }
         auto setFrameChildType(unsigned char value)
-        {
-            return widget->set("frameChildType", value);
-        }
+        { return widget->set("frameChildType", value); }
         auto setPri_vate(int value)
-        {
-            return widget->set("pri.vate", value);
-        }
+        { return widget->set("pri.vate", value); }
 
     private:
         Builder* widget;
@@ -11441,105 +9513,55 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -11727,29 +9749,17 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setInsertBefore(Widget value)
-        {
-            return widget->set("insertBefore", value);
-        }
+        { return widget->set("insertBefore", value); }
         auto setNodeCloseFolderPixmap(Pixmap value)
-        {
-            return widget->set("nodeCloseFolderPixmap", value);
-        }
+        { return widget->set("nodeCloseFolderPixmap", value); }
         auto setNodeOpenFolderPixmap(Pixmap value)
-        {
-            return widget->set("nodeOpenFolderPixmap", value);
-        }
+        { return widget->set("nodeOpenFolderPixmap", value); }
         auto setNodeState(XmHierarchyNodeState value)
-        {
-            return widget->set("nodeState", value);
-        }
+        { return widget->set("nodeState", value); }
         auto setParentNode(Widget value)
-        {
-            return widget->set("parentNode", value);
-        }
+        { return widget->set("parentNode", value); }
 
     private:
         Builder* widget;
@@ -11768,117 +9778,61 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoClose(Boolean value)
-    {
-        return this->set("autoClose", value);
-    }
+    { return this->set("autoClose", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCloseFolderPixmap(Pixmap value)
-    {
-        return this->set("closeFolderPixmap", value);
-    }
+    { return this->set("closeFolderPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalMargin(Dimension value)
-    {
-        return this->set("horizontalMargin", value);
-    }
+    { return this->set("horizontalMargin", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOpenFolderPixmap(Pixmap value)
-    {
-        return this->set("openFolderPixmap", value);
-    }
+    { return this->set("openFolderPixmap", value); }
     auto setRefigureMode(Boolean value)
-    {
-        return this->set("refigureMode", value);
-    }
+    { return this->set("refigureMode", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalMargin(Dimension value)
-    {
-        return this->set("verticalMargin", value);
-    }
+    { return this->set("verticalMargin", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -11973,17 +9927,11 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setCellX(short value)
-        {
-            return widget->set("cellX", value);
-        }
+        { return widget->set("cellX", value); }
         auto setCellY(short value)
-        {
-            return widget->set("cellY", value);
-        }
+        { return widget->set("cellY", value); }
 
     private:
         Builder* widget;
@@ -12002,117 +9950,61 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalMargin(Dimension value)
-    {
-        return this->set("horizontalMargin", value);
-    }
+    { return this->set("horizontalMargin", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMinimumCellHeight(Dimension value)
-    {
-        return this->set("minimumCellHeight", value);
-    }
+    { return this->set("minimumCellHeight", value); }
     auto setMinimumCellWidth(Dimension value)
-    {
-        return this->set("minimumCellWidth", value);
-    }
+    { return this->set("minimumCellWidth", value); }
     auto setMinimumHorizontalCells(Dimension value)
-    {
-        return this->set("minimumHorizontalCells", value);
-    }
+    { return this->set("minimumHorizontalCells", value); }
     auto setMinimumVerticalCells(Dimension value)
-    {
-        return this->set("minimumVerticalCells", value);
-    }
+    { return this->set("minimumVerticalCells", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalMargin(Dimension value)
-    {
-        return this->set("verticalMargin", value);
-    }
+    { return this->set("verticalMargin", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -12143,13 +10035,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setFindLabel(std::unique_ptr<CXmString> value)
-    {
-        return setFindLabel(static_cast<XmString>(*value));
-    }
+    { return setFindLabel(static_cast<XmString>(*value)); }
     Derived& setFindLabel(const char* value)
-    {
-        return setFindLabel(std::make_unique<CXmString>(value));
-    }
+    { return setFindLabel(std::make_unique<CXmString>(value)); }
     XmString getFindLabel()
     {
         XmString value;
@@ -12260,13 +10148,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setTitle(std::unique_ptr<CXmString> value)
-    {
-        return setTitle(static_cast<XmString>(*value));
-    }
+    { return setTitle(static_cast<XmString>(*value)); }
     Derived& setTitle(const char* value)
-    {
-        return setTitle(std::make_unique<CXmString>(value));
-    }
+    { return setTitle(std::make_unique<CXmString>(value)); }
     XmString getTitle()
     {
         XmString value;
@@ -12279,13 +10163,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setTitleString(std::unique_ptr<CXmString> value)
-    {
-        return setTitleString(static_cast<XmString>(*value));
-    }
+    { return setTitleString(static_cast<XmString>(*value)); }
     Derived& setTitleString(const char* value)
-    {
-        return setTitleString(std::make_unique<CXmString>(value));
-    }
+    { return setTitleString(std::make_unique<CXmString>(value)); }
     XmString getTitleString()
     {
         XmString value;
@@ -12333,141 +10213,73 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setFindLabel(XmString value)
-    {
-        return this->set("findLabel", value);
-    }
+    { return this->set("findLabel", value); }
     auto setFindLabel(std::unique_ptr<CXmString> value)
-    {
-        return this->set("findLabel", std::move(value));
-    }
+    { return this->set("findLabel", std::move(value)); }
     auto setFindLabel(const char* value)
-    {
-        return this->set("findLabel", std::make_unique<CXmString>(value));
-    }
+    { return this->set("findLabel", std::make_unique<CXmString>(value)); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowFind(Boolean value)
-    {
-        return this->set("showFind", value);
-    }
+    { return this->set("showFind", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTitle(XmString value)
-    {
-        return this->set("title", value);
-    }
+    { return this->set("title", value); }
     auto setTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("title", std::move(value));
-    }
+    { return this->set("title", std::move(value)); }
     auto setTitle(const char* value)
-    {
-        return this->set("title", std::make_unique<CXmString>(value));
-    }
+    { return this->set("title", std::make_unique<CXmString>(value)); }
     auto setTitleString(XmString value)
-    {
-        return this->set("titleString", value);
-    }
+    { return this->set("titleString", value); }
     auto setTitleString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("titleString", std::move(value));
-    }
+    { return this->set("titleString", std::move(value)); }
     auto setTitleString(const char* value)
-    {
-        return this->set("titleString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("titleString", std::make_unique<CXmString>(value)); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVisibleItemCount(int value)
-    {
-        return this->set("visibleItemCount", value);
-    }
+    { return this->set("visibleItemCount", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -12710,21 +10522,13 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setNotebookChildType(unsigned char value)
-        {
-            return widget->set("notebookChildType", value);
-        }
+        { return widget->set("notebookChildType", value); }
         auto setPageNumber(int value)
-        {
-            return widget->set("pageNumber", value);
-        }
+        { return widget->set("pageNumber", value); }
         auto setResizable(Boolean value)
-        {
-            return widget->set("resizable", value);
-        }
+        { return widget->set("resizable", value); }
 
     private:
         Builder* widget;
@@ -12743,165 +10547,85 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackPageBackground(Pixel value)
-    {
-        return this->set("backPageBackground", value);
-    }
+    { return this->set("backPageBackground", value); }
     auto setBackPageForeground(Pixel value)
-    {
-        return this->set("backPageForeground", value);
-    }
+    { return this->set("backPageForeground", value); }
     auto setBackPageNumber(Cardinal value)
-    {
-        return this->set("backPageNumber", value);
-    }
+    { return this->set("backPageNumber", value); }
     auto setBackPagePlacement(unsigned char value)
-    {
-        return this->set("backPagePlacement", value);
-    }
+    { return this->set("backPagePlacement", value); }
     auto setBackPageSize(Dimension value)
-    {
-        return this->set("backPageSize", value);
-    }
+    { return this->set("backPageSize", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBindingPixmap(Pixmap value)
-    {
-        return this->set("bindingPixmap", value);
-    }
+    { return this->set("bindingPixmap", value); }
     auto setBindingType(unsigned char value)
-    {
-        return this->set("bindingType", value);
-    }
+    { return this->set("bindingType", value); }
     auto setBindingWidth(Dimension value)
-    {
-        return this->set("bindingWidth", value);
-    }
+    { return this->set("bindingWidth", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCurrentPageNumber(int value)
-    {
-        return this->set("currentPageNumber", value);
-    }
+    { return this->set("currentPageNumber", value); }
     auto setFirstPageNumber(int value)
-    {
-        return this->set("firstPageNumber", value);
-    }
+    { return this->set("firstPageNumber", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setFrameBackground(Pixel value)
-    {
-        return this->set("frameBackground", value);
-    }
+    { return this->set("frameBackground", value); }
     auto setFrameShadowThickness(Dimension value)
-    {
-        return this->set("frameShadowThickness", value);
-    }
+    { return this->set("frameShadowThickness", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setInnerMarginHeight(Dimension value)
-    {
-        return this->set("innerMarginHeight", value);
-    }
+    { return this->set("innerMarginHeight", value); }
     auto setInnerMarginWidth(Dimension value)
-    {
-        return this->set("innerMarginWidth", value);
-    }
+    { return this->set("innerMarginWidth", value); }
     auto setLastPageNumber(int value)
-    {
-        return this->set("lastPageNumber", value);
-    }
+    { return this->set("lastPageNumber", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMajorTabSpacing(Dimension value)
-    {
-        return this->set("majorTabSpacing", value);
-    }
+    { return this->set("majorTabSpacing", value); }
     auto setMinorTabSpacing(Dimension value)
-    {
-        return this->set("minorTabSpacing", value);
-    }
+    { return this->set("minorTabSpacing", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -13031,13 +10755,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setLabelString(static_cast<XmString>(*value));
-    }
+    { return setLabelString(static_cast<XmString>(*value)); }
     Derived& setLabelString(const char* value)
-    {
-        return setLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setLabelString(std::make_unique<CXmString>(value)); }
     XmString getLabelString()
     {
         XmString value;
@@ -13368,13 +11088,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setTearOffTitle(std::unique_ptr<CXmString> value)
-    {
-        return setTearOffTitle(static_cast<XmString>(*value));
-    }
+    { return setTearOffTitle(static_cast<XmString>(*value)); }
     Derived& setTearOffTitle(const char* value)
-    {
-        return setTearOffTitle(std::make_unique<CXmString>(value));
-    }
+    { return setTearOffTitle(std::make_unique<CXmString>(value)); }
     XmString getTearOffTitle()
     {
         XmString value;
@@ -13428,13 +11144,9 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setPositionIndex(short value)
-        {
-            return widget->set("positionIndex", value);
-        }
+        { return widget->set("positionIndex", value); }
 
     private:
         Builder* widget;
@@ -13453,245 +11165,125 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAdjustLast(Boolean value)
-    {
-        return this->set("adjustLast", value);
-    }
+    { return this->set("adjustLast", value); }
     auto setAdjustMargin(Boolean value)
-    {
-        return this->set("adjustMargin", value);
-    }
+    { return this->set("adjustMargin", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setEntryAlignment(unsigned char value)
-    {
-        return this->set("entryAlignment", value);
-    }
+    { return this->set("entryAlignment", value); }
     auto setEntryBorder(Dimension value)
-    {
-        return this->set("entryBorder", value);
-    }
+    { return this->set("entryBorder", value); }
     auto setEntryClass(WidgetClass value)
-    {
-        return this->set("entryClass", value);
-    }
+    { return this->set("entryClass", value); }
     auto setEntryVerticalAlignment(unsigned char value)
-    {
-        return this->set("entryVerticalAlignment", value);
-    }
+    { return this->set("entryVerticalAlignment", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setInsertPosition(XtOrderProc value)
-    {
-        return this->set("insertPosition", value);
-    }
+    { return this->set("insertPosition", value); }
     auto setIsAligned(Boolean value)
-    {
-        return this->set("isAligned", value);
-    }
+    { return this->set("isAligned", value); }
     auto setIsHomogeneous(Boolean value)
-    {
-        return this->set("isHomogeneous", value);
-    }
+    { return this->set("isHomogeneous", value); }
     auto setLabelString(XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMenuAccelerator(String value)
-    {
-        return this->set("menuAccelerator", value);
-    }
+    { return this->set("menuAccelerator", value); }
     auto setMenuHelpWidget(Widget value)
-    {
-        return this->set("menuHelpWidget", value);
-    }
+    { return this->set("menuHelpWidget", value); }
     auto setMenuHistory(Widget value)
-    {
-        return this->set("menuHistory", value);
-    }
+    { return this->set("menuHistory", value); }
     auto setMenuPost(String value)
-    {
-        return this->set("menuPost", value);
-    }
+    { return this->set("menuPost", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNumColumns(short value)
-    {
-        return this->set("numColumns", value);
-    }
+    { return this->set("numColumns", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setPacking(unsigned char value)
-    {
-        return this->set("packing", value);
-    }
+    { return this->set("packing", value); }
     auto setPopupEnabled(XtEnum value)
-    {
-        return this->set("popupEnabled", value);
-    }
+    { return this->set("popupEnabled", value); }
     auto setPostFromCount(int value)
-    {
-        return this->set("postFromCount", value);
-    }
+    { return this->set("postFromCount", value); }
     auto setPostFromList(Widget* value)
-    {
-        return this->set("postFromList", value);
-    }
+    { return this->set("postFromList", value); }
     auto setRadioAlwaysOne(Boolean value)
-    {
-        return this->set("radioAlwaysOne", value);
-    }
+    { return this->set("radioAlwaysOne", value); }
     auto setRadioBehavior(Boolean value)
-    {
-        return this->set("radioBehavior", value);
-    }
+    { return this->set("radioBehavior", value); }
     auto setResizeHeight(Boolean value)
-    {
-        return this->set("resizeHeight", value);
-    }
+    { return this->set("resizeHeight", value); }
     auto setResizeWidth(Boolean value)
-    {
-        return this->set("resizeWidth", value);
-    }
+    { return this->set("resizeWidth", value); }
     auto setRowColumnType(unsigned char value)
-    {
-        return this->set("rowColumnType", value);
-    }
+    { return this->set("rowColumnType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSpacing(Dimension value)
-    {
-        return this->set("spacing", value);
-    }
+    { return this->set("spacing", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setSubMenuId(Widget value)
-    {
-        return this->set("subMenuId", value);
-    }
+    { return this->set("subMenuId", value); }
     auto setTearOffModel(unsigned char value)
-    {
-        return this->set("tearOffModel", value);
-    }
+    { return this->set("tearOffModel", value); }
     auto setTearOffTitle(XmString value)
-    {
-        return this->set("tearOffTitle", value);
-    }
+    { return this->set("tearOffTitle", value); }
     auto setTearOffTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("tearOffTitle", std::move(value));
-    }
+    { return this->set("tearOffTitle", std::move(value)); }
     auto setTearOffTitle(const char* value)
-    {
-        return this->set("tearOffTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("tearOffTitle", std::make_unique<CXmString>(value)); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWhichButton(unsigned int value)
-    {
-        return this->set("whichButton", value);
-    }
+    { return this->set("whichButton", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -13969,13 +11561,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setTitleString(std::unique_ptr<CXmString> value)
-    {
-        return setTitleString(static_cast<XmString>(*value));
-    }
+    { return setTitleString(static_cast<XmString>(*value)); }
     Derived& setTitleString(const char* value)
-    {
-        return setTitleString(std::make_unique<CXmString>(value));
-    }
+    { return setTitleString(std::make_unique<CXmString>(value)); }
     XmString getTitleString()
     {
         XmString value;
@@ -14028,189 +11616,97 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDecimalPoints(short value)
-    {
-        return this->set("decimalPoints", value);
-    }
+    { return this->set("decimalPoints", value); }
     auto setEditable(Boolean value)
-    {
-        return this->set("editable", value);
-    }
+    { return this->set("editable", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMaximum(int value)
-    {
-        return this->set("maximum", value);
-    }
+    { return this->set("maximum", value); }
     auto setMinimum(int value)
-    {
-        return this->set("minimum", value);
-    }
+    { return this->set("minimum", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setPri_vate(int value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setProcessingDirection(unsigned char value)
-    {
-        return this->set("processingDirection", value);
-    }
+    { return this->set("processingDirection", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setScaleHeight(Dimension value)
-    {
-        return this->set("scaleHeight", value);
-    }
+    { return this->set("scaleHeight", value); }
     auto setScaleMultiple(int value)
-    {
-        return this->set("scaleMultiple", value);
-    }
+    { return this->set("scaleMultiple", value); }
     auto setScaleWidth(Dimension value)
-    {
-        return this->set("scaleWidth", value);
-    }
+    { return this->set("scaleWidth", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowArrows(XtEnum value)
-    {
-        return this->set("showArrows", value);
-    }
+    { return this->set("showArrows", value); }
     auto setShowValue(Boolean value)
-    {
-        return this->set("showValue", value);
-    }
+    { return this->set("showValue", value); }
     auto setSliderMark(XtEnum value)
-    {
-        return this->set("sliderMark", value);
-    }
+    { return this->set("sliderMark", value); }
     auto setSliderSize(int value)
-    {
-        return this->set("sliderSize", value);
-    }
+    { return this->set("sliderSize", value); }
     auto setSliderVisual(XtEnum value)
-    {
-        return this->set("sliderVisual", value);
-    }
+    { return this->set("sliderVisual", value); }
     auto setSlidingMode(XtEnum value)
-    {
-        return this->set("slidingMode", value);
-    }
+    { return this->set("slidingMode", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTitleString(XmString value)
-    {
-        return this->set("titleString", value);
-    }
+    { return this->set("titleString", value); }
     auto setTitleString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("titleString", std::move(value));
-    }
+    { return this->set("titleString", std::move(value)); }
     auto setTitleString(const char* value)
-    {
-        return this->set("titleString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("titleString", std::make_unique<CXmString>(value)); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setValue(int value)
-    {
-        return this->set("value", value);
-    }
+    { return this->set("value", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -14405,13 +11901,9 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setScrolledWindowChildType(unsigned char value)
-        {
-            return widget->set("scrolledWindowChildType", value);
-        }
+        { return widget->set("scrolledWindowChildType", value); }
 
     private:
         Builder* widget;
@@ -14430,141 +11922,73 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoDragModel(XtEnum value)
-    {
-        return this->set("autoDragModel", value);
-    }
+    { return this->set("autoDragModel", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setClipWindow(XmDrawingAreaWidget value)
-    {
-        return this->set("clipWindow", value);
-    }
+    { return this->set("clipWindow", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalScrollBar(XmScrollBarWidget value)
-    {
-        return this->set("horizontalScrollBar", value);
-    }
+    { return this->set("horizontalScrollBar", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setScrollBarDisplayPolicy(unsigned char value)
-    {
-        return this->set("scrollBarDisplayPolicy", value);
-    }
+    { return this->set("scrollBarDisplayPolicy", value); }
     auto setScrollBarPlacement(unsigned char value)
-    {
-        return this->set("scrollBarPlacement", value);
-    }
+    { return this->set("scrollBarPlacement", value); }
     auto setScrolledWindowMarginHeight(Dimension value)
-    {
-        return this->set("scrolledWindowMarginHeight", value);
-    }
+    { return this->set("scrolledWindowMarginHeight", value); }
     auto setScrolledWindowMarginWidth(Dimension value)
-    {
-        return this->set("scrolledWindowMarginWidth", value);
-    }
+    { return this->set("scrolledWindowMarginWidth", value); }
     auto setScrollingPolicy(unsigned char value)
-    {
-        return this->set("scrollingPolicy", value);
-    }
+    { return this->set("scrollingPolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSpacing(Dimension value)
-    {
-        return this->set("spacing", value);
-    }
+    { return this->set("spacing", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalScrollBar(XmScrollBarWidget value)
-    {
-        return this->set("verticalScrollBar", value);
-    }
+    { return this->set("verticalScrollBar", value); }
     auto setVisualPolicy(unsigned char value)
-    {
-        return this->set("visualPolicy", value);
-    }
+    { return this->set("visualPolicy", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setWorkWindow(Widget value)
-    {
-        return this->set("workWindow", value);
-    }
+    { return this->set("workWindow", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -14736,53 +12160,29 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setArrowSensitivity(unsigned char value)
-        {
-            return widget->set("arrowSensitivity", value);
-        }
+        { return widget->set("arrowSensitivity", value); }
         auto setDecimalPoints(short value)
-        {
-            return widget->set("decimalPoints", value);
-        }
+        { return widget->set("decimalPoints", value); }
         auto setIncrementValue(int value)
-        {
-            return widget->set("incrementValue", value);
-        }
+        { return widget->set("incrementValue", value); }
         auto setMaximumValue(int value)
-        {
-            return widget->set("maximumValue", value);
-        }
+        { return widget->set("maximumValue", value); }
         auto setMinimumValue(int value)
-        {
-            return widget->set("minimumValue", value);
-        }
+        { return widget->set("minimumValue", value); }
         auto setNumValues(int value)
-        {
-            return widget->set("numValues", value);
-        }
+        { return widget->set("numValues", value); }
         auto setPosition(int value)
-        {
-            return widget->set("position", value);
-        }
+        { return widget->set("position", value); }
         auto setPositionType(unsigned char value)
-        {
-            return widget->set("positionType", value);
-        }
+        { return widget->set("positionType", value); }
         auto setSpinBoxChildType(unsigned char value)
-        {
-            return widget->set("spinBoxChildType", value);
-        }
+        { return widget->set("spinBoxChildType", value); }
         auto setValues(XmStringTable value)
-        {
-            return widget->set("values", value);
-        }
+        { return widget->set("values", value); }
         auto setWrap(Boolean value)
-        {
-            return widget->set("wrap", value);
-        }
+        { return widget->set("wrap", value); }
 
     private:
         Builder* widget;
@@ -14801,133 +12201,69 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowLayout(unsigned char value)
-    {
-        return this->set("arrowLayout", value);
-    }
+    { return this->set("arrowLayout", value); }
     auto setArrowOrientation(unsigned char value)
-    {
-        return this->set("arrowOrientation", value);
-    }
+    { return this->set("arrowOrientation", value); }
     auto setArrowSize(Dimension value)
-    {
-        return this->set("arrowSize", value);
-    }
+    { return this->set("arrowSize", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDefaultArrowSensitivity(unsigned char value)
-    {
-        return this->set("defaultArrowSensitivity", value);
-    }
+    { return this->set("defaultArrowSensitivity", value); }
     auto setDetailShadowThickness(Dimension value)
-    {
-        return this->set("detailShadowThickness", value);
-    }
+    { return this->set("detailShadowThickness", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialDelay(unsigned int value)
-    {
-        return this->set("initialDelay", value);
-    }
+    { return this->set("initialDelay", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setRepeatDelay(unsigned int value)
-    {
-        return this->set("repeatDelay", value);
-    }
+    { return this->set("repeatDelay", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSpacing(Dimension value)
-    {
-        return this->set("spacing", value);
-    }
+    { return this->set("spacing", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -15262,189 +12598,97 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNumStacks(int value)
-    {
-        return this->set("numStacks", value);
-    }
+    { return this->set("numStacks", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSelectedIndex(int value)
-    {
-        return this->set("selectedIndex", value);
-    }
+    { return this->set("selectedIndex", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStackedEffect(Boolean value)
-    {
-        return this->set("stackedEffect", value);
-    }
+    { return this->set("stackedEffect", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTabAutoSelect(Boolean value)
-    {
-        return this->set("tabAutoSelect", value);
-    }
+    { return this->set("tabAutoSelect", value); }
     auto setTabCornerPercent(int value)
-    {
-        return this->set("tabCornerPercent", value);
-    }
+    { return this->set("tabCornerPercent", value); }
     auto setTabEdge(XmTabEdge value)
-    {
-        return this->set("tabEdge", value);
-    }
+    { return this->set("tabEdge", value); }
     auto setTabLabelSpacing(Dimension value)
-    {
-        return this->set("tabLabelSpacing", value);
-    }
+    { return this->set("tabLabelSpacing", value); }
     auto setTabList(XmTabbedStackList value)
-    {
-        return this->set("tabList", value);
-    }
+    { return this->set("tabList", value); }
     auto setTabMarginHeight(Dimension value)
-    {
-        return this->set("tabMarginHeight", value);
-    }
+    { return this->set("tabMarginHeight", value); }
     auto setTabMarginWidth(Dimension value)
-    {
-        return this->set("tabMarginWidth", value);
-    }
+    { return this->set("tabMarginWidth", value); }
     auto setTabMode(XmTabMode value)
-    {
-        return this->set("tabMode", value);
-    }
+    { return this->set("tabMode", value); }
     auto setTabOffset(Dimension value)
-    {
-        return this->set("tabOffset", value);
-    }
+    { return this->set("tabOffset", value); }
     auto setTabOrientation(XmTabOrientation value)
-    {
-        return this->set("tabOrientation", value);
-    }
+    { return this->set("tabOrientation", value); }
     auto setTabSelectColor(Pixel value)
-    {
-        return this->set("tabSelectColor", value);
-    }
+    { return this->set("tabSelectColor", value); }
     auto setTabSelectPixmap(Pixmap value)
-    {
-        return this->set("tabSelectPixmap", value);
-    }
+    { return this->set("tabSelectPixmap", value); }
     auto setTabStyle(XmTabStyle value)
-    {
-        return this->set("tabStyle", value);
-    }
+    { return this->set("tabStyle", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalIndex(int value)
-    {
-        return this->set("traversalIndex", value);
-    }
+    { return this->set("traversalIndex", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUniformTabSize(Boolean value)
-    {
-        return this->set("uniformTabSize", value);
-    }
+    { return this->set("uniformTabSize", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUseImageCache(Boolean value)
-    {
-        return this->set("useImageCache", value);
-    }
+    { return this->set("useImageCache", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -15494,17 +12738,11 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDesktopParent(Widget value)
-    {
-        return this->set("desktopParent", value);
-    }
+    { return this->set("desktopParent", value); }
     auto setExtensionType(unsigned char value)
-    {
-        return this->set("extensionType", value);
-    }
+    { return this->set("extensionType", value); }
     auto setLogicalParent(Widget value)
-    {
-        return this->set("logicalParent", value);
-    }
+    { return this->set("logicalParent", value); }
 };
 
 template <typename Derived>
@@ -15559,13 +12797,9 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setExtensionType(unsigned char value)
-    {
-        return this->set("extensionType", value);
-    }
+    { return this->set("extensionType", value); }
     auto setLogicalParent(Widget value)
-    {
-        return this->set("logicalParent", value);
-    }
+    { return this->set("logicalParent", value); }
 };
 
 template <typename Derived>
@@ -15604,113 +12838,59 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmIconGCacheObjPart* value)
-    {
-        return this->set(".cache", value);
-    }
+    { return this->set(".cache", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setContainerID(Widget value)
-    {
-        return this->set("containerID", value);
-    }
+    { return this->set("containerID", value); }
     auto setDetail(XmString* value)
-    {
-        return this->set("detail", value);
-    }
+    { return this->set("detail", value); }
     auto setDetailCount(Cardinal value)
-    {
-        return this->set("detailCount", value);
-    }
+    { return this->set("detailCount", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelString(XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLargeIconMask(Pixmap value)
-    {
-        return this->set("largeIconMask", value);
-    }
+    { return this->set("largeIconMask", value); }
     auto setLargeIconPixmap(Pixmap value)
-    {
-        return this->set("largeIconPixmap", value);
-    }
+    { return this->set("largeIconPixmap", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSmallIconMask(Pixmap value)
-    {
-        return this->set("smallIconMask", value);
-    }
+    { return this->set("smallIconMask", value); }
     auto setSmallIconPixmap(Pixmap value)
-    {
-        return this->set("smallIconPixmap", value);
-    }
+    { return this->set("smallIconPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setViewType(unsigned char value)
-    {
-        return this->set("viewType", value);
-    }
+    { return this->set("viewType", value); }
     auto setVisualEmphasis(unsigned char value)
-    {
-        return this->set("visualEmphasis", value);
-    }
+    { return this->set("visualEmphasis", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -15816,129 +12996,67 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value)
-    {
-        return this->set(".cache", value);
-    }
+    { return this->set(".cache", value); }
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSubMenuId(Widget value)
-    {
-        return this->set("subMenuId", value);
-    }
+    { return this->set("subMenuId", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -16058,129 +13176,67 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value)
-    {
-        return this->set(".cache", value);
-    }
+    { return this->set(".cache", value); }
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowAsDefault(Dimension value)
-    {
-        return this->set("showAsDefault", value);
-    }
+    { return this->set("showAsDefault", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -16302,133 +13358,69 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto set_cache(XmLabelGCacheObjPart* value)
-    {
-        return this->set(".cache", value);
-    }
+    { return this->set(".cache", value); }
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setDetailShadowThickness(Dimension value)
-    {
-        return this->set("detailShadowThickness", value);
-    }
+    { return this->set("detailShadowThickness", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSet(unsigned char value)
-    {
-        return this->set("set", value);
-    }
+    { return this->set("set", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -16565,209 +13557,107 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCascadePixmap(Pixmap value)
-    {
-        return this->set("cascadePixmap", value);
-    }
+    { return this->set("cascadePixmap", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLabelType(unsigned char value)
-    {
-        return this->set("labelType", value);
-    }
+    { return this->set("labelType", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMappingDelay(int value)
-    {
-        return this->set("mappingDelay", value);
-    }
+    { return this->set("mappingDelay", value); }
     auto setMarginBottom(Dimension value)
-    {
-        return this->set("marginBottom", value);
-    }
+    { return this->set("marginBottom", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginLeft(Dimension value)
-    {
-        return this->set("marginLeft", value);
-    }
+    { return this->set("marginLeft", value); }
     auto setMarginRight(Dimension value)
-    {
-        return this->set("marginRight", value);
-    }
+    { return this->set("marginRight", value); }
     auto setMarginTop(Dimension value)
-    {
-        return this->set("marginTop", value);
-    }
+    { return this->set("marginTop", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setSubMenuId(Widget value)
-    {
-        return this->set("subMenuId", value);
-    }
+    { return this->set("subMenuId", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -16857,13 +13747,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setLabelString(static_cast<XmString>(*value));
-    }
+    { return setLabelString(static_cast<XmString>(*value)); }
     Derived& setLabelString(const char* value)
-    {
-        return setLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setLabelString(std::make_unique<CXmString>(value)); }
     _XmString getLabelString()
     {
         _XmString value;
@@ -16960,209 +13846,107 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLabelType(unsigned char value)
-    {
-        return this->set("labelType", value);
-    }
+    { return this->set("labelType", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginBottom(Dimension value)
-    {
-        return this->set("marginBottom", value);
-    }
+    { return this->set("marginBottom", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginLeft(Dimension value)
-    {
-        return this->set("marginLeft", value);
-    }
+    { return this->set("marginLeft", value); }
     auto setMarginRight(Dimension value)
-    {
-        return this->set("marginRight", value);
-    }
+    { return this->set("marginRight", value); }
     auto setMarginTop(Dimension value)
-    {
-        return this->set("marginTop", value);
-    }
+    { return this->set("marginTop", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setMultiClick(unsigned char value)
-    {
-        return this->set("multiClick", value);
-    }
+    { return this->set("multiClick", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setPushButtonEnabled(Boolean value)
-    {
-        return this->set("pushButtonEnabled", value);
-    }
+    { return this->set("pushButtonEnabled", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -17339,221 +14123,113 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setArmColor(Pixel value)
-    {
-        return this->set("armColor", value);
-    }
+    { return this->set("armColor", value); }
     auto setArmPixmap(Pixmap value)
-    {
-        return this->set("armPixmap", value);
-    }
+    { return this->set("armPixmap", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDefaultButtonShadowThickness(Dimension value)
-    {
-        return this->set("defaultButtonShadowThickness", value);
-    }
+    { return this->set("defaultButtonShadowThickness", value); }
     auto setFillOnArm(Boolean value)
-    {
-        return this->set("fillOnArm", value);
-    }
+    { return this->set("fillOnArm", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLabelType(unsigned char value)
-    {
-        return this->set("labelType", value);
-    }
+    { return this->set("labelType", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginBottom(Dimension value)
-    {
-        return this->set("marginBottom", value);
-    }
+    { return this->set("marginBottom", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginLeft(Dimension value)
-    {
-        return this->set("marginLeft", value);
-    }
+    { return this->set("marginLeft", value); }
     auto setMarginRight(Dimension value)
-    {
-        return this->set("marginRight", value);
-    }
+    { return this->set("marginRight", value); }
     auto setMarginTop(Dimension value)
-    {
-        return this->set("marginTop", value);
-    }
+    { return this->set("marginTop", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setMultiClick(unsigned char value)
-    {
-        return this->set("multiClick", value);
-    }
+    { return this->set("multiClick", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowAsDefault(Dimension value)
-    {
-        return this->set("showAsDefault", value);
-    }
+    { return this->set("showAsDefault", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -17819,257 +14495,131 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDetailShadowThickness(Dimension value)
-    {
-        return this->set("detailShadowThickness", value);
-    }
+    { return this->set("detailShadowThickness", value); }
     auto setFillOnSelect(Boolean value)
-    {
-        return this->set("fillOnSelect", value);
-    }
+    { return this->set("fillOnSelect", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setIndeterminateInsensitivePixmap(Pixmap value)
-    {
-        return this->set("indeterminateInsensitivePixmap", value);
-    }
+    { return this->set("indeterminateInsensitivePixmap", value); }
     auto setIndeterminatePixmap(Pixmap value)
-    {
-        return this->set("indeterminatePixmap", value);
-    }
+    { return this->set("indeterminatePixmap", value); }
     auto setIndicatorOn(unsigned char value)
-    {
-        return this->set("indicatorOn", value);
-    }
+    { return this->set("indicatorOn", value); }
     auto setIndicatorSize(Dimension value)
-    {
-        return this->set("indicatorSize", value);
-    }
+    { return this->set("indicatorSize", value); }
     auto setIndicatorType(unsigned char value)
-    {
-        return this->set("indicatorType", value);
-    }
+    { return this->set("indicatorType", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLabelType(unsigned char value)
-    {
-        return this->set("labelType", value);
-    }
+    { return this->set("labelType", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginBottom(Dimension value)
-    {
-        return this->set("marginBottom", value);
-    }
+    { return this->set("marginBottom", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginLeft(Dimension value)
-    {
-        return this->set("marginLeft", value);
-    }
+    { return this->set("marginLeft", value); }
     auto setMarginRight(Dimension value)
-    {
-        return this->set("marginRight", value);
-    }
+    { return this->set("marginRight", value); }
     auto setMarginTop(Dimension value)
-    {
-        return this->set("marginTop", value);
-    }
+    { return this->set("marginTop", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSelectColor(Pixel value)
-    {
-        return this->set("selectColor", value);
-    }
+    { return this->set("selectColor", value); }
     auto setSelectInsensitivePixmap(Pixmap value)
-    {
-        return this->set("selectInsensitivePixmap", value);
-    }
+    { return this->set("selectInsensitivePixmap", value); }
     auto setSelectPixmap(Pixmap value)
-    {
-        return this->set("selectPixmap", value);
-    }
+    { return this->set("selectPixmap", value); }
     auto setSet(unsigned char value)
-    {
-        return this->set("set", value);
-    }
+    { return this->set("set", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSpacing(Dimension value)
-    {
-        return this->set("spacing", value);
-    }
+    { return this->set("spacing", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setToggleMode(unsigned char value)
-    {
-        return this->set("toggleMode", value);
-    }
+    { return this->set("toggleMode", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUnselectColor(Pixel value)
-    {
-        return this->set("unselectColor", value);
-    }
+    { return this->set("unselectColor", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVisibleWhenOff(Boolean value)
-    {
-        return this->set("visibleWhenOff", value);
-    }
+    { return this->set("visibleWhenOff", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -18203,58 +14753,34 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setEntryLabelAlignment(unsigned char value)
-        {
-            return widget->set("entryLabelAlignment", value);
-        }
+        { return widget->set("entryLabelAlignment", value); }
         auto setEntryLabelFontList(XmFontList value)
-        {
-            return widget->set("entryLabelFontList", value);
-        }
+        { return widget->set("entryLabelFontList", value); }
         auto setEntryLabelPixmap(Pixmap value)
-        {
-            return widget->set("entryLabelPixmap", value);
-        }
+        { return widget->set("entryLabelPixmap", value); }
         auto setEntryLabelRenderTable(XmFontList value)
-        {
-            return widget->set("entryLabelRenderTable", value);
-        }
+        { return widget->set("entryLabelRenderTable", value); }
         auto setEntryLabelString(XmString value)
-        {
-            return widget->set("entryLabelString", value);
-        }
+        { return widget->set("entryLabelString", value); }
         auto setEntryLabelString(std::unique_ptr<CXmString> value)
-        {
-            return widget->set("entryLabelString", std::move(value));
-        }
+        { return widget->set("entryLabelString", std::move(value)); }
         auto setEntryLabelString(const char* value)
         {
             return widget->set(
                 "entryLabelString", std::make_unique<CXmString>(value));
         }
         auto setEntryLabelType(unsigned char value)
-        {
-            return widget->set("entryLabelType", value);
-        }
+        { return widget->set("entryLabelType", value); }
         auto setFillStyle(unsigned char value)
-        {
-            return widget->set("fillStyle", value);
-        }
+        { return widget->set("fillStyle", value); }
         auto setPri_vate(Boolean value)
-        {
-            return widget->set("pri.vate", value);
-        }
+        { return widget->set("pri.vate", value); }
         auto setShowEntryLabel(Boolean value)
-        {
-            return widget->set("showEntryLabel", value);
-        }
+        { return widget->set("showEntryLabel", value); }
         auto setStretchable(Boolean value)
-        {
-            return widget->set("stretchable", value);
-        }
+        { return widget->set("stretchable", value); }
 
     private:
         Builder* widget;
@@ -18273,213 +14799,109 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultEntryLabelAlignment(unsigned char value)
-    {
-        return this->set("defaultEntryLabelAlignment", value);
-    }
+    { return this->set("defaultEntryLabelAlignment", value); }
     auto setDefaultEntryLabelFontList(XmFontList value)
-    {
-        return this->set("defaultEntryLabelFontList", value);
-    }
+    { return this->set("defaultEntryLabelFontList", value); }
     auto setDefaultEntryLabelRenderTable(XmFontList value)
-    {
-        return this->set("defaultEntryLabelRenderTable", value);
-    }
+    { return this->set("defaultEntryLabelRenderTable", value); }
     auto setDefaultFillStyle(unsigned char value)
-    {
-        return this->set("defaultFillStyle", value);
-    }
+    { return this->set("defaultFillStyle", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setDistribution(unsigned char value)
-    {
-        return this->set("distribution", value);
-    }
+    { return this->set("distribution", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setItemSpacing(Dimension value)
-    {
-        return this->set("itemSpacing", value);
-    }
+    { return this->set("itemSpacing", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLabelSpacing(Dimension value)
-    {
-        return this->set("labelSpacing", value);
-    }
+    { return this->set("labelSpacing", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -18574,77 +14996,41 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setBottomAttachment(unsigned char value)
-        {
-            return widget->set("bottomAttachment", value);
-        }
+        { return widget->set("bottomAttachment", value); }
         auto setBottomOffset(int value)
-        {
-            return widget->set("bottomOffset", value);
-        }
+        { return widget->set("bottomOffset", value); }
         auto setBottomPosition(int value)
-        {
-            return widget->set("bottomPosition", value);
-        }
+        { return widget->set("bottomPosition", value); }
         auto setBottomWidget(Widget value)
-        {
-            return widget->set("bottomWidget", value);
-        }
+        { return widget->set("bottomWidget", value); }
         auto setLeftAttachment(unsigned char value)
-        {
-            return widget->set("leftAttachment", value);
-        }
+        { return widget->set("leftAttachment", value); }
         auto setLeftOffset(int value)
-        {
-            return widget->set("leftOffset", value);
-        }
+        { return widget->set("leftOffset", value); }
         auto setLeftPosition(int value)
-        {
-            return widget->set("leftPosition", value);
-        }
+        { return widget->set("leftPosition", value); }
         auto setLeftWidget(Widget value)
-        {
-            return widget->set("leftWidget", value);
-        }
+        { return widget->set("leftWidget", value); }
         auto setResizable(Boolean value)
-        {
-            return widget->set("resizable", value);
-        }
+        { return widget->set("resizable", value); }
         auto setRightAttachment(unsigned char value)
-        {
-            return widget->set("rightAttachment", value);
-        }
+        { return widget->set("rightAttachment", value); }
         auto setRightOffset(int value)
-        {
-            return widget->set("rightOffset", value);
-        }
+        { return widget->set("rightOffset", value); }
         auto setRightPosition(int value)
-        {
-            return widget->set("rightPosition", value);
-        }
+        { return widget->set("rightPosition", value); }
         auto setRightWidget(Widget value)
-        {
-            return widget->set("rightWidget", value);
-        }
+        { return widget->set("rightWidget", value); }
         auto setTopAttachment(unsigned char value)
-        {
-            return widget->set("topAttachment", value);
-        }
+        { return widget->set("topAttachment", value); }
         auto setTopOffset(int value)
-        {
-            return widget->set("topOffset", value);
-        }
+        { return widget->set("topOffset", value); }
         auto setTopPosition(int value)
-        {
-            return widget->set("topPosition", value);
-        }
+        { return widget->set("topPosition", value); }
         auto setTopWidget(Widget value)
-        {
-            return widget->set("topWidget", value);
-        }
+        { return widget->set("topWidget", value); }
 
     private:
         Builder* widget;
@@ -18663,197 +15049,101 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setFractionBase(int value)
-    {
-        return this->set("fractionBase", value);
-    }
+    { return this->set("fractionBase", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalSpacing(Dimension value)
-    {
-        return this->set("horizontalSpacing", value);
-    }
+    { return this->set("horizontalSpacing", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setPri_vate(unsigned char value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setRubberPositioning(Boolean value)
-    {
-        return this->set("rubberPositioning", value);
-    }
+    { return this->set("rubberPositioning", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalSpacing(Dimension value)
-    {
-        return this->set("verticalSpacing", value);
-    }
+    { return this->set("verticalSpacing", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -18884,13 +15174,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setCancelLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setCancelLabelString(static_cast<XmString>(*value));
-    }
+    { return setCancelLabelString(static_cast<XmString>(*value)); }
     Derived& setCancelLabelString(const char* value)
-    {
-        return setCancelLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setCancelLabelString(std::make_unique<CXmString>(value)); }
     XmString getCancelLabelString()
     {
         XmString value;
@@ -18925,13 +15211,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setHelpLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setHelpLabelString(static_cast<XmString>(*value));
-    }
+    { return setHelpLabelString(static_cast<XmString>(*value)); }
     Derived& setHelpLabelString(const char* value)
-    {
-        return setHelpLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setHelpLabelString(std::make_unique<CXmString>(value)); }
     XmString getHelpLabelString()
     {
         XmString value;
@@ -18955,13 +15237,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setMessageString(std::unique_ptr<CXmString> value)
-    {
-        return setMessageString(static_cast<XmString>(*value));
-    }
+    { return setMessageString(static_cast<XmString>(*value)); }
     Derived& setMessageString(const char* value)
-    {
-        return setMessageString(std::make_unique<CXmString>(value));
-    }
+    { return setMessageString(std::make_unique<CXmString>(value)); }
     XmString getMessageString()
     {
         XmString value;
@@ -19001,13 +15279,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setOkLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setOkLabelString(static_cast<XmString>(*value));
-    }
+    { return setOkLabelString(static_cast<XmString>(*value)); }
     Derived& setOkLabelString(const char* value)
-    {
-        return setOkLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setOkLabelString(std::make_unique<CXmString>(value)); }
     XmString getOkLabelString()
     {
         XmString value;
@@ -19044,250 +15318,130 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setCancelLabelString(XmString value)
-    {
-        return this->set("cancelLabelString", value);
-    }
+    { return this->set("cancelLabelString", value); }
     auto setCancelLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("cancelLabelString", std::move(value));
-    }
+    { return this->set("cancelLabelString", std::move(value)); }
     auto setCancelLabelString(const char* value)
     {
         return this->set(
             "cancelLabelString", std::make_unique<CXmString>(value));
     }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultButtonType(unsigned char value)
-    {
-        return this->set("defaultButtonType", value);
-    }
+    { return this->set("defaultButtonType", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setDialogType(unsigned char value)
-    {
-        return this->set("dialogType", value);
-    }
+    { return this->set("dialogType", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHelpLabelString(XmString value)
-    {
-        return this->set("helpLabelString", value);
-    }
+    { return this->set("helpLabelString", value); }
     auto setHelpLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("helpLabelString", std::move(value));
-    }
+    { return this->set("helpLabelString", std::move(value)); }
     auto setHelpLabelString(const char* value)
-    {
-        return this->set("helpLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("helpLabelString", std::make_unique<CXmString>(value)); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMessageAlignment(unsigned char value)
-    {
-        return this->set("messageAlignment", value);
-    }
+    { return this->set("messageAlignment", value); }
     auto setMessageString(XmString value)
-    {
-        return this->set("messageString", value);
-    }
+    { return this->set("messageString", value); }
     auto setMessageString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("messageString", std::move(value));
-    }
+    { return this->set("messageString", std::move(value)); }
     auto setMessageString(const char* value)
-    {
-        return this->set("messageString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("messageString", std::make_unique<CXmString>(value)); }
     auto setMinimizeButtons(Boolean value)
-    {
-        return this->set("minimizeButtons", value);
-    }
+    { return this->set("minimizeButtons", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setOkLabelString(XmString value)
-    {
-        return this->set("okLabelString", value);
-    }
+    { return this->set("okLabelString", value); }
     auto setOkLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("okLabelString", std::move(value));
-    }
+    { return this->set("okLabelString", std::move(value)); }
     auto setOkLabelString(const char* value)
-    {
-        return this->set("okLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("okLabelString", std::make_unique<CXmString>(value)); }
     auto setPri_vate(unsigned char value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setSymbolPixmap(Pixmap value)
-    {
-        return this->set("symbolPixmap", value);
-    }
+    { return this->set("symbolPixmap", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -19318,13 +15472,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setApplyLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setApplyLabelString(static_cast<XmString>(*value));
-    }
+    { return setApplyLabelString(static_cast<XmString>(*value)); }
     Derived& setApplyLabelString(const char* value)
-    {
-        return setApplyLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setApplyLabelString(std::make_unique<CXmString>(value)); }
     XmString getApplyLabelString()
     {
         XmString value;
@@ -19353,13 +15503,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setCancelLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setCancelLabelString(static_cast<XmString>(*value));
-    }
+    { return setCancelLabelString(static_cast<XmString>(*value)); }
     Derived& setCancelLabelString(const char* value)
-    {
-        return setCancelLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setCancelLabelString(std::make_unique<CXmString>(value)); }
     XmString getCancelLabelString()
     {
         XmString value;
@@ -19394,13 +15540,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setHelpLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setHelpLabelString(static_cast<XmString>(*value));
-    }
+    { return setHelpLabelString(static_cast<XmString>(*value)); }
     Derived& setHelpLabelString(const char* value)
-    {
-        return setHelpLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setHelpLabelString(std::make_unique<CXmString>(value)); }
     XmString getHelpLabelString()
     {
         XmString value;
@@ -19435,13 +15577,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setListLabelString(static_cast<XmString>(*value));
-    }
+    { return setListLabelString(static_cast<XmString>(*value)); }
     Derived& setListLabelString(const char* value)
-    {
-        return setListLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setListLabelString(std::make_unique<CXmString>(value)); }
     XmString getListLabelString()
     {
         XmString value;
@@ -19519,13 +15657,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setOkLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setOkLabelString(static_cast<XmString>(*value));
-    }
+    { return setOkLabelString(static_cast<XmString>(*value)); }
     Derived& setOkLabelString(const char* value)
-    {
-        return setOkLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setOkLabelString(std::make_unique<CXmString>(value)); }
     XmString getOkLabelString()
     {
         XmString value;
@@ -19538,13 +15672,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setSelectionLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setSelectionLabelString(static_cast<XmString>(*value));
-    }
+    { return setSelectionLabelString(static_cast<XmString>(*value)); }
     Derived& setSelectionLabelString(const char* value)
-    {
-        return setSelectionLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setSelectionLabelString(std::make_unique<CXmString>(value)); }
     XmString getSelectionLabelString()
     {
         XmString value;
@@ -19579,13 +15709,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setTextString(std::unique_ptr<CXmString> value)
-    {
-        return setTextString(static_cast<XmString>(*value));
-    }
+    { return setTextString(static_cast<XmString>(*value)); }
     Derived& setTextString(const char* value)
-    {
-        return setTextString(std::make_unique<CXmString>(value));
-    }
+    { return setTextString(std::make_unique<CXmString>(value)); }
     XmString getTextString()
     {
         XmString value;
@@ -19611,304 +15737,162 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setApplyLabelString(XmString value)
-    {
-        return this->set("applyLabelString", value);
-    }
+    { return this->set("applyLabelString", value); }
     auto setApplyLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("applyLabelString", std::move(value));
-    }
+    { return this->set("applyLabelString", std::move(value)); }
     auto setApplyLabelString(const char* value)
     {
         return this->set(
             "applyLabelString", std::make_unique<CXmString>(value));
     }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setCancelLabelString(XmString value)
-    {
-        return this->set("cancelLabelString", value);
-    }
+    { return this->set("cancelLabelString", value); }
     auto setCancelLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("cancelLabelString", std::move(value));
-    }
+    { return this->set("cancelLabelString", std::move(value)); }
     auto setCancelLabelString(const char* value)
     {
         return this->set(
             "cancelLabelString", std::make_unique<CXmString>(value));
     }
     auto setChildPlacement(unsigned char value)
-    {
-        return this->set("childPlacement", value);
-    }
+    { return this->set("childPlacement", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setDialogType(unsigned char value)
-    {
-        return this->set("dialogType", value);
-    }
+    { return this->set("dialogType", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHelpLabelString(XmString value)
-    {
-        return this->set("helpLabelString", value);
-    }
+    { return this->set("helpLabelString", value); }
     auto setHelpLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("helpLabelString", std::move(value));
-    }
+    { return this->set("helpLabelString", std::move(value)); }
     auto setHelpLabelString(const char* value)
-    {
-        return this->set("helpLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("helpLabelString", std::make_unique<CXmString>(value)); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setListItemCount(int value)
-    {
-        return this->set("listItemCount", value);
-    }
+    { return this->set("listItemCount", value); }
     auto setListItems(XmString* value)
-    {
-        return this->set("listItems", value);
-    }
+    { return this->set("listItems", value); }
     auto setListLabelString(XmString value)
-    {
-        return this->set("listLabelString", value);
-    }
+    { return this->set("listLabelString", value); }
     auto setListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("listLabelString", std::move(value));
-    }
+    { return this->set("listLabelString", std::move(value)); }
     auto setListLabelString(const char* value)
-    {
-        return this->set("listLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("listLabelString", std::make_unique<CXmString>(value)); }
     auto setListVisibleItemCount(int value)
-    {
-        return this->set("listVisibleItemCount", value);
-    }
+    { return this->set("listVisibleItemCount", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMinimizeButtons(Boolean value)
-    {
-        return this->set("minimizeButtons", value);
-    }
+    { return this->set("minimizeButtons", value); }
     auto setMustMatch(Boolean value)
-    {
-        return this->set("mustMatch", value);
-    }
+    { return this->set("mustMatch", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setOkLabelString(XmString value)
-    {
-        return this->set("okLabelString", value);
-    }
+    { return this->set("okLabelString", value); }
     auto setOkLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("okLabelString", std::move(value));
-    }
+    { return this->set("okLabelString", std::move(value)); }
     auto setOkLabelString(const char* value)
-    {
-        return this->set("okLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("okLabelString", std::make_unique<CXmString>(value)); }
     auto setPri_vate(unsigned char value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setSelectionLabelString(XmString value)
-    {
-        return this->set("selectionLabelString", value);
-    }
+    { return this->set("selectionLabelString", value); }
     auto setSelectionLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("selectionLabelString", std::move(value));
-    }
+    { return this->set("selectionLabelString", std::move(value)); }
     auto setSelectionLabelString(const char* value)
     {
         return this->set(
             "selectionLabelString", std::make_unique<CXmString>(value));
     }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextAccelerators(XtAccelerators value)
-    {
-        return this->set("textAccelerators", value);
-    }
+    { return this->set("textAccelerators", value); }
     auto setTextColumns(short value)
-    {
-        return this->set("textColumns", value);
-    }
+    { return this->set("textColumns", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextString(XmString value)
-    {
-        return this->set("textString", value);
-    }
+    { return this->set("textString", value); }
     auto setTextString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("textString", std::move(value));
-    }
+    { return this->set("textString", std::move(value)); }
     auto setTextString(const char* value)
-    {
-        return this->set("textString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("textString", std::make_unique<CXmString>(value)); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -20195,54 +16179,32 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setFreeTabPixmap(Boolean value)
-        {
-            return widget->set("freeTabPixmap", value);
-        }
+        { return widget->set("freeTabPixmap", value); }
         auto setTabAlignment(unsigned char value)
-        {
-            return widget->set("tabAlignment", value);
-        }
+        { return widget->set("tabAlignment", value); }
         auto setTabBackground(Pixel value)
-        {
-            return widget->set("tabBackground", value);
-        }
+        { return widget->set("tabBackground", value); }
         auto setTabBackgroundPixmap(Pixmap value)
-        {
-            return widget->set("tabBackgroundPixmap", value);
-        }
+        { return widget->set("tabBackgroundPixmap", value); }
         auto setTabForeground(Pixel value)
-        {
-            return widget->set("tabForeground", value);
-        }
+        { return widget->set("tabForeground", value); }
         auto setTabLabelPixmap(Pixmap value)
-        {
-            return widget->set("tabLabelPixmap", value);
-        }
+        { return widget->set("tabLabelPixmap", value); }
         auto setTabLabelString(XmString value)
-        {
-            return widget->set("tabLabelString", value);
-        }
+        { return widget->set("tabLabelString", value); }
         auto setTabLabelString(std::unique_ptr<CXmString> value)
-        {
-            return widget->set("tabLabelString", std::move(value));
-        }
+        { return widget->set("tabLabelString", std::move(value)); }
         auto setTabLabelString(const char* value)
         {
             return widget->set(
                 "tabLabelString", std::make_unique<CXmString>(value));
         }
         auto setTabPixmapPlacement(XmPixmapPlacement value)
-        {
-            return widget->set("tabPixmapPlacement", value);
-        }
+        { return widget->set("tabPixmapPlacement", value); }
         auto setTabStringDirection(XmStringDirection value)
-        {
-            return widget->set("tabStringDirection", value);
-        }
+        { return widget->set("tabStringDirection", value); }
 
     private:
         Builder* widget;
@@ -20261,257 +16223,131 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStackedEffect(Boolean value)
-    {
-        return this->set("stackedEffect", value);
-    }
+    { return this->set("stackedEffect", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTabAutoSelect(Boolean value)
-    {
-        return this->set("tabAutoSelect", value);
-    }
+    { return this->set("tabAutoSelect", value); }
     auto setTabBoxWidget(Widget value)
-    {
-        return this->set("tabBoxWidget", value);
-    }
+    { return this->set("tabBoxWidget", value); }
     auto setTabCornerPercent(int value)
-    {
-        return this->set("tabCornerPercent", value);
-    }
+    { return this->set("tabCornerPercent", value); }
     auto setTabLabelSpacing(Dimension value)
-    {
-        return this->set("tabLabelSpacing", value);
-    }
+    { return this->set("tabLabelSpacing", value); }
     auto setTabMarginHeight(Dimension value)
-    {
-        return this->set("tabMarginHeight", value);
-    }
+    { return this->set("tabMarginHeight", value); }
     auto setTabMarginWidth(Dimension value)
-    {
-        return this->set("tabMarginWidth", value);
-    }
+    { return this->set("tabMarginWidth", value); }
     auto setTabMode(XmTabMode value)
-    {
-        return this->set("tabMode", value);
-    }
+    { return this->set("tabMode", value); }
     auto setTabOffset(Dimension value)
-    {
-        return this->set("tabOffset", value);
-    }
+    { return this->set("tabOffset", value); }
     auto setTabOrientation(XmTabOrientation value)
-    {
-        return this->set("tabOrientation", value);
-    }
+    { return this->set("tabOrientation", value); }
     auto setTabSelectColor(Pixel value)
-    {
-        return this->set("tabSelectColor", value);
-    }
+    { return this->set("tabSelectColor", value); }
     auto setTabSelectPixmap(Pixel value)
-    {
-        return this->set("tabSelectPixmap", value);
-    }
+    { return this->set("tabSelectPixmap", value); }
     auto setTabSide(XmTabSide value)
-    {
-        return this->set("tabSide", value);
-    }
+    { return this->set("tabSide", value); }
     auto setTabStyle(XmTabStyle value)
-    {
-        return this->set("tabStyle", value);
-    }
+    { return this->set("tabStyle", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUniformTabSize(Boolean value)
-    {
-        return this->set("uniformTabSize", value);
-    }
+    { return this->set("uniformTabSize", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUseImageCache(Boolean value)
-    {
-        return this->set("useImageCache", value);
-    }
+    { return this->set("useImageCache", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -20539,105 +16375,55 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -20698,129 +16484,67 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoClose(Boolean value)
-    {
-        return this->set("autoClose", value);
-    }
+    { return this->set("autoClose", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCloseFolderPixmap(Pixmap value)
-    {
-        return this->set("closeFolderPixmap", value);
-    }
+    { return this->set("closeFolderPixmap", value); }
     auto setConnectNodes(Boolean value)
-    {
-        return this->set("connectNodes", value);
-    }
+    { return this->set("connectNodes", value); }
     auto setConstrainWidth(Boolean value)
-    {
-        return this->set("constrainWidth", value);
-    }
+    { return this->set("constrainWidth", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalMargin(Dimension value)
-    {
-        return this->set("horizontalMargin", value);
-    }
+    { return this->set("horizontalMargin", value); }
     auto setIndentSpace(Dimension value)
-    {
-        return this->set("indentSpace", value);
-    }
+    { return this->set("indentSpace", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOpenFolderPixmap(Pixmap value)
-    {
-        return this->set("openFolderPixmap", value);
-    }
+    { return this->set("openFolderPixmap", value); }
     auto setRefigureMode(Boolean value)
-    {
-        return this->set("refigureMode", value);
-    }
+    { return this->set("refigureMode", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalMargin(Dimension value)
-    {
-        return this->set("verticalMargin", value);
-    }
+    { return this->set("verticalMargin", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -20926,29 +16650,17 @@ public:
         {
         }
         ConstraintsBuilder& operator=(const ConstraintsBuilder&)
-        {
-            return *this;
-        }
+        { return *this; }
         auto setLineBackgroundColor(Pixel value)
-        {
-            return widget->set("lineBackgroundColor", value);
-        }
+        { return widget->set("lineBackgroundColor", value); }
         auto setLineColor(Pixel value)
-        {
-            return widget->set("lineColor", value);
-        }
+        { return widget->set("lineColor", value); }
         auto setLineStyle(int value)
-        {
-            return widget->set("lineStyle", value);
-        }
+        { return widget->set("lineStyle", value); }
         auto setLineWidth(int value)
-        {
-            return widget->set("lineWidth", value);
-        }
+        { return widget->set("lineWidth", value); }
         auto setOpenClosePadding(int value)
-        {
-            return widget->set("openClosePadding", value);
-        }
+        { return widget->set("openClosePadding", value); }
 
     private:
         Builder* widget;
@@ -20967,145 +16679,75 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoClose(Boolean value)
-    {
-        return this->set("autoClose", value);
-    }
+    { return this->set("autoClose", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setCloseFolderPixmap(Pixmap value)
-    {
-        return this->set("closeFolderPixmap", value);
-    }
+    { return this->set("closeFolderPixmap", value); }
     auto setCompressStyle(XmTreeCompressStyle value)
-    {
-        return this->set("compressStyle", value);
-    }
+    { return this->set("compressStyle", value); }
     auto setConnectStyle(XmTreeConnectStyle value)
-    {
-        return this->set("connectStyle", value);
-    }
+    { return this->set("connectStyle", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalDelta(Dimension value)
-    {
-        return this->set("horizontalDelta", value);
-    }
+    { return this->set("horizontalDelta", value); }
     auto setHorizontalMargin(Dimension value)
-    {
-        return this->set("horizontalMargin", value);
-    }
+    { return this->set("horizontalMargin", value); }
     auto setHorizontalNodeSpace(Dimension value)
-    {
-        return this->set("horizontalNodeSpace", value);
-    }
+    { return this->set("horizontalNodeSpace", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setOpenFolderPixmap(Pixmap value)
-    {
-        return this->set("openFolderPixmap", value);
-    }
+    { return this->set("openFolderPixmap", value); }
     auto setOrientation(unsigned char value)
-    {
-        return this->set("orientation", value);
-    }
+    { return this->set("orientation", value); }
     auto setRefigureMode(Boolean value)
-    {
-        return this->set("refigureMode", value);
-    }
+    { return this->set("refigureMode", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalDelta(Dimension value)
-    {
-        return this->set("verticalDelta", value);
-    }
+    { return this->set("verticalDelta", value); }
     auto setVerticalMargin(Dimension value)
-    {
-        return this->set("verticalMargin", value);
-    }
+    { return this->set("verticalMargin", value); }
     auto setVerticalNodeSpace(Dimension value)
-    {
-        return this->set("verticalNodeSpace", value);
-    }
+    { return this->set("verticalNodeSpace", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -21210,169 +16852,87 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAutoDragModel(XtEnum value)
-    {
-        return this->set("autoDragModel", value);
-    }
+    { return this->set("autoDragModel", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setClipWindow(XmDrawingAreaWidget value)
-    {
-        return this->set("clipWindow", value);
-    }
+    { return this->set("clipWindow", value); }
     auto setCommandWindow(Widget value)
-    {
-        return this->set("commandWindow", value);
-    }
+    { return this->set("commandWindow", value); }
     auto setCommandWindowLocation(unsigned char value)
-    {
-        return this->set("commandWindowLocation", value);
-    }
+    { return this->set("commandWindowLocation", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHorizontalScrollBar(XmScrollBarWidget value)
-    {
-        return this->set("horizontalScrollBar", value);
-    }
+    { return this->set("horizontalScrollBar", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMainWindowMarginHeight(Dimension value)
-    {
-        return this->set("mainWindowMarginHeight", value);
-    }
+    { return this->set("mainWindowMarginHeight", value); }
     auto setMainWindowMarginWidth(Dimension value)
-    {
-        return this->set("mainWindowMarginWidth", value);
-    }
+    { return this->set("mainWindowMarginWidth", value); }
     auto setMenuBar(Widget value)
-    {
-        return this->set("menuBar", value);
-    }
+    { return this->set("menuBar", value); }
     auto setMessageWindow(Widget value)
-    {
-        return this->set("messageWindow", value);
-    }
+    { return this->set("messageWindow", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setScrollBarDisplayPolicy(unsigned char value)
-    {
-        return this->set("scrollBarDisplayPolicy", value);
-    }
+    { return this->set("scrollBarDisplayPolicy", value); }
     auto setScrollBarPlacement(unsigned char value)
-    {
-        return this->set("scrollBarPlacement", value);
-    }
+    { return this->set("scrollBarPlacement", value); }
     auto setScrolledWindowMarginHeight(Dimension value)
-    {
-        return this->set("scrolledWindowMarginHeight", value);
-    }
+    { return this->set("scrolledWindowMarginHeight", value); }
     auto setScrolledWindowMarginWidth(Dimension value)
-    {
-        return this->set("scrolledWindowMarginWidth", value);
-    }
+    { return this->set("scrolledWindowMarginWidth", value); }
     auto setScrollingPolicy(unsigned char value)
-    {
-        return this->set("scrollingPolicy", value);
-    }
+    { return this->set("scrollingPolicy", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowSeparator(Boolean value)
-    {
-        return this->set("showSeparator", value);
-    }
+    { return this->set("showSeparator", value); }
     auto setSpacing(Dimension value)
-    {
-        return this->set("spacing", value);
-    }
+    { return this->set("spacing", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setVerticalScrollBar(XmScrollBarWidget value)
-    {
-        return this->set("verticalScrollBar", value);
-    }
+    { return this->set("verticalScrollBar", value); }
     auto setVisualPolicy(unsigned char value)
-    {
-        return this->set("visualPolicy", value);
-    }
+    { return this->set("visualPolicy", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setWorkWindow(Widget value)
-    {
-        return this->set("workWindow", value);
-    }
+    { return this->set("workWindow", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -21565,189 +17125,97 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setArrowLayout(unsigned char value)
-    {
-        return this->set("arrowLayout", value);
-    }
+    { return this->set("arrowLayout", value); }
     auto setArrowOrientation(unsigned char value)
-    {
-        return this->set("arrowOrientation", value);
-    }
+    { return this->set("arrowOrientation", value); }
     auto setArrowSensitivity(unsigned char value)
-    {
-        return this->set("arrowSensitivity", value);
-    }
+    { return this->set("arrowSensitivity", value); }
     auto setArrowSize(Dimension value)
-    {
-        return this->set("arrowSize", value);
-    }
+    { return this->set("arrowSize", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setColumns(short value)
-    {
-        return this->set("columns", value);
-    }
+    { return this->set("columns", value); }
     auto setDecimalPoints(short value)
-    {
-        return this->set("decimalPoints", value);
-    }
+    { return this->set("decimalPoints", value); }
     auto setDefaultArrowSensitivity(unsigned char value)
-    {
-        return this->set("defaultArrowSensitivity", value);
-    }
+    { return this->set("defaultArrowSensitivity", value); }
     auto setDetailShadowThickness(Dimension value)
-    {
-        return this->set("detailShadowThickness", value);
-    }
+    { return this->set("detailShadowThickness", value); }
     auto setEditable(Boolean value)
-    {
-        return this->set("editable", value);
-    }
+    { return this->set("editable", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setIncrementValue(int value)
-    {
-        return this->set("incrementValue", value);
-    }
+    { return this->set("incrementValue", value); }
     auto setInitialDelay(unsigned int value)
-    {
-        return this->set("initialDelay", value);
-    }
+    { return this->set("initialDelay", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMaximumValue(int value)
-    {
-        return this->set("maximumValue", value);
-    }
+    { return this->set("maximumValue", value); }
     auto setMinimumValue(int value)
-    {
-        return this->set("minimumValue", value);
-    }
+    { return this->set("minimumValue", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNumValues(int value)
-    {
-        return this->set("numValues", value);
-    }
+    { return this->set("numValues", value); }
     auto setPosition(int value)
-    {
-        return this->set("position", value);
-    }
+    { return this->set("position", value); }
     auto setPositionType(unsigned char value)
-    {
-        return this->set("positionType", value);
-    }
+    { return this->set("positionType", value); }
     auto setRepeatDelay(unsigned int value)
-    {
-        return this->set("repeatDelay", value);
-    }
+    { return this->set("repeatDelay", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setSpacing(Dimension value)
-    {
-        return this->set("spacing", value);
-    }
+    { return this->set("spacing", value); }
     auto setSpinBoxChildType(unsigned char value)
-    {
-        return this->set("spinBoxChildType", value);
-    }
+    { return this->set("spinBoxChildType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextField(Widget value)
-    {
-        return this->set("textField", value);
-    }
+    { return this->set("textField", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setValues(XmStringTable value)
-    {
-        return this->set("values", value);
-    }
+    { return this->set("values", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setWrap(Boolean value)
-    {
-        return this->set("wrap", value);
-    }
+    { return this->set("wrap", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -21786,21 +17254,13 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDesktopParent(Widget value)
-    {
-        return this->set("desktopParent", value);
-    }
+    { return this->set("desktopParent", value); }
     auto setExtensionType(unsigned char value)
-    {
-        return this->set("extensionType", value);
-    }
+    { return this->set("extensionType", value); }
     auto setLogicalParent(Widget value)
-    {
-        return this->set("logicalParent", value);
-    }
+    { return this->set("logicalParent", value); }
     auto setUseAsyncGeometry(Boolean value)
-    {
-        return this->set("useAsyncGeometry", value);
-    }
+    { return this->set("useAsyncGeometry", value); }
 };
 
 template <typename Derived>
@@ -21828,17 +17288,11 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setDesktopParent(Widget value)
-    {
-        return this->set("desktopParent", value);
-    }
+    { return this->set("desktopParent", value); }
     auto setExtensionType(unsigned char value)
-    {
-        return this->set("extensionType", value);
-    }
+    { return this->set("extensionType", value); }
     auto setLogicalParent(Widget value)
-    {
-        return this->set("logicalParent", value);
-    }
+    { return this->set("logicalParent", value); }
 };
 
 template <typename Derived>
@@ -21910,229 +17364,117 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAccelerator(char* value)
-    {
-        return this->set("accelerator", value);
-    }
+    { return this->set("accelerator", value); }
     auto setAcceleratorText(_XmString value)
-    {
-        return this->set("acceleratorText", value);
-    }
+    { return this->set("acceleratorText", value); }
     auto setAcceleratorText(std::unique_ptr<CXmString> value)
-    {
-        return this->set("acceleratorText", std::move(value));
-    }
+    { return this->set("acceleratorText", std::move(value)); }
     auto setAcceleratorText(const char* value)
-    {
-        return this->set("acceleratorText", std::make_unique<CXmString>(value));
-    }
+    { return this->set("acceleratorText", std::make_unique<CXmString>(value)); }
     auto setAlignment(unsigned char value)
-    {
-        return this->set("alignment", value);
-    }
+    { return this->set("alignment", value); }
     auto setArmColor(Pixel value)
-    {
-        return this->set("armColor", value);
-    }
+    { return this->set("armColor", value); }
     auto setArmPixmap(Pixmap value)
-    {
-        return this->set("armPixmap", value);
-    }
+    { return this->set("armPixmap", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setDefaultButtonShadowThickness(Dimension value)
-    {
-        return this->set("defaultButtonShadowThickness", value);
-    }
+    { return this->set("defaultButtonShadowThickness", value); }
     auto setFillOnArm(Boolean value)
-    {
-        return this->set("fillOnArm", value);
-    }
+    { return this->set("fillOnArm", value); }
     auto setFontList(XmFontList value)
-    {
-        return this->set("fontList", value);
-    }
+    { return this->set("fontList", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightOnEnter(Boolean value)
-    {
-        return this->set("highlightOnEnter", value);
-    }
+    { return this->set("highlightOnEnter", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHighlightThickness(Dimension value)
-    {
-        return this->set("highlightThickness", value);
-    }
+    { return this->set("highlightThickness", value); }
     auto setLabelInsensitivePixmap(Pixmap value)
-    {
-        return this->set("labelInsensitivePixmap", value);
-    }
+    { return this->set("labelInsensitivePixmap", value); }
     auto setLabelPixmap(Pixmap value)
-    {
-        return this->set("labelPixmap", value);
-    }
+    { return this->set("labelPixmap", value); }
     auto setLabelString(_XmString value)
-    {
-        return this->set("labelString", value);
-    }
+    { return this->set("labelString", value); }
     auto setLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("labelString", std::move(value));
-    }
+    { return this->set("labelString", std::move(value)); }
     auto setLabelString(const char* value)
-    {
-        return this->set("labelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("labelString", std::make_unique<CXmString>(value)); }
     auto setLabelType(unsigned char value)
-    {
-        return this->set("labelType", value);
-    }
+    { return this->set("labelType", value); }
     auto setLayoutDirection(XmDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setMargin(Dimension value)
-    {
-        return this->set("margin", value);
-    }
+    { return this->set("margin", value); }
     auto setMarginBottom(Dimension value)
-    {
-        return this->set("marginBottom", value);
-    }
+    { return this->set("marginBottom", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginLeft(Dimension value)
-    {
-        return this->set("marginLeft", value);
-    }
+    { return this->set("marginLeft", value); }
     auto setMarginRight(Dimension value)
-    {
-        return this->set("marginRight", value);
-    }
+    { return this->set("marginRight", value); }
     auto setMarginTop(Dimension value)
-    {
-        return this->set("marginTop", value);
-    }
+    { return this->set("marginTop", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMnemonic(KeySym value)
-    {
-        return this->set("mnemonic", value);
-    }
+    { return this->set("mnemonic", value); }
     auto setMnemonicCharSet(XmStringCharSet value)
-    {
-        return this->set("mnemonicCharSet", value);
-    }
+    { return this->set("mnemonicCharSet", value); }
     auto setMultiClick(unsigned char value)
-    {
-        return this->set("multiClick", value);
-    }
+    { return this->set("multiClick", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setPixmapPlacement(XmPixmapPlacement value)
-    {
-        return this->set("pixmapPlacement", value);
-    }
+    { return this->set("pixmapPlacement", value); }
     auto setPixmapTextPadding(Dimension value)
-    {
-        return this->set("pixmapTextPadding", value);
-    }
+    { return this->set("pixmapTextPadding", value); }
     auto setPri_vate(Boolean value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setRecomputeSize(Boolean value)
-    {
-        return this->set("recomputeSize", value);
-    }
+    { return this->set("recomputeSize", value); }
     auto setRenderTable(XmFontList value)
-    {
-        return this->set("renderTable", value);
-    }
+    { return this->set("renderTable", value); }
     auto setSeparatorType(unsigned char value)
-    {
-        return this->set("separatorType", value);
-    }
+    { return this->set("separatorType", value); }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShowAsDefault(Dimension value)
-    {
-        return this->set("showAsDefault", value);
-    }
+    { return this->set("showAsDefault", value); }
     auto setStringDirection(unsigned char value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -22158,13 +17500,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setCommand(std::unique_ptr<CXmString> value)
-    {
-        return setCommand(static_cast<XmString>(*value));
-    }
+    { return setCommand(static_cast<XmString>(*value)); }
     Derived& setCommand(const char* value)
-    {
-        return setCommand(std::make_unique<CXmString>(value));
-    }
+    { return setCommand(std::make_unique<CXmString>(value)); }
     XmString getCommand()
     {
         XmString value;
@@ -22276,13 +17614,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setPromptString(std::unique_ptr<CXmString> value)
-    {
-        return setPromptString(static_cast<XmString>(*value));
-    }
+    { return setPromptString(static_cast<XmString>(*value)); }
     Derived& setPromptString(const char* value)
-    {
-        return setPromptString(std::make_unique<CXmString>(value));
-    }
+    { return setPromptString(std::make_unique<CXmString>(value)); }
     XmString getPromptString()
     {
         XmString value;
@@ -22319,344 +17653,182 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setApplyLabelString(XmString value)
-    {
-        return this->set("applyLabelString", value);
-    }
+    { return this->set("applyLabelString", value); }
     auto setApplyLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("applyLabelString", std::move(value));
-    }
+    { return this->set("applyLabelString", std::move(value)); }
     auto setApplyLabelString(const char* value)
     {
         return this->set(
             "applyLabelString", std::make_unique<CXmString>(value));
     }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setCancelLabelString(XmString value)
-    {
-        return this->set("cancelLabelString", value);
-    }
+    { return this->set("cancelLabelString", value); }
     auto setCancelLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("cancelLabelString", std::move(value));
-    }
+    { return this->set("cancelLabelString", std::move(value)); }
     auto setCancelLabelString(const char* value)
     {
         return this->set(
             "cancelLabelString", std::make_unique<CXmString>(value));
     }
     auto setChildPlacement(unsigned char value)
-    {
-        return this->set("childPlacement", value);
-    }
+    { return this->set("childPlacement", value); }
     auto setCommand(XmString value)
-    {
-        return this->set("command", value);
-    }
+    { return this->set("command", value); }
     auto setCommand(std::unique_ptr<CXmString> value)
-    {
-        return this->set("command", std::move(value));
-    }
+    { return this->set("command", std::move(value)); }
     auto setCommand(const char* value)
-    {
-        return this->set("command", std::make_unique<CXmString>(value));
-    }
+    { return this->set("command", std::make_unique<CXmString>(value)); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setDialogType(unsigned char value)
-    {
-        return this->set("dialogType", value);
-    }
+    { return this->set("dialogType", value); }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHelpLabelString(XmString value)
-    {
-        return this->set("helpLabelString", value);
-    }
+    { return this->set("helpLabelString", value); }
     auto setHelpLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("helpLabelString", std::move(value));
-    }
+    { return this->set("helpLabelString", std::move(value)); }
     auto setHelpLabelString(const char* value)
-    {
-        return this->set("helpLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("helpLabelString", std::make_unique<CXmString>(value)); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setHistoryItemCount(int value)
-    {
-        return this->set("historyItemCount", value);
-    }
+    { return this->set("historyItemCount", value); }
     auto setHistoryItems(XmString* value)
-    {
-        return this->set("historyItems", value);
-    }
+    { return this->set("historyItems", value); }
     auto setHistoryMaxItems(int value)
-    {
-        return this->set("historyMaxItems", value);
-    }
+    { return this->set("historyMaxItems", value); }
     auto setHistoryVisibleItemCount(int value)
-    {
-        return this->set("historyVisibleItemCount", value);
-    }
+    { return this->set("historyVisibleItemCount", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setListItemCount(int value)
-    {
-        return this->set("listItemCount", value);
-    }
+    { return this->set("listItemCount", value); }
     auto setListItems(XmString* value)
-    {
-        return this->set("listItems", value);
-    }
+    { return this->set("listItems", value); }
     auto setListLabelString(XmString value)
-    {
-        return this->set("listLabelString", value);
-    }
+    { return this->set("listLabelString", value); }
     auto setListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("listLabelString", std::move(value));
-    }
+    { return this->set("listLabelString", std::move(value)); }
     auto setListLabelString(const char* value)
-    {
-        return this->set("listLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("listLabelString", std::make_unique<CXmString>(value)); }
     auto setListVisibleItemCount(int value)
-    {
-        return this->set("listVisibleItemCount", value);
-    }
+    { return this->set("listVisibleItemCount", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMinimizeButtons(Boolean value)
-    {
-        return this->set("minimizeButtons", value);
-    }
+    { return this->set("minimizeButtons", value); }
     auto setMustMatch(Boolean value)
-    {
-        return this->set("mustMatch", value);
-    }
+    { return this->set("mustMatch", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setOkLabelString(XmString value)
-    {
-        return this->set("okLabelString", value);
-    }
+    { return this->set("okLabelString", value); }
     auto setOkLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("okLabelString", std::move(value));
-    }
+    { return this->set("okLabelString", std::move(value)); }
     auto setOkLabelString(const char* value)
-    {
-        return this->set("okLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("okLabelString", std::make_unique<CXmString>(value)); }
     auto setPri_vate(unsigned char value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setPromptString(XmString value)
-    {
-        return this->set("promptString", value);
-    }
+    { return this->set("promptString", value); }
     auto setPromptString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("promptString", std::move(value));
-    }
+    { return this->set("promptString", std::move(value)); }
     auto setPromptString(const char* value)
-    {
-        return this->set("promptString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("promptString", std::make_unique<CXmString>(value)); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setSelectionLabelString(XmString value)
-    {
-        return this->set("selectionLabelString", value);
-    }
+    { return this->set("selectionLabelString", value); }
     auto setSelectionLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("selectionLabelString", std::move(value));
-    }
+    { return this->set("selectionLabelString", std::move(value)); }
     auto setSelectionLabelString(const char* value)
     {
         return this->set(
             "selectionLabelString", std::make_unique<CXmString>(value));
     }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextAccelerators(XtAccelerators value)
-    {
-        return this->set("textAccelerators", value);
-    }
+    { return this->set("textAccelerators", value); }
     auto setTextColumns(short value)
-    {
-        return this->set("textColumns", value);
-    }
+    { return this->set("textColumns", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextString(XmString value)
-    {
-        return this->set("textString", value);
-    }
+    { return this->set("textString", value); }
     auto setTextString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("textString", std::move(value));
-    }
+    { return this->set("textString", std::move(value)); }
     auto setTextString(const char* value)
-    {
-        return this->set("textString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("textString", std::make_unique<CXmString>(value)); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <typename Derived>
@@ -22671,13 +17843,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setApplyLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setApplyLabelString(static_cast<XmString>(*value));
-    }
+    { return setApplyLabelString(static_cast<XmString>(*value)); }
     Derived& setApplyLabelString(const char* value)
-    {
-        return setApplyLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setApplyLabelString(std::make_unique<CXmString>(value)); }
     XmString getApplyLabelString()
     {
         XmString value;
@@ -22734,13 +17902,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setDirListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setDirListLabelString(static_cast<XmString>(*value));
-    }
+    { return setDirListLabelString(static_cast<XmString>(*value)); }
     Derived& setDirListLabelString(const char* value)
-    {
-        return setDirListLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setDirListLabelString(std::make_unique<CXmString>(value)); }
     XmString getDirListLabelString()
     {
         XmString value;
@@ -22753,13 +17917,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setDirMask(std::unique_ptr<CXmString> value)
-    {
-        return setDirMask(static_cast<XmString>(*value));
-    }
+    { return setDirMask(static_cast<XmString>(*value)); }
     Derived& setDirMask(const char* value)
-    {
-        return setDirMask(std::make_unique<CXmString>(value));
-    }
+    { return setDirMask(std::make_unique<CXmString>(value)); }
     XmString getDirMask()
     {
         XmString value;
@@ -22783,13 +17943,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setDirSpec(std::unique_ptr<CXmString> value)
-    {
-        return setDirSpec(static_cast<XmString>(*value));
-    }
+    { return setDirSpec(static_cast<XmString>(*value)); }
     Derived& setDirSpec(const char* value)
-    {
-        return setDirSpec(std::make_unique<CXmString>(value));
-    }
+    { return setDirSpec(std::make_unique<CXmString>(value)); }
     XmString getDirSpec()
     {
         XmString value;
@@ -22802,13 +17958,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setDirTextLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setDirTextLabelString(static_cast<XmString>(*value));
-    }
+    { return setDirTextLabelString(static_cast<XmString>(*value)); }
     Derived& setDirTextLabelString(const char* value)
-    {
-        return setDirTextLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setDirTextLabelString(std::make_unique<CXmString>(value)); }
     XmString getDirTextLabelString()
     {
         XmString value;
@@ -22821,13 +17973,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setDirectory(std::unique_ptr<CXmString> value)
-    {
-        return setDirectory(static_cast<XmString>(*value));
-    }
+    { return setDirectory(static_cast<XmString>(*value)); }
     Derived& setDirectory(const char* value)
-    {
-        return setDirectory(std::make_unique<CXmString>(value));
-    }
+    { return setDirectory(std::make_unique<CXmString>(value)); }
     XmString getDirectory()
     {
         XmString value;
@@ -22884,13 +18032,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setFileListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setFileListLabelString(static_cast<XmString>(*value));
-    }
+    { return setFileListLabelString(static_cast<XmString>(*value)); }
     Derived& setFileListLabelString(const char* value)
-    {
-        return setFileListLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setFileListLabelString(std::make_unique<CXmString>(value)); }
     XmString getFileListLabelString()
     {
         XmString value;
@@ -22925,13 +18069,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setFilterLabelString(std::unique_ptr<CXmString> value)
-    {
-        return setFilterLabelString(static_cast<XmString>(*value));
-    }
+    { return setFilterLabelString(static_cast<XmString>(*value)); }
     Derived& setFilterLabelString(const char* value)
-    {
-        return setFilterLabelString(std::make_unique<CXmString>(value));
-    }
+    { return setFilterLabelString(std::make_unique<CXmString>(value)); }
     XmString getFilterLabelString()
     {
         XmString value;
@@ -22955,13 +18095,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setNoMatchString(std::unique_ptr<CXmString> value)
-    {
-        return setNoMatchString(static_cast<XmString>(*value));
-    }
+    { return setNoMatchString(static_cast<XmString>(*value)); }
     Derived& setNoMatchString(const char* value)
-    {
-        return setNoMatchString(std::make_unique<CXmString>(value));
-    }
+    { return setNoMatchString(std::make_unique<CXmString>(value)); }
     XmString getNoMatchString()
     {
         XmString value;
@@ -22985,13 +18121,9 @@ public:
         return static_cast<Derived&>(*this);
     }
     Derived& setPattern(std::unique_ptr<CXmString> value)
-    {
-        return setPattern(static_cast<XmString>(*value));
-    }
+    { return setPattern(static_cast<XmString>(*value)); }
     Derived& setPattern(const char* value)
-    {
-        return setPattern(std::make_unique<CXmString>(value));
-    }
+    { return setPattern(std::make_unique<CXmString>(value)); }
     XmString getPattern()
     {
         XmString value;
@@ -23028,464 +18160,252 @@ public:
     using CWidgetBuilderBase<Derived, CWidgetClassT, Parent, Pairs...>::
         CWidgetBuilderBase;
     auto setAllowOverlap(Boolean value)
-    {
-        return this->set("allowOverlap", value);
-    }
+    { return this->set("allowOverlap", value); }
     auto setApplyLabelString(XmString value)
-    {
-        return this->set("applyLabelString", value);
-    }
+    { return this->set("applyLabelString", value); }
     auto setApplyLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("applyLabelString", std::move(value));
-    }
+    { return this->set("applyLabelString", std::move(value)); }
     auto setApplyLabelString(const char* value)
     {
         return this->set(
             "applyLabelString", std::make_unique<CXmString>(value));
     }
     auto setAutoUnmanage(Boolean value)
-    {
-        return this->set("autoUnmanage", value);
-    }
+    { return this->set("autoUnmanage", value); }
     auto setBackground(Pixel value)
-    {
-        return this->set("background", value);
-    }
+    { return this->set("background", value); }
     auto setBackgroundPixmap(Pixmap value)
-    {
-        return this->set("backgroundPixmap", value);
-    }
+    { return this->set("backgroundPixmap", value); }
     auto setBorderWidth(Dimension value)
-    {
-        return this->set("borderWidth", value);
-    }
+    { return this->set("borderWidth", value); }
     auto setBottomShadowColor(Pixel value)
-    {
-        return this->set("bottomShadowColor", value);
-    }
+    { return this->set("bottomShadowColor", value); }
     auto setBottomShadowPixmap(Pixmap value)
-    {
-        return this->set("bottomShadowPixmap", value);
-    }
+    { return this->set("bottomShadowPixmap", value); }
     auto setButtonFontList(XmFontList value)
-    {
-        return this->set("buttonFontList", value);
-    }
+    { return this->set("buttonFontList", value); }
     auto setButtonRenderTable(XmFontList value)
-    {
-        return this->set("buttonRenderTable", value);
-    }
+    { return this->set("buttonRenderTable", value); }
     auto setCancelButton(Widget value)
-    {
-        return this->set("cancelButton", value);
-    }
+    { return this->set("cancelButton", value); }
     auto setCancelLabelString(XmString value)
-    {
-        return this->set("cancelLabelString", value);
-    }
+    { return this->set("cancelLabelString", value); }
     auto setCancelLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("cancelLabelString", std::move(value));
-    }
+    { return this->set("cancelLabelString", std::move(value)); }
     auto setCancelLabelString(const char* value)
     {
         return this->set(
             "cancelLabelString", std::make_unique<CXmString>(value));
     }
     auto setChildPlacement(unsigned char value)
-    {
-        return this->set("childPlacement", value);
-    }
+    { return this->set("childPlacement", value); }
     auto setDefaultButton(Widget value)
-    {
-        return this->set("defaultButton", value);
-    }
+    { return this->set("defaultButton", value); }
     auto setDefaultPosition(Boolean value)
-    {
-        return this->set("defaultPosition", value);
-    }
+    { return this->set("defaultPosition", value); }
     auto setDialogStyle(unsigned char value)
-    {
-        return this->set("dialogStyle", value);
-    }
+    { return this->set("dialogStyle", value); }
     auto setDialogTitle(XmString value)
-    {
-        return this->set("dialogTitle", value);
-    }
+    { return this->set("dialogTitle", value); }
     auto setDialogTitle(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dialogTitle", std::move(value));
-    }
+    { return this->set("dialogTitle", std::move(value)); }
     auto setDialogTitle(const char* value)
-    {
-        return this->set("dialogTitle", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dialogTitle", std::make_unique<CXmString>(value)); }
     auto setDialogType(unsigned char value)
-    {
-        return this->set("dialogType", value);
-    }
+    { return this->set("dialogType", value); }
     auto setDirListItemCount(int value)
-    {
-        return this->set("dirListItemCount", value);
-    }
+    { return this->set("dirListItemCount", value); }
     auto setDirListItems(XmString* value)
-    {
-        return this->set("dirListItems", value);
-    }
+    { return this->set("dirListItems", value); }
     auto setDirListLabelString(XmString value)
-    {
-        return this->set("dirListLabelString", value);
-    }
+    { return this->set("dirListLabelString", value); }
     auto setDirListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dirListLabelString", std::move(value));
-    }
+    { return this->set("dirListLabelString", std::move(value)); }
     auto setDirListLabelString(const char* value)
     {
         return this->set(
             "dirListLabelString", std::make_unique<CXmString>(value));
     }
     auto setDirMask(XmString value)
-    {
-        return this->set("dirMask", value);
-    }
+    { return this->set("dirMask", value); }
     auto setDirMask(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dirMask", std::move(value));
-    }
+    { return this->set("dirMask", std::move(value)); }
     auto setDirMask(const char* value)
-    {
-        return this->set("dirMask", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dirMask", std::make_unique<CXmString>(value)); }
     auto setDirSearchProc(XmSearchProc value)
-    {
-        return this->set("dirSearchProc", value);
-    }
+    { return this->set("dirSearchProc", value); }
     auto setDirSpec(XmString value)
-    {
-        return this->set("dirSpec", value);
-    }
+    { return this->set("dirSpec", value); }
     auto setDirSpec(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dirSpec", std::move(value));
-    }
+    { return this->set("dirSpec", std::move(value)); }
     auto setDirSpec(const char* value)
-    {
-        return this->set("dirSpec", std::make_unique<CXmString>(value));
-    }
+    { return this->set("dirSpec", std::make_unique<CXmString>(value)); }
     auto setDirTextLabelString(XmString value)
-    {
-        return this->set("dirTextLabelString", value);
-    }
+    { return this->set("dirTextLabelString", value); }
     auto setDirTextLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("dirTextLabelString", std::move(value));
-    }
+    { return this->set("dirTextLabelString", std::move(value)); }
     auto setDirTextLabelString(const char* value)
     {
         return this->set(
             "dirTextLabelString", std::make_unique<CXmString>(value));
     }
     auto setDirectory(XmString value)
-    {
-        return this->set("directory", value);
-    }
+    { return this->set("directory", value); }
     auto setDirectory(std::unique_ptr<CXmString> value)
-    {
-        return this->set("directory", std::move(value));
-    }
+    { return this->set("directory", std::move(value)); }
     auto setDirectory(const char* value)
-    {
-        return this->set("directory", std::make_unique<CXmString>(value));
-    }
+    { return this->set("directory", std::make_unique<CXmString>(value)); }
     auto setDirectoryValid(Boolean value)
-    {
-        return this->set("directoryValid", value);
-    }
+    { return this->set("directoryValid", value); }
     auto setFileFilterStyle(XtEnum value)
-    {
-        return this->set("fileFilterStyle", value);
-    }
+    { return this->set("fileFilterStyle", value); }
     auto setFileListItemCount(int value)
-    {
-        return this->set("fileListItemCount", value);
-    }
+    { return this->set("fileListItemCount", value); }
     auto setFileListItems(XmString* value)
-    {
-        return this->set("fileListItems", value);
-    }
+    { return this->set("fileListItems", value); }
     auto setFileListLabelString(XmString value)
-    {
-        return this->set("fileListLabelString", value);
-    }
+    { return this->set("fileListLabelString", value); }
     auto setFileListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("fileListLabelString", std::move(value));
-    }
+    { return this->set("fileListLabelString", std::move(value)); }
     auto setFileListLabelString(const char* value)
     {
         return this->set(
             "fileListLabelString", std::make_unique<CXmString>(value));
     }
     auto setFileSearchProc(XmSearchProc value)
-    {
-        return this->set("fileSearchProc", value);
-    }
+    { return this->set("fileSearchProc", value); }
     auto setFileTypeMask(unsigned char value)
-    {
-        return this->set("fileTypeMask", value);
-    }
+    { return this->set("fileTypeMask", value); }
     auto setFilterLabelString(XmString value)
-    {
-        return this->set("filterLabelString", value);
-    }
+    { return this->set("filterLabelString", value); }
     auto setFilterLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("filterLabelString", std::move(value));
-    }
+    { return this->set("filterLabelString", std::move(value)); }
     auto setFilterLabelString(const char* value)
     {
         return this->set(
             "filterLabelString", std::make_unique<CXmString>(value));
     }
     auto setForeground(Pixel value)
-    {
-        return this->set("foreground", value);
-    }
+    { return this->set("foreground", value); }
     auto setHeight(Dimension value)
-    {
-        return this->set("height", value);
-    }
+    { return this->set("height", value); }
     auto setHelpLabelString(XmString value)
-    {
-        return this->set("helpLabelString", value);
-    }
+    { return this->set("helpLabelString", value); }
     auto setHelpLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("helpLabelString", std::move(value));
-    }
+    { return this->set("helpLabelString", std::move(value)); }
     auto setHelpLabelString(const char* value)
-    {
-        return this->set("helpLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("helpLabelString", std::make_unique<CXmString>(value)); }
     auto setHighlightColor(Pixel value)
-    {
-        return this->set("highlightColor", value);
-    }
+    { return this->set("highlightColor", value); }
     auto setHighlightPixmap(Pixmap value)
-    {
-        return this->set("highlightPixmap", value);
-    }
+    { return this->set("highlightPixmap", value); }
     auto setInitialFocus(Widget value)
-    {
-        return this->set("initialFocus", value);
-    }
+    { return this->set("initialFocus", value); }
     auto setLabelFontList(XmFontList value)
-    {
-        return this->set("labelFontList", value);
-    }
+    { return this->set("labelFontList", value); }
     auto setLabelRenderTable(XmFontList value)
-    {
-        return this->set("labelRenderTable", value);
-    }
+    { return this->set("labelRenderTable", value); }
     auto setLayoutDirection(XmStringDirection value)
-    {
-        return this->set("layoutDirection", value);
-    }
+    { return this->set("layoutDirection", value); }
     auto setListItemCount(int value)
-    {
-        return this->set("listItemCount", value);
-    }
+    { return this->set("listItemCount", value); }
     auto setListItems(XmString* value)
-    {
-        return this->set("listItems", value);
-    }
+    { return this->set("listItems", value); }
     auto setListLabelString(XmString value)
-    {
-        return this->set("listLabelString", value);
-    }
+    { return this->set("listLabelString", value); }
     auto setListLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("listLabelString", std::move(value));
-    }
+    { return this->set("listLabelString", std::move(value)); }
     auto setListLabelString(const char* value)
-    {
-        return this->set("listLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("listLabelString", std::make_unique<CXmString>(value)); }
     auto setListUpdated(Boolean value)
-    {
-        return this->set("listUpdated", value);
-    }
+    { return this->set("listUpdated", value); }
     auto setListVisibleItemCount(int value)
-    {
-        return this->set("listVisibleItemCount", value);
-    }
+    { return this->set("listVisibleItemCount", value); }
     auto setMarginHeight(Dimension value)
-    {
-        return this->set("marginHeight", value);
-    }
+    { return this->set("marginHeight", value); }
     auto setMarginWidth(Dimension value)
-    {
-        return this->set("marginWidth", value);
-    }
+    { return this->set("marginWidth", value); }
     auto setMinimizeButtons(Boolean value)
-    {
-        return this->set("minimizeButtons", value);
-    }
+    { return this->set("minimizeButtons", value); }
     auto setMustMatch(Boolean value)
-    {
-        return this->set("mustMatch", value);
-    }
+    { return this->set("mustMatch", value); }
     auto setNavigationType(XmNavigationType value)
-    {
-        return this->set("navigationType", value);
-    }
+    { return this->set("navigationType", value); }
     auto setNoMatchString(XmString value)
-    {
-        return this->set("noMatchString", value);
-    }
+    { return this->set("noMatchString", value); }
     auto setNoMatchString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("noMatchString", std::move(value));
-    }
+    { return this->set("noMatchString", std::move(value)); }
     auto setNoMatchString(const char* value)
-    {
-        return this->set("noMatchString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("noMatchString", std::make_unique<CXmString>(value)); }
     auto setNoResize(Boolean value)
-    {
-        return this->set("noResize", value);
-    }
+    { return this->set("noResize", value); }
     auto setOkLabelString(XmString value)
-    {
-        return this->set("okLabelString", value);
-    }
+    { return this->set("okLabelString", value); }
     auto setOkLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("okLabelString", std::move(value));
-    }
+    { return this->set("okLabelString", std::move(value)); }
     auto setOkLabelString(const char* value)
-    {
-        return this->set("okLabelString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("okLabelString", std::make_unique<CXmString>(value)); }
     auto setPathMode(XtEnum value)
-    {
-        return this->set("pathMode", value);
-    }
+    { return this->set("pathMode", value); }
     auto setPattern(XmString value)
-    {
-        return this->set("pattern", value);
-    }
+    { return this->set("pattern", value); }
     auto setPattern(std::unique_ptr<CXmString> value)
-    {
-        return this->set("pattern", std::move(value));
-    }
+    { return this->set("pattern", std::move(value)); }
     auto setPattern(const char* value)
-    {
-        return this->set("pattern", std::make_unique<CXmString>(value));
-    }
+    { return this->set("pattern", std::make_unique<CXmString>(value)); }
     auto setPri_vate(unsigned char value)
-    {
-        return this->set("pri.vate", value);
-    }
+    { return this->set("pri.vate", value); }
     auto setQualifySearchDataProc(XmQualifyProc value)
-    {
-        return this->set("qualifySearchDataProc", value);
-    }
+    { return this->set("qualifySearchDataProc", value); }
     auto setResizePolicy(unsigned char value)
-    {
-        return this->set("resizePolicy", value);
-    }
+    { return this->set("resizePolicy", value); }
     auto setSelectionLabelString(XmString value)
-    {
-        return this->set("selectionLabelString", value);
-    }
+    { return this->set("selectionLabelString", value); }
     auto setSelectionLabelString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("selectionLabelString", std::move(value));
-    }
+    { return this->set("selectionLabelString", std::move(value)); }
     auto setSelectionLabelString(const char* value)
     {
         return this->set(
             "selectionLabelString", std::make_unique<CXmString>(value));
     }
     auto setShadowThickness(Dimension value)
-    {
-        return this->set("shadowThickness", value);
-    }
+    { return this->set("shadowThickness", value); }
     auto setShadowType(unsigned char value)
-    {
-        return this->set("shadowType", value);
-    }
+    { return this->set("shadowType", value); }
     auto setStringDirection(XmStringDirection value)
-    {
-        return this->set("stringDirection", value);
-    }
+    { return this->set("stringDirection", value); }
     auto setTextAccelerators(XtAccelerators value)
-    {
-        return this->set("textAccelerators", value);
-    }
+    { return this->set("textAccelerators", value); }
     auto setTextColumns(short value)
-    {
-        return this->set("textColumns", value);
-    }
+    { return this->set("textColumns", value); }
     auto setTextFontList(XmFontList value)
-    {
-        return this->set("textFontList", value);
-    }
+    { return this->set("textFontList", value); }
     auto setTextRenderTable(XmFontList value)
-    {
-        return this->set("textRenderTable", value);
-    }
+    { return this->set("textRenderTable", value); }
     auto setTextString(XmString value)
-    {
-        return this->set("textString", value);
-    }
+    { return this->set("textString", value); }
     auto setTextString(std::unique_ptr<CXmString> value)
-    {
-        return this->set("textString", std::move(value));
-    }
+    { return this->set("textString", std::move(value)); }
     auto setTextString(const char* value)
-    {
-        return this->set("textString", std::make_unique<CXmString>(value));
-    }
+    { return this->set("textString", std::make_unique<CXmString>(value)); }
     auto setTextTranslations(XtTranslations value)
-    {
-        return this->set("textTranslations", value);
-    }
+    { return this->set("textTranslations", value); }
     auto setTopShadowColor(Pixel value)
-    {
-        return this->set("topShadowColor", value);
-    }
+    { return this->set("topShadowColor", value); }
     auto setTopShadowPixmap(Pixmap value)
-    {
-        return this->set("topShadowPixmap", value);
-    }
+    { return this->set("topShadowPixmap", value); }
     auto setTraversalOn(Boolean value)
-    {
-        return this->set("traversalOn", value);
-    }
+    { return this->set("traversalOn", value); }
     auto setUnitType(unsigned char value)
-    {
-        return this->set("unitType", value);
-    }
+    { return this->set("unitType", value); }
     auto setUserData(XtPointer value)
-    {
-        return this->set("userData", value);
-    }
+    { return this->set("userData", value); }
     auto setWidth(Dimension value)
-    {
-        return this->set("width", value);
-    }
+    { return this->set("width", value); }
     auto setX(Position value)
-    {
-        return this->set("x", value);
-    }
+    { return this->set("x", value); }
     auto setY(Position value)
-    {
-        return this->set("y", value);
-    }
+    { return this->set("y", value); }
 };
 
 template <std::derived_from<CWidgetImplBase> Parent, typename... Pairs>

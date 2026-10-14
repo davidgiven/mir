@@ -134,6 +134,10 @@
                                     "description": "Declared resource type string from the entry's third field (XtResource.resource_type, e.g. Pixel).",
                                     "type": "string"
                                 },
+                                "callback_payload": {
+                                    "description": "C type of the callback payload (call_data), without the pointer indirection (e.g. XmPushButtonCallbackStruct). Only valid for resources whose rtype is Callback.",
+                                    "type": "string"
+                                },
                                 "class": {
                                     "description": "Resource class string from the entry's second field (XtResource.resource_class, e.g. Background).",
                                     "type": "string"
@@ -145,6 +149,12 @@
                                 "get": {
                                     "description": "Whether the resource can be retrieved from the widget.",
                                     "type": "boolean"
+                                }
+                            },
+                            "dependentSchemas": {
+                                "callback_payload": {
+                                    "properties": {"rtype": {"const": "Callback"}},
+                                    "required": ["rtype"]
                                 }
                             },
                             "additionalProperties": false

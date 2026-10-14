@@ -150,9 +150,11 @@ class CWidget;
 class CWidgetImplBase
 {
 public:
-    using Callback = std::function<void(XtPointer)>;
+    template <typename T>
+    using Callback = std::function<void(T*)>;
+    using ErasedCallback = Callback<void>;
     using EventHandler = std::function<void(XEvent*, Boolean*)>;
-    using RegisteredCallback = std::variant<Callback, EventHandler>;
+    using RegisteredCallback = std::variant<ErasedCallback, EventHandler>;
 
     template <typename Builder>
     class ConstraintsBuilder
@@ -232,7 +234,7 @@ public:
     }
 
     Derived& addCallback(
-        const char* callback_name, std::function<void(XtPointer)> callback)
+        const char* callback_name, ErasedCallback callback)
     {
         int cbid = registerCallback(_widget, std::move(callback));
         XtAddCallback(_widget,
@@ -241,6 +243,14 @@ public:
             reinterpret_cast<XtPointer>(cbid));
 
         return static_cast<Derived&>(*this);
+    }
+
+    template <typename T>
+    Derived& addCallback(const char* callback_name, Callback<T> callback)
+    {
+        return addCallback(callback_name,
+            ErasedCallback([callback = std::move(callback)](XtPointer payload)
+                { callback(static_cast<T*>(payload)); }));
     }
 
     Derived& addEventHandler(

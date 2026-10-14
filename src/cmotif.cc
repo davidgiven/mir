@@ -11,7 +11,7 @@ void CWidgetImplBase::executeCallback(
     auto it = callbacks.find({w, cbid});
     if (it != callbacks.end())
     {
-        if (auto callback = std::get_if<Callback>(&it->second))
+        if (auto callback = std::get_if<ErasedCallback>(&it->second))
             (*callback)(call_data);
     }
 }

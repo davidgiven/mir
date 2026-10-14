@@ -121,7 +121,10 @@ def main(argv=None):
             clang_args.extend(["-isystem", str(resource_dir / "include")])
     translation_units = []
     try:
-        for source in find_c_files(args.sources):
+        sources = list(find_c_files(args.sources))
+        for number, source in enumerate(sources, 1):
+            print(f"Parsing [{number}/{len(sources)}] {source}",
+                  file=sys.stderr, flush=True)
             unit = index.parse(str(source), args=clang_args)
             translation_units.append(unit)
     except (OSError, cindex.TranslationUnitLoadError) as exc:
@@ -130,7 +133,9 @@ def main(argv=None):
     # USRs identify the same declaration across independent translation units.
     definitions = {}
     widget_classes = {}
-    for unit in translation_units:
+    for number, unit in enumerate(translation_units, 1):
+        print(f"Indexing [{number}/{len(translation_units)}] {unit.spelling}",
+              file=sys.stderr, flush=True)
         for cursor in unit.cursor.get_children():
             if (
                 cursor.kind != cindex.CursorKind.VAR_DECL
@@ -154,9 +159,11 @@ def main(argv=None):
         if record is not None:
             record_to_widget.setdefault(record.get_usr(), widget_class.spelling)
 
+    print("Collecting methods and constructors", file=sys.stderr, flush=True)
     methods = find_widget_methods(translation_units, cindex)
     constructors = find_widget_constructors(translation_units, args.prefix, cindex)
     callback_payloads = find_callback_payloads(translation_units, cindex)
+    print("Extracting widget resources", file=sys.stderr, flush=True)
     widgets = {}
     for widget_class in widget_classes.values():
         class_name = get_class_name(widget_class, cindex, definitions)
@@ -215,6 +222,7 @@ def main(argv=None):
         if not path.is_file():
             continue
         try:
+            print(f"Parsing public header {path}", file=sys.stderr, flush=True)
             unit = index.parse(str(path), args=["-x", "c", *clang_args])
         except cindex.TranslationUnitLoadError as exc:
             parser.error(f"could not load public header: {exc}")
@@ -229,6 +237,7 @@ def main(argv=None):
             for name in constructors.get(widget.get("header"), {})
         }
 
+    print("Collecting API types", file=sys.stderr, flush=True)
     artifact = {
         "prefix": args.prefix,
         "widgets": widgets,
@@ -241,6 +250,8 @@ def main(argv=None):
         )
     except OSError as exc:
         parser.error(f"could not write output: {exc}")
+    print(f"Wrote {len(widgets)} widgets to {args.output}",
+          file=sys.stderr, flush=True)
     return 0
 
 
@@ -654,13 +665,33 @@ def get_superclass(
     return None
 
 
+def find_call_expressions(unit, cindex):
+    """Let libclang recurse, retaining only call cursors for Python analysis."""
+    calls = []
+    call_kind = cindex.CursorKind.CALL_EXPR.value
+
+    def visit(cursor, parent, data):
+        # Read the CXCursor kind directly to avoid a binding call and enum
+        # conversion for every AST node. Only retained cursors need a TU owner.
+        if cursor._kind_id == call_kind:
+            cursor._tu = unit
+            calls.append(cursor)
+        return 2  # CXChildVisit_Recurse, including calls nested in arguments.
+
+    # Use the binding's registered callback type (its name varies by version).
+    visit_children = cindex.conf.lib.clang_visitChildren
+    visitor = visit_children.argtypes[1](visit)
+    visit_children(unit.cursor, visitor, None)
+    return calls
+
+
 def find_callback_payloads(translation_units, cindex):
     """Index callback argument types by the callback-list field's USR."""
     payloads = {}
-    for unit in translation_units:
-        for call in unit.cursor.walk_preorder():
-            if call.kind != cindex.CursorKind.CALL_EXPR:
-                continue
+    for number, unit in enumerate(translation_units, 1):
+        print(f"Scanning callbacks [{number}/{len(translation_units)}] {unit.spelling}",
+              file=sys.stderr, flush=True)
+        for call in find_call_expressions(unit, cindex):
             function = call.referenced
             if function is None or function.spelling != "XtCallCallbackList":
                 continue
@@ -769,18 +800,6 @@ def get_resource_entries(widget_class, resources, cindex, definitions=None,
                         if len(values) > 4
                         else None
                     )
-                    if (
-                        field_type is not None
-                        and sizeof_type is not None
-                        and "".join(field_type.split())
-                        != "".join(sizeof_type.split())
-                    ):
-                        print(
-                            f"{entry.location}: warning: {widget_class.spelling}.{name}: "
-                            f"offset field type {field_type!r} differs from "
-                            f"sizeof type {sizeof_type!r}",
-                            file=sys.stderr,
-                        )
                     resource_type = (
                         field_type if field_type is not None else sizeof_type
                     )

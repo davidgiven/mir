@@ -55,6 +55,8 @@ void invoke(Instance *w, Other *other, Payload *pointer, XtPointer opaque) {
     int different;
     XtCallCallbackList(w, w->part.callback, &value);
     XtCallCallbackList(w, w->part.callback, (XtPointer)pointer);
+    XtCallCallbackList(w, w->part.callback,
+                      (XtCallCallbackList(w, w->part.callback, &value), pointer));
     XtCallCallbackList(w, w->part.callback, 0);
     XtCallCallbackList(w, other->callback, &different);
     XtCallCallbackList(w, w->part.opaque, opaque);

@@ -1762,6 +1762,7 @@
       "name": "XmCascadeButton",
       "resources": {
         "activateCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,
@@ -1776,6 +1777,7 @@
           "set": true
         },
         "cascadingCallback": {
+          "callback_payload": "XmAnyCallbackStruct",
           "class": "Callback",
           "ctype": "XtCallbackList",
           "get": true,

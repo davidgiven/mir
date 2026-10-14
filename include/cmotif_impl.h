@@ -13597,9 +13597,10 @@ class CXmCascadeButtonImpl : public CXmLabelImpl<Derived>
 public:
     using CXmLabelImpl<Derived>::CXmLabelImpl;
     using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(CWidgetImplBase::Callback<void> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        this->template addCallback<void>(
+        this->template addCallback<XmAnyCallbackStruct>(
             "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
@@ -13625,9 +13626,10 @@ public:
         XtVaGetValues(this->_widget, "cascadePixmap", &value, nullptr);
         return value;
     }
-    Derived& addCascadingCallback(CWidgetImplBase::Callback<void> callback)
+    Derived& addCascadingCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        this->template addCallback<void>(
+        this->template addCallback<XmAnyCallbackStruct>(
             "cascadingCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }

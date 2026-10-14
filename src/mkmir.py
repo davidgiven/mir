@@ -190,13 +190,12 @@ def main(argv=None):
             if superclass is not None:
                 widget["superclass"] = superclass
             widgets[widget_class.spelling] = widget
-            instance_classes[widget_class.spelling] = get_widget_instance_usr(
-                widget_class, cindex, definitions
-            )
+            instance_classes[widget_class.spelling] = set()
             callback_fields[widget_class.spelling] = {}
             widget["resources"] = dict(
                 get_resources(widget_class, cindex, definitions, callback_payloads,
-                              callback_fields[widget_class.spelling])
+                              callback_fields[widget_class.spelling],
+                              instance_classes[widget_class.spelling])
             )
             constraint_fields = get_class_part_fields(
                 widget_class, ("constraint_part", "constraint_class", "constraint"),
@@ -222,18 +221,25 @@ def main(argv=None):
         ancestor = widget.get("superclass")
         seen = {symbol}
         inherited = {}
+        ancestor_instances = set()
         while ancestor in widgets and ancestor not in seen:
             seen.add(ancestor)
+            ancestor_instances.update(instance_classes[ancestor])
             for name, field in callback_fields[ancestor].items():
                 inherited.setdefault(name, (field, widgets[ancestor]["resources"][name]))
             ancestor = widgets[ancestor].get("superclass")
         for name, (field, resource) in inherited.items():
-            key = (instance_classes[symbol], field)
-            if name in widget["resources"] or key not in callback_payloads:
+            if name in widget["resources"]:
+                continue
+            payloads = {}
+            for instance in instance_classes[symbol] - ancestor_instances:
+                for payload, sites in callback_payloads.get((instance, field), {}).items():
+                    payloads.setdefault(payload, set()).update(sites)
+            if not payloads:
                 continue
             override = dict(resource)
             override.pop("callback_payload", None)
-            set_callback_payload(override, callback_payloads[key],
+            set_callback_payload(override, payloads,
                                  f"{widget.get('sourcefile', symbol)}: warning: {symbol}.{name}")
             widget["resources"][name] = override
 
@@ -765,12 +771,6 @@ def find_callback_payloads(translation_units, cindex):
     return payloads
 
 
-def get_widget_instance_usr(widget_class, cindex, definitions=None):
-    fields = get_core_fields(widget_class, cindex, definitions) or {}
-    size = fields.get("widget_size")
-    return get_record_reference_usr(size, cindex) if size is not None else None
-
-
 def get_record_reference_usr(expression, cindex):
     for cursor in expression.walk_preorder():
         if cursor.kind == cindex.CursorKind.TYPE_REF and cursor.referenced is not None:
@@ -823,22 +823,22 @@ def set_callback_payload(resource, payloads, context):
 
 
 def get_resources(widget_class, cindex, definitions=None, callback_payloads=None,
-                  callback_fields=None):
+                  callback_fields=None, instance_types=None):
     """Read names, declared resource types, and C types from core.resources."""
     fields = get_core_fields(widget_class, cindex, definitions) or {}
     yield from get_resource_entries(
         widget_class, fields.get("resources"), cindex, definitions, callback_payloads,
-        callback_fields,
+        callback_fields, instance_types,
     )
 
 
 def get_resource_entries(widget_class, resources, cindex, definitions=None,
-                         callback_payloads=None, callback_fields=None):
+                         callback_payloads=None, callback_fields=None,
+                         instance_types=None):
     """Read an XtResource array referenced by a class-record initializer."""
     definitions = definitions or {}
     if resources is None:
         return
-    widget_instance = get_widget_instance_usr(widget_class, cindex, definitions)
     for reference in resources.walk_preorder():
         if reference.kind != cindex.CursorKind.DECL_REF_EXPR:
             continue
@@ -895,6 +895,10 @@ def get_resource_entries(widget_class, resources, cindex, definitions=None,
                     resource_type = (
                         field_type if field_type is not None else sizeof_type
                     )
+                    instance = (get_record_reference_usr(values[4], cindex)
+                                if len(values) > 4 else None)
+                    if instance_types is not None and instance is not None:
+                        instance_types.add(instance)
                     if resource_type is not None:
                         resource["ctype"] = resource_type
                     if resource.get("rtype") == "Callback":
@@ -903,9 +907,6 @@ def get_resource_entries(widget_class, resources, cindex, definitions=None,
                         field_usr = field.get_usr() if field is not None else None
                         if callback_fields is not None and field_usr is not None:
                             callback_fields[name] = field_usr
-                        instance = widget_instance
-                        if instance is None and len(values) > 4:
-                            instance = get_record_reference_usr(values[4], cindex)
                         payloads = (callback_payloads or {}).get((instance, field_usr), {})
                         set_callback_payload(resource, payloads,
                             f"{entry.location}: warning: {widget_class.spelling}.{name}")

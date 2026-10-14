@@ -48,10 +48,17 @@ Resource resources[] = {
     R("unusedCallback", "Callback", unused),
     {"noOffsetCallback", "Callback", "Callback"}
 };
-struct { CoreClass core; } testRec = {{0, "Test", resources, sizeof(Instance)}};
+/* Deliberately unrelated size record: offsets determine instance identity. */
+struct { CoreClass core; } testRec = {{0, "Test", resources, sizeof(Other)}};
 WidgetClass testWidgetClass = &testRec.core;
+Resource childResources[] = {
+    {"extra", "Extra", "Int", sizeof(int), __builtin_offsetof(ChildInstance, extra)},
+    /* Inherited offsets must not identify the child's concrete instance. */
+    {"baseValue", "Value", "Pointer", sizeof(XtCallbackList),
+     __builtin_offsetof(Instance, part.callback)}
+};
 struct { CoreClass core; } childRec = {
-    {&testRec.core, "Child", 0, sizeof(ChildInstance)}
+    {&testRec.core, "Child", childResources, sizeof(Instance)}
 };
 WidgetClass childWidgetClass = &childRec.core;
 '''

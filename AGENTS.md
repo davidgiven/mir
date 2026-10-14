@@ -91,7 +91,8 @@ Every discovered resource currently has `set` and `get` set to `true`.
 Callback resources also emit `callback_payload` when calls to
 `XtCallCallbackList` identify a unique typed pointer payload for their offset
 field and widget instance type. Both are matched across translation units by
-Clang USR; class instance types come from core.widget_size. Calls on subclasses
+Clang USR; class instance types come from the object type in resource
+`XtOffsetOf` expressions. Calls on subclasses
 do not contribute types to a base class's resource. Subclass payload overrides
 for inherited callback resources are emitted in the subclass's resources.
 The payload

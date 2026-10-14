@@ -319,7 +319,7 @@ def get_api_types(widgets, translation_units, cindex):
         for method in widget["methods"].values():
             referenced.add(method["return_type"])
             referenced.update(
-                parameter["type"] for parameter in method["parameters"].values()
+                parameter["type"] for parameter in method["parameters"]
             )
 
     enum_types = {}
@@ -563,21 +563,13 @@ def find_widget_constructors(translation_units, prefix, cindex):
 
 def get_method_parameters(method):
     """Describe signature parameters after the leading Widget argument."""
-    arguments = list(method.get_arguments())[1:]
-    reserved = {
-        argument.spelling for argument in arguments if argument.spelling
-    }
-    parameters = {}
-    for position, argument in enumerate(arguments, start=1):
-        key = argument.spelling or f"arg{position}"
-        if not argument.spelling:
-            while key in reserved or key in parameters:
-                key += "_"
-        parameters[key] = {
+    return [
+        {
             "name": argument.spelling,
             "type": argument.type.spelling,
         }
-    return parameters
+        for argument in list(method.get_arguments())[1:]
+    ]
 
 
 def get_class_record(widget_class, cindex, definitions=None):

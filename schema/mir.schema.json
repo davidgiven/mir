@@ -78,9 +78,9 @@
                                     "type": "string"
                                 },
                                 "parameters": {
-                                    "description": "Signature parameters after the leading Widget, keyed by parameter name. Unnamed parameters use arg1, arg2, etc. (with underscores to avoid collisions) and have an empty name.",
-                                    "type": "object",
-                                    "additionalProperties": {
+                                    "description": "Signature parameters in declaration order after the leading Widget. Unnamed parameters have an empty name.",
+                                    "type": "array",
+                                    "items": {
                                         "type": "object",
                                         "properties": {
                                             "name": {"type": "string"},

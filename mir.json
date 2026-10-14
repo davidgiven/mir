@@ -1671,12 +1671,12 @@
       "methods": {
         "XmCascadeButtonGadgetHighlight": {
           "name": "Highlight",
-          "parameters": {
-            "highlight": {
+          "parameters": [
+            {
               "name": "highlight",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -1740,22 +1740,22 @@
       "methods": {
         "XmCascadeButtonGadgetHighlight": {
           "name": "GadgetHighlight",
-          "parameters": {
-            "highlight": {
+          "parameters": [
+            {
               "name": "highlight",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmCascadeButtonHighlight": {
           "name": "Highlight",
-          "parameters": {
-            "highlight": {
+          "parameters": [
+            {
               "name": "highlight",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -2177,55 +2177,55 @@
       "methods": {
         "XmComboBoxAddItem": {
           "name": "AddItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "pos": {
+            {
               "name": "pos",
               "type": "int"
             },
-            "unique": {
+            {
               "name": "unique",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmComboBoxDeletePos": {
           "name": "DeletePos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmComboBoxSelectItem": {
           "name": "SelectItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmComboBoxSetItem": {
           "name": "SetItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmComboBoxUpdate": {
           "name": "Update",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         }
       },
@@ -2404,42 +2404,42 @@
       "methods": {
         "XmCommandAppendValue": {
           "name": "AppendValue",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmCommandError": {
           "name": "Error",
-          "parameters": {
-            "error": {
+          "parameters": [
+            {
               "name": "error",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmCommandGetChild": {
           "name": "GetChild",
-          "parameters": {
-            "child": {
+          "parameters": [
+            {
               "name": "child",
               "type": "unsigned char"
             }
-          },
+          ],
           "return_type": "Widget"
         },
         "XmCommandSetValue": {
           "name": "SetValue",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -2568,75 +2568,75 @@
       "methods": {
         "XmContainerCopy": {
           "name": "Copy",
-          "parameters": {
-            "timestamp": {
+          "parameters": [
+            {
               "name": "timestamp",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmContainerCopyLink": {
           "name": "CopyLink",
-          "parameters": {
-            "timestamp": {
+          "parameters": [
+            {
               "name": "timestamp",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmContainerCut": {
           "name": "Cut",
-          "parameters": {
-            "timestamp": {
+          "parameters": [
+            {
               "name": "timestamp",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmContainerGetItemChildren": {
           "name": "GetItemChildren",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "Widget"
             },
-            "item_children": {
+            {
               "name": "item_children",
               "type": "WidgetList *"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmContainerPaste": {
           "name": "Paste",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmContainerPasteLink": {
           "name": "PasteLink",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmContainerRelayout": {
           "name": "Relayout",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmContainerReorder": {
           "name": "Reorder",
-          "parameters": {
-            "cwid_count": {
-              "name": "cwid_count",
-              "type": "int"
-            },
-            "cwid_list": {
+          "parameters": [
+            {
               "name": "cwid_list",
               "type": "WidgetList"
+            },
+            {
+              "name": "cwid_count",
+              "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -3811,42 +3811,42 @@
       "methods": {
         "XmDropDownGetArrow": {
           "name": "GetArrow",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmDropDownGetChild": {
           "name": "GetChild",
-          "parameters": {
-            "num": {
+          "parameters": [
+            {
               "name": "num",
               "type": "int"
             }
-          },
+          ],
           "return_type": "Widget"
         },
         "XmDropDownGetLabel": {
           "name": "GetLabel",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmDropDownGetList": {
           "name": "GetList",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmDropDownGetString": {
           "name": "GetString",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmString"
         },
         "XmDropDownGetText": {
           "name": "GetText",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmDropDownGetValue": {
           "name": "GetValue",
-          "parameters": {},
+          "parameters": [],
           "return_type": "String"
         }
       },
@@ -4036,30 +4036,30 @@
       "methods": {
         "XmDropTransferAdd": {
           "name": "Add",
-          "parameters": {
-            "num_transfers": {
-              "name": "num_transfers",
-              "type": "Cardinal"
-            },
-            "transfers": {
+          "parameters": [
+            {
               "name": "transfers",
               "type": "XmDropTransferEntry"
+            },
+            {
+              "name": "num_transfers",
+              "type": "Cardinal"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmDropTransferStart": {
           "name": "Start",
-          "parameters": {
-            "argCount": {
-              "name": "argCount",
-              "type": "Cardinal"
-            },
-            "args": {
+          "parameters": [
+            {
               "name": "args",
               "type": "ArgList"
+            },
+            {
+              "name": "argCount",
+              "type": "Cardinal"
             }
-          },
+          ],
           "return_type": "Widget"
         }
       },
@@ -4140,12 +4140,12 @@
       "methods": {
         "XmFileSelectionBoxGetChild": {
           "name": "GetChild",
-          "parameters": {
-            "which": {
+          "parameters": [
+            {
               "name": "which",
               "type": "unsigned char"
             }
-          },
+          ],
           "return_type": "Widget"
         }
       },
@@ -4884,12 +4884,12 @@
       "methods": {
         "XmHierarchyGetChildNodes": {
           "name": "GetChildNodes",
-          "parameters": {},
+          "parameters": [],
           "return_type": "WidgetList"
         },
         "XmHierarchyOpenAllAncestors": {
           "name": "OpenAllAncestors",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         }
       },
@@ -4991,53 +4991,53 @@
       "methods": {
         "XmI18ListDoSearch": {
           "name": "DoSearch",
-          "parameters": {
-            "reset": {
-              "name": "reset",
-              "type": "Boolean"
-            },
-            "str": {
+          "parameters": [
+            {
               "name": "str",
               "type": "String"
+            },
+            {
+              "name": "reset",
+              "type": "Boolean"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmI18ListFindRow": {
           "name": "FindRow",
-          "parameters": {
-            "do_visual": {
-              "name": "do_visual",
-              "type": "Boolean"
+          "parameters": [
+            {
+              "name": "str",
+              "type": "String"
             },
-            "found_column": {
+            {
               "name": "found_column",
               "type": "int *"
             },
-            "reset": {
+            {
               "name": "reset",
               "type": "Boolean"
             },
-            "str": {
-              "name": "str",
-              "type": "String"
+            {
+              "name": "do_visual",
+              "type": "Boolean"
             }
-          },
+          ],
           "return_type": "XmMultiListRowInfo *"
         },
         "XmI18ListGetSelectedRows": {
           "name": "GetSelectedRows",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmMultiListRowInfo **"
         },
         "XmI18ListToggleRow": {
           "name": "ToggleRow",
-          "parameters": {
-            "row": {
+          "parameters": [
+            {
               "name": "row",
               "type": "short"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -5234,20 +5234,20 @@
       "methods": {
         "XmIconBoxIsCellEmpty": {
           "name": "IsCellEmpty",
-          "parameters": {
-            "ignore": {
-              "name": "ignore",
-              "type": "Widget"
-            },
-            "x": {
+          "parameters": [
+            {
               "name": "x",
               "type": "Position"
             },
-            "y": {
+            {
               "name": "y",
               "type": "Position"
+            },
+            {
+              "name": "ignore",
+              "type": "Widget"
             }
-          },
+          ],
           "return_type": "Boolean"
         }
       },
@@ -5902,454 +5902,454 @@
       "methods": {
         "XmListAddItem": {
           "name": "AddItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "pos": {
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListAddItemUnselected": {
           "name": "AddItemUnselected",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "pos": {
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListAddItems": {
           "name": "AddItems",
-          "parameters": {
-            "item_count": {
-              "name": "item_count",
-              "type": "int"
-            },
-            "items": {
+          "parameters": [
+            {
               "name": "items",
               "type": "XmString *"
             },
-            "pos": {
+            {
+              "name": "item_count",
+              "type": "int"
+            },
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListAddItemsUnselected": {
           "name": "AddItemsUnselected",
-          "parameters": {
-            "item_count": {
-              "name": "item_count",
-              "type": "int"
-            },
-            "items": {
+          "parameters": [
+            {
               "name": "items",
               "type": "XmString *"
             },
-            "pos": {
+            {
+              "name": "item_count",
+              "type": "int"
+            },
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeleteAllItems": {
           "name": "DeleteAllItems",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmListDeleteItem": {
           "name": "DeleteItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeleteItems": {
           "name": "DeleteItems",
-          "parameters": {
-            "item_count": {
-              "name": "item_count",
-              "type": "int"
-            },
-            "items": {
+          "parameters": [
+            {
               "name": "items",
               "type": "XmString *"
+            },
+            {
+              "name": "item_count",
+              "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeleteItemsPos": {
           "name": "DeleteItemsPos",
-          "parameters": {
-            "item_count": {
+          "parameters": [
+            {
               "name": "item_count",
               "type": "int"
             },
-            "pos": {
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeletePos": {
           "name": "DeletePos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeletePositions": {
           "name": "DeletePositions",
-          "parameters": {
-            "position_count": {
-              "name": "position_count",
-              "type": "int"
-            },
-            "position_list": {
+          "parameters": [
+            {
               "name": "position_list",
               "type": "int *"
+            },
+            {
+              "name": "position_count",
+              "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeselectAllItems": {
           "name": "DeselectAllItems",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmListDeselectItem": {
           "name": "DeselectItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListDeselectPos": {
           "name": "DeselectPos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListGetKbdItemPos": {
           "name": "GetKbdItemPos",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmListGetMatchPos": {
           "name": "GetMatchPos",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "pos_count": {
-              "name": "pos_count",
-              "type": "int *"
-            },
-            "pos_list": {
+            {
               "name": "pos_list",
               "type": "int **"
+            },
+            {
+              "name": "pos_count",
+              "type": "int *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmListGetSelectedPos": {
           "name": "GetSelectedPos",
-          "parameters": {
-            "pos_count": {
-              "name": "pos_count",
-              "type": "int *"
-            },
-            "pos_list": {
+          "parameters": [
+            {
               "name": "pos_list",
               "type": "int **"
+            },
+            {
+              "name": "pos_count",
+              "type": "int *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmListItemExists": {
           "name": "ItemExists",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmListItemPos": {
           "name": "ItemPos",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmListPosSelected": {
           "name": "PosSelected",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmListPosToBounds": {
           "name": "PosToBounds",
-          "parameters": {
-            "height": {
-              "name": "height",
-              "type": "Dimension *"
-            },
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "int"
             },
-            "width": {
-              "name": "width",
-              "type": "Dimension *"
-            },
-            "x": {
+            {
               "name": "x",
               "type": "Position *"
             },
-            "y": {
+            {
               "name": "y",
               "type": "Position *"
+            },
+            {
+              "name": "width",
+              "type": "Dimension *"
+            },
+            {
+              "name": "height",
+              "type": "Dimension *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmListReplaceItems": {
           "name": "ReplaceItems",
-          "parameters": {
-            "item_count": {
+          "parameters": [
+            {
+              "name": "old_items",
+              "type": "XmString *"
+            },
+            {
               "name": "item_count",
               "type": "int"
             },
-            "new_items": {
+            {
               "name": "new_items",
               "type": "XmString *"
-            },
-            "old_items": {
-              "name": "old_items",
-              "type": "XmString *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListReplaceItemsPos": {
           "name": "ReplaceItemsPos",
-          "parameters": {
-            "item_count": {
-              "name": "item_count",
-              "type": "int"
-            },
-            "new_items": {
+          "parameters": [
+            {
               "name": "new_items",
               "type": "XmString *"
             },
-            "position": {
+            {
+              "name": "item_count",
+              "type": "int"
+            },
+            {
               "name": "position",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListReplaceItemsPosUnselected": {
           "name": "ReplaceItemsPosUnselected",
-          "parameters": {
-            "item_count": {
-              "name": "item_count",
-              "type": "int"
-            },
-            "new_items": {
+          "parameters": [
+            {
               "name": "new_items",
               "type": "XmString *"
             },
-            "position": {
+            {
+              "name": "item_count",
+              "type": "int"
+            },
+            {
               "name": "position",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListReplaceItemsUnselected": {
           "name": "ReplaceItemsUnselected",
-          "parameters": {
-            "item_count": {
+          "parameters": [
+            {
+              "name": "old_items",
+              "type": "XmString *"
+            },
+            {
               "name": "item_count",
               "type": "int"
             },
-            "new_items": {
+            {
               "name": "new_items",
               "type": "XmString *"
-            },
-            "old_items": {
-              "name": "old_items",
-              "type": "XmString *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListReplacePositions": {
           "name": "ReplacePositions",
-          "parameters": {
-            "item_count": {
-              "name": "item_count",
-              "type": "int"
+          "parameters": [
+            {
+              "name": "position_list",
+              "type": "int *"
             },
-            "item_list": {
+            {
               "name": "item_list",
               "type": "XmString *"
             },
-            "position_list": {
-              "name": "position_list",
-              "type": "int *"
+            {
+              "name": "item_count",
+              "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSelectItem": {
           "name": "SelectItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSelectPos": {
           "name": "SelectPos",
-          "parameters": {
-            "notify": {
-              "name": "notify",
-              "type": "Boolean"
-            },
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
+            },
+            {
+              "name": "notify",
+              "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSetAddMode": {
           "name": "SetAddMode",
-          "parameters": {
-            "add_mode": {
+          "parameters": [
+            {
               "name": "add_mode",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSetBottomItem": {
           "name": "SetBottomItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSetBottomPos": {
           "name": "SetBottomPos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSetHorizPos": {
           "name": "SetHorizPos",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSetItem": {
           "name": "SetItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListSetKbdItemPos": {
           "name": "SetKbdItemPos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmListSetPos": {
           "name": "SetPos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmListUpdateSelectedList": {
           "name": "UpdateSelectedList",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmListYToPos": {
           "name": "YToPos",
-          "parameters": {
-            "y": {
+          "parameters": [
+            {
               "name": "y",
               "type": "Position"
             }
-          },
+          ],
           "return_type": "int"
         }
       },
@@ -6613,43 +6613,43 @@
       "methods": {
         "XmMainWindowSep1": {
           "name": "Sep1",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmMainWindowSep2": {
           "name": "Sep2",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmMainWindowSep3": {
           "name": "Sep3",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmMainWindowSetAreas": {
           "name": "SetAreas",
-          "parameters": {
-            "command": {
-              "name": "command",
-              "type": "Widget"
-            },
-            "hscroll": {
-              "name": "hscroll",
-              "type": "Widget"
-            },
-            "menu": {
+          "parameters": [
+            {
               "name": "menu",
               "type": "Widget"
             },
-            "vscroll": {
+            {
+              "name": "command",
+              "type": "Widget"
+            },
+            {
+              "name": "hscroll",
+              "type": "Widget"
+            },
+            {
               "name": "vscroll",
               "type": "Widget"
             },
-            "wregion": {
+            {
               "name": "wregion",
               "type": "Widget"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -6987,12 +6987,12 @@
       "methods": {
         "XmMessageBoxGetChild": {
           "name": "GetChild",
-          "parameters": {
-            "child": {
+          "parameters": [
+            {
               "name": "child",
               "type": "unsigned char"
             }
-          },
+          ],
           "return_type": "Widget"
         }
       },
@@ -7100,118 +7100,118 @@
       "methods": {
         "XmMultiListDeselectItems": {
           "name": "DeselectItems",
-          "parameters": {
-            "column": {
-              "name": "column",
-              "type": "int"
-            },
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
+            },
+            {
+              "name": "column",
+              "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListDeselectRow": {
           "name": "DeselectRow",
-          "parameters": {
-            "row": {
+          "parameters": [
+            {
               "name": "row",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListGetSelectedRowArray": {
           "name": "GetSelectedRowArray",
-          "parameters": {
-            "num_rows": {
+          "parameters": [
+            {
               "name": "num_rows",
               "type": "int *"
             }
-          },
+          ],
           "return_type": "int *"
         },
         "XmMultiListGetSelectedRows": {
           "name": "GetSelectedRows",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmMultiListRowInfo **"
         },
         "XmMultiListMakeRowVisible": {
           "name": "MakeRowVisible",
-          "parameters": {
-            "row": {
+          "parameters": [
+            {
               "name": "row",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListSelectAllItems": {
           "name": "SelectAllItems",
-          "parameters": {
-            "notify": {
+          "parameters": [
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListSelectItems": {
           "name": "SelectItems",
-          "parameters": {
-            "column": {
-              "name": "column",
-              "type": "int"
-            },
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "notify": {
+            {
+              "name": "column",
+              "type": "int"
+            },
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListSelectRow": {
           "name": "SelectRow",
-          "parameters": {
-            "notify": {
-              "name": "notify",
-              "type": "Boolean"
-            },
-            "row": {
+          "parameters": [
+            {
               "name": "row",
               "type": "int"
+            },
+            {
+              "name": "notify",
+              "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListToggleRow": {
           "name": "ToggleRow",
-          "parameters": {
-            "row": {
+          "parameters": [
+            {
               "name": "row",
               "type": "short"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmMultiListUnselectAllItems": {
           "name": "UnselectAllItems",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmMultiListUnselectItem": {
           "name": "UnselectItem",
-          "parameters": {
-            "row_info": {
+          "parameters": [
+            {
               "name": "row_info",
               "type": "XmMultiListRowInfo *"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -7347,16 +7347,16 @@
       "methods": {
         "XmNotebookGetPageInfo": {
           "name": "GetPageInfo",
-          "parameters": {
-            "page_info": {
-              "name": "page_info",
-              "type": "XmNotebookPageInfo *"
-            },
-            "page_number": {
+          "parameters": [
+            {
               "name": "page_number",
               "type": "int"
+            },
+            {
+              "name": "page_info",
+              "type": "XmNotebookPageInfo *"
             }
-          },
+          ],
           "return_type": "XmNotebookPageStatus"
         }
       },
@@ -8255,52 +8255,52 @@
       "methods": {
         "XmScaleGetValue": {
           "name": "GetValue",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "int *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmScaleSetTicks": {
           "name": "SetTicks",
-          "parameters": {
-            "big_every": {
+          "parameters": [
+            {
               "name": "big_every",
               "type": "int"
             },
-            "num_med": {
+            {
               "name": "num_med",
               "type": "Cardinal"
             },
-            "num_small": {
+            {
               "name": "num_small",
               "type": "Cardinal"
             },
-            "size_big": {
+            {
               "name": "size_big",
               "type": "Dimension"
             },
-            "size_med": {
+            {
               "name": "size_med",
               "type": "Dimension"
             },
-            "size_small": {
+            {
               "name": "size_small",
               "type": "Dimension"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmScaleSetValue": {
           "name": "SetValue",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -8816,50 +8816,50 @@
       "methods": {
         "XmScrollBarGetValues": {
           "name": "GetValues",
-          "parameters": {
-            "increment": {
-              "name": "increment",
+          "parameters": [
+            {
+              "name": "value",
               "type": "int *"
             },
-            "page_increment": {
-              "name": "page_increment",
-              "type": "int *"
-            },
-            "slider_size": {
+            {
               "name": "slider_size",
               "type": "int *"
             },
-            "value": {
-              "name": "value",
+            {
+              "name": "increment",
+              "type": "int *"
+            },
+            {
+              "name": "page_increment",
               "type": "int *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmScrollBarSetValues": {
           "name": "SetValues",
-          "parameters": {
-            "increment": {
-              "name": "increment",
+          "parameters": [
+            {
+              "name": "value",
               "type": "int"
             },
-            "notify": {
-              "name": "notify",
-              "type": "Boolean"
-            },
-            "page_increment": {
-              "name": "page_increment",
-              "type": "int"
-            },
-            "slider_size": {
+            {
               "name": "slider_size",
               "type": "int"
             },
-            "value": {
-              "name": "value",
+            {
+              "name": "increment",
               "type": "int"
+            },
+            {
+              "name": "page_increment",
+              "type": "int"
+            },
+            {
+              "name": "notify",
+              "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -9099,20 +9099,20 @@
       "methods": {
         "XmScrolledWindowSetAreas": {
           "name": "SetAreas",
-          "parameters": {
-            "hscroll": {
+          "parameters": [
+            {
               "name": "hscroll",
               "type": "Widget"
             },
-            "vscroll": {
+            {
               "name": "vscroll",
               "type": "Widget"
             },
-            "wregion": {
+            {
               "name": "wregion",
               "type": "Widget"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -9237,12 +9237,12 @@
       "methods": {
         "XmSelectionBoxGetChild": {
           "name": "GetChild",
-          "parameters": {
-            "which": {
+          "parameters": [
+            {
               "name": "which",
               "type": "unsigned char"
             }
-          },
+          ],
           "return_type": "Widget"
         }
       },
@@ -9515,36 +9515,36 @@
       "methods": {
         "XmSimpleSpinBoxAddItem": {
           "name": "AddItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             },
-            "pos": {
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmSimpleSpinBoxDeletePos": {
           "name": "DeletePos",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmSimpleSpinBoxSetItem": {
           "name": "SetItem",
-          "parameters": {
-            "item": {
+          "parameters": [
+            {
               "name": "item",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         }
       },
@@ -9813,12 +9813,12 @@
       "methods": {
         "XmSpinBoxValidatePosition": {
           "name": "ValidatePosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "int *"
             }
-          },
+          ],
           "return_type": "int"
         }
       },
@@ -9923,55 +9923,55 @@
       "methods": {
         "XmTabBoxGetIndex": {
           "name": "GetIndex",
-          "parameters": {
-            "x": {
+          "parameters": [
+            {
               "name": "x",
               "type": "int"
             },
-            "y": {
+            {
               "name": "y",
               "type": "int"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmTabBoxGetNumColumns": {
           "name": "GetNumColumns",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTabBoxGetNumRows": {
           "name": "GetNumRows",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTabBoxGetNumTabs": {
           "name": "GetNumTabs",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTabBoxGetTabRow": {
           "name": "GetTabRow",
-          "parameters": {
-            "idx": {
+          "parameters": [
+            {
               "name": "idx",
               "type": "int"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmTabBoxXYToIndex": {
           "name": "XYToIndex",
-          "parameters": {
-            "x": {
+          "parameters": [
+            {
               "name": "x",
               "type": "int"
             },
-            "y": {
+            {
               "name": "y",
               "type": "int"
             }
-          },
+          ],
           "return_type": "int"
         }
       },
@@ -10260,41 +10260,41 @@
       "methods": {
         "XmTabStackGetSelectedTab": {
           "name": "GetSelectedTab",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Widget"
         },
         "XmTabStackIndexToWidget": {
           "name": "IndexToWidget",
-          "parameters": {
-            "idx": {
+          "parameters": [
+            {
               "name": "idx",
               "type": "int"
             }
-          },
+          ],
           "return_type": "Widget"
         },
         "XmTabStackSelectTab": {
           "name": "SelectTab",
-          "parameters": {
-            "notify": {
+          "parameters": [
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTabStackXYToWidget": {
           "name": "XYToWidget",
-          "parameters": {
-            "arg1": {
+          "parameters": [
+            {
               "name": "",
               "type": "int"
             },
-            "arg2": {
+            {
               "name": "",
               "type": "int"
             }
-          },
+          ],
           "return_type": "Widget"
         }
       },
@@ -10517,945 +10517,945 @@
       "methods": {
         "XmTextClearSelection": {
           "name": "ClearSelection",
-          "parameters": {
-            "clear_time": {
+          "parameters": [
+            {
               "name": "clear_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextCopy": {
           "name": "Copy",
-          "parameters": {
-            "copy_time": {
+          "parameters": [
+            {
               "name": "copy_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextCopyLink": {
           "name": "CopyLink",
-          "parameters": {
-            "copy_time": {
+          "parameters": [
+            {
               "name": "copy_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextCut": {
           "name": "Cut",
-          "parameters": {
-            "cut_time": {
+          "parameters": [
+            {
               "name": "cut_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextDisableRedisplay": {
           "name": "DisableRedisplay",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmTextEnableRedisplay": {
           "name": "EnableRedisplay",
-          "parameters": {},
+          "parameters": [],
           "return_type": "void"
         },
         "XmTextFieldClearSelection": {
           "name": "FieldClearSelection",
-          "parameters": {
-            "sel_time": {
+          "parameters": [
+            {
               "name": "sel_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldCopy": {
           "name": "FieldCopy",
-          "parameters": {
-            "clip_time": {
+          "parameters": [
+            {
               "name": "clip_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextFieldCopyLink": {
           "name": "FieldCopyLink",
-          "parameters": {
-            "clip_time": {
+          "parameters": [
+            {
               "name": "clip_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextFieldCut": {
           "name": "FieldCut",
-          "parameters": {
-            "clip_time": {
+          "parameters": [
+            {
               "name": "clip_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextFieldGetAddMode": {
           "name": "FieldGetAddMode",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextFieldGetBaseLine": {
           "name": "FieldGetBaseLine",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextFieldGetBaseline": {
           "name": "FieldGetBaseline",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextFieldGetCursorPosition": {
           "name": "FieldGetCursorPosition",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextFieldGetEditable": {
           "name": "FieldGetEditable",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextFieldGetInsertionPosition": {
           "name": "FieldGetInsertionPosition",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextFieldGetLastPosition": {
           "name": "FieldGetLastPosition",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextFieldGetMaxLength": {
           "name": "FieldGetMaxLength",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextFieldGetSelection": {
           "name": "FieldGetSelection",
-          "parameters": {},
+          "parameters": [],
           "return_type": "char *"
         },
         "XmTextFieldGetSelectionPosition": {
           "name": "FieldGetSelectionPosition",
-          "parameters": {
-            "left": {
+          "parameters": [
+            {
               "name": "left",
               "type": "XmTextPosition *"
             },
-            "right": {
+            {
               "name": "right",
               "type": "XmTextPosition *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextFieldGetSelectionString": {
           "name": "FieldGetSelectionString",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmString"
         },
         "XmTextFieldGetSelectionWcs": {
           "name": "FieldGetSelectionWcs",
-          "parameters": {},
+          "parameters": [],
           "return_type": "wchar_t *"
         },
         "XmTextFieldGetString": {
           "name": "FieldGetString",
-          "parameters": {},
+          "parameters": [],
           "return_type": "char *"
         },
         "XmTextFieldGetStringWcs": {
           "name": "FieldGetStringWcs",
-          "parameters": {},
+          "parameters": [],
           "return_type": "wchar_t *"
         },
         "XmTextFieldGetSubstring": {
           "name": "FieldGetSubstring",
-          "parameters": {
-            "buf_size": {
-              "name": "buf_size",
-              "type": "int"
+          "parameters": [
+            {
+              "name": "start",
+              "type": "XmTextPosition"
             },
-            "buffer": {
-              "name": "buffer",
-              "type": "char *"
-            },
-            "num_chars": {
+            {
               "name": "num_chars",
               "type": "int"
             },
-            "start": {
-              "name": "start",
-              "type": "XmTextPosition"
+            {
+              "name": "buf_size",
+              "type": "int"
+            },
+            {
+              "name": "buffer",
+              "type": "char *"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmTextFieldGetSubstringWcs": {
           "name": "FieldGetSubstringWcs",
-          "parameters": {
-            "buf_size": {
-              "name": "buf_size",
-              "type": "int"
+          "parameters": [
+            {
+              "name": "start",
+              "type": "XmTextPosition"
             },
-            "buffer": {
-              "name": "buffer",
-              "type": "wchar_t *"
-            },
-            "num_chars": {
+            {
               "name": "num_chars",
               "type": "int"
             },
-            "start": {
-              "name": "start",
-              "type": "XmTextPosition"
+            {
+              "name": "buf_size",
+              "type": "int"
+            },
+            {
+              "name": "buffer",
+              "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmTextFieldGetXmString": {
           "name": "FieldGetXmString",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmString"
         },
         "XmTextFieldInsert": {
           "name": "FieldInsert",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "char *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldInsertString": {
           "name": "FieldInsertString",
-          "parameters": {
-            "pos": {
+          "parameters": [
+            {
               "name": "pos",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldInsertWcs": {
           "name": "FieldInsertWcs",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             },
-            "wcstring": {
+            {
               "name": "wcstring",
               "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldPaste": {
           "name": "FieldPaste",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextFieldPasteLink": {
           "name": "FieldPasteLink",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextFieldPosToXY": {
           "name": "FieldPosToXY",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             },
-            "x": {
+            {
               "name": "x",
               "type": "Position *"
             },
-            "y": {
+            {
               "name": "y",
               "type": "Position *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextFieldRemove": {
           "name": "FieldRemove",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextFieldReplace": {
           "name": "FieldReplace",
-          "parameters": {
-            "from_pos": {
+          "parameters": [
+            {
               "name": "from_pos",
               "type": "XmTextPosition"
             },
-            "to_pos": {
+            {
               "name": "to_pos",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "char *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldReplaceString": {
           "name": "FieldReplaceString",
-          "parameters": {
-            "from": {
+          "parameters": [
+            {
               "name": "from",
               "type": "XmTextPosition"
             },
-            "to": {
+            {
               "name": "to",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldReplaceWcs": {
           "name": "FieldReplaceWcs",
-          "parameters": {
-            "from_pos": {
+          "parameters": [
+            {
               "name": "from_pos",
               "type": "XmTextPosition"
             },
-            "to_pos": {
+            {
               "name": "to_pos",
               "type": "XmTextPosition"
             },
-            "wc_value": {
+            {
               "name": "wc_value",
               "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetAddMode": {
           "name": "FieldSetAddMode",
-          "parameters": {
-            "state": {
+          "parameters": [
+            {
               "name": "state",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetCursorPosition": {
           "name": "FieldSetCursorPosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetEditable": {
           "name": "FieldSetEditable",
-          "parameters": {
-            "editable": {
+          "parameters": [
+            {
               "name": "editable",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetHighlight": {
           "name": "FieldSetHighlight",
-          "parameters": {
-            "left": {
+          "parameters": [
+            {
               "name": "left",
               "type": "XmTextPosition"
             },
-            "mode": {
-              "name": "mode",
-              "type": "XmHighlightMode"
-            },
-            "right": {
+            {
               "name": "right",
               "type": "XmTextPosition"
+            },
+            {
+              "name": "mode",
+              "type": "XmHighlightMode"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetInsertionPosition": {
           "name": "FieldSetInsertionPosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetMaxLength": {
           "name": "FieldSetMaxLength",
-          "parameters": {
-            "max_length": {
+          "parameters": [
+            {
               "name": "max_length",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetSelection": {
           "name": "FieldSetSelection",
-          "parameters": {
-            "first": {
+          "parameters": [
+            {
               "name": "first",
               "type": "XmTextPosition"
             },
-            "last": {
+            {
               "name": "last",
               "type": "XmTextPosition"
             },
-            "sel_time": {
+            {
               "name": "sel_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetString": {
           "name": "FieldSetString",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "char *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetStringWcs": {
           "name": "FieldSetStringWcs",
-          "parameters": {
-            "wc_value": {
+          "parameters": [
+            {
               "name": "wc_value",
               "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSetXmString": {
           "name": "FieldSetXmString",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "XmString"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldShowPosition": {
           "name": "FieldShowPosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextFieldSubstring": {
           "name": "FieldSubstring",
-          "parameters": {
-            "length": {
-              "name": "length",
-              "type": "size_t"
-            },
-            "start": {
+          "parameters": [
+            {
               "name": "start",
               "type": "XmTextPosition"
+            },
+            {
+              "name": "length",
+              "type": "size_t"
             }
-          },
+          ],
           "return_type": "XmString"
         },
         "XmTextFieldXYToPos": {
           "name": "FieldXYToPos",
-          "parameters": {
-            "x": {
+          "parameters": [
+            {
               "name": "x",
               "type": "Position"
             },
-            "y": {
+            {
               "name": "y",
               "type": "Position"
             }
-          },
+          ],
           "return_type": "XmTextPosition"
         },
         "XmTextFindString": {
           "name": "FindString",
-          "parameters": {
-            "direction": {
-              "name": "direction",
-              "type": "XmTextDirection"
+          "parameters": [
+            {
+              "name": "start",
+              "type": "XmTextPosition"
             },
-            "position": {
-              "name": "position",
-              "type": "XmTextPosition *"
-            },
-            "search_string": {
+            {
               "name": "search_string",
               "type": "char *"
             },
-            "start": {
-              "name": "start",
-              "type": "XmTextPosition"
+            {
+              "name": "direction",
+              "type": "XmTextDirection"
+            },
+            {
+              "name": "position",
+              "type": "XmTextPosition *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextFindStringWcs": {
           "name": "FindStringWcs",
-          "parameters": {
-            "direction": {
-              "name": "direction",
-              "type": "XmTextDirection"
-            },
-            "position": {
-              "name": "position",
-              "type": "XmTextPosition *"
-            },
-            "start": {
+          "parameters": [
+            {
               "name": "start",
               "type": "XmTextPosition"
             },
-            "wc_string": {
+            {
               "name": "wc_string",
               "type": "wchar_t *"
+            },
+            {
+              "name": "direction",
+              "type": "XmTextDirection"
+            },
+            {
+              "name": "position",
+              "type": "XmTextPosition *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextGetAddMode": {
           "name": "GetAddMode",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextGetBaseLine": {
           "name": "GetBaseLine",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextGetBaseline": {
           "name": "GetBaseline",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextGetCenterline": {
           "name": "GetCenterline",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextGetCursorPosition": {
           "name": "GetCursorPosition",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextGetEditable": {
           "name": "GetEditable",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextGetInsertionPosition": {
           "name": "GetInsertionPosition",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextGetLastPosition": {
           "name": "GetLastPosition",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextGetMaxLength": {
           "name": "GetMaxLength",
-          "parameters": {},
+          "parameters": [],
           "return_type": "int"
         },
         "XmTextGetSelection": {
           "name": "GetSelection",
-          "parameters": {},
+          "parameters": [],
           "return_type": "char *"
         },
         "XmTextGetSelectionPosition": {
           "name": "GetSelectionPosition",
-          "parameters": {
-            "left": {
+          "parameters": [
+            {
               "name": "left",
               "type": "XmTextPosition *"
             },
-            "right": {
+            {
               "name": "right",
               "type": "XmTextPosition *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextGetSelectionWcs": {
           "name": "GetSelectionWcs",
-          "parameters": {},
+          "parameters": [],
           "return_type": "wchar_t *"
         },
         "XmTextGetSource": {
           "name": "GetSource",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextSource"
         },
         "XmTextGetString": {
           "name": "GetString",
-          "parameters": {},
+          "parameters": [],
           "return_type": "char *"
         },
         "XmTextGetStringWcs": {
           "name": "GetStringWcs",
-          "parameters": {},
+          "parameters": [],
           "return_type": "wchar_t *"
         },
         "XmTextGetSubstring": {
           "name": "GetSubstring",
-          "parameters": {
-            "buf_size": {
-              "name": "buf_size",
-              "type": "int"
+          "parameters": [
+            {
+              "name": "start",
+              "type": "XmTextPosition"
             },
-            "buffer": {
-              "name": "buffer",
-              "type": "char *"
-            },
-            "num_chars": {
+            {
               "name": "num_chars",
               "type": "int"
             },
-            "start": {
-              "name": "start",
-              "type": "XmTextPosition"
+            {
+              "name": "buf_size",
+              "type": "int"
+            },
+            {
+              "name": "buffer",
+              "type": "char *"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmTextGetSubstringWcs": {
           "name": "GetSubstringWcs",
-          "parameters": {
-            "buf_size": {
-              "name": "buf_size",
-              "type": "int"
+          "parameters": [
+            {
+              "name": "start",
+              "type": "XmTextPosition"
             },
-            "buffer": {
-              "name": "buffer",
-              "type": "wchar_t *"
-            },
-            "num_chars": {
+            {
               "name": "num_chars",
               "type": "int"
             },
-            "start": {
-              "name": "start",
-              "type": "XmTextPosition"
+            {
+              "name": "buf_size",
+              "type": "int"
+            },
+            {
+              "name": "buffer",
+              "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "int"
         },
         "XmTextGetTopCharacter": {
           "name": "GetTopCharacter",
-          "parameters": {},
+          "parameters": [],
           "return_type": "XmTextPosition"
         },
         "XmTextInsert": {
           "name": "Insert",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "char *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextInsertWcs": {
           "name": "InsertWcs",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             },
-            "wc_value": {
+            {
               "name": "wc_value",
               "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextPaste": {
           "name": "Paste",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextPasteLink": {
           "name": "PasteLink",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextPosToXY": {
           "name": "PosToXY",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             },
-            "x": {
+            {
               "name": "x",
               "type": "Position *"
             },
-            "y": {
+            {
               "name": "y",
               "type": "Position *"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmTextRemove": {
           "name": "Remove",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmTextReplace": {
           "name": "Replace",
-          "parameters": {
-            "frompos": {
+          "parameters": [
+            {
               "name": "frompos",
               "type": "XmTextPosition"
             },
-            "topos": {
+            {
               "name": "topos",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "char *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextReplaceWcs": {
           "name": "ReplaceWcs",
-          "parameters": {
-            "frompos": {
+          "parameters": [
+            {
               "name": "frompos",
               "type": "XmTextPosition"
             },
-            "topos": {
+            {
               "name": "topos",
               "type": "XmTextPosition"
             },
-            "value": {
+            {
               "name": "value",
               "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextScroll": {
           "name": "Scroll",
-          "parameters": {
-            "n": {
+          "parameters": [
+            {
               "name": "n",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetAddMode": {
           "name": "SetAddMode",
-          "parameters": {
-            "state": {
+          "parameters": [
+            {
               "name": "state",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetCursorPosition": {
           "name": "SetCursorPosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetEditable": {
           "name": "SetEditable",
-          "parameters": {
-            "editable": {
+          "parameters": [
+            {
               "name": "editable",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetHighlight": {
           "name": "SetHighlight",
-          "parameters": {
-            "left": {
+          "parameters": [
+            {
               "name": "left",
               "type": "XmTextPosition"
             },
-            "mode": {
-              "name": "mode",
-              "type": "XmHighlightMode"
-            },
-            "right": {
+            {
               "name": "right",
               "type": "XmTextPosition"
+            },
+            {
+              "name": "mode",
+              "type": "XmHighlightMode"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetInsertionPosition": {
           "name": "SetInsertionPosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetMaxLength": {
           "name": "SetMaxLength",
-          "parameters": {
-            "max_length": {
+          "parameters": [
+            {
               "name": "max_length",
               "type": "int"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetSelection": {
           "name": "SetSelection",
-          "parameters": {
-            "first": {
+          "parameters": [
+            {
               "name": "first",
               "type": "XmTextPosition"
             },
-            "last": {
+            {
               "name": "last",
               "type": "XmTextPosition"
             },
-            "set_time": {
+            {
               "name": "set_time",
               "type": "Time"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetSource": {
           "name": "SetSource",
-          "parameters": {
-            "cursor_position": {
-              "name": "cursor_position",
-              "type": "XmTextPosition"
-            },
-            "source": {
+          "parameters": [
+            {
               "name": "source",
               "type": "XmTextSource"
             },
-            "top_character": {
+            {
               "name": "top_character",
               "type": "XmTextPosition"
+            },
+            {
+              "name": "cursor_position",
+              "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetString": {
           "name": "SetString",
-          "parameters": {
-            "value": {
+          "parameters": [
+            {
               "name": "value",
               "type": "char *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetStringWcs": {
           "name": "SetStringWcs",
-          "parameters": {
-            "wc_value": {
+          "parameters": [
+            {
               "name": "wc_value",
               "type": "wchar_t *"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextSetTopCharacter": {
           "name": "SetTopCharacter",
-          "parameters": {
-            "top_character": {
+          "parameters": [
+            {
               "name": "top_character",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextShowPosition": {
           "name": "ShowPosition",
-          "parameters": {
-            "position": {
+          "parameters": [
+            {
               "name": "position",
               "type": "XmTextPosition"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmTextXYToPos": {
           "name": "XYToPos",
-          "parameters": {
-            "x": {
+          "parameters": [
+            {
               "name": "x",
               "type": "Position"
             },
-            "y": {
+            {
               "name": "y",
               "type": "Position"
             }
-          },
+          ],
           "return_type": "XmTextPosition"
         }
       },
@@ -11666,35 +11666,35 @@
       "methods": {
         "XmToggleButtonGadgetGetState": {
           "name": "GetState",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmToggleButtonGadgetSetState": {
           "name": "SetState",
-          "parameters": {
-            "bnewstate": {
+          "parameters": [
+            {
               "name": "bnewstate",
               "type": "Boolean"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmToggleButtonGadgetSetValue": {
           "name": "SetValue",
-          "parameters": {
-            "newstate": {
+          "parameters": [
+            {
               "name": "newstate",
               "type": "XmToggleButtonState"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "Boolean"
         }
       },
@@ -11766,68 +11766,68 @@
       "methods": {
         "XmToggleButtonGadgetGetState": {
           "name": "GadgetGetState",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmToggleButtonGadgetSetState": {
           "name": "GadgetSetState",
-          "parameters": {
-            "bnewstate": {
+          "parameters": [
+            {
               "name": "bnewstate",
               "type": "Boolean"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmToggleButtonGadgetSetValue": {
           "name": "GadgetSetValue",
-          "parameters": {
-            "newstate": {
+          "parameters": [
+            {
               "name": "newstate",
               "type": "XmToggleButtonState"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "Boolean"
         },
         "XmToggleButtonGetState": {
           "name": "GetState",
-          "parameters": {},
+          "parameters": [],
           "return_type": "Boolean"
         },
         "XmToggleButtonSetState": {
           "name": "SetState",
-          "parameters": {
-            "bnewstate": {
+          "parameters": [
+            {
               "name": "bnewstate",
               "type": "Boolean"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "void"
         },
         "XmToggleButtonSetValue": {
           "name": "SetValue",
-          "parameters": {
-            "newstate": {
+          "parameters": [
+            {
               "name": "newstate",
               "type": "XmToggleButtonState"
             },
-            "notify": {
+            {
               "name": "notify",
               "type": "Boolean"
             }
-          },
+          ],
           "return_type": "Boolean"
         }
       },

@@ -69,14 +69,18 @@ class WidgetClassesTest(unittest.TestCase):
     def test_callback_adders_keep_typed_setters(self):
         header = self.generate_header({"widgets": {
             "button": {"name": "Button", "resources": {
-                "activateCallback": {"rtype": "Callback", "ctype": "XtCallbackList"},
+                "activateCallback": {"rtype": "Callback", "ctype": "XtCallbackList",
+                                     "callback_payload": "XmPushButtonCallbackStruct"},
                 "destroyCallback": {"rtype": "Callback"},
                 "ordinaryCallback": {"rtype": "Pointer", "ctype": "XtPointer"},
             }},
         }})
         self.assertIn("#include <functional>", header)
-        for name in ("ActivateCallback", "DestroyCallback"):
-            self.assertIn(f"Derived& add{name}(std::function<void(XtPointer)> callback)", header)
+        for name, payload in (("ActivateCallback", "XmPushButtonCallbackStruct"),
+                              ("DestroyCallback", "void")):
+            self.assertIn(f"Derived& add{name}(CWidgetImplBase::Callback<{payload}> callback)", header)
+        self.assertIn('this->template addCallback<XmPushButtonCallbackStruct>("activateCallback", std::move(callback));', header)
+        self.assertIn('this->template addCallback<void>("destroyCallback", std::move(callback));', header)
         self.assertIn("Derived& setActivateCallback(XtCallbackList value)", header)
         self.assertNotIn("addOrdinaryCallback", header)
 

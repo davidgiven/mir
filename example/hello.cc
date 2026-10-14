@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
         .setLabelString("About")
         .build()
         .addActivateCallback(
-            [=](XtPointer)
+            [=](XmPushButtonCallbackStruct*)
             {
                 CXmMessageBox dialogue =
                     CXmInformationDialogBuilder(toplevel, "aboutDialog")
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
         .setMnemonic(XStringToKeysym("Q"))
         .build()
         .addActivateCallback(
-            [](XtPointer)
+            [](XmPushButtonCallbackStruct*)
             {
                 exit(0);
             })
@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
                                 .setRightAttachment(XmATTACH_FORM)
                                 .build()
                                 .addActivateCallback(
-                                    [](XtPointer)
+                                    [](XmPushButtonCallbackStruct*)
                                     {
                                         printf("Button 1 pressed\n");
                                     })
@@ -84,7 +84,7 @@ int main(int argc, char* argv[])
             .setTopWidget(button1)
             .build()
             .addActivateCallback(
-                [](XtPointer)
+                [](XmPushButtonCallbackStruct*)
                 {
                     printf("Button 2 pressed\n");
                 })
@@ -123,10 +123,8 @@ int main(int argc, char* argv[])
             .setBottomAttachment(XmATTACH_FORM)
             .build()
             .addExposeCallback(
-                [&](XtPointer datap)
+                [&](XmDrawingAreaCallbackStruct* data)
                 {
-                    XmDrawingAreaCallbackStruct* data =
-                        static_cast<XmDrawingAreaCallbackStruct*>(datap);
                     Display* display = data->event->xany.display;
                     Window window = data->window;
 

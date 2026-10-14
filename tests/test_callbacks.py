@@ -64,9 +64,10 @@ int main() {
         [](XmAnyCallbackStruct* data) { assert(data == nullptr); };
     widget.addCallback("second", std::move(second));
     widget.addCallback<void>("explicitVoid", [](void* data) { assert(!data); });
-    // Existing generated accessor still accepts an XtPointer callback.
-    widget.addActivateCallback([&](XtPointer data) {
+    // Generated accessor supplies the inferred payload type.
+    widget.addActivateCallback([&](XmPushButtonCallbackStruct* data) {
         assert(data == &payload);
+        assert(data->click_count == 3);
         ++erased_calls;
     });
     widget.addEventHandler([&](XEvent* event, Boolean* dispatch) {

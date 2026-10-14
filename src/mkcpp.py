@@ -86,8 +86,9 @@ def generate_accessors(resources):
     for resource_name, resource in sorted(resources.items()):
         method_name = resource_method_name(resource_name)
         if resource.get("rtype") == "Callback":
-            accessors.append(f"""    Derived& add{method_name}(std::function<void(XtPointer)> callback) {{
-                        addCallback({json.dumps(resource_name)}, callback);
+            payload = resource.get("callback_payload", "void")
+            accessors.append(f"""    Derived& add{method_name}(CWidgetImplBase::Callback<{payload}> callback) {{
+                        this->template addCallback<{payload}>({json.dumps(resource_name)}, std::move(callback));
                         return static_cast<Derived&>(*this);
                     }}""")
         ctype = resource.get("ctype")

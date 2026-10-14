@@ -356,9 +356,9 @@ public:
         XtVaGetValues(this->_widget, "height", &value, nullptr);
         return value;
     }
-    Derived& addHelpCallback(std::function<void(XtPointer)> callback)
+    Derived& addHelpCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("helpCallback", callback);
+        this->template addCallback<void>("helpCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setHelpCallback(XtCallbackList value)
@@ -600,9 +600,10 @@ public:
         XtVaGetValues(this->_widget, "bottomShadowPixmap", &value, nullptr);
         return value;
     }
-    Derived& addConvertCallback(std::function<void(XtPointer)> callback)
+    Derived& addConvertCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("convertCallback", callback);
+        this->template addCallback<void>(
+            "convertCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setConvertCallback(XtCallbackList value)
@@ -638,9 +639,9 @@ public:
         XtVaGetValues(this->_widget, "height", &value, nullptr);
         return value;
     }
-    Derived& addHelpCallback(std::function<void(XtPointer)> callback)
+    Derived& addHelpCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("helpCallback", callback);
+        this->template addCallback<void>("helpCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setHelpCallback(XtCallbackList value)
@@ -720,9 +721,10 @@ public:
         XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
         return value;
     }
-    Derived& addPopupHandlerCallback(std::function<void(XtPointer)> callback)
+    Derived& addPopupHandlerCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("popupHandlerCallback", callback);
+        this->template addCallback<void>(
+            "popupHandlerCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setPopupHandlerCallback(XtCallbackList value)
@@ -982,9 +984,9 @@ public:
         XtVaGetValues(this->_widget, "height", &value, nullptr);
         return value;
     }
-    Derived& addHelpCallback(std::function<void(XtPointer)> callback)
+    Derived& addHelpCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("helpCallback", callback);
+        this->template addCallback<void>("helpCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setHelpCallback(XtCallbackList value)
@@ -1053,9 +1055,10 @@ public:
         XtVaGetValues(this->_widget, "navigationType", &value, nullptr);
         return value;
     }
-    Derived& addPopupHandlerCallback(std::function<void(XtPointer)> callback)
+    Derived& addPopupHandlerCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("popupHandlerCallback", callback);
+        this->template addCallback<void>(
+            "popupHandlerCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setPopupHandlerCallback(XtCallbackList value)
@@ -1568,9 +1571,11 @@ public:
             this->_widget, "dragReceiverProtocolStyle", &value, nullptr);
         return value;
     }
-    Derived& addDragStartCallback(std::function<void(XtPointer)> callback)
+    Derived& addDragStartCallback(
+        CWidgetImplBase::Callback<XmDragStartCallbackStruct> callback)
     {
-        addCallback("dragStartCallback", callback);
+        this->template addCallback<XmDragStartCallbackStruct>(
+            "dragStartCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDragStartCallback(XtCallbackList value)
@@ -1738,9 +1743,11 @@ public:
         XtVaGetValues(this->_widget, "motifVersion", &value, nullptr);
         return value;
     }
-    Derived& addNoFontCallback(std::function<void(XtPointer)> callback)
+    Derived& addNoFontCallback(
+        CWidgetImplBase::Callback<XmDisplayCallbackStruct> callback)
     {
-        addCallback("noFontCallback", callback);
+        this->template addCallback<XmDisplayCallbackStruct>(
+            "noFontCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNoFontCallback(XtCallbackList value)
@@ -1754,9 +1761,11 @@ public:
         XtVaGetValues(this->_widget, "noFontCallback", &value, nullptr);
         return value;
     }
-    Derived& addNoRenditionCallback(std::function<void(XtPointer)> callback)
+    Derived& addNoRenditionCallback(
+        CWidgetImplBase::Callback<XmDisplayCallbackStruct> callback)
     {
-        addCallback("noRenditionCallback", callback);
+        this->template addCallback<XmDisplayCallbackStruct>(
+            "noRenditionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNoRenditionCallback(XtCallbackList value)
@@ -1902,9 +1911,11 @@ public:
         XtVaGetValues(this->_widget, "cursorForeground", &value, nullptr);
         return value;
     }
-    Derived& addDragDropFinishCallback(std::function<void(XtPointer)> callback)
+    Derived& addDragDropFinishCallback(
+        CWidgetImplBase::Callback<XmDragDropFinishCallbackStruct> callback)
     {
-        addCallback("dragDropFinishCallback", callback);
+        this->template addCallback<XmDragDropFinishCallbackStruct>(
+            "dragDropFinishCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDragDropFinishCallback(XtCallbackList value)
@@ -1918,9 +1929,11 @@ public:
         XtVaGetValues(this->_widget, "dragDropFinishCallback", &value, nullptr);
         return value;
     }
-    Derived& addDragMotionCallback(std::function<void(XtPointer)> callback)
+    Derived& addDragMotionCallback(
+        CWidgetImplBase::Callback<XmDragMotionCallbackStruct> callback)
     {
-        addCallback("dragMotionCallback", callback);
+        this->template addCallback<XmDragMotionCallbackStruct>(
+            "dragMotionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDragMotionCallback(XtCallbackList value)
@@ -1945,9 +1958,11 @@ public:
         XtVaGetValues(this->_widget, "dragOperations", &value, nullptr);
         return value;
     }
-    Derived& addDropFinishCallback(std::function<void(XtPointer)> callback)
+    Derived& addDropFinishCallback(
+        CWidgetImplBase::Callback<XmDropFinishCallbackStruct> callback)
     {
-        addCallback("dropFinishCallback", callback);
+        this->template addCallback<XmDropFinishCallbackStruct>(
+            "dropFinishCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDropFinishCallback(XtCallbackList value)
@@ -1961,9 +1976,11 @@ public:
         XtVaGetValues(this->_widget, "dropFinishCallback", &value, nullptr);
         return value;
     }
-    Derived& addDropSiteEnterCallback(std::function<void(XtPointer)> callback)
+    Derived& addDropSiteEnterCallback(
+        CWidgetImplBase::Callback<XmDropSiteEnterCallbackStruct> callback)
     {
-        addCallback("dropSiteEnterCallback", callback);
+        this->template addCallback<XmDropSiteEnterCallbackStruct>(
+            "dropSiteEnterCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDropSiteEnterCallback(XtCallbackList value)
@@ -1977,9 +1994,11 @@ public:
         XtVaGetValues(this->_widget, "dropSiteEnterCallback", &value, nullptr);
         return value;
     }
-    Derived& addDropSiteLeaveCallback(std::function<void(XtPointer)> callback)
+    Derived& addDropSiteLeaveCallback(
+        CWidgetImplBase::Callback<XmDropSiteLeaveCallbackStruct> callback)
     {
-        addCallback("dropSiteLeaveCallback", callback);
+        this->template addCallback<XmDropSiteLeaveCallbackStruct>(
+            "dropSiteLeaveCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDropSiteLeaveCallback(XtCallbackList value)
@@ -1993,9 +2012,11 @@ public:
         XtVaGetValues(this->_widget, "dropSiteLeaveCallback", &value, nullptr);
         return value;
     }
-    Derived& addDropStartCallback(std::function<void(XtPointer)> callback)
+    Derived& addDropStartCallback(
+        CWidgetImplBase::Callback<XmDropStartCallbackStruct> callback)
     {
-        addCallback("dropStartCallback", callback);
+        this->template addCallback<XmDropStartCallbackStruct>(
+            "dropStartCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDropStartCallback(XtCallbackList value)
@@ -2077,9 +2098,10 @@ public:
         return value;
     }
     Derived& addOperationChangedCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmOperationChangedCallbackStruct> callback)
     {
-        addCallback("operationChangedCallback", callback);
+        this->template addCallback<XmOperationChangedCallbackStruct>(
+            "operationChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setOperationChangedCallback(XtCallbackList value)
@@ -2183,9 +2205,10 @@ public:
         XtVaGetValues(this->_widget, "stateCursorIcon", &value, nullptr);
         return value;
     }
-    Derived& addTopLevelEnterCallback(std::function<void(XtPointer)> callback)
+    Derived& addTopLevelEnterCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("topLevelEnterCallback", callback);
+        this->template addCallback<void>(
+            "topLevelEnterCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setTopLevelEnterCallback(XtCallbackList value)
@@ -2199,9 +2222,10 @@ public:
         XtVaGetValues(this->_widget, "topLevelEnterCallback", &value, nullptr);
         return value;
     }
-    Derived& addTopLevelLeaveCallback(std::function<void(XtPointer)> callback)
+    Derived& addTopLevelLeaveCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("topLevelLeaveCallback", callback);
+        this->template addCallback<void>(
+            "topLevelLeaveCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setTopLevelLeaveCallback(XtCallbackList value)
@@ -2928,9 +2952,10 @@ public:
         XtVaGetValues(this->_widget, "slideDestY", &value, nullptr);
         return value;
     }
-    Derived& addSlideFinishCallback(std::function<void(XtPointer)> callback)
+    Derived& addSlideFinishCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("slideFinishCallback", callback);
+        this->template addCallback<void>(
+            "slideFinishCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSlideFinishCallback(XtCallbackList value)
@@ -2955,9 +2980,10 @@ public:
         XtVaGetValues(this->_widget, "slideInterval", &value, nullptr);
         return value;
     }
-    Derived& addSlideMotionCallback(std::function<void(XtPointer)> callback)
+    Derived& addSlideMotionCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("slideMotionCallback", callback);
+        this->template addCallback<void>(
+            "slideMotionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSlideMotionCallback(XtCallbackList value)
@@ -3424,9 +3450,11 @@ class CXmArrowButtonGadgetImpl : public CXmGadgetImpl<Derived>
 public:
     using CXmGadgetImpl<Derived>::CXmGadgetImpl;
     using CXmGadgetImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -3440,9 +3468,9 @@ public:
         XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
         return value;
     }
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<void>("armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -3511,9 +3539,9 @@ public:
         XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<void>("disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -4227,9 +4255,11 @@ class CXmArrowButtonImpl : public CXmPrimitiveImpl<Derived>
 public:
     using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmArrowButtonCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmArrowButtonCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -4243,9 +4273,11 @@ public:
         XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
         return value;
     }
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(
+        CWidgetImplBase::Callback<XmArrowButtonCallbackStruct> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<XmArrowButtonCallbackStruct>(
+            "armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -4281,9 +4313,11 @@ public:
         XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(
+        CWidgetImplBase::Callback<XmArrowButtonCallbackStruct> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<XmArrowButtonCallbackStruct>(
+            "disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -4406,9 +4440,10 @@ public:
         XtVaGetValues(this->_widget, "columnTitles", &value, nullptr);
         return value;
     }
-    Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback)
+    Derived& addDoubleClickCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("doubleClickCallback", callback);
+        this->template addCallback<void>(
+            "doubleClickCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDoubleClickCallback(XtCallbackList value)
@@ -4588,9 +4623,11 @@ public:
         XtVaGetValues(this->_widget, "selectionPolicy", &value, nullptr);
         return value;
     }
-    Derived& addSingleSelectionCallback(std::function<void(XtPointer)> callback)
+    Derived& addSingleSelectionCallback(
+        CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("singleSelectionCallback", callback);
+        this->template addCallback<void>(
+            "singleSelectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSingleSelectionCallback(XtCallbackList value)
@@ -4761,9 +4798,11 @@ class CXmIconButtonImpl : public CXmPrimitiveImpl<Derived>
 public:
     using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmIconButtonCallbackInfo> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmIconButtonCallbackInfo>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -4799,9 +4838,11 @@ public:
         XtVaGetValues(this->_widget, "armColor", &value, nullptr);
         return value;
     }
-    Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback)
+    Derived& addDoubleClickCallback(
+        CWidgetImplBase::Callback<XmIconButtonCallbackInfo> callback)
     {
-        addCallback("doubleClickCallback", callback);
+        this->template addCallback<XmIconButtonCallbackInfo>(
+            "doubleClickCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDoubleClickCallback(XtCallbackList value)
@@ -5532,9 +5573,11 @@ public:
         XtVaGetValues(this->_widget, "automaticSelection", &value, nullptr);
         return value;
     }
-    Derived& addBrowseSelectionCallback(std::function<void(XtPointer)> callback)
+    Derived& addBrowseSelectionCallback(
+        CWidgetImplBase::Callback<XmListCallbackStruct> callback)
     {
-        addCallback("browseSelectionCallback", callback);
+        this->template addCallback<XmListCallbackStruct>(
+            "browseSelectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setBrowseSelectionCallback(XtCallbackList value)
@@ -5549,9 +5592,11 @@ public:
             this->_widget, "browseSelectionCallback", &value, nullptr);
         return value;
     }
-    Derived& addDefaultActionCallback(std::function<void(XtPointer)> callback)
+    Derived& addDefaultActionCallback(
+        CWidgetImplBase::Callback<XmListCallbackStruct> callback)
     {
-        addCallback("defaultActionCallback", callback);
+        this->template addCallback<XmListCallbackStruct>(
+            "defaultActionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDefaultActionCallback(XtCallbackList value)
@@ -5565,9 +5610,10 @@ public:
         XtVaGetValues(this->_widget, "defaultActionCallback", &value, nullptr);
         return value;
     }
-    Derived& addDestinationCallback(std::function<void(XtPointer)> callback)
+    Derived& addDestinationCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("destinationCallback", callback);
+        this->template addCallback<void>(
+            "destinationCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDestinationCallback(XtCallbackList value)
@@ -5593,9 +5639,10 @@ public:
         return value;
     }
     Derived& addExtendedSelectionCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmListCallbackStruct> callback)
     {
-        addCallback("extendedSelectionCallback", callback);
+        this->template addCallback<XmListCallbackStruct>(
+            "extendedSelectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setExtendedSelectionCallback(XtCallbackList value)
@@ -5722,9 +5769,10 @@ public:
         return value;
     }
     Derived& addMultipleSelectionCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmListCallbackStruct> callback)
     {
-        addCallback("multipleSelectionCallback", callback);
+        this->template addCallback<XmListCallbackStruct>(
+            "multipleSelectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setMultipleSelectionCallback(XtCallbackList value)
@@ -5872,9 +5920,11 @@ public:
         XtVaGetValues(this->_widget, "selectionPolicy", &value, nullptr);
         return value;
     }
-    Derived& addSingleSelectionCallback(std::function<void(XtPointer)> callback)
+    Derived& addSingleSelectionCallback(
+        CWidgetImplBase::Callback<XmListCallbackStruct> callback)
     {
-        addCallback("singleSelectionCallback", callback);
+        this->template addCallback<XmListCallbackStruct>(
+            "singleSelectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSingleSelectionCallback(XtCallbackList value)
@@ -6066,9 +6116,11 @@ public:
         XtVaGetValues(this->_widget, "background", &value, nullptr);
         return value;
     }
-    Derived& addDecrementCallback(std::function<void(XtPointer)> callback)
+    Derived& addDecrementCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("decrementCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "decrementCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDecrementCallback(XtCallbackList value)
@@ -6082,9 +6134,11 @@ public:
         XtVaGetValues(this->_widget, "decrementCallback", &value, nullptr);
         return value;
     }
-    Derived& addDragCallback(std::function<void(XtPointer)> callback)
+    Derived& addDragCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("dragCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "dragCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDragCallback(XtCallbackList value)
@@ -6131,9 +6185,11 @@ public:
         XtVaGetValues(this->_widget, "increment", &value, nullptr);
         return value;
     }
-    Derived& addIncrementCallback(std::function<void(XtPointer)> callback)
+    Derived& addIncrementCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("incrementCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "incrementCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setIncrementCallback(XtCallbackList value)
@@ -6202,9 +6258,11 @@ public:
         XtVaGetValues(this->_widget, "orientation", &value, nullptr);
         return value;
     }
-    Derived& addPageDecrementCallback(std::function<void(XtPointer)> callback)
+    Derived& addPageDecrementCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("pageDecrementCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "pageDecrementCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setPageDecrementCallback(XtCallbackList value)
@@ -6229,9 +6287,11 @@ public:
         XtVaGetValues(this->_widget, "pageIncrement", &value, nullptr);
         return value;
     }
-    Derived& addPageIncrementCallback(std::function<void(XtPointer)> callback)
+    Derived& addPageIncrementCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("pageIncrementCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "pageIncrementCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setPageIncrementCallback(XtCallbackList value)
@@ -6333,9 +6393,11 @@ public:
         XtVaGetValues(this->_widget, "snapBackMultiple", &value, nullptr);
         return value;
     }
-    Derived& addToBottomCallback(std::function<void(XtPointer)> callback)
+    Derived& addToBottomCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("toBottomCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "toBottomCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setToBottomCallback(XtCallbackList value)
@@ -6349,9 +6411,11 @@ public:
         XtVaGetValues(this->_widget, "toBottomCallback", &value, nullptr);
         return value;
     }
-    Derived& addToTopCallback(std::function<void(XtPointer)> callback)
+    Derived& addToTopCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("toTopCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "toTopCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setToTopCallback(XtCallbackList value)
@@ -6398,9 +6462,11 @@ public:
         XtVaGetValues(this->_widget, "value", &value, nullptr);
         return value;
     }
-    Derived& addValueChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addValueChangedCallback(
+        CWidgetImplBase::Callback<XmScrollBarCallbackStruct> callback)
     {
-        addCallback("valueChangedCallback", callback);
+        this->template addCallback<XmScrollBarCallbackStruct>(
+            "valueChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setValueChangedCallback(XtCallbackList value)
@@ -6730,9 +6796,11 @@ class CXmTextImpl : public CXmPrimitiveImpl<Derived>
 public:
     using CXmPrimitiveImpl<Derived>::CXmPrimitiveImpl;
     using CXmPrimitiveImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -6768,9 +6836,10 @@ public:
         XtVaGetValues(this->_widget, "cursorPosition", &value, nullptr);
         return value;
     }
-    Derived& addDestinationCallback(std::function<void(XtPointer)> callback)
+    Derived& addDestinationCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("destinationCallback", callback);
+        this->template addCallback<void>(
+            "destinationCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDestinationCallback(XtCallbackList value)
@@ -6806,9 +6875,11 @@ public:
         XtVaGetValues(this->_widget, "editable", &value, nullptr);
         return value;
     }
-    Derived& addFocusCallback(std::function<void(XtPointer)> callback)
+    Derived& addFocusCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("focusCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "focusCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setFocusCallback(XtCallbackList value)
@@ -6822,9 +6893,11 @@ public:
         XtVaGetValues(this->_widget, "focusCallback", &value, nullptr);
         return value;
     }
-    Derived& addGainPrimaryCallback(std::function<void(XtPointer)> callback)
+    Derived& addGainPrimaryCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("gainPrimaryCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "gainPrimaryCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setGainPrimaryCallback(XtCallbackList value)
@@ -6849,9 +6922,11 @@ public:
         XtVaGetValues(this->_widget, "inputCreate", &value, nullptr);
         return value;
     }
-    Derived& addLosePrimaryCallback(std::function<void(XtPointer)> callback)
+    Derived& addLosePrimaryCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("losePrimaryCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "losePrimaryCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setLosePrimaryCallback(XtCallbackList value)
@@ -6865,9 +6940,11 @@ public:
         XtVaGetValues(this->_widget, "losePrimaryCallback", &value, nullptr);
         return value;
     }
-    Derived& addLosingFocusCallback(std::function<void(XtPointer)> callback)
+    Derived& addLosingFocusCallback(
+        CWidgetImplBase::Callback<XmTextVerifyCallbackStruct> callback)
     {
-        addCallback("losingFocusCallback", callback);
+        this->template addCallback<XmTextVerifyCallbackStruct>(
+            "losingFocusCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setLosingFocusCallback(XtCallbackList value)
@@ -6914,9 +6991,11 @@ public:
         XtVaGetValues(this->_widget, "maxLength", &value, nullptr);
         return value;
     }
-    Derived& addModifyVerifyCallback(std::function<void(XtPointer)> callback)
+    Derived& addModifyVerifyCallback(
+        CWidgetImplBase::Callback<XmTextVerifyCallbackStruct> callback)
     {
-        addCallback("modifyVerifyCallback", callback);
+        this->template addCallback<XmTextVerifyCallbackStruct>(
+            "modifyVerifyCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setModifyVerifyCallback(XtCallbackList value)
@@ -6930,9 +7009,11 @@ public:
         XtVaGetValues(this->_widget, "modifyVerifyCallback", &value, nullptr);
         return value;
     }
-    Derived& addModifyVerifyCallbackWcs(std::function<void(XtPointer)> callback)
+    Derived& addModifyVerifyCallbackWcs(
+        CWidgetImplBase::Callback<XmTextVerifyCallbackStructWcs> callback)
     {
-        addCallback("modifyVerifyCallbackWcs", callback);
+        this->template addCallback<XmTextVerifyCallbackStructWcs>(
+            "modifyVerifyCallbackWcs", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setModifyVerifyCallbackWcs(XtCallbackList value)
@@ -6947,9 +7028,11 @@ public:
             this->_widget, "modifyVerifyCallbackWcs", &value, nullptr);
         return value;
     }
-    Derived& addMotionVerifyCallback(std::function<void(XtPointer)> callback)
+    Derived& addMotionVerifyCallback(
+        CWidgetImplBase::Callback<XmTextVerifyCallbackStruct> callback)
     {
-        addCallback("motionVerifyCallback", callback);
+        this->template addCallback<XmTextVerifyCallbackStruct>(
+            "motionVerifyCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setMotionVerifyCallback(XtCallbackList value)
@@ -7029,9 +7112,11 @@ public:
         XtVaGetValues(this->_widget, "value", &value, nullptr);
         return value;
     }
-    Derived& addValueChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addValueChangedCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("valueChangedCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "valueChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setValueChangedCallback(XtCallbackList value)
@@ -7270,9 +7355,11 @@ public:
         XtVaGetValues(this->_widget, "dialogTitle", &value, nullptr);
         return value;
     }
-    Derived& addFocusCallback(std::function<void(XtPointer)> callback)
+    Derived& addFocusCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("focusCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "focusCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setFocusCallback(XtCallbackList value)
@@ -7308,9 +7395,11 @@ public:
         XtVaGetValues(this->_widget, "labelRenderTable", &value, nullptr);
         return value;
     }
-    Derived& addMapCallback(std::function<void(XtPointer)> callback)
+    Derived& addMapCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("mapCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "mapCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setMapCallback(XtCallbackList value)
@@ -7434,9 +7523,11 @@ public:
         XtVaGetValues(this->_widget, "textTranslations", &value, nullptr);
         return value;
     }
-    Derived& addUnmapCallback(std::function<void(XtPointer)> callback)
+    Derived& addUnmapCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("unmapCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "unmapCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setUnmapCallback(XtCallbackList value)
@@ -8116,9 +8207,11 @@ public:
         XtVaGetValues(this->_widget, "selectedPosition", &value, nullptr);
         return value;
     }
-    Derived& addSelectionCallback(std::function<void(XtPointer)> callback)
+    Derived& addSelectionCallback(
+        CWidgetImplBase::Callback<XmComboBoxCallbackStruct> callback)
     {
-        addCallback("selectionCallback", callback);
+        this->template addCallback<XmComboBoxCallbackStruct>(
+            "selectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSelectionCallback(XtCallbackList value)
@@ -8299,9 +8392,10 @@ public:
         XtVaGetValues(this->_widget, "collapsedStatePixmap", &value, nullptr);
         return value;
     }
-    Derived& addConvertCallback(std::function<void(XtPointer)> callback)
+    Derived& addConvertCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("convertCallback", callback);
+        this->template addCallback<void>(
+            "convertCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setConvertCallback(XtCallbackList value)
@@ -8315,9 +8409,11 @@ public:
         XtVaGetValues(this->_widget, "convertCallback", &value, nullptr);
         return value;
     }
-    Derived& addDefaultActionCallback(std::function<void(XtPointer)> callback)
+    Derived& addDefaultActionCallback(
+        CWidgetImplBase::Callback<XmContainerSelectCallbackStruct> callback)
     {
-        addCallback("defaultActionCallback", callback);
+        this->template addCallback<XmContainerSelectCallbackStruct>(
+            "defaultActionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDefaultActionCallback(XtCallbackList value)
@@ -8331,9 +8427,10 @@ public:
         XtVaGetValues(this->_widget, "defaultActionCallback", &value, nullptr);
         return value;
     }
-    Derived& addDestinationCallback(std::function<void(XtPointer)> callback)
+    Derived& addDestinationCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("destinationCallback", callback);
+        this->template addCallback<void>(
+            "destinationCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDestinationCallback(XtCallbackList value)
@@ -8503,9 +8600,11 @@ public:
         XtVaGetValues(this->_widget, "outlineButtonPolicy", &value, nullptr);
         return value;
     }
-    Derived& addOutlineChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addOutlineChangedCallback(
+        CWidgetImplBase::Callback<XmContainerOutlineCallbackStruct> callback)
     {
-        addCallback("outlineChangedCallback", callback);
+        this->template addCallback<XmContainerOutlineCallbackStruct>(
+            "outlineChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setOutlineChangedCallback(XtCallbackList value)
@@ -8618,9 +8717,11 @@ public:
         XtVaGetValues(this->_widget, "selectedObjects", &value, nullptr);
         return value;
     }
-    Derived& addSelectionCallback(std::function<void(XtPointer)> callback)
+    Derived& addSelectionCallback(
+        CWidgetImplBase::Callback<XmContainerSelectCallbackStruct> callback)
     {
-        addCallback("selectionCallback", callback);
+        this->template addCallback<XmContainerSelectCallbackStruct>(
+            "selectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSelectionCallback(XtCallbackList value)
@@ -8884,9 +8985,10 @@ class CXmDrawingAreaImpl : public CXmManagerImpl<Derived>
 public:
     using CXmManagerImpl<Derived>::CXmManagerImpl;
     using CXmManagerImpl<Derived>::addCallback;
-    Derived& addConvertCallback(std::function<void(XtPointer)> callback)
+    Derived& addConvertCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("convertCallback", callback);
+        this->template addCallback<void>(
+            "convertCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setConvertCallback(XtCallbackList value)
@@ -8900,9 +9002,10 @@ public:
         XtVaGetValues(this->_widget, "convertCallback", &value, nullptr);
         return value;
     }
-    Derived& addDestinationCallback(std::function<void(XtPointer)> callback)
+    Derived& addDestinationCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("destinationCallback", callback);
+        this->template addCallback<void>(
+            "destinationCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDestinationCallback(XtCallbackList value)
@@ -8916,9 +9019,11 @@ public:
         XtVaGetValues(this->_widget, "destinationCallback", &value, nullptr);
         return value;
     }
-    Derived& addExposeCallback(std::function<void(XtPointer)> callback)
+    Derived& addExposeCallback(
+        CWidgetImplBase::Callback<XmDrawingAreaCallbackStruct> callback)
     {
-        addCallback("exposeCallback", callback);
+        this->template addCallback<XmDrawingAreaCallbackStruct>(
+            "exposeCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setExposeCallback(XtCallbackList value)
@@ -8932,9 +9037,11 @@ public:
         XtVaGetValues(this->_widget, "exposeCallback", &value, nullptr);
         return value;
     }
-    Derived& addInputCallback(std::function<void(XtPointer)> callback)
+    Derived& addInputCallback(
+        CWidgetImplBase::Callback<XmDrawingAreaCallbackStruct> callback)
     {
-        addCallback("inputCallback", callback);
+        this->template addCallback<XmDrawingAreaCallbackStruct>(
+            "inputCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setInputCallback(XtCallbackList value)
@@ -8970,9 +9077,11 @@ public:
         XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
         return value;
     }
-    Derived& addResizeCallback(std::function<void(XtPointer)> callback)
+    Derived& addResizeCallback(
+        CWidgetImplBase::Callback<XmDrawingAreaCallbackStruct> callback)
     {
-        addCallback("resizeCallback", callback);
+        this->template addCallback<XmDrawingAreaCallbackStruct>(
+            "resizeCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setResizeCallback(XtCallbackList value)
@@ -9207,9 +9316,11 @@ public:
         XtVaGetValues(this->_widget, "showLabel", &value, nullptr);
         return value;
     }
-    Derived& addUpdateShellCallback(std::function<void(XtPointer)> callback)
+    Derived& addUpdateShellCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("updateShellCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "updateShellCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setUpdateShellCallback(XtCallbackList value)
@@ -9223,9 +9334,11 @@ public:
         XtVaGetValues(this->_widget, "updateShellCallback", &value, nullptr);
         return value;
     }
-    Derived& addUpdateTextCallback(std::function<void(XtPointer)> callback)
+    Derived& addUpdateTextCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("updateTextCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "updateTextCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setUpdateTextCallback(XtCallbackList value)
@@ -9261,9 +9374,11 @@ public:
         XtVaGetValues(this->_widget, "verify", &value, nullptr);
         return value;
     }
-    Derived& addVerifyTextCallback(std::function<void(XtPointer)> callback)
+    Derived& addVerifyTextCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("verifyTextCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "verifyTextCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setVerifyTextCallback(XtCallbackList value)
@@ -9278,9 +9393,10 @@ public:
         return value;
     }
     Derived& addVerifyTextFailedCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("verifyTextFailedCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "verifyTextFailedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setVerifyTextFailedCallback(XtCallbackList value)
@@ -9614,9 +9730,11 @@ public:
         XtVaGetValues(this->_widget, "horizontalMargin", &value, nullptr);
         return value;
     }
-    Derived& addNodeStateBegEndCallback(std::function<void(XtPointer)> callback)
+    Derived& addNodeStateBegEndCallback(
+        CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("nodeStateBegEndCallback", callback);
+        this->template addCallback<void>(
+            "nodeStateBegEndCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNodeStateBegEndCallback(XtCallbackList value)
@@ -9632,9 +9750,10 @@ public:
         return value;
     }
     Derived& addNodeStateBeginEndCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("nodeStateBeginEndCallback", callback);
+        this->template addCallback<void>(
+            "nodeStateBeginEndCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNodeStateBeginEndCallback(XtCallbackList value)
@@ -9650,9 +9769,11 @@ public:
             this->_widget, "nodeStateBeginEndCallback", &value, nullptr);
         return value;
     }
-    Derived& addNodeStateCallback(std::function<void(XtPointer)> callback)
+    Derived& addNodeStateCallback(
+        CWidgetImplBase::Callback<XmHierarchyNodeStateData> callback)
     {
-        addCallback("nodeStateCallback", callback);
+        this->template addCallback<XmHierarchyNodeStateData>(
+            "nodeStateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNodeStateCallback(XtCallbackList value)
@@ -9667,9 +9788,10 @@ public:
         return value;
     }
     Derived& addNodeStateChangedCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmHierarchyNodeStateData> callback)
     {
-        addCallback("nodeStateChangedCallback", callback);
+        this->template addCallback<XmHierarchyNodeStateData>(
+            "nodeStateChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNodeStateChangedCallback(XtCallbackList value)
@@ -10013,9 +10135,10 @@ class CXmMultiListImpl : public CXmManagerImpl<Derived>
 public:
     using CXmManagerImpl<Derived>::CXmManagerImpl;
     using CXmManagerImpl<Derived>::addCallback;
-    Derived& addDoubleClickCallback(std::function<void(XtPointer)> callback)
+    Derived& addDoubleClickCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("doubleClickCallback", callback);
+        this->template addCallback<void>(
+            "doubleClickCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDoubleClickCallback(XtCallbackList value)
@@ -10055,9 +10178,11 @@ public:
         XtVaGetValues(this->_widget, "height", &value, nullptr);
         return value;
     }
-    Derived& addItemFoundCallback(std::function<void(XtPointer)> callback)
+    Derived& addItemFoundCallback(
+        CWidgetImplBase::Callback<XmMultiListCallbackStruct> callback)
     {
-        addCallback("itemFoundCallback", callback);
+        this->template addCallback<XmMultiListCallbackStruct>(
+            "itemFoundCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setItemFoundCallback(XtCallbackList value)
@@ -10071,9 +10196,11 @@ public:
         XtVaGetValues(this->_widget, "itemFoundCallback", &value, nullptr);
         return value;
     }
-    Derived& addItemNotFoundCallback(std::function<void(XtPointer)> callback)
+    Derived& addItemNotFoundCallback(
+        CWidgetImplBase::Callback<XmMultiListCallbackStruct> callback)
     {
-        addCallback("itemNotFoundCallback", callback);
+        this->template addCallback<XmMultiListCallbackStruct>(
+            "itemNotFoundCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setItemNotFoundCallback(XtCallbackList value)
@@ -10098,9 +10225,9 @@ public:
         XtVaGetValues(this->_widget, "pri.vate", &value, nullptr);
         return value;
     }
-    Derived& addSelectCallback(std::function<void(XtPointer)> callback)
+    Derived& addSelectCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("selectCallback", callback);
+        this->template addCallback<void>("selectCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSelectCallback(XtCallbackList value)
@@ -10125,9 +10252,11 @@ public:
         XtVaGetValues(this->_widget, "showFind", &value, nullptr);
         return value;
     }
-    Derived& addSingleSelectionCallback(std::function<void(XtPointer)> callback)
+    Derived& addSingleSelectionCallback(
+        CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("singleSelectionCallback", callback);
+        this->template addCallback<void>(
+            "singleSelectionCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSingleSelectionCallback(XtCallbackList value)
@@ -10486,9 +10615,11 @@ public:
         XtVaGetValues(this->_widget, "orientation", &value, nullptr);
         return value;
     }
-    Derived& addPageChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addPageChangedCallback(
+        CWidgetImplBase::Callback<XmNotebookCallbackStruct> callback)
     {
-        addCallback("pageChangedCallback", callback);
+        this->template addCallback<XmNotebookCallbackStruct>(
+            "pageChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setPageChangedCallback(XtCallbackList value)
@@ -10678,9 +10809,11 @@ public:
         XtVaGetValues(this->_widget, "entryBorder", &value, nullptr);
         return value;
     }
-    Derived& addEntryCallback(std::function<void(XtPointer)> callback)
+    Derived& addEntryCallback(
+        CWidgetImplBase::Callback<XmRowColumnCallbackStruct> callback)
     {
-        addCallback("entryCallback", callback);
+        this->template addCallback<XmRowColumnCallbackStruct>(
+            "entryCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setEntryCallback(XtCallbackList value)
@@ -10764,9 +10897,11 @@ public:
         XtVaGetValues(this->_widget, "labelString", &value, nullptr);
         return value;
     }
-    Derived& addMapCallback(std::function<void(XtPointer)> callback)
+    Derived& addMapCallback(
+        CWidgetImplBase::Callback<XmRowColumnCallbackStruct> callback)
     {
-        addCallback("mapCallback", callback);
+        this->template addCallback<XmRowColumnCallbackStruct>(
+            "mapCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setMapCallback(XtCallbackList value)
@@ -11034,9 +11169,10 @@ public:
         return value;
     }
     Derived& addTearOffMenuActivateCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmRowColumnCallbackStruct> callback)
     {
-        addCallback("tearOffMenuActivateCallback", callback);
+        this->template addCallback<XmRowColumnCallbackStruct>(
+            "tearOffMenuActivateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setTearOffMenuActivateCallback(XtCallbackList value)
@@ -11053,9 +11189,10 @@ public:
         return value;
     }
     Derived& addTearOffMenuDeactivateCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<XmRowColumnCallbackStruct> callback)
     {
-        addCallback("tearOffMenuDeactivateCallback", callback);
+        this->template addCallback<XmRowColumnCallbackStruct>(
+            "tearOffMenuDeactivateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setTearOffMenuDeactivateCallback(XtCallbackList value)
@@ -11097,9 +11234,11 @@ public:
         XtVaGetValues(this->_widget, "tearOffTitle", &value, nullptr);
         return value;
     }
-    Derived& addUnmapCallback(std::function<void(XtPointer)> callback)
+    Derived& addUnmapCallback(
+        CWidgetImplBase::Callback<XmRowColumnCallbackStruct> callback)
     {
-        addCallback("unmapCallback", callback);
+        this->template addCallback<XmRowColumnCallbackStruct>(
+            "unmapCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setUnmapCallback(XtCallbackList value)
@@ -11292,9 +11431,10 @@ class CXmScaleImpl : public CXmManagerImpl<Derived>
 public:
     using CXmManagerImpl<Derived>::CXmManagerImpl;
     using CXmManagerImpl<Derived>::addCallback;
-    Derived& addConvertCallback(std::function<void(XtPointer)> callback)
+    Derived& addConvertCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("convertCallback", callback);
+        this->template addCallback<void>(
+            "convertCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setConvertCallback(XtCallbackList value)
@@ -11319,9 +11459,11 @@ public:
         XtVaGetValues(this->_widget, "decimalPoints", &value, nullptr);
         return value;
     }
-    Derived& addDragCallback(std::function<void(XtPointer)> callback)
+    Derived& addDragCallback(
+        CWidgetImplBase::Callback<XmScaleCallbackStruct> callback)
     {
-        addCallback("dragCallback", callback);
+        this->template addCallback<XmScaleCallbackStruct>(
+            "dragCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDragCallback(XtCallbackList value)
@@ -11581,9 +11723,11 @@ public:
         XtVaGetValues(this->_widget, "value", &value, nullptr);
         return value;
     }
-    Derived& addValueChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addValueChangedCallback(
+        CWidgetImplBase::Callback<XmScaleCallbackStruct> callback)
     {
-        addCallback("valueChangedCallback", callback);
+        this->template addCallback<XmScaleCallbackStruct>(
+            "valueChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setValueChangedCallback(XtCallbackList value)
@@ -11830,9 +11974,10 @@ public:
         return value;
     }
     Derived& addTraverseObscuredCallback(
-        std::function<void(XtPointer)> callback)
+        CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("traverseObscuredCallback", callback);
+        this->template addCallback<void>(
+            "traverseObscuredCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setTraverseObscuredCallback(XtCallbackList value)
@@ -12086,9 +12231,10 @@ public:
         XtVaGetValues(this->_widget, "marginWidth", &value, nullptr);
         return value;
     }
-    Derived& addModifyVerifyCallback(std::function<void(XtPointer)> callback)
+    Derived& addModifyVerifyCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("modifyVerifyCallback", callback);
+        this->template addCallback<void>(
+            "modifyVerifyCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setModifyVerifyCallback(XtCallbackList value)
@@ -12124,9 +12270,10 @@ public:
         XtVaGetValues(this->_widget, "spacing", &value, nullptr);
         return value;
     }
-    Derived& addValueChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addValueChangedCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("valueChangedCallback", callback);
+        this->template addCallback<void>(
+            "valueChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setValueChangedCallback(XtCallbackList value)
@@ -12338,9 +12485,11 @@ public:
         XtVaGetValues(this->_widget, "renderTable", &value, nullptr);
         return value;
     }
-    Derived& addSelectCallback(std::function<void(XtPointer)> callback)
+    Derived& addSelectCallback(
+        CWidgetImplBase::Callback<XmTabBoxCallbackStruct> callback)
     {
-        addCallback("selectCallback", callback);
+        this->template addCallback<XmTabBoxCallbackStruct>(
+            "selectCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setSelectCallback(XtCallbackList value)
@@ -12552,9 +12701,11 @@ public:
         XtVaGetValues(this->_widget, "uniformTabSize", &value, nullptr);
         return value;
     }
-    Derived& addUnselectCallback(std::function<void(XtPointer)> callback)
+    Derived& addUnselectCallback(
+        CWidgetImplBase::Callback<XmTabBoxCallbackStruct> callback)
     {
-        addCallback("unselectCallback", callback);
+        this->template addCallback<XmTabBoxCallbackStruct>(
+            "unselectCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setUnselectCallback(XtCallbackList value)
@@ -12762,9 +12913,10 @@ public:
         XtVaGetValues(this->_widget, "extensionType", &value, nullptr);
         return value;
     }
-    Derived& addProtocolCallback(std::function<void(XtPointer)> callback)
+    Derived& addProtocolCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("protocolCallback", callback);
+        this->template addCallback<void>(
+            "protocolCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setProtocolCallback(XtCallbackList value)
@@ -12899,9 +13051,11 @@ class CXmCascadeButtonGadgetImpl : public CXmLabelGadgetImpl<Derived>
 public:
     using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
     using CXmLabelGadgetImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -12915,9 +13069,11 @@ public:
         XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
         return value;
     }
-    Derived& addCascadingCallback(std::function<void(XtPointer)> callback)
+    Derived& addCascadingCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("cascadingCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "cascadingCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCascadingCallback(XtCallbackList value)
@@ -13065,9 +13221,11 @@ class CXmPushButtonGadgetImpl : public CXmLabelGadgetImpl<Derived>
 public:
     using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
     using CXmLabelGadgetImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -13081,9 +13239,11 @@ public:
         XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
         return value;
     }
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -13097,9 +13257,11 @@ public:
         XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -13245,9 +13407,11 @@ class CXmToggleButtonGadgetImpl : public CXmLabelGadgetImpl<Derived>
 public:
     using CXmLabelGadgetImpl<Derived>::CXmLabelGadgetImpl;
     using CXmLabelGadgetImpl<Derived>::addCallback;
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(
+        CWidgetImplBase::Callback<XmToggleButtonCallbackStruct> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<XmToggleButtonCallbackStruct>(
+            "armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -13272,9 +13436,11 @@ public:
         XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(
+        CWidgetImplBase::Callback<XmToggleButtonCallbackStruct> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<XmToggleButtonCallbackStruct>(
+            "disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -13321,9 +13487,11 @@ public:
         XtVaGetValues(this->_widget, "traversalOn", &value, nullptr);
         return value;
     }
-    Derived& addValueChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addValueChangedCallback(
+        CWidgetImplBase::Callback<XmToggleButtonCallbackStruct> callback)
     {
-        addCallback("valueChangedCallback", callback);
+        this->template addCallback<XmToggleButtonCallbackStruct>(
+            "valueChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setValueChangedCallback(XtCallbackList value)
@@ -13429,9 +13597,11 @@ class CXmCascadeButtonImpl : public CXmLabelImpl<Derived>
 public:
     using CXmLabelImpl<Derived>::CXmLabelImpl;
     using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -13456,9 +13626,11 @@ public:
         XtVaGetValues(this->_widget, "cascadePixmap", &value, nullptr);
         return value;
     }
-    Derived& addCascadingCallback(std::function<void(XtPointer)> callback)
+    Derived& addCascadingCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("cascadingCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "cascadingCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCascadingCallback(XtCallbackList value)
@@ -13666,9 +13838,11 @@ class CXmDrawnButtonImpl : public CXmLabelImpl<Derived>
 public:
     using CXmLabelImpl<Derived>::CXmLabelImpl;
     using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmDrawnButtonCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmDrawnButtonCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -13682,9 +13856,11 @@ public:
         XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
         return value;
     }
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(
+        CWidgetImplBase::Callback<XmDrawnButtonCallbackStruct> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<XmDrawnButtonCallbackStruct>(
+            "armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -13698,9 +13874,11 @@ public:
         XtVaGetValues(this->_widget, "armCallback", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(
+        CWidgetImplBase::Callback<XmDrawnButtonCallbackStruct> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<XmDrawnButtonCallbackStruct>(
+            "disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -13714,9 +13892,11 @@ public:
         XtVaGetValues(this->_widget, "disarmCallback", &value, nullptr);
         return value;
     }
-    Derived& addExposeCallback(std::function<void(XtPointer)> callback)
+    Derived& addExposeCallback(
+        CWidgetImplBase::Callback<XmDrawnButtonCallbackStruct> callback)
     {
-        addCallback("exposeCallback", callback);
+        this->template addCallback<XmDrawnButtonCallbackStruct>(
+            "exposeCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setExposeCallback(XtCallbackList value)
@@ -13778,9 +13958,11 @@ public:
         XtVaGetValues(this->_widget, "pushButtonEnabled", &value, nullptr);
         return value;
     }
-    Derived& addResizeCallback(std::function<void(XtPointer)> callback)
+    Derived& addResizeCallback(
+        CWidgetImplBase::Callback<XmDrawnButtonCallbackStruct> callback)
     {
-        addCallback("resizeCallback", callback);
+        this->template addCallback<XmDrawnButtonCallbackStruct>(
+            "resizeCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setResizeCallback(XtCallbackList value)
@@ -13955,9 +14137,11 @@ class CXmPushButtonImpl : public CXmLabelImpl<Derived>
 public:
     using CXmLabelImpl<Derived>::CXmLabelImpl;
     using CXmLabelImpl<Derived>::addCallback;
-    Derived& addActivateCallback(std::function<void(XtPointer)> callback)
+    Derived& addActivateCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("activateCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "activateCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setActivateCallback(XtCallbackList value)
@@ -13971,9 +14155,11 @@ public:
         XtVaGetValues(this->_widget, "activateCallback", &value, nullptr);
         return value;
     }
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -14022,9 +14208,11 @@ public:
             this->_widget, "defaultButtonShadowThickness", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(
+        CWidgetImplBase::Callback<XmPushButtonCallbackStruct> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<XmPushButtonCallbackStruct>(
+            "disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -14238,9 +14426,11 @@ class CXmToggleButtonImpl : public CXmLabelImpl<Derived>
 public:
     using CXmLabelImpl<Derived>::CXmLabelImpl;
     using CXmLabelImpl<Derived>::addCallback;
-    Derived& addArmCallback(std::function<void(XtPointer)> callback)
+    Derived& addArmCallback(
+        CWidgetImplBase::Callback<XmToggleButtonCallbackStruct> callback)
     {
-        addCallback("armCallback", callback);
+        this->template addCallback<XmToggleButtonCallbackStruct>(
+            "armCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setArmCallback(XtCallbackList value)
@@ -14265,9 +14455,11 @@ public:
         XtVaGetValues(this->_widget, "detailShadowThickness", &value, nullptr);
         return value;
     }
-    Derived& addDisarmCallback(std::function<void(XtPointer)> callback)
+    Derived& addDisarmCallback(
+        CWidgetImplBase::Callback<XmToggleButtonCallbackStruct> callback)
     {
-        addCallback("disarmCallback", callback);
+        this->template addCallback<XmToggleButtonCallbackStruct>(
+            "disarmCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setDisarmCallback(XtCallbackList value)
@@ -14449,9 +14641,11 @@ public:
         XtVaGetValues(this->_widget, "unselectColor", &value, nullptr);
         return value;
     }
-    Derived& addValueChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addValueChangedCallback(
+        CWidgetImplBase::Callback<XmToggleButtonCallbackStruct> callback)
     {
-        addCallback("valueChangedCallback", callback);
+        this->template addCallback<XmToggleButtonCallbackStruct>(
+            "valueChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setValueChangedCallback(XtCallbackList value)
@@ -15152,9 +15346,11 @@ class CXmMessageBoxImpl : public CXmBulletinBoardImpl<Derived>
 public:
     using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& addCancelCallback(std::function<void(XtPointer)> callback)
+    Derived& addCancelCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("cancelCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "cancelCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCancelCallback(XtCallbackList value)
@@ -15257,9 +15453,11 @@ public:
         XtVaGetValues(this->_widget, "minimizeButtons", &value, nullptr);
         return value;
     }
-    Derived& addOkCallback(std::function<void(XtPointer)> callback)
+    Derived& addOkCallback(
+        CWidgetImplBase::Callback<XmAnyCallbackStruct> callback)
     {
-        addCallback("okCallback", callback);
+        this->template addCallback<XmAnyCallbackStruct>(
+            "okCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setOkCallback(XtCallbackList value)
@@ -15450,9 +15648,9 @@ class CXmSelectionBoxImpl : public CXmBulletinBoardImpl<Derived>
 public:
     using CXmBulletinBoardImpl<Derived>::CXmBulletinBoardImpl;
     using CXmBulletinBoardImpl<Derived>::addCallback;
-    Derived& addApplyCallback(std::function<void(XtPointer)> callback)
+    Derived& addApplyCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("applyCallback", callback);
+        this->template addCallback<void>("applyCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setApplyCallback(XtCallbackList value)
@@ -15481,9 +15679,9 @@ public:
         XtVaGetValues(this->_widget, "applyLabelString", &value, nullptr);
         return value;
     }
-    Derived& addCancelCallback(std::function<void(XtPointer)> callback)
+    Derived& addCancelCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("cancelCallback", callback);
+        this->template addCallback<void>("cancelCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCancelCallback(XtCallbackList value)
@@ -15619,9 +15817,10 @@ public:
         XtVaGetValues(this->_widget, "mustMatch", &value, nullptr);
         return value;
     }
-    Derived& addNoMatchCallback(std::function<void(XtPointer)> callback)
+    Derived& addNoMatchCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("noMatchCallback", callback);
+        this->template addCallback<void>(
+            "noMatchCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setNoMatchCallback(XtCallbackList value)
@@ -15635,9 +15834,9 @@ public:
         XtVaGetValues(this->_widget, "noMatchCallback", &value, nullptr);
         return value;
     }
-    Derived& addOkCallback(std::function<void(XtPointer)> callback)
+    Derived& addOkCallback(CWidgetImplBase::Callback<void> callback)
     {
-        addCallback("okCallback", callback);
+        this->template addCallback<void>("okCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setOkCallback(XtCallbackList value)
@@ -16099,9 +16298,11 @@ public:
         XtVaGetValues(this->_widget, "tabSelectPixmap", &value, nullptr);
         return value;
     }
-    Derived& addTabSelectedCallback(std::function<void(XtPointer)> callback)
+    Derived& addTabSelectedCallback(
+        CWidgetImplBase::Callback<XmTabStackCallbackStruct> callback)
     {
-        addCallback("tabSelectedCallback", callback);
+        this->template addCallback<XmTabStackCallbackStruct>(
+            "tabSelectedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setTabSelectedCallback(XtCallbackList value)
@@ -17509,9 +17710,11 @@ public:
         XtVaGetValues(this->_widget, "command", &value, nullptr);
         return value;
     }
-    Derived& addCommandChangedCallback(std::function<void(XtPointer)> callback)
+    Derived& addCommandChangedCallback(
+        CWidgetImplBase::Callback<XmCommandCallbackStruct> callback)
     {
-        addCallback("commandChangedCallback", callback);
+        this->template addCallback<XmCommandCallbackStruct>(
+            "commandChangedCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCommandChangedCallback(XtCallbackList value)
@@ -17525,9 +17728,11 @@ public:
         XtVaGetValues(this->_widget, "commandChangedCallback", &value, nullptr);
         return value;
     }
-    Derived& addCommandEnteredCallback(std::function<void(XtPointer)> callback)
+    Derived& addCommandEnteredCallback(
+        CWidgetImplBase::Callback<XmCommandCallbackStruct> callback)
     {
-        addCallback("commandEnteredCallback", callback);
+        this->template addCallback<XmCommandCallbackStruct>(
+            "commandEnteredCallback", std::move(callback));
         return static_cast<Derived&>(*this);
     }
     Derived& setCommandEnteredCallback(XtCallbackList value)
